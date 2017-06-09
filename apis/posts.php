@@ -12,7 +12,7 @@ function bs_get_posts($type = array('video','gallery','featured','post'), $paged
 	$posts = array_map(function($post) {
 			$thumbId = get_post_thumbnail_id($post->ID);
 			$post->post_image = get_post_meta($post->ID, 'image_square_key') ? str_replace('http:', '', get_post_meta($post->ID, 'image_square_key')) : '';
-			$post->post_short = $post->post_content ? wp_strip_all_tags(substr($post->post_content, 0, 200)) : '';
+			$post->post_short = $post->post_content ? substr($post->post_content, 0, 200) : '';
 			$post->post_permalink = get_post_permalink($post->ID);
 			return $post;
 	}, $query->get_posts());
