@@ -51,7 +51,7 @@ add_action( 'wp_ajax_nopriv_get_posts', 'wp_get_posts' );
 add_action( 'wp_ajax_get_posts', 'wp_get_posts' );
 
 function wp_get_posts() {
-  $paged = $_POST['paged'];
+  $paged = isset($_POST['paged']) ? $_POST['paged'] : 0;
   $post_type = isset($_POST['post_type']) ? $_POST['post_type'] : array('video','gallery','featured','post');
   $category = isset($_POST['post_category']) ? $_POST['post_category'] : '';
   $perpage = isset($_POST['post_perpage']) ? $_POST['post_perpage'] : '6';
