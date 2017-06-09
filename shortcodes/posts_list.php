@@ -47,7 +47,7 @@ function bs_posts_list_sc($atts, $content = null) {
 				<a href="<?php echo get_permalink($post->ID) ?>">
 					<div 
 						class="bs-posts-list__main__img" 
-						style="background-image:url(<?php echo get_post_meta($post->ID, 'image_square_key', true, true) ?>);background-color: #E5A612;">					
+						style="background-image:url(<?php echo str_replace('http:', '', get_post_meta($post->ID, 'image_square_key', true, true)) ?>);background-color: #E5A612;">					
 					</div>
 				</a>
 				<?php else: ?>
@@ -69,7 +69,7 @@ function bs_posts_list_sc($atts, $content = null) {
 					<a href="<?php echo get_permalink($post->ID) ?>">
 					<div
 						class="bs-posts-list__item__img" 
-						style="background-image: url(<?php echo get_post_meta($post->ID, 'image_square_key', true) ?>);">
+						style="background-image: url(<?php echo str_replace('http:', '', get_post_meta($post->ID, 'image_square_key', true, true)) ?>);">
 					</div>
 					</a>
 						<?php $itemStyle = ''; ?>
