@@ -44,7 +44,7 @@ class Post extends React.Component {
             style={img == "" ? { width: "100%" } : {}}
           >
             <h5><a href={post.post_permalink}>{title}</a></h5>
-            <p>{`${post.post_short}...`}</p>
+            <p>{`${post.post_short.substring(0, 220)}...`}</p>
             <a
               href={post.post_permalink}
               className="grid-item__content__texts__readmore"
