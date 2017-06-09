@@ -14,8 +14,9 @@ class Posts extends React.Component {
 
     request
       .post(endpoint, data)
-      .then(res => {
-        this.setState({ posts: res.data });
+      .then(({data}) => {
+        let posts = data ? data : [];
+        this.setState({ posts });
       })
       .catch(err => console.error(err));
   }
