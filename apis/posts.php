@@ -19,6 +19,6 @@ function bs_get_posts($type = array('video','gallery','featured','post'), $paged
 		}
 	}, $query->get_posts());
 	
-	return $posts;
+	return $query->get_posts();
 }
 

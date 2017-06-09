@@ -56,7 +56,7 @@ function wp_get_posts() {
   $category = isset($_POST['post_category']) ? $_POST['post_category'] : '';
   $perpage = isset($_POST['post_perpage']) ? $_POST['post_perpage'] : '6';
 
-  $res = count(bs_get_posts($post_type, $paged, $category, $perpage)) > 0 ? bs_get_posts($post_type, $paged, $category, $perpage) : [$post_type, $paged, $category, $perpage];
+  $res = bs_get_posts($post_type, $paged, $category, $perpage);
 
   responseJson($res);
   die();
