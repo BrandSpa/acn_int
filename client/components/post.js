@@ -1,16 +1,7 @@
 import React from "react";
 
-const uniq = (arrArg) => {
-  return arrArg.filter((elem, pos, arr) => {
-    return arr.indexOf(elem) == pos;
-  });
-}
-
-const cleanEmpty = (arrArg) => {
-  return arrArg.filter(item => {
-    return item.length > 0;
-  })
-}
+const cleanEmpty = arrArg => 
+  arrArg.filter(item => item.length > 0);
 
 class Post extends React.Component {
   static defaultProps = {
