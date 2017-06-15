@@ -17,7 +17,7 @@ function bs_post_item_square_sc($atts, $content = null) {
 
 <?php  foreach($recent_posts as $post): ?>
 
-<div class="grid-item">
+<div class="grid-item" style="width:100%">
 	<div class="grid-item__content">
 		<a href="<?php echo get_permalink($post->ID) ?>"> <?php echo get_post_meta($post->ID, 'image_square_key', true) ?> </a>
 
