@@ -102,22 +102,17 @@ class DonateInline extends Component {
   };
 
   completeTransaction = (stripeResponse = {}) => {
-    const { amount, donation_type } = this.state;
-    const base = this.props.redirect[donation_type];
+    const { amount, donation_type, contact } = this.state;
     const { customer, id } = stripeResponse;
-
+    const base = this.props.redirect[donation_type];
+    
     actions
       .storeConvertLoop(this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.state))
       .then(actions.storeInfusion.bind(null, this.state))
       .then(res => {
-        if (donation_type == "monthly") {
-          const url = `${base}?customer_id=${customer}-${id}&order_revenue=${amount}&order_id=${id}`;
-          window.location = url;
-        } else {
-          this.setState({show_four: true});
-          this.props.changeSection(1);
-        }
+        const url = `${base}?customer_id=${customer}-${contact.email}&order_revenue=${amount}&order_id=${id}`;
+        window.location = url;
       });
   };
 
