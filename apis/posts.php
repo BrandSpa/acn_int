@@ -13,9 +13,12 @@ function bs_get_posts($type = array('video','gallery','featured','post'), $paged
 			$thumbId = get_post_thumbnail_id($post->ID);
 			$images = array_unique(get_post_meta($post->ID, 'image_square_key'));
 			
-			// $images = array_filter($images, function($img) { 
-			// 	return strlen($img) > 0;
-			// });
+			$images = array_filter($images, function($img) { 
+				if(strlen($img) > 0) {
+					return false;
+				}
+				return true;
+			});
 
  			$post->post_image = $images;
 			$content = substr($post->post_content, 0, 250) ? substr($post->post_content, 0, 250) : $post->post_content;
