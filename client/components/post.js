@@ -1,5 +1,11 @@
 import React from "react";
 
+const uniq = (arrArg) => {
+  return arrArg.filter((elem, pos, arr) => {
+    return arr.indexOf(elem) == pos;
+  });
+}
+
 class Post extends React.Component {
   static defaultProps = {
     post: {
@@ -13,6 +19,8 @@ class Post extends React.Component {
 
   render() {
     const { post, type, read_more } = this.props;
+    let postImg = uniq(post.post_image);
+    console.log(postImg);
     const img = post.post_image
       ? <img src={post.post_image} onLoad={this.handleImageLoaded} />
       : "";
