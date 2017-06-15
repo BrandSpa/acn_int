@@ -24,9 +24,8 @@ function bs_video_modal_bg_vc() {
 	vc_map([
 		"name" => "Video modal BG",
 		"base" => "bs_video_modal_bg",
-			"as_parent" => array('only' => 'row'), // Use only|except attributes to limit child shortcodes (separate multiple values with comma)
-			"content_element" => true,
-			"show_settings_on_create" => false,
+		"content_element" => true,
+		"show_settings_on_create" => true,
 			"is_container" => true,
 			"params" => array(
 					array(
@@ -38,5 +37,9 @@ function bs_video_modal_bg_vc() {
 			),
 			"js_view" => 'VcColumnView'
 	]);
+
+	if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
+  	class WPBakeryShortCode_bs_video_modal_bg extends WPBakeryShortCodesContainer {}
+	}
 
 }
