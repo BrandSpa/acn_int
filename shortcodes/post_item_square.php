@@ -19,7 +19,9 @@ function bs_post_item_square_sc($atts, $content = null) {
 
 <div class="grid-item" style="width:100%">
 	<div class="grid-item__content">
-		<a href="<?php echo get_permalink($post->ID) ?>"> <?php echo get_post_meta($post->ID, 'image_square_key', true) ?> </a>
+		<a href="<?php echo get_permalink($post->ID) ?>">
+			<img src="<?php echo get_post_meta($post->ID, 'image_square_key', true) ?>" alt="">
+		</a>
 
 		<div class="grid-item__content__texts">
 			<h5>
