@@ -17,7 +17,7 @@ function bs_get_posts($type = array('video','gallery','featured','post'), $paged
 				return strlen($img) > 0;
 			});
 
-			$images = array_map(function($img) {
+			$image = array_map(function($img) {
 				return str_replace('http:', '', $img);
 			}, $images);
 
