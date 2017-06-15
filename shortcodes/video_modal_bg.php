@@ -2,15 +2,40 @@
 
 function bs_video_modal_bg_sc($atts, $content = null) {
 	$attributes = [
-		"video_url" => ""
+		"video_url" => "",
+		"name" => "bs-video-modal",
+		"image_id" => ""
 	];
+
   $at = shortcode_atts( $attributes , $atts );
   ob_start();
 ?>
 
-<div>
-	<?php echo json_encode(do_shortcode($content)) ?>
+<div id="open-<?php $at['modal_name'] ?>" style="background: url(<?php echo wp_get_attachment_url($at['image_id']); ?>); background-size: cover">
+	<?php echo do_shortcode($content) ?>
 </div>
+
+<div id="<?php $at['modal_name'] ?>" class="modal">
+  <a class="modal__close" href="#" onClick={this.close}> <i class="ion-close" /> </a>
+  <div class="iframe-container">
+  	
+  </div>
+</div>
+
+<script>
+	onLoad(function() {
+		$("#open-<?php $at['modal_name'] ?>").on('click', function() {
+			$(this).find('.iframe-container').append('<iframe src="<?php echo $at["video_url"] ?>?autoplay=1" frameBorder="0" height="315" width="100%" allowFullScreen />');
+			$("#<?php $at['modal_name'] ?>").toggleClass('modal--show');
+		});
+
+		$('.modal__close').on('click', function() {
+			$(this).find('.iframe-container iframe').remove();
+			$(this).parent().toggleClass('modal--show');
+		});
+
+	});
+</script>
 
 <?php
   return ob_get_clean();
@@ -26,14 +51,25 @@ function bs_video_modal_bg_vc() {
 		"base" => "bs_video_modal_bg",
 		"content_element" => true,
 		"show_settings_on_create" => true,
-			"is_container" => true,
+		"is_container" => true,
 			"params" => array(
-					array(
-							"type" => "textfield",
-							"heading" => "video url",
-							"param_name" => "video_url",
-							"description" => __("If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "my-text-domain")
-					)
+					[
+						"type" => "textfield",
+						"heading" => "video url",
+						"param_name" => "video_url",
+						"description" => "youtube embed url"
+				],
+				[
+					"type" => "textfield",
+					"heading" => "name",
+					"param_name" => "name",
+					"description" => "it must be unique, if there are more then one in the page"
+				],
+				[
+					"type" => "attach_image",
+					"heading" => "background",
+					"param_name" => "image_id"
+				]
 			),
 			"js_view" => 'VcColumnView'
 	]);
