@@ -25,13 +25,10 @@ class Post extends React.Component {
 
   render() {
     const { post, type, read_more } = this.props;
-    let postImg = cleanEmpty(post.post_image);
-    const img = postImg
-      ? <img src={postImg} onLoad={this.handleImageLoaded} />
-      : "";
-    let title = post.post_title;
+    const { post_image = '', post_title = '' } = post;
+    let title = post_title;
     if (window.innerWidth <= "767") {
-      title = post.post_title.substring(0, 70) + "...";
+      title = post_title.substring(0, 70) + "...";
     }
 
     return (
@@ -46,7 +43,11 @@ class Post extends React.Component {
           }
         >
           <a href={post.post_permalink}>
-            {img}
+            {
+              post_image.length > 0
+              ? <img src={post_image} onLoad={this.handleImageLoaded} />
+              : <div/>
+            }
           </a>
           <div
             className={
