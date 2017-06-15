@@ -16,7 +16,7 @@ function bs_video_modal_bg_sc($atts, $content = null) {
 </div>
 
 <div id="<?php $at['modal_name'] ?>" class="modal">
-  <a class="modal__close" href="#" onClick={this.close}> <i class="ion-close" /> </a>
+  <a class="modal__close" href="#"> <i class="ion-close" /> </a>
   <div class="iframe-container">
   	
   </div>
