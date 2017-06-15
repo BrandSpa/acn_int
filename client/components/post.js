@@ -27,7 +27,7 @@ class Post extends React.Component {
     const { post, type, read_more } = this.props;
     let postImg = cleanEmpty(uniq(post.post_image));
     const img = postImg
-      ? <img src={post.post_image} onLoad={this.handleImageLoaded} />
+      ? <img src={postImg} onLoad={this.handleImageLoaded} />
       : "";
     let title = post.post_title;
     if (window.innerWidth <= "767") {
