@@ -13,10 +13,12 @@ function bs_get_posts($type = array('video','gallery','featured','post'), $paged
 			$thumbId = get_post_thumbnail_id($post->ID);
 			$images = array_unique(get_post_meta($post->ID, 'image_square_key'));
 			
-			$image = array_map(function($img) { 
-				if(strlen($img) > 0) {
-					return str_replace('http:', '', $img);
-				}
+			$images = array_filter($images, function($img) { 
+				return strlen($img) > 0;
+			});
+
+			$images = array_map(function($img) {
+				return str_replace('http:', '', $img);
 			}, $images);
 
  			$post->post_image = $image;
