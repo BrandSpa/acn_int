@@ -26,6 +26,9 @@ class Post extends React.Component {
   render() {
     const { post, type, read_more } = this.props;
     const { post_image = '', post_title = '' } = post;
+    const imgUrl = Array.isArray(post_image) && post_image.length > 1 
+      ? cleanEmpty(post_image) 
+      : post_image;
     let title = post_title;
 
     if (window.innerWidth <= "767") {
@@ -45,8 +48,8 @@ class Post extends React.Component {
         >
           <a href={post.post_permalink}>
             {
-              post_image.length > 0
-              ? <img src={post_image} onLoad={this.handleImageLoaded} />
+              imgUrl.length > 0
+              ? <img src={imgUrl} onLoad={this.handleImageLoaded} />
               : <div/>
             }
           </a>
@@ -57,7 +60,7 @@ class Post extends React.Component {
                 ? "grid-item__content__texts grid-item--main__content__texts"
                 : "grid-item__content__texts"
             }
-            style={!post_image.length > 0 ? { width: "100%" } : {}}
+            style={!imgUrl.length > 0 ? { width: "100%" } : {}}
           >
             <h5><a href={post.post_permalink}>{title}</a></h5>
             <p>{`${post.post_short.substring(0, 220)}...`}</p>
