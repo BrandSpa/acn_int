@@ -26,14 +26,16 @@ function bs_video_modal_bg_sc($atts, $content = null) {
 <script>
 	onLoad(function() {
 		var $iframContainer = $("#<?php echo $at['modal_name'] ?>").find('.iframe-container');
-		$("#open-<?php echo $at['modal_name'] ?>").on('click', function() {
+		$("#open-<?php echo $at['modal_name'] ?>").on('click', function(e) {
+			e.preventDefault();
 			var $iframContainer = $("#<?php echo $at['modal_name'] ?>").find('.iframe-container');
 			$iframContainer.css({height: '100vh'});
 			$iframContainer.append('<iframe src="<?php echo $at["video_url"] ?>?autoplay=1" frameBorder="0" height="315" width="100%" allowFullScreen ></iframe>');
 			$("#<?php echo $at['modal_name'] ?>").toggleClass('modal--show');
 		});
 
-		$('.modal__close').on('click', function() {
+		$('.modal__close').on('click', function(e) {
+			e.preventDefault();
 			$(this).parent().toggleClass('modal--show');
 			$iframContainer.css({height: '0'});
 			$iframContainer.find('iframe').remove();
