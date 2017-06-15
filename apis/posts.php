@@ -15,9 +15,9 @@ function bs_get_posts($type = array('video','gallery','featured','post'), $paged
 			
 			$images = array_filter($images, function($img) { 
 				if(strlen($img) > 0) {
-					return false;
+					return true;
 				}
-				return true;
+				return false;
 			});
 
  			$post->post_image = $images;
