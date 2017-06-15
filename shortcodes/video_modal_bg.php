@@ -11,7 +11,8 @@ function bs_video_modal_bg_sc($atts, $content = null) {
   ob_start();
 ?>
 
-<div id="open-<?php echo $at['modal_name'] ?>" style="background: url(<?php echo wp_get_attachment_url($at['image_id']); ?>); background-size: cover">
+<div style="background: url(<?php echo wp_get_attachment_url($at['image_id']); ?>); background-size: cover">
+<a href="#" id="open-<?php echo $at['modal_name'] ?>" style="left: 0; right: 0; bottom: 0; top: 0; width: 100%; position: absolute;"></a>
 	<?php echo do_shortcode($content) ?>
 </div>
 
