@@ -25,7 +25,7 @@ function bs_video_modal_bg_sc($atts, $content = null) {
 <script>
 	onLoad(function() {
 		$("#open-<?php echo $at['modal_name'] ?>").on('click', function() {
-			$(this).find('.iframe-container').append('<iframe src="<?php echo $at["video_url"] ?>?autoplay=1" frameBorder="0" height="315" width="100%" allowFullScreen ></iframe>');
+			$("#<?php echo $at['modal_name'] ?>").find('.iframe-container').append('<iframe src="<?php echo $at["video_url"] ?>?autoplay=1" frameBorder="0" height="315" width="100%" allowFullScreen ></iframe>');
 			$("#<?php echo $at['modal_name'] ?>").toggleClass('modal--show');
 		});
 
