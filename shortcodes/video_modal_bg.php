@@ -11,12 +11,12 @@ function bs_video_modal_bg_sc($atts, $content = null) {
   ob_start();
 ?>
 
-<div id="open-<?php $at['modal_name'] ?>" style="background: url(<?php echo wp_get_attachment_url($at['image_id']); ?>); background-size: cover">
+<div id="open-<?php echo $at['modal_name'] ?>" style="background: url(<?php echo wp_get_attachment_url($at['image_id']); ?>); background-size: cover">
 	<?php echo do_shortcode($content) ?>
 </div>
 
-<div id="<?php $at['modal_name'] ?>" class="modal">
-  <a class="modal__close" href="#"> <i class="ion-close" /> </a>
+<div id="<?php echo $at['modal_name'] ?>" class="modal">
+  <a class="modal__close" href="#"> <i class="ion-close"></i> </a>
   <div class="iframe-container">
   	
   </div>
@@ -24,9 +24,9 @@ function bs_video_modal_bg_sc($atts, $content = null) {
 
 <script>
 	onLoad(function() {
-		$("#open-<?php $at['modal_name'] ?>").on('click', function() {
+		$("#open-<?php echo $at['modal_name'] ?>").on('click', function() {
 			$(this).find('.iframe-container').append('<iframe src="<?php echo $at["video_url"] ?>?autoplay=1" frameBorder="0" height="315" width="100%" allowFullScreen />');
-			$("#<?php $at['modal_name'] ?>").toggleClass('modal--show');
+			$("#<?php echo $at['modal_name'] ?>").toggleClass('modal--show');
 		});
 
 		$('.modal__close').on('click', function() {
