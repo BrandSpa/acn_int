@@ -3,7 +3,7 @@
 function bs_video_modal_bg_sc($atts, $content = null) {
 	$attributes = [
 		"video_url" => "",
-		"name" => "bs-video-modal",
+		"modal_name" => "bs-video-modal",
 		"image_id" => ""
 	];
 
