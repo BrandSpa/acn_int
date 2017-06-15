@@ -30,7 +30,7 @@ function bs_video_modal_bg_sc($atts, $content = null) {
 		});
 
 		$('.modal__close').on('click', function() {
-			$(this).find('.iframe-container iframe').remove();
+			$("#<?php echo $at['modal_name'] ?>").find('.iframe-container iframe').remove();
 			$(this).parent().toggleClass('modal--show');
 		});
 
