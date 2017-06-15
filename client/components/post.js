@@ -26,8 +26,7 @@ class Post extends React.Component {
   render() {
     const { post, type, read_more } = this.props;
     let postImg = cleanEmpty(uniq(post.post_image));
-    console.log(postImg);
-    const img = post.post_image
+    const img = postImg
       ? <img src={post.post_image} onLoad={this.handleImageLoaded} />
       : "";
     let title = post.post_title;
