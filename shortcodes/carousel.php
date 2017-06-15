@@ -21,7 +21,6 @@ function bs_carousel_sc($atts, $content = null) {
 
   add_shortcode( 'bs_carousel', 'bs_carousel_sc' );
 
-
   function bs_carousel_vc() {
     $subparams = [];
     $params = [];

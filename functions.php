@@ -130,6 +130,7 @@ require('shortcodes/post_item_square.php');
 require('shortcodes/latest_news.php');
 require('shortcodes/banner_donation.php');
 require('shortcodes/candle.php');
+require('shortcodes/video_modal_bg.php');
 
 //metaboxes
 require('metaboxes/image_square.php');
