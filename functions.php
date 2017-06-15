@@ -126,6 +126,7 @@ require('shortcodes/arrow.php');
 require('shortcodes/carousel.php');
 require('shortcodes/carousel_item.php');
 require('shortcodes/post_item.php');
+require('shortcodes/post_item_square.php');
 require('shortcodes/latest_news.php');
 require('shortcodes/banner_donation.php');
 require('shortcodes/candle.php');
