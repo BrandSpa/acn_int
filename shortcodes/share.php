@@ -2,7 +2,7 @@
 function bs_share_sc($atts, $content = null) {
 	$attributes = [];
   $at = shortcode_atts( $attributes , $atts );
-	$current_url = esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+	$current_url = str_replace('//', 'https://', esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
   ob_start();
 ?>
 
