@@ -1,5 +1,5 @@
 	<?php require('templates/footer.php') ?>
-  <a 
+  <a
     href="#"
     id="return-to-top" 
      style="display: none;color: #fff; text-align: center; padding-top: 10px; position: fixed; bottom: 40px; right: 40px; background: rgba(0, 0, 0, .5); width: 40px; height: 40px; border-radius: 40px"
