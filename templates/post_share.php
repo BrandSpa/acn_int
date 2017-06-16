@@ -1,4 +1,4 @@
-<?php $current_url = esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); ?>
+<?php $current_url = str_replace('//', 'https://', esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'])); ?>
 <span style="text-align: center; font-size: 20px; color: #3C515F; display:block; margin: 40px auto"> <?php echo gett('¿Quiéres que el mundo conozca la realidad de la Iglesia que Sufre en el Mundo?') ?></span>
 
 <div class="bs-post__share" style="background: #F7F7F7">
