@@ -3,7 +3,7 @@
 function bs_video_modal_bg_sc($atts, $content = null) {
 	$attributes = [
 		"video_url" => "",
-		"modal_name" => "bs-video-modal",
+		"name" => "bs-video-modal",
 		"image_id" => ""
 	];
 
@@ -12,11 +12,11 @@ function bs_video_modal_bg_sc($atts, $content = null) {
 ?>
 
 <div style="background: url(<?php echo wp_get_attachment_url($at['image_id']); ?>); background-size: cover">
-<a href="#" id="open-<?php echo $at['modal_name'] ?>" style="left: 0; right: 0; bottom: 0; top: 0; width: 100%; position: absolute;"></a>
+<a href="#" id="open-<?php echo $at['name'] ?>" style="left: 0; right: 0; bottom: 0; top: 0; width: 100%; position: absolute;"></a>
 	<?php echo do_shortcode($content) ?>
 </div>
 
-<div id="<?php echo $at['modal_name'] ?>" class="modal">
+<div id="<?php echo $at['name'] ?>" class="modal">
   <a class="modal__close" href="#"> <i class="ion-close"></i> </a>
   <div class="iframe-container">
   	
@@ -25,13 +25,13 @@ function bs_video_modal_bg_sc($atts, $content = null) {
 
 <script>
 	onLoad(function() {
-		var $iframContainer = $("#<?php echo $at['modal_name'] ?>").find('.iframe-container');
-		$("#open-<?php echo $at['modal_name'] ?>").on('click', function(e) {
+		var $iframContainer = $("#<?php echo $at['name'] ?>").find('.iframe-container');
+		$("#open-<?php echo $at['name'] ?>").on('click', function(e) {
 			e.preventDefault();
-			var $iframContainer = $("#<?php echo $at['modal_name'] ?>").find('.iframe-container');
+			var $iframContainer = $("#<?php echo $at['name'] ?>").find('.iframe-container');
 			$iframContainer.css({height: '100vh'});
 			$iframContainer.append('<iframe src="<?php echo $at["video_url"] ?>?autoplay=1" frameBorder="0" height="315" width="100%" allowFullScreen ></iframe>');
-			$("#<?php echo $at['modal_name'] ?>").toggleClass('modal--show');
+			$("#<?php echo $at['name'] ?>").toggleClass('modal--show');
 		});
 
 		$('.modal__close').on('click', function(e) {
