@@ -39,6 +39,7 @@ function bs_video_modal_bg_sc($atts, $content = null) {
 			$(this).parent().toggleClass('modal--show');
 			$iframContainer.css({height: '0'});
 			$iframContainer.find('iframe').remove();
+			$("#<?php echo $at['name'] ?>").removeClass('modal--show');
 		});
 
 	});
