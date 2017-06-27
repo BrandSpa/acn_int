@@ -13,9 +13,9 @@ function acn_fullpage_sc( $atts, $content ) {
 		</div>
 		<script>
 			onLoad(function() {
+
 				$('#<?php echo $at['unique_name'] ?>').fullpage({
-					scrollOverflow: true,
-					scrollBar: false
+					scrollOverflow: true
 				});
 
 				$(document).on('click', '.section__open-post', function(e) {
