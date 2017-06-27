@@ -586,7 +586,7 @@ a {
     opacity: 1; } }
 
 .section__post {
-  position: relative;
+  position: absolute;
   z-index: 1;
   top: 0;
   left: -100%;
