@@ -74,6 +74,7 @@ require_once('shortcodes/latest_news.php');
 require_once('shortcodes/banner_donation.php');
 require_once('shortcodes/candle.php');
 require_once('shortcodes/video_modal_bg.php');
+
 //FULLPAGE
 require_once('shortcodes/fullpage/fullpage.php');
 require_once('shortcodes/fullpage/fullpage_slide.php');

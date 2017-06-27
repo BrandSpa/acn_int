@@ -17,41 +17,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	
 	<div id="<?php echo $at['uniq_name'] ?>" class="section" id="<?php echo $at['uniq_name'] ?>">
 			<style>
-					@keyframes Q4S1Fg {
-					from {
-							-webkit-transform: scale(1.2) translate3d(-70px, 0, 0);
-							transform: scale(1.2) translate3d(-70px, 0, 0)
-					}
-					to {
-							-webkit-transform: scale(1) translate3d(0, 0, 0);
-							transform: scale(1) translate3d(0, 0, 0)
-					}
-				}
-
-			@keyframes Q2S1Bg {
-					from {
-							-webkit-transform: scale(1.05) translate3d(-30px, 0, 0);
-							transform: scale(1.05) translate3d(-30px, 0, 0)
-					}
-					to {
-							-webkit-transform: scale(1) translate3d(0, 0, 0);
-							transform: scale(1) translate3d(0, 0, 0)
-					}
-			}
-
-			@keyframes textAnim {
-				from {
-						-webkit-transform: translateY(50px);
-						transform: translateY(50px);
-						opacity: 0
-				}
-
-				to {
-					-webkit-transform: translateY(0);
-						transform: translateY(0);
-						opacity: 1
-				}
-			}
+			
 				
 		#<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
 			animation: Q2S1Bg 3s;
