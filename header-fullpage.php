@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#f1364e">
   <meta property="title" content="<?php echo get_the_title(); ?>" />
   	<title>ACN - Aid to the Church in Need <?php echo wp_title(); ?></title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.css">
 
     	<!--wordpress files-->
