@@ -18,8 +18,8 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 			data-bgset="<?php echo $bgUrl ?> 1200w"
 			style="background-size: cover; background-position: center center"
 		>
-		
-			<?php echo base64_decode($at['title']) ?>
+
+			<?php echo esc_html(base64_decode($at['title'])) ?>
 
 			<button 
 				class="section__open-post" 
