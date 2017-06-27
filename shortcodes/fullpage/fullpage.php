@@ -20,7 +20,9 @@ function acn_fullpage_sc( $atts, $content ) {
 
 				$(document).on('click', '.section__open-post', function(e) {
 					var $postSection =  $(this).closest('.fp-tableCell').find('.section__post');
+					$.fn.fullpage.setAllowScrolling(false);
 					$postSection.addClass('section__post--open');
+					
 				});
 
 			});
