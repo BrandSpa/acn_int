@@ -27,6 +27,10 @@ require_once 'lib/get_home_url.php';
 require_once 'lib/replace_office_texts.php';
 require_once 'lib/logo_url.php';
 require_once 'lib/in_office.php';
+require_once 'lib/geolify.php';
+require_once 'lib/redirect_to_lang.php';
+require_once 'lib/redirect_ajax.php';
+require_once 'lib/clean_quote.php';
 
 //TRANSLATIONS
 require_once('translations/index.php');
@@ -77,24 +81,10 @@ require_once('metaboxes/geolify.php');
 require_once('metaboxes/video.php');
 require_once('metaboxes/gallery.php');
 
-//add more compression
-add_filter('jpeg_quality', function($arg) {
-	return 80;
-});
 
-function cleanQuote($val) {
-	return str_replace("'", "\u0027", $val);
-}
 
-require_once 'lib/geolify.php';
-require_once 'lib/redirect_to_lang.php';
-require_once 'lib/redirect_ajax.php';
 
-// if(function_exists('wp_doing_ajax') && !wp_doing_ajax()) {
-// 	redirectToLang();
-// }
-
-$post_types = array( 'video', 'gallery','featured' ); // and so forth
+$post_types = array( 'video', 'gallery','featured' );
 
 foreach( $post_types as $post_type) {
     add_meta_box('page_image_square', 'Square Image', 'bs_page_image_square_cb', $post_type, 'normal', 'high', null);
