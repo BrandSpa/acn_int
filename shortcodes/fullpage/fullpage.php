@@ -15,6 +15,7 @@ function acn_fullpage_sc( $atts, $content ) {
 			onLoad(function() {
 
 				$('#<?php echo $at['unique_name'] ?>').fullpage({
+					lazyLoading: false,
 					afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
 						console.log(anchorLink, index, slideAnchor, slideIndex);
 					},
