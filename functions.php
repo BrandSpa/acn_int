@@ -82,6 +82,7 @@ require_once('shortcodes/fullpage/fullpage_slide_layers.php');
 require_once('shortcodes/fullpage/vc/fullpage.php');
 require_once('shortcodes/fullpage/vc/fullpage_slide.php');
 require_once('shortcodes/fullpage/vc/fullpage_slide_layers.php');
+require_once('shortcodes/fullpage/vc/fullpage_slide_post.php');
 
 //METABOXES
 require_once('metaboxes/image_square.php');

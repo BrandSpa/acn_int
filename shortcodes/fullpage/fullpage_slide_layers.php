@@ -20,21 +20,19 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	?>
 	
 	<div id="<?php echo $at['uniq_name'] ?>" class="section" id="<?php echo $at['uniq_name'] ?>">
-			<style>
-			
-				
-		#<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
-			animation: Q2S1Bg 3s;
-		}
+		<style>
+					
+			#<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
+				animation: Q2S1Bg 3s;
+			}
 
-		#<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
-			animation: Q4S1Fg 3s;
-		}
+			#<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
+				animation: Q4S1Fg 3s;
+			}
 
-		.active .animate-text {
-			animation: textAnim 2.5s;
-		}
-
+			.active .animate-text {
+				animation: textAnim 2.5s;
+			}
 	</style>
 
 	<div class="section__content" style="position: relative; z-index: 3;">

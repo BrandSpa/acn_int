@@ -1,7 +1,8 @@
 <?php
 
-function acn_fullpage_slide_sc( $atts, $content ) {
+function acn_fullpage_slide_post_sc( $atts, $content ) {
 	$at = shortcode_atts([
+		"title" => "",
 		"bg_img" => "",
 		"bg_color" => "#fff",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100) 
@@ -16,11 +17,16 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 			data-bgset="<?php echo $bgUrl ?> 1200w"
 			style="background-size: cover; background-position: center center"
 		>
-			<?php echo do_shortcode($content) ?>
+			<?php echo $at['title'] ?>
+			<button><i class="ion-android-open"></i></button>
+
+			<div class="section__post">
+				<?php echo do_shortcode($content) ?>
+			</div>
 		</div>
 		
 	<?php
 	return ob_get_clean();
 }
 
-add_shortcode( 'acn_fullpage_slide', 'acn_fullpage_slide_sc' );
+add_shortcode( 'acn_fullpage_slide_post', 'acn_fullpage_slide_post_sc' );
