@@ -175,7 +175,13 @@ a {
 	left: -100%;
 	transition: left 500ms;
 	overflow: auto;
+	width: 50%;
+	background: #fff;
 
+	img {
+		max-width: 100%;
+	}
+	
 	&--open {
 		left: 0;
 	}

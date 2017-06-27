@@ -592,6 +592,10 @@ a {
   left: -100%;
   -webkit-transition: left 500ms;
   transition: left 500ms;
-  overflow: auto; }
+  overflow: auto;
+  width: 50%;
+  background: #fff; }
+  .section__post img {
+    max-width: 100%; }
   .section__post--open {
     left: 0; }
