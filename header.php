@@ -62,7 +62,6 @@
   </script>
   <!-- End ConvertLoop -->
 
-      
 </head>
 <body>
 <?php if(get_option('gta_id')): ?>
