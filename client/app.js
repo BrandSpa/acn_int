@@ -1,6 +1,7 @@
 "use strict";
 //get sass file and compiled to css
 import "./sass/index.scss";
+import "./sass/fullpage.scss";
 
 import "babel-polyfill";
 import WebFont from "webfontloader";

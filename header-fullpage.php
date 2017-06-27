@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>ACN</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta name="theme-color" content="#f1364e">
+  <meta property="title" content="<?php echo get_the_title(); ?>" />
+  	<title>ACN - Aid to the Church in Need <?php echo wp_title(); ?></title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.css">
+
+    	<!--wordpress files-->
+	  <?php wp_head(); ?>
+		<!-- /wordpress files-->
+    
+
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/client/dist/fullpage.css">
+	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
 	<script>
       function onLoad(cb) {
