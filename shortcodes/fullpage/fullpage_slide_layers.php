@@ -9,7 +9,9 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	], $atts);
 	
 	$bgUrl = wp_get_attachment_url( $at['bg_img'] ); 
+	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] ); 
 	$overlayUrl = wp_get_attachment_url( $at['overlay_img'] ); 
+	$overlayUrlMobile = wp_get_attachment_url( $at['overlay_img_mobile'] ); 
 
 	ob_start();
 
@@ -39,7 +41,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 		<div
 			class="layer-bg-animation lazyload"
-			data-bgset="<?php echo $bgUrl ?> 1200w"
+			data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 768w"
 			style="
 					background-size: cover; 
 					background-position: center center;
@@ -55,7 +57,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 		<div 
 			class="layer-overlay-animation lazyload"
-			data-bgset="<?php echo $overlayUrl ?> 1200w"
+			data-bgset="<?php echo $overlayUrl ?> 1200w, <?php echo $overlayUrlMobile ?> 768w"
 			style="
 				background-size: cover; 
 				background-position: center center;
