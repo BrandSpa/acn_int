@@ -17,11 +17,14 @@ function acn_fullpage_sc( $atts, $content ) {
 					scrollOverflow: true,
 					scrollBar: false
 				});
+
+				$(document).on('click', '.section__open-post', function(e) {
+					console.log('post slide', $(this).parent());
+				});
+
 			});
 
-			jQuery(document).on('click', '.section__open-post', function(e) {
-				console.log('post slide', jQuery(this).parent());
-			});
+	
 		</script>
 	<?php
 	return ob_get_clean();
