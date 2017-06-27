@@ -14,9 +14,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		<script>
 			onLoad(function() {
 
-				$('#<?php echo $at['unique_name'] ?>').fullpage({
-					scrollOverflow: true
-				});
+				$('#<?php echo $at['unique_name'] ?>').fullpage({});
 
 				$(document).on('click', '.section__open-post', function(e) {
 					var $postSection =  $(this).closest('.fp-tableCell').find('.section__post');
