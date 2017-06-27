@@ -167,3 +167,12 @@ a {
 						opacity: 1
 				}
 			}
+
+.section__post {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: -100%;
+	transition: left 500ms;
+	overflow: auto;
+}

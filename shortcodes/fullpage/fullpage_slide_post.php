@@ -11,6 +11,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 	$bgUrl = wp_get_attachment_url( $at['bg_img'] ); 
 	ob_start();
 	?>
+
 		<div 
 			id="<?php echo $at['uniq_name'] ?>"
 			class="section lazyload" 
@@ -18,9 +19,9 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 			style="background-size: cover; background-position: center center"
 		>
 			<?php echo $at['title'] ?>
-			<button><i class="ion-android-open"></i></button>
+			<button class="section__open-post"><i class="ion-android-open"></i></button>
 
-			<div class="section__post">
+			<div class="section__post" >
 				<?php echo do_shortcode($content) ?>
 			</div>
 		</div>

@@ -18,6 +18,10 @@ function acn_fullpage_sc( $atts, $content ) {
 					scrollBar: false
 				});
 			});
+
+			$(document).on('click', '.section__open-post', function(e) {
+				console.log('post slide', $(this).parent());
+			});
 		</script>
 	<?php
 	return ob_get_clean();

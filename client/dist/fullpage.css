@@ -584,3 +584,12 @@ a {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; } }
+
+.section__post {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -100%;
+  -webkit-transition: left 500ms;
+  transition: left 500ms;
+  overflow: auto; }
