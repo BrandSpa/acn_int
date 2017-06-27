@@ -41,6 +41,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 			<div class="section__post" >
 				<?php echo do_shortcode($content) ?>
 			</div>
+			
 		</div>
 		
 	<?php
