@@ -17,7 +17,10 @@ function acn_fullpage_sc( $atts, $content ) {
 				$('#<?php echo $at['unique_name'] ?>').fullpage({
 					afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
 						console.log(anchorLink, index, slideAnchor, slideIndex);
-					}
+					},
+					onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+						console.log(anchorLink, index, slideIndex, direction, nextSlideIndex);
+					} 
 				});
 
 				$(document).on('click', '.section__open-post', function(e) {
