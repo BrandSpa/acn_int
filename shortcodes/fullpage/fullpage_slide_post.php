@@ -19,7 +19,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 			style="background-size: cover; background-position: center center"
 		>
 
-			<?php echo html_entity_decode(base64_decode($at['title'])) ?>
+			<h1 style="text-align: center"><?php echo $at['title'] ?></h1>
 
 			<button 
 				class="section__open-post" 
