@@ -18,7 +18,7 @@
       ],
 			[
         "heading" => "title",
-				"type" => "textarea_raw_html",
+				"type" => "textarea",
 				"param_name" => "title"
 			],
 			[
