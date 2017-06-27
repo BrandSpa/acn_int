@@ -30,7 +30,7 @@
 
     vc_map(
       array(
-        "name" =>  "FullPage Slide",
+        "name" =>  "FullPage Slide Post",
         "base" => "acn_fullpage_slide_post",
         "category" =>  "ACN",
 				"content_element" => true,
