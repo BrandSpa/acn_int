@@ -19,7 +19,8 @@ function acn_fullpage_sc( $atts, $content ) {
 				});
 
 				$(document).on('click', '.section__open-post', function(e) {
-					console.log('post slide', $(this).closest('.fp-tableCell').find('.section__post'));
+					var $postSection =  $(this).closest('.fp-tableCell').find('.section__post');
+					$postSection.addClass('section__post--open');
 				});
 
 			});

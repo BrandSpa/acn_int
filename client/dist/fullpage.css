@@ -593,3 +593,5 @@ a {
   -webkit-transition: left 500ms;
   transition: left 500ms;
   overflow: auto; }
+  .section__post--open {
+    left: 0; }
