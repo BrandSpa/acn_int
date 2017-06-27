@@ -3,7 +3,9 @@
 function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	$at = shortcode_atts([
 		"bg_img" => "",
+		"bg_img_mobile" => "",
 		"overlay_img" => "",
+		"overlay_img_mobile" => "",
 		"bg_color" => "#000",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100) 
 	], $atts);
