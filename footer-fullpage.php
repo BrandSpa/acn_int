@@ -4,8 +4,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js"></script>
 <script src="https://afarkas.github.io/lazysizes/plugins/bgset/ls.bgset.min.js"></script>
 
-<script src='<?php echo get_template_directory_uri() ?>/client/dist/vendor.798c8883d8a83bfda12b.js'></script>
-<script src='<?php echo get_template_directory_uri() ?>/client/dist/app.d86e31d29368abfc927a.js'></script>
+<script src='<?php echo get_template_directory_uri() ?>/client/dist/vendor.8dbe4f20dc662765f538.js'></script>
+<script src='<?php echo get_template_directory_uri() ?>/client/dist/app.23966adf2dc9bac8c927.js'></script>
 
 </body>
 </html>
