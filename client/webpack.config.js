@@ -65,7 +65,7 @@ module.exports = {
   	app: './app.js'
   },
   output: {
-  	path: Path.join(__dirname, '/public/js'),
+  	path: Path.join(__dirname, '/dist/'),
     filename: '[name].[chunkhash].js'
   },
   module: {
