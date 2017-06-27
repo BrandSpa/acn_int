@@ -57,5 +57,3 @@ composer install
 
 ## notes 
 All javascript it's written on ecmacript 6 or es2015 then compiled with babel and webpack to ecmascript 5
-
-All css it's written on sass and then compiled with webpack
