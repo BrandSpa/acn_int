@@ -79,6 +79,7 @@ require_once('shortcodes/video_modal_bg.php');
 require_once('shortcodes/fullpage/fullpage.php');
 require_once('shortcodes/fullpage/fullpage_slide.php');
 require_once('shortcodes/fullpage/fullpage_slide_layers.php');
+require_once('shortcodes/fullpage/fullpage_slide_post.php');
 require_once('shortcodes/fullpage/vc/fullpage.php');
 require_once('shortcodes/fullpage/vc/fullpage_slide.php');
 require_once('shortcodes/fullpage/vc/fullpage_slide_layers.php');

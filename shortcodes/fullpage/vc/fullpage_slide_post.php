@@ -44,3 +44,4 @@
   }
 
 add_action( 'vc_before_init', 'acn_fullpage_slide_post_vc' );
+
