@@ -594,7 +594,8 @@ a {
   transition: left 500ms;
   overflow: auto;
   width: 50%;
-  background: #fff; }
+  background: #fff;
+  height: 100%; }
   .section__post img {
     max-width: 100%; }
   .section__post--open {
