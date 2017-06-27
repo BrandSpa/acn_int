@@ -169,7 +169,7 @@ a {
 			}
 
 .section__post {
-	position: absolute;
+	position: relative;
 	z-index: 1;
 	top: 0;
 	left: -100%;
@@ -177,12 +177,14 @@ a {
 	overflow: auto;
 	width: 50%;
 	background: #fff;
-
+	
 	img {
 		max-width: 100%;
 	}
-	
+
 	&--open {
-		left: 0;
+		left: 0;   
+		overflow-x: hidden;
+    	overflow-y: scroll;
 	}
 }
