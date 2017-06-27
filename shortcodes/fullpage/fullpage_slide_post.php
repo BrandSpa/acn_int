@@ -16,6 +16,8 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 			id="<?php echo $at['uniq_name'] ?>"
 			class="section lazyload" 
 			data-bgset="<?php echo $bgUrl ?> 1200w"
+			data-src="<?php echo $bgUrl ?>"
+			data-sizes="auto"
 			style="background-size: cover; background-position: center center"
 		>
 

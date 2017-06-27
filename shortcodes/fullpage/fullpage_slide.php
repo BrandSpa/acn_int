@@ -13,6 +13,7 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 		<div 
 			id="<?php echo $at['uniq_name'] ?>"
 			class="section lazyload" 
+			data-src="<?php echo $bgUrl ?>"
 			data-bgset="<?php echo $bgUrl ?> 1200w"
 			style="background-size: cover; background-position: center center"
 		>
