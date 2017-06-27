@@ -11,7 +11,7 @@ function bs_header_slider_sc($atts, $content = null) {
 	$slides = array_map(function($slide) {
 		$slide['image'] = wp_get_attachment_url($slide['image']);
 		return $slide;
-	}, vc_param_group_parse_atts( $at['slides'] ));
+	}, vc_param_group_parse_atts( $atts['slides'] ));
 
   ob_start();
 ?>
