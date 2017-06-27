@@ -31,7 +31,7 @@ const changeFilesNames = function() {
       const vendorName = stats.chunks[1].files[0];
 
       const files = [
-        footerFile, 
+        footerFile,
         headerFile,
         footerDonateFile, 
         headerDonateFile,
