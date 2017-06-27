@@ -14,7 +14,11 @@ function acn_fullpage_sc( $atts, $content ) {
 		<script>
 			onLoad(function() {
 
-				$('#<?php echo $at['unique_name'] ?>').fullpage({});
+				$('#<?php echo $at['unique_name'] ?>').fullpage({
+					afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+						console.log(anchorLink, index, slideAnchor, slideIndex);
+					}
+				});
 
 				$(document).on('click', '.section__open-post', function(e) {
 					var $postSection =  $(this).closest('.fp-tableCell').find('.section__post');
