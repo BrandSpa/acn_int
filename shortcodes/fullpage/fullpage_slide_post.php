@@ -32,7 +32,8 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 				bottom: 40px;
 				left: 0;
 				right: 0;
-				z-index: 2"
+				z-index: 2;
+				font-size: 32px"
 				>
 				<i class="ion-android-open"></i>
 			</button>
