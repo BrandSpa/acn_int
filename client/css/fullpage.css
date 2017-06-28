@@ -629,6 +629,13 @@ button {
 
 .section__content {
   position: relative; }
+  .section__content:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 100%;
+    /* 16:9 = 56.25% = calc(9 / 16 * 100%) */
+    padding-bottom: 50%; }
 
 .section__layers {
   position: absolute;
