@@ -628,7 +628,8 @@ button {
   cursor: pointer; }
 
 .section__content {
-  position: relative; }
+  position: relative;
+  height: 463px; }
 
 .section__layers {
   position: absolute;
@@ -675,8 +676,6 @@ html.fp-enabled,
 .fp-section {
   position: relative;
   -webkit-box-sizing: border-box;
-  /* Safari<=5 Android<=3 */
-  /* <=28 */
   box-sizing: border-box; }
 
 .fp-slide {
