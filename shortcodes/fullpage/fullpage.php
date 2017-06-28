@@ -21,8 +21,8 @@ function acn_fullpage_sc( $atts, $content ) {
 					afterRender: function(anchorLink, index, slideAnchor, slideIndex){
 						lazySizes.init();
 					},
-					onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
-						console.log(anchorLink, index, slideIndex, direction, nextSlideIndex);
+					afterSlideLoad: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+						console.log('after slide load');
 					} 
 				});
 
@@ -35,7 +35,11 @@ function acn_fullpage_sc( $atts, $content ) {
 						$.fn.fullpage.setAllowScrolling(false);
 						$postSection.addClass('section__post--open');
 					}
-					
+
+				});
+
+				$(document).on('click', '.section__down', function() {
+					$.fn.fullpage.moveSectionDown();
 				});
 
 			});
