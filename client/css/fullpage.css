@@ -631,7 +631,12 @@ button {
   position: relative; }
 
 .section__layers {
-  overflow: hidden; }
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%; }
   .section__layers__layer {
     position: absolute;
     width: 100vw;
