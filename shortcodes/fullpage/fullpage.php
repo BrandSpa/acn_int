@@ -36,7 +36,8 @@ function acn_fullpage_sc( $atts, $content ) {
 						console.log('afterload', section, index);
 					},
 					onLeave: function(index, nextIndex, direction) {
-						var $section = $('.section:eq(' + nextIndex - 1 + ')');
+						var next = nextIndex - 1;
+						var $section = $('.section:eq(' + next; + ')');
 						console.log('onLeave', index, nextIndex, $section);
 					}
 				});
