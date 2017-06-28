@@ -33,6 +33,7 @@ function acn_fullpage_sc( $atts, $content ) {
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
 					lazyLoading: false,
 					responsiveSlides: true,
+					scrollBar: true,
 					afterSlideLoad: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
 						console.log('after slide load');
 					} 
