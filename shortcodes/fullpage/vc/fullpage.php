@@ -17,6 +17,12 @@ function acn_fullpage_vc() {
     
     $params = [
       [
+        'type' => 'textfield',
+        'param_name' => 'unique_name',
+        'heading' => 'Component Name',
+        'value' => ''
+      ],
+      [
         'type' => 'param_group',
         'param_name' => 'links',
         'value' => '',
