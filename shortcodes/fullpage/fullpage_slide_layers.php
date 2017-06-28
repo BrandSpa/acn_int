@@ -27,10 +27,18 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 					
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
 				animation: Q2S1Bg 3s;
+				background: <?php echo $bgUrl ?>;
+				@media (max-width: 767px) {
+					background: <?php echo $bgUrlMobile ?>
+				}
 			}
 
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
 				animation: Q4S1Fg 3s;
+				background: <?php echo $overlayUrl ?>;
+				@media (max-width: 767px) {
+					background: <?php echo $overlayUrlMobile ?>
+				}
 			}
 
 			.active .animate-text {
@@ -45,16 +53,13 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	<div class="section__layers">
 
 			<div
-				class="layer-bg-animation section__layers__layer lazyload"
-				data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 768w"
-				data-sizes="auto"
+				class="layer-bg-animation section__layers__layer"
 				style=" z-index: 1"
 			>
 			</div>
 
 			<div 
 				class="layer-overlay-animation section__layers__layer lazyload"
-				data-bgset="<?php echo $overlayUrl ?> 1200w, <?php echo $overlayUrlMobile ?> 768w"
 				data-sizes="auto"
 				style=" z-index: 2"
 			>
