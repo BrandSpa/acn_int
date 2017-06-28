@@ -83,7 +83,6 @@ module.exports = {
           }, {
             loader: "sass-loader"
           }],
-           // use style-loader in development
           fallback: "style-loader"
         })
       }
@@ -96,7 +95,7 @@ module.exports = {
         minChunks: 2
       }),
       changeFilesNames,
-       extractSass,
+      extractSass,
       new WebpackCleanupPlugin({
         exclude: ["admin.js"],
       })

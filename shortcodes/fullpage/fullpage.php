@@ -7,6 +7,7 @@ function acn_fullpage_sc( $atts, $content ) {
 	], $atts);
 
 	ob_start();
+	
 	?>
 		<div id="<?php echo $at['unique_name'] ?>">
 			<?php echo do_shortcode($content) ?>
@@ -34,7 +35,6 @@ function acn_fullpage_sc( $atts, $content ) {
 						$.fn.fullpage.setAllowScrolling(false);
 						$postSection.addClass('section__post--open');
 					}
-					
 					
 				});
 
