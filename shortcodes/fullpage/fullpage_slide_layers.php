@@ -27,10 +27,12 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 			.section--<?php echo $at['uniq_name'] ?> {
 				background: #000;
 				transition: all .5s;
+				opacity: .5;
 			}
 
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
 				animation: Q2S1Bg 3s;
+				opacity: 1;
 				background: url(<?php echo $bgUrl ?>);
 				@media (max-width: 767px) {
 					background: url(<?php echo $bgUrlMobile ?>)
@@ -39,6 +41,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
 				animation: Q4S1Fg 3s;
+				opacity: 1;
 				background: url(<?php echo $overlayUrl ?>);
 				@media (max-width: 767px) {
 					background: url(<?php echo $overlayUrlMobile ?>)
