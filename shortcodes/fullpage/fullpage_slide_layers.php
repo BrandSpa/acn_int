@@ -19,7 +19,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 	?>
 	
-	<div id="<?php echo $at['uniq_name'] ?>" class="section" id="<?php echo $at['uniq_name'] ?>">
+	<div id="<?php echo $at['uniq_name'] ?>" class="section">
 		<style>
 					
 			#<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
@@ -71,7 +71,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 			>
 		</div>
 			
-		</div>
+	</div>
 	<?php
 	return ob_get_clean();
 }
