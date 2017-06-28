@@ -59,8 +59,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 			</div>
 
 			<div 
-				class="layer-overlay-animation section__layers__layer lazyload"
-				data-sizes="auto"
+				class="layer-overlay-animation section__layers__layer"
 				style=" z-index: 2"
 			>
 			</div>
