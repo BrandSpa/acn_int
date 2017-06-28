@@ -210,7 +210,6 @@ button {
 
     &__content {
         position: relative;
-        height: 100vh;
     }
 
     &__layers {
@@ -223,7 +222,7 @@ button {
             right: 0;
             bottom: 0;
             z-index: 1;
-            
+
              &__layer {
                 position: absolute;
                 width: 100vw;
