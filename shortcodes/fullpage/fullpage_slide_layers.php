@@ -24,7 +24,11 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 		class="section section--<?php echo $at['uniq_name'] ?>"
 	>
 		<style>
-					
+			.section--<?php echo $at['uniq_name'] ?> {
+				background: #000;
+				transition: all .5s;
+			}
+
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
 				animation: Q2S1Bg 3s;
 				background: url(<?php echo $bgUrl ?>);
