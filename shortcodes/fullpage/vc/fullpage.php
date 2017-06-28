@@ -4,20 +4,22 @@ function acn_fullpage_vc() {
       [
         'type' => 'textfield',
         'param' => 'anchor',
-        'heading' => 'link Anchor'
+        'heading' => 'link Anchor',
+        'value' => ''
       ],
       [
         'type' => 'textfield',
         'param' => 'title',
-        'heading' => 'link title'
+        'heading' => 'link title',
+        'value' => ''
       ]
     ];
     
     $params = [
       [
         'type' => 'param_group',
-        'value' => '',
         'param_name' => 'links',
+        'value' => '',
         'params' => $subparams
       ]
     ];
