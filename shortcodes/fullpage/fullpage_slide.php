@@ -9,7 +9,8 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 	], $atts);
 	
 	$bgUrl = wp_get_attachment_url( $at['bg_img'] ); 
-	$$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] ); 
+	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] ); 
+
 	ob_start();
 	?>
 		<div
