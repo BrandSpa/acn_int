@@ -24,12 +24,12 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 			}
 
 			.section--<?php echo $at['uniq_name'] ?>.load-bgs {
-				background-image: <?php echo $bgUrl ?>
+				background-image: url(<?php echo $bgUrl ?>)
 			}
 
 			@media (max-width: 767px) {
 				.section--<?php echo $at['uniq_name'] ?>.load-bgs {
-					background-image: <?php echo $bgUrlMobile ?>
+					background-image: url(<?php echo $bgUrlMobile ?>)
 				}
 			}
 		
