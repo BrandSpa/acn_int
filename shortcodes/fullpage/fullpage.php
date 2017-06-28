@@ -32,12 +32,12 @@ function acn_fullpage_sc( $atts, $content ) {
 				$('#<?php echo $at['unique_name'] ?>').fullpage({
 					anchors: <?php echo json_encode($anchors) ?>,
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
-					afterLoad: function() {
-						console.log('afterload');
+					afterLoad: function(a,e,i) {
+						console.log('afterload', a,e,i);
 					},
-					afterSlideLoad: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
-						console.log('after slide load');
-					} 
+					onLeave: function(index, nextIndex, direction) {
+						console.log('onLeave', index, nextIndex, direction);
+					}
 				});
 
 				$(document).on('click', '.section__open-post', function(e) {
