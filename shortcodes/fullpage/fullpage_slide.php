@@ -21,7 +21,9 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 			data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 750w"
 			style="background-size: cover; background-position: center center"
 		>
-			<?php echo do_shortcode($content) ?>
+			<div class="section__content">
+				<?php echo do_shortcode($content) ?>
+			</div>
 		</div>
 		
 	<?php

@@ -210,7 +210,10 @@ button {
 }
 
 .section {
-	height: 500px;
+
+	&__content {
+		height: 100%;
+	}
 }
 
 

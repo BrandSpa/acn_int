@@ -619,5 +619,5 @@ button {
   outline: none;
   cursor: pointer; }
 
-.section {
-  height: 500px; }
+.section__content {
+  height: 100%; }
