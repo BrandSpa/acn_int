@@ -33,8 +33,13 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 				animation: Q2S1Bg 3s;
 				opacity: 1;
 				background: url(<?php echo $bgUrl ?>);
-				@media (max-width: 767px) {
+			
+			}
+
+			@media (max-width: 767px) {
+				.section--<?php echo $at['uniq_name'] ?>.load-bgs .layer-bg-animation {
 					background: url(<?php echo $bgUrlMobile ?>)
+			
 				}
 			}
 
@@ -42,7 +47,10 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 				animation: Q4S1Fg 3s;
 				opacity: 1;
 				background: url(<?php echo $overlayUrl ?>);
-				@media (max-width: 767px) {
+			}
+
+			@media (max-width: 767px) {
+				.section--<?php echo $at['uniq_name'] ?>.load-bgs .layer-overlay-animation {
 					background: url(<?php echo $overlayUrlMobile ?>)
 				}
 			}
