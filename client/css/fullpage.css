@@ -628,8 +628,7 @@ button {
   cursor: pointer; }
 
 .section__content {
-  position: relative;
-  height: 463px; }
+  position: relative; }
 
 .section__layers {
   position: absolute;
@@ -876,3 +875,7 @@ html.fp-enabled,
 .fp-responsive .fp-auto-height-responsive .fp-slide,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
   height: auto !important; }
+
+.lazyload,
+.lazyloading {
+  min-height: 200px; }
