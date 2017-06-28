@@ -28,7 +28,7 @@ function acn_fullpage_sc( $atts, $content ) {
 			onLoad(function() {
 				$('#<?php echo $at['unique_name'] ?>').fullpage({
 					anchors: <?php echo json_encode($anchors) ?>,
-					menu: '<?php echo $at['unique_name'] ?>-menu',
+					menu: '#<?php echo $at['unique_name'] ?>-menu',
 					lazyLoading: false,
 					responsiveSlides: true,
 					anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
