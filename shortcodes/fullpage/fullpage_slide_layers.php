@@ -51,7 +51,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 			</div>
 
 			<div 
-				class="layer-overlay-animation lazyload"
+				class="layer-overlay-animation section__content__layer lazyload"
 				data-bgset="<?php echo $overlayUrl ?> 1200w, <?php echo $overlayUrlMobile ?> 768w"
 				style=" z-index: 2"
 			>
