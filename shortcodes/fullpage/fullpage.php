@@ -15,9 +15,11 @@ function acn_fullpage_sc( $atts, $content ) {
 	ob_start();
 	
 	?>
+
 		<div id="<?php echo $at['unique_name'] ?>">
 			<?php echo do_shortcode($content) ?>
 		</div>
+
 		<ul id="<?php echo $at['unique_name'] ?>-menu">
 			<?php foreach($links as $link): ?>
 				<li data-menuanchor="<?php echo $link['anchor'] ?>" class="active"><a href="#<?php echo $link['anchor'] ?>"><?php echo $link['title'] ?></a></li>
@@ -31,10 +33,6 @@ function acn_fullpage_sc( $atts, $content ) {
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
 					lazyLoading: false,
 					responsiveSlides: true,
-					anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
-					afterRender: function(anchorLink, index, slideAnchor, slideIndex){
-						lazySizes.init();
-					},
 					afterSlideLoad: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
 						console.log('after slide load');
 					} 
