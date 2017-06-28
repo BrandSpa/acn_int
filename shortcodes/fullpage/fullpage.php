@@ -25,7 +25,11 @@ function acn_fullpage_sc( $atts, $content ) {
 				<li data-menuanchor="<?php echo $link['anchor'] ?>" class="active"><a href="#<?php echo $link['anchor'] ?>"><?php echo $link['title'] ?></a></li>
 			<?php endforeach; ?>
 		</ul>
-
+		<style>
+			#<?php echo $at['unique_name'] ?> {
+				height: 100%;
+			}
+		</style>
 		<script>
 			onLoad(function() {
 
