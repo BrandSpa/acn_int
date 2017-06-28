@@ -11,6 +11,8 @@
 
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/vendor.8dbe4f20dc662765f538.js'></script>
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/app.23966adf2dc9bac8c927.js'></script>
-
+Amorcitoyuyu1207
+Amorcitoyuyu2106
+Amorcitoyuyu0725
 </body>
 </html>
