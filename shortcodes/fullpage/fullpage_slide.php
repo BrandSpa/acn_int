@@ -26,7 +26,6 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 
 			.section--<?php echo $at['uniq_name'] ?>.load-bgs {
 				background-image: url(<?php echo $bgUrl ?>);
-				animation: load-bg .8s;
 			}
 
 			@media (max-width: 767px) {
