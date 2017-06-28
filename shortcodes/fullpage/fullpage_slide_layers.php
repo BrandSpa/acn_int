@@ -42,7 +42,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 			<?php echo do_shortcode($content) ?>
 	</div>
 
-	<div class="section__layers">π
+	<div class="section__layers">
 
 			<div
 				class="layer-bg-animation section__layers__layer lazyload"
