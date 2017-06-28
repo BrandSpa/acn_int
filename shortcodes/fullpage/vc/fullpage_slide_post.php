@@ -14,7 +14,7 @@
       [
         "heading" => "Anchor",
         "type" => "textfield",
-        "param_name" => "anchor"
+        "param_name" => "uniq_name"
       ],
 			[
         "heading" => "title",
