@@ -40,40 +40,23 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 	<div class="section__content" style="position: relative; z-index: 3;">
 			<?php echo do_shortcode($content) ?>
-				<div class="section__content__layers">
+	</div>
+	<div class="section__content__layers">
+
 			<div
 				class="layer-bg-animation section__content__layer lazyload"
 				data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 768w"
-				style="
-						background-size: cover; 
-						background-position: center center;
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						top: 0;
-						left: 0;
-						z-index: 1;
-				"
+				style=" z-index: 1"
 			>
 			</div>
 
 			<div 
 				class="layer-overlay-animation lazyload"
 				data-bgset="<?php echo $overlayUrl ?> 1200w, <?php echo $overlayUrlMobile ?> 768w"
-				style="
-					background-size: cover; 
-					background-position: center center;
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					top: 0;
-					left: 0;
-					z-index: 2;
-					"
-				>
+				style=" z-index: 2"
+			>
 			</div>
 		</div>
-	</div>
 	
 </div>
 	<?php
