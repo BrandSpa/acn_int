@@ -1,7 +1,21 @@
 <?php
 function acn_fullpage_vc() {
-    $subparams = [];
-    $params = [];
+    $subparams = [
+      [
+        'type' => 'textfield',
+        'anchor' => '',
+        'title' => ''
+      ]
+    ];
+    
+    $params = [
+      [
+        'type' => 'param_group',
+        'value' => '',
+        'param_name' => 'links',
+        'params' => $subparams
+      ]
+    ];
 
     vc_map(
       array(
