@@ -34,7 +34,11 @@ function acn_fullpage_sc( $atts, $content ) {
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
 					recordHistory: false,
 					afterLoad: function(section, index) {
-						console.log('afterload', section, index);
+						if(index == 1) {
+							var next = index - 1;
+							var $section = $(".section:eq(" + next + ")");
+							$section.addClass('load-bgs');
+						}
 					},
 					onLeave: function(index, nextIndex, direction) {
 							var next = nextIndex - 1;
