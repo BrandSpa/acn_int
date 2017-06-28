@@ -37,11 +37,9 @@ function acn_fullpage_sc( $atts, $content ) {
 						console.log('afterload', section, index);
 					},
 					onLeave: function(index, nextIndex, direction) {
-						if(direction == 'down') {
 							var next = nextIndex - 1;
 							var $section = $(".section:eq(" + next + ")");
 							$section.addClass('load-bgs');
-						}
 					}
 				});
 
