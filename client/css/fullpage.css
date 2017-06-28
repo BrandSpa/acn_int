@@ -643,6 +643,7 @@ button {
   height: 100%;
   background-color: #000; }
   .section__content {
+    height: 100%;
     position: relative; }
   .section__layers {
     overflow: hidden;

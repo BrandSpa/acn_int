@@ -39,7 +39,6 @@ function acn_fullpage_sc( $atts, $content ) {
 					anchors: <?php echo json_encode($anchors) ?>,
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
 					recordHistory: false,
-					verticalCentered: false,
 					afterLoad: function(section, index) {
 						if(index == 1) {
 							var next = index - 1;
