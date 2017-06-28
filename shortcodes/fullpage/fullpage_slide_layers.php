@@ -40,8 +40,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 	<div class="section__content" style="position: relative; z-index: 3;">
 			<?php echo do_shortcode($content) ?>
-	</div>
-		<div class="section__content__layers">
+				<div class="section__content__layers">
 			<div
 				class="layer-bg-animation section__content__layer lazyload"
 				data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 768w"
@@ -75,6 +74,8 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 			</div>
 		</div>
 	</div>
+	
+</div>
 	<?php
 	return ob_get_clean();
 }
