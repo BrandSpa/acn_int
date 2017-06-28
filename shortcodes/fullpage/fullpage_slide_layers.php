@@ -44,7 +44,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 			@media (max-width: 767px) {
 				.section--<?php echo $at['uniq_name'] ?>.load-bgs .layer-bg-animation {
 					background-image: url(<?php echo $bgUrlMobile ?>)
-			
+				
 				}
 			}
 
@@ -52,6 +52,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 				animation: Q4S1Fg 3s;
 				opacity: 1;
 				background-image: url(<?php echo $overlayUrl ?>);
+					background-color: transparent;
 			}
 
 			@media (max-width: 767px) {
