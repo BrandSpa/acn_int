@@ -22,10 +22,12 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 			.section--<?php echo $at['uniq_name'] ?> {
 				background-color: #000;
 				transition: all .5s;
+				opacity: 0;
 			}
 
 			.section--<?php echo $at['uniq_name'] ?>.load-bgs {
-				background-image: url(<?php echo $bgUrl ?>)
+				background-image: url(<?php echo $bgUrl ?>);
+				opacity: 1;
 			}
 
 			@media (max-width: 767px) {
