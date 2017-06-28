@@ -25,11 +25,13 @@ function acn_fullpage_sc( $atts, $content ) {
 				<li data-menuanchor="<?php echo $link['anchor'] ?>" class="active"><a href="#<?php echo $link['anchor'] ?>"><?php echo $link['title'] ?></a></li>
 			<?php endforeach; ?>
 		</ul>
+
 		<style>
 			#<?php echo $at['unique_name'] ?> {
 				height: 100%;
 			}
 		</style>
+
 		<script>
 			onLoad(function() {
 
@@ -37,6 +39,7 @@ function acn_fullpage_sc( $atts, $content ) {
 					anchors: <?php echo json_encode($anchors) ?>,
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
 					recordHistory: false,
+					verticalCentered: false,
 					afterLoad: function(section, index) {
 						if(index == 1) {
 							var next = index - 1;
