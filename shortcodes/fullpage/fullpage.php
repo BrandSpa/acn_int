@@ -31,7 +31,6 @@ function acn_fullpage_sc( $atts, $content ) {
 				$('#<?php echo $at['unique_name'] ?>').fullpage({
 					anchors: <?php echo json_encode($anchors) ?>,
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
-					responsiveSlides: true,
 					afterSlideLoad: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
 						console.log('after slide load');
 					} 
