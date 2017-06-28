@@ -32,6 +32,7 @@ function acn_fullpage_sc( $atts, $content ) {
 				$('#<?php echo $at['unique_name'] ?>').fullpage({
 					anchors: <?php echo json_encode($anchors) ?>,
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
+					recordHistory: false,
 					afterLoad: function(section, index) {
 						console.log('afterload', section, index);
 					},
