@@ -8,7 +8,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: {
     vendor: [
-      'jquery',
 			'fullpage.js',
 			'lazysizes'
     ],

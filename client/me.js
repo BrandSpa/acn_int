@@ -1,4 +1,3 @@
-import $ from "jquery";
 import "fullpage.js";
 import "lazysizes";
 
