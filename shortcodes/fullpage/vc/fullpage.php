@@ -3,13 +3,13 @@ function acn_fullpage_vc() {
     $subparams = [
       [
         'type' => 'textfield',
-        'param' => 'anchor',
+        'param_name' => 'anchor',
         'heading' => 'link Anchor',
         'value' => ''
       ],
       [
         'type' => 'textfield',
-        'param' => 'title',
+        'param_name' => 'title',
         'heading' => 'link title',
         'value' => ''
       ]
@@ -30,7 +30,7 @@ function acn_fullpage_vc() {
         "base" => "acn_fullpage",
         "category" =>  "ACN",
 				"content_element" => true,
-				"show_settings_on_create" => false,
+				"show_settings_on_create" => true,
 				"is_container" => true,
         "params" => $params,
 				"js_view" => 'VcColumnView'
