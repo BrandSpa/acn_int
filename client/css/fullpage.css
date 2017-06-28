@@ -634,7 +634,8 @@ button {
   .section__content__layers {
     position: relative;
     width: 100vw;
-    height: 100vh; }
+    height: 100vh;
+    overflow: hidden; }
   .section__content__layer {
     position: absolute;
     width: 100vw;
