@@ -3,8 +3,13 @@ function acn_fullpage_vc() {
     $subparams = [
       [
         'type' => 'textfield',
-        'anchor' => '',
-        'title' => ''
+        'param' => 'anchor',
+        'heading' => 'link Anchor'
+      ],
+      [
+        'type' => 'textfield',
+        'param' => 'title',
+        'heading' => 'link title'
       ]
     ];
     
