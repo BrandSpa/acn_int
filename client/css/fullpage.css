@@ -893,6 +893,9 @@ html.fp-enabled,
 .lazyloading {
   min-height: 200px; }
 
+.hidden {
+  display: none; }
+
 .donate_react {
   position: relative;
   overflow: hidden;
