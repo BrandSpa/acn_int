@@ -28,10 +28,13 @@ function acn_fullpage_sc( $atts, $content ) {
 
 		<script>
 			onLoad(function() {
-				
+
 				$('#<?php echo $at['unique_name'] ?>').fullpage({
 					anchors: <?php echo json_encode($anchors) ?>,
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
+					afterLoad: function() {
+						console.log('afterload');
+					},
 					afterSlideLoad: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
 						console.log('after slide load');
 					} 
