@@ -213,7 +213,9 @@ button {
         height: 100vh;
         padding-bottom: 20px;
 
-        &__layers {
+    }
+
+    &__layers {
             position: absolute;
             width: 100vw;
             height: 100vh;
@@ -222,18 +224,16 @@ button {
             left: 0;
             right: 0;
             bottom: 0;
+             &__layer {
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover
+            }
         }
-
-        &__layer {
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            background-color: transparent;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover
-        }
-    }
 }
 
 
