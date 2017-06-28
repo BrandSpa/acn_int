@@ -11,8 +11,5 @@
 
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/vendor.d8f3f7efe5e0dfb79a34.js'></script>
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/app.326d5fe03a2a4ae7a34f.js'></script>
-Amorcitoyuyu1207
-Amorcitoyuyu2106
-Amorcitoyuyu0725
 </body>
 </html>
