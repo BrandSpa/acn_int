@@ -54,9 +54,7 @@ function acn_fullpage_sc( $atts, $content ) {
 					$.fn.fullpage.moveSectionDown();
 				});
 
-			});
-
-	
+			});	
 		</script>
 	<?php
 	return ob_get_clean();

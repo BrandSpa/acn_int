@@ -9,7 +9,6 @@ html {
 }
 
 body {
-
     margin: 0
 }
 
@@ -208,10 +207,25 @@ button {
 }
 
 .section {
+
     &__content {
         position: relative;
         height: 100vh;
         padding-bottom: 20px;
+        &__layers {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        &__layer {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover
+        }
     }
 }
 
