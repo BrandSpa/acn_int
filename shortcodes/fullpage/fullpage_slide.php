@@ -21,6 +21,7 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 		<style>
 			.section--<?php echo $at['uniq_name'] ?> {
 				background-color: #000;
+				transition: all .5s;
 			}
 
 			.section--<?php echo $at['uniq_name'] ?>.load-bgs {
