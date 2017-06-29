@@ -31,12 +31,6 @@ function acn_fullpage_sc( $atts, $content ) {
 			<?php endforeach; ?>
 		</ul>
 
-		<style>
-			#<?php echo $at['unique_name'] ?> {
-				height: 100%;
-			}
-		</style>
-
 		<script>
 		window.lazySizesConfig = window.lazySizesConfig || {};
 		window.lazySizesConfig.init = false;
@@ -52,7 +46,6 @@ function acn_fullpage_sc( $atts, $content ) {
 						lazySizes.init();
 					},
 					afterLoad: function(section, index) {
-
 							var next = index - 1;
 							var $section = $(".section:eq(" + next + ")");
 							var story = $section.data('story');
