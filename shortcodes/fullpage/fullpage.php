@@ -73,7 +73,9 @@ function acn_fullpage_sc( $atts, $content ) {
 					$(this).find('i').addClass('ion-close-round');
 				}
 
-				function closeVideo($videoSection) {
+				function closeVideo() {
+						var $videoSection = $(this).parent();
+						var $iframe = $videoSection.find('iframe');
 						$.fn.fullpage.setAllowScrolling(true);
 						$iframe.attr('src', '');
 						$videoSection.removeClass("section__video--open");
@@ -101,7 +103,7 @@ function acn_fullpage_sc( $atts, $content ) {
 					var $videoSection = $(this).closest(".fp-tableCell").find(".section__video");
 
 					if ($videoSection.hasClass("section__video--open")) {
-						closeVideo.call(this, $videoSection);
+						closeVideo.call(this);
 					} else {
 						openVideo.call(this, $videoSection);
 					}
