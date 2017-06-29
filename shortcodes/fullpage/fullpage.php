@@ -71,9 +71,9 @@ function acn_fullpage_sc( $atts, $content ) {
 					var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
 					if ($postSection.hasClass("section__post--open")) {
-						closePost($postSection).bind(this);
+						closePost.call(this, $postSection);
 					} else {
-						openPost($postSection).bind(this);
+						openPost.call(this, $postSection);
 					}
 				});
 
