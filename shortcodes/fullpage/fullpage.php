@@ -6,38 +6,33 @@ function acn_fullpage_sc( $atts, $content ) {
 		"links" => ""
 	], $atts);
 
-	$links = empty(vc_param_group_parse_atts($at['links'])) ? [] : vc_param_group_parse_atts($at['links']);
+	$links = empty(vc_param_group_parse_atts($at['links'])) 
+		? [] 
+		: vc_param_group_parse_atts($at['links']);
 
 	$anchors = array_map(function($link) {
 		return $link['anchor'];
 	}, $links);
 
 	ob_start();
-	
-	?>
+?>
 
-		<div id="<?php echo $at['unique_name'] ?>">
-			<?php echo do_shortcode($content) ?>
-		</div>
+	<div id="<?php echo $at['unique_name'] ?>">
+		<?php echo do_shortcode($content) ?>
+	</div>
 
-		<div class="indicator">
-			<div class="indicator__story">1</div>
-			<div class="indicator__index">1</div>
-		</div>
+	<div class="indicator">
+		<div class="indicator__story">1</div>
+		<div class="indicator__index">1</div>
+	</div>
 
-		<ul id="<?php echo $at['unique_name'] ?>-menu">
-			<?php foreach($links as $link): ?>
-				<li data-menuanchor="<?php echo $link['anchor'] ?>" class="active"><a href="#<?php echo $link['anchor'] ?>"><?php echo $link['title'] ?></a></li>
-			<?php endforeach; ?>
-		</ul>
+	<style>
+		#<?php echo $at['unique_name'] ?> {
+			height: 100%;
+		}
+	</style>
 
-		<style>
-			#<?php echo $at['unique_name'] ?> {
-				height: 100%;
-			}
-		</style>
-
-		<script>
+	<script>
 		window.lazySizesConfig = window.lazySizesConfig || {};
 		window.lazySizesConfig.init = false;
 
@@ -121,7 +116,7 @@ function acn_fullpage_sc( $atts, $content ) {
 					$.fn.fullpage.moveSectionDown();
 				});
 			});	
-		</script>
+	</script>
 	<?php
 	return ob_get_clean();
 }

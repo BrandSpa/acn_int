@@ -12,18 +12,17 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] ); 
 
 	ob_start();
-	?>
-
-		<div
+?>
+	<div
 			class="section section--<?php echo $at['uniq_name'] ?>" 
 			data-anchor="<?php echo $at['uniq_name'] ?>"
 			data-story="1"
 			data-index="2"
-		>
+	>
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>
 				<button class="section__down" ><i class="ion-chevron-down"></i></button>
-			</div>
+	</div>
 
 			<div class="section__bg-container">
 				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"></div> </div>
