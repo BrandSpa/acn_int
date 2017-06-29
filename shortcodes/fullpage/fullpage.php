@@ -53,14 +53,14 @@ function acn_fullpage_sc( $atts, $content ) {
 					}
 				});
 
-				function closePost() {
+				function closePost($postSection) {
 						$.fn.fullpage.setAllowScrolling(true);
 						$postSection.removeClass("section__post--open");
 						$(this).find('i').removeClass('ion-close-round');
 						$(this).find('i').addClass('ion-android-open');
 				}
 
-				function openPost() {
+				function openPost($postSection) {
 					$.fn.fullpage.setAllowScrolling(false);
 					$postSection.addClass("section__post--open");
 					$(this).find('i').removeClass('ion-android-open');
@@ -71,9 +71,9 @@ function acn_fullpage_sc( $atts, $content ) {
 					var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
 					if ($postSection.hasClass("section__post--open")) {
-						closePost();
+						closePost($postSection).bind(this);
 					} else {
-						openPost();
+						openPost($postSection).bind(this);
 					}
 				});
 
