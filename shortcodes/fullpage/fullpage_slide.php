@@ -53,9 +53,8 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 						left: 0;
 						right: 0;
 						z-index: 2;
-						font-size: 32px"
-					>
-				><i class="ion-chevron-down"></i></button>
+						font-size: 25px"
+					><i class="ion-chevron-down"></i></button>
 			</div>
 		</div>
 		

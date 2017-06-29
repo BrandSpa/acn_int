@@ -27,7 +27,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 					class="section__open-post" 
 					style="
 					background: red;
-					color: red;
+					color: #fff;
 					width: 50px; 
 					height: 50px; 
 					border-radius: 50px; 
@@ -38,7 +38,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 					left: 0;
 					right: 0;
 					z-index: 2;
-					font-size: 32px"
+					font-size: 25px"
 					>
 					<i class="ion-android-open"></i>
 				</button>
