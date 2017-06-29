@@ -8,13 +8,11 @@
   	<title>ACN - Aid to the Church in Need <?php echo wp_title(); ?></title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-    	<!--wordpress files-->
+    <!--wordpress files-->
 	  <?php wp_head(); ?>
 		<!-- /wordpress files-->
-    
-
+  
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/client/css/fullpage.css">
-
 	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
 	<script>

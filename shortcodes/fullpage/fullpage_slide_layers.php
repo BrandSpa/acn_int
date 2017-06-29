@@ -23,6 +23,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 		data-anchor="<?php echo $at['uniq_name'] ?>"
 		class="section section--<?php echo $at['uniq_name'] ?>"
 	>
+
 		<style>
 			.section--<?php echo $at['uniq_name'] ?> .layer-bg-animation {
 				background-color: #000;
@@ -34,31 +35,15 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 				transition: all .5s;
 			}
 
-			.section--<?php echo $at['uniq_name'] ?>.load-bgs .layer-bg-animation {
+			.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
 				animation: Q2S1Bg 3s;
 				opacity: 1;
-				background-image: url(<?php echo $bgUrl ?>);
-			
 			}
 
-			@media (max-width: 767px) {
-				.section--<?php echo $at['uniq_name'] ?>.load-bgs .layer-bg-animation {
-					background-image: url(<?php echo $bgUrlMobile ?>)
-				
-				}
-			}
-
-			.section--<?php echo $at['uniq_name'] ?>.load-bgs .layer-overlay-animation {
+			.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
 				animation: Q4S1Fg 3s;
 				opacity: 1;
-				background-image: url(<?php echo $overlayUrl ?>);
-					background-color: transparent;
-			}
-
-			@media (max-width: 767px) {
-				.section--<?php echo $at['uniq_name'] ?>.load-bgs .layer-overlay-animation {
-					background-image: url(<?php echo $overlayUrlMobile ?>)
-				}
+				background-color: transparent;
 			}
 
 			.active .animate-text {
@@ -72,18 +57,21 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 	<div class="section__layers">
 
-			<div
+		<div
 				class="layer-bg-animation section__layers__layer"
+				data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"
 				style=" z-index: 1"
-			>
-			</div>
-
-			<div 
-				class="layer-overlay-animation section__layers__layer"
-				style=" z-index: 2"
-			>
-			</div>
+		>
 		</div>
+
+		<div
+			class="layer-overlay-animation section__layers__layer"
+			data-bgset="<?php echo $overlayUrl ?> 1200w, <?php echo $overlayUrlMobile ?> 600w"
+			style=" z-index: 2"
+		>
+		</div>
+
+	</div>
 	
 </div>
 	<?php
