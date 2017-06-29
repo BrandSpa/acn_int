@@ -52,7 +52,7 @@ function acn_fullpage_sc( $atts, $content ) {
 						lazySizes.init();
 					},
 					afterLoad: function(section, index) {
-						if(index == 1) {
+
 							var next = index - 1;
 							var $section = $(".section:eq(" + next + ")");
 							var story = $section.data('story');
@@ -60,8 +60,7 @@ function acn_fullpage_sc( $atts, $content ) {
 							var $indicator = $('.indicator');
 							$indicator.find('.indicator__story').text(story);
 							$indicator.find('.indicator__index').text(index);
-							$section.addClass('load-bgs');
-						}
+							
 					},
 					onLeave: function(index, nextIndex, direction) {
 							var next = nextIndex - 1;
