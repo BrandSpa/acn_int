@@ -146,7 +146,7 @@ a {
 }
 
 .section__bg {
-    background-size: cover; 
+    background-size: cover;
     background-position: center center;
     z-index: 1;
     position: absolute;
@@ -154,7 +154,6 @@ a {
     right: 0;
     bottom: 0;
     left: 0;
-
     &-container {
         position: absolute;
         top: 0;
@@ -162,7 +161,6 @@ a {
         bottom: 0;
         left: 0;
         background: #000;
-        
     }
 }
 
@@ -191,7 +189,6 @@ button {
 .section {
     height: 100%;
     background-color: #000;
-    
     &__content {
         height: 100%;
         position: relative;
@@ -215,6 +212,23 @@ button {
             background-size: cover
         }
     }
+}
+
+.section__down {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    font-size: 25px
 }
 
 .active .animate-text {
@@ -489,7 +503,5 @@ html.fp-enabled,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
     height: auto !important;
 }
-
-
 
 @import 'donate';

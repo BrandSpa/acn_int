@@ -20,33 +20,12 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 		>
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>
-				<button 
-					class="section__down"
-					style="
-						background: transparent;
-						border: 2px solid #fff;
-						color: #fff;
-						width: 50px; 
-						height: 50px; 
-						border-radius: 50px; 
-						margin: 0 auto;
-						display: block;
-						position: absolute;
-						bottom: 40px;
-						left: 0;
-						right: 0;
-						z-index: 2;
-						font-size: 25px"
-					><i class="ion-chevron-down"></i></button>
+				<button class="section__down" ><i class="ion-chevron-down"></i></button>
 			</div>
+
 			<div class="section__bg-container">
-				<div
-					class="section__bg lazyload"
-					data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"></div>
-				</div>
+				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"></div> </div>
 			</div>
-		
-		
 	<?php
 	return ob_get_clean();
 }
