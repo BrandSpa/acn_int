@@ -545,6 +545,22 @@ a {
     -webkit-transform: scale(1) translate3d(0, 0, 0);
     transform: scale(1) translate3d(0, 0, 0); } }
 
+@-webkit-keyframes Q4S1Fg-mobile {
+  from {
+    -webkit-transform: scale(1.2) translate3d(-15px, 0, 0);
+    transform: scale(1.2) translate3d(-15px, 0, 0); }
+  to {
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+    transform: scale(1) translate3d(0, 0, 0); } }
+
+@keyframes Q4S1Fg-mobile {
+  from {
+    -webkit-transform: scale(1.2) translate3d(-15px, 0, 0);
+    transform: scale(1.2) translate3d(-15px, 0, 0); }
+  to {
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+    transform: scale(1) translate3d(0, 0, 0); } }
+
 @-webkit-keyframes Q2S1Bg {
   from {
     -webkit-transform: scale(1.05) translate3d(-30px, 0, 0);
@@ -557,6 +573,22 @@ a {
   from {
     -webkit-transform: scale(1.05) translate3d(-30px, 0, 0);
     transform: scale(1.05) translate3d(-30px, 0, 0); }
+  to {
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+    transform: scale(1) translate3d(0, 0, 0); } }
+
+@-webkit-keyframes Q2S1Bg-mobile {
+  from {
+    -webkit-transform: scale(1.05) translate3d(-10px, 0, 0);
+    transform: scale(1.05) translate3d(-10px, 0, 0); }
+  to {
+    -webkit-transform: scale(1) translate3d(0, 0, 0);
+    transform: scale(1) translate3d(0, 0, 0); } }
+
+@keyframes Q2S1Bg-mobile {
+  from {
+    -webkit-transform: scale(1.05) translate3d(-10px, 0, 0);
+    transform: scale(1.05) translate3d(-10px, 0, 0); }
   to {
     -webkit-transform: scale(1) translate3d(0, 0, 0);
     transform: scale(1) translate3d(0, 0, 0); } }
