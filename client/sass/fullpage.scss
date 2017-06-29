@@ -285,17 +285,23 @@ button {
     bottom: 40px;
     left: 40px;
     z-index: 99;
-    
+
     &__story {
         border: 1px solid #fff;
         color: #fff;
         font-size: 22px;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
     }
 
     &__index {
         background: #fff;
         color: #000;
         font-size: 16px;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
     }
 }
 
