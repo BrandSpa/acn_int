@@ -647,6 +647,23 @@ a {
     overflow-x: hidden;
     overflow-y: scroll; }
 
+.section__bg {
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  .section__bg-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000; }
+
 .section__open-post {
   background: red;
   color: #fff;

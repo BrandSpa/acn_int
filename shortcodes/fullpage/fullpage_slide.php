@@ -13,18 +13,11 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 
 	ob_start();
 	?>
-		<div
-			data-anchor="<?php echo $at['uniq_name'] ?>"
-			class="section section--<?php echo $at['uniq_name'] ?> lazyload" 
-			data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"
-			style="background-size: cover; background-position: center center"
-		>
 
-		<style>
-			.section--<?php echo $at['uniq_name'] ?> {
-				background-color: #000;
-			}		
-		</style>
+		<div
+			class="section section--<?php echo $at['uniq_name'] ?>" 
+			data-anchor="<?php echo $at['uniq_name'] ?>"
+		>
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>
 				<button 
@@ -46,7 +39,13 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 						font-size: 25px"
 					><i class="ion-chevron-down"></i></button>
 			</div>
-		</div>
+			<div class="section__bg-container">
+				<div
+					class="section__bg lazyload"
+					data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"></div>
+				</div>
+			</div>
+		
 		
 	<?php
 	return ob_get_clean();
