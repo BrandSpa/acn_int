@@ -16,24 +16,14 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 		<div
 			data-anchor="<?php echo $at['uniq_name'] ?>"
 			class="section section--<?php echo $at['uniq_name'] ?>" 
+			data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"
 			style="background-size: cover; background-position: center center"
 		>
+		
 		<style>
-
 			.section--<?php echo $at['uniq_name'] ?> {
 				background-color: #000;
-			}
-
-			.section--<?php echo $at['uniq_name'] ?>.load-bgs {
-				background-image: url(<?php echo $bgUrl ?>);
-			}
-
-			@media (max-width: 767px) {
-				.section--<?php echo $at['uniq_name'] ?>.load-bgs {
-					background-image: url(<?php echo $bgUrlMobile ?>)
-				}
-			}
-		
+			}		
 		</style>
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>
