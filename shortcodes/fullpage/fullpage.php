@@ -83,12 +83,12 @@ function acn_fullpage_sc( $atts, $content ) {
 
 				function openVideo($videoSection) {
 					$.fn.fullpage.setAllowScrolling(false);
-				 	var $iframe = $videoSection.find('iframe');
-					var src = $iframe.data('src');
-					$iframe.attr('src', src);
 					$videoSection.addClass("section__video--open");
 					$(this).find('i').removeClass('ion-android-open');
 					$(this).find('i').addClass('ion-close-round');
+					var $iframe = $videoSection.find('iframe');
+					var src = $iframe.data('src');
+					$iframe.attr('src', src);
 				}
 
 				$(document).on("click", ".section__open-post", function handleTogglePost(e) {
