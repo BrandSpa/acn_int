@@ -55,6 +55,11 @@ function acn_fullpage_sc( $atts, $content ) {
 						if(index == 1) {
 							var next = index - 1;
 							var $section = $(".section:eq(" + next + ")");
+							var story = $section.data('story');
+							var index = $section.data('index');
+							var $indicator = $('.indicator');
+							$indicator.find('.indicator__story').text(story);
+							$indicator.find('.indicator__index').text(index);
 							$section.addClass('load-bgs');
 						}
 					},
