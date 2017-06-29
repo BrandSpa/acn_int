@@ -775,7 +775,9 @@ button {
   position: fixed;
   bottom: 40px;
   left: 40px;
-  z-index: 99; }
+  z-index: 99;
+  font-size: 20px;
+  color: red; }
 
 /*!
  * fullPage 2.9.4
