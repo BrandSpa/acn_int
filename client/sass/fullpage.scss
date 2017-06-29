@@ -285,8 +285,18 @@ button {
     bottom: 40px;
     left: 40px;
     z-index: 99;
-    font-size: 20px;
-    color: red;
+    
+    &__story {
+        border: 1px solid #fff;
+        color: #fff;
+        font-size: 22px;
+    }
+
+    &__index {
+        background: #fff;
+        color: #000;
+        font-size: 16px;
+    }
 }
 
 /*!

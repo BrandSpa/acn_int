@@ -775,9 +775,15 @@ button {
   position: fixed;
   bottom: 40px;
   left: 40px;
-  z-index: 99;
-  font-size: 20px;
-  color: red; }
+  z-index: 99; }
+  .indicator__story {
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 22px; }
+  .indicator__index {
+    background: #fff;
+    color: #000;
+    font-size: 16px; }
 
 /*!
  * fullPage 2.9.4

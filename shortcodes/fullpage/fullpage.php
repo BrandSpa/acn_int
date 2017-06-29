@@ -59,8 +59,7 @@ function acn_fullpage_sc( $atts, $content ) {
 							var index = $section.data('index');
 							var $indicator = $('.indicator');
 							$indicator.find('.indicator__story').text(story);
-							$indicator.find('.indicator__index').text(index);
-							
+							$indicator.find('.indicator__index').text('/' + index);
 					},
 					onLeave: function(index, nextIndex, direction) {
 							var next = nextIndex - 1;
