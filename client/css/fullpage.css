@@ -647,6 +647,19 @@ a {
     overflow-x: hidden;
     overflow-y: scroll; }
 
+.section__video {
+  position: absolute;
+  z-index: 4;
+  top: -100%;
+  left: 0;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+  background: #000;
+  width: 100%;
+  height: 100%; }
+  .section__video--open {
+    top: 0; }
+
 .section__bg {
   background-size: cover;
   background-position: center center;

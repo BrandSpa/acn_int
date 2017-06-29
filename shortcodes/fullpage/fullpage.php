@@ -82,6 +82,18 @@ function acn_fullpage_sc( $atts, $content ) {
 					}
 				});
 
+				$(document).on("click", ".section__open-video", function handleTogglePost(e) {
+					var $videoSection = $(this).closest(".fp-tableCell").find(".section__video");
+
+					if ($videoSection.hasClass("section__video--open")) {
+						closePost.call(this, $videoSection);
+					} else {
+						openPost.call(this, $videoSection);
+					}
+				});
+
+				
+
 				$(document).on("click", ".section__down", function() {
 					$.fn.fullpage.moveSectionDown();
 				});
