@@ -59,13 +59,14 @@ function acn_fullpage_sc( $atts, $content ) {
 					if ($postSection.hasClass("section__post--open")) {
 						$.fn.fullpage.setAllowScrolling(true);
 						$postSection.removeClass("section__post--open");
-						$(this).find('i').removeClass('ion-android-open');
-						$(this).find('i').addClass('ion-close-round');
+						$(this).find('i').removeClass('ion-close-round');
+						$(this).find('i').addClass('ion-android-open');
 					} else {
 						$.fn.fullpage.setAllowScrolling(false);
 						$postSection.addClass("section__post--open");
-						$(this).find('i').removeClass('ion-close-round');
-						$(this).find('i').addClass('ion-android-open');
+						$(this).find('i').removeClass('ion-android-open');
+						$(this).find('i').addClass('ion-close-round');
+						
 					}
 				});
 
