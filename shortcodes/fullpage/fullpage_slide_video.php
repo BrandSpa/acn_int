@@ -22,9 +22,9 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 			</div>
 
 			<div class="section__video" >
-				<div class="section__video__close">
+				<button class="section__video__close section__open-video">
 					<div class="ion-close-round"></div>
-				</div>
+				</button>
 				<div class="embed-container">
 					<iframe data-src="<?php echo $at['video_url'] ?>?autoplay=1" frameborder="0" allowfullscreen ></iframe>
 				</div>
