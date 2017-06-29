@@ -646,6 +646,25 @@ a {
     overflow-x: hidden;
     overflow-y: scroll; }
 
+.section__open-post {
+  background: red;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 25px; }
+  @media (max-width: 767px) {
+    .section__open-post {
+      left: auto;
+      right: 13%; } }
+
 button {
   border: none;
   outline: none;
