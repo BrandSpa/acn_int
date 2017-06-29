@@ -15,6 +15,9 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 
 		<div 
 			class="section section--<?php echo $at['uniq_name'] ?>" 
+			data-anchor="<?php echo $at['uniq_name'] ?>"
+			data-story="2"
+			data-index="4"
 		>
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>

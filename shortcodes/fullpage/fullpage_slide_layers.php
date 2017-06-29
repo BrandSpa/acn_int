@@ -22,10 +22,11 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	?>
 	
 	<div 
-		data-anchor="<?php echo $at['uniq_name'] ?>"
 		class="section section--<?php echo $at['uniq_name'] ?>"
+		data-anchor="<?php echo $at['uniq_name'] ?>"
+		data-story="4"
+		data-index="1"
 	>
-
 		<style>
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
 				animation: <?php echo $at['bg-animation'] ?> 2.5s;

@@ -280,6 +280,12 @@ button {
 } 
 .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+.indicator {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+}
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js

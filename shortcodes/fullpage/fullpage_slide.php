@@ -17,6 +17,8 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 		<div
 			class="section section--<?php echo $at['uniq_name'] ?>" 
 			data-anchor="<?php echo $at['uniq_name'] ?>"
+			data-story="1"
+			data-index="2"
 		>
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>

@@ -20,6 +20,11 @@ function acn_fullpage_sc( $atts, $content ) {
 			<?php echo do_shortcode($content) ?>
 		</div>
 
+		<div class="indicator">
+			<div class="indicator__story">1</div>
+			<div class="indicator__index">1</div>
+		</div>
+
 		<ul id="<?php echo $at['unique_name'] ?>-menu">
 			<?php foreach($links as $link): ?>
 				<li data-menuanchor="<?php echo $link['anchor'] ?>" class="active"><a href="#<?php echo $link['anchor'] ?>"><?php echo $link['title'] ?></a></li>

@@ -17,6 +17,8 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 		<div 
 			class="section section--<?php echo $at['uniq_name'] ?>" 
 			data-anchor="<?php echo $at['uniq_name'] ?>"
+			data-story="3"
+			data-index="5"
 		>
 			<div class="section__content">
 				<h1 class="animate-text" style="text-align: center"><?php echo $at['title'] ?></h1>
