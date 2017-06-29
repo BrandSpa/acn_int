@@ -135,6 +135,10 @@ a {
     width: 50%;
     background: #fff;
     height: 100%;
+
+    @media #{$s} {
+        width: 80%;
+    }
     img {
         max-width: 100%;
     }

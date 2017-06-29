@@ -636,6 +636,9 @@ a {
   width: 50%;
   background: #fff;
   height: 100%; }
+  @media (max-width: 767px) {
+    .section__post {
+      width: 80%; } }
   .section__post img {
     max-width: 100%; }
   .section__post--open {
