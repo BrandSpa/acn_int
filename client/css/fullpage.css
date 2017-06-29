@@ -689,7 +689,8 @@ button {
   background-color: #000; }
   .section__content {
     height: 100%;
-    position: relative; }
+    position: relative;
+    z-index: 3; }
   .section__layers {
     overflow: hidden;
     position: absolute;
