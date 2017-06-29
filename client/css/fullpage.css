@@ -949,7 +949,7 @@ html.fp-enabled,
 .fp-slidesNav ul li {
   display: inline-block; }
 
-#fp-nav ul li a {
+#fp-nav ul li a span {
   color: #fff; }
 
 #fp-nav ul li a,
