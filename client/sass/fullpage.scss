@@ -113,6 +113,7 @@ a {
 
 .lazyload,
 .lazyloading {
+    height: 100%;
     opacity: 0;
 }
 
@@ -470,9 +471,6 @@ html.fp-enabled,
     height: auto !important;
 }
 
-.lazyload,
-.lazyloading {
-    height: 100%;
-}
+
 
 @import 'donate';
