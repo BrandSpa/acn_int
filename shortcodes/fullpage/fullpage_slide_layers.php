@@ -7,6 +7,8 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 		"overlay_img" => "",
 		"overlay_img_mobile" => "",
 		"bg_color" => "#000",
+		"bg-animation" => "bg-left",
+		"overlay-animation" => "bg-left",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100) 
 	], $atts);
 	
@@ -26,27 +28,26 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 		<style>
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
-				animation: bg-left 3s;
+				animation: <?php echo $at['bg-animation'] ?> 2.5s;
 				opacity: 1;
 			}
 
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
-				animation: overlay-left 3s;
+				animation: overlay-left 2.5s;
 				opacity: 1;
 				background-color: transparent;
 			}
 
 			@media (max-width: 600px) {
-				.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
-					animation: overlay-left-mobile 3s;
-				}
-
 				.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
-					animation: bg-left-mobile 3s;
+					animation: <?php echo $at['bg-animation'] ?>-mobile 2.5s;
 					opacity: 1;
 				}
-			}
 
+				.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
+					animation: <?php echo $at['overlay-animation'] ?>-mobile 2.5s;
+				}
+			}
 
 	</style>
 
