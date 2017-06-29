@@ -631,6 +631,9 @@ a {
   top: 40px;
   left: 40px;
   z-index: 999; }
+  .fullpage-logo img {
+    -webkit-filter: grayscale invert;
+    filter: grayscale invert; }
 
 .section__post {
   position: absolute;
