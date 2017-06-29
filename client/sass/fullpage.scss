@@ -130,7 +130,7 @@ a {
     z-index: 999;
 
     img {
-        filter: grayscale invert;
+        filter: grayscale(100%) invert(100%);
     }
 }
 

@@ -632,8 +632,8 @@ a {
   left: 40px;
   z-index: 999; }
   .fullpage-logo img {
-    -webkit-filter: grayscale invert;
-    filter: grayscale invert; }
+    -webkit-filter: grayscale(100%) invert(100%);
+    filter: grayscale(100%) invert(100%); }
 
 .section__post {
   position: absolute;
