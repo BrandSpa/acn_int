@@ -74,6 +74,7 @@ function acn_fullpage_sc( $atts, $content ) {
 
 				function closeVideo($videoSection) {
 						$.fn.fullpage.setAllowScrolling(true);
+						$iframe.attr('src', '');
 						$videoSection.removeClass("section__video--open");
 						$(this).find('i').removeClass('ion-close-round');
 						$(this).find('i').addClass('ion-android-open');
@@ -81,6 +82,9 @@ function acn_fullpage_sc( $atts, $content ) {
 
 				function openVideo($videoSection) {
 					$.fn.fullpage.setAllowScrolling(false);
+				 	var $iframe = $videoSection.find('iframe');
+					var src = $iframe.data('src');
+					$iframe.attr('src', src);
 					$videoSection.addClass("section__video--open");
 					$(this).find('i').removeClass('ion-android-open');
 					$(this).find('i').addClass('ion-close-round');

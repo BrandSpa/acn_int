@@ -23,7 +23,7 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 
 			<div class="section__video" >
 				<div class="embed-container">
-					<iframe class="lazyload" data-src="<?php echo $at['video_url'] ?>" frameborder="0" allowfullscreen ></iframe>
+					<iframe  data-src="<?php echo $at['video_url'] ?>?autoplay=1" frameborder="0" allowfullscreen ></iframe>
 				</div>
 			</div>
 
