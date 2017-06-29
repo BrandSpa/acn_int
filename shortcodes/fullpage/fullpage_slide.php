@@ -37,6 +37,24 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 		</style>
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>
+				<button 
+					class="section__down"
+					style="
+						background: transparent;
+						border: 2px solid #fff;
+						width: 100px; 
+						height: 100px; 
+						border-radius: 100px; 
+						margin: 0 auto;
+						display: block;
+						position: absolute;
+						bottom: 40px;
+						left: 0;
+						right: 0;
+						z-index: 2;
+						font-size: 32px"
+					>
+				><i class="ion-chevron-down"></i></button>
 			</div>
 		</div>
 		

@@ -26,6 +26,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 				<button 
 					class="section__open-post" 
 					style="
+					background: red;
 					width: 100px; 
 					height: 100px; 
 					border-radius: 100px; 
