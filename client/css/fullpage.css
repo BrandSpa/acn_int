@@ -949,9 +949,6 @@ html.fp-enabled,
 .fp-slidesNav ul li {
   display: inline-block; }
 
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
-  background: #fff; }
-
 #fp-nav ul li a,
 .fp-slidesNav ul li a {
   display: block;
@@ -1028,6 +1025,9 @@ html.fp-enabled,
 .fp-responsive .fp-auto-height-responsive .fp-slide,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
   height: auto !important; }
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #fff; }
 
 .hidden {
   display: none; }
