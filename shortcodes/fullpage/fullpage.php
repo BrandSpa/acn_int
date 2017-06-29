@@ -72,6 +72,20 @@ function acn_fullpage_sc( $atts, $content ) {
 					$(this).find('i').addClass('ion-close-round');
 				}
 
+				function closeVideo($videoSection) {
+						$.fn.fullpage.setAllowScrolling(true);
+						$videoSection.removeClass("section__video--open");
+						$(this).find('i').removeClass('ion-close-round');
+						$(this).find('i').addClass('ion-android-open');
+				}
+
+				function openVideo($videoSection) {
+					$.fn.fullpage.setAllowScrolling(false);
+					$videoSection.addClass("section__video--open");
+					$(this).find('i').removeClass('ion-android-open');
+					$(this).find('i').addClass('ion-close-round');
+				}
+
 				$(document).on("click", ".section__open-post", function handleTogglePost(e) {
 					var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
@@ -82,13 +96,13 @@ function acn_fullpage_sc( $atts, $content ) {
 					}
 				});
 
-				$(document).on("click", ".section__open-video", function handleTogglePost(e) {
+				$(document).on("click", ".section__open-video", function handleToggleVideo(e) {
 					var $videoSection = $(this).closest(".fp-tableCell").find(".section__video");
 
 					if ($videoSection.hasClass("section__video--open")) {
-						closePost.call(this, $videoSection);
+						closeVideo.call(this, $videoSection);
 					} else {
-						openPost.call(this, $videoSection);
+						openVideo.call(this, $videoSection);
 					}
 				});
 
