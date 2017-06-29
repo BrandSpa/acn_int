@@ -15,11 +15,11 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 	?>
 		<div
 			data-anchor="<?php echo $at['uniq_name'] ?>"
-			class="section section--<?php echo $at['uniq_name'] ?>" 
+			class="section section--<?php echo $at['uniq_name'] ?> lazyload" 
 			data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"
 			style="background-size: cover; background-position: center center"
 		>
-		
+
 		<style>
 			.section--<?php echo $at['uniq_name'] ?> {
 				background-color: #000;
