@@ -285,7 +285,8 @@ button {
     bottom: 40px;
     left: 40px;
     z-index: 99;
-
+    cursor: pointer;
+    
     &__story {
         text-align: center;
         border: 2px solid #fff;
