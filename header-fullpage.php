@@ -29,3 +29,7 @@
 
 </head>
 <body>
+
+ <a href="/" class="fullpage-logo">
+  <img src='<?php echo bs_logo_url(); ?>'  alt="ACN logo" class="img-responsive" width="170"  />
+</a>

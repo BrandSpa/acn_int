@@ -626,6 +626,11 @@ a {
   opacity: 1;
   background-color: #000; }
 
+.fullpage-logo {
+  position: fixed;
+  top: 40px;
+  left: 40px; }
+
 .section__post {
   position: absolute;
   z-index: 4;
