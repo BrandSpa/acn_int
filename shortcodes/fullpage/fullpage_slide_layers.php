@@ -26,12 +26,10 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 		<style>
 			.section--<?php echo $at['uniq_name'] ?> .layer-bg-animation {
-				background-color: #000;
 				transition: all .5s;
 			}
 
 			.section--<?php echo $at['uniq_name'] ?> .layer-overlay-animation {
-				background-color: #000;
 				transition: all .5s;
 			}
 

@@ -41,7 +41,8 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 					<i class="ion-android-open"></i>
 				</button>
 
-				<div class="section__post" >
+				<div class="section__video" >
+				<iframe src="" frameborder="0"></iframe>
 					<?php echo do_shortcode($content) ?>
 				</div>
 			</div>
