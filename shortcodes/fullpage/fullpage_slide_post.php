@@ -15,7 +15,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 ?>
 
 		<div 
-			class="section section--<?php echo $at['uniq_name'] ?> lazyload" 
+			class="section section--<?php echo $at['uniq_name'] ?>" 
 			data-anchor="<?php echo $at['uniq_name'] ?>"
 		>
 			<div class="section__content">

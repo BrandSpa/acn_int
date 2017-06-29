@@ -16,13 +16,13 @@
         "type" => "textfield",
         "param_name" => "uniq_name"
       ],
+      [
+        "heading" => "Video url embed",
+        "type" => "textfield",
+        "param_name" => "video_url"
+      ],
 			[
-        "heading" => "title",
-				"type" => "textarea",
-				"param_name" => "title"
-			],
-			[
-        "heading" => "Post Content",
+        "heading" => "Content",
 				"type" => "textarea_html",
 				"param_name" => "content"
 			]
@@ -30,7 +30,7 @@
 
     vc_map(
       array(
-        "name" =>  "FullPage Slide Post",
+        "name" =>  "FullPage Slide Video",
         "base" => "acn_fullpage_slide_video",
         "category" =>  "ACN",
 				"content_element" => true,
