@@ -26,23 +26,23 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 		<style>
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
-				animation: Q2S1Bg 3s;
+				animation: bg-left 3s;
 				opacity: 1;
 			}
 
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
-				animation: Q4S1Fg 3s;
+				animation: overlay-left 3s;
 				opacity: 1;
 				background-color: transparent;
 			}
 
 			@media (max-width: 600px) {
 				.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
-					animation: Q4S1Fg-mobile 3s;
+					animation: overlay-left-mobile 3s;
 				}
 
 				.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
-					animation: Q2S1Bg-mobile 3s;
+					animation: bg-left-mobile 3s;
 					opacity: 1;
 				}
 			}
