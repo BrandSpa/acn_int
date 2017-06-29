@@ -777,19 +777,24 @@ button {
   left: 40px;
   z-index: 99; }
   .indicator__story {
-    border: 1px solid #fff;
+    text-align: center;
+    border: 2px solid #fff;
     color: #fff;
     font-size: 22px;
     width: 40px;
     height: 40px;
     border-radius: 40px; }
   .indicator__index {
+    text-align: center;
     background: #fff;
     color: #000;
     font-size: 16px;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px; }
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    position: absolute;
+    top: -10px;
+    right: -10px; }
 
 /*!
  * fullPage 2.9.4
