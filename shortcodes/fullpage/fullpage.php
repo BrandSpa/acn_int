@@ -31,6 +31,12 @@ function acn_fullpage_sc( $atts, $content ) {
 			<?php endforeach; ?>
 		</ul>
 
+		<style>
+			#<?php echo $at['unique_name'] ?> {
+				height: 100%;
+			}
+		</style>
+
 		<script>
 		window.lazySizesConfig = window.lazySizesConfig || {};
 		window.lazySizesConfig.init = false;
