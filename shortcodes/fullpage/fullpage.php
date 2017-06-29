@@ -104,9 +104,7 @@ function acn_fullpage_sc( $atts, $content ) {
 					} else {
 						openVideo.call(this, $videoSection);
 					}
-				});
-
-				
+				});				
 
 				$(document).on("click", ".section__down", function() {
 					$.fn.fullpage.moveSectionDown();

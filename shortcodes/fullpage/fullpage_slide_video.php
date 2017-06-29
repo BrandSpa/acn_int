@@ -22,11 +22,15 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 			</div>
 
 			<div class="section__video" >
-				<iframe src="<?php echo $at['video_url'] ?>" frameborder="0" allowfullscreen ></iframe>
+				<div class="embed-container">
+					<iframe class="lazyload" data-src="<?php echo $at['video_url'] ?>" frameborder="0" allowfullscreen ></iframe>
+				</div>
 			</div>
 
 			<div class="section__bg-container">
+			
 				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile?> 600ws"></div>
+			
 			</div>
 
 		</div>
