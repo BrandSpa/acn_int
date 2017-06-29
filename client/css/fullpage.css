@@ -664,7 +664,7 @@ a {
     left: 0;
     background: #000; }
 
-.section__open-post {
+.section__open {
   background: red;
   color: #fff;
   width: 50px;

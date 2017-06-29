@@ -20,7 +20,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 		>
 			<div class="section__content">
 				<h1 class="animate-text" style="text-align: center"><?php echo $at['title'] ?></h1>
-				<button class="section__open-post" > <i class="ion-android-open"></i> </button>
+				<button class="section__open section__open-post" > <i class="ion-android-open"></i> </button>
 			</div>
 
 			<div class="section__post" >
