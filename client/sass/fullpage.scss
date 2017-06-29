@@ -182,6 +182,11 @@ button {
 }
 
 
+.active .animate-text {
+    animation: text-down-fade 2.5s;
+}
+
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js

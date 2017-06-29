@@ -671,6 +671,10 @@ button {
       background-position: center center;
       background-size: cover; }
 
+.active .animate-text {
+  -webkit-animation: text-down-fade 2.5s;
+  animation: text-down-fade 2.5s; }
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js

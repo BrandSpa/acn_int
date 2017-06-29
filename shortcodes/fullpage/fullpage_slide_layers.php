@@ -47,9 +47,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 				}
 			}
 
-			.active .animate-text {
-				animation: textAnim 2.5s;
-			}
+
 	</style>
 
 	<div class="section__content" style="position: relative; z-index: 3;">
