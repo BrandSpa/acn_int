@@ -16,6 +16,16 @@
         "type" => "textfield",
         "param_name" => "uniq_name"
       ],
+      [
+        "heading" => "Story num",
+        "type" => "textfield",
+        "param_name" => "story_num"
+      ], 
+      [
+        "heading" => "Slide num",
+        "type" => "textfield",
+        "param_name" => "index_num"
+      ], 
 			[
         "heading" => "Content",
 				"type" => "textarea_html",

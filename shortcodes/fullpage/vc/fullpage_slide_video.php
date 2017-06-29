@@ -17,6 +17,16 @@
         "param_name" => "uniq_name"
       ],
       [
+        "heading" => "Story num",
+        "type" => "textfield",
+        "param_name" => "story_num"
+      ], 
+      [
+        "heading" => "Slide num",
+        "type" => "textfield",
+        "param_name" => "index_num"
+      ], 
+      [
         "heading" => "Video url embed",
         "type" => "textfield",
         "param_name" => "video_url"

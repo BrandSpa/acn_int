@@ -13,6 +13,7 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 
 	ob_start();
 ?>
+
 	<div
 			class="section section--<?php echo $at['uniq_name'] ?>" 
 			data-anchor="<?php echo $at['uniq_name'] ?>"
