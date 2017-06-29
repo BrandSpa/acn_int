@@ -42,6 +42,7 @@ function acn_fullpage_sc( $atts, $content ) {
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
 					recordHistory: false,
 					lazyLoading: false,
+					navigation: true,
 					afterRender: function() {
 						lazySizes.init();
 					},
