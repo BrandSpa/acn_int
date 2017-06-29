@@ -33,12 +33,18 @@ function acn_fullpage_sc( $atts, $content ) {
 		</style>
 
 		<script>
+		window.lazySizesConfig = window.lazySizesConfig || {};
+		window.lazySizesConfig.init = false;
+
 			onLoad(function() {
 
 				$('#<?php echo $at['unique_name'] ?>').fullpage({
 					anchors: <?php echo json_encode($anchors) ?>,
 					menu: '#<?php echo $at['unique_name'] ?>-menu',
 					recordHistory: false,
+					afterRender: function() {
+						lazySizes.init();
+					},
 					afterLoad: function(section, index) {
 						if(index == 1) {
 							var next = index - 1;
