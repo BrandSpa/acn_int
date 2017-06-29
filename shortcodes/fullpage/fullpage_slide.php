@@ -42,9 +42,10 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 					style="
 						background: transparent;
 						border: 2px solid #fff;
-						width: 100px; 
-						height: 100px; 
-						border-radius: 100px; 
+						color: #fff;
+						width: 50px; 
+						height: 50px; 
+						border-radius: 50px; 
 						margin: 0 auto;
 						display: block;
 						position: absolute;

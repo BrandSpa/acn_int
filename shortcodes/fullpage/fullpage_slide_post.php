@@ -27,9 +27,10 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 					class="section__open-post" 
 					style="
 					background: red;
-					width: 100px; 
-					height: 100px; 
-					border-radius: 100px; 
+					color: red;
+					width: 50px; 
+					height: 50px; 
+					border-radius: 50px; 
 					margin: 0 auto;
 					display: block;
 					position: absolute;
