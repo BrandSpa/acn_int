@@ -787,7 +787,8 @@ button {
       border-top: 1px solid #333;
       font-size: 40px;
       font-weight: 300;
-      color: #2B373F; }
+      color: #2B373F;
+      padding-left: 10%; }
       .fullpage-nav ul li a .num {
         width: 50px;
         height: 20px;
