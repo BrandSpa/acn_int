@@ -9,6 +9,10 @@ function acn_fullpage_sc( $atts, $content ) {
 
 	$links = empty(vc_param_group_parse_atts($at['links'])) ? [] : vc_param_group_parse_atts($at['links']);
 	$intro = empty(vc_param_group_parse_atts($at['intro'])) ? [] : vc_param_group_parse_atts($at['intro']);
+	$introCount = count($intro);
+	$introDelay = array_reduce($intro, function($a, $b) {
+		return $a + $b * 1000;
+	});
 
 	ob_start();
 ?>
@@ -42,11 +46,16 @@ function acn_fullpage_sc( $atts, $content ) {
 
 	<div class="intro">
 
-		<?php foreach($intro as $item): ?>
+		<?php foreach($intro as $i => $item): ?>
 		<div 
-			class="intro__section intro--fade-in-out intro__section--duration-<?php echo $item['duration'] ?> intro__section--delay-<?php echo $item['delay'] ?>">
+			class="
+				intro__section 
+				intro--fade-in-out 
+				intro__section--duration-<?php echo $item['duration'] ?> 
+				intro__section--delay-<?php echo $item['delay'] ?>
+			">
 			<div class="intro__section__container">
-			<h1><?php echo $item['title'] ?></h1>
+				<h1><?php echo $item['title'] ?></h1>
 			</div>
 		</div>
 		<?php endforeach; ?>
@@ -59,7 +68,7 @@ function acn_fullpage_sc( $atts, $content ) {
 			setTimeout(function introDelay() { 
 				$('.intro').addClass('intro--close');
 				window.localStorage.setItem('intro', true);
-			}, 13000);
+			}, <?php echo $introDelay ?>);
 		}
 	</script>
 
