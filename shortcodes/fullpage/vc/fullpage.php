@@ -5,7 +5,7 @@ function acn_fullpage_vc() {
         'type' => 'textfield',
         'param_name' => 'link',
         'heading' => 'link',
-        'value' => ''
+        'value' => '#'
       ],
       [
         'type' => 'textfield',
@@ -26,13 +26,13 @@ function acn_fullpage_vc() {
         'type' => 'textfield',
         'param_name' => 'delay',
         'heading' => 'slide delay',
-        'value' => ''
+        'value' => '1'
       ],
       [
         'type' => 'textfield',
         'param_name' => 'duration',
         'heading' => 'slide duration',
-        'value' => ''
+        'value' => '1'
       ]
     ];
     
