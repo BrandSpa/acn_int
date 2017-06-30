@@ -492,6 +492,11 @@ button {
     animation-fill-mode: forwards
 }
 
+.section--center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js
