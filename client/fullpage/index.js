@@ -2,8 +2,8 @@ import $ from 'jquery';
 import "fullpage.js";
 import "lazysizes/plugins/bgset/ls.bgset";
 import "lazysizes";
-import './slide_post';
-import './slide_video';
+import slidePost from  './slide_post';
+import slideVideo from './slide_video';
 
 //lazyload configuration
 window.lazySizesConfig = window.lazySizesConfig || {};
@@ -42,8 +42,13 @@ $(function() {
     onLeave: handleLeave
   });
 
+  slidePost($.fn.fullpage);
+  slideVideo($.fn.fullpage);
+
   $(document).on("click", ".section__down", function goDown() {
     $.fn.fullpage.moveSectionDown();
   });
+
+
 
 });
