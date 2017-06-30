@@ -842,7 +842,17 @@ button {
     right: 0;
     bottom: 0;
     left: 0;
-    color: #fff; }
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0; }
     .intro__section--duration-3 {
       -webkit-animation-duration: 3s;
       animation-duration: 3s; }
