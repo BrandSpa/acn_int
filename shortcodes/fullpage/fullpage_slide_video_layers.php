@@ -25,6 +25,31 @@ function acn_fullpage_slide_video_layers_sc( $atts, $content ) {
 			data-index="4"
 		>
 
+				<style>
+			.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
+				animation: <?php echo $at['bg-animation'] ?> 2.5s;
+				opacity: 1;
+			}
+
+			.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
+				animation: overlay-left 2.5s;
+				opacity: 1;
+				background-color: transparent;
+			}
+
+			@media (max-width: 600px) {
+				.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {
+					animation: <?php echo $at['bg-animation'] ?>-mobile 2.5s;
+					opacity: 1;
+				}
+
+				.section--<?php echo $at['uniq_name'] ?>.active .layer-overlay-animation {
+					animation: <?php echo $at['overlay-animation'] ?>-mobile 2.5s;
+				}
+			}
+
+	</style>
+
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>
 				<button class="section__open section__open-video"><i class="ion-social-youtube"></i></button>
