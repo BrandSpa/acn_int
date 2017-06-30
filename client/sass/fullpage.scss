@@ -286,14 +286,14 @@ button {
         ul {
             float: right;
             padding: 20px 0;
-            
+
             li {
                 float: left;
             }
         }
     }
 
-    ul {
+    & > ul {
         padding: 0;
         position: absolute;
         bottom: 130px;
