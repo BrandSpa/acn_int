@@ -786,7 +786,9 @@ button {
       .fullpage-nav__info ul li {
         float: left;
         border-left: 1px solid #fff;
-        padding: 0 5px; }
+        padding: 0 10px; }
+        .fullpage-nav__info ul li:first-child {
+          border: none; }
         .fullpage-nav__info ul li a {
           color: #fff; }
   .fullpage-nav > ul {
