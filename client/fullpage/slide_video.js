@@ -1,7 +1,7 @@
-function slideVideo(fullpage) {
+function slideVideo($fp) {
 
   function closeVideo() {
-     fullpage.setAllowScrolling(true);
+     $fp.setAllowScrolling(true);
     var $videoSection = $(this).parent();
     var $iframe = $videoSection.find("iframe");
     $iframe.attr("src", "");
@@ -9,7 +9,7 @@ function slideVideo(fullpage) {
   }
 
   function openVideo($videoSection) {
-    fullpage.setAllowScrolling(false);
+    $fp.setAllowScrolling(false);
     $videoSection.addClass("section__video--open");
     var $iframe = $videoSection.find("iframe");
     var src = $iframe.data("src");
