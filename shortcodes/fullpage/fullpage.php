@@ -43,10 +43,13 @@ function acn_fullpage_sc( $atts, $content ) {
 			</div>
 		</div>
 	</div>
+	
 	<script>
-		setTimeout(function() { 
+		setTimeout(function introDelay() { 
 			$('.intro').addClass('intro--close');
 		}, 13000);
+
+
 	</script>
 	<style>
 		#fullpage{

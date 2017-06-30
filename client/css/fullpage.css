@@ -833,10 +833,10 @@ button {
   background: #000;
   z-index: 9999;
   overflow: hidden;
-  transition: -webkit-transform 1s ease-out;
-  -webkit-transition: -webkit-transform 1s ease-out;
-  transition: transform 1s ease-out;
-  transition: transform 1s ease-out, -webkit-transform 1s ease-out; }
+  -webkit-transition: -webkit-transform .7s ease-out;
+  transition: -webkit-transform .7s ease-out;
+  transition: transform .7s ease-out;
+  transition: transform .7s ease-out, -webkit-transform .7s ease-out; }
   .intro--close {
     -webkit-transform: translateY(-100vh);
     transform: translateY(-100vh); }

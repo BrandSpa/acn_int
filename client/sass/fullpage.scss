@@ -343,9 +343,7 @@ button {
     background: #000;
     z-index: 9999;
     overflow: hidden;
-    transition: -webkit-transform 1s ease-out;
-    transition: transform 1s ease-out;
-    transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+    transition: transform .7s ease-out;
     
     &--close {
         transform: translateY(-100vh);

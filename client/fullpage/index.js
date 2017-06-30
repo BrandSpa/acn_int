@@ -36,6 +36,7 @@ $(function() {
     recordHistory: false,
     lazyLoading: false,
     navigation: true,
+    parallax: true,
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
     onLeave: handleLeave

@@ -1,3 +1,4 @@
+
 function closePost($postSection) {
   $.fn.fullpage.setAllowScrolling(true);
   $postSection.removeClass("section__post--open");

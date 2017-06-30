@@ -15,7 +15,7 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 ?>
 
 	<div
-			class="section section--<?php echo $at['uniq_name'] ?>" 
+			class="section section--<?php echo $at['uniq_name'] ?> " 
 			data-anchor="<?php echo $at['uniq_name'] ?>"
 			data-story="1"
 			data-index="2"
@@ -25,7 +25,7 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 				<button class="section__down" ><i class="ion-chevron-down"></i></button>
 	</div>
 
-			<div class="section__bg-container">
+			<div class="fp-bg section__bg-container">
 				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"></div> </div>
 			</div>
 	<?php
