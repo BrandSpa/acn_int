@@ -8,10 +8,11 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: {
     vendor: [
+      'jquery',
 			'fullpage.js',
 			'lazysizes'
     ],
-  	app_me: './me.js'
+  	app_me: './fullpage/index.js'
   },
   output: {
   	path: Path.join(__dirname, '/me/'),
