@@ -285,10 +285,12 @@ button {
 
         ul {
             float: right;
-            padding: 20px 0;
+            padding: 7px 0;
 
             li {
                 float: left;
+                border-left: 1px solid #fff;
+                margin: 0 5px;
             }
         }
     }

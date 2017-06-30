@@ -782,9 +782,11 @@ button {
     right: 0; }
     .fullpage-nav__info ul {
       float: right;
-      padding: 20px 0; }
+      padding: 7px 0; }
       .fullpage-nav__info ul li {
-        float: left; }
+        float: left;
+        border-left: 1px solid #fff;
+        margin: 0 5px; }
   .fullpage-nav > ul {
     padding: 0;
     position: absolute;
