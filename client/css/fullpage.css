@@ -621,8 +621,10 @@ p {
   letter-spacing: 0; }
 
 a {
-  color: #448aff;
-  font-weight: 500; }
+  text-decoration: none; }
+
+li {
+  list-style: none; }
 
 .lazyload,
 .lazyloaded,
