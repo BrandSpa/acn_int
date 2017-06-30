@@ -12,7 +12,7 @@ function acn_fullpage_sc( $atts, $content ) {
 	$introCount = count($intro);
 
 	function get_delay($a, $b) {
-		return $a + $b;
+		return ($a['delay'] + $a['duration']) + ($b['delay'] + $b['duration']) * 1000;
 	}
 
 	$introDelay = array_reduce($intro, 'get_delay', 0);
