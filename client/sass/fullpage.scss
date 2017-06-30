@@ -290,7 +290,10 @@ button {
             li {
                 float: left;
                 border-left: 1px solid #fff;
-                margin: 0 5px;
+                padding: 0 5px;
+                a {
+                    color: #fff;
+                }
             }
         }
     }
