@@ -468,26 +468,18 @@ button {
         opacity: 0;
 
         &--duration {
-            &-3 {
-                animation-duration: 3s;
-            }
-            &-4 {
-                animation-duration: 4s;
+            @for $i from 1 through 12 {
+                &-#{$i} {
+                    animation-duration: #{$i}s;
+                }
             }
         }
 
         &--delay {
-            &-1 {
-                animation-delay: 1s;
-            }
-            &-2 {
-                animation-delay: 2s;
-            }
-            &-4 {
-                animation-delay: 4s;
-            }
-            &-8 {
-                animation-delay: 8s;
+            @for $i from 1 through 12 {
+                &-#{$i} {
+                    animation-delay: #{$i}s;
+                }
             }
         }
     }
