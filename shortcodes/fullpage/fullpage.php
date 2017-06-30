@@ -15,7 +15,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		return $a + $b;
 	}
 
-	$introDelay = array_reduce($intro, 'get_delay', []);
+	$introDelay = array_reduce($intro, 'get_delay', 0);
 
 	ob_start();
 ?>
