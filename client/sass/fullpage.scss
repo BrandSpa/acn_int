@@ -278,8 +278,15 @@ button {
 
     &__info {
         background: #E3333A;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
         ul {
             float: right;
+            padding: 20px 0;
+            
             li {
                 float: left;
             }
