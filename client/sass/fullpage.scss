@@ -268,9 +268,10 @@ button {
     right: 0;
     top: 0;
     bottom: 0;
-    width: 80%;
+    width: 70%;
     height: 100%;
     background: #fff;
+
     ul {
         padding: 0;
         position: absolute;
@@ -283,6 +284,9 @@ button {
                 width: 100%;
                 padding: 10px 0;
                 border-top: 1px solid #333;
+                font-size: 40px;
+                font-weight: 300;
+                color: #2B373F;
             } 
         }
     }
