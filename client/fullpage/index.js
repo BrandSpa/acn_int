@@ -9,7 +9,12 @@ import slideVideo from './slide_video';
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
 
-$(function() {
+$(function domLoaded() {
+
+   function handleAfterRender() {
+    lazySizes.init();
+  }
+
 
   function handleLeave(index, nextIndex, direction) {
     var next = nextIndex - 1;
@@ -27,10 +32,7 @@ $(function() {
     $indicator.find(".indicator__index").text("/" + index);
   }
 
-  function handleAfterRender() {
-    lazySizes.init();
-  }
-
+ 
   $("#fullpage").fullpage({
     menu: "#fullpage-menu",
     recordHistory: false,

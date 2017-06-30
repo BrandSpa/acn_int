@@ -29,6 +29,6 @@ function slideVideo($fp) {
   $(function() {
     $(document).on("click", ".section__open-video", handleToggleVideo);
   })
-
-
 }
+
+export default slideVideo;

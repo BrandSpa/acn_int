@@ -30,3 +30,5 @@ function slidePost($fp) {
   })
 
 }
+
+export default slidePost;
