@@ -7,6 +7,8 @@ function acn_fullpage_slide_video_layers_sc( $atts, $content ) {
 		"overlay_img" => "",
 		"overlay_img_mobile" => "",
 		"video_url" => "",
+			"bg-animation" => "bg-left",
+		"overlay-animation" => "bg-left",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100) 
 	], $atts);
 	
