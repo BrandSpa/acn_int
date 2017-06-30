@@ -26,6 +26,14 @@ function acn_fullpage_sc( $atts, $content ) {
 			<li><a href="<?php echo $link['link'] + 1 ?>"><span class="num"><?php echo $ind ?></span> <?php echo  $link['title'] ?></a></li>
 		<?php endforeach; ?>
 		</ul>
+
+		<div class="fullpage-nav__info">
+			<ul>
+				<li><a href="#">Privacidad</a></li>	
+				<li><a href="#">Condiciones</a></li>	
+				<li><a href="#">Español</a></li>	
+			</ul>	
+		</div>
 	</div>
 <!--
 	<div class="intro">

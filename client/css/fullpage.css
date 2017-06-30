@@ -774,6 +774,12 @@ button {
   width: 70%;
   height: 100%;
   background: #fff; }
+  .fullpage-nav__info {
+    background: #E3333A; }
+    .fullpage-nav__info ul {
+      float: right; }
+      .fullpage-nav__info ul li {
+        float: left; }
   .fullpage-nav ul {
     padding: 0;
     position: absolute;
