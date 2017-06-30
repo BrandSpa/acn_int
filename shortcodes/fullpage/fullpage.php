@@ -10,10 +10,11 @@ function acn_fullpage_sc( $atts, $content ) {
 	$links = empty(vc_param_group_parse_atts($at['links'])) ? [] : vc_param_group_parse_atts($at['links']);
 	$intro = empty(vc_param_group_parse_atts($at['intro'])) ? [] : vc_param_group_parse_atts($at['intro']);
 	$introCount = count($intro);
+
 	function get_delay($a, $b) {
-		return $a + $b * 1000;
+		return $a + $b;
 	}
-	
+
 	$introDelay = array_reduce($intro, 'get_delay');
 
 	ob_start();
