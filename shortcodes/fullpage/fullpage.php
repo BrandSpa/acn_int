@@ -3,10 +3,12 @@
 function acn_fullpage_sc( $atts, $content ) {
 	$at = shortcode_atts([
 		"unique_name" => "fullpage",
-		"links" => ""
+		"links" => "",
+		"intro" => "",
 	], $atts);
 
 	$links = empty(vc_param_group_parse_atts($at['links'])) ? [] : vc_param_group_parse_atts($at['links']);
+	$intro = empty(vc_param_group_parse_atts($at['intro'])) ? [] : vc_param_group_parse_atts($at['intro']);
 
 	ob_start();
 ?>
@@ -39,23 +41,16 @@ function acn_fullpage_sc( $atts, $content ) {
 	</div>
 
 	<div class="intro">
-		<div class="intro__section intro--fade-in-out intro__section--duration-3 intro__section--delay-1">
-			<div class="intro__section__container">
-			<h1>lorem ipsum title 1</h1>
-			</div>
-		</div>
 
-		<div class="intro__section intro--fade-in-out intro__section--duration-4 intro__section--delay-4">
+		<?php foreach($intro as $item): ?>
+		<div 
+			class="intro__section intro--fade-in-out intro__section--duration-<?php echo $item['duration'] ?> intro__section--delay-<?php echo $item['delay'] ?>">
 			<div class="intro__section__container">
-				<h1>A real title nea</h1>
+			<h1><?php echo $item['title'] ?></h1>
 			</div>
 		</div>
-
-		<div class="intro__section intro--fade-in-out intro__section--duration-4 intro__section--delay-8">
-			<div class="intro__section__container">
-				<h1>A real last title nigga</h1>
-			</div>
-		</div>
+		<?php endforeach; ?>
+	
 	</div>
 
 	<script>
