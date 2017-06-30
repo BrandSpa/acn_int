@@ -45,7 +45,7 @@ function acn_fullpage_sc( $atts, $content ) {
 	</div>
 	<script>
 		setTimeout(function() { 
-			$('').addClass('intro--close');
+			$('.intro').addClass('intro--close');
 		}, 13000);
 	</script>
 	<style>
