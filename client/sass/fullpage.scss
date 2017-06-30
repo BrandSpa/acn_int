@@ -291,9 +291,13 @@ button {
                 font-size: 40px;
                 font-weight: 300;
                 color: #2B373F;
+
                 .num {
                     width: 50px;
-                    height: 50px;
+                    height: 30px;
+                    padding: 10px 0;
+                    text-align: center;
+                    display: inline-block;
                     border: 1px solid #2B373F;
                     border-radius: 50px;
                 }
