@@ -1,7 +1,7 @@
 function slideVideo($fp) {
 
   function closeVideo() {
-     $fp.setAllowScrolling(true);
+    $fp.setAllowScrolling(true);
     var $videoSection = $(this).parent();
     var $iframe = $videoSection.find("iframe");
     $iframe.attr("src", "");

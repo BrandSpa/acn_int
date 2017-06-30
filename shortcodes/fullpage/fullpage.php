@@ -24,6 +24,14 @@ function acn_fullpage_sc( $atts, $content ) {
 		<div class="indicator__index">1</div>
 	</div>
 
+	<div class="fullpage-nav">
+		<ul>
+		<?php foreach($links as $link): ?>
+			<li><a href="<?php echo  $link['link'] ?>"><?php echo  $link['title'] ?></a></li>
+		<?php endforeach; ?>
+		</ul>
+	</div>
+
 	<div class="intro">
 		<div class="intro__section intro--fade-in-out intro__section--duration-3 intro__section--delay-1">
 			<div class="intro__section__container">
@@ -48,9 +56,8 @@ function acn_fullpage_sc( $atts, $content ) {
 		setTimeout(function introDelay() { 
 			$('.intro').addClass('intro--close');
 		}, 13000);
-
-
 	</script>
+
 	<style>
 		#fullpage{
 			height: 100%;
