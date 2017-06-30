@@ -817,7 +817,6 @@ button {
     right: 0; }
     .fullpage-nav > ul li a {
       display: block;
-      width: 100%;
       padding: 30px 0;
       border-top: 1px solid #333;
       font-size: 40px;
@@ -826,7 +825,8 @@ button {
       padding-left: 10%; }
       @media (max-width: 767px) {
         .fullpage-nav > ul li a {
-          font-size: 20px; } }
+          font-size: 15px;
+          padding-left: 5%; } }
       .fullpage-nav > ul li a .num {
         width: 50px;
         height: 20px;
@@ -837,8 +837,8 @@ button {
         border-radius: 50px; }
         @media (max-width: 767px) {
           .fullpage-nav > ul li a .num {
-            width: 20px;
-            height: 10px;
+            width: 30px;
+            height: 20px;
             padding: 5px 0;
             border-radius: 20px; } }
 

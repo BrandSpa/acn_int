@@ -335,7 +335,6 @@ button {
         li {
             a {
                 display: block;
-                width: 100%;
                 padding: 30px 0;
                 border-top: 1px solid #333;
                 font-size: 40px;
@@ -344,7 +343,8 @@ button {
                 padding-left: 10%;
                 
                 @media #{$s} {
-                    font-size: 20px;
+                    font-size: 15px;
+                    padding-left: 5%;
                 }
 
                 .num {
@@ -355,9 +355,10 @@ button {
                     display: inline-block;
                     border: 1px solid #2B373F;
                     border-radius: 50px;
+                    
                      @media #{$s} {
-                        width: 20px;
-                        height: 10px;
+                        width: 30px;
+                        height: 20px;
                         padding: 5px 0;
                         border-radius: 20px;
                     }
