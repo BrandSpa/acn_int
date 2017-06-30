@@ -37,7 +37,7 @@ function acn_fullpage_sc( $atts, $content ) {
 			</ul>	
 		</div>
 	</div>
-<!--
+
 	<div class="intro">
 		<div class="intro__section intro--fade-in-out intro__section--duration-3 intro__section--delay-1">
 			<div class="intro__section__container">
@@ -57,11 +57,15 @@ function acn_fullpage_sc( $atts, $content ) {
 			</div>
 		</div>
 	</div>
-	-->
+
 	<script>
-		setTimeout(function introDelay() { 
-			$('.intro').addClass('intro--close');
-		}, 13000);
+		
+		if(window.localStorage.getItem('intro') !== true) {
+			setTimeout(function introDelay() { 
+				$('.intro').addClass('intro--close');
+				window.localStorage.setItem('intro', true);
+			}, 13000);
+		}
 	</script>
 
 	<style>
