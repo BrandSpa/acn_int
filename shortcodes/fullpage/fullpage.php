@@ -47,7 +47,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		</div>
 	</div>
 
-	<div class="intro">
+	<!--<div class="intro">
 
 		<?php foreach($intro as $i => $item): ?>
 		<div 
@@ -63,7 +63,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		</div>
 		<?php endforeach; ?>
 	
-	</div>
+	</div>-->
 
 	<script>
 		
