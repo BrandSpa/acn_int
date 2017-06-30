@@ -54,8 +54,8 @@ $(function domLoaded() {
     $('.fullpage-nav').addClass('fullpage-nav--open');
   });
 
-  $('.indicator').on('click', function closeNav() {
-    $('.fullpage-nav__close').removeClass('fullpage-nav--open');
+  $('.fullpage-nav__close').on('click', function closeNav() {
+    $('.fullpage-nav').removeClass('fullpage-nav--open');
   });
 
 });
