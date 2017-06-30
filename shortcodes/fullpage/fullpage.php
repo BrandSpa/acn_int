@@ -24,6 +24,20 @@ function acn_fullpage_sc( $atts, $content ) {
 		<div class="indicator__index">1</div>
 	</div>
 
+	<div class="intro">
+		<div class="intro__section intro--fade-in-out intro__section--duration-3 intro__section--delay-1">
+			<div class="intro__section__container">
+			<h1>lorem ipsum title 1</h1>
+			</div>
+		</div>
+
+		<div class="intro__section intro--fade-in-out intro__section--duration-4 intro__section--delay-1">
+			<div class="intro__section__container">
+				<h1>A real title nea</h1>
+			</div>
+		</div>
+	</div>
+
 	<style>
 		#fullpage{
 			height: 100%;
