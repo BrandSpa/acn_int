@@ -31,7 +31,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		<?php endforeach; ?>
 		</ul>
 	</div>
-
+<!--
 	<div class="intro">
 		<div class="intro__section intro--fade-in-out intro__section--duration-3 intro__section--delay-1">
 			<div class="intro__section__container">
@@ -51,7 +51,7 @@ function acn_fullpage_sc( $atts, $content ) {
 			</div>
 		</div>
 	</div>
-	
+	-->
 	<script>
 		setTimeout(function introDelay() { 
 			$('.intro').addClass('intro--close');
