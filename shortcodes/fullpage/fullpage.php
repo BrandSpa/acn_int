@@ -31,7 +31,7 @@ function acn_fullpage_sc( $atts, $content ) {
 			</div>
 		</div>
 
-		<div class="intro__section intro--fade-in-out intro__section--duration-4 intro__section--delay-1">
+		<div class="intro__section intro--fade-in-out intro__section--duration-4 intro__section--delay-4">
 			<div class="intro__section__container">
 				<h1>A real title nea</h1>
 			</div>
