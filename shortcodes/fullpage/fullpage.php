@@ -8,10 +8,6 @@ function acn_fullpage_sc( $atts, $content ) {
 
 	$links = empty(vc_param_group_parse_atts($at['links'])) ? [] : vc_param_group_parse_atts($at['links']);
 
-	$anchors = array_map(function($link) {
-		return $link['anchor'];
-	}, $links);
-
 	ob_start();
 ?>
 
