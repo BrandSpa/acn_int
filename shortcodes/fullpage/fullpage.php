@@ -26,6 +26,8 @@ function acn_fullpage_sc( $atts, $content ) {
 			<li><a href="<?php echo $link['link'] + 1 ?>"><span class="num"><?php echo $ind ?></span> <?php echo  $link['title'] ?></a></li>
 		<?php endforeach; ?>
 		</ul>
+		
+		<button class="fullpage-nav__close"><i class="ion-close-round"></i></button>
 
 		<div class="fullpage-nav__info">
 			<ul>

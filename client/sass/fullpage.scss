@@ -276,6 +276,15 @@ button {
     height: 100%;
     background: #fff;
 
+    &__close {
+        background: #E3333A;
+        color: #fff;
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+    }
+
     &__info {
         background: #E3333A;
         position: absolute;

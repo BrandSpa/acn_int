@@ -774,6 +774,13 @@ button {
   width: 70%;
   height: 100%;
   background: #fff; }
+  .fullpage-nav__close {
+    background: #E3333A;
+    color: #fff;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px; }
   .fullpage-nav__info {
     background: #E3333A;
     position: absolute;
