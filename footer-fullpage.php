@@ -10,9 +10,14 @@
 <script src="https://afarkas.github.io/lazysizes/plugins/bgset/ls.bgset.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js"></script>
 
+<script 
+  src="<?php echo get_template_directory_uri() ?>/client/me/vendor_me.js?v=<?php echo filemtime(get_template_directory() . '/client/me/vendor_me.js') ?>"
+>
+</script>
 
-<script src="<?php echo get_template_directory_uri() ?>/client/me/vendor_me.js?v=<?php echo filemtime(get_template_directory() . '/client/me/vendor_me.js') ?>"></script>
-<script src="<?php echo get_template_directory_uri() ?>/client/me/app_me.js?v=<?php echo filemtime(get_template_directory() . '/client/me/app_me.js') ?>"></script>
+<script
+  src="<?php echo get_template_directory_uri() ?>/client/me/app_me.js?v=<?php echo filemtime(get_template_directory() . '/client/me/app_me.js') ?>">
+</script>
 
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/app.23966adf2dc9bac8c927.js'></script>
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/app.23966adf2dc9bac8c927.js'></script>
