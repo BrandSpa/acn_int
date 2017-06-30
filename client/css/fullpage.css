@@ -777,7 +777,7 @@ button {
   .fullpage-nav ul {
     padding: 0;
     position: absolute;
-    bottom: 0;
+    bottom: 130px;
     left: 0;
     right: 0; }
     .fullpage-nav ul li a {
