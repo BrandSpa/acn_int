@@ -1,6 +1,6 @@
 <?php
 function acn_fullpage_vc() {
-    $subparams = [
+    $links_subparams = [
       [
         'type' => 'textfield',
         'param_name' => 'link',
@@ -11,6 +11,27 @@ function acn_fullpage_vc() {
         'type' => 'textfield',
         'param_name' => 'title',
         'heading' => 'link title',
+        'value' => ''
+      ]
+    ];
+
+    $intro_subparams =  [
+      [
+        'type' => 'textfield',
+        'param_name' => 'title',
+        'heading' => 'title',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'delay',
+        'heading' => 'slide delay',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'duration',
+        'heading' => 'slide duration',
         'value' => ''
       ]
     ];
@@ -25,8 +46,16 @@ function acn_fullpage_vc() {
       [
         'type' => 'param_group',
         'param_name' => 'links',
+        'heading' => 'Menu links',
         'value' => '',
-        'params' => $subparams
+        'params' =>  $links_subparams 
+      ],
+      [
+        'type' => 'param_group',
+        'param_name' => 'intro',
+        'heading' => 'Intro',
+        'value' => '',
+        'params' =>  $intro_subparams 
       ]
     ];
 
