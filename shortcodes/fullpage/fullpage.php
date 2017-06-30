@@ -43,7 +43,11 @@ function acn_fullpage_sc( $atts, $content ) {
 			</div>
 		</div>
 	</div>
-
+	<script>
+		setTimeout(function() { 
+			$('').addClass('intro--close');
+		}, 13000);
+	</script>
 	<style>
 		#fullpage{
 			height: 100%;
