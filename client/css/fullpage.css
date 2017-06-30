@@ -869,6 +869,9 @@ button {
     .intro__section--delay-4 {
       -webkit-animation-delay: 4s;
       animation-delay: 4s; }
+    .intro__section--delay-8 {
+      -webkit-animation-delay: 8s;
+      animation-delay: 8s; }
 
 .intro--fade-in-out {
   opacity: 0;

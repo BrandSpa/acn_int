@@ -36,6 +36,12 @@ function acn_fullpage_sc( $atts, $content ) {
 				<h1>A real title nea</h1>
 			</div>
 		</div>
+
+		<div class="intro__section intro--fade-in-out intro__section--duration-4 intro__section--delay-8">
+			<div class="intro__section__container">
+				<h1>A real last title nigga</h1>
+			</div>
+		</div>
 	</div>
 
 	<style>
