@@ -835,6 +835,12 @@ button {
         display: inline-block;
         border: 1px solid #2B373F;
         border-radius: 50px; }
+        @media (max-width: 767px) {
+          .fullpage-nav > ul li a .num {
+            width: 20px;
+            height: 10px;
+            padding: 5px 0;
+            border-radius: 20px; } }
 
 .section__down {
   background: transparent;

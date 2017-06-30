@@ -317,6 +317,7 @@ button {
                 &:first-child {
                    border: none; 
                 }
+
                 a {
                     color: #fff;
                 }
@@ -354,6 +355,12 @@ button {
                     display: inline-block;
                     border: 1px solid #2B373F;
                     border-radius: 50px;
+                     @media #{$s} {
+                        width: 20px;
+                        height: 10px;
+                        padding: 5px 0;
+                        border-radius: 20px;
+                    }
                 }
             } 
         }
