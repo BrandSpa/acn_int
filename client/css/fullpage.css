@@ -842,7 +842,7 @@ button {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #000; }
+    color: #fff; }
     .intro__section--duration-3 {
       -webkit-animation-duration: 3s;
       animation-duration: 3s; }
