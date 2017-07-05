@@ -82,11 +82,11 @@ class ProjectsInfo extends Component {
 				<ProjectsIcons onChange={this.handleSection} />
 				<div className={infoSectionStyle}>
 					<div className="projects__arrow" />
-					<span className={ numTextStyle }>{this.props.projects[section] ? this.props.projects[section].number : ""}</span> 
+					<span className={ numTextStyle }>{this.props.projects[section] ? this.props.projects[section].number : ""}</span>
 					<span style={{ fontSize: '30px' }}>{this.props.projects[section] ? this.props.projects[section].number_text : ""}</span>
 				</div>
 			</div>
-			
+
 		)
 	}
 }
