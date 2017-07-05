@@ -24,7 +24,7 @@ function bs_posts_sc($atts, $content = null) {
     'url' => $at['url'],
     'read_more' => gett('Read more'),
     'see_more_link' => gett('https://acninternational.org/news/'),
-		'posts' => $posts
+		'posts' => json_encode($posts)
 	];
 
   ob_start();
