@@ -9,7 +9,7 @@
     transition: left 400ms ease;
 		overflow: hidden;
     height: 100vh;
-    
+
 		@media #{$s} {
 			height: 200px !important;
 		}
