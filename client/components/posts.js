@@ -10,15 +10,15 @@ class Posts extends React.Component {
   state = { posts: [], paged: 1, seeMore: true };
 
   componentWillMount() {
-    // let data = qs.stringify({ action: "get_posts" });
-    //
-    // request
-    //   .post(endpoint, data)
-    //   .then(({data}) => {
-    //     let posts = data ? data : [];
-    //     this.setState({ posts });
-    //   })
-    //   .catch(err => console.error(err));
+    let data = qs.stringify({ action: "get_posts" });
+
+    request
+      .post(endpoint, data)
+      .then(({data}) => {
+        let posts = data ? data : [];
+        this.setState({ posts });
+      })
+      .catch(err => console.error(err));
   }
 
   componentDidUpdate() {
