@@ -59,7 +59,8 @@ module.exports = {
       'axios',
       'qs',
       'webfontloader',
-      'react-multiple-render'
+      'react-multiple-render',
+      'lazysizes'
     ],
   	app: './app.js'
   },

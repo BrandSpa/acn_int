@@ -1,6 +1,6 @@
 import React from "react";
 
-const cleanEmpty = arrArg => 
+const cleanEmpty = arrArg =>
   arrArg.filter(item => item.length > 0);
 
 class Post extends React.Component {
@@ -17,8 +17,8 @@ class Post extends React.Component {
   render() {
     const { post, type, read_more } = this.props;
     const { post_image = '', post_title = '' } = post;
-    const imgUrl = Array.isArray(post_image) && post_image.length > 1 
-      ? cleanEmpty(post_image) 
+    const imgUrl = Array.isArray(post_image) && post_image.length > 1
+      ? cleanEmpty(post_image)
       : post_image;
     let title = post_title;
 
@@ -40,7 +40,7 @@ class Post extends React.Component {
           <a href={post.post_permalink}>
             {
               imgUrl.length > 0
-              ? <img src={imgUrl} onLoad={this.handleImageLoaded} />
+              ? <img data-src={imgUrl} className="lazyload" onLoad={this.handleImageLoaded} />
               : <div/>
             }
           </a>

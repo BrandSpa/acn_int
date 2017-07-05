@@ -6,6 +6,7 @@ import "babel-polyfill";
 import WebFont from "webfontloader";
 import multipleRender from "react-multiple-render";
 import qs from "qs";
+import 'lazysizes';
 
 //React components :)
 import ContactForm from "./components/contactForm";
@@ -76,7 +77,7 @@ stickyMenu();
 toggleMenu();
 let cookies = {};
 
-document.cookie.split(";").forEach(function(l) { 
+document.cookie.split(";").forEach(function(l) {
   cookies[l.split("=")[0].trim()] = l.split("=")[1];
 });
 
@@ -86,4 +87,3 @@ if(document.querySelector(".bs-donate")) {
     console.log("click", _dp);
   });
 }
-
