@@ -60,7 +60,8 @@ module.exports = {
       'qs',
       'webfontloader',
       'react-multiple-render',
-      'lazysizes'
+      'lazysizes',
+      'lazysizes/plugins/bgset/ls.bgset.min.js'
     ],
   	app: './app.js'
   },

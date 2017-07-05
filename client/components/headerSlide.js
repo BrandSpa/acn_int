@@ -11,10 +11,10 @@ class headerSlide extends React.Component {
   render() {
     const {image, image_position, title, subtitle, url, width, height} = this.props;
 
-    let bg = `url(${image})`;
+    // let bg = `url(${image})`;
 
     let style = {
-      backgroundImage: bg,
+      // backgroundImage: bg,
       backgroundPosition: image_position,
       width,
       height
@@ -24,7 +24,7 @@ class headerSlide extends React.Component {
       <div>
         { this.props.is_video ? <VideoModal ref={modal => this.modal = modal} url={this.props.url} /> : "" }
 
-        <div className="slider__slide" style={style}>
+        <div className="slider__slide" style={style} data-bgset={image}>
           <a href="#" className="slider__slide__link-zone" onClick={this.handleLink}></a>
             <a href={this.props.anchor} className="slider__slide__anchor">
               <svg width="50px" height="57px" viewBox="178 602 20 27" version="1.1" xmlns="http://www.w3.org/2000/svg">

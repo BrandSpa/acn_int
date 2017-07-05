@@ -25,20 +25,20 @@
     ?>
 	</ul>
 
-		<ul class="menu--mobile">
-		<li>
-			<a href="#close" class="close-menu" style="color: #F1364E"><i class="ion-close"></i></a>
-		</li>
-	  <?php
-			$args = array(
-        'theme_location' => 'header',
-        'container' => false,
-        'echo' => false
-		);
+	<ul class="menu--mobile">
+			<li>
+				<a href="#close" class="close-menu" style="color: #F1364E"><i class="ion-close"></i></a>
+			</li>
+		  <?php
+				$args = array(
+	        'theme_location' => 'header',
+	        'container' => false,
+	        'echo' => false
+			);
 
-			$menu = wp_nav_menu( $args);
-    	echo clean_menu($menu);
-    ?>
+				$menu = wp_nav_menu( $args);
+	    	echo clean_menu($menu);
+	    ?>
 	</ul>
 
 </div>
