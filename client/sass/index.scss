@@ -24,7 +24,7 @@ body {
 	transition: left 300ms;
 	padding-top: 100px;
 	line-height: 1.44;
-	
+
 	@media #{$s} {
 		font-size: 12px;
 	}
@@ -174,7 +174,7 @@ p {
 	li {
 		display: inline-block;
 		border-right: 1px #fff solid;
-		
+
 		&:last-child {
 				border: none;
 		}
@@ -186,7 +186,7 @@ p {
 			color: #fff;
 			font-weight: 300;
 			font-size: 11px;
-		
+
 		}
 	}
 }
@@ -290,7 +290,7 @@ button, .btn {
 
 	button {
 		margin-left: -2px;
-		border-radius: 3px;			
+		border-radius: 3px;
 
 		@media #{$l}, #{$xl} {
 			width: 30%;
@@ -302,7 +302,7 @@ button, .btn {
 	}
 
 	input, select {
-		width: 100%;		
+		width: 100%;
 	}
 }
 
@@ -341,7 +341,7 @@ button, .btn {
 	@media #{$s} {
 		margin: 20px 0;
 	}
-	
+
 	a {
 		color: #bbb;
 	}
@@ -416,7 +416,7 @@ button, .btn {
 
 .banner-horizontal {
 	display: none;
-	
+
 	img {
 		margin: 40px auto;
     display: block;
@@ -426,7 +426,7 @@ button, .btn {
 		display: block;
 
 		}
-	
+
 }
 
 .img-responsive {
@@ -440,6 +440,15 @@ button, .btn {
 	@media #{$s} {
 		display: none !important;
 	}
+}
+
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
 }
 
 @import 'menu';

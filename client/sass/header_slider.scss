@@ -4,11 +4,12 @@
 }
 
 .slider {
-  	 width: 100%;
+  	width: 100%;
     position: relative;
     transition: left 400ms ease;
 		overflow: hidden;
-
+    height: 100vh;
+    
 		@media #{$s} {
 			height: 200px !important;
 		}
@@ -22,7 +23,7 @@
 				height: 200px !important;
 			}
   	}
-		
+
 		&__slide {
    	 	width: 100%;
 			background: #274F5E;
@@ -67,7 +68,7 @@
 				@media #{$s} {
 					padding: 20px 0;
 				}
-				
+
 				h2 {
 					font-size: 2.5em;
 					font-weight: 600;
@@ -78,7 +79,7 @@
 					text-align: center;
 					color: #3c515f;
 					text-transform: uppercase;
-					
+
 					@media #{$s} {
 						font-size: 2em;
 					}
@@ -119,7 +120,7 @@
 
   }
 }
-  
+
   .slider__btns button {
 		position: absolute;
     top: 45%;
@@ -131,8 +132,8 @@
 		font-size: 42px;
 		color: #fff;
   }
-	
-  
+
+
   .slider__btns__prev {
   	position: absolute;
     left: 30px;
@@ -141,10 +142,10 @@
 			padding: 0;
 		}
   }
-  
+
   .slider__btns__next {
   	position: absolute;
-    right: 30px; 
+    right: 30px;
 		@media #{$s} {
 			right: 5px;
 			padding: 0;
