@@ -7,8 +7,7 @@ function bs_posts_sc($atts, $content = null) {
 
 	$query = new Wp_Query(array(
 		'post_type' => array('video','gallery','featured','post'),
-		'paged' => $page,
-		'posts_per_page' => 10,
+		'posts_per_page' => 6,
 		'post_status' => 'publish'
 	));
 
