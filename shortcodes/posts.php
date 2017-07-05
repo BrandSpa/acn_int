@@ -12,10 +12,10 @@ function bs_posts_sc($atts, $content = null) {
 	));
 
 	$posts = array_map(function($post) {
-			$post->post_image = str_replace('http:', '', get_post_meta($post->ID, 'image_square_key', true));
+			$images = !empty(get_post_meta($post->ID, 'image_square_key', true)) ? get_post_meta($post->ID, 'image_square_key', true) : '';
+ 			$post->post_image = str_replace('http:', '', $images);
 			$content = substr($post->post_content, 0, 250) ? substr($post->post_content, 0, 250) : $post->post_content;
-			$post->post_content = '';
-			$post->post_short = preg_replace('/\[(.*?)\]/', '', wp_strip_all_tags($content, 0, 250) );
+			$post->post_short = preg_replace('/\[(.*?)\]/', '', wp_strip_all_tags(substr($post->post_content, 0, 200)) );
 			$post->post_permalink = get_post_permalink($post->ID);
 			return $post;
 	}, $query->get_posts());
@@ -24,11 +24,13 @@ function bs_posts_sc($atts, $content = null) {
     'see_more' => gett('See more'),
     'url' => $at['url'],
     'read_more' => gett('Read more'),
-    'see_more_link' => gett('https://acninternational.org/news/')
+    'see_more_link' => gett('https://acninternational.org/news/'),
+		'posts' => $posts
 	];
 
   ob_start();
 ?>
+
 <?php if(show_posts()): ?>
 <div
 	class="bs-posts"
@@ -36,8 +38,8 @@ function bs_posts_sc($atts, $content = null) {
 >
 </div>
 <?php endif; ?>
-<?php
 
+<?php
   return ob_get_clean();
 }
 

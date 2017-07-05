@@ -10,15 +10,15 @@ class Posts extends React.Component {
   state = { posts: [], paged: 1, seeMore: true };
 
   componentWillMount() {
-    let data = qs.stringify({ action: "get_posts" });
-
-    request
-      .post(endpoint, data)
-      .then(({data}) => {
-        let posts = data ? data : [];
-        this.setState({ posts });
-      })
-      .catch(err => console.error(err));
+    // let data = qs.stringify({ action: "get_posts" });
+    //
+    // request
+    //   .post(endpoint, data)
+    //   .then(({data}) => {
+    //     let posts = data ? data : [];
+    //     this.setState({ posts });
+    //   })
+    //   .catch(err => console.error(err));
   }
 
   componentDidUpdate() {
@@ -31,7 +31,7 @@ class Posts extends React.Component {
   }
 
   initGrid = () => {
-    if (this.state.posts && this.state.posts.length > 0) {
+    if (this.props.posts && this.props.posts.length > 0) {
       let container = this.grid;
       var grid = new Minigrid({ container, item: ".grid-item" });
 
@@ -44,7 +44,7 @@ class Posts extends React.Component {
   };
 
   render() {
-    const { posts } = this.state;
+    const { posts } = this.props;
 
     const postMain = posts.map((post, i) => {
       if (i == 0) {
