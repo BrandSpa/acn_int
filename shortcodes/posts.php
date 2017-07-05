@@ -24,8 +24,7 @@ function bs_posts_sc($atts, $content = null) {
     'see_more' => gett('See more'),
     'url' => $at['url'],
     'read_more' => gett('Read more'),
-    'see_more_link' => gett('https://acninternational.org/news/'),
-		'posts' => $posts
+    'see_more_link' => gett('https://acninternational.org/news/')
 	];
 
   ob_start();
