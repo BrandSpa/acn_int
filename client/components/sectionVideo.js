@@ -27,7 +27,7 @@ class SectionVideo extends React.Component {
           style={linkStyle}
           onClick={this.showVideo}
         >
-          <img style={imageStyle} src={this.props.imgUrl} alt="" />
+          <img style={imageStyle} data-src={this.props.imgUrl} className="lazyload" />
         </a>
       </div>
     );

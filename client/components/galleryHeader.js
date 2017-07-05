@@ -110,12 +110,12 @@ class GalleryHeader extends React.Component {
         background: "rgba(255, 255, 255, .2)"
       }
     });
-    
-    const liStyle = css({ 
+
+    const liStyle = css({
       marginLeft: "5px",
       display: "none",
-      "@media(max-width: 767px)": { 
-        display: "inline-block" 
+      "@media(max-width: 767px)": {
+        display: "inline-block"
       }
     });
 
