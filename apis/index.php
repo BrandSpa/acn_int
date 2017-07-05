@@ -12,7 +12,7 @@ include_once 'posts.php';
 include_once 'cl.php';
 
 function responseJson($res = []) {
-  header('Content-type: application/json');  
+  header('Content-type: application/json');
   echo json_encode($res);
 }
 
@@ -28,7 +28,7 @@ add_action( 'wp_ajax_nopriv_update_geo', 'update_geo' );
 add_action( 'wp_ajax_update_geo', 'update_geo' );
 
 function update_geo() {
-  $res = geoip_db(); 
+  $res = geoip_db();
   responseJson($res);
   die();
 }
@@ -37,7 +37,7 @@ add_action( 'wp_ajax_nopriv_office_countries', 'office_countries' );
 add_action( 'wp_ajax_office_countries', 'office_countries' );
 
 function office_countries() {
-  $res = getOfficesCountries(); 
+  $res = getOfficesCountries();
   responseJson($res);
   die();
 }
@@ -82,7 +82,7 @@ add_action( 'wp_ajax_donate_redirect', 'donate_redirect' );
 
 function donate_redirect() {
   $country = getCountry();
-  
+
   if(in_array($country, getOfficesCountries())) {
     $res = get_option('donate_url_'. str_replace(' ', '_', $country));
   } else {
@@ -139,11 +139,11 @@ function stripe_charge() {
   if($data['donation_type'] == 'monthly') {
     $res = stripe_monthly($apiKey, $data);
   }
-  
+
   if($data['donation_type'] == 'once') {
     $res = stripe_once($apiKey, $data);
   }
-  
+
   responseJson($res);
   die();
 }
@@ -168,7 +168,7 @@ function convertloop_contact() {
   $lang = getCountryLang($data['country']);
   $data['add_tags'][] = $lang == 'es' ? 'SPANISH' : 'ENGLISH';
 
-  /** 
+  /**
   ** if is between office country get app id and api key office that come from:
   ** https://acninternational.org/wp-admin/admin.php?page=bs-offices
   **/
@@ -182,7 +182,7 @@ function convertloop_contact() {
   }
 
     $res = cl_create_person($appId, $apiKey, $data);
-    header('Content-type: application/json');  
+    header('Content-type: application/json');
     echo $res;
   die();
 }
@@ -202,7 +202,7 @@ function convertloop_event() {
     $apiKey = get_option('convertloop_api_default');
   }
 
-  header('Content-type: application/json');  
+  header('Content-type: application/json');
   echo cl_create_event($appId, $apiKey, $data);
   die();
 }
@@ -235,7 +235,7 @@ add_action( 'wp_ajax_countries', 'countries' );
 function countries() {
   $res = getCountries();
   header('Access-Control-Allow-Origin: *');
-  header('Content-type: application/json');  
+  header('Content-type: application/json');
   echo json_encode($res);
   die();
 }
@@ -245,7 +245,7 @@ add_action( 'wp_ajax_location', 'location' );
 
 function location() {
   $res = get_user_location();
-  header('Content-type: application/json');  
+  header('Content-type: application/json');
   echo json_encode($res);
   die();
 }
@@ -255,7 +255,7 @@ add_action( 'wp_ajax_user_location', 'user_location' );
 
 function user_location() {
   $res = get_user_location();
-  header('Content-type: application/json');  
+  header('Content-type: application/json');
   echo json_encode($res);
   die();
 }

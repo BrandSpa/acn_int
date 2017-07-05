@@ -4,7 +4,7 @@
   function bs_page_image_square_metabox() {
 
     $post_id = null;
-		if(isset($_GET['post'])) $post_id =  $_GET['post'] ? $_GET['post'] : null; 
+		if(isset($_GET['post'])) $post_id =  $_GET['post'] ? $_GET['post'] : null;
 		if(isset($_POST['post_ID']) && $post_id == null) $post_id = $_POST['post_ID'] ? $_POST['post_ID']: null;
 
     add_meta_box('page_image_square', 'Square Image', 'bs_page_image_square_cb', 'post', 'normal', 'high', null);
@@ -16,18 +16,18 @@
   add_action('add_meta_boxes', 'bs_page_image_square_metabox');
 
   function bs_page_image_square_cb($post) {
-    wp_nonce_field('bs_page_image_square_meta', 'bs_image_square_nonce'); 
+    wp_nonce_field('bs_page_image_square_meta', 'bs_image_square_nonce');
     $value = get_post_meta($post->ID, 'image_square_key', true);
 ?>
 
 <div>
 	<p>
 		<input
-			type="text" 
-			class="uploader" 
+			type="text"
+			class="uploader"
 			name="image_square_name"
-			placeholder="Image Square" 
-			value="<?php echo $value ?>" 
+			placeholder="Image Square"
+			value="<?php echo $value ?>"
 			style="height: 35px; width: 100%;"
 		/>
 	</p>
@@ -59,7 +59,7 @@ const section = () => {
 
 section();
 </script>
-<?php 
+<?php
 	} //end bs_page_image_square_cb
 
 
