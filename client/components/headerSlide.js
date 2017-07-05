@@ -24,7 +24,7 @@ class headerSlide extends React.Component {
       <div>
         { this.props.is_video ? <VideoModal ref={modal => this.modal = modal} url={this.props.url} /> : "" }
 
-        <div className="slider__slide" style={style} data-bgset={image}>
+        <div className="slider__slide lazyload" style={style} data-bgset={image}>
           <a href="#" className="slider__slide__link-zone" onClick={this.handleLink}></a>
             <a href={this.props.anchor} className="slider__slide__anchor">
               <svg width="50px" height="57px" viewBox="178 602 20 27" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +43,6 @@ class headerSlide extends React.Component {
                       <use id="Rectangle-Copy" stroke="#F1364E" mask="url(#mask-4)" strokeWidth="4" transform="translate(9.943348, 10.088390) rotate(-315.000000) translate(-9.943348, -10.088390) " xlinkHref="#path-3"></use>
                   </g>
               </svg>
-
             </a>
         </div>
       </div>
