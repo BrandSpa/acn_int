@@ -1,7 +1,7 @@
 	<?php require('templates/footer.php') ?>
   <a
     href="#"
-    id="return-to-top" 
+    id="return-to-top"
      style="display: none;color: #fff; text-align: center; padding-top: 10px; position: fixed; bottom: 40px; right: 40px; background: rgba(0, 0, 0, .5); width: 40px; height: 40px; border-radius: 40px"
   >
     <i class="ion-chevron-up"></i>
@@ -50,8 +50,8 @@
   bs.donate = '<?php echo gett('Donate') ?>';
 </script>
 
-<script src='<?php echo get_template_directory_uri() ?>/client/dist/vendor.aebf259c4a2c6937c4c6.js'></script>
-<script src='<?php echo get_template_directory_uri() ?>/client/dist/app.78ef1ef404c7ff8af8dd.js'></script>
+<script src='<?php echo get_template_directory_uri() ?>/client/dist/vendor.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/vendor.js') ?>'></script>
+<script src='<?php echo get_template_directory_uri() ?>/client/dist/app.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/app.js') ?>'></script>
 
 <!--/app theme-->
 
@@ -64,8 +64,8 @@
 
   ga('create', '<?php echo get_option('analytics_id') ?>', 'auto');
   ga('send', 'pageview');
-  ga('require', 'ecommerce');  
-  
+  ga('require', 'ecommerce');
+
   <?php if(isset($_GET['customer_id']) && isset($_GET['order_revenue'])): ?>
     ga('ecommerce:addTransaction', {
       id: "<?php echo $_GET['customer_id'] ?>",
@@ -75,7 +75,7 @@
 
     ga('ecommerce:send');
   <?php endif; ?>
-  
+
 </script>
 
 <!-- End Google Analytics -->

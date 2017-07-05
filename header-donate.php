@@ -8,7 +8,7 @@
   }
 
  ?>
- 
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -27,17 +27,17 @@
 
   <link rel="icon" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" sizes="32x32" />
   <link rel="icon" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" sizes="192x192" />
-  
+
   <link rel="apple-touch-icon-precomposed" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" />
 	<title>ACN - Aid to the Church in Need <?php echo wp_title(); ?></title>
 
   	<!--wordpress files-->
 	  <?php wp_head(); ?>
 		<!-- /wordpress files-->
-    
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/client/dist/app.96f96015a49a3a7eb2bcc3a6de75a478.css">
+
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/client/dist/app.css?v=<?php echo filemtime(get_template_directory() . '/client/dist/app.css') ?>">
 	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  
+
 	<script>
       function onLoad(cb) {
         if (window.addEventListener)
@@ -57,7 +57,7 @@
 		$('.nav li > a').css('color', ' #fff');
 		$('.nav').css({background: 'transparent'});
 	}
-	
+
 	changeColor();
 
 	function changeColorNormal() {
@@ -65,7 +65,7 @@
 		$('.nav img').css('filter', 'none');
 		$('.nav li > a').css('color', ' #3C515F');
 	}
-	
+
 	  window.addEventListener('scroll', function() {
     if(document.querySelector('.bs-donate-header').getBoundingClientRect().bottom < 0 ) {
 			changeColorNormal();
@@ -77,7 +77,7 @@
 		});
 })
   </script>
-  
+
   <!-- ConvertLoop -->
   <script>
     !function(t,e,n,s) { t.DPEventsFunction=s,t[s]=t[s] || function() { (t[s].q=t[s].q||[]).push(arguments) }; var c=e.createElement("script"),o=e.getElementsByTagName("script")[0]; c.async=1,c.src=n,o.parentNode.insertBefore(c,o); }(window, document, "https://www.convertloop.co/v1/loop.min.js", "_dp");
@@ -87,7 +87,7 @@
   </script>
   <!-- End ConvertLoop -->
 
-      
+
 </head>
 <body>
 <?php if(get_option('gta_id')): ?>
@@ -109,4 +109,3 @@
       	<img src='<?php echo bs_logo_url(); ?>'  alt="ACN logo" class="img-responsive" width="170"  />
      </a>
 </div>
-

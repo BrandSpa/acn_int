@@ -6,10 +6,9 @@ const WebpackCleanupPlugin =  require('webpack-cleanup-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css",
+    filename: "[name].css",
     disable: false
 });
-
 
 const changeFilesNames = function() {
   this.plugin("done", function(statsData) {
@@ -66,7 +65,7 @@ module.exports = {
   },
   output: {
   	path: Path.join(__dirname, '/dist/'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].js'
   },
   module: {
   	loaders: [
@@ -91,13 +90,9 @@ module.exports = {
 	plugins: [
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
-        filename: 'vendor.[chunkhash].js',
+        filename: 'vendor.js',
         minChunks: 2
       }),
-      changeFilesNames,
-      extractSass,
-      new WebpackCleanupPlugin({
-        exclude: ["admin.js"],
-      })
+      extractSass
     ]
 };
