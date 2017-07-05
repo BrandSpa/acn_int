@@ -8,7 +8,7 @@ function bs_posts_list_sc($atts, $content = null) {
 		'next' => 'next',
 		'prev' => 'prev'
   ];
-	
+
 	$pages = 0;
 
 	if(function_exists('pll_count_posts') && function_exists('pll_current_language')){
@@ -28,7 +28,7 @@ function bs_posts_list_sc($atts, $content = null) {
 		'posts_per_page' => 10,
 		'post_status' => 'publish'
   ));
-	
+
 	$recent_posts = $query->get_posts();
 
   ob_start();
@@ -40,14 +40,14 @@ function bs_posts_list_sc($atts, $content = null) {
 	<h3><?php echo gett('Latest news'); ?></h3>
 <?php  foreach($recent_posts as $post): ?>
 	<?php $counter++; ?>
-	
+
 		<?php if($counter == 1): ?>
 			<div class="bs-posts-list__main">
 			<?php if(!empty(get_post_meta($post->ID, 'image_square_key', true))): ?>
 				<a href="<?php echo get_permalink($post->ID) ?>">
-					<div 
-						class="bs-posts-list__main__img" 
-						style="background-image:url(<?php echo str_replace('http:', '', get_post_meta($post->ID, 'image_square_key', true, true)) ?>);background-color: #E5A612;">					
+					<div
+						class="bs-posts-list__main__img"
+						style="background-image:url(<?php echo str_replace('http:', '', get_post_meta($post->ID, 'image_square_key', true)) ?>);background-color: #E5A612;">
 					</div>
 				</a>
 				<?php else: ?>
@@ -63,12 +63,12 @@ function bs_posts_list_sc($atts, $content = null) {
 
 			<h3>	<?php echo  gett('All the latest'); ?> </h3>
 		<?php else: ?>
-	
+
 			<div class="bs-posts-list__item">
 				<?php if(!empty(get_post_meta($post->ID, 'image_square_key', true))): ?>
 					<a href="<?php echo get_permalink($post->ID) ?>">
 					<div
-						class="bs-posts-list__item__img" 
+						class="bs-posts-list__item__img"
 						style="background-image: url(<?php echo str_replace('http:', '', get_post_meta($post->ID, 'image_square_key', true, true)) ?>);">
 					</div>
 					</a>
@@ -118,17 +118,19 @@ function redirectPage(type) {
 
 	if(type == 'next') page = page + 1;
 	if(type == 'prev') page = page > 0 ? page - 1 : 0;
-	window.location = window.location.origin + '' + window.location.pathname + '?posts=' + page; 
+	window.location = window.location.origin + '' + window.location.pathname + '?posts=' + page;
 };
 
-	document.querySelector('.bs-posts-list__pagination__prev').addEventListener('click', function() {
+	document.querySelector('.bs-posts-list__pagination__prev')
+	.addEventListener('click', function() {
 		redirectPage('prev');
 	});
 
-	document.querySelector('.bs-posts-list__pagination__next').addEventListener('click', function() {
+	document.querySelector('.bs-posts-list__pagination__next')
+	.addEventListener('click', function() {
 		redirectPage('next');
 	});
-	
+
 
 	var paged = parseInt('<?php echo $page ?>');
 	var pages = parseInt('<?php echo $pages ?>');
@@ -146,13 +148,13 @@ function redirectPage(type) {
 		nums = nums.concat( [paged - 2] );
 		nums = nums.concat( [paged - 1] );
 	}
-	
+
 	if ( ( paged + 2 ) <= pages ) {
 		nums = nums.concat( paged + 1 );
 		nums = nums.concat( paged + 2 );
-		
+
 	}
-	
+
 
 	for(i = 0; i < nums.length; i++) {
 		var el = document.createElement('a');
@@ -213,7 +215,6 @@ add_action( 'vc_before_init', 'bs_posts_list_vc' );
         "base" => "bs_posts_list",
         "category" =>  "BS",
         "params" => $params
-      ) 
+      )
     );
   }
-

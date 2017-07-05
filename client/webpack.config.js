@@ -22,7 +22,7 @@ const changeFilesNames = function() {
 
       const footerDonateFile = Path.join(dir, "footer-donate.php").replace('client/', '');
       const headerDonateFile = Path.join(dir, "header-donate.php").replace('client/', '');
-      
+
       const headerFullpageFile = Path.join(dir, "header-fullpage.php").replace('client/', '');
       const footerFullpageFile = Path.join(dir, "footer-fullpage.php").replace('client/', '');
 
@@ -33,7 +33,7 @@ const changeFilesNames = function() {
       const files = [
         footerFile,
         headerFile,
-        footerDonateFile, 
+        footerDonateFile,
         headerDonateFile,
         footerFullpageFile,
         headerFullpageFile
@@ -55,11 +55,11 @@ module.exports = {
   entry: {
     vendor: [
       'babel-polyfill',
-      'react', 
-      'react-dom', 
-      'axios', 
+      'react',
+      'react-dom',
+      'axios',
       'qs',
-      'webfontloader', 
+      'webfontloader',
       'react-multiple-render'
     ],
   	app: './app.js'
@@ -70,10 +70,10 @@ module.exports = {
   },
   module: {
   	loaders: [
-			{ 
-				test: /\.js$/, 
-				exclude: /node_modules/, 
-				loader: 'babel-loader?cacheDirectory=true' 
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader?cacheDirectory=true'
 			},
        {
         test: /\.scss$/,
@@ -91,7 +91,7 @@ module.exports = {
 	plugins: [
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
-        filename: 'vendor.[chunkhash].js', 
+        filename: 'vendor.[chunkhash].js',
         minChunks: 2
       }),
       changeFilesNames,
