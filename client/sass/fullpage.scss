@@ -434,6 +434,9 @@ button {
 
 .active .animate-text {
     animation: text-down-fade 2.5s;
+    &--delay-3 {
+      animation-delay: 3s;
+    }
 }
 
 .embed-container {
