@@ -29,7 +29,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 					</div>
 				</div>
 
-				<button class="section__open section__open-post" > <i class="ion-android-open"></i> </button>
+				<button class="section__open section__open-post" > <i class="ion-close-round"></i> </button>
 			</div>
 
 			<div class="section__post" >

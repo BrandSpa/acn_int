@@ -687,8 +687,7 @@ li {
     max-width: 100%; }
   .section__post--open {
     left: 0;
-    overflow-x: hidden;
-    overflow-y: scroll; }
+    overflow: auto; }
 
 .section__video {
   position: absolute;
