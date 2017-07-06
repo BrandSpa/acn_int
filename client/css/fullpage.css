@@ -767,14 +767,14 @@ li {
   right: 0;
   z-index: 2;
   font-size: 25px;
-  -webkit-transition: all .7s;
-  transition: all .7s; }
+  -webkit-transition: background .7s, -webkit-transform .5s;
+  transition: background .7s, -webkit-transform .5s;
+  transition: background .7s, transform .5s;
+  transition: background .7s, transform .5s, -webkit-transform .5s; }
   .section__open:hover {
     background: #b30000;
-    font-size: 27px;
-    width: 52px;
-    height: 52px;
-    border-radius: 52px; }
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
 
 button {
   border: none;

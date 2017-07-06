@@ -266,14 +266,11 @@ li {
     right: 0;
     z-index: 2;
     font-size: 25px;
-    transition: all .7s;
-    
+    transition: background .7s, transform .5s;
+
     &:hover {
       background: darken(red, 15%);
-      font-size: 27px;
-      width: 52px;
-      height: 52px;
-      border-radius: 52px;
+      transform: scale(1.1);
     }
 }
 
