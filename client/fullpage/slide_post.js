@@ -25,6 +25,7 @@ function slidePost($fp) {
 
   $(function() {
     $(document).on("click", ".section__open-post", handleTogglePost);
+    $(document).on("click", ".section__close-post", handleTogglePost);
   })
 
 }
