@@ -11,10 +11,11 @@
     <!--wordpress files-->
 	  <?php wp_head(); ?>
 		<!-- /wordpress files-->
-  
+
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/client/css/fullpage.css?v=<?php echo filemtime(get_template_directory() . '/client/css/fullpage.css') ?>">
 	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
       function onLoad(cb) {
         if (window.addEventListener)
