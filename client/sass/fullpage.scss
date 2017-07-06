@@ -438,9 +438,9 @@ button {
 
 .active .animate-text {
     animation: text-down-fade 2.5s;
-    &--delay-3 {
-      animation-delay: 3s;
-      animation-fill-mode: forwards;
+    opacity: 1;
+    &--delay-1 {
+      animation-delay: 1s;
     }
 }
 

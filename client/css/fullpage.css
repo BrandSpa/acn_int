@@ -904,12 +904,11 @@ button {
 
 .active .animate-text {
   -webkit-animation: text-down-fade 2.5s;
-  animation: text-down-fade 2.5s; }
-  .active .animate-text--delay-3 {
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; }
+  animation: text-down-fade 2.5s;
+  opacity: 1; }
+  .active .animate-text--delay-1 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s; }
 
 .embed-container {
   position: relative;
