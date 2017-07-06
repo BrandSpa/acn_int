@@ -147,7 +147,7 @@ li {
     position: fixed;
     top: 40px;
     left: 40px;
-    z-index: 999;
+    z-index: 10;
 
     img {
         filter: grayscale(100%) invert(100%);
@@ -156,7 +156,7 @@ li {
 
 .section__post {
     position: absolute;
-    z-index: 4;
+    z-index: 11;
     top: 0;
     left: -100%;
     transition: left 500ms;
@@ -440,7 +440,7 @@ button {
     position: fixed;
     bottom: 40px;
     left: 40px;
-    z-index: 99;
+    z-index: 10;
     cursor: pointer;
 
     &__story {
@@ -530,8 +530,9 @@ button {
 }
 
 .section__close-post {
-  z-index: 5;
+  z-index: 12;
   display: none;
+
   @media #{$s} {
     right: 50px;
     left: auto;
