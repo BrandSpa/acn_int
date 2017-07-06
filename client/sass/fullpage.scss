@@ -268,7 +268,8 @@ li {
     font-size: 25px;
     transition: all .7s;
     &:hover {
-      background: darken(red, 20%);
+      background: darken(red, 15%);
+      font-size: 27px;
     }
 }
 
