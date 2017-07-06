@@ -432,6 +432,10 @@ button {
     font-size: 25px;
 }
 
+.animate-text {
+  opacity: 0;
+}
+
 .active .animate-text {
     animation: text-down-fade 2.5s;
     &--delay-3 {
