@@ -25,7 +25,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 				<div class="section--center">
 					<div class="padding-sides">
 						<h2 class="animate-text" style="text-align: center"><?php echo $at['title'] ?></h2>
-						<h3 class="animate-text animate-text--delay-3" style="text-align: center"><?php echo $at['subtitle'] ?></h3>
+						<h3 class="animate-text animate-text--delay-1" style="text-align: center"><?php echo $at['subtitle'] ?></h3>
 					</div>
 				</div>
 
