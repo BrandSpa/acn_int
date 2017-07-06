@@ -669,6 +669,12 @@ li {
     -webkit-filter: grayscale(100%) invert(100%);
     filter: grayscale(100%) invert(100%); }
 
+.scroll-stoped .fullpage-logo {
+  display: none; }
+
+.scroll-stoped .indicator {
+  display: none; }
+
 .section__post {
   position: absolute;
   z-index: 11;
