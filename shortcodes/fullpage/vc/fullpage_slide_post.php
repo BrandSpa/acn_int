@@ -20,14 +20,19 @@
         "heading" => "Story num",
         "type" => "textfield",
         "param_name" => "story_num"
-      ], 
+      ],
       [
         "heading" => "Slide num",
         "type" => "textfield",
         "param_name" => "index_num"
-      ], 
+      ],
 			[
         "heading" => "title",
+				"type" => "textarea",
+				"param_name" => "title"
+			],
+      [
+        "heading" => "subtitle",
 				"type" => "textarea",
 				"param_name" => "title"
 			],
@@ -45,7 +50,7 @@
         "category" =>  "ACN",
 				"content_element" => true,
         "params" => $params
-      ) 
+      )
     );
 
 		if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
@@ -54,4 +59,3 @@
   }
 
 add_action( 'vc_before_init', 'acn_fullpage_slide_post_vc' );
-
