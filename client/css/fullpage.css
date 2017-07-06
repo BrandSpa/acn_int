@@ -588,25 +588,25 @@ h6 small {
 h1 {
   font-size: 6.66667rem;
   font-weight: 300;
-  line-height: 125px;
+  line-height: 8.33333rem;
   letter-spacing: -1.14px; }
 
 h2 {
   font-size: 4rem;
   font-weight: 300;
-  line-height: 90px;
+  line-height: 6rem;
   letter-spacing: -0.68px; }
 
 h3 {
   font-size: 2.33333rem;
   font-weight: 300;
-  line-height: 40px;
+  line-height: 2.66667rem;
   letter-spacing: -0.4px; }
 
 h4 {
   font-size: 1.6rem;
   font-weight: 600;
-  line-height: 30px; }
+  line-height: 2rem; }
 
 h5 {
   font-size: 1.4rem;
@@ -617,13 +617,13 @@ h5 {
 h6 {
   font-size: 1.06667rem;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.6rem;
   letter-spacing: 20px; }
 
 p {
   font-size: 1.53333rem;
   font-weight: 300;
-  line-height: 36px;
+  line-height: 2.4rem;
   letter-spacing: 0;
   color: #2B3740; }
 
