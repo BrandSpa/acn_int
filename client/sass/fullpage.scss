@@ -267,9 +267,13 @@ li {
     z-index: 2;
     font-size: 25px;
     transition: all .7s;
+    
     &:hover {
       background: darken(red, 15%);
       font-size: 27px;
+      width: 52px;
+      height: 52px;
+      border-radius: 52px;
     }
 }
 

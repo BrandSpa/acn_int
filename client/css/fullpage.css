@@ -771,7 +771,10 @@ li {
   transition: all .7s; }
   .section__open:hover {
     background: #b30000;
-    font-size: 27px; }
+    font-size: 27px;
+    width: 52px;
+    height: 52px;
+    border-radius: 52px; }
 
 button {
   border: none;
