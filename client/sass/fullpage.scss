@@ -18,6 +18,9 @@ html {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
     font-size: 14px;
+    @media #{$s} {
+      font-size: 10px;
+    }
     line-height: 20px;
     tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
@@ -53,48 +56,48 @@ h6 small {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 100 / 15 * 1rem;
   font-weight: 300;
   line-height: 125px;
   letter-spacing: -1.14px;
 }
 
 h2 {
-  font-size: 60px;
+  font-size: 60 / 15 * 1rem;
   font-weight: 300;
   line-height: 90px;
   letter-spacing: -0.68px;
 }
 
 h3 {
-  font-size: 35px;
+  font-size: 35 / 15 * 1rem;
   font-weight: 300;
   line-height: 40px;
   letter-spacing: -0.4px;
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 24 / 15 * 1rem;
   font-weight: 600;
   line-height: 30px;
 }
 
 h5 {
-    font-size: 21px;
+    font-size: 21 / 15 * 1rem;
     font-weight: 400;
     line-height: 1;
     letter-spacing: -0.24px;
 }
 
 h6 {
-    font-size: 16px;
+    font-size: 16 / 15 * 1rem;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: 20px;
 }
 
 p {
-    font-size: 23px;
+    font-size: 23 / 15 * 1rem;
     font-weight: 300;
     line-height: 36px;
     letter-spacing: 0;
