@@ -34,7 +34,7 @@
       [
         "heading" => "subtitle",
 				"type" => "textarea",
-				"param_name" => "title"
+				"param_name" => "subtitle"
 			],
 			[
         "heading" => "Post Content",
