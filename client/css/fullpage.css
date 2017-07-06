@@ -766,7 +766,11 @@ li {
   left: 0;
   right: 0;
   z-index: 2;
-  font-size: 25px; }
+  font-size: 25px;
+  -webkit-transition: all .7s;
+  transition: all .7s; }
+  .section__open:hover {
+    background: #990000; }
 
 button {
   border: none;

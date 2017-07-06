@@ -266,6 +266,10 @@ li {
     right: 0;
     z-index: 2;
     font-size: 25px;
+    transition: all .7s;
+    &:hover {
+      background: darken(red, 20%);
+    }
 }
 
 button {
