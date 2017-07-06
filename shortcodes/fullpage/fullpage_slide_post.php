@@ -33,8 +33,10 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 			</div>
 
 			<div class="section__post" >
+				<div class="section__post__content">
 				<?php echo do_shortcode($content) ?>
 				<button class="section__open section__close-post" > <i class="ion-close-round"></i> </button>
+				</div>
 			</div>
 
 			<div class="section__bg-container">
