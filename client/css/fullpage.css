@@ -1051,6 +1051,16 @@ button {
   justify-content: center;
   height: 100%; }
 
+.section__close-post {
+  z-index: 5;
+  display: none; }
+  @media (max-width: 767px) {
+    .section__close-post {
+      right: 50px;
+      left: auto; } }
+  .section__close-post--open {
+    display: block; }
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js

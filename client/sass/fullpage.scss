@@ -529,7 +529,15 @@ button {
 }
 
 .section__close-post {
-
+  z-index: 5;
+  display: none;
+  @media #{$s} {
+    right: 50px;
+    left: auto;
+  }
+  &--open {
+    display: block;
+  }
 }
 
 /*!
