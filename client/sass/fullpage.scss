@@ -166,11 +166,8 @@ li {
     position: absolute;
     z-index: 11;
     top: 0;
-    left: -100%;
-    transition: left 500ms;
-    overflow: auto;
-    width: 50%;
-    background: #fff;
+    left: 0;
+    width: 100%;
     height: 100%;
 
     @media #{$s} {
@@ -183,18 +180,24 @@ li {
     }
 
     &--open {
-        left: 0;
-        overflow: auto;
+
+        &__content {
+          left: 0;
+          overflow-y: auto;
+          overflow-x: hidden;
+        }
     }
 
     &__content {
       position: relative;
       top: 0;
-      left: 0;
+      left: -100%;
       right: 0;
       bottom: 0;
       width: 100%;
       height: 100%;
+      will-change: left;
+      transition: left 500ms;
     }
 }
 
