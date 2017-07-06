@@ -1051,10 +1051,6 @@ button {
   justify-content: center;
   height: 100%; }
 
-.section__close-post {
-  left: auto;
-  right: -25px; }
-
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js

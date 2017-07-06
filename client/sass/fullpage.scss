@@ -164,12 +164,15 @@ li {
     width: 50%;
     background: #fff;
     height: 100%;
+
     @media #{$s} {
         width: 80%;
     }
+
     img {
         max-width: 100%;
     }
+
     &--open {
         left: 0;
         overflow: auto;
@@ -526,8 +529,6 @@ button {
 }
 
 .section__close-post {
-  left: auto;
-  right: -25px;
 
 }
 
