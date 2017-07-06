@@ -6,15 +6,15 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 		"bg_img_mobile" => "",
 		"bg_color" => "#fff",
 		"video_url" => "",
-		"uniq_name" => "slide-" . uniqid() . rand(0, 100) 
+		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
-	
-	$bgUrl = wp_get_attachment_url( $at['bg_img'] ); 
+
+	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
 	ob_start();
 	?>
 
-		<div 
-			class="section section--<?php echo $at['uniq_name'] ?>" 
+		<div
+			class="section section--<?php echo $at['uniq_name'] ?>"
 			data-anchor="<?php echo $at['uniq_name'] ?>"
 			data-story="2"
 			data-index="4"
@@ -39,7 +39,7 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 			</div>
 
 		</div>
-		
+
 	<?php
 	return ob_get_clean();
 }
