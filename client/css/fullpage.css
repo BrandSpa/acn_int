@@ -903,12 +903,9 @@ button {
   .section__down i:before {
     -webkit-transition: all .7s;
     transition: all .7s; }
-  .section__down:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
-    .section__down:hover i:before {
-      -webkit-transform: translateY(5px);
-      transform: translateY(5px); }
+  .section__down:hover i:before {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
 
 .animate-text {
   opacity: 0; }
