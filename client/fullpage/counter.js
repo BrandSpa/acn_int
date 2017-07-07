@@ -10,6 +10,8 @@ export default function counter(time = 500, delay = 10) {
     nums.push(num / total * i);
   }
 
+  $el.text(0);
+
   function updateNum() {
     let currentNum = nums.shift();
 
