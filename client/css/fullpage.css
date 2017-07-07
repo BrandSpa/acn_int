@@ -1020,8 +1020,11 @@ button {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    opacity: 0;
-    text-align: center; }
+    opacity: 0; }
+    .intro__section__container {
+      padding: 0 100px; }
+      .intro__section__container h3 {
+        text-align: center; }
     .intro__section--duration-1 {
       -webkit-animation-duration: 1s;
       animation-duration: 1s; }

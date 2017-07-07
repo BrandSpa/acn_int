@@ -549,8 +549,14 @@ button {
         align-items: center;
         justify-content: center;
         opacity: 0;
-        text-align: center;
 
+        &__container {
+          padding: 0 100px;
+          
+          h3 {
+            text-align: center;
+          }
+        }
         &--duration {
             @for $i from 1 through 12 {
                 &-#{$i} {
