@@ -35,7 +35,7 @@ function acn_fullpage_vc() {
         'value' => '1'
       ]
     ];
-    
+
     $params = [
       [
         'type' => 'textfield',
@@ -48,14 +48,20 @@ function acn_fullpage_vc() {
         'param_name' => 'links',
         'heading' => 'Menu links',
         'value' => '',
-        'params' =>  $links_subparams 
+        'params' =>  $links_subparams
       ],
       [
         'type' => 'param_group',
         'param_name' => 'intro',
         'heading' => 'Intro',
         'value' => '',
-        'params' =>  $intro_subparams 
+        'params' =>  $intro_subparams
+      ],
+      [
+        'type' => 'checkbox',
+        'heading' => 'Show Intro',
+        'param_name' => 'show_intro',
+        'value' => false
       ]
     ];
 
@@ -69,7 +75,7 @@ function acn_fullpage_vc() {
 				"is_container" => true,
         "params" => $params,
 				"js_view" => 'VcColumnView'
-      ) 
+      )
     );
 		if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
     	class WPBakeryShortCode_acn_fullpage extends WPBakeryShortCodesContainer {}

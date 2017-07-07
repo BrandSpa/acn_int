@@ -5,6 +5,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		"unique_name" => "fullpage",
 		"links" => "",
 		"intro" => "",
+		"show_intro" => false
 	], $atts);
 
 	$links = empty(vc_param_group_parse_atts($at['links'])) ? [] : vc_param_group_parse_atts($at['links']);
@@ -35,26 +36,26 @@ function acn_fullpage_sc( $atts, $content ) {
 			<li><a href="<?php echo $link['link'] + 1 ?>"><span class="num"><?php echo $ind ?></span> <?php echo  $link['title'] ?></a></li>
 		<?php endforeach; ?>
 		</ul>
-		
+
 		<button class="fullpage-nav__close"><i class="ion-close-round"></i></button>
 
 		<div class="fullpage-nav__info">
 			<ul>
-				<li><a href="#">Privacidad</a></li>	
-				<li><a href="#">Condiciones</a></li>	
-				<li><a href="#">Español</a></li>	
-			</ul>	
+				<li><a href="#">Privacidad</a></li>
+				<li><a href="#">Condiciones</a></li>
+				<li><a href="#">Español</a></li>
+			</ul>
 		</div>
 	</div>
 
-	<!--<div class="intro">
+	<div class="intro">
 
 		<?php foreach($intro as $i => $item): ?>
-		<div 
+		<div
 			class="
-				intro__section 
-				intro--fade-in-out 
-				intro__section--duration-<?php echo $item['duration'] ?> 
+				intro__section
+				intro--fade-in-out
+				intro__section--duration-<?php echo $item['duration'] ?>
 				intro__section--delay-<?php echo $item['delay'] ?>
 			">
 			<div class="intro__section__container">
@@ -62,13 +63,13 @@ function acn_fullpage_sc( $atts, $content ) {
 			</div>
 		</div>
 		<?php endforeach; ?>
-	
-	</div>-->
+
+	</div>
 
 	<script>
-		
+
 		if(window.localStorage.getItem('intro') !== true) {
-			setTimeout(function introDelay() { 
+			setTimeout(function introDelay() {
 				$('.intro').addClass('intro--close');
 				window.localStorage.setItem('intro', true);
 			}, <?php echo $introDelay ?>);
