@@ -26,7 +26,7 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 	</div>
 
 			<div class="fp-bg section__bg-container">
-				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"></div> </div>
+				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrlMobile ?> [(max-width: 767px)] | <?php echo $bgUrl ?>"></div> </div>
 			</div>
 	<?php
 	return ob_get_clean();

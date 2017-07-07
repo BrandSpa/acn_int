@@ -9,19 +9,19 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 		"bg_color" => "#000",
 		"bg-animation" => "bg-left",
 		"overlay-animation" => "bg-left",
-		"uniq_name" => "slide-" . uniqid() . rand(0, 100) 
+		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
-	
-	$bgUrl = wp_get_attachment_url( $at['bg_img'] ); 
-	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] ); 
-	$overlayUrl = wp_get_attachment_url( $at['overlay_img'] ); 
-	$overlayUrlMobile = wp_get_attachment_url( $at['overlay_img_mobile'] ); 
+
+	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
+	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] );
+	$overlayUrl = wp_get_attachment_url( $at['overlay_img'] );
+	$overlayUrlMobile = wp_get_attachment_url( $at['overlay_img_mobile'] );
 
 	ob_start();
 
 	?>
-	
-	<div 
+
+	<div
 		class="section section--<?php echo $at['uniq_name'] ?>"
 		data-anchor="<?php echo $at['uniq_name'] ?>"
 		data-story="4"
@@ -59,19 +59,19 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	<div class="section__layers">
 		<div
 				class="layer-overlay-animation section__layers__layer lazyload"
-				data-bgset="<?php echo $overlayUrl ?> 1200w, <?php echo $overlayUrlMobile ?> 600w"
+				data-bgset="<?php echo $overlayUrlMobile ?> [(max-width: 767px)] | <?php echo $overlayUrl ?>"
 				style=" z-index: 2"
 		>
 		</div>
 		<div
 				class="layer-bg-animation section__layers__layer lazyload"
-				data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile ?> 600w"
+				data-bgset=" <?php echo $bgUrlMobile ?> [(max-width: 767px)] | <?php echo $bgUrl ?>"
 				style=" z-index: 1"
 		>
 		</div>
 
 	</div>
-	
+
 </div>
 	<?php
 	return ob_get_clean();

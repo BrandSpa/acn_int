@@ -39,7 +39,7 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 			<button class="section__down" ><i class="ion-chevron-down"></i></button>
 
 			<div class="section__bg-container">
-				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile?> 600ws"></div>
+				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrlMobile ?> [(max-width: 767px)] | <?php echo $bgUrl ?>"></div>
 			</div>
 
 		</div>
