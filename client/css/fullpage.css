@@ -922,9 +922,12 @@ button {
   font-size: 25px;
   -webkit-transition: all .7s;
   transition: all .7s; }
+  .section__down i:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); }
   .section__down:hover i:before {
-    -webkit-animation: animate-arrow .7s;
-    animation: animate-arrow .7s; }
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px); }
 
 .animate-text {
   opacity: 0; }
