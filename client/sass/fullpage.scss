@@ -415,6 +415,20 @@ button {
     }
 }
 
+@keyframes animate-arrow {
+  0% {
+    transform: translateY(5px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
+
 .section__down {
     background: transparent;
     border: 2px solid #fff;
@@ -431,12 +445,9 @@ button {
     z-index: 2;
     font-size: 25px;
     transition: all .7s;
-    i:before {
-      transition: all .7s;
-    }
     &:hover {
       i:before {
-        transform: translateY(5px);
+        animation: animate-arrow .7s;
       }
     }
 }
