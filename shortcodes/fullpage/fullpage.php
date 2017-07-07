@@ -68,7 +68,7 @@ function acn_fullpage_sc( $atts, $content ) {
 <?php endif; ?>
 	<script>
 		console.log(window.localStorage.getItem('intro'));
-		if(window.localStorage.getItem('intro') !=== 'true') {
+		if(window.localStorage.getItem('intro') !== 'true') {
 			setTimeout(function introDelay() {
 				$('.intro').addClass('intro--close');
 				window.localStorage.setItem('intro', true);
