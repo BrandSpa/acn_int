@@ -27,7 +27,7 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 
 			<div class="section__video" >
 
-				<button class="section__video__close section__open-video">
+				<button class="section__video__close section__open-video" style="bottom: 120px">
 					<i class="ion-close-round"></i>
 				</button>
 
