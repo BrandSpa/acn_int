@@ -7,7 +7,8 @@ export default function counter(time = 500, delay = 10) {
   num = parseInt(num);
 
   for (var i = 0; i <= total; i++) {
-    nums.push(num / total * i);
+    let n = parseInt(num / total * i);
+    nums.push(n);
   }
 
   $el.text(0);
