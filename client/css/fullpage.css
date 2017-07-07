@@ -897,7 +897,15 @@ button {
   left: 0;
   right: 0;
   z-index: 2;
-  font-size: 25px; }
+  font-size: 25px;
+  -webkit-transition: all .7s;
+  transition: all .7s; }
+  .section__down:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+    .section__down:hover i {
+      -webkit-transform: translateY("5px");
+      transform: translateY("5px"); }
 
 .animate-text {
   opacity: 0; }

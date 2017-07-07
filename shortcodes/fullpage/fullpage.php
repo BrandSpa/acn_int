@@ -50,7 +50,7 @@ function acn_fullpage_sc( $atts, $content ) {
 <?php if($at['show_intro']): ?>
 	<div class="intro">
 
-		<?php foreach($intro as $i => $item): ?>
+	<?php foreach($intro as $i => $item): ?>
 		<div
 			class="
 				intro__section

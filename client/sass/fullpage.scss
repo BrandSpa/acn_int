@@ -430,6 +430,13 @@ button {
     right: 0;
     z-index: 2;
     font-size: 25px;
+    transition: all .7s;
+    &:hover {
+      transform: scale(1.1);
+      i {
+        transform: translateY('5px');
+      }
+    }
 }
 
 .animate-text {
