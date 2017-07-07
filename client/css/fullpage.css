@@ -923,8 +923,9 @@ button {
   -webkit-transition: all .7s;
   transition: all .7s; }
   .section__down i:before {
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
+    will-change: transform;
+    -webkit-transition: tranform .7s;
+    transition: tranform .7s; }
   .section__down:hover i:before {
     -webkit-transform: translateY(5px);
     transform: translateY(5px); }

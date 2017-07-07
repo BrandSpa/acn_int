@@ -447,7 +447,8 @@ button {
     transition: all .7s;
 
     i:before {
-      transform: translateY(0);
+      will-change: transform;
+      transition: tranform .7s;
     }
 
     &:hover {
