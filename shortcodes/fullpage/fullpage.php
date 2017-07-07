@@ -59,7 +59,7 @@ function acn_fullpage_sc( $atts, $content ) {
 				intro__section--delay-<?php echo $item['delay'] ?>
 			">
 			<div class="intro__section__container">
-				<h1><?php echo $item['title'] ?></h1>
+				<h2><?php echo $item['title'] ?></h2>
 			</div>
 		</div>
 		<?php endforeach; ?>
@@ -67,7 +67,7 @@ function acn_fullpage_sc( $atts, $content ) {
 	</div>
 <?php endif; ?>
 	<script>
-		console.log(window.localStorage.getItem('intro'));
+
 		if(window.localStorage.getItem('intro') !== 'true') {
 			setTimeout(function introDelay() {
 				$('.intro').addClass('intro--close');
