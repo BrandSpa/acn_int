@@ -59,7 +59,7 @@ function acn_fullpage_sc( $atts, $content ) {
 				intro__section--delay-<?php echo $item['delay'] ?>
 			">
 			<div class="intro__section__container">
-				<h2><?php echo $item['title'] ?></h2>
+				<h3><?php echo $item['title'] ?></h3>
 			</div>
 		</div>
 		<?php endforeach; ?>
