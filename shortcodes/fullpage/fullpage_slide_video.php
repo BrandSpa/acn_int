@@ -22,7 +22,7 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>
-				<button class="section__open section__open-video" style="bottom: 120px"><i class="ion-social-youtube"></i></button>
+				<button class="section__open section__open-video"><i class="ion-social-youtube"></i></button>
 			</div>
 
 			<div class="section__video" >
@@ -36,7 +36,6 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 				</div>
 			</div>
 
-			<button class="section__down" ><i class="ion-chevron-down"></i></button>
 
 			<div class="section__bg-container">
 				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrlMobile ?> [(max-width: 767px)] | <?php echo $bgUrl ?>"></div>
