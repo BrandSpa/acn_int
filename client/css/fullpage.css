@@ -924,8 +924,10 @@ button {
   transition: all .7s; }
   .section__down i:before {
     will-change: transform;
-    -webkit-transition: tranform .7s;
-    transition: tranform .7s; }
+    -webkit-transition: -webkit-transform .7s;
+    transition: -webkit-transform .7s;
+    transition: transform .7s;
+    transition: transform .7s, -webkit-transform .7s; }
   .section__down:hover i:before {
     -webkit-transform: translateY(5px);
     transform: translateY(5px); }
