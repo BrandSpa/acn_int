@@ -431,9 +431,12 @@ button {
     z-index: 2;
     font-size: 25px;
     transition: all .7s;
+    i:before {
+      transition: all .7s;
+    }
     &:hover {
       transform: scale(1.1);
-      i {
+      i:before {
         transform: translateY(5px);
       }
     }
