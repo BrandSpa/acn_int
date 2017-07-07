@@ -73,6 +73,8 @@ function acn_fullpage_sc( $atts, $content ) {
 				$('.intro').addClass('intro--close');
 				window.localStorage.setItem('intro', true);
 			}, <?php echo $introDelay ?>);
+		} else {
+			$('.intro').css({display: 'none'});
 		}
 	</script>
 
