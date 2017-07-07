@@ -904,8 +904,8 @@ button {
     -webkit-transform: scale(1.1);
     transform: scale(1.1); }
     .section__down:hover i {
-      -webkit-transform: translateY("5px");
-      transform: translateY("5px"); }
+      -webkit-transform: translateY(5px);
+      transform: translateY(5px); }
 
 .animate-text {
   opacity: 0; }
