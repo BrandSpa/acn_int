@@ -5,17 +5,17 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 		"bg_img" => "",
 		"bg_img_mobile" => "",
 		"bg_color" => "#fff",
-		"uniq_name" => "slide-" . uniqid() . rand(0, 100) 
+		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
-	
-	$bgUrl = wp_get_attachment_url( $at['bg_img'] ); 
-	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] ); 
+
+	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
+	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] );
 
 	ob_start();
 ?>
 
 	<div
-			class="section section--<?php echo $at['uniq_name'] ?> " 
+			class="section section--<?php echo $at['uniq_name'] ?> "
 			data-anchor="<?php echo $at['uniq_name'] ?>"
 			data-story="1"
 			data-index="2"
