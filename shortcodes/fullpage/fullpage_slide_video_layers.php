@@ -9,19 +9,19 @@ function acn_fullpage_slide_video_layers_sc( $atts, $content ) {
 		"video_url" => "",
 			"bg-animation" => "bg-left",
 		"overlay-animation" => "bg-left",
-		"uniq_name" => "slide-" . uniqid() . rand(0, 100) 
+		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
-	
-	$bgUrl = wp_get_attachment_url( $at['bg_img'] ); 
-	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] ); 
-	$overlayUrl = wp_get_attachment_url( $at['overlay_img'] ); 
-	$overlayUrlMobile = wp_get_attachment_url( $at['overlay_img_mobile'] ); 
+
+	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
+	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] );
+	$overlayUrl = wp_get_attachment_url( $at['overlay_img'] );
+	$overlayUrlMobile = wp_get_attachment_url( $at['overlay_img_mobile'] );
 
 	ob_start();
 	?>
 
-		<div 
-			class="section section--<?php echo $at['uniq_name'] ?>" 
+		<div
+			class="section section--<?php echo $at['uniq_name'] ?>"
 			data-anchor="<?php echo $at['uniq_name'] ?>"
 			data-story="2"
 			data-index="4"
@@ -83,7 +83,7 @@ function acn_fullpage_slide_video_layers_sc( $atts, $content ) {
 	</div>
 
 	</div>
-		
+
 	<?php
 	return ob_get_clean();
 }

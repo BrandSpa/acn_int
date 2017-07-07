@@ -74,7 +74,6 @@ function acn_fullpage_sc( $atts, $content ) {
 				window.localStorage.setItem('intro', true);
 			}, <?php echo $introDelay ?>);
 		} else {
-			console.log('none');
 			$('.intro').css({display: 'none'});
 		}
 	</script>
