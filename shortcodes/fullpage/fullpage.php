@@ -47,7 +47,7 @@ function acn_fullpage_sc( $atts, $content ) {
 			</ul>
 		</div>
 	</div>
-
+<?php if($at['show_intro']): ?>
 	<div class="intro">
 
 		<?php foreach($intro as $i => $item): ?>
@@ -65,10 +65,10 @@ function acn_fullpage_sc( $atts, $content ) {
 		<?php endforeach; ?>
 
 	</div>
-
+<?php endif; ?>
 	<script>
 
-		if(window.localStorage.getItem('intro') !== true) {
+		if(window.localStorage.getItem('intro') !=== 'true') {
 			setTimeout(function introDelay() {
 				$('.intro').addClass('intro--close');
 				window.localStorage.setItem('intro', true);
