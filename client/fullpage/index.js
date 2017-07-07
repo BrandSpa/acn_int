@@ -4,6 +4,7 @@ import "lazysizes/plugins/bgset/ls.bgset";
 import "lazysizes";
 import slidePost from  './slide_post';
 import slideVideo from './slide_video';
+import counter from './counter';
 
 //lazyload configuration
 window.lazySizesConfig = window.lazySizesConfig || {};
@@ -14,7 +15,6 @@ $(function domLoaded() {
    function handleAfterRender() {
     lazySizes.init();
   }
-
 
   function handleLeave(index, nextIndex, direction) {
     var next = nextIndex - 1;
@@ -30,9 +30,9 @@ $(function domLoaded() {
     var $indicator = $(".indicator");
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text("/" + index);
+    counter();
   }
 
- 
   $("#fullpage").fullpage({
     menu: "#fullpage-menu",
     recordHistory: false,
