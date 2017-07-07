@@ -67,13 +67,14 @@ function acn_fullpage_sc( $atts, $content ) {
 	</div>
 <?php endif; ?>
 	<script>
-
+		console.log(window.localStorage.getItem('intro'));
 		if(window.localStorage.getItem('intro') !=== 'true') {
 			setTimeout(function introDelay() {
 				$('.intro').addClass('intro--close');
 				window.localStorage.setItem('intro', true);
 			}, <?php echo $introDelay ?>);
 		} else {
+			console.log('none');
 			$('.intro').css({display: 'none'});
 		}
 	</script>
