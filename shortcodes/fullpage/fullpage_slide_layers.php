@@ -9,6 +9,8 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 		"bg_color" => "#000",
 		"bg-animation" => "bg-left",
 		"overlay-animation" => "bg-left",
+		"story_num" => "",
+		"slide_num" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
 
@@ -24,8 +26,8 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	<div
 		class="section section--<?php echo $at['uniq_name'] ?>"
 		data-anchor="<?php echo $at['uniq_name'] ?>"
-		data-story="4"
-		data-index="1"
+		data-story="<?php echo $at['story_num'] ?>"
+		data-index="<?php echo $at['slide_num'] ?>"
 	>
 		<style>
 			.section--<?php echo $at['uniq_name'] ?>.active .layer-bg-animation {

@@ -7,8 +7,10 @@ function acn_fullpage_slide_video_layers_sc( $atts, $content ) {
 		"overlay_img" => "",
 		"overlay_img_mobile" => "",
 		"video_url" => "",
-			"bg-animation" => "bg-left",
+		"bg-animation" => "bg-left",
 		"overlay-animation" => "bg-left",
+		"story_num" => "",
+		"slide_num" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
 
@@ -23,8 +25,8 @@ function acn_fullpage_slide_video_layers_sc( $atts, $content ) {
 		<div
 			class="section section--<?php echo $at['uniq_name'] ?>"
 			data-anchor="<?php echo $at['uniq_name'] ?>"
-			data-story="2"
-			data-index="4"
+			data-story="<?php echo $at['story_num'] ?>"
+			data-index="<?php echo $at['slide_num'] ?>"
 		>
 
 				<style>

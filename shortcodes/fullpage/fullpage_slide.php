@@ -5,6 +5,8 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 		"bg_img" => "",
 		"bg_img_mobile" => "",
 		"bg_color" => "#fff",
+		"story_num" => "",
+		"slide_num" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
 
@@ -17,8 +19,8 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 	<div
 			class="section section--<?php echo $at['uniq_name'] ?> "
 			data-anchor="<?php echo $at['uniq_name'] ?>"
-			data-story="1"
-			data-index="2"
+			data-story="<?php echo $at['story_num'] ?>"
+			data-index="<?php echo $at['slide_num'] ?>"
 	>
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>

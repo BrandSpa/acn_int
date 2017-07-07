@@ -20,12 +20,12 @@
         "heading" => "Story num",
         "type" => "textfield",
         "param_name" => "story_num"
-      ], 
+      ],
       [
         "heading" => "Slide num",
         "type" => "textfield",
         "param_name" => "index_num"
-      ], 
+      ],
 			[
         "heading" => "Content",
 				"type" => "textarea_html",
@@ -40,7 +40,7 @@
         "category" =>  "ACN",
 				"content_element" => true,
         "params" => $params
-      ) 
+      )
     );
 
 		if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
