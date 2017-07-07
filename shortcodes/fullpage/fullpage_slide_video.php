@@ -7,7 +7,7 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 		"bg_color" => "#fff",
 		"video_url" => "",
 		"story_num" => "",
-		"slide_num" => "",
+		"index_num" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
 

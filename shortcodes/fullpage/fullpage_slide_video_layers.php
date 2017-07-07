@@ -10,7 +10,7 @@ function acn_fullpage_slide_video_layers_sc( $atts, $content ) {
 		"bg-animation" => "bg-left",
 		"overlay-animation" => "bg-left",
 		"story_num" => "",
-		"slide_num" => "",
+		"index_num" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
 

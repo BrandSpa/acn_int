@@ -8,7 +8,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 		"bg_img_mobile" => "",
 		"bg_color" => "#fff",
 		"story_num" => "",
-		"slide_num" => "",
+		"index_num" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
 
