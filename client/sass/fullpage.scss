@@ -660,10 +660,10 @@ button {
 
   &__share {
     &--open {
-      display: block;
+      display: block !important;
     }
   }
-  
+
   ul {
     padding: 0;
 

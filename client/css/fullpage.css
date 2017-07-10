@@ -1168,7 +1168,7 @@ button {
   top: 40px;
   z-index: 10; }
   .fullpage--menu__share--open {
-    display: block; }
+    display: block !important; }
   .fullpage--menu ul {
     padding: 0; }
     .fullpage--menu ul li {
