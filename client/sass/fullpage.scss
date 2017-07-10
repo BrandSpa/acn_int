@@ -75,7 +75,7 @@ h2 {
 
   @media #{$s} {
     font-size: 25px;
-    line-height: 45px;
+    line-height: 35px;
   }
 }
 
@@ -84,6 +84,10 @@ h3 {
   font-weight: 300;
   line-height: 40px;
   letter-spacing: -0.4px;
+  @media #{$s} {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 
 h4 {
