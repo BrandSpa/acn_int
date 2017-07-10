@@ -35,7 +35,7 @@ function acn_fullpage_sc( $atts, $content ) {
 	<div class="fullpage-nav">
 		<ul>
 		<?php foreach($links  as $ind => $link): ?>
-			<li><a href="<?php echo $link['link'] + 1 ?>"><span class="num"><?php echo $ind ?></span> <?php echo  $link['title'] ?></a></li>
+			<li><a href="<?php echo $link['link'] + 1 ?>"><span class="num"><?php echo $ind + 1 ?></span> <?php echo  $link['title'] ?></a></li>
 		<?php endforeach; ?>
 		</ul>
 
@@ -65,7 +65,6 @@ function acn_fullpage_sc( $atts, $content ) {
 			</div>
 		</div>
 		<?php endforeach; ?>
-
 	</div>
 <?php endif; ?>
 	<script>
