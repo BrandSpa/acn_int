@@ -34,6 +34,12 @@ add_action( 'vc_before_init', 'bs_counter_vc' );
         "heading" => "Number",
         "param_name" => 'num',
         "value" => '1000'
+      ],
+      [
+        "type" => "textfield",
+        "heading" => "Style",
+        "param_name" => 'style',
+        "value" => ''
       ]
 		];
 
