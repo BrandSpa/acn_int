@@ -7,7 +7,7 @@ class Counter extends Component {
   }
 
   componentDidMount = () => {
-    let emitter = mitt();
+    let emmiter = mitt();
     emmiter.on('runCounter', this.runCounter);
   }
 
