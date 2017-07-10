@@ -201,16 +201,16 @@ li {
       left: -100%;
       right: 0;
       bottom: 0;
-      width: 42%;
+      width: 40%;
       height: 100%;
       will-change: left;
       transition: left 500ms;
       background: #fff;
-      padding: 4%;
+      padding: 5%;
 
       @media #{$s} {
-        padding: 4%;
-        width: 96%;
+        padding: 10%;
+        width: 90%;
       }
     }
 }

@@ -705,17 +705,17 @@ li {
     left: -100%;
     right: 0;
     bottom: 0;
-    width: 42%;
+    width: 40%;
     height: 100%;
     will-change: left;
     -webkit-transition: left 500ms;
     transition: left 500ms;
     background: #fff;
-    padding: 4%; }
+    padding: 5%; }
     @media (max-width: 767px) {
       .section__post__content {
-        padding: 4%;
-        width: 96%; } }
+        padding: 10%;
+        width: 90%; } }
 
 .section__video {
   position: absolute;
