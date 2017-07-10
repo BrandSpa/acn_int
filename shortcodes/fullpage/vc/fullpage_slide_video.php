@@ -12,6 +12,11 @@
         "param_name" => "bg_img_mobile"
       ],
       [
+        "heading" => "Button title",
+        "type" => "textfield",
+        "param_name" => "btn_title"
+      ],
+      [
         "heading" => "Anchor",
         "type" => "textfield",
         "param_name" => "uniq_name"
@@ -20,12 +25,12 @@
         "heading" => "Story num",
         "type" => "textfield",
         "param_name" => "story_num"
-      ], 
+      ],
       [
         "heading" => "Slide num",
         "type" => "textfield",
         "param_name" => "index_num"
-      ], 
+      ],
       [
         "heading" => "Video url embed",
         "type" => "textfield",
@@ -45,7 +50,7 @@
         "category" =>  "ACN",
 				"content_element" => true,
         "params" => $params
-      ) 
+      )
     );
 
 		if ( class_exists( 'WPBakeryShortCodesContainer' ) ) {
@@ -54,4 +59,3 @@
   }
 
 add_action( 'vc_before_init', 'acn_fullpage_slide_video_vc' );
-

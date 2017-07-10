@@ -12,6 +12,11 @@
         "param_name" => "bg_img_mobile"
       ],
       [
+        "heading" => "Button title",
+        "type" => "textfield",
+        "param_name" => "btn_title"
+      ],
+      [
         "heading" => "Anchor",
         "type" => "textfield",
         "param_name" => "uniq_name"
