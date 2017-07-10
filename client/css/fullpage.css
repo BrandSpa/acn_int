@@ -1167,9 +1167,11 @@ button {
   right: 40px;
   top: 40px;
   z-index: 10; }
-  .fullpage--menu ul li a {
-    color: #fff;
-    font-size: 20px; }
+  .fullpage--menu ul li {
+    color: #fff; }
+    .fullpage--menu ul li a {
+      color: #fff;
+      font-size: 20px; }
 
 /*!
  * fullPage 2.9.4
