@@ -199,6 +199,10 @@ li {
       will-change: left;
       transition: left 500ms;
       background: #fff;
+
+      @media #{$s} {
+        width: 100%;
+      }
     }
 }
 
@@ -267,6 +271,7 @@ li {
     z-index: 2;
     font-size: 25px;
     transition: background .7s, transform .5s;
+
     @media #{$s} {
       bottom: 80px;
     }

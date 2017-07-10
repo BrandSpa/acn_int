@@ -707,6 +707,9 @@ li {
     -webkit-transition: left 500ms;
     transition: left 500ms;
     background: #fff; }
+    @media (max-width: 767px) {
+      .section__post__content {
+        width: 100%; } }
 
 .section__video {
   position: absolute;
