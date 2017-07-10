@@ -18,8 +18,16 @@ function bs_single_modal_sc($atts, $content = null) {
     $attachment_meta = wp_get_attachment_metadata($image);
 	?>
 
-  <a href="<?php echo wp_get_attachment_url($image) ?>" data-lightbox="sameGroup">
-    <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" />
+  <a
+    href="<?php echo wp_get_attachment_url($image) ?>"
+    data-lightbox="sameGroup"
+    data-title="<?php echo get_post_meta($image, '_wp_attachment_image_alt', true) ?>"
+  >
+    <img
+      style="max-width:100%;"
+      src="<?php echo wp_get_attachment_url($image) ?>"
+      alt="<?php echo get_post_meta($image, '_wp_attachment_image_alt', true) ?>"
+    >
   </a>
 </div>
 
