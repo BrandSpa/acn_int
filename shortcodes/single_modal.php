@@ -23,13 +23,10 @@ function bs_single_modal_sc($atts, $content = null) {
   </a>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
+
 <script>
 	onLoad(function() {
-		lightbox.option({
-		 'resizeDuration': 200,
-		 'wrapAround': true
-	 });
+
 	});
 </script>
 

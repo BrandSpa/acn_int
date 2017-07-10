@@ -41,10 +41,7 @@ function bs_modal_gallery_sc($atts, $content = null) {
 
 <script>
 	onLoad(function() {
-		lightbox.option({
-		 'resizeDuration': 200,
-		 'wrapAround': true
-	 });
+		
 	});
 </script>
 
