@@ -75,11 +75,12 @@ function acn_fullpage_sc( $atts, $content ) {
 			<li class="fullpage--menu__share">
 				<a href="#">
 					<i class="ion-android-share-alt"></i>
+					<ul>
+						<li><a href=""><i class="ion-social-facebook"></i></a></li>
+						<li><a href=""><i class="ion-social-twitter"></i></a></li>
+					</ul>
 				</a>
-				<ul>
-					<li><a href=""><i class="ion-social-facebook"></i></a></li>
-					<li><a href=""><i class="ion-social-twitter"></i></a></li>
-				</ul>
+
 			</li>
 		</ul>
 	</div>
