@@ -521,6 +521,16 @@ button {
         top: -10px;
         right: -10px;
     }
+
+    &__title {
+      position: absolute;
+      bottom: 0;
+      color: #fff;
+      font-size: 20px;
+      width: 300px;
+      font-weight: 600;
+      left: 60px;
+    }
 }
 
 .intro {
@@ -552,7 +562,7 @@ button {
 
         &__container {
           padding: 0 100px;
-          
+
           h3 {
             text-align: center;
           }
