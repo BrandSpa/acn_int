@@ -21,8 +21,8 @@ function bs_single_modal_sc($atts, $content = null) {
         $attachment_meta = wp_get_attachment_metadata($image);
 			?>
 
-      <a href="<?php echo wp_get_attachment_url($image) ?>" rel="lightbox['sameGroup']" title="<?php echo $attachment_meta['description']; ?>">
-        <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" alt="<?php echo $attachment_meta['alt']; ?>" />
+      <a href="<?php echo wp_get_attachment_url($image) ?>" rel="lightbox['sameGroup']">
+        <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" />
         <!--<div class="modal_text" style="position:absolute; top:15px; padding:20px; color:#FFF;"><h5>+ Photo Gallery</h5></div>-->
       </a>
 </div>
