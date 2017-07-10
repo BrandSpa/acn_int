@@ -51,6 +51,30 @@ function acn_fullpage_vc() {
       ],
       [
         'type' => 'textfield',
+        'param_name' => 'link_donate',
+        'heading' => 'Donate link',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'text_donate',
+        'heading' => 'Donate text',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'link_pray',
+        'heading' => 'Pray link',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'text_pray',
+        'heading' => 'Pray text',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
         'param_name' => 'link_privacy',
         'heading' => 'Privacy link',
         'value' => ''
