@@ -768,13 +768,7 @@ li {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  margin: 0 auto;
   display: block;
-  position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
-  z-index: 2;
   font-size: 25px;
   -webkit-transition: background .7s, -webkit-transform .5s;
   transition: background .7s, -webkit-transform .5s;
@@ -783,6 +777,13 @@ li {
   @media (max-width: 767px) {
     .section__open {
       bottom: 80px; } }
+  .section__open-container {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    margin: 0 auto; }
   .section__open:hover {
     background: #b30000;
     -webkit-transform: scale(1.1);
