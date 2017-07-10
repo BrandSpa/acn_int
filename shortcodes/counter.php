@@ -18,7 +18,7 @@ function bs_counter_sc( $atts ) {
     data-props='{
       "time": 700,
       "delay": 10,
-      "num": <?php echo $at['num'] ?>
+      "num": <?php echo $at['num'] . '' ?>
     }'
   ></div>
 
