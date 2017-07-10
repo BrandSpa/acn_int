@@ -44,6 +44,12 @@ function acn_fullpage_vc() {
         'value' => ''
       ],
       [
+        'type' => 'textfield',
+        'param_name' => 'story_name',
+        'heading' => 'Story name',
+        'value' => ''
+      ],
+      [
         'type' => 'param_group',
         'param_name' => 'links',
         'heading' => 'Menu links',

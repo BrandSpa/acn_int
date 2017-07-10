@@ -3,6 +3,7 @@
 function acn_fullpage_sc( $atts, $content ) {
 	$at = shortcode_atts([
 		"unique_name" => "fullpage",
+		"story_name" => '',
 		"links" => "",
 		"intro" => "",
 		"show_intro" => false
@@ -28,6 +29,7 @@ function acn_fullpage_sc( $atts, $content ) {
 	<div class="indicator">
 		<div class="indicator__story">1</div>
 		<div class="indicator__index">1</div>
+		<div class="indicator__title"><?php echo $at['story_name'] ?></div>
 	</div>
 
 	<div class="fullpage-nav">
