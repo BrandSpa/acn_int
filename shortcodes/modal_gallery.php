@@ -30,10 +30,10 @@ function bs_modal_gallery_sc($atts, $content = null) {
       <a href="<?php echo wp_get_attachment_url($image) ?>" rel="lightbox[<?php echo $at['groupname'] ?>]" title="<?php echo $attachment_meta['description']; ?>">
       <?php if($countmodal==0)
       {?>
-        <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" alt="<?php echo $attachment_meta['alt']; ?>" />
+        <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" />
         <div class="modal_text" style="position:absolute; top:15px; padding:20px; color:#FFF;"><h5>+ Photo Gallery</h5></div>
       <?php }else{?>
-        <img style="display:none;" src="<?php echo wp_get_attachment_url($image) ?>" alt="<?php echo $attachment_meta['alt']; ?>" />
+        <img style="display:none;" src="<?php echo wp_get_attachment_url($image) ?>" />
       <?php }?>
       </a>
 		<?php
