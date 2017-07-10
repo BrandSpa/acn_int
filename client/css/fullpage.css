@@ -1162,6 +1162,12 @@ button {
   .section__close-post--open {
     display: block; }
 
+.fullpage--menu {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  z-index: 10; }
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js
