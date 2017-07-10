@@ -29,12 +29,7 @@ function bs_single_modal_sc($atts, $content = null) {
       </a>
 </div>
 
-<script>
-	onLoad(function() {
-		//jquery stuff iría acá
-		// $('.flexslider').flexslider();
-	});
-</script>
+
 <!--<script src="<?php //echo get_template_directory_uri() ?>/public/js/lightbox.js"></script>-->
 <?php
 
