@@ -64,6 +64,7 @@
 
 </head>
 <body>
+
 <?php if(get_option('gta_id')): ?>
 <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?php echo get_option('gta_id') ?>"

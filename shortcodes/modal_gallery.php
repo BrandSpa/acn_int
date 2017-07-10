@@ -17,7 +17,7 @@ function bs_modal_gallery_sc($atts, $content = null) {
 ?>
 
 <!-- Place somewhere in the <body> of your page -->
-<!--<link href="<?php //echo get_template_directory_uri() ?>/public/css/lightbox.css" rel="stylesheet">-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/css/lightbox.min.css" rel="stylesheet">
 <div class="modal_gallery" style="margin:20px 0;">
     <?php $countmodal=0;?>
 		<?php foreach(explode(',', $at['images']) as $image): ?>
@@ -48,7 +48,7 @@ function bs_modal_gallery_sc($atts, $content = null) {
 		// $('.flexslider').flexslider();
 	});
 </script>
-<!--<script src="<?php //echo get_template_directory_uri() ?>/public/js/lightbox.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
 <?php
 
   return ob_get_clean();
