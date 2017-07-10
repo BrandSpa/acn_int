@@ -11,6 +11,7 @@
 	  <?php wp_footer() ?>
 	<!-- /wordpress files-->
 
+
 <script>
   var bs = {};
   bs.lang = '<?php echo getCountryLang(getCountry()) ?>';
@@ -20,7 +21,7 @@
 <script src="<?php echo get_template_directory_uri() ?>/client/dist/vendor.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/vendor.js') ?>"></script>
 <script src="<?php echo get_template_directory_uri() ?>/client/dist/app.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/app.js') ?>
 "></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
 <!--/app theme-->
 
  <!-- Google Analytics -->

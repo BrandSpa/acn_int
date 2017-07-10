@@ -38,7 +38,6 @@ function bs_modal_gallery_sc($atts, $content = null) {
 		?>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
 
 <script>
 	onLoad(function() {
