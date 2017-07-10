@@ -9,25 +9,32 @@ function bs_single_modal_sc($atts, $content = null) {
   ob_start();
 ?>
 
-<?php
-
-?>
-
 <!-- Place somewhere in the <body> of your page -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/css/lightbox.min.css" rel="stylesheet">
-<div class="single_modal" style="margin:20px 0;">
-		<?php
-				$image = $at['image'];
-        $attachment_meta = wp_get_attachment_metadata($image);
-			?>
 
-      <a href="<?php echo wp_get_attachment_url($image) ?>" rel="lightbox['sameGroup']">
-        <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" />
-      </a>
+<div class="single_modal" style="margin:20px 0;">
+	<?php
+		$image = $at['image'];
+    $attachment_meta = wp_get_attachment_metadata($image);
+	?>
+
+  <a href="<?php echo wp_get_attachment_url($image) ?>" data-lightbox="sameGroup">
+    <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" />
+  </a>
 </div>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
+<script>
+	onLoad(function() {
+		lightbox.option({
+		 'resizeDuration': 200,
+		 'wrapAround': true
+	 });
+	});
+</script>
+
+
+
 <?php
 
   return ob_get_clean();

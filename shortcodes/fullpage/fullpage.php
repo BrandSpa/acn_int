@@ -77,7 +77,6 @@ function acn_fullpage_sc( $atts, $content ) {
 			$('.intro').css({display: 'none'});
 		}
 
-
 	</script>
 
 	<style>
