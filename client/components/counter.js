@@ -18,12 +18,12 @@ class Counter extends Component {
       nums.push(n);
     }
 
-    this.updateNum(nums);
+    this.updateNum(nums, num);
 
-    this.counterInterval = setInterval(this.updateNum.bind(null, nums), delay);
+    this.counterInterval = setInterval(this.updateNum.bind(null, nums, num), delay);
   }
 
-  updateNum = (nums) => {
+  updateNum = (nums, num) => {
     let currentNum = nums.shift();
 
     if(currentNum >= num) {
