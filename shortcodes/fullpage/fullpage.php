@@ -64,8 +64,10 @@ function acn_fullpage_sc( $atts, $content ) {
 			</li>
 		</ul>
 	</div>
+
 	<script>
 		onLoad(function() {
+			console.log('onload', $('.fullpage--menu__share > a'));
 			$('.fullpage--menu__share > a').on('click', function() {
 				var $ul = $(this).find('ul');
 				if($ul.hasClass('fullpage--menu__share--open')) {
