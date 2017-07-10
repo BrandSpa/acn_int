@@ -1013,6 +1013,9 @@ button {
     width: 300px;
     font-weight: 600;
     left: 60px; }
+    @media (max-width: 767px) {
+      .indicator__title {
+        font-size: 12px; } }
 
 .intro {
   position: fixed;

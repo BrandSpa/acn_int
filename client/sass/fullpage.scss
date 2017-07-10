@@ -551,6 +551,10 @@ button {
       width: 300px;
       font-weight: 600;
       left: 60px;
+      
+      @media #{$s} {
+        font-size: 12px;
+      }
     }
 }
 
