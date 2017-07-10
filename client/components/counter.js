@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import mitt from 'mitt';
 
 class Counter extends Component {
   state = {
@@ -7,7 +6,7 @@ class Counter extends Component {
   }
 
   componentDidMount = () => {
-    let emmiter = mitt();
+    let emmiter = window.mitt();
     emmiter.on('runCounter', this.runCounter);
   }
 

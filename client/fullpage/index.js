@@ -5,7 +5,7 @@ import "lazysizes";
 import slidePost from  './slide_post';
 import slideVideo from './slide_video';
 import counter from './counter';
-import mitt from 'mitt';
+
 
 //lazyload configuration
 window.lazySizesConfig = window.lazySizesConfig || {};
@@ -31,7 +31,7 @@ $(function domLoaded() {
     var $indicator = $(".indicator");
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text("/" + index);
-    let emmiter = mitt();
+    let emmiter = window.mitt();
     emmiter.emit('runCounter');
   }
 
