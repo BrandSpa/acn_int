@@ -773,7 +773,8 @@ li {
   -webkit-transition: background .7s, -webkit-transform .5s;
   transition: background .7s, -webkit-transform .5s;
   transition: background .7s, transform .5s;
-  transition: background .7s, transform .5s, -webkit-transform .5s; }
+  transition: background .7s, transform .5s, -webkit-transform .5s;
+  margin: 0 auto; }
   @media (max-width: 767px) {
     .section__open {
       bottom: 80px; } }
@@ -783,7 +784,8 @@ li {
     left: 0;
     right: 0;
     z-index: 2;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
   .section__open:hover {
     background: #b30000;
     -webkit-transform: scale(1.1);
