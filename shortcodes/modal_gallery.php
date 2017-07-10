@@ -23,7 +23,7 @@ function bs_modal_gallery_sc($atts, $content = null) {
     <?php $countmodal=0;?>
 		<?php foreach(explode(',', $at['images']) as $image): ?>
 
-      <a href="<?php echo wp_get_attachment_url($image) ?>" data-lightbox="<?php echo $at['groupname'] ?>" title="<?php echo $attachment_meta['description']; ?>">
+      <a href="<?php echo wp_get_attachment_url($image) ?>" data-lightbox="<?php echo $at['groupname'] ?>">
       <?php if($countmodal==0)
       {?>
         <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" />
@@ -41,7 +41,7 @@ function bs_modal_gallery_sc($atts, $content = null) {
 
 <script>
 	onLoad(function() {
-		
+
 	});
 </script>
 
