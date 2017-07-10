@@ -53,7 +53,7 @@ function acn_fullpage_sc( $atts, $content ) {
 					<?php echo $at['text_pray'] ?>
 				</a>
 			</li>
-			<li>
+			<li class="fullpage--menu__share">
 				<a href="#">
 					<i class="ion-android-share-alt"></i>
 				</a>
@@ -64,6 +64,19 @@ function acn_fullpage_sc( $atts, $content ) {
 			</li>
 		</ul>
 	</div>
+	<script>
+		onLoad(function() {
+			$('.fullpage--menu__share a').on('click', function() {
+				var $ul = $(this).find('ul');
+				if($ul.hasClass('fullpage--menu__share--open');) {
+					$ul.removeClass('fullpage--menu__share--open');
+				} else {
+					$ul.addClass('fullpage--menu__share--open');
+				}
+
+			});
+		})
+	</script>
 	<div class="fullpage-nav">
 		<ul>
 			<?php foreach($links  as $ind => $link): ?>

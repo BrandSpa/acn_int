@@ -657,6 +657,13 @@ button {
   right: 40px;
   top: 40px;
   z-index: 10;
+
+  &__share {
+    &--open {
+      display: block;
+    }
+  }
+  
   ul {
     padding: 0;
 
@@ -666,7 +673,8 @@ button {
       display: block;
 
       ul {
-        padding-left: 10px;
+        display: none;
+        padding: 10px;
       }
 
       a {

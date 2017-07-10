@@ -1167,6 +1167,8 @@ button {
   right: 40px;
   top: 40px;
   z-index: 10; }
+  .fullpage--menu__share--open {
+    display: block; }
   .fullpage--menu ul {
     padding: 0; }
     .fullpage--menu ul li {
@@ -1174,7 +1176,8 @@ button {
       margin-bottom: 20px;
       display: block; }
       .fullpage--menu ul li ul {
-        padding-left: 10px; }
+        display: none;
+        padding: 10px; }
       .fullpage--menu ul li a {
         color: #fff;
         font-size: 20px; }
