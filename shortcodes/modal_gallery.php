@@ -21,7 +21,7 @@ function bs_modal_gallery_sc($atts, $content = null) {
 <div class="modal_gallery" style="margin:20px 0;">
     <?php $countmodal=0;?>
 		<?php foreach(explode(',', $at['images']) as $image): ?>
-        <?php $attachment_meta = wp_get_attachment_url($image); ?>
+        <?php $attachment_meta = wp_get_attachment_metadata($image); ?>
 
       <!--<a href="<?php echo wp_get_attachment_url($image) ?>" data-lightbox="<?php// echo $at['groupname'] ?>" data-title="<?php //$attachment_meta['description']; ?>">
         <img src="<?php echo wp_get_attachment_url($image) ?>" alt="<?php //$attachment_meta['alt']; ?>" />
@@ -30,10 +30,10 @@ function bs_modal_gallery_sc($atts, $content = null) {
       <a href="<?php echo wp_get_attachment_url($image) ?>" rel="lightbox[<?php echo $at['groupname'] ?>]" title="<?php echo $attachment_meta['description']; ?>">
       <?php if($countmodal==0)
       {?>
-        <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" />
+        <img style="max-width:100%;" src="<?php echo wp_get_attachment_url($image) ?>" alt="<?php echo $attachment_meta['alt']; ?>" />
         <div class="modal_text" style="position:absolute; top:15px; padding:20px; color:#FFF;"><h5>+ Photo Gallery</h5></div>
       <?php }else{?>
-        <img style="display:none;" src="<?php echo wp_get_attachment_url($image) ?>" />
+        <img style="display:none;" src="<?php echo wp_get_attachment_url($image) ?>" alt="<?php echo $attachment_meta['alt']; ?>" />
       <?php }?>
       </a>
 		<?php
