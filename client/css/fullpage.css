@@ -1151,7 +1151,7 @@ button {
   display: none; }
   @media (max-width: 767px) {
     .section__close-post {
-      right: 50px;
+      right: 20px;
       left: auto; } }
   .section__close-post--open {
     display: block; }

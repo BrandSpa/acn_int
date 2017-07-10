@@ -633,9 +633,10 @@ button {
   display: none;
 
   @media #{$s} {
-    right: 50px;
+    right: 20px;
     left: auto;
   }
+
   &--open {
     display: block;
   }
