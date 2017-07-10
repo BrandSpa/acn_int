@@ -658,8 +658,17 @@ button {
   top: 40px;
   z-index: 10;
   ul {
+    padding: 0;
+
     li {
       color: #fff;
+      margin-bottom: 20px;
+      display: block;
+      
+      ul {
+        padding-left: 10px;
+      }
+
       a {
         color: #fff;
         font-size: 20px;
