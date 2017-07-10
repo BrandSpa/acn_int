@@ -53,10 +53,15 @@ $(function domLoaded() {
   });
 
   $('.indicator').on('click', function openNav() {
+    $.fn.fullpage.setAllowScrolling(false);
+    $('body').addClass('scroll-stoped');
     $('.fullpage-nav').addClass('fullpage-nav--open');
+
   });
 
   $('.fullpage-nav__close').on('click', function closeNav() {
+    $.fn.fullpage.setAllowScrolling(true);
+    $('body').removeClass('scroll-stoped');
     $('.fullpage-nav').removeClass('fullpage-nav--open');
   });
 
