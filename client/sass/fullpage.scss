@@ -194,14 +194,14 @@ li {
       left: -100%;
       right: 0;
       bottom: 0;
-      width: 50%;
+      width: 46%;
       height: 100%;
       will-change: left;
       transition: left 500ms;
       background: #fff;
-
+      padding: 2%;
       @media #{$s} {
-        width: 100%;
+        width: 98%;
       }
     }
 }
