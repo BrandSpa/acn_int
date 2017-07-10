@@ -33,7 +33,6 @@ class Counter extends Component {
     this.setState({ currentNum });
   }
 
-
   render() {
     return (
       <div ref={counter => this.counter = counter}>
@@ -42,3 +41,5 @@ class Counter extends Component {
     )
   }
 }
+
+export default Counter;
