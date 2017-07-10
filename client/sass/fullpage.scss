@@ -492,6 +492,9 @@ button {
     height: 0;
     overflow: hidden;
     max-width: 100%;
+    @media #{$s} {
+      top: 40%;
+    }
 }
 
 .embed-container {

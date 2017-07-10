@@ -963,6 +963,9 @@ button {
   height: 0;
   overflow: hidden;
   max-width: 100%; }
+  @media (max-width: 767px) {
+    .embed-container {
+      top: 40%; } }
 
 .embed-container embed, .embed-container iframe, .embed-container object {
   position: absolute;
