@@ -68,6 +68,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		onLoad(function() {
 			$('.fullpage--menu__share a').on('click', function() {
 				var $ul = $(this).find('ul');
+				console.log($ul);
 				if($ul.hasClass('fullpage--menu__share--open')) {
 					$ul.removeClass('fullpage--menu__share--open');
 				} else {
