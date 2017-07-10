@@ -4,7 +4,8 @@ add_shortcode('bs_counter', 'bs_counter_sc');
 
 function bs_counter_sc( $atts ) {
   $at = shortcode_atts([
-    'num' => '1000'
+    'num' => '1000',
+    'style' => ''
   ], $atts );
 
   ob_start();
@@ -12,6 +13,7 @@ function bs_counter_sc( $atts ) {
 
   <div
     class="bs-counter"
+    style="<?php echo $at['style'] ?>"
     data-props='{
     "time": 500,
     "delay": 10,

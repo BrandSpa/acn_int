@@ -7,7 +7,6 @@ class Counter extends Component {
 
   componentDidMount = () => {
     let emmiter = window.mitt;
-    console.log(emmiter);
     emmiter.on('runCounter', this.runCounter);
   }
 
@@ -46,9 +45,7 @@ class Counter extends Component {
 
   render() {
     return (
-      <div ref={counter => this.counter = counter}>
-        {this.state.currentNum}
-      </div>
+      <span>{this.state.currentNum}</span>
     )
   }
 }
