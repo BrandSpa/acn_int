@@ -9,7 +9,7 @@ import qs from "qs";
 import 'lazysizes';
 import 'lazysizes/plugins/bgset/ls.bgset.min.js';
 import mitt from 'mitt';
-window.mitt = mitt;
+window.mitt = mitt();
 
 //React components :)
 import ContactForm from "./components/contactForm";

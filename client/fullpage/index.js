@@ -31,7 +31,8 @@ $(function domLoaded() {
     var $indicator = $(".indicator");
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text("/" + index);
-    let emmiter = window.mitt();
+    let emmiter = window.mitt;
+    console.log(emmiter);
     emmiter.emit('runCounter');
   }
 
