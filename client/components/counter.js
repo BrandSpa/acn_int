@@ -22,12 +22,12 @@ class Counter extends Component {
     let num = this.props.num;
     let isFloat = /^[0-9]+\.[0-9]+$/.test(num);
     let decimalLength = isFloat ? (num.split('.')[1] || []).length : 0;
-    num = parseInt(num);
 
     for (var i = 0; i <= total; i++) {
       let n = parseInt(num / total * i);
 
       if (isFloat) {
+        console.log(num / total * i);
         n = parseFloat(num / total * i).toFixed(decimalLength);
       }
 
