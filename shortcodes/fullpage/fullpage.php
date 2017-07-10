@@ -4,6 +4,12 @@ function acn_fullpage_sc( $atts, $content ) {
 	$at = shortcode_atts([
 		"unique_name" => "fullpage",
 		"story_name" => '',
+		"link_privacy" => '',
+		"text_privacy" => '',
+		"link_terms" => '',
+		"text_terms" => '',
+		"link_lang" => '',
+		"text_lang" => '',
 		"links" => "",
 		"intro" => "",
 		"show_intro" => false
@@ -43,9 +49,9 @@ function acn_fullpage_sc( $atts, $content ) {
 
 		<div class="fullpage-nav__info">
 			<ul>
-				<li><a href="#">Privacidad</a></li>
-				<li><a href="#">Condiciones</a></li>
-				<li><a href="#">Español</a></li>
+				<li><a href="<?php echo $at['link_privacy'] ?>"><?php echo $at['text_privacy'] ?></a></li>
+				<li><a href="<?php echo $at['link_terms'] ?>"><?php echo $at['text_terms'] ?></a></li>
+				<li><a href="<?php echo $at['link_lang'] ?>"><?php echo $at['text_lang'] ?></a></li>
 			</ul>
 		</div>
 	</div>

@@ -50,6 +50,42 @@ function acn_fullpage_vc() {
         'value' => ''
       ],
       [
+        'type' => 'textfield',
+        'param_name' => 'link_privacy'
+        'heading' => 'Privacy link',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'text_privacy'
+        'heading' => 'Privacy text',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'link_terms'
+        'heading' => 'Terms link',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'text_terms'
+        'heading' => 'Terms text',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'link_lang'
+        'heading' => 'Translation link',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'text_lang'
+        'heading' => 'Translation text',
+        'value' => ''
+      ],
+      [
         'type' => 'param_group',
         'param_name' => 'links',
         'heading' => 'Menu links',
