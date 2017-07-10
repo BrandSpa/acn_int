@@ -32,6 +32,24 @@ function acn_fullpage_sc( $atts, $content ) {
 	ob_start();
 ?>
 
+<script>
+	onLoad(function() {
+
+		console.log('onload', $('.fullpage--menu__share > a'));
+
+		$('.fullpage--menu__share > a').on('click', function() {
+			var $ul = $(this).find('ul');
+			if($ul.hasClass('fullpage--menu__share--open')) {
+				$ul.removeClass('fullpage--menu__share--open');
+			} else {
+				$ul.addClass('fullpage--menu__share--open');
+			}
+
+		});
+
+	})
+</script>
+
 	<div id="fullpage">
 		<?php echo do_shortcode($content) ?>
 	</div>
@@ -114,23 +132,7 @@ function acn_fullpage_sc( $atts, $content ) {
 
 	</script>
 
-	<script>
-		onLoad(function() {
 
-			console.log('onload', $('.fullpage--menu__share > a'));
-
-			$('.fullpage--menu__share > a').on('click', function() {
-				var $ul = $(this).find('ul');
-				if($ul.hasClass('fullpage--menu__share--open')) {
-					$ul.removeClass('fullpage--menu__share--open');
-				} else {
-					$ul.addClass('fullpage--menu__share--open');
-				}
-
-			});
-
-		})
-	</script>
 
 	<style>
 		#fullpage{
