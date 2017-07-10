@@ -16,10 +16,10 @@ function bs_counter_sc( $atts ) {
     class="bs-counter <?php echo $at['classes'] ?>"
     style="<?php echo $at['style'] ?>"
     data-props='{
-    "time": 500,
-    "delay": 10,
-    "num": <?php echo $at['num'] ?>
-  }'
+      "time": 700,
+      "delay": 10,
+      "num": <?php echo $at['num'] ?>
+    }'
   ></div>
 
   <?php
