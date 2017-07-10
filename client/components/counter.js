@@ -8,6 +8,9 @@ class Counter extends Component {
   componentDidMount = () => {
     let emmiter = window.mitt;
     emmiter.on('runCounter', this.runCounter);
+    let bounding = this.counter.getBoundingClientRect();
+    console.log(bounding);
+
   }
 
   componentWillUnmount() {
@@ -27,7 +30,6 @@ class Counter extends Component {
       let n = parseInt(num / total * i);
 
       if (isFloat) {
-        console.log(num / total * i);
         n = parseFloat(num / total * i).toFixed(decimalLength);
       }
 
@@ -51,7 +53,7 @@ class Counter extends Component {
 
   render() {
     return (
-      <span>{this.state.currentNum}</span>
+      <span ref={counter => this.counter = counter}>{this.state.currentNum}</span>
     )
   }
 }
