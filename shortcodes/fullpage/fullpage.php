@@ -65,20 +65,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		</ul>
 	</div>
 
-	<script>
-		onLoad(function() {
-			console.log('onload', $('.fullpage--menu__share > a'));
-			$('.fullpage--menu__share > a').on('click', function() {
-				var $ul = $(this).find('ul');
-				if($ul.hasClass('fullpage--menu__share--open')) {
-					$ul.removeClass('fullpage--menu__share--open');
-				} else {
-					$ul.addClass('fullpage--menu__share--open');
-				}
 
-			});
-		})
-	</script>
 	<div class="fullpage-nav">
 		<ul>
 			<?php foreach($links  as $ind => $link): ?>
@@ -125,6 +112,24 @@ function acn_fullpage_sc( $atts, $content ) {
 			$('.intro').css({display: 'none'});
 		}
 
+	</script>
+
+	<script>
+		onLoad(function() {
+
+			console.log('onload', $('.fullpage--menu__share > a'));
+
+			$('.fullpage--menu__share > a').on('click', function() {
+				var $ul = $(this).find('ul');
+				if($ul.hasClass('fullpage--menu__share--open')) {
+					$ul.removeClass('fullpage--menu__share--open');
+				} else {
+					$ul.addClass('fullpage--menu__share--open');
+				}
+
+			});
+
+		})
 	</script>
 
 	<style>
