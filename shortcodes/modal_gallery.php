@@ -12,8 +12,8 @@ function bs_modal_gallery_sc($atts, $content = null) {
   ob_start();
 ?>
 
-<?php 
- 
+<?php
+
 ?>
 
 <!-- Place somewhere in the <body> of your page -->
@@ -21,8 +21,8 @@ function bs_modal_gallery_sc($atts, $content = null) {
 <div class="modal_gallery" style="margin:20px 0;">
     <?php $countmodal=0;?>
 		<?php foreach(explode(',', $at['images']) as $image): ?>
-        <?php $attachment_meta = wp_get_attachment($image); ?>
-		 
+        <?php $attachment_meta = wp_get_attachment_url($image); ?>
+
       <!--<a href="<?php echo wp_get_attachment_url($image) ?>" data-lightbox="<?php// echo $at['groupname'] ?>" data-title="<?php //$attachment_meta['description']; ?>">
         <img src="<?php echo wp_get_attachment_url($image) ?>" alt="<?php //$attachment_meta['alt']; ?>" />
       </a>-->
@@ -71,7 +71,7 @@ add_action( 'vc_before_init', 'bs_modal_gallery_vc' );
         "param_name" => "images",
         "value" => ''
 			],
- 
+
 		];
 
   	vc_map(
@@ -80,7 +80,6 @@ add_action( 'vc_before_init', 'bs_modal_gallery_vc' );
         "base" => "bs_modal_gallery",// igual a add_shortcode( 'bs_flexslider', 'bs_example_sc' );
         "category" =>  "BS",
         "params" => $params
-      ) 
+      )
     );
   }
-
