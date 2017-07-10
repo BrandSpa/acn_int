@@ -771,6 +771,9 @@ li {
   transition: background .7s, -webkit-transform .5s;
   transition: background .7s, transform .5s;
   transition: background .7s, transform .5s, -webkit-transform .5s; }
+  @media (max-width: 767px) {
+    .section__open {
+      bottom: 80px; } }
   .section__open:hover {
     background: #b30000;
     -webkit-transform: scale(1.1);
@@ -922,6 +925,9 @@ button {
   font-size: 25px;
   -webkit-transition: all .7s;
   transition: all .7s; }
+  @media (max-width: 767px) {
+    .section__down {
+      bottom: 80px; } }
   .section__down i:before {
     will-change: transform;
     -webkit-transition: -webkit-transform .7s;

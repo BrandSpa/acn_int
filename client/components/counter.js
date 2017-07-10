@@ -10,7 +10,6 @@ class Counter extends Component {
     emmiter.on('runCounter', this.runCounter);
     let bounding = this.counter.getBoundingClientRect();
     console.log(bounding);
-
   }
 
   componentWillUnmount() {

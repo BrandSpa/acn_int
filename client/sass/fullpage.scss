@@ -267,6 +267,9 @@ li {
     z-index: 2;
     font-size: 25px;
     transition: background .7s, transform .5s;
+    @media #{$s} {
+      bottom: 80px;
+    }
 
     &:hover {
       background: darken(red, 15%);
@@ -445,6 +448,10 @@ button {
     z-index: 2;
     font-size: 25px;
     transition: all .7s;
+
+    @media #{$s} {
+      bottom: 80px;
+    }
 
     i:before {
       will-change: transform;
