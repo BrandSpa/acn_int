@@ -8,6 +8,7 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 		"video_url" => "",
 		"story_num" => "",
 		"index_num" => "",
+		"btn_title" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
 
@@ -24,7 +25,11 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 
 			<div class="section__content">
 				<?php echo do_shortcode($content) ?>
-				<button class="section__open section__open-video"><i class="ion-social-youtube"></i></button>
+
+				<div class="section__open-container">
+					<h4><?php echo $at['btn_title'] ?></h4>
+					<button class="section__open section__open-video"><i class="ion-social-youtube"></i></button>
+				</div>
 			</div>
 
 			<div class="section__video" >

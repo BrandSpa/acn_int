@@ -4,11 +4,12 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 	$at = shortcode_atts([
 		"title" => "",
 		"subtitle" => "",
+		"bg_color" => "#fff",
 		"bg_img" => "",
 		"bg_img_mobile" => "",
-		"bg_color" => "#fff",
 		"story_num" => "",
 		"index_num" => "",
+		"btn_title" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
 
@@ -31,9 +32,13 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 					</div>
 				</div>
 
-				<button class="section__open section__open-post" >
-					<i class="ion-android-open"></i>
-				</button>
+				<div class="section__open-container">
+					<h4><?php echo $at['btn_title'] ?></h4>
+					<button class="section__open section__open-post" >
+						<i class="ion-android-open"></i>
+					</button>
+				</div>
+
 			</div>
 
 			<div class="section__post" >

@@ -285,6 +285,10 @@ li {
       bottom: 80px;
     }
 
+    &-container {
+
+    }
+
     &:hover {
       background: darken(red, 15%);
       transform: scale(1.1);
