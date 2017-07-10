@@ -2,11 +2,9 @@
 add_shortcode( 'bs_single_modal', 'bs_single_modal_sc' );
 
 function bs_single_modal_sc($atts, $content = null) {
-	$attributes = [
+  $at = shortcode_atts( [
     'image' => ''
-  ];
-
-  $at = shortcode_atts( $attributes , $atts );
+  ] , $atts );
 
   ob_start();
 ?>
@@ -19,8 +17,7 @@ function bs_single_modal_sc($atts, $content = null) {
 <!--<link href="<?php //echo get_template_directory_uri() ?>/public/css/lightbox.css" rel="stylesheet">-->
 <div class="single_modal" style="margin:20px 0;">
 		<?php
-				$image = $at['image'];
-        $attachment_meta = wp_get_attachment_url($image);
+        $attachment_meta = wp_get_attachment_url($at['image']);
 			?>
 
       <a href="<?php echo wp_get_attachment_url($image) ?>" rel="lightbox['sameGroup']" title="<?php echo $attachment_meta['description']; ?>">
