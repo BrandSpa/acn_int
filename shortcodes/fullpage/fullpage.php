@@ -10,6 +10,10 @@ function acn_fullpage_sc( $atts, $content ) {
 		"text_terms" => '',
 		"link_lang" => '',
 		"text_lang" => '',
+		"text_donate" => '',
+		"link_donate" => '',
+		"text_pray" => '',
+		"link_pray" => '',
 		"links" => "",
 		"intro" => "",
 		"show_intro" => false
@@ -37,12 +41,32 @@ function acn_fullpage_sc( $atts, $content ) {
 		<div class="indicator__index">1</div>
 		<div class="indicator__title"><?php echo $at['story_name'] ?></div>
 	</div>
-
+	<div class="fullpage--menu">
+		<ul>
+			<li>
+				<a href="<?php echo $at['link_donate'] ?>">
+					<?php echo $at['text_donate'] ?>
+				</a>
+			</li>
+			<li>
+				<a href="<?php echo $at['link_pray'] ?>">
+					<?php echo $at['text_pray'] ?>
+				</a>
+			</li>
+			<li>
+				<i class="ion-android-share-alt"></i>
+				<ul>
+					<li><a href=""><i class="ion-social-facebook"></i></a></li>
+					<li><a href=""><i class="ion-social-twitter"></i></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 	<div class="fullpage-nav">
 		<ul>
-		<?php foreach($links  as $ind => $link): ?>
-			<li><a href="<?php echo $link['link'] + 1 ?>"><span class="num"><?php echo $ind + 1 ?></span> <?php echo  $link['title'] ?></a></li>
-		<?php endforeach; ?>
+			<?php foreach($links  as $ind => $link): ?>
+				<li><a href="<?php echo $link['link'] + 1 ?>"><span class="num"><?php echo $ind + 1 ?></span> <?php echo  $link['title'] ?></a></li>
+			<?php endforeach; ?>
 		</ul>
 
 		<button class="fullpage-nav__close"><i class="ion-close-round"></i></button>
