@@ -275,6 +275,7 @@ li {
     font-size: 25px;
     transition: background .7s, transform .5s;
     margin: 0 auto;
+
     @media #{$s} {
       bottom: 80px;
     }
@@ -287,6 +288,7 @@ li {
       z-index: 2;
       margin: 0 auto;
       width: 100%;
+      text-align: center;
     }
 
     &:hover {

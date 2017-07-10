@@ -27,7 +27,7 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 				<?php echo do_shortcode($content) ?>
 
 				<div class="section__open-container">
-					<h4><?php echo $at['btn_title'] ?></h4>
+					<h5><?php echo $at['btn_title'] ?></h5>
 					<button class="section__open section__open-video"><i class="ion-social-youtube"></i></button>
 				</div>
 			</div>
