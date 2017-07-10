@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
+import mitt from 'mitt';
 
 class Counter extends Component {
   state = {
     currentNum: 0
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
+    let emitter = mitt();
+
+    emmiter.on('runCounter', this.runCounter);
+  }
+
+  componentWillUnmount() {
+    emmiter.off('runCounter', this.runCounter);
+  }
+
+  runCounter = () => {
     const { time, delay } = this.props;
     let nums = [];
     let total = time / delay;

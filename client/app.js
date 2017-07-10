@@ -8,6 +8,8 @@ import multipleRender from "react-multiple-render";
 import qs from "qs";
 import 'lazysizes';
 import 'lazysizes/plugins/bgset/ls.bgset.min.js';
+
+
 //React components :)
 import ContactForm from "./components/contactForm";
 import HeaderSlider from "./components/headerSlider";
