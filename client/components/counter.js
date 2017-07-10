@@ -8,11 +8,11 @@ class Counter extends Component {
 
   componentDidMount = () => {
     let emitter = mitt();
-
     emmiter.on('runCounter', this.runCounter);
   }
 
   componentWillUnmount() {
+    let emitter = mitt();
     emmiter.off('runCounter', this.runCounter);
   }
 
