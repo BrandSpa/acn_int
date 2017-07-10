@@ -30,7 +30,6 @@ $(function domLoaded() {
     var $indicator = $(".indicator");
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text("/" + index);
-    counter(2000);
   }
 
   $("#fullpage").fullpage({

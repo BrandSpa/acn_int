@@ -27,6 +27,7 @@ import GalleryHeader from "./components/galleryHeader";
 import ProjectsAbout from "./components/projectsAbout";
 import VideoHeader from "./components/videoHeader";
 import Carousel from "./components/carousel";
+import Counter from "./components/counter";
 
 //jquery stuff :(
 import setMenu from "./lib/set_menu";
@@ -65,6 +66,7 @@ multipleRender(GalleryHeader, ".bs-gallery-header");
 multipleRender(ProjectsAbout, ".bs-projects-about");
 multipleRender(VideoHeader, ".bs-video-header");
 multipleRender(Carousel, ".bs-carousel");
+multipleRender(Counter, ".bs-counter");
 
 //jquery calls
 setMenu();
