@@ -694,17 +694,21 @@ button {
 
   &__spot {
     cursor: pointer;
-    transition: transform .7s;
 
-    &:hover {
-      transform: scale(1.3);
+    &-image {
+      transition: transform .7s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
+
 
     circle {
       stroke: #fff;
       stroke-width: 2px;
     }
-    
+
   }
 }
 
