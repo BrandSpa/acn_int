@@ -44,7 +44,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</filter>
 		<pattern id="pin-aleppo" patternUnits="userSpaceOnUse" height="75" width="75" x="37.648809523809526" y="37.648809523809526">
 			<image x="0" y="0" height="75" width="75"
-				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/pins/aleppo.jp">
+				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
 			</image>
 		</pattern>
 		<pattern id="pin-bosra" patternUnits="userSpaceOnUse" height="75" width="75" x="37.648809523809526" y="37.648809523809526">
