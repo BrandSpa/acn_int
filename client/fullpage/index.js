@@ -64,7 +64,6 @@ $(function domLoaded() {
     $('.fullpage-nav').removeClass('fullpage-nav--open');
   });
 
-
   $('.fullpage--menu__share > a').on('click', function() {
     var $ul = $(this).find('ul');
     if($ul.hasClass('fullpage--menu__share--open')) {
@@ -76,6 +75,7 @@ $(function domLoaded() {
 
   $('.map-points__spot').on('click', function() {
     $.fn.fullpage.setAllowScrolling(false);
+    $('body').addClass('scroll-stoped');
     var content = $(this).data('content');
 
     if($('.spot-content.' + content).hasClass('spot-content--open')) {
