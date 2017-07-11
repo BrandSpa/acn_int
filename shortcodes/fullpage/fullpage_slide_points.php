@@ -93,14 +93,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 </g>
 
-<g transform="translate(1100, 750)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
-	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-		<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
-	</g>
-		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-			<tspan x="0" dy="1.4em">Ancient City of Bosra</tspan>
-		</text>
-</g>
+
 
 <g transform="translate(950, 610)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
@@ -140,7 +133,16 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<tspan x="0" dy="1.4em">Site of Palmyra</tspan>
 	</text>
 </g>
+
+<g transform="translate(1080, 850)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
+	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
+		<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
+	</g>
+		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
+			<tspan x="0" dy="1.4em">Ancient City of Bosra</tspan>
+		</text>
 </g>
+
 </svg>
 </div>
 </div>
