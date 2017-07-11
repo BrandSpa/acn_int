@@ -14,7 +14,10 @@ class Counter extends Component {
 
   componentWillUnmount() {
     let emmiter = window.mitt;
-    emmiter.off('runCounter', this.runCounter);
+    emmiter.off('runCounter', function() {
+      clearInterval(this.counterInterval);
+      this.runCounter()
+    });
   }
 
   runCounter = () => {
