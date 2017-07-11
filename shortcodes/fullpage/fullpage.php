@@ -50,10 +50,16 @@ function acn_fullpage_sc( $atts, $content ) {
 </script>
 
 <script type="text/javascript">
+	function setMapSize() {
+		$('.map-points').attr('width', $(window).width());
+		$('.map-points').attr('height', $(window).height());
+	}
+
 	onLoad(function() {
+		setMapSize();
+		
 		$(window).on('resize', function() {
-			$('.map-points').attr('width', $(window).width());
-			$('.map-points').attr('height', $(window).height());
+			setMapSize();
 		});
 	});
 </script>
