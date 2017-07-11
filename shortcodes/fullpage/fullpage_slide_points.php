@@ -23,6 +23,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     data-index="<?php echo $at['index_num'] ?>"
   >
   <div class="section__content">
+    <?php echo $content ?>
   <div class="map-points__container">
   <svg class="map-points" width="1409" height="695" preserveAspectRatio="xMidYMid slice" viewBox="153.6 54 1536 864">
   	<image class="hotspot__bg-image" width="1920" height="1080"
