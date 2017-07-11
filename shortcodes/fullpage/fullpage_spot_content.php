@@ -11,7 +11,7 @@ function acn_fullpage_spot_content_sc( $atts, $content ) {
   <div class="spot-content__container">
   <?php echo do_shortcode($content) ?>
   </div>
-  <button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
+  <button class="section__open section__close-spot-content" data-content="<?php echo $at['name'] ?>"> <i class="ion-close-round"></i> </button>
 </div>
 
 <?php

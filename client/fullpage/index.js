@@ -73,17 +73,21 @@ $(function domLoaded() {
     }
   });
 
-  $(".map-points__spot").on("click", function() {
+  $(".map-points__spot").on("click", function openSpotContent() {
     $.fn.fullpage.setAllowScrolling(false);
     $("body").addClass("scroll-stoped");
     var content = $(this).data("content");
 
-    if($(".spot-content." + content).hasClass("spot-content--open")) {
-      $(".spot-content." + content).removeClass("spot-content--open");
-    } else {
-      $(".spot-content." + content).addClass("spot-content--open");
-    }
-
+    $(".spot-content." + content).addClass("spot-content--open");
+    console.log($('.section__close-spot-content[data-content=""' + content + '""]'));
+    $('.section__close-spot-content[data-content=""' + content + '""]').addClass("section__close-spot-content--open");
   });
+
+  $(".section__close-spot-content").on("click", function() {
+    $.fn.fullpage.setAllowScrolling(true);
+    $("body").removeClass("scroll-stoped");
+    var content = $(this).data("content");
+    $(".spot-content." + content).removeClass("spot-content--open");
+  })
 
 });
