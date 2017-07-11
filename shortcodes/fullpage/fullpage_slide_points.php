@@ -16,7 +16,12 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] );
 	ob_start();
 ?>
-
+<div
+    class="section section--<?php echo $at['uniq_name'] ?>"
+    data-anchor="<?php echo $at['uniq_name'] ?>"
+    data-story="<?php echo $at['story_num'] ?>"
+    data-index="<?php echo $at['index_num'] ?>"
+  >
 <svg class="hotspots__world-map" width="1409" height="695" preserveAspectRatio="xMidYMid slice" viewBox="153.6 54 1536 864">
 	<image class="hotspot__bg-image" width="1920" height="1080"
 		xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://searchingforsyria.org//images/pins/earth-zoom.jpg">
@@ -214,7 +219,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 	</g>
 </svg>
-
+</div>
 <?php
 	return ob_get_clean();
 }
