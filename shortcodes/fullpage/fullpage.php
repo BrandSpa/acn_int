@@ -49,6 +49,15 @@ function acn_fullpage_sc( $atts, $content ) {
 	})
 </script>
 
+<script type="text/javascript">
+	onLoad(function() {
+		$(window).on('resize', function() {
+			$('.map-points').attr('width', $(window).width());
+			$('.map-points').attr('height', $(window).height());
+		});
+	});
+</script>
+
 	<div id="fullpage">
 		<?php echo do_shortcode($content) ?>
 	</div>
