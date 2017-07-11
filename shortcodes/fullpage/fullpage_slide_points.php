@@ -51,33 +51,33 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     				<feMergeNode in="SourceGraphic"></feMergeNode>
     			</feMerge>
     		</filter>
-    		<pattern id="pin-aleppo" patternUnits="userSpaceOnUse" height="75" width="75" x="37.648809523809526" y="37.648809523809526">
-    			<image x="0" y="0" height="75" width="75"
+    		<pattern id="pin-aleppo" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-bosra" patternUnits="userSpaceOnUse" height="75" width="75" x="37.648809523809526" y="37.648809523809526">
-    			<image x="0" y="0" height="75" width="75"
+    		<pattern id="pin-bosra" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-damascus" patternUnits="userSpaceOnUse" height="75" width="75" x="37.648809523809526" y="37.648809523809526">
-    			<image x="0" y="0" height="75" width="75"
+    		<pattern id="pin-damascus" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-qalat_salah_el_din" patternUnits="userSpaceOnUse" height="75" width="75" x="37.648809523809526" y="37.648809523809526">
-    			<image x="0" y="0" height="75" width="75"
+    		<pattern id="pin-qalat_salah_el_din" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-crac_des_chevaliers" patternUnits="userSpaceOnUse" height="75" width="75" x="37.648809523809526" y="37.648809523809526">
-    			<image x="0" y="0" height="75" width="75"
+    		<pattern id="pin-crac_des_chevaliers" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-palmyra" patternUnits="userSpaceOnUse" height="75" width="75" x="37.648809523809526" y="37.648809523809526">
-    			<image x="0" y="0" height="75" width="75"
+    		<pattern id="pin-palmyra" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
