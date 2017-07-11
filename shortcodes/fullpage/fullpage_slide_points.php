@@ -86,7 +86,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
     			<circle cx="0" cy="0" r="21" fill="url(#pin-aleppo)" filter="url(#pin-drop-shadow)"></circle>
 
-    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
+    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">ALEJANDRO</tspan>
     		</text>
     	</g>
@@ -105,7 +105,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
     			<circle cx="0" cy="0" r="21" fill="url(#pin-damascus)" filter="url(#pin-drop-shadow)"></circle>
 
-    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
+    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">Ancient City of Damascus</tspan>
     		</text>
     	</g>
@@ -114,7 +114,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     	<g transform="translate(1390, 310)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
     			<circle cx="0" cy="0" r="21" fill="url(#pin-qalat_salah_el_din)" filter="url(#pin-drop-shadow)"></circle>
-    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
+    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">Ancient Villages of</tspan>
     			<tspan x="0" dy="1.4em">Northern Syria</tspan>
     		</text>
@@ -124,7 +124,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
     			<circle cx="0" cy="0" r="21" fill="url(#pin-crac_des_chevaliers)" filter="url(#pin-drop-shadow)"></circle>
     		</g>
-    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
+    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">Crac des Chevaliers and</tspan>
     			<tspan x="0" dy="1.4em">Qal'at Salah El-Din</tspan>
     		</text>
@@ -134,7 +134,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
     			<circle cx="0" cy="0" r="21" fill="url(#pin-palmyra)" filter="url(#pin-drop-shadow)"></circle>
     		</g>
-    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
+    		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">Site of Palmyra</tspan>
     		</text>
     	</g>
