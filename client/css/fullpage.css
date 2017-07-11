@@ -1201,6 +1201,22 @@ button {
     stroke: #fff;
     stroke-width: 2px; }
 
+.pot-content {
+  z-index: 4;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  -webkit-transition: left .7s;
+  transition: left .7s; }
+  .pot-content--open {
+    left: 0; }
+  .pot-content__container {
+    width: 50%;
+    position: relative;
+    background: red;
+    height: 100%; }
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js
