@@ -83,6 +83,7 @@ require_once('shortcodes/fullpage/fullpage_slide_layers.php');
 require_once('shortcodes/fullpage/fullpage_slide_post.php');
 require_once('shortcodes/fullpage/fullpage_slide_video.php');
 require_once('shortcodes/fullpage/fullpage_slide_video_layers.php');
+require_once('shortcodes/fullpage/fullpage_slide_points.php');
 
 require_once('shortcodes/fullpage/vc/fullpage.php');
 require_once('shortcodes/fullpage/vc/fullpage_slide.php');
@@ -90,6 +91,7 @@ require_once('shortcodes/fullpage/vc/fullpage_slide_layers.php');
 require_once('shortcodes/fullpage/vc/fullpage_slide_post.php');
 require_once('shortcodes/fullpage/vc/fullpage_slide_video.php');
 require_once('shortcodes/fullpage/vc/fullpage_slide_video_layers.php');
+require_once('shortcodes/fullpage/vc/fullpage_slide_points.php');
 
 //METABOXES
 require_once('metaboxes/image_square.php');
