@@ -207,6 +207,7 @@ li {
       transition: left 500ms;
       background: #fff;
       padding: 5%;
+      box-shadow: 20px 20px 30px rgba(0,0,0,.3);
 
       @media #{$s} {
         padding: 10%;

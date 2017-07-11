@@ -711,7 +711,9 @@ li {
     -webkit-transition: left 500ms;
     transition: left 500ms;
     background: #fff;
-    padding: 5%; }
+    padding: 5%;
+    -webkit-box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3); }
     @media (max-width: 767px) {
       .section__post__content {
         padding: 10%;
