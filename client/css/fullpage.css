@@ -1187,6 +1187,9 @@ button {
   top: 0;
   left: 0; }
 
+.map-points__spot {
+  cursor: pointer; }
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js
