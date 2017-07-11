@@ -56,13 +56,34 @@ $(function domLoaded() {
     $.fn.fullpage.setAllowScrolling(false);
     $('body').addClass('scroll-stoped');
     $('.fullpage-nav').addClass('fullpage-nav--open');
-
   });
 
   $('.fullpage-nav__close').on('click', function closeNav() {
     $.fn.fullpage.setAllowScrolling(true);
     $('body').removeClass('scroll-stoped');
     $('.fullpage-nav').removeClass('fullpage-nav--open');
+  });
+
+
+  $('.fullpage--menu__share > a').on('click', function() {
+    var $ul = $(this).find('ul');
+    if($ul.hasClass('fullpage--menu__share--open')) {
+      $ul.removeClass('fullpage--menu__share--open');
+    } else {
+      $ul.addClass('fullpage--menu__share--open');
+    }
+  });
+
+  $('.map-points__spot').on('click', function() {
+    $.fn.fullpage.setAllowScrolling(false);
+    var content = $(this).data('content');
+
+    if($('.spot-content.' + content).hasClass('spot-content--open')) {
+      $('.spot-content.' + content).removeClass('spot-content--open');
+    } else {
+      $('.spot-content.' + content).addClass('spot-content--open');
+    }
+
   });
 
 });

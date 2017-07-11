@@ -35,25 +35,6 @@ function acn_fullpage_sc( $atts, $content ) {
 <script>
 	onLoad(function() {
 
-		$('.fullpage--menu__share > a').on('click', function() {
-			var $ul = $(this).find('ul');
-			if($ul.hasClass('fullpage--menu__share--open')) {
-				$ul.removeClass('fullpage--menu__share--open');
-			} else {
-				$ul.addClass('fullpage--menu__share--open');
-			}
-		});
-
-		$('.map-points__spot').on('click', function() {
-			var content = $(this).data('content');
-
-			if($('.spot-content.' + content).hasClass('spot-content--open')) {
-				$('.spot-content.' + content).removeClass('spot-content--open');
-			} else {
-				$('.spot-content.' + content).addClass('spot-content--open');
-			}
-
-		});
 
 	})
 </script>
@@ -155,8 +136,6 @@ function acn_fullpage_sc( $atts, $content ) {
 		}
 
 	</script>
-
-
 
 	<style>
 		#fullpage{
