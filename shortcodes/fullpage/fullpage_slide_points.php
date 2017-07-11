@@ -51,32 +51,32 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     				<feMergeNode in="SourceGraphic"></feMergeNode>
     			</feMerge>
     		</filter>
-    		<pattern id="pin-aleppo" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    		<pattern id="pin-aleppo" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
     			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-bosra" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    		<pattern id="pin-bosra" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
     			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-damascus" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    		<pattern id="pin-damascus" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
     			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-qalat_salah_el_din" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    		<pattern id="pin-qalat_salah_el_din" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
     			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-crac_des_chevaliers" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    		<pattern id="pin-crac_des_chevaliers" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
     			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
     		</pattern>
-    		<pattern id="pin-palmyra" patternUnits="userSpaceOnUse" height="50" width="50" x="37.648809523809526" y="37.648809523809526">
+    		<pattern id="pin-palmyra" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
     			<image x="0" y="0" height="50" width="50"
     				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
     			</image>
@@ -84,7 +84,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     	</defs>
     	<g transform="translate(1140, 310)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-    			<circle cx="0" cy="0" r="37.648809523809526" fill="url(#pin-aleppo)" filter="url(#pin-drop-shadow)"></circle>
+    			<circle cx="0" cy="0" r="21" fill="url(#pin-aleppo)" filter="url(#pin-drop-shadow)"></circle>
 
     		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">ALEJANDRO</tspan>
@@ -94,7 +94,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
     	<g transform="translate(1100, 750)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-    			<circle cx="0" cy="0" r="37.648809523809526" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
+    			<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
     		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">Ancient City of Bosra</tspan>
     		</text>
@@ -103,7 +103,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
     	<g transform="translate(950, 610)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;">
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-    			<circle cx="0" cy="0" r="37.648809523809526" fill="url(#pin-damascus)" filter="url(#pin-drop-shadow)"></circle>
+    			<circle cx="0" cy="0" r="21" fill="url(#pin-damascus)" filter="url(#pin-drop-shadow)"></circle>
 
     		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">Ancient City of Damascus</tspan>
@@ -113,7 +113,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
     	<g transform="translate(1390, 310)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-    			<circle cx="0" cy="0" r="37.648809523809526" fill="url(#pin-qalat_salah_el_din)" filter="url(#pin-drop-shadow)"></circle>
+    			<circle cx="0" cy="0" r="21" fill="url(#pin-qalat_salah_el_din)" filter="url(#pin-drop-shadow)"></circle>
     		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">Ancient Villages of</tspan>
     			<tspan x="0" dy="1.4em">Northern Syria</tspan>
@@ -122,7 +122,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     	</g>
     	<g transform="translate(1000, 420)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;">
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-    			<circle cx="0" cy="0" r="37.648809523809526" fill="url(#pin-crac_des_chevaliers)" filter="url(#pin-drop-shadow)"></circle>
+    			<circle cx="0" cy="0" r="21" fill="url(#pin-crac_des_chevaliers)" filter="url(#pin-drop-shadow)"></circle>
     		</g>
     		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">Crac des Chevaliers and</tspan>
@@ -132,7 +132,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     	</g>
     	<g transform="translate(1200, 470)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;">
     		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-    			<circle cx="0" cy="0" r="37.648809523809526" fill="url(#pin-palmyra)" filter="url(#pin-drop-shadow)"></circle>
+    			<circle cx="0" cy="0" r="21" fill="url(#pin-palmyra)" filter="url(#pin-drop-shadow)"></circle>
     		</g>
     		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
     			<tspan x="0" dy="1.4em">Site of Palmyra</tspan>
