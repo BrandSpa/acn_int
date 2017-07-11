@@ -104,3 +104,11 @@ foreach( $post_types as $post_type) {
 }
 
 add_theme_support( 'post-thumbnails', ['post', 'gallery', 'video'] );
+
+
+add_filter( 'upload_mimes', 'add_svg_mime' );
+
+function add_svg_mime( $existing_mimes = array() ) {
+	$existing_mimes['svg'] = 'image/svg+xml';
+	return $existing_mimes;
+}

@@ -35,8 +35,6 @@ function acn_fullpage_sc( $atts, $content ) {
 <script>
 	onLoad(function() {
 
-		console.log('onload', $('.fullpage--menu__share > a'));
-
 		$('.fullpage--menu__share > a').on('click', function() {
 			var $ul = $(this).find('ul');
 			console.log($ul);
