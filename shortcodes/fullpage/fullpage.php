@@ -48,7 +48,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		$('.map-points__spot').on('click', function() {
 			var content = $(this).data('content');
 			console.log($( '.spot-content.' + content ));
-			$( '.spot-content.' + content ).addClass('.spot-content--open');
+			$( '.spot-content.' + content ).addClass('spot-content--open');
 		});
 
 	})
