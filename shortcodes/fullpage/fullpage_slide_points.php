@@ -82,7 +82,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 </defs>
 
-<g transform="translate(1219.36, 2345.68)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;" data-content="Telleskuf">
+<g transform="translate(1219.55, 155.68)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;" data-content="Telleskuf">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-aleppo)" filter="url(#pin-drop-shadow)"></circle>
 		</g>
@@ -91,7 +91,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 </g>
 
-<g transform="translate(950, 610)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;" data-content="Alqosh">
+<g transform="translate(1422.68, 125)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;" data-content="Alqosh">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-damascus)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
@@ -101,7 +101,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 </g>
 
-<g transform="translate(1390, 310)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
+<g transform="translate(1302.85, 225.32)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-qalat_salah_el_din)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
@@ -110,7 +110,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 </g>
 
-<g transform="translate(1000, 420)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;">
+<g transform="translate(1219.66, 275.41)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-crac_des_chevaliers)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
@@ -119,7 +119,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	</text>
 </g>
 
-<g transform="translate(1450, 150)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;">
+<g transform="translate(1139.8, 352.83)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-palmyra)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
@@ -128,7 +128,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	</text>
 </g>
 
-<g transform="translate(1080, 850)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
+<g transform="translate(1013, 411.91)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
@@ -137,16 +137,16 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 </g>
 
-<g transform="translate(1080, 850)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
+<g transform="translate(1439.68, 409.84)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
 		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-			<tspan x="0" dy="1.4em"> Bahzani</tspan>
+			<tspan x="0" dy="1.4em">Bahzani</tspan>
 		</text>
 </g>
 
-<g transform="translate(1080, 850)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
+<g transform="translate(1351.85, 466.08)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
@@ -155,8 +155,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 </g>
 
-
-<g transform="translate(1080, 850)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
+<g transform="translate(1276.32, 625.78)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
@@ -165,7 +164,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 </g>
 
-<g transform="translate(1080, 850)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
+<g transform="translate(1236.11, 786.49)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
@@ -174,7 +173,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 </g>
 
-<g transform="translate(1080, 850)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
+<g transform="translate(1072.1, 774.85)" class="map-points__spot"  style="opacity: 1; fill-opacity: 1;">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
