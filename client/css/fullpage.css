@@ -1182,6 +1182,11 @@ button {
         color: #fff;
         font-size: 20px; }
 
+.map-points__container {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js
