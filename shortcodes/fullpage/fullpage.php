@@ -42,13 +42,17 @@ function acn_fullpage_sc( $atts, $content ) {
 			} else {
 				$ul.addClass('fullpage--menu__share--open');
 			}
-
 		});
 
 		$('.map-points__spot').on('click', function() {
 			var content = $(this).data('content');
-			console.log($( '.spot-content.' + content ));
-			$( '.spot-content.' + content ).addClass('spot-content--open');
+
+			if($('.spot-content.' + content).hasClass('spot-content--open')) {
+				$('.spot-content.' + content).removeClass('spot-content--open');
+			} else {
+				$('.spot-content.' + content).addClass('spot-content--open');
+			}
+
 		});
 
 	})
