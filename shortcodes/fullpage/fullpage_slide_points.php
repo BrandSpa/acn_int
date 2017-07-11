@@ -137,6 +137,14 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	</g>
 </svg>
 </div>
+
+<script type="text/javascript">
+  onLoad(function() {
+    $(window).on('resize', function() {
+      console.log($(window).height(), $(window).width());
+    });
+  });
+</script>
 <?php
 	return ob_get_clean();
 }
