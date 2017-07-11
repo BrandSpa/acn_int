@@ -7,17 +7,18 @@ class Counter extends Component {
 
   componentDidMount = () => {
     let emmiter = window.mitt;
-    emmiter.on('runCounter', this.runCounter);
-    let bounding = this.counter.getBoundingClientRect();
-    console.log(bounding);
+    emmiter.on('runCounter', this.callCounter);
   }
 
   componentWillUnmount() {
     let emmiter = window.mitt;
-    emmiter.off('runCounter', function() {
-      clearInterval(this.counterInterval);
-      this.runCounter()
-    });
+    emmiter.off('runCounter', this.callCounter);
+  }
+
+  callCounter = () => {
+    clearInterval(this.counterInterval);
+    this.setState({currentNum: 0});
+    this.runCounter();
   }
 
   runCounter = () => {
