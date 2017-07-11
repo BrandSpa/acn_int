@@ -694,6 +694,10 @@ button {
 
   &__spot {
     cursor: pointer;
+    transition: transform .7s;
+    &:hover {
+      transform: scale(1.3);
+    }
   }
 }
 
