@@ -86,6 +86,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<tspan x="0" dy="1.4em">ALEJANDRO</tspan>
 		</text>
 	</g>
+	</g>
+
 	<g transform="translate(1100, 750)" class="hotspot__pin js-show-pano" data-pano-image="/images/panoramas/bosra.jpg" data-audio-track="/media/Bosra-English.mp3" data-pano-yaw="480" data-pano-id="1" ga-on="click" ga-event-category="map" ga-event-action="open" ga-event-label="bosra-360view" style="opacity: 1; fill-opacity: 1;">
 		<g class="hotspot__pin-image" fill="#fff" fill-rule="nonzero">
 			<circle class="hotspot__pin-circle" cx="0" cy="0" r="37.648809523809526" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
@@ -93,6 +95,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<tspan x="0" dy="1.4em">Ancient City of Bosra</tspan>
 		</text>
 	</g>
+	</g>
+
 	<g transform="translate(950, 610)" class="hotspot__pin js-show-pano" data-pano-image="/images/panoramas/damascus.jpg" data-audio-track="/media/Damascus-English.mp3" data-pano-yaw="0" data-pano-id="2" ga-on="click" ga-event-category="map" ga-event-action="open" ga-event-label="damascus-360view" style="opacity: 1; fill-opacity: 1;">
 		<g class="hotspot__pin-image" fill="#fff" fill-rule="nonzero">
 			<circle class="hotspot__pin-circle" cx="0" cy="0" r="37.648809523809526" fill="url(#pin-damascus)" filter="url(#pin-drop-shadow)"></circle>
@@ -101,6 +105,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<tspan x="0" dy="1.4em">Ancient City of Damascus</tspan>
 		</text>
 	</g>
+	</g>
+
 	<g transform="translate(1390, 310)" class="hotspot__pin js-show-pano" data-pano-image="/images/panoramas/qalat_salah_el_din.jpg" data-audio-track="/media/NorthernSyria-English.mp3" data-pano-yaw="30" data-pano-id="3" ga-on="click" ga-event-category="map" ga-event-action="open" ga-event-label="qalat_salah_el_din-360view" style="opacity: 1; fill-opacity: 1;">
 		<g class="hotspot__pin-image" fill="#fff" fill-rule="nonzero">
 			<circle class="hotspot__pin-circle" cx="0" cy="0" r="37.648809523809526" fill="url(#pin-qalat_salah_el_din)" filter="url(#pin-drop-shadow)"></circle>
@@ -108,6 +114,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<tspan x="0" dy="1.4em">Ancient Villages of</tspan>
 			<tspan x="0" dy="1.4em">Northern Syria</tspan>
 		</text>
+	</g>
 	</g>
 	<g transform="translate(1000, 420)" class="hotspot__pin js-show-pano" data-pano-image="/images/panoramas/crac_des_chevaliers.jpg" data-audio-track="/media/CracDesChevaliers-English.mp3" data-pano-yaw="0" data-pano-id="4" ga-on="click" ga-event-category="map" ga-event-action="open" ga-event-label="crac_des_chevaliers-360view" style="opacity: 1; fill-opacity: 1;">
 		<g class="hotspot__pin-image" fill="#fff" fill-rule="nonzero">
@@ -118,6 +125,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<tspan x="0" dy="1.4em">Qal'at Salah El-Din</tspan>
 		</text>
 	</g>
+	</g>
 	<g transform="translate(1200, 470)" class="hotspot__pin js-show-pano" data-pano-image="/images/panoramas/palmyra.jpg" data-audio-track="/media/Palmyra-English.mp3" data-pano-yaw="480" data-pano-id="5" ga-on="click" ga-event-category="map" ga-event-action="open" ga-event-label="palmyra-360view" style="opacity: 1; fill-opacity: 1;">
 		<g class="hotspot__pin-image" fill="#fff" fill-rule="nonzero">
 			<circle class="hotspot__pin-circle" cx="0" cy="0" r="37.648809523809526" fill="url(#pin-palmyra)" filter="url(#pin-drop-shadow)"></circle>
@@ -125,6 +133,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<text class="hotspot__pin-text" fill="#fff" dx="0" y="42.648809523809526" text-anchor="middle" style="display: inline-block;">
 			<tspan x="0" dy="1.4em">Site of Palmyra</tspan>
 		</text>
+	</g>
 	</g>
 </svg>
 </div>
