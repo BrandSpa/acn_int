@@ -642,7 +642,11 @@ button {
 .section__close-post {
   z-index: 12;
   display: none;
-
+  bottom: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  
   @media #{$s} {
     right: 20px;
     left: auto;
