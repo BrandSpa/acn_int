@@ -1196,6 +1196,9 @@ button {
   .map-points__spot:hover {
     -webkit-transform: scale(1.3);
     transform: scale(1.3); }
+  .map-points__spot circle {
+    stroke: #fff;
+    stroke-width: 2px; }
 
 /*!
  * fullPage 2.9.4
