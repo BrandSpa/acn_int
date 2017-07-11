@@ -111,7 +111,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 </g>
 
-<g transform="translate(1219.66, 275.41)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;" data-content="Baqofa">
+<g transform="translate(1219.66, 275.41)" class="map-points__spot" style="opacity: 1; fill-opacity: 1;" data-content="Batnaya">
 	<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 		<circle cx="0" cy="0" r="21" fill="url(#pin-crac_des_chevaliers)" filter="url(#pin-drop-shadow)"></circle>
 	</g>
