@@ -80,7 +80,7 @@ $(function domLoaded() {
 
     $(".spot-content." + content).addClass("spot-content--open");
     console.log($('.section__close-spot-content[data-content=""' + content + '""]'));
-    $('.section__close-spot-content[data-content=""' + content + '""]').addClass("section__close-spot-content--open");
+    $('.section__close-spot-content[data-content="' + content + '"]').addClass("section__close-spot-content--open");
   });
 
   $(".section__close-spot-content").on("click", function() {
