@@ -1154,7 +1154,7 @@ button {
   justify-content: center;
   height: 100%; }
 
-.section__close-post {
+.section__close-post, .section__close-spot-content {
   z-index: 12;
   display: none;
   bottom: 40px;
@@ -1162,10 +1162,10 @@ button {
   left: 0;
   right: 0; }
   @media (max-width: 767px) {
-    .section__close-post {
+    .section__close-post, .section__close-spot-content {
       right: 20px;
       left: auto; } }
-  .section__close-post--open {
+  .section__close-post--open, .section__close-spot-content--open {
     display: block; }
 
 .fullpage--menu {

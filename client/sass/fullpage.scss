@@ -639,14 +639,14 @@ button {
     height: 100%;
 }
 
-.section__close-post {
+.section__close-post, .section__close-spot-content {
   z-index: 12;
   display: none;
   bottom: 40px;
   position: absolute;
   left: 0;
   right: 0;
-  
+
   @media #{$s} {
     right: 20px;
     left: auto;

@@ -1,10 +1,10 @@
-import $ from 'jquery';
+import $ from "jquery";
 import "fullpage.js";
 import "lazysizes/plugins/bgset/ls.bgset";
 import "lazysizes";
-import slidePost from  './slide_post';
-import slideVideo from './slide_video';
-import counter from './counter';
+import slidePost from  "./slide_post";
+import slideVideo from "./slide_video";
+import counter from "./counter";
 
 
 //lazyload configuration
@@ -52,36 +52,36 @@ $(function domLoaded() {
     $.fn.fullpage.moveSectionDown();
   });
 
-  $('.indicator').on('click', function openNav() {
+  $(".indicator").on("click", function openNav() {
     $.fn.fullpage.setAllowScrolling(false);
-    $('body').addClass('scroll-stoped');
-    $('.fullpage-nav').addClass('fullpage-nav--open');
+    $("body").addClass("scroll-stoped");
+    $(".fullpage-nav").addClass("fullpage-nav--open");
   });
 
-  $('.fullpage-nav__close').on('click', function closeNav() {
+  $(".fullpage-nav__close").on("click", function closeNav() {
     $.fn.fullpage.setAllowScrolling(true);
-    $('body').removeClass('scroll-stoped');
-    $('.fullpage-nav').removeClass('fullpage-nav--open');
+    $("body").removeClass("scroll-stoped");
+    $(".fullpage-nav").removeClass("fullpage-nav--open");
   });
 
-  $('.fullpage--menu__share > a').on('click', function() {
-    var $ul = $(this).find('ul');
-    if($ul.hasClass('fullpage--menu__share--open')) {
-      $ul.removeClass('fullpage--menu__share--open');
+  $(".fullpage--menu__share > a").on("click", function() {
+    var $ul = $(this).find("ul");
+    if($ul.hasClass("fullpage--menu__share--open")) {
+      $ul.removeClass("fullpage--menu__share--open");
     } else {
-      $ul.addClass('fullpage--menu__share--open');
+      $ul.addClass("fullpage--menu__share--open");
     }
   });
 
-  $('.map-points__spot').on('click', function() {
+  $(".map-points__spot").on("click", function() {
     $.fn.fullpage.setAllowScrolling(false);
-    $('body').addClass('scroll-stoped');
-    var content = $(this).data('content');
+    $("body").addClass("scroll-stoped");
+    var content = $(this).data("content");
 
-    if($('.spot-content.' + content).hasClass('spot-content--open')) {
-      $('.spot-content.' + content).removeClass('spot-content--open');
+    if($(".spot-content." + content).hasClass("spot-content--open")) {
+      $(".spot-content." + content).removeClass("spot-content--open");
     } else {
-      $('.spot-content.' + content).addClass('spot-content--open');
+      $(".spot-content." + content).addClass("spot-content--open");
     }
 
   });
