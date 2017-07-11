@@ -1201,7 +1201,7 @@ button {
     stroke: #fff;
     stroke-width: 2px; }
 
-.pot-content {
+.spot-content {
   z-index: 4;
   position: absolute;
   height: 100%;
@@ -1209,9 +1209,9 @@ button {
   left: -100%;
   -webkit-transition: left .7s;
   transition: left .7s; }
-  .pot-content--open {
+  .spot-content--open {
     left: 0; }
-  .pot-content__container {
+  .spot-content__container {
     width: 50%;
     position: relative;
     background: red;

@@ -712,14 +712,14 @@ button {
   }
 }
 
-.pot-content {
+.spot-content {
   z-index: 4;
   position: absolute;
   height: 100%;
   top: 0;
   left: -100%;
   transition: left .7s;
-  
+
   &--open {
     left: 0;
   }

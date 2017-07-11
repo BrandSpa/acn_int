@@ -184,14 +184,11 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		</text>
 </g>
 
-
-
 </svg>
 </div>
 	</div>
 
 </div>
-
 
 <?php
 return ob_get_clean();
