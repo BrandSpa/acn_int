@@ -36,7 +36,7 @@ function bs_tinymce_fix( $init )
     // html elements being stripped
     $init['extended_valid_elements'] = 'div[*], article[*]';
 
-		$in['wpautop'] = false;
+		$init['wpautop'] = false;
 
 		$init['paste_remove_spans'] = false;
 
@@ -48,6 +48,7 @@ function bs_tinymce_fix( $init )
 
     // don't remove redundant BR
     $init['remove_redundant_brs'] = false;
+
     $init['forced_root_block'] = false;
 
     // pass back to wordpress

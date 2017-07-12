@@ -1,6 +1,6 @@
 <div class="map-points__content">
     <h2 style="line-height: 62px; font-weight: 300;">Nineveh Plains Reconstruction Process</h2>
-  <div class="col-6-l" style="padding: 0">
+  <div class="map-points__content-left">
     <ul class="nineveh-list">
       <li>
        <h4 style="color: #fff;">[bs_counter num="12970"]</h4>
@@ -20,7 +20,7 @@
       </li>
     </ul>
   </div>
-  <div class="col-6-l" style="padding: 0">
+  <div class="map-points__content-right">
     <ul class="nineveh-list--left">
       <li>
         <h3 style="color: #fff;float: left">[bs_counter num="14880"]</h3>
