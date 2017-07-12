@@ -30,7 +30,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<div class="map-points__container">
 			<svg class="map-points" width="1409" height="695" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080">
 				<image class="hotspot__bg-image" width="1920" height="1080"
-				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/fondoBaja.jpg">
+				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/fondoSin.jpg">
 			</image>
 			<defs>
 				<filter id="pin-drop-shadow" height="150%" width="150%" x="-0.2">
