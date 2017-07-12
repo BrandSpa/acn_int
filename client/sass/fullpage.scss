@@ -661,6 +661,9 @@ button {
     display: block;
   }
 }
+.scroll-stoped .fullpage--menu {
+  display: none;
+}
 
 .fullpage--menu {
   position: absolute;

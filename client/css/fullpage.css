@@ -1172,6 +1172,9 @@ button {
   .section__close-post--open, .section__close-spot-content--open {
     display: block; }
 
+.scroll-stoped .fullpage--menu {
+  display: none; }
+
 .fullpage--menu {
   position: absolute;
   right: 40px;
