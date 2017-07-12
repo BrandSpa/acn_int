@@ -32,17 +32,14 @@ function acn_fullpage_sc( $atts, $content ) {
 	ob_start();
 ?>
 
-<script>
-	onLoad(function() {
-
-
-	})
-</script>
 
 <script type="text/javascript">
 	function setMapSize() {
 		$('.map-points').attr('width', $(window).width());
 		$('.map-points').attr('height', $(window).height());
+		if($(window).width() < 767) {
+			$('.map-points').attr('viewBox', '250 0 1920 1080');
+		}
 	}
 
 	onLoad(function() {
