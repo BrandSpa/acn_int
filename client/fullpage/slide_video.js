@@ -26,6 +26,7 @@ function slideVideo($fp) {
     } else {
       openVideo.call(this, $videoSection);
     }
+
   }
 
   $(function() {
