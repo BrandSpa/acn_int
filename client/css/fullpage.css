@@ -1227,8 +1227,8 @@ button {
       fill-opacity: 0;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      -webkit-animation-delay: 4s;
-      animation-delay: 4s; } }
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s; } }
 
 .map-points__container {
   position: absolute;
