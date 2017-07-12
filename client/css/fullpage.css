@@ -1223,10 +1223,12 @@ button {
   animation: spotEnter 2.5s; }
   @media (max-width: 767px) {
     .active .map-points__spot {
+      opacity: 0;
+      fill-opacity: 0;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      -webkit-animation-delay: 3s;
-      animation-delay: 3s; } }
+      -webkit-animation-delay: 4s;
+      animation-delay: 4s; } }
 
 .map-points__container {
   position: absolute;
@@ -1240,8 +1242,8 @@ button {
   z-index: 2; }
   @media (max-width: 767px) {
     .map-points__content {
-      -webkit-animation: pointsContentMobile 3s;
-      animation: pointsContentMobile 3s;
+      -webkit-animation: pointsContentMobile 4s;
+      animation: pointsContentMobile 4s;
       opacity: 0; } }
 
 .map-points__spot {

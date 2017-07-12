@@ -715,9 +715,12 @@ button {
 
 .active .map-points__spot {
   animation: spotEnter 2.5s;
+
   @media #{$s} {
+    opacity: 0;
+    fill-opacity: 0;
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 4s;
   }
 }
 
@@ -734,7 +737,7 @@ button {
     padding-top: 8%;
     z-index: 2;
     @media #{$s} {
-      animation: pointsContentMobile 3s;
+      animation: pointsContentMobile 4s;
       opacity: 0;
     }
   }
