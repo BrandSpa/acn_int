@@ -30,3 +30,23 @@ add_action( 'init', 'deactivate_plugin_conditional' );
 //remove emojies script
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+function bs_tinymce_fix( $init )
+{
+    // html elements being stripped
+    $init['extended_valid_elements'] = 'div[*], article[*]';
+
+    // don't remove line breaks
+    $init['remove_linebreaks'] = false;
+
+    // convert newline characters to BR
+    $init['convert_newlines_to_brs'] = true;
+
+    // don't remove redundant BR
+    $init['remove_redundant_brs'] = false;
+
+    // pass back to wordpress
+    return $init;
+}
+
+add_filter('tiny_mce_before_init', 'bs_tinymce_fix');
