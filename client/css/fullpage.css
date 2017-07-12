@@ -1188,7 +1188,7 @@ button {
         color: #fff;
         font-size: 20px; }
 
-@-webkit-keyframes spotEnter() {
+@-webkit-keyframes spotEnter {
   from {
     opacity: 0;
     fill-opacity: 0; }
@@ -1196,7 +1196,7 @@ button {
     opacity: 1;
     fill-opacity: 1; } }
 
-@keyframes spotEnter() {
+@keyframes spotEnter {
   from {
     opacity: 0;
     fill-opacity: 0; }
@@ -1205,8 +1205,8 @@ button {
     fill-opacity: 1; } }
 
 .active .map-points__spot {
-  -webkit-animation: spotEnter .7s;
-  animation: spotEnter .7s; }
+  -webkit-animation: spotEnter 2s;
+  animation: spotEnter 2s; }
 
 .map-points__container {
   position: absolute;
