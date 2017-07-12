@@ -20,10 +20,11 @@ class Post extends React.Component {
     const imgUrl = Array.isArray(post_image) && post_image.length > 1
       ? cleanEmpty(post_image)
       : post_image;
-    let title = post_title;
+    let title = post_title ? post_title : "";
+    let short = post.post_short ? post.post_short : "";
 
     if (window.innerWidth <= "767") {
-      title = post_title.substring(0, 70) + "...";
+      title = title.substring(0, 70) + "...";
     }
 
     return (
@@ -54,7 +55,7 @@ class Post extends React.Component {
             style={!imgUrl.length > 0 ? { width: "100%" } : {}}
           >
             <h5><a href={post.post_permalink}>{title}</a></h5>
-            <p>{`${post.post_short.substring(0, 220)}...`}</p>
+            <p>{`${short.substring(0, 220)}...`}</p>
             <a
               href={post.post_permalink}
               className="grid-item__content__texts__readmore"

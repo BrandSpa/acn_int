@@ -1,0 +1,24 @@
+<div class="map-points__content">
+  <div class="col-6-l">
+    <h2 style="line-height: 62px; font-weight: 300;">Nineveh Plains Reconstruction Process</h2>
+
+    <ul class="nineveh-list">
+      <li>
+       <h4 style="color: #fff;">[bs_counter num="12970"]</h4>
+       <span>Damaged Houses</span>
+      </li>
+       <li>
+        <h4 style="color: #fff;">[bs_counter num="1233"]</h4>
+        <span>Totally Destroyed</span>
+      </li>
+      <li>
+        <h4 style="color: #fff;">[bs_counter num="3521"]</h4>
+        <span>Burnt</span>
+      </li>
+      <li>
+        <h4 style="color: #fff;">[bs_counter num="8216"]</h4>
+        <span>Partially Damaged</span>
+      </li>
+    </ul>
+  </div>
+</div>

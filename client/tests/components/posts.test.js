@@ -16,19 +16,14 @@ describe('Posts component', () => {
 
 	it('should show 3 posts', () => {
 		let posts = [{id: 1}, {id: 2}, {id: 3}];
-		let wrapper = mount(<Posts />);
-		wrapper.setState({ posts });
+		let wrapper = mount(<Posts posts={posts} />);
 		expect(wrapper.find('.grid-item').length).toBe(3);
 	})
 
 	it('should get posts on componentWillMount', () => {
-		let posts = {data: [{id: 1}, {id: 2}, {id: 3}]};
-		const promise = Promise.resolve(posts);
-		sinon.stub(axios, 'post', () => promise);
-		let wrapper = mount(<Posts />);
-		return promise.then(() => {
-			expect(wrapper.state().posts).toEqual(posts.data);
-			expect(wrapper.find('.grid-item').length).toBe(3);
-		});
+		let posts = [{id: 1}, {id: 2}, {id: 3}];
+		let wrapper = mount(<Posts posts={posts} />);
+		expect(wrapper.props().posts).toEqual(posts);
+		expect(wrapper.find('.grid-item').length).toBe(3);
 	})
 })
