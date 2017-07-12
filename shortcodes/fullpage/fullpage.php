@@ -39,7 +39,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		$('.map-points').attr('height', $(window).height());
 		if($(window).width() < 767) {
 			$('.map-points').attr('viewBox', '250 0 1920 1080');
-			$('.map-points__spots').attr('transform', 'translate(-40 100)');
+			$('.map-points__spots').attr('transform', 'translate(-40, 100)');
 		}
 	}
 
