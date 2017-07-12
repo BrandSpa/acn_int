@@ -44,6 +44,7 @@ function bs_tinymce_fix( $init )
 
     // don't remove redundant BR
     $init['remove_redundant_brs'] = false;
+    $init['forced_root_block'] = false;
 
     // pass back to wordpress
     return $init;
