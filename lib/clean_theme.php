@@ -36,8 +36,6 @@ function bs_tinymce_fix( $init )
     // html elements being stripped
     $init['extended_valid_elements'] = 'div[*], article[*]';
 
-		$init['wpautop'] = false;
-
 		$init['paste_remove_spans'] = false;
 
     // don't remove line breaks
@@ -51,10 +49,11 @@ function bs_tinymce_fix( $init )
 
     $init['forced_root_block'] = false;
 
-    // pass back to wordpress
+		$init['wpautop'] = false;
+
     return $init;
 }
 
 add_filter('tiny_mce_before_init', 'bs_tinymce_fix');
 
-remove_filter( 'the_content', 'wpautop' );
+// remove_filter( 'the_content', 'wpautop' );
