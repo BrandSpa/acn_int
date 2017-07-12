@@ -35,13 +35,13 @@ function stripe_create_customer($api_key, $customer) {
       "email" => $customer['email'],
       "source" => $customer['stripe_token']
     ));
-      
+
     return $customer;
 
   } catch(Exception $e) {
     return $e->getMessage();
   }
-  
+
 }
 
 function stripe_create_charge($api_key, $charge) {
@@ -99,7 +99,7 @@ function stripe_update_plan($api_key, $plan) {
     } catch(Exception $e) {
       return $e;
     }
-  
+
 }
 
 function stripe_create_subscription($api_key, $charge) {
@@ -107,8 +107,9 @@ function stripe_create_subscription($api_key, $charge) {
 
   try {
     $subscription = \Stripe\Subscription::create(array(
-      "customer" => $charge['customer'], //"cus_9MzzzON1VtZiKY",
-      "plan" => $charge['plan'] //"donation-55"
+      "customer" => $charge["customer"], //"cus_9MzzzON1VtZiKY",
+      "plan" => $charge["plan"], //"donation-55"
+      "trial_period_days" => $charge["trial_period_days"]
     ));
 
     return $subscription;
@@ -116,7 +117,7 @@ function stripe_create_subscription($api_key, $charge) {
   } catch(Exception $e) {
     return $e;
   }
-  
+
 }
 
 function get_plan_name($amount) {
@@ -139,10 +140,13 @@ function stripe_monthly($api_key, $data) {
   } else {
     $plan = stripe_create_plan($api_key, $data);
   }
-  
+
   $customer = stripe_create_customer($api_key, $data);
-  $charge = array();
-  $charge['customer'] = $customer->id;
-  $charge['plan'] = $plan->id;
-  return stripe_create_subscription($api_key, $charge);
+
+  $subscription = array();
+  $subscription['customer'] = $customer->id;
+  $subscription['plan'] = $plan->id;
+  $subscription['trial_period_days'] = isset($data['trial_period_days']) ? $data['trial_period_days'] : null;
+  
+  return stripe_create_subscription($api_key, $subscription);
 }

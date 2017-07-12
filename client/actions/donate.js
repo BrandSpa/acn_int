@@ -21,13 +21,14 @@ export function stripeToken(state: Object) : Function {
 }
 
 export function stripeCharge(state: Object) {
-  const { contact, currency, amount, donation_type, stripe: { token } } = state;
+  const { contact, currency, amount, donation_type, trial_period_days = 0, stripe: { token } } = state;
 
   const data = {
     ...contact,
     currency,
     amount,
     donation_type,
+    trial_period_days,
     stripe_token: token
   };
 

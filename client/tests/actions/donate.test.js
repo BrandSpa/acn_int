@@ -37,13 +37,29 @@ describe("donate actions", () => {
       currency: "",
       amount: "",
       donation_type: "",
+      trial_period_days: 30,
       stripe: { token: "" }
     };
+
+  const exptected =  {
+    currency: "",
+    amount: "",
+    donation_type: "",
+    trial_period_days: "30",
+    stripe_token: ""
+  };
+
     const response = { customer: "cus_123", id: "id_123" };
+
     moxios.stubRequest(endpoint, { response });
+
     return actions
       .stripeCharge(state)
-      .then(res => expect(res.data).toEqual(response));
+      .then(res => {
+        const dataSend = qs.parse(res.config.data);
+        expect(dataSend.data).toEqual(exptected);
+        expect(res.data).toEqual(response);
+      });
   });
 
   it("convertloop store", () => {
@@ -118,7 +134,7 @@ describe("donate actions", () => {
       },
       errors: { stripe: {}, contact: {} }
     };
-    
+
     const response = {};
 
     moxios.stubRequest(endpoint, { response });

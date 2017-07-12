@@ -134,8 +134,8 @@ add_action( 'wp_ajax_stripe_charge', 'stripe_charge' );
 function stripe_charge() {
   $data = $_POST['data'];
   $apiKey =  get_option('stripe_key_private');
-  $res = array('donation_type fail');
-
+  $res = array([ 'err' => 'donation_type fail']);
+  
   if($data['donation_type'] == 'monthly') {
     $res = stripe_monthly($apiKey, $data);
   }

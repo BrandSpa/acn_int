@@ -10,25 +10,25 @@ class Four extends Component {
 	}
 
 	handleYes = () => {
-		
+
 		actions.stripeToken(this.props).then(res => {
 			if (res.id) {
 				const stripe = { ...this.props.stripe, token: res.id};
 				this.setState({ loading: true, stripe });
 
 				actions
-					.stripeCharge({ ...this.props, stripe, donation_type: "monthly"  })
+					.stripeCharge({ ...this.props, stripe, donation_type: "monthly", "trial_period_days": 30  })
 					.then(res => this.completeTransaction(res.data));
 			}
 		});
 	};
 
-	handleNo = (e) => {
+	handleNo = e  => {
 		e.preventDefault();
 		this.props.changeSection(1);
 	};
-	
-	completeTransaction = (stripeResponse = {}) => {
+
+	completeTransaction = ( stripeResponse = {} ) => {
     const { amount, donation_type } = this.props;
     const base = this.props.redirect["monthly"];
     const { customer, id } = stripeResponse;
@@ -64,7 +64,7 @@ class Four extends Component {
 				<div className="col-6 col-6-l">
 					<button onClick={this.handleNo} style={{ background: "transparent", border: "1px solid #F1364E", width:"100%", color: "#F1364E" }}>{texts.no}</button>
 				</div>
-				
+
 			</div>
 		)
 	}

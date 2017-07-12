@@ -45,7 +45,7 @@ describe('donate component', () => {
 		wrapper.instance().nextSection();
 		wrapper.instance().nextSection();
 		wrapper.instance().nextSection();
-		
+
 		let expected = {
 			contact: {
 				country: false,
@@ -72,4 +72,3 @@ describe('donate component', () => {
 
 
 })
-
