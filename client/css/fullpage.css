@@ -1205,8 +1205,8 @@ button {
     fill-opacity: 1; } }
 
 .active .map-points__spot {
-  -webkit-animation: spotEnter 2s;
-  animation: spotEnter 2s; }
+  -webkit-animation: spotEnter 3s;
+  animation: spotEnter 3s; }
 
 .map-points__container {
   position: absolute;
