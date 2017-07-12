@@ -1204,7 +1204,7 @@ button {
     opacity: 1;
     fill-opacity: 1; } }
 
-.active.map-points__spot {
+.active .map-points__spot {
   -webkit-animation: spotEnter .7s;
   animation: spotEnter .7s; }
 
