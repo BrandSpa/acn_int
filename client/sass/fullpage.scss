@@ -697,6 +697,16 @@ button {
     left: 0;
   }
 
+  &__content {
+    position: relative;
+    width: 50%;
+    padding-top: 8%;
+    z-index: 2;
+    @media #{$s} {
+      opacity: 0;
+    }
+  }
+
   &__spot {
     cursor: pointer;
 
@@ -736,6 +746,10 @@ button {
     background: #fff;
     height: 100%;
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
+
+    @media #{$s} {
+      width: 88%;
+    }
   }
 }
 

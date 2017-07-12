@@ -1193,6 +1193,15 @@ button {
   top: 0;
   left: 0; }
 
+.map-points__content {
+  position: relative;
+  width: 50%;
+  padding-top: 8%;
+  z-index: 2; }
+  @media (max-width: 767px) {
+    .map-points__content {
+      opacity: 0; } }
+
 .map-points__spot {
   cursor: pointer; }
   .map-points__spot-image {
@@ -1225,6 +1234,9 @@ button {
     height: 100%;
     -webkit-box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3); }
+    @media (max-width: 767px) {
+      .spot-content__container {
+        width: 88%; } }
 
 /*!
  * fullPage 2.9.4
