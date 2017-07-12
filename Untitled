@@ -24,19 +24,19 @@
     <ul class="nineveh-list--left">
       <li>
         <h3 style="color: #fff;float: left">[bs_counter num="14880"]</h3>
-        <span style="color: #fff;float: left">Number of families prior to 2014 (approx.)</span>
+        <span style="color: #fff;float: left">Number of families prior <br>to 2014 (approx.)</span>
       </li>
       <li>
         <h3 style="color: #fff;float: left">[bs_counter num="14880"]</h3>
-        <span style="color: #fff;float: left">Number of families prior to 2014 (approx.)</span>
+        <span style="color: #fff;float: left">Number of Christians Returned</span>
       </li>
       <li>
         <h3 style="color: #fff;float: left">[bs_counter num="14880"]</h3>
-        <span style="color: #fff;float: left">Number of families prior to 2014 (approx.)</span>
+        <span style="color: #fff;float: left">Number of Houses Registered to be Renovated</span>
       </li>
       <li>
         <h3 style="color: #fff;float: left">[bs_counter num="14880"]</h3>
-        <span style="color: #fff;float: left">Number of families prior to 2014 (approx.)</span>
+        <span style="color: #fff;float: left">Number of Houses Actually Being Renovated *</span>
       </li>
     </ul>
   </div>
