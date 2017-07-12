@@ -56,3 +56,5 @@ function bs_tinymce_fix( $init )
 }
 
 add_filter('tiny_mce_before_init', 'bs_tinymce_fix');
+
+remove_filter( 'the_content', 'wpautop' );
