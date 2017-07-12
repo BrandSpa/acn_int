@@ -157,8 +157,13 @@ li {
     z-index: 10;
 
     img {
-        filter: grayscale(100%) invert(100%);
+      filter: grayscale(100%) invert(100%);
     }
+
+  @media #{$s} {
+    top: 20px;
+    left: 20px;
+  }
 }
 
 .scroll-stoped .fullpage-logo {
@@ -663,6 +668,11 @@ button {
   top: 40px;
   z-index: 10;
 
+  @media #{$s} {
+    top: 20px;
+    right: 20px;
+  }
+
   &__share {
     &--open {
       display: block !important;
@@ -676,6 +686,9 @@ button {
       color: #fff;
       margin-bottom: 20px;
       display: block;
+      @media #{$s} {
+        margin-bottom: 10px;
+      }
 
       ul {
         display: none;

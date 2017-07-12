@@ -672,6 +672,10 @@ li {
   .fullpage-logo img {
     -webkit-filter: grayscale(100%) invert(100%);
     filter: grayscale(100%) invert(100%); }
+  @media (max-width: 767px) {
+    .fullpage-logo {
+      top: 20px;
+      left: 20px; } }
 
 .scroll-stoped .fullpage-logo {
   display: none; }
@@ -1173,6 +1177,10 @@ button {
   right: 40px;
   top: 40px;
   z-index: 10; }
+  @media (max-width: 767px) {
+    .fullpage--menu {
+      top: 20px;
+      right: 20px; } }
   .fullpage--menu__share--open {
     display: block !important; }
   .fullpage--menu ul {
@@ -1181,6 +1189,9 @@ button {
       color: #fff;
       margin-bottom: 20px;
       display: block; }
+      @media (max-width: 767px) {
+        .fullpage--menu ul li {
+          margin-bottom: 10px; } }
       .fullpage--menu ul li ul {
         display: none;
         padding: 10px; }
