@@ -1204,9 +1204,27 @@ button {
     opacity: 1;
     fill-opacity: 1; } }
 
+@-webkit-keyframes pointsContentMobile {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    z-index: 0; } }
+
+@keyframes pointsContentMobile {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    z-index: 0; } }
+
 .active .map-points__spot {
   -webkit-animation: spotEnter 2.5s;
   animation: spotEnter 2.5s; }
+  @media (max-width: 767px) {
+    .active .map-points__spot {
+      -webkit-animation-delay: 3s;
+      animation-delay: 3s; } }
 
 .map-points__container {
   position: absolute;
@@ -1220,6 +1238,8 @@ button {
   z-index: 2; }
   @media (max-width: 767px) {
     .map-points__content {
+      -webkit-animation: pointsContentMobile 3s;
+      animation: pointsContentMobile 3s;
       opacity: 0; } }
 
 .map-points__spot {
