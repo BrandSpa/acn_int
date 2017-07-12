@@ -737,6 +737,16 @@ button {
   }
 }
 
+.active .map-points__content  {
+
+  @media #{$s} {
+    animation: pointsContentMobile 1s;
+    animation-delay: 3s;
+    opacity: 0;
+  }
+
+}
+
 .map-points {
   &__container {
     position: absolute;
@@ -749,10 +759,6 @@ button {
     width: 50%;
     padding-top: 8%;
     z-index: 2;
-    @media #{$s} {
-      animation: pointsContentMobile 4s;
-      opacity: 0;
-    }
   }
 
   &__spot {
