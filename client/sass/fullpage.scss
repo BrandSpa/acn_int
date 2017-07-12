@@ -690,6 +690,22 @@ button {
   }
 }
 
+@keyframes spotEnter() {
+  from {
+  opacity: 0;
+  fill-opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    fill-opacity: 1;
+  }
+}
+
+.active.map-points__spot {
+  animation: spotEnter .7s;
+}
+
 .map-points {
   &__container {
     position: absolute;
