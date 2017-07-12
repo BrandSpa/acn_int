@@ -1238,15 +1238,17 @@ button {
       fill-opacity: 0;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      -webkit-animation-delay: 2s;
-      animation-delay: 2s; } }
+      -webkit-animation-delay: 3s;
+      animation-delay: 3s; } }
 
 @media (max-width: 767px) {
   .active .map-points__content {
     -webkit-animation: pointsContentMobile 1s;
     animation: pointsContentMobile 1s;
     -webkit-animation-delay: 3s;
-    animation-delay: 3s; } }
+    animation-delay: 3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; } }
 
 .map-points__container {
   position: absolute;
