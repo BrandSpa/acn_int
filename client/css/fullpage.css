@@ -1223,6 +1223,8 @@ button {
   animation: spotEnter 2.5s; }
   @media (max-width: 767px) {
     .active .map-points__spot {
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
       -webkit-animation-delay: 3s;
       animation-delay: 3s; } }
 
