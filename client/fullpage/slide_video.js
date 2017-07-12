@@ -2,6 +2,7 @@ function slideVideo($fp) {
 
   function closeVideo() {
     $fp.setAllowScrolling(true);
+    $("body").removeClass("scroll-stoped");
     var $videoSection = $(this).parent();
     var $iframe = $videoSection.find("iframe");
     $iframe.attr("src", "");
@@ -10,6 +11,7 @@ function slideVideo($fp) {
 
   function openVideo($videoSection) {
     $fp.setAllowScrolling(false);
+    $("body").addClass("scroll-stoped");
     $videoSection.addClass("section__video--open");
     var $iframe = $videoSection.find("iframe");
     var src = $iframe.data("src");

@@ -6,7 +6,6 @@ import slidePost from  "./slide_post";
 import slideVideo from "./slide_video";
 import counter from "./counter";
 
-
 //lazyload configuration
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
