@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
@@ -28,6 +28,7 @@ class Counter extends Component {
     let num = this.props.num;
     let isFloat = /^[0-9]+\.[0-9]+$/.test(num);
     let decimalLength = isFloat ? (num.split('.')[1] || []).length : 0;
+    let isLessThenTotal = () => 0 <= total;
 
     for (var i = 0; i <= total; i++) {
       let n = parseInt(num / total * i);
@@ -36,7 +37,7 @@ class Counter extends Component {
         n = parseFloat(num / total * i).toFixed(decimalLength);
       }
 
-      nums.push(n);
+      nums = nums.concat([n]);
     }
 
     this.updateNum(nums, num);
