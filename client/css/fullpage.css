@@ -1238,8 +1238,8 @@ button {
       fill-opacity: 0;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-      -webkit-animation-delay: 3s;
-      animation-delay: 3s; } }
+      -webkit-animation-delay: 4s;
+      animation-delay: 4s; } }
 
 @media (max-width: 767px) {
   .active .map-points__content {
