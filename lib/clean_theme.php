@@ -36,6 +36,10 @@ function bs_tinymce_fix( $init )
     // html elements being stripped
     $init['extended_valid_elements'] = 'div[*], article[*]';
 
+		$in['wpautop'] = false;
+
+		$init['paste_remove_spans'] = false;
+
     // don't remove line breaks
     $init['remove_linebreaks'] = false;
 
