@@ -85,7 +85,7 @@ $(function domLoaded() {
     $.fn.fullpage.setAllowScrolling(true);
     $("body").removeClass("scroll-stoped");
     var content = $(this).data("content");
-    $(".spot-content." + content).removeClass("spot-content--open");
+    $(`.spot-content.${content}`).removeClass("spot-content--open");
   })
 
 });
