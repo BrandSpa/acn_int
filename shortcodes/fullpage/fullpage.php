@@ -19,6 +19,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		"show_intro" => false
 	], $atts);
 
+	$current_url = str_replace('//', 'https://', esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 	$links = empty(vc_param_group_parse_atts($at['links'])) ? [] : vc_param_group_parse_atts($at['links']);
 	$intro = empty(vc_param_group_parse_atts($at['intro'])) ? [] : vc_param_group_parse_atts($at['intro']);
 	$introCount = count($intro);
@@ -77,8 +78,8 @@ function acn_fullpage_sc( $atts, $content ) {
 				<a href="#">
 					<i class="ion-android-share-alt"></i>
 					<ul>
-						<li><a href=""><i class="ion-social-facebook"></i></a></li>
-						<li><a href=""><i class="ion-social-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current_url ?>" ><i class="ion-social-facebook"></i></a></li>
+						<li><a href="https://twitter.com/intent/tweet?text=<?php echo $current_url ?>"><i class="ion-social-twitter"></i></a></li>
 					</ul>
 				</a>
 
