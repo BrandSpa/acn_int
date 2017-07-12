@@ -1246,8 +1246,7 @@ button {
     -webkit-animation: pointsContentMobile 1s;
     animation: pointsContentMobile 1s;
     -webkit-animation-delay: 3s;
-    animation-delay: 3s;
-    opacity: 0; } }
+    animation-delay: 3s; } }
 
 .map-points__container {
   position: absolute;
