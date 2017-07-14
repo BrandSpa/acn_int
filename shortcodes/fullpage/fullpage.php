@@ -82,7 +82,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		<div class="indicator__title"><?php echo $at['story_name'] ?></div>
 	</div>
 
-		<ul class="fullpage--menu">
+		<ul class="fullpage__menu">
 			<li>
 				<a class="fullpage-donate" href="<?php echo $at['link_donate'] ?>">
 					<svg width="19px" height="16px" viewBox="0 0 19 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

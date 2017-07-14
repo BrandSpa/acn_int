@@ -60,6 +60,8 @@ $(function domLoaded() {
     $.fn.fullpage.setAllowScrolling(false);
     $("body").addClass("scroll-stoped");
     $(".fullpage-nav").addClass("fullpage-nav--open");
+    $(".fullpage__menu").addClass("fullpage__menu--dark");
+
     emmiter.on("close:all", () => {
       closeNav();
     });
@@ -69,6 +71,7 @@ $(function domLoaded() {
     $.fn.fullpage.setAllowScrolling(true);
     $("body").removeClass("scroll-stoped");
     $(".fullpage-nav").removeClass("fullpage-nav--open");
+    $(".fullpage__menu").removeClass("fullpage__menu--dark");
   }
 
   $(".indicator").on("click", openNav);
@@ -96,9 +99,6 @@ $(function domLoaded() {
 
     $(`.spot-content.${content}`).addClass("spot-content--open");
     $(`.section__close-spot-content[data-content="${content}"]`).addClass("section__close-spot-content--open");
-
-      $(".section__content").on("click", () => console.log('close spott'));
-
   }
 
   $(".map-points__spot").on("click", openSpotContent);

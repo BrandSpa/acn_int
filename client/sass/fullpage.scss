@@ -648,11 +648,11 @@ button {
   }
 }
 
-.scroll-stoped .fullpage--menu {
+.scroll-stoped .fullpage__menu {
   display: none;
 }
 
-.fullpage--menu {
+.fullpage__menu {
   position: absolute;
   right: 40px;
   top: 40px;
@@ -664,9 +664,9 @@ button {
   }
 
   & > li {
-      color: #fff;
+    display: block;
       margin-bottom: 20px;
-      display: block;
+
       text-align: right;
       padding-right: 20px;
 
@@ -717,6 +717,21 @@ button {
       margin: 10px 0;
     }
 
+  }
+
+  &--dark {
+    display: block;
+
+    & > li {
+      a {
+        color: #000;
+      }
+    }
+
+    .fullpage__menu__share-icon {
+      background: #000;
+      color: #fff !important;
+    }
   }
 
 

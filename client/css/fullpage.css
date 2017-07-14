@@ -1158,41 +1158,40 @@ button {
   .section__close-post--open, .section__close-spot-content--open {
     display: block; }
 
-.scroll-stoped .fullpage--menu {
+.scroll-stoped .fullpage__menu {
   display: none; }
 
-.fullpage--menu {
+.fullpage__menu {
   position: absolute;
   right: 40px;
   top: 40px;
   z-index: 10; }
   @media (max-width: 767px) {
-    .fullpage--menu {
+    .fullpage__menu {
       top: 20px;
       right: 20px; } }
-  .fullpage--menu > li {
-    color: #fff;
-    margin-bottom: 20px;
+  .fullpage__menu > li {
     display: block;
+    margin-bottom: 20px;
     text-align: right;
     padding-right: 20px; }
-    .fullpage--menu > li:first-child {
+    .fullpage__menu > li:first-child {
       padding-right: 0; }
     @media (max-width: 767px) {
-      .fullpage--menu > li {
+      .fullpage__menu > li {
         margin-bottom: 10px; } }
-    .fullpage--menu > li ul {
+    .fullpage__menu > li ul {
       display: none; }
-    .fullpage--menu > li a {
+    .fullpage__menu > li a {
       color: #fff;
       font-size: 20px; }
-  .fullpage--menu__share > a {
+  .fullpage__menu__share > a {
     font-size: 27px !important; }
-  .fullpage--menu__share ul li {
+  .fullpage__menu__share ul li {
     padding-right: 0; }
-  .fullpage--menu__share--open {
+  .fullpage__menu__share--open {
     display: block !important; }
-  .fullpage--menu__share-icon {
+  .fullpage__menu__share-icon {
     display: block;
     background: #fff;
     color: #000 !important;
@@ -1202,6 +1201,13 @@ button {
     border-radius: 40px;
     text-align: center;
     margin: 10px 0; }
+  .fullpage__menu--dark {
+    display: block; }
+    .fullpage__menu--dark > li a {
+      color: #000; }
+    .fullpage__menu--dark .fullpage__menu__share-icon {
+      background: #000;
+      color: #fff !important; }
 
 @-webkit-keyframes spotEnter {
   from {
