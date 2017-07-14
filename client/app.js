@@ -6,9 +6,9 @@ import "babel-polyfill";
 import WebFont from "webfontloader";
 import multipleRender from "react-multiple-render";
 import qs from "qs";
-import 'lazysizes';
-import 'lazysizes/plugins/bgset/ls.bgset.min.js';
-import mitt from 'mitt';
+import "lazysizes";
+import "lazysizes/plugins/bgset/ls.bgset.min.js";
+import mitt from "mitt";
 window.mitt = mitt();
 
 //React components :)
@@ -88,7 +88,7 @@ document.cookie.split(";").forEach(function(l) {
 
 if(document.querySelector(".bs-donate")) {
   document.querySelector(".bs-donate").addEventListener("click", () => {
-    if(typeof _dp !== 'undefined') {
+    if(typeof _dp !== "undefined") {
       _dp("track", "donate_click");
     }
 

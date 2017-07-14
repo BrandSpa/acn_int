@@ -35,6 +35,7 @@ $(function domLoaded() {
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text(index);
     emmiter.emit("runCounter");
+    console.log($(".bs-counter").length);
   }
 
   $("#fullpage").fullpage({
@@ -82,10 +83,10 @@ $(function domLoaded() {
     const $ul = $a.parent().find("ul");
 
     if($ul.hasClass("fullpage__menu__share--open")) {
-      $a.find('i').removeClass('ion-close-round');
+      $a.find("i").removeClass("ion-close-round");
       $ul.removeClass("fullpage__menu__share--open");
     } else {
-      $a.find('i').addClass('ion-close-round');
+      $a.find("i").addClass("ion-close-round");
       $ul.addClass("fullpage__menu__share--open");
     }
   }
