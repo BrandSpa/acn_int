@@ -1184,6 +1184,10 @@ button {
     .fullpage--menu {
       top: 20px;
       right: 20px; } }
+  .fullpage--menu__share a {
+    font-size: 27px; }
+  .fullpage--menu__share ul li {
+    padding-right: 0; }
   .fullpage--menu__share--open {
     display: block !important; }
   .fullpage--menu ul {
