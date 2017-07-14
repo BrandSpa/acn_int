@@ -545,7 +545,7 @@ html {
 body {
   margin: 0; }
 
-div {
+* {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
