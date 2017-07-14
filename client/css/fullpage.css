@@ -1302,8 +1302,9 @@ button {
 
 .fullpage-donate {
   border: 2px solid #fff;
-  padding: 5px;
-  border-radius: 100px; }
+  padding: 5px 10px;
+  border-radius: 100px;
+  font-weight: 500; }
 
 /*!
  * fullPage 2.9.4
