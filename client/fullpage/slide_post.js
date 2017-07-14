@@ -13,6 +13,9 @@ function slidePost($fp) {
     $("body").addClass("scroll-stoped");
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
+    emmiter.on("close:all", () => {
+      closePost.call(this, $postSection);
+    });
   }
 
   function handleTogglePost(e) {

@@ -12,8 +12,10 @@ window.lazySizesConfig.init = false;
 
 $(function domLoaded() {
 
+  const emmiter = window.mitt;
+
   $(".fullpage-wrapper").on("click", function() {
-    let emmiter = window.mitt;
+
     emmiter.emit("close:all");
     console.log("body click");
   });
@@ -36,7 +38,6 @@ $(function domLoaded() {
     var $indicator = $(".indicator");
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text(index);
-    let emmiter = window.mitt;
     emmiter.emit("runCounter");
   }
 
