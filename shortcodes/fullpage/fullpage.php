@@ -58,8 +58,28 @@ function acn_fullpage_sc( $atts, $content ) {
 	</div>
 
 	<div class="indicator">
-		<div class="indicator__story">1</div>
-		<div class="indicator__index">1</div>
+
+		<svg width="91px" height="87px" viewBox="0 0 91 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		        <g id="Menu-Caps" transform="translate(-70.000000, -840.000000)">
+		            <circle id="Oval-3-Copy" fill="#FFFFFF" cx="143" cy="858" r="18"></circle>
+		            <text id="3" font-family="OpenSans-Semibold, Open Sans" font-size="18" font-weight="500" letter-spacing="-0.204545438" fill="#000000">
+		                <tspan x="138.465066" y="865" class="indicator__story">3</tspan>
+		            </text>
+		            <text id="2" font-family="OpenSans-Light, Open Sans" font-size="40" font-weight="300" letter-spacing="-0.454545408" fill="#FFFFFF">
+		                <tspan x="106.811257" y="904" class="indicator__index">2</tspan>
+		            </text>
+		            <g id="Group-4" transform="translate(72.000000, 880.000000)" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square">
+		                <path d="M24,1 L0,1" id="Line"></path>
+		                <path d="M24,10 L0,10" id="Line-Copy-5"></path>
+		                <path d="M24,19 L0,19" id="Line-Copy-6"></path>
+		            </g>
+		            <path d="M95,867.857708 C108.097683,854.775218 129.333601,854.775218 142.431283,867.857708 C155.528966,880.940198 155.528966,902.151483 142.431283,915.233973 C129.333601,928.316463 108.097683,928.316463 95,915.233973" id="Stroke-1" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+		        </g>
+		    </g>
+		</svg>
+
+
 		<div class="indicator__title"><?php echo $at['story_name'] ?></div>
 	</div>
 
