@@ -9,8 +9,10 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		"bg_img_mobile" => "",
 		"story_num" => "",
 		"index_num" => "",
-		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
+		"uniq_name" => "slide-" . uniqid() . rand(0, 100),
+		"contents" => ""
 	], $atts);
+
 
 	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
 	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] );
