@@ -650,6 +650,10 @@ a {
   text-decoration: none;
   cursor: pointer; }
 
+ul {
+  padding: 0;
+  margin: 0; }
+
 li {
   list-style: none; }
 
