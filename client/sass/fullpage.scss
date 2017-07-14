@@ -4,6 +4,10 @@
 @import 'form';
 @import 'fullpage_animations';
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   -ms-touch-action: manipulation;
   touch-action: manipulation
@@ -13,9 +17,7 @@ body {
     margin: 0
 }
 
-* {
-  box-sizing: border-box;
-}
+
 
 $font-base: 15;
 
@@ -862,7 +864,7 @@ button {
     overflow-y: scroll;
 
     h1, h2, h3, h4, h5, p {
-      color: #333;
+      color: #4A4A4A;
     }
 
     @media #{$s} {
