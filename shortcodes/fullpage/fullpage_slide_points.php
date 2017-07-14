@@ -84,7 +84,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 					</div>
 			  </div>
 			</div>
-		<?php endforeach: ?>
+		<?php endforeach; ?>
 
 		<div class="map-points__container">
 			<svg class="map-points" width="1409" height="695" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080">
