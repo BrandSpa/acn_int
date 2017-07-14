@@ -14,13 +14,9 @@ $(function domLoaded() {
 
   const emmiter = window.mitt;
 
-  $(".section__content").on("click", function() {
+  $(".section__content").on("click", () => emmiter.emit("close:all"));
 
-    emmiter.emit("close:all");
-    console.log("body click");
-  });
-
-   function handleAfterRender() {
+  function handleAfterRender() {
     lazySizes.init();
   }
 
@@ -54,9 +50,11 @@ $(function domLoaded() {
   slidePost($.fn.fullpage);
   slideVideo($.fn.fullpage);
 
-  $(document).on("click", ".section__down", function goDown() {
+  function goDown() {
     $.fn.fullpage.moveSectionDown();
-  });
+  }
+
+  $(document).on("click", ".section__down", goDown);
 
   function openNav() {
     $.fn.fullpage.setAllowScrolling(false);
@@ -98,6 +96,11 @@ $(function domLoaded() {
 
     $(`.spot-content.${content}`).addClass("spot-content--open");
     $(`.section__close-spot-content[data-content="${content}"]`).addClass("section__close-spot-content--open");
+    
+    emmiter.on("close:all", () => {
+      closeSpotContent.call(this);
+    });
+
   }
 
   $(".map-points__spot").on("click", openSpotContent);
