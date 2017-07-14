@@ -998,8 +998,8 @@ button {
   cursor: pointer; }
   @media (max-width: 767px) {
     .indicator {
-      left: 20px;
-      bottom: 20px; } }
+      left: 10px;
+      bottom: -10px; } }
   @media (max-width: 767px) {
     .indicator svg {
       width: 50px; } }
@@ -1013,8 +1013,6 @@ button {
     left: 90px; }
     @media (max-width: 767px) {
       .indicator__title {
-        left: 10px;
-        bottom: -10px;
         font-size: 15px; } }
 
 .intro {

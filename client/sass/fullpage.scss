@@ -538,8 +538,8 @@ button {
     cursor: pointer;
 
     @media #{$s} {
-      left: 20px;
-      bottom: 20px;
+      left: 10px;
+      bottom: -10px;
     }
 
     svg {
@@ -558,8 +558,6 @@ button {
       left: 90px;
 
       @media #{$s} {
-        left: 10px;
-        bottom: -10px;
         font-size: 15px;
       }
     }
