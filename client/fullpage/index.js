@@ -12,9 +12,15 @@ window.lazySizesConfig.init = false;
 
 $(function domLoaded() {
 
-  $("body").on("click", function() {
-    $(".section__post--open").removeClass("section__post--open");
-    $(".fullpage-nav").removeClass("fullpage-nav--open");
+  $(document).on("click", function() {
+    if($(".section__post").hasClass("section__post--open")) {
+        $(".section__post--open").removeClass("section__post--open");
+    }
+    
+    if($(".fullpage-nav").hasClass("fullpage-nav--open")) {
+      $(".fullpage-nav").removeClass("fullpage-nav--open");
+    }
+
   });
 
    function handleAfterRender() {
