@@ -677,6 +677,36 @@ button {
     right: 20px;
   }
 
+  & > ul {
+    padding: 0;
+
+    li {
+      color: #fff;
+      margin-bottom: 20px;
+      display: block;
+      text-align: right;
+      padding-right: 20px;
+
+      &:first-child {
+        padding-right: 0;
+      }
+
+      @media #{$s} {
+        margin-bottom: 10px;
+      }
+
+      ul {
+        display: none;
+        padding: 10px;
+      }
+
+      a {
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+  }
+
   &__share {
 
     & > a {
@@ -706,35 +736,7 @@ button {
 
   }
 
-  ul {
-    padding: 0;
 
-    li {
-      color: #fff;
-      margin-bottom: 20px;
-      display: block;
-      text-align: right;
-      padding-right: 20px;
-
-      &:first-child {
-        padding-right: 0;
-      }
-
-      @media #{$s} {
-        margin-bottom: 10px;
-      }
-
-      ul {
-        display: none;
-        padding: 10px;
-      }
-
-      a {
-        color: #fff;
-        font-size: 20px;
-      }
-    }
-  }
 }
 
 @keyframes spotEnter {
