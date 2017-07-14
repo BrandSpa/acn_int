@@ -28,55 +28,55 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	<div class="section__content">
 		<?php echo do_shortcode($content) ?>
 
-		<?php foreach($contents as $content): ?>
-			<div class="spot-content <?php echo $content['city'] ?>">
+		<?php foreach($contents as $cont): ?>
+			<div class="spot-content <?php echo $cont['city'] ?>">
 			  <div class="spot-content__container">
-					<img style="width: 100%;" src="<?php echo wp_get_attachment_url($content['header_img']) ?>" alt="06525792_xl" width="944" height="auto" />
+					<img style="width: 100%;" src="<?php echo wp_get_attachment_url($cont['header_img']) ?>" alt="06525792_xl" width="944" height="auto" />
 
 					<div style="padding: 40px 80px;">
 					  <div style="margin-bottom: 40px">
-					    <h2><?php echo $content['city'] ?></h2>
-					    <h4><?php echo $content['city_subtitle'] ?></h4>
+					    <h2><?php echo $cont['city'] ?></h2>
+					    <h4><?php echo $cont['city_subtitle'] ?></h4>
 					  </div>
 
 					  <div class="col-4-l" style="padding-bottom: 40px">
 					    <div style="margin-bottom: 40px">
-					      <h3><?php echo $content['families_already_returned_num'] ?></h3>
-					      <p><?php echo $content['families_already_returned_text'] ?></p>
+					      <h3><?php echo $cont['families_already_returned_num'] ?></h3>
+					      <p><?php echo $cont['families_already_returned_text'] ?></p>
 					    </div>
 
 							<div style="margin-bottom: 40px">
-					      <h3 style="color: red;font-weight: 500;"><?php echo $content['damaged_houses_num'] ?></h3>
-					      <h3 style="color: red;font-weight: 500;"><?php echo $content['damaged_houses_title_1'] ?></h3>
-					      <h3 style="color: red;font-weight: 500;"><?php echo $content['damaged_houses_title_2'] ?></h3>
+					      <h3 style="color: red;font-weight: 500;"><?php echo $cont['damaged_houses_num'] ?></h3>
+					      <h3 style="color: red;font-weight: 500;"><?php echo $cont['damaged_houses_title_1'] ?></h3>
+					      <h3 style="color: red;font-weight: 500;"><?php echo $cont['damaged_houses_title_2'] ?></h3>
 					    </div>
 
 							<div style="margin-bottom: 40px">
-					    	<h1 style="font-weight: 700;"><?php echo $content['percentage'] ?></h1>
+					    	<h1 style="font-weight: 700;"><?php echo $cont['percentage'] ?></h1>
 					    </div>
 
-					    <h4 style="color: red;"><?php echo $content['number_of_houses_registered_to_be_renovated_num'] ?></h4>
-					    <p><?php echo $content['number_of_houses_registered_to_be_renovated_text'] ?></p>
+					    <h4 style="color: red;"><?php echo $cont['number_of_houses_registered_to_be_renovated_num'] ?></h4>
+					    <p><?php echo $cont['number_of_houses_registered_to_be_renovated_text'] ?></p>
 					  </div>
 
 					  <div class="col-4-l" style="padding-bottom: 40px">
 					    <div style="margin-bottom: 140px">
-						    <h3><?php echo $content['christians_already_returned_num'] ?></h3>
-						    <p><?php echo $content['christians_already_returned_text'] ?></p>
+						    <h3><?php echo $cont['christians_already_returned_num'] ?></h3>
+						    <p><?php echo $cont['christians_already_returned_text'] ?></p>
 					    </div>
 
 					    <ul style="margin-bottom: 40px">
 					      <li style="margin-bottom: 20px">
-					        <h4><?php echo $content['houses_totally_destroyed_num'] ?></h4>
-					        <p><?php echo $content['houses_totally_destroyed_text'] ?></p>
+					        <h4><?php echo $cont['houses_totally_destroyed_num'] ?></h4>
+					        <p><?php echo $cont['houses_totally_destroyed_text'] ?></p>
 					      </li>
 					      <li style="margin-bottom: 20px">
-					        <h4><?php echo $content['houses_burnt_num'] ?></h4>
-					        <p><?php echo $content['houses_burnt_text'] ?></p>
+					        <h4><?php echo $cont['houses_burnt_num'] ?></h4>
+					        <p><?php echo $cont['houses_burnt_text'] ?></p>
 					      </li>
 					      <li style="margin-bottom: 20px">
-					        <h4><?php echo $content['houses_partially_damaged_num'] ?></h4>
-					        <p><?php echo $content['houses_partially_damaged_text'] ?></p>
+					        <h4><?php echo $cont['houses_partially_damaged_num'] ?></h4>
+					        <p><?php echo $cont['houses_partially_damaged_text'] ?></p>
 					      </li>
 					    </ul>
 
