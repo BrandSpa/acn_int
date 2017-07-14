@@ -12,6 +12,11 @@ window.lazySizesConfig.init = false;
 
 $(function domLoaded() {
 
+  $("body").on("click", function() {
+    $(".section__post--open").removeClass("section__post--open");
+    $(".fullpage-nav").removeClass("fullpage-nav--open");
+  });
+
    function handleAfterRender() {
     lazySizes.init();
   }
@@ -51,19 +56,22 @@ $(function domLoaded() {
     $.fn.fullpage.moveSectionDown();
   });
 
-  $(".indicator").on("click", function openNav() {
+  function openNav() {
     $.fn.fullpage.setAllowScrolling(false);
     $("body").addClass("scroll-stoped");
     $(".fullpage-nav").addClass("fullpage-nav--open");
-  });
+  }
 
-  $(".fullpage-nav__close").on("click", function closeNav() {
+  function closeNav() {
     $.fn.fullpage.setAllowScrolling(true);
     $("body").removeClass("scroll-stoped");
     $(".fullpage-nav").removeClass("fullpage-nav--open");
-  });
+  }
 
-  $(".fullpage--menu__share > a").on("click", function() {
+  $(".indicator").on("click", openNav);
+  $(".fullpage-nav__close").on("click", closeNav);
+
+  function toggleMenuShare() {
     const $a = $(".fullpage--menu__share > a");
     const $ul = $a.parent().find("ul");
 
@@ -74,7 +82,9 @@ $(function domLoaded() {
       $a.find('i').addClass('ion-close-round');
       $ul.addClass("fullpage--menu__share--open");
     }
-  });
+  }
+
+  $(".fullpage--menu__share > a").on("click", toggleMenuShare);
 
   function openSpotContent() {
     $.fn.fullpage.setAllowScrolling(false);
