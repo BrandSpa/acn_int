@@ -34,8 +34,11 @@ $(function domLoaded() {
     var $indicator = $(".indicator");
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text(index);
-    emmiter.emit("runCounter");
-    console.log($section.find(".bs-counter").length);
+
+    if( $section.find(".bs-counter").length > 0 ) {
+      emmiter.emit("runCounter");
+    }
+
   }
 
   $("#fullpage").fullpage({
