@@ -9,7 +9,7 @@
 .row {
 	margin-left: -#{$grid-gutter};
 	margin-right: -#{$grid-gutter};
-	
+
 	&:before {
 		display: table;
   	content: " ";
@@ -18,7 +18,7 @@
 
 $columns: 12;
 @for $i from 1 through $columns {
-	
+
 	//global and mobile
 	@media #{$s}, #{$xs} {
 		.col-#{$i} {
@@ -29,7 +29,7 @@ $columns: 12;
 			width: ($i / $columns) * 100%;
 		}
 	}
-	
+
 	//media query medium
 	@media #{$m} {
 		.col-#{$i}-m {
@@ -40,7 +40,7 @@ $columns: 12;
 			width: ($i / $columns) * 100%;
 		}
 	}
-	
+
 	//media query large
 	@media #{$xl},
 	#{$l} {

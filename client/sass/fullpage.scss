@@ -17,15 +17,16 @@ $font-base: 15;
 
 body,
 html {
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
   font-size: #{$font-base}px;
-    line-height: 20px;
-    tap-highlight-color: transparent;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    width: 100%;
-    height: 100%;
+  line-height: 20px;
+  tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
   @media #{$s} {
     font-size: 10px;
     line-height: 15px;
@@ -850,7 +851,7 @@ button {
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
     overflow-x: hidden;
     overflow-y: scroll;
-    
+
     h1, h2, h3, h4, h5, p {
       color: #333;
     }

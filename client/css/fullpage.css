@@ -547,6 +547,8 @@ body {
 
 body,
 html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
   font-size: 15px;
