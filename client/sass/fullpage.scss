@@ -679,16 +679,19 @@ button {
 
   &__share {
     a {
-      font-size: 27px;
+      font-size: 27px !important;
     }
+
     ul {
       li {
         padding-right: 0;
       }
     }
+
     &--open {
       display: block !important;
     }
+    
   }
 
   ul {

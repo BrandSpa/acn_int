@@ -1185,7 +1185,7 @@ button {
       top: 20px;
       right: 20px; } }
   .fullpage--menu__share a {
-    font-size: 27px; }
+    font-size: 27px !important; }
   .fullpage--menu__share ul li {
     padding-right: 0; }
   .fullpage--menu__share--open {
