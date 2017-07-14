@@ -79,7 +79,6 @@ function acn_fullpage_sc( $atts, $content ) {
 		    </g>
 		</svg>
 
-
 		<div class="indicator__title"><?php echo $at['story_name'] ?></div>
 	</div>
 
