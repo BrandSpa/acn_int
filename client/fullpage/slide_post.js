@@ -1,6 +1,8 @@
 
 function slidePost($fp) {
 
+  const emmiter = window.mitt;
+
   function closePost($postSection) {
     $fp.setAllowScrolling(true);
     $("body").removeClass("scroll-stoped");

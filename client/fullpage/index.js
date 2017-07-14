@@ -14,7 +14,7 @@ $(function domLoaded() {
 
   const emmiter = window.mitt;
 
-  $(".fullpage-wrapper").on("click", function() {
+  $(".section__content").on("click", function() {
 
     emmiter.emit("close:all");
     console.log("body click");
@@ -62,6 +62,9 @@ $(function domLoaded() {
     $.fn.fullpage.setAllowScrolling(false);
     $("body").addClass("scroll-stoped");
     $(".fullpage-nav").addClass("fullpage-nav--open");
+    emmiter.on("close:all", () => {
+      closeNav();
+    });
   }
 
   function closeNav() {
