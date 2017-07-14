@@ -102,7 +102,7 @@ $(function domLoaded() {
     var content = $(this).data("content");
 
     $(`.spot-content.${content}`).addClass("spot-content--open");
-    $(`.section__close-spot-content[data-content="${content}"]`).addClass("section__close-spot-content--open");
+    $(`.section__close-spot-content`).addClass("section__close-spot-content--open");
   }
 
   $(".map-points__spot").on("click", openSpotContent);
@@ -112,6 +112,7 @@ $(function domLoaded() {
     $("body").removeClass("scroll-stoped");
     var content = $(this).data("content");
     $(`.spot-content.${content}`).removeClass("spot-content--open");
+    $(`.section__close-spot-content`).removeClass("section__close-spot-content--open");
   }
 
   $(".section__close-spot-content").on("click", closeSpotContent)
