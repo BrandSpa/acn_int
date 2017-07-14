@@ -17,19 +17,19 @@ $font-base: 15;
 
 body,
 html {
-    font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
-    font-size: #{$font-base}px;
-
-    @media #{$s} {
-      font-size: 10px;
-    }
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  font-size: #{$font-base}px;
     line-height: 20px;
     tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     width: 100%;
     height: 100%;
+  @media #{$s} {
+    font-size: 10px;
+    line-height: 15px;
+  }
 }
 
 h1,
@@ -94,9 +94,14 @@ h3 {
 }
 
 h4 {
-  font-size: 24 / $font-base * 1rem;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 30 / $font-base * 1rem;
+  line-height: 30px;
+
+  @media #{$s} {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 h5 {
