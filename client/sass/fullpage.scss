@@ -677,7 +677,7 @@ button {
     right: 20px;
   }
 
-    li {
+  & > li {
       color: #fff;
       margin-bottom: 20px;
       display: block;
