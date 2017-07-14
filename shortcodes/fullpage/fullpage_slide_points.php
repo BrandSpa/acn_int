@@ -13,9 +13,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		"contents" => ""
 	], $atts);
 
-
 	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
-	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] );
+	$contents = empty(vc_param_group_parse_atts($at['contents'])) ? [] : vc_param_group_parse_atts($at['contents']);
 	ob_start();
 	?>
 
@@ -28,6 +27,64 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 	<div class="section__content">
 		<?php echo do_shortcode($content) ?>
+
+		<?php foreach($contents as $content): ?>
+			<div class="spot-content <?php echo $content['city'] ?>">
+			  <div class="spot-content__container">
+					<img style="width: 100%;" src="<?php wp_get_attachment_url($content['header_img']) ?>" alt="06525792_xl" width="944" height="auto" /></div>
+
+					<div style="padding: 40px 80px;">
+					  <div style="margin-bottom: 40px">
+					    <h2>Batnaya</h2>
+					    <h4>Restoration Process and Returnees</h4>
+					  </div>
+
+					  <div class="col-4-l" style="padding-bottom: 40px">
+					    <div style="margin-bottom: 40px">
+					      <h3>10</h3>
+					      <p>Families already returned</p>
+					    </div>
+					    <div style="margin-bottom: 40px">
+					      <h3 style="color: red;font-weight: 500;">1813</h3>
+					      <h3 style="color: red;font-weight: 500;">Damaged</h3>
+					      <h3 style="color: red;font-weight: 500;">Houses</h3>
+					    </div>
+					    <div style="margin-bottom: 40px">
+					    <h1 style="font-weight: 700;">2%</h1>
+					    </div>
+					    <h4 style="color: red;">1813</h4>
+					    <p>Number of houses registered to be renovated</p>
+					  </div>
+
+					  <div class="col-4-l" style="padding-bottom: 40px">
+					    <div style="margin-bottom: 140px">
+					    <h3>50</h3>
+					    <p>Christians already returned</p>
+					    </div>
+
+					    <ul style="margin-bottom: 40px">
+					      <li style="margin-bottom: 20px">
+					        <h4>94</h4>
+					        <p>Houses Totally Destroyed</p>
+					      </li>
+					      <li style="margin-bottom: 20px">
+					        <h4>347</h4>
+					        <p>Houses Burnt</p>
+					      </li>
+					      <li style="margin-bottom: 20px">
+					        <h4>1372</h4>
+					        <p>Houses Partially Damaged</p>
+					      </li>
+					    </ul>
+
+					    <h4 style="color: red;">27</h4>
+					    <p>Number of houses actually being renovated</p>
+					  </div>
+
+					</div>
+			  </div>
+			</div>
+		<?php endforeach: ?>
 
 		<div class="map-points__container">
 			<svg class="map-points" width="1409" height="695" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080">

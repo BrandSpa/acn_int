@@ -25,7 +25,8 @@
       [
         "type" => "textfield",
         "heading" => "Families already returned text",
-        "param_name" => "families_already_returned_text"
+        "param_name" => "families_already_returned_text",
+        "value" => "Families already returned"
       ],
       [
         "type" => "textfield",
@@ -35,12 +36,14 @@
       [
         "type" => "textfield",
         "heading" => "Damaged title 1",
-        "param_name" => "damaged_houses_title_1"
+        "param_name" => "damaged_houses_title_1",
+        "value" => "Damaged"
       ],
       [
         "type" => "textfield",
         "heading" => "Damaged title 2",
-        "param_name" => "damaged_houses_title_2"
+        "param_name" => "damaged_houses_title_2",
+        "value" => "houses"
       ],
       [
         "type" => "textfield",
@@ -50,12 +53,13 @@
       [
         "type" => "textfield",
         "heading" => "Number of houses registered to be renovated number",
-        "param_name" => "number_of_houses_registered_to_be_renovated_num"
+        "param_name" => "number_of_houses_registered_to_be_renovated_num",
       ],
       [
         "type" => "textfield",
         "heading" => "Number of houses registered to be renovated text",
-        "param_name" => "number_of_houses_registered_to_be_renovated_text"
+        "param_name" => "number_of_houses_registered_to_be_renovated_text",
+        "value" => "Number of houses registered to be renovated"
       ],
       [
         "type" => "textfield",
@@ -65,7 +69,8 @@
       [
         "type" => "textfield",
         "heading" => "Houses Totally Destroyed text",
-        "param_name" => "houses_totally_destroyed_text"
+        "param_name" => "houses_totally_destroyed_text",
+        "value" => "Houses Totally Destroyed"
       ],
       [
         "type" => "textfield",
@@ -75,27 +80,31 @@
       [
         "type" => "textfield",
         "heading" => "Houses Burnt text",
-        "param_name" => "houses_burnt_text"
+        "param_name" => "houses_burnt_text",
+        "value" => "Houses Burnt"
       ],
       [
         "type" => "textfield",
         "heading" => "Houses Partially Damaged num",
-        "param_name" => "houses_partially_damaged_num"
+        "param_name" => "houses_partially_damaged_num",
+        "value" => "Houses Partially Damaged"
       ],
       [
         "type" => "textfield",
         "heading" => "Houses Partially Damaged text",
-        "param_name" => "houses_partially_damaged_text"
+        "param_name" => "houses_partially_damaged_text",
+        "value" => "Houses Partially Damaged"
       ],
       [
-        "type" => "",
+        "type" => "textfield",
         "heading" => "Number of houses actually being renovated number",
         "param_name" => "number_of_houses_actually_being_renovated_num"
       ],
       [
-        "type" => "",
+        "type" => "textfield",
         "heading" => "Number of houses actually being renovated text",
-        "param_name" => "number_of_houses_actually_being_renovated_text"
+        "param_name" => "number_of_houses_actually_being_renovated_text",
+        "value" => "Number of houses actually being renovated"
       ]
     ];
 

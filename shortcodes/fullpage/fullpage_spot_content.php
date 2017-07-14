@@ -9,7 +9,7 @@ function acn_fullpage_spot_content_sc( $atts, $content ) {
 
 <div class="spot-content <?php echo $at['name'] ?>">
   <div class="spot-content__container">
-  <?php echo do_shortcode($content) ?>
+  	<?php echo do_shortcode($content) ?>
   </div>
 </div>
 
