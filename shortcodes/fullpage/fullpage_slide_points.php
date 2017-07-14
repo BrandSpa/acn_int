@@ -31,12 +31,11 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<?php foreach($contents as $content): ?>
 			<div class="spot-content <?php echo $content['city'] ?>">
 			  <div class="spot-content__container">
-					<img style="width: 100%;" src="<?php wp_get_attachment_url($content['header_img']) ?>" alt="06525792_xl" width="944" height="auto" />
-
+					<img style="width: 100%;" src="<?php echo wp_get_attachment_url($content['header_img']) ?>" alt="06525792_xl" width="944" height="auto" />
 
 					<div style="padding: 40px 80px;">
 					  <div style="margin-bottom: 40px">
-					    <h2>Batnaya</h2>
+					    <h2><?php echo $content['city'] ?></h2>
 					    <h4>Restoration Process and Returnees</h4>
 					  </div>
 
