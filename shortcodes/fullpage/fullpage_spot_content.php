@@ -13,7 +13,6 @@ function acn_fullpage_spot_content_sc( $atts, $content ) {
   </div>
 </div>
 
-  <button class="section__open section__close-spot-content" data-content="<?php echo $at['name'] ?>"> <i class="ion-close-round"></i> </button>
 <?php
 	return ob_get_clean();
 }

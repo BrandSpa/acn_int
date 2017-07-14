@@ -84,6 +84,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 					</div>
 			  </div>
 			</div>
+			<button class="section__open section__close-spot-content" data-content="<?php echo $content['city'] ?>"> <i class="ion-close-round"></i> </button>
 		<?php endforeach; ?>
 
 		<div class="map-points__container">
