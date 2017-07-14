@@ -64,10 +64,10 @@ function acn_fullpage_sc( $atts, $content ) {
 		        <g id="Menu-Caps" transform="translate(-70.000000, -840.000000)">
 		            <circle id="Oval-3-Copy" fill="#FFFFFF" cx="143" cy="858" r="18"></circle>
 		            <text id="3" font-family="OpenSans-Semibold, Open Sans" font-size="18" font-weight="500" letter-spacing="-0.204545438" fill="#000000">
-		                <tspan x="138.465066" y="865" class="indicator__story">3</tspan>
+		                <tspan x="138.465066" y="865"  class="indicator__index">1</tspan>
 		            </text>
 		            <text id="2" font-family="OpenSans-Light, Open Sans" font-size="40" font-weight="300" letter-spacing="-0.454545408" fill="#FFFFFF">
-		                <tspan x="106.811257" y="904" class="indicator__index">2</tspan>
+		                <tspan x="106.811257" y="904" class="indicator__story">1</tspan>
 		            </text>
 		            <g id="Group-4" transform="translate(72.000000, 880.000000)" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square">
 		                <path d="M24,1 L0,1" id="Line"></path>
