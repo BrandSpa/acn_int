@@ -65,7 +65,7 @@ function acn_fullpage_sc( $atts, $content ) {
 	<div class="fullpage--menu">
 		<ul>
 			<li>
-				<a class="fullpage-donate" href="<?php echo $at['link_donate'] ?>"> ?
+				<a class="fullpage-donate" href="<?php echo $at['link_donate'] ?>">
 					<svg width="19px" height="16px" viewBox="0 0 19 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 					    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 					        <g id="Menu" transform="translate(-1426.000000, -72.000000)" stroke="#FFFFFF" fill-rule="nonzero" fill="#FFFFFF">
