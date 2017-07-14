@@ -106,11 +106,6 @@
         "param_name" => "bg_img"
       ],
       [
-        "heading" => "Background image mobile",
-        "type" => "attach_image",
-        "param_name" => "bg_img_mobile"
-      ],
-      [
         "heading" => "Button title",
         "type" => "textfield",
         "param_name" => "btn_title"
@@ -130,27 +125,17 @@
         "type" => "textfield",
         "param_name" => "index_num"
       ],
-			[
-        "heading" => "title",
-				"type" => "textarea",
-				"param_name" => "title"
-			],
       [
-        "heading" => "subtitle",
-				"type" => "textarea",
-				"param_name" => "subtitle"
-			],
+        'type' => 'param_group',
+        'param_name' => 'contents',
+        'heading' => 'Spots Content',
+        'params' =>  $spots_content_subparams
+      ],
 			[
         "heading" => "Post Content",
 				"type" => "textarea_html",
 				"param_name" => "content"
-			],
-      [
-        'type' => 'param_group',
-        'param_name' => 'links',
-        'heading' => 'Spots Content',
-        'params' =>  $spots_content_subparams
-      ]
+			]
 		];
 
     vc_map(
