@@ -998,7 +998,7 @@ button {
   cursor: pointer; }
   .indicator__title {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     color: #fff;
     font-size: 20px;
     width: 300px;
