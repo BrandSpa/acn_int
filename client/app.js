@@ -88,7 +88,9 @@ document.cookie.split(";").forEach(function(l) {
 
 if(document.querySelector(".bs-donate")) {
   document.querySelector(".bs-donate").addEventListener("click", () => {
-   _dp("track", "donate_click");
-    console.log("click", _dp);
+    if(_dp !== undefined) {
+      _dp("track", "donate_click");
+    }
+
   });
 }
