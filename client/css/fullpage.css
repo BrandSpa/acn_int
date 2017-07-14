@@ -1191,7 +1191,8 @@ button {
     .fullpage--menu ul li {
       color: #fff;
       margin-bottom: 20px;
-      display: block; }
+      display: block;
+      text-align: right; }
       @media (max-width: 767px) {
         .fullpage--menu ul li {
           margin-bottom: 10px; } }

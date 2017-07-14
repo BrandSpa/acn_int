@@ -690,6 +690,8 @@ button {
       color: #fff;
       margin-bottom: 20px;
       display: block;
+      text-align: right;
+
       @media #{$s} {
         margin-bottom: 10px;
       }
