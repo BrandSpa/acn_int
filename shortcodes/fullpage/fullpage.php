@@ -86,8 +86,8 @@ function acn_fullpage_sc( $atts, $content ) {
 				<a href="#">
 					<i class="ion-android-share-alt"></i>
 					<ul>
-						<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current_url ?>" ><i class="ion-social-facebook"></i></a></li>
-						<li><a target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $current_url ?>"><i class="ion-social-twitter"></i></a></li>
+						<li><a class="fullpage--menu__share-icon" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current_url ?>" ><i class="ion-social-facebook"></i></a></li>
+						<li><a class="fullpage--menu__share-icon" target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $current_url ?>"><i class="ion-social-twitter"></i></a></li>
 					</ul>
 				</a>
 
