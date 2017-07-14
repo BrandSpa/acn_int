@@ -1184,25 +1184,23 @@ button {
     .fullpage--menu {
       top: 20px;
       right: 20px; } }
-  .fullpage--menu > ul {
-    padding: 0; }
-    .fullpage--menu > ul li {
+  .fullpage--menu li {
+    color: #fff;
+    margin-bottom: 20px;
+    display: block;
+    text-align: right;
+    padding-right: 20px; }
+    .fullpage--menu li:first-child {
+      padding-right: 0; }
+    @media (max-width: 767px) {
+      .fullpage--menu li {
+        margin-bottom: 10px; } }
+    .fullpage--menu li ul {
+      display: none;
+      padding: 10px; }
+    .fullpage--menu li a {
       color: #fff;
-      margin-bottom: 20px;
-      display: block;
-      text-align: right;
-      padding-right: 20px; }
-      .fullpage--menu > ul li:first-child {
-        padding-right: 0; }
-      @media (max-width: 767px) {
-        .fullpage--menu > ul li {
-          margin-bottom: 10px; } }
-      .fullpage--menu > ul li ul {
-        display: none;
-        padding: 10px; }
-      .fullpage--menu > ul li a {
-        color: #fff;
-        font-size: 20px; }
+      font-size: 20px; }
   .fullpage--menu__share > a {
     font-size: 27px !important; }
   .fullpage--menu__share ul li {
