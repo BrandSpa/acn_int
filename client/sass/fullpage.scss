@@ -537,12 +537,15 @@ button {
     z-index: 10;
     cursor: pointer;
 
-    &__story {
-
+    @media #{$s} {
+      left: 20px;
+      bottom: 20px;
     }
 
-    &__index {
-
+    svg {
+      @media #{$s} {
+        width: 50px;
+      }
     }
 
     &__title {
@@ -555,6 +558,7 @@ button {
       left: 90px;
 
       @media #{$s} {
+        left: 50px;
         font-size: 12px;
       }
     }
