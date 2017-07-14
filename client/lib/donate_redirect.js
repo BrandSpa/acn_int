@@ -10,7 +10,7 @@ export default () => {
     $('.bs-donate').on('click', e => {
 
       e.preventDefault();
-      if(ga !== undefined) ga('send', 'event', 'DONATION', 'DONATION_CLICK', 'DONATION_CLICK', 0);
+      if(typeof ga !== 'undefined') ga('send', 'event', 'DONATION', 'DONATION_CLICK', 'DONATION_CLICK', 0);
 
       let data = qs.stringify({action: 'donate_redirect'});
 
