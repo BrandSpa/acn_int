@@ -1196,8 +1196,7 @@ button {
       .fullpage--menu > li {
         margin-bottom: 10px; } }
     .fullpage--menu > li ul {
-      display: none;
-      padding: 10px; }
+      display: none; }
     .fullpage--menu > li a {
       color: #fff;
       font-size: 20px; }
