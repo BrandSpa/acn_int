@@ -36,56 +36,59 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 					<div style="padding: 40px 80px;">
 					  <div style="margin-bottom: 40px">
 					    <h2><?php echo $content['city'] ?></h2>
-					    <h4>Restoration Process and Returnees</h4>
+					    <h4><?php echo $content['city_subtitle'] ?></h4>
 					  </div>
 
 					  <div class="col-4-l" style="padding-bottom: 40px">
 					    <div style="margin-bottom: 40px">
-					      <h3>10</h3>
-					      <p>Families already returned</p>
+					      <h3><?php echo $content['families_already_returned_num'] ?></h3>
+					      <p><?php echo $content['families_already_returned_text'] ?></p>
 					    </div>
-					    <div style="margin-bottom: 40px">
-					      <h3 style="color: red;font-weight: 500;">1813</h3>
-					      <h3 style="color: red;font-weight: 500;">Damaged</h3>
-					      <h3 style="color: red;font-weight: 500;">Houses</h3>
+
+							<div style="margin-bottom: 40px">
+					      <h3 style="color: red;font-weight: 500;"><?php echo $content['damaged_houses_num'] ?></h3>
+					      <h3 style="color: red;font-weight: 500;"><?php echo $content['damaged_houses_title_1'] ?></h3>
+					      <h3 style="color: red;font-weight: 500;"><?php echo $content['damaged_houses_title_2'] ?></h3>
 					    </div>
-					    <div style="margin-bottom: 40px">
-					    <h1 style="font-weight: 700;">2%</h1>
+
+							<div style="margin-bottom: 40px">
+					    	<h1 style="font-weight: 700;"><?php echo $content['percentage'] ?></h1>
 					    </div>
-					    <h4 style="color: red;">1813</h4>
-					    <p>Number of houses registered to be renovated</p>
+
+					    <h4 style="color: red;"><?php echo $content['number_of_houses_registered_to_be_renovated_num'] ?></h4>
+					    <p><?php echo $content['number_of_houses_registered_to_be_renovated_text'] ?></p>
 					  </div>
 
 					  <div class="col-4-l" style="padding-bottom: 40px">
 					    <div style="margin-bottom: 140px">
-					    <h3>50</h3>
-					    <p>Christians already returned</p>
+						    <h3><?php echo $content['christians_already_returned_num'] ?></h3>
+						    <p><?php echo $content['christians_already_returned_text'] ?></p>
 					    </div>
 
 					    <ul style="margin-bottom: 40px">
 					      <li style="margin-bottom: 20px">
-					        <h4>94</h4>
-					        <p>Houses Totally Destroyed</p>
+					        <h4><?php echo $content['houses_totally_destroyed_num'] ?></h4>
+					        <p><?php echo $content['houses_totally_destroyed_text'] ?></p>
 					      </li>
 					      <li style="margin-bottom: 20px">
-					        <h4>347</h4>
-					        <p>Houses Burnt</p>
+					        <h4><?php echo $content['houses_burnt_num'] ?></h4>
+					        <p><?php echo $content['houses_burnt_text'] ?></p>
 					      </li>
 					      <li style="margin-bottom: 20px">
-					        <h4>1372</h4>
-					        <p>Houses Partially Damaged</p>
+					        <h4><?php echo $content['houses_partially_damaged_num'] ?></h4>
+					        <p><?php echo $content['houses_partially_damaged_text'] ?></p>
 					      </li>
 					    </ul>
 
-					    <h4 style="color: red;">27</h4>
-					    <p>Number of houses actually being renovated</p>
+					    <h4 style="color: red;"><?php echo $content['number_of_houses_actually_being_renovated_num'] ?></h4>
+					    <p><?php echo $content['number_of_houses_actually_being_renovated_text'] ?></p>
 					  </div>
 
 					</div>
 			  </div>
 			</div>
 		<?php endforeach; ?>
-		
+
 		<button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
 		<div class="map-points__container">
 			<svg class="map-points" width="1409" height="695" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080">

@@ -15,7 +15,8 @@
       [
         "type" => "textfield",
         "heading" => "subtitle",
-        "param_name" => "city_subtitle"
+        "param_name" => "city_subtitle",
+        "value" => "Restoration Process and Returnees"
       ],
       [
         "type" => "textfield",
@@ -48,7 +49,8 @@
       [
         "type" => "textfield",
         "heading" => "percentage",
-        "param_name" => "percentage"
+        "param_name" => "percentage",
+        "value" => "2%"
       ],
       [
         "type" => "textfield",
@@ -60,6 +62,17 @@
         "heading" => "Number of houses registered to be renovated text",
         "param_name" => "number_of_houses_registered_to_be_renovated_text",
         "value" => "Number of houses registered to be renovated"
+      ],
+      [
+          "type" => "textfield",
+          "heading" => "Christians already returned num",
+          "param_name" => "christians_already_returned_num"
+      ],
+      [
+          "type" => "textfield",
+          "heading" => "Christians already returned text",
+          "param_name" => "christians_already_returned_text",
+          "value" => "Christians already returned"
       ],
       [
         "type" => "textfield",
@@ -87,7 +100,6 @@
         "type" => "textfield",
         "heading" => "Houses Partially Damaged num",
         "param_name" => "houses_partially_damaged_num",
-        "value" => "Houses Partially Damaged"
       ],
       [
         "type" => "textfield",
