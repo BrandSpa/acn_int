@@ -12,10 +12,10 @@ window.lazySizesConfig.init = false;
 
 $(function domLoaded() {
 
-  $(document).on("click", function() {
+  $("body").on("click", function() {
     let emmiter = window.mitt;
     emmiter.emit("close:all");
-    console.log("document click");
+    console.log("body click");
   });
 
    function handleAfterRender() {
