@@ -720,11 +720,18 @@ button {
   }
 
   &--dark {
-    display: block;
+    display: block !important;
 
     & > li {
       a {
         color: #000;
+        border-color: #000;
+
+        g {
+          fill: #000;
+          stroke: #000;
+        }
+
       }
     }
 
