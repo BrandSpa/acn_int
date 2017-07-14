@@ -850,6 +850,10 @@ button {
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
     overflow-x: hidden;
     overflow-y: scroll;
+    
+    h1, h2, h3, h4, h5, p {
+      color: #333;
+    }
 
     @media #{$s} {
       width: 88%;
