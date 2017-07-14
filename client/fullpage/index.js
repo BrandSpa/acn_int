@@ -12,7 +12,7 @@ window.lazySizesConfig.init = false;
 
 $(function domLoaded() {
 
-  $("body").on("click", function() {
+  $(".fullpage-wrapper").on("click", function() {
     let emmiter = window.mitt;
     emmiter.emit("close:all");
     console.log("body click");
