@@ -64,11 +64,14 @@ $(function domLoaded() {
   });
 
   $(".fullpage--menu__share > a").on("click", function() {
-    var $ul = $(".fullpage--menu__share > a").parent().find("ul");
+    const $a = $(".fullpage--menu__share > a");
+    const $ul = $a.parent().find("ul");
 
     if($ul.hasClass("fullpage--menu__share--open")) {
+      $a.find('i').removeClass('ion-close-round');
       $ul.removeClass("fullpage--menu__share--open");
     } else {
+      $a.find('i').addClass('ion-close-round');
       $ul.addClass("fullpage--menu__share--open");
     }
   });
