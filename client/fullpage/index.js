@@ -101,7 +101,7 @@ $(function domLoaded() {
     $("body").addClass("scroll-stoped");
     var content = $(this).data("content");
 
-    if( $(`.spot-content.${content}`) ) {
+    if( $(`.spot-content.${content}`).length > 0 ) {
       $(`.spot-content.${content}`).addClass("spot-content--open");
       $(".section__close-spot-content").addClass("section__close-spot-content--open");
     }
