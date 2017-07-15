@@ -17,8 +17,6 @@ body {
     margin: 0
 }
 
-
-
 $font-base: 15;
 
 body,
@@ -683,28 +681,24 @@ button {
 
   & > li {
     display: block;
-      margin-bottom: 20px;
+    margin-bottom: 20px;
 
-      text-align: right;
-      padding-right: 20px;
+    text-align: right;
+    padding-right: 20px;
 
-      &:first-child {
-        padding-right: 0;
-      }
-
-      @media #{$s} {
-        margin-bottom: 10px;
-      }
-
-      ul {
-        display: none;
-      }
-
-      a {
-        color: #fff;
-        font-size: 20px;
-      }
+    &:first-child {
+      padding-right: 0;
     }
+
+    ul {
+      display: none;
+    }
+
+    a {
+      color: #fff;
+      font-size: 20px;
+    }
+  }
 
 
   &__share {

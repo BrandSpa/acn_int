@@ -1193,9 +1193,6 @@ button {
     padding-right: 20px; }
     .fullpage__menu > li:first-child {
       padding-right: 0; }
-    @media (max-width: 767px) {
-      .fullpage__menu > li {
-        margin-bottom: 10px; } }
     .fullpage__menu > li ul {
       display: none; }
     .fullpage__menu > li a {

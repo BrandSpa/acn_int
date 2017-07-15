@@ -31,7 +31,6 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<?php foreach($contents as $cont): ?>
 
 			<div class="spot-content <?php echo $cont['city'] ?>">
-				<?php var_dump($cont) ?>
 			  <div class="spot-content__container">
 					<img style="width: 100%;" src="<?php echo wp_get_attachment_url($cont['header_img']) ?>" alt="06525792_xl" width="944" height="auto" />
 
