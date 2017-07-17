@@ -27,13 +27,16 @@ $(function domLoaded() {
   }
 
   function handleAfterLoad(section, index) {
-    var next = index - 1;
-    var $section = $(".section:eq(" + next + ")");
-    var story = $section.data("story");
-    var index = $section.data("index");
-    var $indicator = $(".indicator");
+    let next = index - 1;
+    let $section = $(".section:eq(" + next + ")");
+    let story = $section.data("story");
+    let slideIndex = $section.data("index");
+    let redirectUrl = $section.data("redirect");
+    let $indicator = $(".indicator");
     $indicator.find(".indicator__story").text(story);
-    $indicator.find(".indicator__index").text(index);
+    $indicator.find(".indicator__index").text(slideIndex);
+
+    if(redirectUrl.length > 0) window.location = redirectUrl;
 
     if( $section.find(".bs-counter").length > 0 ) {
       emmiter.emit("runCounter");
@@ -135,6 +138,8 @@ $(function domLoaded() {
     setMapSize();
     $.fn.fullpage.reBuild();
   });
+
+
 
 
 });

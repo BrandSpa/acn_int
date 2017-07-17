@@ -19,7 +19,7 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 		data-anchor="<?php echo $at['uniq_name'] ?>"
 		data-story="<?php echo $at['story_num'] ?>"
 		data-index="<?php echo $at['index_num'] ?>"
-    data-url="<?php echo $at['redirect_url'] ?>"
+    data-redirect="<?php echo $at['redirect_url'] ?>"
 	>
 	  <div class="fp-bg section__bg-container" style="background: #000"></div>
 	</div>
