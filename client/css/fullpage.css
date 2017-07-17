@@ -1335,7 +1335,7 @@ button {
   border-radius: 100px;
   font-weight: 600; }
 
-button, .btn {
+.btn {
   height: 45px;
   background: #F4334A;
   border: none;
@@ -1346,7 +1346,7 @@ button, .btn {
   cursor: pointer;
   font-weight: bold;
   border-radius: 5px; }
-  button:focus, .btn:focus {
+  .btn:focus {
     outline: none; }
 
 /*!
