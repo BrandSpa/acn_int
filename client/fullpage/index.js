@@ -133,6 +133,7 @@ $(function domLoaded() {
 
   $(window).on("resize", function() {
     setMapSize();
+    $.fn.fullpage.reBuild();
   });
 
 
