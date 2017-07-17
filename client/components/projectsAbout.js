@@ -1,5 +1,4 @@
 import React from "react";
-import Radium, { StyleRoot } from "radium";
 import Projects from "./projects";
 import PostsAbout from "./postsAbout";
 
@@ -28,82 +27,85 @@ class ProjectsAbout extends React.Component {
   render() {
 		const { section } = this.state;
 
-		let aboutNumStyle = {
-			width: "50%",
-			textAlign: "right",
-			paddingTop: "40px",
-			float: "left",
-			height: "150px",
-			background: "#fff",
-			color: colors[this.state.section + 1],
-			"@media (max-width: 767px)": {
-				width: "100%",
-				height: "auto",
-				textAlign: "center"
-			}
-		};
-
-		let aboutNumTextStyle = {
-			textAlign: "left",
-			width: "50%",
-			float: "left",
-			height: "150px",
-			padding: "60px",
-			fontSize: "1.5em",
-			color: "#A0A0A0",
-			"@media (max-width: 767px)": {
-				width: "100%",
-				height: "auto",
-				textAlign: "center",
-				padding: "0 0 60px 0"
-			}
-		};
 
 		return (
-			<StyleRoot>
-				<Projects 
+      <div>
+
+				<Projects
 					contents={this.props.projects.map(project => {
 						project["text"] = project.content;
 						return project;
-					})} 
-					donate={this.props.donate} 
-					changeSection={this.handleSection} 
+					})}
+					donate={this.props.donate}
+					changeSection={this.handleSection}
 				/>
 
 				<div className="projects-about-num">
 
 					<div
 						className="projects-about-num__num"
-						style={aboutNumStyle}
+						style={{color: colors[this.state.section + 1]}}
 					>
 						<h2>{this.props.projects[section] ? this.props.projects[section].number : ""}</h2>
 					</div>
 
-					<div
-						className={"projects-about-num__text"}
-						style={aboutNumTextStyle}
-					>
+					<div className="projects-about-num__text" >
 						{this.props.projects[section] ? this.props.projects[section].number_text : ""}
-				</div>
+				  </div>
 
 				<div style={{background: "#F8F6F8", padding: "80px 0", float: "left", width: "100%", "@media (max-width: 767px)": {padding: "20px 0 0 0"}}}>
 					<div className="l-wrap">
 						<h4 style={{
-							color: "#324049", 
-							textTransform: "uppercase", 
+							color: "#324049",
+							textTransform: "uppercase",
 							marginBottom: "20px",
 							marginLeft: "15px",
 							fontWeight: "normal"
 						}}
 						>{this.props.texts.stories}</h4>
 
-						<PostsAbout 
-							category={this.props.projects[section] ? this.props.projects[section].post_category : ""} 
+						<PostsAbout
+							category={this.props.projects[section] ? this.props.projects[section].post_category : ""}
 						/>
 					</div>
 				</div>
 				</div>
-			 </StyleRoot>
+        <style jsx>{`
+          .projects-about-num__num {
+            width: 50%;
+      			text-align: right;
+      			padding-top: 40px;
+      			float: left;
+      			height: 150px;
+      			background: #fff;
+          }
+
+          .projects-about-num__text {
+            text-align: left;
+            width: 50%;
+            float: left;
+            height: 150px;
+            padding: 60px;
+            font-size: 1.5em;
+            color: #A0A0A0;
+          }
+
+          @media (max-width: 767px) {
+            .projects-about-num__text {
+              width: 100%,
+              height: auto,
+              textAlign: center,
+              padding: 0 0 60px 0
+            }
+
+            .projects-about-num__num {
+              width: 100%;
+      				height: auto;
+      				text-align: center
+            }
+          }
+        `}</style>
+      </div>
 		)
 	}
 }
