@@ -18,9 +18,11 @@
   bs.donate = '<?php echo gett('Donate') ?>';
 </script>
 
-<script src="<?php echo get_template_directory_uri() ?>/client/dist/vendor.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/vendor.js') ?>"></script>
+<script src="<?php echo get_template_directory_uri() ?>/client/dist/vendor.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/vendor.js') ?>">
+</script>
 <script src="<?php echo get_template_directory_uri() ?>/client/dist/app.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/app.js') ?>
-"></script>
+">
+</script>
 <!--/app theme-->
 
  <!-- Google Analytics -->
@@ -43,6 +45,14 @@
     ga('ecommerce:send');
   <?php endif; ?>
 
+	<?php if(isset($_GET['event_action']) && isset($_GET['event_category']) && isset($_GET['event_label'])): ?>
+		//ANALYTICS EVENT
+		//category: SUBSCRIBE
+		//Action:  PRAYERNETWORK
+		//label: EN
+		ga('send', 'event', $_GET['event_category'], $_GET['event_action'], $_GET['event_label']);
+
+	<?php endif; ?>
 </script>
 
 <!-- End Google Analytics -->

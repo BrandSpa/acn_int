@@ -7,12 +7,12 @@ class Counter extends Component {
 
   componentDidMount = () => {
     let emmiter = window.mitt;
-    emmiter.on('runCounter', this.callCounter);
+    emmiter.on("runCounter", this.callCounter);
   }
 
   componentWillUnmount() {
     let emmiter = window.mitt;
-    emmiter.off('runCounter', this.callCounter);
+    emmiter.off("runCounter", this.callCounter);
   }
 
   callCounter = () => {

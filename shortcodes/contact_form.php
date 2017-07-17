@@ -22,7 +22,7 @@ function bs_contact_form_sc($atts, $content = null) {
   ob_start();
 ?>
 
-<div 
+<div
 	class="contact-form"
 	data-props='{
 		"cl": {
@@ -138,7 +138,6 @@ add_action( 'vc_before_init', 'bs_contact_form_vc' );
         "base" => "bs_contact_form",
         "category" =>  "BS",
         "params" => $params
-      ) 
+      )
     );
   }
-

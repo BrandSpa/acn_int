@@ -1,6 +1,5 @@
 import React from "react";
 import { css } from "glamor";
-import Radium, { StyleRoot } from "radium";
 
 class GalleryHeader extends React.Component {
   static defaultProps = { images: [], excerpts: [], texts: {} };
@@ -214,15 +213,7 @@ class GalleryHeader extends React.Component {
 
               </div>
             </div>
-            <div
-              style={{
-                position: "absolute",
-                textAlign: "center",
-                bottom: "10px",
-                left: "0",
-                right: "0"
-              }}
-            >
+            <div className="arrow-down">
               <a href={"#post-content"}>
                 <img
                   onLoad={this.getImage}
@@ -231,6 +222,16 @@ class GalleryHeader extends React.Component {
               </a>
             </div>
           </div>
+
+          <style jsx>{`
+            .arrow-down {
+              position: absolute;
+              textAlign: center;
+              bottom: 10px;
+              left: 0;
+              right: 0;
+            }
+           `}</style>
 
         </div>
     );
