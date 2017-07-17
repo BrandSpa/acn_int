@@ -27,10 +27,8 @@ class ProjectsAbout extends React.Component {
   render() {
 		const { section } = this.state;
 
-
 		return (
       <div>
-
 				<Projects
 					contents={this.props.projects.map(project => {
 						project["text"] = project.content;
@@ -55,15 +53,7 @@ class ProjectsAbout extends React.Component {
 
 				<div className="projects-about__posts-container">
 					<div className="l-wrap">
-						<h4 style={{
-							color: "#324049",
-							textTransform: "uppercase",
-							marginBottom: "20px",
-							marginLeft: "15px",
-							fontWeight: "normal"
-						}}
-						>{this.props.texts.stories}</h4>
-
+						<h4 class="projects-about__posts-title">{this.props.texts.stories}</h4>
 						<PostsAbout
 							category={this.props.projects[section] ? this.props.projects[section].post_category : ""}
 						/>
@@ -90,6 +80,14 @@ class ProjectsAbout extends React.Component {
             color: #A0A0A0;
           }
 
+          .projects-about__posts-title {
+            color: #324049;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            margin-left: 15px;
+            font-weight: normal
+          }
+
           .projects-about__posts-container {
             background: #F8F6F8;
             padding: 80px 0;
@@ -99,9 +97,9 @@ class ProjectsAbout extends React.Component {
 
           @media (max-width: 767px) {
             .projects-about-num__text {
-              width: 100%,
-              height: auto,
-              textAlign: center,
+              width: 100%;
+              height: auto;
+              text-align: center;
               padding: 0 0 60px 0
             }
 
@@ -110,7 +108,7 @@ class ProjectsAbout extends React.Component {
       				height: auto;
       				text-align: center
             }
-            
+
             .projects-about__posts-container  {
               padding: 20px 0 0 0
             }

@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { css } from 'glamor';
+import React, { Component } from "react";
 import debounce from "lodash/debounce";
-import ProjectsIcons from './projectsIcons';
+import ProjectsIcons from "./projectsIcons";
 
 const colors = {
   1: "#b91325",
@@ -52,39 +51,43 @@ class ProjectsInfo extends Component {
 
 	render() {
 
-		let infoSectionStyle = css({
-			background: colors[this.state.section],
-			padding: '40px',
-			textAlign: 'center',
-			color: '#fff',
-			display: 'flex',
-			justifyContent: 'center',
-			alignItems: 'center',
-			position: 'relative',
-			'@media (max-width: 767px)': {
-				display: 'block'
-			}
-		});
-
-		let numTextStyle = css({
-			fontSize: `${(60 / 15) * 1}em`,
-			marginRight: '60px',
-			'@media (max-width: 767px)': {
-				margin: '0',
-				display: 'block'
-			}
-		});
-
 		let section = this.state.section - 1;
 
 		return (
 			<div ref={el => (this.el = el)}>
 				<ProjectsIcons onChange={this.handleSection} />
-				<div className={infoSectionStyle}>
+				<div className="project-info__section" style={{background: colors[this.state.section]}}>
 					<div className="projects__arrow" />
-					<span className={ numTextStyle }>{this.props.projects[section] ? this.props.projects[section].number : ""}</span>
+					<span className="project-info__num">{this.props.projects[section] ? this.props.projects[section].number : ""}</span>
 					<span style={{ fontSize: '30px' }}>{this.props.projects[section] ? this.props.projects[section].number_text : ""}</span>
 				</div>
+        <style jsx>{`
+          .project-info__section {
+            padding: 40px;
+      			text-align: center;
+      			color: #fff;
+      			display: flex;
+      			justify-content: center;
+      			align-items: center;
+      			position: relative;
+          }
+
+          .projects-info__num {
+            font-size: 4em;
+      			margin-right: 60px;
+          }
+
+          @media (max-width: 767px) {
+            .project-info__section {
+              display: 'block'
+            }
+
+            .projects-info__num {
+              margin: 0;
+              display: block
+            }
+          }
+        `}</style>
 			</div>
 
 		)
