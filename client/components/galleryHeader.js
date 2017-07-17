@@ -177,13 +177,13 @@ class GalleryHeader extends React.Component {
               right: 0;
             }
 
-            .social-list {
+            .share-list {
               list-style: none;
               padding: 0;
               float: left;
             }
 
-            .social-list li {
+            .share-list li {
               margin-left: 5px;
               display: none
             }
@@ -222,7 +222,7 @@ class GalleryHeader extends React.Component {
                 background: rgba(255, 255, 255, .2)
               }
 
-              .social-list li {
+              .share-list li {
                 display: inline-block
               }
             }
