@@ -8,8 +8,6 @@ function acn_fullpage_slide_end_sc( $atts, $content ) {
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
 	], $atts);
 
-	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
-	$bgUrlMobile = wp_get_attachment_url( $at['bg_img_mobile'] );
 
 	ob_start();
 ?>
