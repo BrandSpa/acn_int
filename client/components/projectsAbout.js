@@ -53,7 +53,7 @@ class ProjectsAbout extends React.Component {
 						{this.props.projects[section] ? this.props.projects[section].number_text : ""}
 				  </div>
 
-				<div style={{background: "#F8F6F8", padding: "80px 0", float: "left", width: "100%", "@media (max-width: 767px)": {padding: "20px 0 0 0"}}}>
+				<div className="projects-about__posts-container">
 					<div className="l-wrap">
 						<h4 style={{
 							color: "#324049",
@@ -90,6 +90,13 @@ class ProjectsAbout extends React.Component {
             color: #A0A0A0;
           }
 
+          .projects-about__posts-container {
+            background: #F8F6F8;
+            padding: 80px 0;
+            float: left;
+            width: 100%;
+          }
+
           @media (max-width: 767px) {
             .projects-about-num__text {
               width: 100%,
@@ -103,6 +110,11 @@ class ProjectsAbout extends React.Component {
       				height: auto;
       				text-align: center
             }
+            
+            .projects-about__posts-container  {
+              padding: 20px 0 0 0
+            }
+
           }
         `}</style>
       </div>
