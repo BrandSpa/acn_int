@@ -33,26 +33,6 @@ function acn_fullpage_sc( $atts, $content ) {
 	ob_start();
 ?>
 
-
-<script type="text/javascript">
-	function setMapSize() {
-		$('.map-points').attr('width', $(window).width());
-		$('.map-points').attr('height', $(window).height());
-		if($(window).width() < 767) {
-			$('.map-points').attr('viewBox', '250 0 1920 1080');
-			$('.map-points__spots').attr('transform', 'translate(-40, 100)');
-		}
-	}
-
-	onLoad(function() {
-		setMapSize();
-
-		$(window).on('resize', function() {
-			setMapSize();
-		});
-	});
-</script>
-
 	<div id="fullpage">
 		<?php echo do_shortcode($content) ?>
 	</div>

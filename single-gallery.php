@@ -17,8 +17,8 @@
 $images = get_post_meta($post->ID, 'type_gallery_images_key', true);
 $excerpts = get_post_meta($post->ID, 'type_gallery_excerpts_key', true);
 $props = [
-	"images" => $images, 
-	"excerpts" => $excerpts, 
+	"images" => $images,
+	"excerpts" => $excerpts,
 	"texts" => [
 		"gallery" => gett('Gallery'),
 		"of" => gett('of')
@@ -36,7 +36,7 @@ onLoad(function() {
 		$('.nav li > a').css('color', ' #fff');
 		$('.nav').css({background: 'rgb(34, 34, 34)'});
 	}
-	
+
 	changeColor();
 
 	function changeColorNormal() {
@@ -44,7 +44,7 @@ onLoad(function() {
 		$('.nav img').css('filter', 'none');
 		$('.nav li > a').css('color', ' #3C515F');
 	}
-	
+
 	  window.addEventListener('scroll', function() {
     if(document.querySelector('.bs-gallery-header').getBoundingClientRect().bottom < 0 ) {
 			changeColorNormal();
@@ -94,7 +94,7 @@ onLoad(function() {
 		</div>
 
 		<div class="col-2-l"></div>
-		
+
 		<div class="col-3-l banner-vertical">
 			<?php if(get_lang() == 'en'): ?>
 				<a href="<?php echo get_option('banner_url_en') ?>">

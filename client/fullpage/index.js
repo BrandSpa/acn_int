@@ -118,6 +118,22 @@ $(function domLoaded() {
     $(".section__close-spot-content").removeClass("section__close-spot-content--open");
   }
 
-  $(".section__close-spot-content").on("click", closeSpotContent)
+  $(".section__close-spot-content").on("click", closeSpotContent);
+
+  function setMapSize() {
+    $(".map-points").attr("width", $(window).width());
+    $(".map-points").attr("height", $(window).height());
+    if($(window).width() < 767) {
+      $(".map-points").attr("viewBox", "250 0 1920 1080");
+      $(".map-points__spots").attr("transform", "translate(-40, 100)");
+    }
+  }
+
+  setMapSize();
+
+  $(window).on("resize", function() {
+    setMapSize();
+  });
+
 
 });
