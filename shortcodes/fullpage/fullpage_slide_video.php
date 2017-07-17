@@ -43,9 +43,10 @@ function acn_fullpage_slide_video_sc( $atts, $content ) {
 				</div>
 			</div>
 
-
 			<div class="section__bg-container">
-				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrlMobile ?> [(max-width: 767px)] | <?php echo $bgUrl ?>"></div>
+				<?php if(!empty($bgUrlMobile) && !empty($bgUrl)): ?>
+					<div class="section__bg lazyload" data-bgset="<?php echo $bgUrlMobile ?> [(max-width: 767px)] | <?php echo $bgUrl ?>"></div>
+				<?php endif; ?>
 			</div>
 
 		</div>
