@@ -197,14 +197,14 @@ class GalleryHeader extends React.Component {
                     <button
                       key={"btn-1"}
                       onClick={this.changeSection.bind(null, "prev")}
-                      className={btnStyle}
+                      className="nav-btn"
                     >
                       <i className="ion-chevron-left" />
                     </button>
                     <button
                       key={"btn-2"}
                       onClick={this.changeSection.bind(null, "next")}
-                      className={btnStyle}
+                      className="nav-btn"
                     >
                       <i className="ion-chevron-right" />
                     </button>
@@ -226,10 +226,22 @@ class GalleryHeader extends React.Component {
           <style jsx>{`
             .arrow-down {
               position: absolute;
-              textAlign: center;
+              text-align: center;
               bottom: 10px;
               left: 0;
               right: 0;
+            }
+            .nav-btn {
+              border: 1px solid #fff;
+              background: transparent;
+              width: 40px;
+              height: 40px;
+              border-radius: 0
+              padding: 0,
+            }
+
+            .nav-btn:hover {
+              background: rgba(255, 255, 255, .2)
             }
            `}</style>
 
