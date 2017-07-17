@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import DonateInline from "./inline";
-import { css } from "glamor";
 
 class DonateInlineSection extends Component {
   constructor(props) {
@@ -22,13 +21,9 @@ class DonateInlineSection extends Component {
 
   render() {
     const { texts } = this.props;
-    let containerStyle = css({
-      display: "flex",
-      flexWrap: "wrap"
-    });
 
     return (
-      <div className={containerStyle}>
+      <div className={{display: "flex", flexWrap: "wrap"}}>
         <div className="col-12-l" style={{margin: "40px 0" }}>
           <h2
             style={{
@@ -50,7 +45,7 @@ class DonateInlineSection extends Component {
              {this.state.section == 0 ? texts.subtitle : texts.success_subtitle}
           </h3>
         </div>
-        
+
         <div
           className="col-12 col-4-l"
           style={this.state.section == 0 ? { display: "block", background: "RGBA(43, 58, 68, .9)", padding: "20px" } : { display: "none" } }

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Donate from "./index";
-import { css } from "glamor";
 
 class DonateSection extends Component {
   constructor(props) {
@@ -21,15 +20,12 @@ class DonateSection extends Component {
   };
 
   render() {
-    let containerStyle = css({
-      display: "flex",
-      flexWrap: "wrap"
-    });
-    
+
+
     const { texts } = this.props;
 
     return (
-      <div className={containerStyle}>
+      <div style={{display: "flex", flexWrap: "wrap"}}>
         <div className="col-12-l" style={{margin: "40px 0" }}>
             <h2
             style={{

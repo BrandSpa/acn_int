@@ -59,7 +59,7 @@ class ProjectsInfo extends Component {
 				<div className="project-info__section" style={{background: colors[this.state.section]}}>
 					<div className="projects__arrow" />
 					<span className="project-info__num">{this.props.projects[section] ? this.props.projects[section].number : ""}</span>
-					<span style={{ fontSize: '30px' }}>{this.props.projects[section] ? this.props.projects[section].number_text : ""}</span>
+					<span style={{ fontSize: "30px" }}>{this.props.projects[section] ? this.props.projects[section].number_text : ""}</span>
 				</div>
         <style jsx>{`
           .project-info__section {
