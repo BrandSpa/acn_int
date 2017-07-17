@@ -1,6 +1,6 @@
 <?php
 
-function acn_fullpage_slide_sc( $atts, $content ) {
+function acn_fullpage_slide_end_sc( $atts, $content ) {
 	$at = shortcode_atts([
     "redirect_url" => "",
 		"story_num" => "",
@@ -28,4 +28,4 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 	return ob_get_clean();
 }
 
-add_shortcode( 'acn_fullpage_slide', 'acn_fullpage_slide_sc' );
+add_shortcode( 'acn_fullpage_slide_end', 'acn_fullpage_slide_end_sc' );
