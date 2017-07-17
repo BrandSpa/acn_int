@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "glamor";
 
 class GalleryHeader extends React.Component {
   static defaultProps = { images: [], excerpts: [], texts: {} };
@@ -47,88 +46,22 @@ class GalleryHeader extends React.Component {
     const { images, excerpts } = this.props;
     const h = window.innerHeight - 100;
     const w = window.innerHeight;
-
-    const btnsStyle = css({
-      float: "right",
-      marginTop: "7px"
-    });
-
-    const btnStyle = css({
-      border: "1px solid #fff",
-      background: "transparent",
-      width: "40px",
-      height: "40px",
-      borderRadius: "0",
-      padding: "0",
-      ":hover": {
-        background: "rgba(255, 255, 255, .2)"
-      }
-    });
-
-    const linkLeft = css({
-      position: "absolute",
-      height: "100%",
-      top: "0",
-      bottom: "auto",
-      left: 0,
-      width: "50%"
-    });
-
-    const linkRight = css({ ...linkLeft, left: "auto", right: 0 });
-
-    const mainStyle = css({
-      height: `${h}px`,
-      background: "#222",
-      position: "relative",
-      overflow: "hidden",
-      "@media(max-width: 767px)": { margin: "0 -20px" }
-    });
-
-    const viewportStyle = css({
-      height: `${h}px`
-    });
-
-    const excerptStyle = css({
-      color: "#fff",
-      marginTop: "20px",
-      display: "block",
-      textShadow: "2px 2px 2px #222"
-    });
-
-    const shareBtn = css({
-      color: "#fff",
-      width: "30px",
-      height: "30px",
-      borderRadius: "30px",
-      textAlign: "center",
-      display: "block",
-      border: "1px solid #fff",
-      padding: "5px",
-      fontSize: "12px",
-      ":hover": {
-        background: "rgba(255, 255, 255, .2)"
-      }
-    });
-
-    const liStyle = css({
-      marginLeft: "5px",
-      display: "none",
-      "@media(max-width: 767px)": {
-        display: "inline-block"
-      }
-    });
+    const rootHeight = `${h}px`;
+    const viewportHeight = `${h}px`;
 
     return (
-        <div className={mainStyle}>
-          <div className={viewportStyle}>
+        <div className="root" style={{height: rootHeight}}>
+          <div style={{height: viewportHeight}}>
             <div style={{ maxWidth: w, margin: "0 auto", padding: "0 20px" }}>
               <h5 style={{ color: "#fff", marginBottom: "20px" }}>
                 {this.props.texts.gallery} <i className="ion-camera" />
               </h5>
+
               <div
                 className="gallery-header__item"
                 style={{ position: "relative" }}
               >
+
                 <img
                   onLoad={this.getImage}
                   src={images[this.state.section]}
@@ -136,7 +69,7 @@ class GalleryHeader extends React.Component {
                 />
 
                 <div style={{ width: "100%", float: "left" }}>
-                  <span className={excerptStyle}>
+                  <span className="excerpt">
                     {excerpts[this.state.section]}
                   </span>
                 </div>
@@ -144,42 +77,40 @@ class GalleryHeader extends React.Component {
                 <div
                   style={{ width: "100%", float: "left", marginTop: "10px" }}
                 >
-                  <ul
-                    style={{ listStyle: "none", padding: "0", float: "left" }}
-                  >
-                    <li className={liStyle}>
+                  <ul className="share-list">
+                    <li>
                       <a
                         key={1}
-                        className={shareBtn}
+                        className="share-btn"
                         href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
                       >
                         <i className="ion-social-facebook" />
                       </a>
                     </li>
-                    <li className={liStyle}>
+                    <li>
                       <a
                         key={2}
-                        className={shareBtn}
+                        className="share-btn"
                         href={`https://twitter.com/intent/tweet?text=${window.location.href}`}
                       >
                         <i className="ion-social-twitter" />
                       </a>
                     </li>
-                    <li className={liStyle}>
+                    <li>
                       <a
                         key={3}
-                        className={shareBtn}
+                        className="share-btn"
                         href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`}
                       >
                         <i className="ion-social-linkedin" />
                       </a>
                     </li>
                     <li
-                      className={liStyle}
+
                     >
                       <a
                         key={4}
-                        className={shareBtn}
+                        className="share-btn"
                         href={`whatsapp://send?text=${window.location.href}`}
                       >
                         <i className="ion-social-whatsapp-outline" />
@@ -224,6 +155,20 @@ class GalleryHeader extends React.Component {
           </div>
 
           <style jsx>{`
+
+            .root {
+              background: #222;
+              position: relative;
+              overflow: hidden;
+            }
+
+            .excerpt {
+              color: #fff;
+              margin-top: 20px;
+              display: block;
+              text-shadow: 2px 2px 2px #222
+            }
+
             .arrow-down {
               position: absolute;
               text-align: center;
@@ -231,17 +176,55 @@ class GalleryHeader extends React.Component {
               left: 0;
               right: 0;
             }
+
+            .social-list {
+              list-style: none;
+              padding: 0;
+              float: left;
+            }
+
+            .social-list li {
+              margin-left: 5px;
+              display: none
+            }
+
             .nav-btn {
               border: 1px solid #fff;
               background: transparent;
               width: 40px;
               height: 40px;
-              border-radius: 0
-              padding: 0,
+              border-radius: 0;
+              padding: 0;
             }
 
             .nav-btn:hover {
               background: rgba(255, 255, 255, .2)
+            }
+
+            .share-btn {
+              color: #fff;
+              width: 30px;
+              height: 30px;
+              border-radius: 30px;
+              text-align: center;
+              display: block;
+              border: 1px solid #fff;
+              padding: 5px;
+              font-size: 12px;
+            }
+
+            @media(max-width: 767px) {
+              .root {
+                margin: 0 -20px
+              }
+
+              .share-btn {
+                background: rgba(255, 255, 255, .2)
+              }
+
+              .social-list li {
+                display: inline-block
+              }
             }
            `}</style>
 
