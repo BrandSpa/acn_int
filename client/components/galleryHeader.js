@@ -11,7 +11,7 @@ class GalleryHeader extends React.Component {
       maxHeight: "500px",
       margin: "0 auto"
     }
-  };
+  }
 
   componentDidMount() {
     //side effect, but necessary
@@ -21,15 +21,18 @@ class GalleryHeader extends React.Component {
 
   changeSection = (type, e) => {
     if (e) e.preventDefault();
+    
     let section = this.state.section;
     if (type == "next")
       section = this.state.section < this.props.images.length - 1
         ? this.state.section + 1
         : 0;
+
     if (type == "prev")
       section = this.state.section > 0 ? this.state.section - 1 : 0;
+
     this.setState({ section });
-  };
+  }
 
   getImage = e => {
     let imageStyle;
@@ -40,7 +43,7 @@ class GalleryHeader extends React.Component {
       imageStyle = { ...this.state.imageStyle, maxWidth: "100%" };
       this.setState({ imageStyle });
     }
-  };
+  }
 
   render() {
     const { images, excerpts } = this.props;
@@ -53,30 +56,24 @@ class GalleryHeader extends React.Component {
         <div className="root" style={{height: rootHeight}}>
           <div style={{height: viewportHeight}}>
             <div style={{ maxWidth: w, margin: "0 auto", padding: "0 20px" }}>
-              <h5 style={{ color: "#fff", marginBottom: "20px" }}>
+              <h5 className="gallery-header__title">
                 {this.props.texts.gallery} <i className="ion-camera" />
               </h5>
 
-              <div
-                className="gallery-header__item"
-                style={{ position: "relative" }}
-              >
-
+              <div className="gallery-header__item" >
                 <img
                   onLoad={this.getImage}
                   src={images[this.state.section]}
                   style={this.state.imageStyle}
                 />
 
-                <div style={{ width: "100%", float: "left" }}>
-                  <span className="excerpt">
+                <div className="gallery-header__excerpt-container">
+                  <span className="gallery-header__excerpt">
                     {excerpts[this.state.section]}
                   </span>
                 </div>
 
-                <div
-                  style={{ width: "100%", float: "left", marginTop: "10px" }}
-                >
+                <div className="gallery-header__share-list-container">
                   <ul className="share-list">
                     <li>
                       <a
@@ -105,9 +102,7 @@ class GalleryHeader extends React.Component {
                         <i className="ion-social-linkedin" />
                       </a>
                     </li>
-                    <li
-
-                    >
+                    <li>
                       <a
                         key={4}
                         className="share-btn"
@@ -162,11 +157,31 @@ class GalleryHeader extends React.Component {
               overflow: hidden;
             }
 
-            .excerpt {
+            .gallery-header__title {
+              color: #fff;
+              margin-bottom: 20px
+            }
+
+            .gallery-header__item {
+              position: relative;
+            }
+
+            .gallery-header__excerpt-container {
+              width: 100%;
+              float: left;
+            }
+
+            .gallery-header__excerpt {
               color: #fff;
               margin-top: 20px;
               display: block;
               text-shadow: 2px 2px 2px #222
+            }
+
+            .gallery-header__share-list-container {
+              width: 100%;
+              float: left;
+              margin-top: 10px
             }
 
             .arrow-down {

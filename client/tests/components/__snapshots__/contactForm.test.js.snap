@@ -1092,6 +1092,7 @@ Array [
         </select>
     </div>
     <button
+        className="btn"
         disabled={false}
         onClick={[Function]}
         style={

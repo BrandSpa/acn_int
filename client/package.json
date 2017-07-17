@@ -9,6 +9,7 @@
   "scripts": {
     "test:watch": "jest -- --watch",
     "test": "jest",
+    "test:u": "jest --updateSnapshot",
     "build": "webpack --p",
     "build:dev": "webpack --watch",
     "build:admin": "webpack  --config=webpack.admin.js --p",
