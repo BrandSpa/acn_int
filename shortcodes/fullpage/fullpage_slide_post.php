@@ -50,7 +50,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 			<button class="section__open section__close-post" > <i class="ion-close-round"></i> </button>
 
 			<div class="section__bg-container">
-				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile?> 600ws"></div>
+				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrl ?> 1200w, <?php echo $bgUrlMobile?> 600w" data-sizes="auto"></div>
 			</div>
 		</div>
 
