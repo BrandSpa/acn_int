@@ -7,6 +7,7 @@ import getCountries from "../lib/getCountries";
 const endpoint = "/wp-admin/admin-ajax.php";
 
 class contactForm extends React.Component {
+
   static defaultProps = {
     validationMessages: {},
     placeholders: {},
@@ -141,7 +142,7 @@ class contactForm extends React.Component {
         width: "100%"
       }
     };
- 
+
     let inputStyle = {
       borderRadius: this.props.vertical == "true" ? "0" : "",
     };
@@ -206,6 +207,7 @@ class contactForm extends React.Component {
             background: this.props.btnBg,
             color: "#fff"
           }}
+          className="btn"
           onClick={this.handleSubmit}
           disabled={this.state.loading}
         >
