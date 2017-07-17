@@ -2,7 +2,7 @@
 
 function acn_fullpage_slide_sc( $atts, $content ) {
 	$at = shortcode_atts([
-    "redirect_url" => ""
+    "redirect_url" => "",
 		"story_num" => "",
 		"index_num" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100)
