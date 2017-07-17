@@ -22,14 +22,16 @@ function acn_fullpage_slide_sc( $atts, $content ) {
 			data-story="<?php echo $at['story_num'] ?>"
 			data-index="<?php echo $at['index_num'] ?>"
 	>
-			<div class="section__content">
-				<?php echo do_shortcode($content) ?>
-				<button class="section__down" ><i class="ion-chevron-down"></i></button>
-	</div>
+		<div class="section__content">
+			<?php echo do_shortcode($content) ?>
+			<button class="section__down" ><i class="ion-chevron-down"></i></button>
+		</div>
 
-			<div class="fp-bg section__bg-container">
-				<div class="section__bg lazyload" data-bgset="<?php echo $bgUrlMobile ?> [(max-width: 767px)] | <?php echo $bgUrl ?>" data-sizes="auto"></div> </div>
+		<div class="fp-bg section__bg-container">
+			<div class="section__bg lazyload" data-bgset="<?php echo $bgUrlMobile ?> [(max-width: 767px)] | <?php echo $bgUrl ?>" data-sizes="auto">
 			</div>
+		</div>
+	</div>
 	<?php
 	return ob_get_clean();
 }
