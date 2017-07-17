@@ -36,7 +36,7 @@ $(function domLoaded() {
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text(slideIndex);
 
-    if(redirectUrl.length > 0) window.location = redirectUrl;
+    if(redirectUrl && redirectUrl.length > 0) window.location = redirectUrl;
 
     if( $section.find(".bs-counter").length > 0 ) {
       emmiter.emit("runCounter");
