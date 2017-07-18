@@ -129,16 +129,10 @@ function acn_fullpage_sc( $atts, $content ) {
 	</div>
 <?php endif; ?>
 	<script>
-
-		if(window.localStorage.getItem('intro') !== 'true') {
-			setTimeout(function introDelay() {
-				$('.intro').addClass('intro--close');
-				window.localStorage.setItem('intro', true);
-			}, <?php echo $introDelay ?>);
-		} else {
-			$('.intro').css({display: 'none'});
-		}
-
+		setTimeout(function introDelay() {
+			$('.intro').addClass('intro--close');
+			window.localStorage.setItem('intro', true);
+		}, <?php echo $introDelay ?>);
 	</script>
 
 	<style>
