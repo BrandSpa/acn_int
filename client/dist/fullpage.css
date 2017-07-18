@@ -1603,6 +1603,9 @@ html.fp-enabled,
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
   background: #fff; }
 
+.horizontal-list li {
+  display: inline-block; }
+
 .hidden {
   display: none; }
 

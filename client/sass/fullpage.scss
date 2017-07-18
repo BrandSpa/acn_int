@@ -1189,7 +1189,11 @@ html.fp-enabled,
     background: #fff;
 }
 
-
+.horizontal-list {
+  li {
+    display: inline-block;
+  }
+}
 
 @import 'donate';
 @import 'contact_form';
