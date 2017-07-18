@@ -818,7 +818,7 @@ button {
 
 .active .map-points__content  {
 
-  @media #{$s} {
+  @media #{$s}, #{$m} {
     animation: pointsContentMobile 1s;
     animation-delay: 3s;
     animation-fill-mode: forwards;
@@ -827,6 +827,7 @@ button {
 }
 
 .map-points {
+
   &__container {
     position: absolute;
     top: 0;

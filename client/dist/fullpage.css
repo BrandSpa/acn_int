@@ -1292,7 +1292,7 @@ button {
       -webkit-animation-delay: 4s;
       animation-delay: 4s; } }
 
-@media (max-width: 767px) {
+@media (max-width: 767px), (min-width: 768px) and (max-width: 991px) {
   .active .map-points__content {
     -webkit-animation: pointsContentMobile 1s;
     animation: pointsContentMobile 1s;
