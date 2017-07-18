@@ -11,7 +11,8 @@
     "test": "jest",
     "test:u": "jest --updateSnapshot",
     "build": "webpack --p",
-    "build:dev": "webpack --watch",
+    "build:dev": "webpack",
+    "build:watch": "webpack --watch",
     "build:admin": "webpack  --config=webpack.admin.js --p",
     "build:fp": "webpack  --config=webpack.fullpage.js --p",
     "lint": "eslint client/components"
@@ -20,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "card-validator": "^4.0.0",
     "coverer": "^1.0.3",
     "fullpage.js": "^2.9.4",

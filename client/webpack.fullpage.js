@@ -15,22 +15,22 @@ module.exports = {
   	app_me: './fullpage/index.js'
   },
   output: {
-  	path: Path.join(__dirname, '/me/'),
+  	path: Path.join(__dirname, '/dist/'),
     filename: '[name].js'
   },
   module: {
   	loaders: [
-			{ 
-				test: /\.js$/, 
-				exclude: /node_modules/, 
-				loader: 'babel-loader?cacheDirectory=true' 
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader?cacheDirectory=true'
 			}
 		]
   },
 	plugins: [
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
-        filename: 'vendor_me.js', 
+        filename: 'vendor_me.js',
         minChunks: 2
       })
     ]
