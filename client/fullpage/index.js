@@ -126,7 +126,8 @@ $(function domLoaded() {
   function setMapSize() {
     $(".map-points").attr("width", $(window).width());
     $(".map-points").attr("height", $(window).height());
-    if($(window).width() < 767) {
+
+    if($(window).width() < 767 || $(window).width() <  991) {
       $(".map-points").attr("viewBox", "250 0 1920 1080");
       $(".map-points__spots").attr("transform", "translate(-40, 100)");
     }
