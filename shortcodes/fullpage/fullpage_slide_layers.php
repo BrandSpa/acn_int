@@ -56,6 +56,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 
 	<div class="section__content">
 			<?php echo do_shortcode($content) ?>
+			<button class="section__down" ><i class="ion-chevron-down"></i></button>
 	</div>
 
 	<div class="section__layers">
