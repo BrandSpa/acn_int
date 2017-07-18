@@ -17,8 +17,12 @@ function acn_fullpage_slide_end_sc( $atts, $content ) {
 		data-anchor="<?php echo $at['uniq_name'] ?>"
 		data-story="<?php echo $at['story_num'] ?>"
 		data-index="<?php echo $at['index_num'] ?>"
-    data-redirect="<?php echo $at['redirect_url'] ?>"
 	>
+		<div class="section__content">
+			<?php echo do_shortcode($content) ?>
+			<button class="section__down section__down--end" data-redirect="<?php echo $at['redirect_url'] ?>"><i class="ion-chevron-down"></i></button>
+		</div>
+
 	  <div class="fp-bg section__bg-container" style="background: #000"></div>
 	</div>
 

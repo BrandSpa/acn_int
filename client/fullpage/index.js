@@ -139,7 +139,10 @@ $(function domLoaded() {
     $.fn.fullpage.reBuild();
   });
 
-
-
+  $(".section__down--end").on("click", function(e) {
+    e.preventDefault();
+    const url = $(this).data("redirect");
+    window.location = url;
+  })
 
 });
