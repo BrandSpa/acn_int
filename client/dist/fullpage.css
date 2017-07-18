@@ -1306,12 +1306,6 @@ button {
   top: 0;
   left: 0; }
 
-.map-points__content {
-  position: relative;
-  width: 50%;
-  padding-top: 120px;
-  z-index: 2; }
-
 .map-points__spot {
   cursor: pointer; }
   .map-points__spot-image {
@@ -1605,6 +1599,10 @@ html.fp-enabled,
 
 .horizontal-list li {
   display: inline-block; }
+
+.row {
+  display: table;
+  content: " "; }
 
 .hidden {
   display: none; }

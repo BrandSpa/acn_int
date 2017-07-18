@@ -834,13 +834,6 @@ button {
     left: 0;
   }
 
-  &__content {
-    position: relative;
-    width: 50%;
-    padding-top: 120px;
-    z-index: 2;
-  }
-
   &__spot {
     cursor: pointer;
 
@@ -1193,6 +1186,11 @@ html.fp-enabled,
   li {
     display: inline-block;
   }
+}
+
+.row {
+  display: table;
+  content: " ";
 }
 
 @import 'donate';
