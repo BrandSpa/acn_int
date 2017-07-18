@@ -808,7 +808,7 @@ button {
 .active .map-points__spot {
   animation: spotEnter 2.5s;
 
-  @media #{$s} {
+  @media #{$s}, #{$m} {
     opacity: 0;
     fill-opacity: 0;
     animation-fill-mode: forwards;

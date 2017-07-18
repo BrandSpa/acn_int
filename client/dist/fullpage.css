@@ -1283,7 +1283,7 @@ button {
 .active .map-points__spot {
   -webkit-animation: spotEnter 2.5s;
   animation: spotEnter 2.5s; }
-  @media (max-width: 767px) {
+  @media (max-width: 767px), (min-width: 768px) and (max-width: 991px) {
     .active .map-points__spot {
       opacity: 0;
       fill-opacity: 0;
