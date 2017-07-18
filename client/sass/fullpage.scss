@@ -3,6 +3,7 @@
 @import 'grid';
 @import 'form';
 @import 'fullpage_animations';
+$font-base: 15;
 
 * {
   box-sizing: border-box;
@@ -14,10 +15,9 @@ html {
 }
 
 body {
-    margin: 0
+  margin: 0
 }
 
-$font-base: 15;
 
 body,
 html {
@@ -69,9 +69,14 @@ h1 {
   line-height: 125px;
   letter-spacing: -1.14px;
 
+  @media #{$m} {
+    font-size: 60px;
+    line-height: 85px;
+  }
+
   @media #{$s} {
     font-size: 30px;
-    line-height: 50px;
+    line-height: 55px;
   }
 }
 
@@ -80,6 +85,11 @@ h2 {
   font-weight: 300;
   line-height: 90px;
   letter-spacing: -0.68px;
+
+  @media #{$m} {
+    font-size: 40px;
+    line-height: 70px;
+  }
 
   @media #{$s} {
     font-size: 25px;

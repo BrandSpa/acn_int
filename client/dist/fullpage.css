@@ -597,16 +597,24 @@ h1 {
   font-weight: 300;
   line-height: 125px;
   letter-spacing: -1.14px; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    h1 {
+      font-size: 60px;
+      line-height: 85px; } }
   @media (max-width: 767px) {
     h1 {
       font-size: 30px;
-      line-height: 50px; } }
+      line-height: 55px; } }
 
 h2 {
   font-size: 60px;
   font-weight: 300;
   line-height: 90px;
   letter-spacing: -0.68px; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    h2 {
+      font-size: 40px;
+      line-height: 70px; } }
   @media (max-width: 767px) {
     h2 {
       font-size: 25px;
