@@ -32,6 +32,93 @@ function get_house() {
   </svg>';
 }
 
+function get_bar() {
+  return '
+  <svg width="133px" height="35px" viewBox="0 0 133 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+          <rect id="path-1" x="0" y="0" width="9.92578125" height="25.0817871"></rect>
+          <rect id="path-3" x="161.988281" y="386.50064" width="124.109375" height="26"></rect>
+          <filter x="-5.6%" y="-19.2%" width="111.3%" height="153.8%" filterUnits="objectBoundingBox" id="filter-4">
+              <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+              <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+              <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+              <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+              <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+              <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+          </filter>
+      </defs>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="ME-Copy" transform="translate(-487.000000, -755.000000)">
+              <g id="Infografia" transform="translate(329.000000, 371.000000)">
+                  <g id="Group" transform="translate(162.000000, 387.000000)">
+                      <mask id="mask-2" fill="white">
+                          <use xlink:href="#path-1"></use>
+                      </mask>
+                      <g id="Mask"></g>
+                      <g mask="url(#mask-2)" stroke-linecap="square" id="Line" stroke="#F1364E">
+                          <g transform="translate(51.500000, 24.000000) rotate(-45.000000) translate(-51.500000, -24.000000) translate(-41.000000, -48.000000)">
+                              <path d="M0.5,70.5 L184.483695,70.5"></path>
+                              <path d="M0.5,67.5 L184.483695,67.5"></path>
+                              <path d="M0.5,64.5 L184.483695,64.5"></path>
+                              <path d="M0.5,61.5 L184.483695,61.5"></path>
+                              <path d="M0.5,58.5 L184.483695,58.5"></path>
+                              <path d="M0.5,55.5 L184.483695,55.5"></path>
+                              <path d="M0.5,52.5 L184.483695,52.5"></path>
+                              <path d="M0.5,49.5 L184.483695,49.5"></path>
+                              <path d="M0.5,46.5 L184.483695,46.5"></path>
+                              <path d="M0.5,43.5 L184.483695,43.5"></path>
+                              <path d="M0.5,40.5 L184.483695,40.5"></path>
+                              <path d="M0.5,37.5 L184.483695,37.5"></path>
+                              <path d="M0.5,34.5 L184.483695,34.5"></path>
+                              <path d="M0.5,31.5 L184.483695,31.5"></path>
+                              <path d="M0.5,28.5 L184.483695,28.5"></path>
+                              <path d="M0.5,25.5 L184.483695,25.5"></path>
+                              <path d="M0.5,22.5 L184.483695,22.5"></path>
+                              <path d="M0.5,19.5 L184.483695,19.5"></path>
+                              <path d="M0.5,16.5 L184.483695,16.5"></path>
+                              <path d="M0.5,13.5 L184.483695,13.5"></path>
+                              <path d="M0.5,10.5 L184.483695,10.5"></path>
+                              <path d="M0.5,7.5 L184.483695,7.5"></path>
+                              <path d="M0.5,4.5 L184.483695,4.5"></path>
+                              <path d="M0.5,1.5 L184.483695,1.5"></path>
+                              <path d="M0.5,142.5 L184.483695,142.5"></path>
+                              <path d="M0.5,139.5 L184.483695,139.5"></path>
+                              <path d="M0.5,136.5 L184.483695,136.5"></path>
+                              <path d="M0.5,133.5 L184.483695,133.5"></path>
+                              <path d="M0.5,130.5 L184.483695,130.5"></path>
+                              <path d="M0.5,127.5 L184.483695,127.5"></path>
+                              <path d="M0.5,124.5 L184.483695,124.5"></path>
+                              <path d="M0.5,121.5 L184.483695,121.5"></path>
+                              <path d="M0.5,118.5 L184.483695,118.5"></path>
+                              <path d="M0.5,115.5 L184.483695,115.5"></path>
+                              <path d="M0.5,112.5 L184.483695,112.5"></path>
+                              <path d="M0.5,109.5 L184.483695,109.5"></path>
+                              <path d="M0.5,106.5 L184.483695,106.5"></path>
+                              <path d="M0.5,103.5 L184.483695,103.5"></path>
+                              <path d="M0.5,100.5 L184.483695,100.5"></path>
+                              <path d="M0.5,97.5 L184.483695,97.5"></path>
+                              <path d="M0.5,94.5 L184.483695,94.5"></path>
+                              <path d="M0.5,91.5 L184.483695,91.5"></path>
+                              <path d="M0.5,88.5 L184.483695,88.5"></path>
+                              <path d="M0.5,85.5 L184.483695,85.5"></path>
+                              <path d="M0.5,82.5 L184.483695,82.5"></path>
+                              <path d="M0.5,79.5 L184.483695,79.5"></path>
+                              <path d="M0.5,76.5 L184.483695,76.5"></path>
+                              <path d="M0.5,73.5 L184.483695,73.5"></path>
+                          </g>
+                      </g>
+                  </g>
+                  <g id="Rectangle-2">
+                      <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                      <rect stroke="#FFFFFF" stroke-width="1" x="162.488281" y="387.00064" width="123.109375" height="25"></rect>
+                  </g>
+              </g>
+          </g>
+      </g>
+  </svg>
+  '
+}
+
 function generate_att($params, $name) {
   $arr = [];
   $key = get_att_name($name);
@@ -231,6 +318,7 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
 					<h4><?php echo get_house(); ?> <?php echo do_shortcode('[bs_counter num="342"]') ?></h4>
               <?php echo $at[get_att_name('Properties already restored')] ?>
 					<h3 style="font-weight: 500;">2%</h3>
+          <?php echo get_bar() ?>
 				</div>
 			</div>
       <div class="col-6-l col-6-m col-6">
@@ -239,6 +327,7 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
 
           <?php echo $at[get_att_name('Families returned to Nineveh Plains')] ?>
           <h3 style="font-weight: 500;">4%</h3>
+          <?php echo get_bar() ?>
         </div>
       </div>
 		</div>
