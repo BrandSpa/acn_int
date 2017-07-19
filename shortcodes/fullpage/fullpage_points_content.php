@@ -325,10 +325,15 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
 
       <div class="col-6-l col-6-m col-6">
         <div class="nineveh-box">
-          <h4><?php echo get_family(); ?> <?php echo do_shortcode('[bs_counter num="599"]') ?></h4>
-          <?php echo $at[get_att_name('Families returned to Nineveh Plains')] ?>
-          <h3 style="font-weight: 500;">4%</h3>
-          <?php echo get_bar() ?>
+          <div class="col-6-l">
+            <h4><?php echo get_family(); ?> <?php echo do_shortcode('[bs_counter num="599"]') ?></h4>
+            <?php echo $at[get_att_name('Families returned to Nineveh Plains')] ?>
+          </div>
+          <div class="col-6-l">
+            <h3 style="font-weight: 500;">4%</h3>
+            <?php echo get_bar() ?>
+          </div>
+
         </div>
       </div>
 		</div>
