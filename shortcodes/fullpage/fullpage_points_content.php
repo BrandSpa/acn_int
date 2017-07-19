@@ -239,7 +239,7 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
       padding: 0 20px;
   }
 
-  .nineveh-info .row {
+  .nineveh-info > .row {
       margin-bottom: 10px;
   }
 
