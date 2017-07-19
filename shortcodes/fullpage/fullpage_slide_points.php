@@ -189,13 +189,11 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 </div>
 
 </div>
+
 	<button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
-	
 	<?php foreach($contents as $cont): ?>
 		<?php require('points_content.php') ?>
 	<?php endforeach; ?>
-
-
 </div>
 
 <?php
