@@ -17,6 +17,7 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
   $params = [
     "title" => "Nineveh Plains Reconstruction Process"
   ];
+
   $titles = [
     'Damaged Houses',
     'Totally Destroyed',
@@ -28,10 +29,9 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
     'Number of Christians Returned',
     'Families returned to Nineveh Plains',
     'Properties already restored'
-  ]
+  ];
 
   foreach ($titles as $title) {
-
     $params[get_att_name($title)] = $title;
   }
 
