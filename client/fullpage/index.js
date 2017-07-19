@@ -5,6 +5,7 @@ import "lazysizes";
 import slidePost from  "./slide_post";
 import slideVideo from "./slide_video";
 import counter from "./counter";
+import slideMap from './spot';
 
 //lazyload configuration
 window.lazySizesConfig = window.lazySizesConfig || {};
@@ -17,7 +18,7 @@ $(function domLoaded() {
   $(".section__content").on("click", () => emmiter.emit("close:all"));
 
   $(document).keyup(function(e) {
-    if (e.keyCode === 27) emmiter.emit("close:all");   // esc
+    if (e.keyCode === 27) emmiter.emit("close:esc");   // esc
   });
 
   function handleAfterRender() {
@@ -60,6 +61,7 @@ $(function domLoaded() {
 
   slidePost($.fn.fullpage);
   slideVideo($.fn.fullpage);
+  slideMap($.fn.fullpage);
 
   function goDown() {
     $.fn.fullpage.moveSectionDown();
@@ -103,52 +105,6 @@ $(function domLoaded() {
 
   $(".fullpage__menu__share > a").on("click", toggleMenuShare);
 
-  function openSpotContent() {
-    var content = $(this).data("content");
-
-    if( $(`.spot-content.${content}`).length > 0 ) {
-      $.fn.fullpage.setAllowScrolling(false);
-      $("body").addClass("scroll-stoped");
-      $(`.spot-content.${content}`).addClass("spot-content--open");
-      $(".section__close-spot-content").addClass("section__close-spot-content--open");
-
-      $(document).on('click', `.spot-content.${content}`, function(e) {
-        if(  $(e.target).attr('class') == `spot-content ${content} spot-content--open`) {
-          closeSpotContent();
-        }
-      });
-    }
-
-  }
-
-  $(".map-points__spot").on("click", openSpotContent);
-
-  function closeSpotContent() {
-    $.fn.fullpage.setAllowScrolling(true);
-    $("body").removeClass("scroll-stoped");
-    var content = $(this).data("content");
-    $(".spot-content").removeClass("spot-content--open");
-    $(".section__close-spot-content").removeClass("section__close-spot-content--open");
-  }
-
-  $(".section__close-spot-content").on("click", closeSpotContent);
-
-  function setMapSize() {
-    $(".map-points").attr("width", $(window).width());
-    $(".map-points").attr("height", $(window).height());
-
-    if($(window).width() < 767 || $(window).width() <  991) {
-      $(".map-points").attr("viewBox", "250 0 1920 1080");
-      $(".map-points__spots").attr("transform", "translate(-40, 100)");
-    }
-  }
-
-  setMapSize();
-
-  $(window).on("resize", function() {
-    setMapSize();
-    $.fn.fullpage.reBuild();
-  });
 
   $(".section__down--end").on("click", function(e) {
     e.preventDefault();
