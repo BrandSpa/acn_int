@@ -111,12 +111,14 @@ $(function domLoaded() {
       $("body").addClass("scroll-stoped");
       $(`.spot-content.${content}`).addClass("spot-content--open");
       $(".section__close-spot-content").addClass("section__close-spot-content--open");
+      emmiter.off("close:all");
       emmiter.on("close:all", () => {
         if($('.section__close-spot-content--open')) {
 
         }
+
         setTimeout(function() {
-          console.log('close', $('.section__close-spot-content--open'));
+          console.count('close spot');
         }, 0);
 
         // closeSpotContent();
