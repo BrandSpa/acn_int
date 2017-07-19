@@ -116,7 +116,7 @@ function get_bar() {
           </g>
       </g>
   </svg>
-  '
+  ';
 }
 
 function generate_att($params, $name) {
