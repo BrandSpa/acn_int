@@ -183,7 +183,7 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
   vertical-align: middle;
 }
 
-.nineveh-info .row {
+.nineveh-info  > .row {
   margin: 0;
   margin-bottom: 20px;
   width: 100%;
@@ -212,7 +212,7 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
   }
 
 
-  .nineveh-info .row {
+  .nineveh-info  > .row {
       margin-bottom: 10px;
   }
 
