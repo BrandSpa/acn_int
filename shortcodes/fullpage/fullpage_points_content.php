@@ -17,17 +17,23 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
   $params = [
     "title" => "Nineveh Plains Reconstruction Process"
   ];
+  $titles = [
+    'Damaged Houses',
+    'Totally Destroyed',
+    'Burnt',
+    'Partially Damaged',
+    'Number of Houses Actually Being Renovated',
+    'Number of families prior to 2014',
+    'Number of Houses Registered to be Renovated',
+    'Number of Christians Returned',
+    'Families returned to Nineveh Plains',
+    'Properties already restored'
+  ]
 
-  $params = generate_att($params, 'Damaged Houses');
-  $params = generate_att($params, 'Totally Destroyed');
-  $params = generate_att($params, 'Burnt');
-  $params = generate_att($params, 'Partially Damaged');
-  $params = generate_att($params, 'Number of Houses Actually Being Renovated');
-  $params = generate_att($params, 'Number of families prior to 2014');
-  $params = generate_att($params, 'Number of Houses Registered to be Renovated');
-  $params = generate_att($params, 'Number of Christians Returned');
-  $params = generate_att($params, 'Families returned to Nineveh Plains');
-  $params = generate_att($params, 'Properties already restored');
+  foreach ($titles as $title) {
+
+    $params[get_att_name($title)] = $title;
+  }
 
 	$at = shortcode_atts($params , $atts);
 
