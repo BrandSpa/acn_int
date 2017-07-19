@@ -1,4 +1,5 @@
 function mapPoints($fp) {
+
   function setMapSize() {
     $(".map-points").attr("width", $(window).width());
     $(".map-points").attr("height", $(window).height());
@@ -50,3 +51,6 @@ function mapPoints($fp) {
 
   $(".section__close-spot-content").on("click", closeSpotContent);
 }
+
+
+export default mapPoints;
