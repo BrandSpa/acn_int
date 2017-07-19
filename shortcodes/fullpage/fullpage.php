@@ -128,7 +128,7 @@ function acn_fullpage_sc( $atts, $content ) {
 <?php endif; ?>
 	<script>
 
-		if(!window.location.hash !== '') {
+		if(window.location.hash !== '') {
 			$('.intro').addClass('intro--close');
 		}
 
