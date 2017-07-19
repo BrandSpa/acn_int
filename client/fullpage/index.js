@@ -112,7 +112,8 @@ $(function domLoaded() {
       $(`.spot-content.${content}`).addClass("spot-content--open");
       $(".section__close-spot-content").addClass("section__close-spot-content--open");
       emmiter.on("close:all", () => {
-        closeSpotContent();
+        console.log('close');
+        // closeSpotContent();
       });
     }
 
