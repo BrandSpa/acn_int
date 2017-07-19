@@ -109,9 +109,11 @@ $(function domLoaded() {
     if( $(`.spot-content.${content}`).length > 0 ) {
       $.fn.fullpage.setAllowScrolling(false);
       $("body").addClass("scroll-stoped");
-      $(`.spot-content.${content}`).addClass("spot-content--open").then( () => console.log('open'));
-      $(".section__close-spot-content").addClass("section__close-spot-content--open");
-
+      const p = new Promise(function(resolve, reject) {
+        $(`.spot-content.${content}`).addClass("spot-content--open");
+        $(".section__close-spot-content").addClass("section__close-spot-content--open");
+        return resolve();
+      }).then(() => console.log('then'));
     }
 
   }
