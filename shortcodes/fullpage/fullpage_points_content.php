@@ -98,6 +98,11 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
   min-height: 120px;
 }
 
+.nineveh-box .bs-counter {
+  display: inline-block;
+  vertical-align: top;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .nineveh-info {
       width: 80%;
@@ -148,10 +153,7 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
       min-height: 80px;
   }
 
-  .nineveh-box .bs-counter {
-    display: inline-block;
-    vertical-align: top;
-  }
+
 }
 
 
