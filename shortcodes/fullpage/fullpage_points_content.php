@@ -235,8 +235,8 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
   }
 
   .nineveh-info {
-      width: 90%;
-      padding: 0 40px;
+      width: 100%;
+      padding: 0 20px;
   }
 
   .nineveh-info .row {
@@ -245,12 +245,12 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
 
   .nineveh-info ul {
       margin-bottom: 10px;
-      padding: 10px 0;
+      padding: 5px 0;
   }
 
    .nineveh-box {
       border: 1px solid #fff;
-      padding: 10px;
+      padding: 5px;
       min-height: 80px;
   }
 
@@ -316,12 +316,12 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
 
 			<div class="col-6-l col-6-m col-6">
 				<div class="nineveh-box">
-          <div class="col-6-l col-6-m col-6">
+          <div class="col-6-l col-6-m col-12">
   					<h4>
               <?php echo get_house(); ?> <?php echo do_shortcode('[bs_counter num="342"]') ?></h4>
               <?php echo $at[get_att_name('Properties already restored')] ?>
             </div>
-            <div class="col-6-l col-6-m col-6">
+            <div class="col-6-l col-6-m col-12">
     					<h3 style="font-weight: 500;">2%</h3>
               <?php echo get_bar() ?>
             </div>
@@ -330,11 +330,11 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
 
       <div class="col-6-l col-6-m col-6">
         <div class="nineveh-box">
-          <div class="col-6-l col-6-m col-6">
+          <div class="col-6-l col-6-m col-12">
             <h4><?php echo get_family(); ?> <?php echo do_shortcode('[bs_counter num="599"]') ?></h4>
             <?php echo $at[get_att_name('Families returned to Nineveh Plains')] ?>
           </div>
-          <div class="col-6-l">
+          <div class="col-6-l col-6-m col-12">
             <h3 style="font-weight: 500;">4%</h3>
             <?php echo get_bar() ?>
           </div>
