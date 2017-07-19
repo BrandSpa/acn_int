@@ -107,13 +107,10 @@ $(function domLoaded() {
     var content = $(this).data("content");
 
     if( $(`.spot-content.${content}`).length > 0 ) {
-      emmiter.on("close:all", () => {
-        setTimeout(function() {
-          console.count($(`.spot-content.${content}`).hasClass("spot-content--open"));
-        }, 300);
-
-        // closeSpotContent();
+      $('section__content').on('click', function() {
+        console.count('click content');
       });
+
       $.fn.fullpage.setAllowScrolling(false);
       $("body").addClass("scroll-stoped");
       $(`.spot-content.${content}`).addClass("spot-content--open");
