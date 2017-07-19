@@ -116,7 +116,7 @@ $(function domLoaded() {
 
         setTimeout(function() {
           console.count($(`.spot-content.${content}`).hasClass("spot-content--open"));
-        }, 0);
+        }, 300);
 
         // closeSpotContent();
       });
