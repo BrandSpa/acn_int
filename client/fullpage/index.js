@@ -16,6 +16,10 @@ $(function domLoaded() {
 
   $(".section__content").on("click", () => emmiter.emit("close:all"));
 
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) emmiter.emit("close:all");   // esc
+  });
+
   function handleAfterRender() {
     lazySizes.init();
   }
