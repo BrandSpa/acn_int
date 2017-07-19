@@ -420,6 +420,7 @@ button {
         bottom: 0;
         left: 0;
         right: 0;
+        padding: 10px 0;
 
         ul {
             float: right;
@@ -435,7 +436,8 @@ button {
                 }
 
                 a {
-                    color: #fff;
+                  color: #fff;
+                  font-size: 20px;
                 }
             }
         }

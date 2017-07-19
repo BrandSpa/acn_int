@@ -893,7 +893,8 @@ button {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0; }
+    right: 0;
+    padding: 10px 0; }
     .fullpage-nav__info ul {
       float: right;
       padding: 7px 0; }
@@ -904,7 +905,8 @@ button {
         .fullpage-nav__info ul li:first-child {
           border: none; }
         .fullpage-nav__info ul li a {
-          color: #fff; }
+          color: #fff;
+          font-size: 20px; }
   .fullpage-nav > ul {
     padding: 0;
     position: absolute;
