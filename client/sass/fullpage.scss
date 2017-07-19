@@ -728,6 +728,7 @@ button {
 
 
   &__share {
+    position: relative;
 
     & > a {
       font-size: 27px !important;
@@ -741,6 +742,8 @@ button {
 
     &--open {
       display: block !important;
+      position: absolute;
+      right: 10px;
     }
 
     &-icon {

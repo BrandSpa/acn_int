@@ -1222,22 +1222,26 @@ button {
     .fullpage__menu > li a {
       color: #fff;
       font-size: 20px; }
-  .fullpage__menu__share > a {
-    font-size: 27px !important; }
-  .fullpage__menu__share ul li {
-    padding-right: 0; }
-  .fullpage__menu__share--open {
-    display: block !important; }
-  .fullpage__menu__share-icon {
-    display: block;
-    background: #fff;
-    color: #000 !important;
-    width: 40px;
-    height: 40px;
-    padding-top: 10px;
-    border-radius: 40px;
-    text-align: center;
-    margin: 10px 0; }
+  .fullpage__menu__share {
+    position: relative; }
+    .fullpage__menu__share > a {
+      font-size: 27px !important; }
+    .fullpage__menu__share ul li {
+      padding-right: 0; }
+    .fullpage__menu__share--open {
+      display: block !important;
+      position: absolute;
+      right: 10px; }
+    .fullpage__menu__share-icon {
+      display: block;
+      background: #fff;
+      color: #000 !important;
+      width: 40px;
+      height: 40px;
+      padding-top: 10px;
+      border-radius: 40px;
+      text-align: center;
+      margin: 10px 0; }
   .fullpage__menu--dark {
     display: block !important; }
     .fullpage__menu--dark > li a {
