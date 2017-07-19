@@ -18,16 +18,16 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
     "title" => "Nineveh Plains Reconstruction Process"
   ];
 
-  generate_att($params, 'Damaged Houses');
-  generate_att($params, 'Totally Destroyed');
-  generate_att($params, 'Burnt');
-  generate_att($params, 'Partially Damaged');
-  generate_att($params, 'Number of Houses Actually Being Renovated');
-  generate_att($params, 'Number of families prior to 2014');
-  generate_att($params, 'Number of Houses Registered to be Renovated');
-  generate_att($params, 'Number of Christians Returned');
-  generate_att($params, 'Families returned to Nineveh Plains');
-  generate_att($params, 'Properties already restored');
+  $params = generate_att($params, 'Damaged Houses');
+  $params = generate_att($params, 'Totally Destroyed');
+  $params = generate_att($params, 'Burnt');
+  $params = generate_att($params, 'Partially Damaged');
+  $params = generate_att($params, 'Number of Houses Actually Being Renovated');
+  $params = generate_att($params, 'Number of families prior to 2014');
+  $params = generate_att($params, 'Number of Houses Registered to be Renovated');
+  $params = generate_att($params, 'Number of Christians Returned');
+  $params = generate_att($params, 'Families returned to Nineveh Plains');
+  $params = generate_att($params, 'Properties already restored');
 
 	$at = shortcode_atts($params , $atts);
 
