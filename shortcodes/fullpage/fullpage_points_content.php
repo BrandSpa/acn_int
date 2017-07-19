@@ -147,7 +147,8 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
       padding: 10px;
       min-height: 80px;
   }
-  .nineveh-box > .bs-counter {
+
+  .nineveh-box .bs-counter {
     display: inline-block;
     vertical-align: top;
   }
