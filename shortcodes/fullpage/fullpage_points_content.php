@@ -165,8 +165,7 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
   width: 50%;
   text-align: center;
   color: #fff;
-  padding: 0;
-  margin-left: 40px;
+  padding: 0 40px;
 }
 
 .nineveh-title {
