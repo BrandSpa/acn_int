@@ -113,7 +113,7 @@ $(function domLoaded() {
       $(".section__close-spot-content").addClass("section__close-spot-content--open");
 
       $(document).on('click', `.spot-content.${content}`, function(e) {
-        console.log($(e.target).attr('class'));
+        console.log($(e.target).attr('class') == `spot-content ${content} spot-content--open`);
       });
     }
 
