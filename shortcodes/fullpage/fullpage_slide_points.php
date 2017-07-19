@@ -28,10 +28,6 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	<div class="section__content">
 		<?php echo do_shortcode($content) ?>
 
-		<?php foreach($contents as $cont): ?>
-			<?php require('points_content.php') ?>
-		<?php endforeach; ?>
-
 		<button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
 		<div class="map-points__container">
 			<svg class="map-points" width="1409" height="695" preserveAspectRatio="xMidYMid slice" viewBox="150 0 1600 1000">
@@ -195,6 +191,11 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 </div>
 
 </div>
+
+	<?php foreach($contents as $cont): ?>
+		<?php require('points_content.php') ?>
+	<?php endforeach; ?>
+
 
 </div>
 
