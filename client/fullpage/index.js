@@ -48,7 +48,7 @@ $(function domLoaded() {
     menu: "#fullpage-menu",
     recordHistory: false,
     lazyLoading: false,
-    navigation: true,
+    navigation: false,
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
     onLeave: handleLeave
