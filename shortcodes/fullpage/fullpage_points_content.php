@@ -293,7 +293,7 @@ function acn_fullpage_slide_points_content_sc( $atts, $content ) {
 			</div>
 			<div class="col-6-l col-6-m col-6">
 				<div class="nineveh-box">
-					<h3 style="font-weight: 500;"><?php echo get_family(); ?> <?php echo do_shortcode('[bs_counter num="14880"]') ?></h3>
+					<h3 style="font-weight: 500;color: #EE364D"><?php echo get_family(); ?> <?php echo do_shortcode('[bs_counter num="14880"]') ?></h3>
             <?php echo $at[get_att_name('Number of families prior to 2014')] ?>
 				</div>
 			</div>
