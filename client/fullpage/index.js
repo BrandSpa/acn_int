@@ -113,12 +113,9 @@ $(function domLoaded() {
       $(".section__close-spot-content").addClass("section__close-spot-content--open");
       emmiter.off("close:all");
       emmiter.on("close:all", () => {
-        if($('.section__close-spot-content--open')) {
-
-        }
 
         setTimeout(function() {
-          console.count('close spot');
+          console.count($(`.spot-content.${content}`).hasClass("spot-content--open"));
         }, 0);
 
         // closeSpotContent();
