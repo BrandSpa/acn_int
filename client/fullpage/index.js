@@ -115,7 +115,10 @@ $(function domLoaded() {
         if($('.section__close-spot-content--open')) {
 
         }
-        console.log('close', $('.section__close-spot-content--open'));
+        setTimeout(function() {
+          console.log('close', $('.section__close-spot-content--open'));
+        }, 0);
+
         // closeSpotContent();
       });
     }
