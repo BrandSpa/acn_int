@@ -91,8 +91,6 @@ function acn_fullpage_sc( $atts, $content ) {
 			</li>
 		</ul>
 
-
-
 	<div class="fullpage-nav">
 		<ul>
 			<?php foreach($links  as $ind => $link): ?>
@@ -129,10 +127,15 @@ function acn_fullpage_sc( $atts, $content ) {
 	</div>
 <?php endif; ?>
 	<script>
+
+		if(window.location.hash !== '') {
+			$('.intro').addClass('intro--close');
+		}
+
 		setTimeout(function introDelay() {
 			$('.intro').addClass('intro--close');
-			window.localStorage.setItem('intro', true);
 		}, <?php echo $introDelay ?>);
+
 	</script>
 
 	<style>
