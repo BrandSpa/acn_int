@@ -18,7 +18,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	$points = [
 		'Telleskuf' => [
 			'x' => '1219.55',
-			'y' => '155.68'
+			'y' => '155.68',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Alqosh' => [
 			'x' => '1422.68',
@@ -26,39 +27,48 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		],
 		'Baqofa' => [
 			'x' => '1302.85',
-			'y' => '225.32'
+			'y' => '225.32',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Batnaya' => [
 			'x' => '1219.66',
-			'y' => '275.41'
+			'y' => '275.41',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Telekef' => [
 			'x' => '1139.8',
-			'y' => '352.83'
+			'y' => '352.83',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Mosul' => [
 			'x' => '1013',
-			'y' => '411.91'
+			'y' => '411.91',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Bahzani' => [
 			'x' => '1439.68',
-			'y' => '409.84'
+			'y' => '409.84',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Bashiqua' => [
 			'x' => '1351.85',
-			'y' => '466.08'
+			'y' => '466.08',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Bartella' => [
 			'x' => '1276.32',
-			'y' => '625.78'
+			'y' => '625.78',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Karamless' => [
 			'x' => '1236.11',
-			'y' => '786.49'
+			'y' => '786.49',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Qaraqosh/Bakhdida' => [
 			'x' => '1072.1',
-			'y' => '774.85'
+			'y' => '774.85',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		]
 	];
 	ob_start();
@@ -101,42 +111,12 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 					</feMerge>
 				</filter>
 
-
-				<pattern id="pin-aleppo" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
-					<image x="0" y="0" height="50" width="50"
-					xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
-				</image>
-			</pattern>
-
-			<pattern id="pin-bosra" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
-				<image x="0" y="0" height="50" width="50"
-				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
-			</image>
-		</pattern>
-
-		<pattern id="pin-damascus" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
-			<image x="0" y="0" height="50" width="50"
-			xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
-		</image>
-	</pattern>
-
-	<pattern id="pin-qalat_salah_el_din" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
-		<image x="0" y="0" height="50" width="50"
-		xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
-	</image>
-</pattern>
-
-<pattern id="pin-crac_des_chevaliers" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
-	<image x="0" y="0" height="50" width="50"
-	xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
-</image>
-</pattern>
-
-<pattern id="pin-palmyra" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
-	<image x="0" y="0" height="50" width="50"
-	xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/img150-1.jpg">
-</image>
-</pattern>
+			<?php foreach($points as $name => $point): ?>
+				<pattern id="<?php echo $name ?>-img" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
+					<image x="0" y="0" height="50" width="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo $point['image'] ?>">
+					</image>
+				</pattern>
+			<?php endforeach; ?>
 
 </defs>
 
@@ -144,7 +124,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	<?php foreach($points as $name => $point): ?>
  	<g transform="translate(<?php echo $point['x'] ?>, <?php echo $point['y'] ?>)" class="map-points__spot"   data-content="<?php echo $name ?>">
 		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-aleppo)" filter="url(#pin-drop-shadow)"></circle>
+			<circle cx="0" cy="0" r="21" fill="url(#<?php echo $name ?>-img)" filter="url(#pin-drop-shadow)"></circle>
 			<g class="hotspot__pin-360" transform="translate(13, -48) scale(1.1, 1.1)">
 				<ellipse cx="0" cy="25" rx="10" ry="10" filter="url(#logo-drop-shadow)"></ellipse>
 				<g transform="translate(-4, 30)" font-size="15" font-family="Roboto-Regular, Roboto" fill="#EE364D" font-weight="normal">
