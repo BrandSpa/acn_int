@@ -23,7 +23,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		],
 		'Alqosh' => [
 			'x' => '1422.68',
-			'y' => '125'
+			'y' => '125',
+			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
 		'Baqofa' => [
 			'x' => '1302.85',
