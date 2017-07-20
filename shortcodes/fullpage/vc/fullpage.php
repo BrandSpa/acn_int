@@ -36,6 +36,21 @@ function acn_fullpage_vc() {
       ]
     ];
 
+    $titles_subparams = [
+      [
+        'type' => 'textfield',
+        'param_name' => 'story',
+        'heading' => 'story number',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'title',
+        'heading' => 'title',
+        'value' => ''
+      ]
+    ];
+
     $params = [
       [
         'type' => 'textfield',
@@ -122,6 +137,13 @@ function acn_fullpage_vc() {
         'heading' => 'Intro',
         'value' => '',
         'params' =>  $intro_subparams
+      ],
+      [
+        'type' => 'param_group',
+        'param_name' => 'titles',
+        'heading' => 'Titles',
+        'value' => '',
+        'params' =>  $titles_subparams
       ],
       [
         'type' => 'checkbox',
