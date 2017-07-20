@@ -86,7 +86,7 @@ function donate_redirect() {
   if(in_array($country, getOfficesCountries())) {
     $res = get_option('donate_url_'. str_replace(' ', '_', $country));
   } else {
-    $res = '#donate';
+    $res = 'https://acninternational.org/donate-for-christians-in-iraq/';
   }
 
   responseJson($res);
@@ -135,7 +135,7 @@ function stripe_charge() {
   $data = $_POST['data'];
   $apiKey =  get_option('stripe_key_private');
   $res = array([ 'err' => 'donation_type fail']);
-  
+
   if($data['donation_type'] == 'monthly') {
     $res = stripe_monthly($apiKey, $data);
   }
