@@ -100,7 +100,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 			<circle cx="0" cy="0" r="21" fill="url(#pin-aleppo)" filter="url(#pin-drop-shadow)"></circle>
 			<g class="hotspot__pin-360" transform="translate(13, -48) scale(1.1, 1.1)">
-				<ellipse cx="16" cy="15.5" rx="16" ry="15.5" filter="url(#logo-drop-shadow)"></ellipse>
+				<ellipse cx="0" cy="25" rx="10" ry="10.5" filter="url(#logo-drop-shadow)"></ellipse>
 				<g transform="translate(3, 4) scale(1.2, 1.2)">
 					<g transform="translate(4, 0)" fill="#666">
 						<g transform="translate(4, 6)" font-size="7" font-family="Roboto-Regular, Roboto" fill="#666" font-weight="normal">
