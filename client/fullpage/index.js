@@ -39,7 +39,7 @@ $(function domLoaded() {
     let redirectUrl = $section.data("redirect");
     let $indicator = $(".indicator");
     let title = fp_options['titles'].filter(title => title.story == story);
-    console.log(title.title);
+    console.log(title[0].title);
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text(slideIndex);
 
