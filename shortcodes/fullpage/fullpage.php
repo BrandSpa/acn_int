@@ -16,12 +16,14 @@ function acn_fullpage_sc( $atts, $content ) {
 		"link_pray" => '#',
 		"links" => "",
 		"intro" => "",
+		"titles" => "",
 		"show_intro" => false
 	], $atts);
 
 	$current_url = str_replace('//', 'https://', esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 	$links = empty(vc_param_group_parse_atts($at['links'])) ? [] : vc_param_group_parse_atts($at['links']);
 	$intro = empty(vc_param_group_parse_atts($at['intro'])) ? [] : vc_param_group_parse_atts($at['intro']);
+	$titles = empty(vc_param_group_parse_atts($at['titles'])) ? [] : vc_param_group_parse_atts($at['titles']);
 	$introCount = count($intro);
 
 	function get_delay($a, $b) {
@@ -127,6 +129,8 @@ function acn_fullpage_sc( $atts, $content ) {
 	</div>
 <?php endif; ?>
 	<script>
+		window.fp_options  = {};
+		fp_options['titles'] = <?php echo json_encode($titles) ?>
 
 		if(window.location.hash !== '') {
 			$('.intro').addClass('intro--close');
