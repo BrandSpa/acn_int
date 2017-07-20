@@ -15,6 +15,52 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
 	$contents = empty(vc_param_group_parse_atts($at['contents'])) ? [] : vc_param_group_parse_atts($at['contents']);
+	$points = [
+		'Telleskuf' => [
+			'x' => '1219.55',
+			'y' => '155.68'
+		],
+		'Alqosh' => [
+			'x' => '1422.68',
+			'y' => '125'
+		],
+		'Baqofa' => [
+			'x' => '1302.85',
+			'y' => '225.32'
+		],
+		'Batnaya' => [
+			'x' => '1219.66',
+			'y' => '275.41'
+		],
+		'Telekef' => [
+			'x' => '1139.8',
+			'y' => '352.83'
+		],
+		'Mosul' => [
+			'x' => '1013',
+			'y' => '411.91'
+		],
+		'Bahzani' => [
+			'x' => '1439.68',
+			'y' => '409.84'
+		],
+		'Bashiqua' => [
+			'x' => '1351.85',
+			'y' => '466.08'
+		],
+		'Bartella' => [
+			'x' => '1276.32',
+			'y' => '625.78'
+		],
+		'Karamless' => [
+			'x' => '1236.11',
+			'y' => '786.49'
+		],
+		'Qaraqosh/Bakhdida' => [
+			'x' => '1072.1',
+			'y' => '774.85'
+		]
+	];
 	ob_start();
 	?>
 
@@ -95,112 +141,22 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 </defs>
 
 <g class="map-points__spots">
-
-	<g transform="translate(1219.55, 155.68)" class="map-points__spot"   data-content="Telleskuf">
+	<?php foreach($points as $name => $point): ?>
+ 	<g transform="translate(<?php echo $point['x'] ?>, <?php echo $point['y'] ?>)" class="map-points__spot"   data-content="<?php echo $name ?>">
 		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 			<circle cx="0" cy="0" r="21" fill="url(#pin-aleppo)" filter="url(#pin-drop-shadow)"></circle>
 			<g class="hotspot__pin-360" transform="translate(13, -48) scale(1.1, 1.1)">
-				<ellipse cx="0" cy="25" rx="10" ry="10.5" filter="url(#logo-drop-shadow)"></ellipse>
+				<ellipse cx="0" cy="25" rx="10" ry="10" filter="url(#logo-drop-shadow)"></ellipse>
 				<g transform="translate(-4, 30)" font-size="15" font-family="Roboto-Regular, Roboto" fill="#EE364D" font-weight="normal">
 					<text><tspan fill="#EE364D" x="0" y="0">+</tspan></text>
 				</g>
 			</g>
 			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em">Telleskuf</tspan>
+				<tspan x="0" dy="1.4em"><?php echo $name ?></tspan>
 			</text>
 	</g>
 	</g>
-
-	<g transform="translate(1422.68, 125)" class="map-points__spot"  data-content="Alqosh">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-damascus)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-
-			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em">Alqosh</tspan>
-			</text>
-	</g>
-
-	<g transform="translate(1302.85, 225.32)" class="map-points__spot"   data-content="Baqofa">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-qalat_salah_el_din)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em">Baqofa</tspan>
-			</text>
-	</g>
-
-	<g transform="translate(1219.66, 275.41)" class="map-points__spot"  data-content="Batnaya">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-crac_des_chevaliers)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-			<tspan x="0" dy="1.4em">Batnaya</tspan>
-		</text>
-	</g>
-
-	<g transform="translate(1139.8, 352.83)" class="map-points__spot"  data-content="Telekef">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-palmyra)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-		<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-			<tspan x="0" dy="1.4em">Telekef</tspan>
-		</text>
-	</g>
-
-	<g transform="translate(1013, 411.91)" class="map-points__spot"   data-content="Mosul">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em">Mosul</tspan>
-			</text>
-	</g>
-
-	<g transform="translate(1439.68, 409.84)" class="map-points__spot"   data-content="Bahzani">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em">Bahzani</tspan>
-			</text>
-	</g>
-
-	<g transform="translate(1351.85, 466.08)" class="map-points__spot"   data-content="Bashiqua">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em">Bashiqua</tspan>
-			</text>
-	</g>
-
-	<g transform="translate(1276.32, 625.78)" class="map-points__spot"   data-content="Bartella">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em">Bartella</tspan>
-			</text>
-	</g>
-
-	<g transform="translate(1236.11, 786.49)" class="map-points__spot"   data-content="Karamless">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em">Karamless</tspan>
-			</text>
-	</g>
-
-	<g transform="translate(1072.1, 774.85)" class="map-points__spot"   data-content="Qaraqosh">
-		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
-			<circle cx="0" cy="0" r="21" fill="url(#pin-bosra)" filter="url(#pin-drop-shadow)"></circle>
-		</g>
-			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em">Qaraqosh/Bakhdida</tspan>
-			</text>
-	</g>
+<?php endforeach; ?>
 </g>
 </svg>
 </div>
