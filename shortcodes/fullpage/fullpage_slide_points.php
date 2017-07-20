@@ -81,6 +81,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 </image>
 </pattern>
 
+<pattern id="pin-aleppo" patternUnits="userSpaceOnUse" height="107" width="107" x="53.601190476190474" y="53.601190476190474"><image x="0" y="0" height="107" width="107"></image></pattern>
+
 </defs>
 
 <g class="map-points__spots">
