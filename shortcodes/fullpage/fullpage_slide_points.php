@@ -103,7 +103,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 				<ellipse cx="0" cy="25" rx="10" ry="10.5" filter="url(#logo-drop-shadow)"></ellipse>
 				<g transform="translate(3, 4) scale(1.2, 1.2)">
 					<g transform="translate(4, 0)" fill="#666">
-						<g transform="translate(4, 6)" font-size="7" font-family="Roboto-Regular, Roboto" fill="#666" font-weight="normal">
+						<g transform="translate(4, 6)" font-size="10" font-family="Roboto-Regular, Roboto" fill="#666" font-weight="normal">
 							<text><tspan fill="#666" x="0.44333767" y="6">+</tspan></text>
 						</g>
 					</g>
@@ -112,6 +112,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
 				<tspan x="0" dy="1.4em">Telleskuf</tspan>
 			</text>
+	</g>
 	</g>
 
 	<g transform="translate(1422.68, 125)" class="map-points__spot"  data-content="Alqosh">
