@@ -38,6 +38,8 @@ $(function domLoaded() {
     let slideIndex = $section.data("index");
     let redirectUrl = $section.data("redirect");
     let $indicator = $(".indicator");
+    let title = fp_options['titles'].filter(title => title.story == story);
+    console.log(title.title);
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text(slideIndex);
 
