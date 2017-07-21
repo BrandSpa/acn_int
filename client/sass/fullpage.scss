@@ -906,18 +906,9 @@ button {
 }
 
 .nineveh-general-content {
-  &__first-list {
-    li {
-      display: inline-block;
-      margin-right: 40px;
-    }
-
-    border-bottom: 1px solid #979797;
-  }
-
   ul {
     float: left;
-
+    width: 100%;
     li {
       display: inline-block;
       text-align: center;
@@ -927,6 +918,18 @@ button {
 
     border-bottom: 1px solid #979797;
     padding: 20px 0 25px 0;
+  }
+
+  &__first-list {
+    float: none;
+
+    li {
+      float: none;
+      display: inline-block;
+      margin-right: 40px;
+    }
+
+    border-bottom: 1px solid #979797;
   }
 }
 
