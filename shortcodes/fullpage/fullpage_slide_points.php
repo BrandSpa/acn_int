@@ -228,7 +228,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
             </g>
         </svg>
         <h4 style="color: #EE364D"><?php echo $at[get_att_name('Damaged Houses') . '_num']   ?></h4>
-        <?php echo $at[get_att_name('Damaged Houses')] ?></li>
+        <p><?php echo $at[get_att_name('Damaged Houses')] ?></p>
+      </li>
 			<li>
         <h4><?php echo $at[get_att_name('Totally Destroyed') . '_num']  ?></h4>
         <?php echo $at[get_att_name('Totally Destroyed')] ?></li>
