@@ -1334,7 +1334,7 @@ button {
     stroke: #fff;
     stroke-width: 2px; }
 
-.spot-content {
+.spot-content, .nineveh-general-content {
   z-index: 4;
   position: absolute;
   height: 100%;
@@ -1343,9 +1343,9 @@ button {
   left: -100%;
   -webkit-transition: left .7s;
   transition: left .7s; }
-  .spot-content--open {
+  .spot-content--open, .nineveh-general-content--open {
     left: 0; }
-  .spot-content__container {
+  .spot-content__container, .nineveh-general-content__container {
     width: 50%;
     position: relative;
     background: #fff;
@@ -1355,10 +1355,10 @@ button {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
     overflow-x: hidden;
     overflow-y: scroll; }
-    .spot-content__container h1, .spot-content__container h2, .spot-content__container h3, .spot-content__container h4, .spot-content__container h5, .spot-content__container p {
+    .spot-content__container h1, .spot-content__container h2, .spot-content__container h3, .spot-content__container h4, .spot-content__container h5, .spot-content__container p, .nineveh-general-content__container h1, .nineveh-general-content__container h2, .nineveh-general-content__container h3, .nineveh-general-content__container h4, .nineveh-general-content__container h5, .nineveh-general-content__container p {
       color: #4A4A4A; }
     @media (max-width: 767px) {
-      .spot-content__container {
+      .spot-content__container, .nineveh-general-content__container {
         width: 88%; } }
 
 .fullpage-donate {
@@ -1380,6 +1380,9 @@ button {
   border-radius: 5px; }
   .btn:focus {
     outline: none; }
+
+.nineveh-general-point {
+  cursor: pointer; }
 
 /*!
  * fullPage 2.9.4
@@ -1617,9 +1620,6 @@ html.fp-enabled,
 .row {
   display: table;
   content: " "; }
-
-.nineveh-general-point {
-  cursor: pointer; }
 
 .hidden {
   display: none; }
