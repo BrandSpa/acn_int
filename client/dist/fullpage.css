@@ -1319,7 +1319,10 @@ button {
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
     -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; } }
+    animation-fill-mode: forwards;
+    width: 100% !important;
+    text-align: center;
+    padding: 0 40px; } }
 
 .map-points__container {
   position: absolute;
