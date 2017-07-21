@@ -314,7 +314,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
         <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
             <defs>
-                <mask id="Mask">
+                <mask id="Mask-2">
                   <rect fill="white" id="path-1" x="0" y="0" width="15" height="28.8781568"></rect>
                 </mask>
             </defs>
@@ -322,8 +322,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="Artboard">
                     <g id="stripe" transform="translate(1.000000, 1.000000)">
-                        <g id="stripe-mask"></g>
-                        <g id="lines" mask="url(#Mask)" stroke-linecap="square" stroke="#F1364E">
+                        <g id="lines" mask="url(#Mask-2)" stroke-linecap="square" stroke="#F1364E">
                             <g transform="translate(59.720234, 27.351819) rotate(-45.000000) translate(-59.720234, -27.351819) translate(-47.279766, -55.648181)" id="Line">
                                 <path d="M0.575679809,81.170853 L212.407076,81.170853"></path>
                                 <path d="M0.575679809,77.7167742 L212.407076,77.7167742"></path>
