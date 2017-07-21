@@ -330,7 +330,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			</li>
 		</ul>
 
-    <ul class="nineveh-general-content__list">
+    <ul class="nineveh-general-content__list" style="margin-top: 40px">
       <li>
         <svg width="43px" height="30px" viewBox="0 0 43 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
