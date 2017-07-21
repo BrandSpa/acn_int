@@ -906,6 +906,15 @@ button {
 }
 
 .nineveh-general-content {
+  & > h2 {
+    line-height: 60px;
+    margin-bottom: 40px;
+
+    @media #{$s} {
+      line-height: 30px;
+    }
+  }
+
   &__container {
     padding: 7%;
   }

@@ -1367,6 +1367,13 @@ button {
       .spot-content__container, .nineveh-general-content__container {
         width: 88%; } }
 
+.nineveh-general-content > h2 {
+  line-height: 60px;
+  margin-bottom: 40px; }
+  @media (max-width: 767px) {
+    .nineveh-general-content > h2 {
+      line-height: 30px; } }
+
 .nineveh-general-content__container {
   padding: 7%; }
 
