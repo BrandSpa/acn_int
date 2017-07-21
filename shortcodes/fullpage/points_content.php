@@ -72,8 +72,6 @@
 									<h3 style="font-weight: 500; color: red"><?php echo $cont['damaged_houses_title_1'] ?></h3>
 								</div>
 
-								<h4><?php echo isset($cont['number_of_houses_registered_to_be_renovated_num']) ? $cont['number_of_houses_registered_to_be_renovated_num'] : ''  ?></h4>
-								<p><?php echo $cont['number_of_houses_registered_to_be_renovated_text'] ?></p>
 					    </div>
 
 					    <ul style="margin-bottom: 40px">
@@ -92,6 +90,10 @@
 								<li>
 									<h4><?php echo isset($cont['number_of_houses_actually_being_renovated_num']) ? $cont['number_of_houses_actually_being_renovated_num'] : '' ?></h4>
 								 <p><?php echo $cont['number_of_houses_actually_being_renovated_text'] ?></p>
+								</li>
+								<li>
+										<h4><?php echo isset($cont['number_of_houses_registered_to_be_renovated_num']) ? $cont['number_of_houses_registered_to_be_renovated_num'] : ''  ?></h4>
+										<p><?php echo $cont['number_of_houses_registered_to_be_renovated_text'] ?></p>
 								</li>
 					    </ul>
 
