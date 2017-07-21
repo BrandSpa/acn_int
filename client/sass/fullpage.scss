@@ -921,6 +921,15 @@ button {
       text-align: center;
       float: left;
       width: 50%;
+
+      h4 {
+        display: inline-block;
+      }
+
+      svg {
+        max-width: 100%;
+        display: inline-block;
+      }
     }
   }
 
@@ -932,9 +941,7 @@ button {
       margin-right: 40px;
       text-align: center;
 
-      svg {
-        max-width: 100%;
-      }
+
     }
 
     border-bottom: 1px solid #979797;
