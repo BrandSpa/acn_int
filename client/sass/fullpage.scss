@@ -935,13 +935,12 @@ button {
 
   &__first-list {
     padding: 20px 0 25px 0;
-
+    float: left;
+    width: 100%;
     li {
-      display: inline-block;
-      margin-right: 40px;
+      float: left;
       text-align: center;
-
-
+      width: 25%;
     }
 
     border-bottom: 1px solid #979797;
