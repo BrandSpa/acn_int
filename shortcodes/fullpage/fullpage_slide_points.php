@@ -309,7 +309,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			</li>
 		</ul>
     <ul>
-      <li><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></li>
+      <li><h4><?php echo $at[get_att_name('Families returned to Nineveh Plains') . '_num']  ?></h4></li>
       <li>
         <h4>4%</h4>
         <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
