@@ -5,15 +5,17 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=0">
   <meta name="theme-color" content="#f1364e">
   <meta property="title" content="<?php echo get_the_title(); ?>" />
-	<meta property="title" content="<?php echo get_the_title(); ?>" />
+	<meta property="description" content="<?php echo get_the_excerpt(); ?>" />
 
   <meta property="og:title" content="<?php echo get_the_title(); ?>" />
   <meta property="og:url" content="<?php echo the_permalink() ?>" />
   <meta property="og:image" content="<?php echo get_the_post_thumbnail_url() ?>" />
+	<meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
 
   <meta name="twitter:title" content="<?php echo get_the_title(); ?>">
   <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url() ?>">
   <meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:description" content="<?php echo get_the_excerpt(); ?>" />
 
   <title>ACN - Aid to the Church in Need <?php echo wp_title(); ?></title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
