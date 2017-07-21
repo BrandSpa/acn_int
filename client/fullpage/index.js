@@ -117,9 +117,6 @@ $(function domLoaded() {
     window.location = url;
   })
 
-  $('.nineveh-general-point').on('click', function(e) {
-    e.preventDefault();
-    $('.nineveh-general-content').addClass('.nineveh-general-content--open');
-  });
+
 
 });

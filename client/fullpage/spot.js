@@ -50,6 +50,18 @@ function mapPoints($fp) {
   }
 
   $(".section__close-spot-content").on("click", closeSpotContent);
+
+
+  function openNinevehGeneralContent(e) {
+    if(e) e.preventDefault();
+    $fp.setAllowScrolling(true);
+    $("body").removeClass("scroll-stoped");
+    $(".section__close-spot-content").addClass("section__close-spot-content--open");
+    $('.nineveh-general-content').addClass('.nineveh-general-content--open')
+  }
+
+  $('.nineveh-general-point').on('click', openNinevehGeneralContent);
+
 }
 
 
