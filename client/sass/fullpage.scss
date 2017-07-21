@@ -855,6 +855,13 @@ button {
     left: 0;
   }
 
+  &__content {
+    padding: 0 40px;
+    position: relative;
+    z-index: 4;
+    width: 50%;
+  }
+
   &__spot {
     cursor: pointer;
 

@@ -1329,6 +1329,12 @@ button {
   top: 0;
   left: 0; }
 
+.map-points__content {
+  padding: 0 40px;
+  position: relative;
+  z-index: 4;
+  width: 50%; }
+
 .map-points__spot {
   cursor: pointer; }
   .map-points__spot-image {
