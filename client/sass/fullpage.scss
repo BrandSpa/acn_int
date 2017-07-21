@@ -906,6 +906,8 @@ button {
 }
 
 .nineveh-general-content {
+  padding: 0 7%;
+  
   ul {
     float: left;
     width: 100%;
@@ -927,6 +929,10 @@ button {
       float: none;
       display: inline-block;
       margin-right: 40px;
+
+      svg {
+        max-width: 100%;
+      }
     }
 
     border-bottom: 1px solid #979797;
