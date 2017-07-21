@@ -125,7 +125,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 </defs>
 
-<g id="Page-1" transform="translate(1060, 482)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<g id="Page-1" transform="translate(1060, 482)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" filter="url(#pin-drop-shadow)">
 		<g id="ME-Copy-2" transform="translate(-1060.000000, -471.000000)">
 				<g id="Page-1" transform="translate(1060.000000, 478.000000)">
 						<mask id="mask-2" fill="white">
@@ -149,7 +149,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 <g class="map-points__spots">
 	<?php foreach($points as $name => $point): ?>
- 	<g transform="translate(<?php echo $point['x'] ?>, <?php echo $point['y'] ?>)" class="map-points__spot"   data-content="<?php echo $name ?>">
+ 	<g transform="translate(<?php echo $point['x'] ?>, <?php echo $point['y'] ?>)" class="map-points__spot" data-content="<?php echo $name ?>">
 		<g class="map-points__spot-image" fill="#fff" fill-rule="nonzero">
 			<circle cx="0" cy="0" r="21" fill="url(#<?php echo $name ?>-img)" filter="url(#pin-drop-shadow)"></circle>
 			<g class="hotspot__pin-360" transform="translate(13, -48) scale(1.1, 1.1)">
