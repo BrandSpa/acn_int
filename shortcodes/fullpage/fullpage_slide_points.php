@@ -33,6 +33,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
   foreach ($titles as $title) {
     $params[get_att_name($title)] = $title;
+    $params[get_att_name($title) . '_num'] = $title;
   }
 
 
@@ -197,14 +198,29 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 </div>
 
 <button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
-<button class="section__open section__close-nineveh-general"> <i class="ion-close-round"></i> </button>
-
+<?php
+ /*
+'Damaged Houses',
+'Totally Destroyed',
+'Burnt',
+'Partially Damaged',
+'Number of Houses Actually Being Renovated',
+'Number of families prior to 2014',
+'Number of Houses Registered to be Renovated',
+'Number of Christians Returned',
+'Families returned to Nineveh Plains',
+'Properties already restored'
+ */
+?>
 <div class="nineveh-general-content">
 	<div class="nineveh-general-content__container">
 		<h2>Nineveh Plains Reconstruction Process</h2>
 		<ul>
 			<li></li>
-			<li></li>
+			<li><?php echo $at[get_att_name('Damaged Houses') . '_num'] ?> <?php echo $at[get_att_name('Damaged Houses')] ?></li>
+			<li><?php echo $at[get_att_name('Totally Destroyeds') . '_num'] ?> <?php echo $at[get_att_name('Totally Destroyeds')] ?></li>
+			<li><?php echo $at[get_att_name('Burnt') . '_num'] ?> <?php echo $at[get_att_name('Burnt')] ?></li>
+			<li><?php echo $at[get_att_name('Partially Damaged') . '_num'] ?> <?php echo $at[get_att_name('Partially Damaged')] ?></li>
 		</ul>
 	</div>
 </div>

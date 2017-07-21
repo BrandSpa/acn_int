@@ -28,9 +28,9 @@ function mapPoints($fp) {
       $(`.spot-content.${content}`).addClass("spot-content--open");
       $(".section__close-spot-content").addClass("section__close-spot-content--open");
 
-      $(document).on('click', `.spot-content.${content}`, function(e) {
+      $(document).on("click", `.spot-content.${content}`, function(e) {
         e.preventDefault();
-        if(  $(e.target).attr('class') == `spot-content ${content} spot-content--open`) {
+        if(  $(e.target).attr("class") == `spot-content ${content} spot-content--open`) {
           closeSpotContent();
         }
       });
@@ -57,7 +57,7 @@ function mapPoints($fp) {
     $fp.setAllowScrolling(false);
     $("body").addClass("scroll-stoped");
     $(".section__close-nineveh-general").addClass("section__close-nineveh-general--open");
-    $('.nineveh-general-content').addClass('nineveh-general-content--open')
+    $(".nineveh-general-content").addClass("nineveh-general-content--open")
   }
 
   function closeNinevehGeneralContent(e) {
@@ -65,12 +65,11 @@ function mapPoints($fp) {
     $fp.setAllowScrolling(true);
     $("body").removeClass("scroll-stoped");
     $(".section__close-nineveh-general").removeClass("section__close-nineveh-general--open");
-    $('.nineveh-general-content').removeClass('nineveh-general-content--open')
-
+    $(".nineveh-general-content").removeClass("nineveh-general-content--open")
   }
 
-  $('.nineveh-general-point').on('click', openNinevehGeneralContent);
-  $(".section__close-nineveh-general").on('click', closeNinevehGeneralContent);
+  $(".nineveh-general-point").on("click", openNinevehGeneralContent);
+  $(".section__close-nineveh-general").on("click", closeNinevehGeneralContent);
 
 }
 
