@@ -1397,13 +1397,14 @@ button {
   .nineveh-general-content__first-list li {
     float: left;
     text-align: center;
-    width: 20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    width: 20%; }
+    .nineveh-general-content__first-list li:first-child {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
 
 .fullpage-donate {
   border: 2px solid #fff;
