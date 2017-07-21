@@ -204,12 +204,13 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 'Totally Destroyed',
 'Burnt',
 'Partially Damaged',
-'Number of Houses Actually Being Renovated',
-'Number of families prior to 2014',
 'Number of Houses Registered to be Renovated',
+'Number of Houses Actually Being Renovated',
+'Properties already restored',
+'Number of families prior to 2014',
 'Number of Christians Returned',
 'Families returned to Nineveh Plains',
-'Properties already restored'
+
  */
 ?>
 <div class="nineveh-general-content">
@@ -221,6 +222,38 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<li><?php echo $at[get_att_name('Totally Destroyed') . '_num']  ?> <?php echo $at[get_att_name('Totally Destroyed')] ?></li>
 			<li><?php echo $at[get_att_name('Burnt') . '_num']  ?> <?php echo $at[get_att_name('Burnt')] ?></li>
 			<li><?php echo $at[get_att_name('Partially Damaged') . '_num'] ?> <?php echo $at[get_att_name('Partially Damaged')] ?></li>
+		</ul>
+		<ul>
+			<li><?php echo $at[get_att_name('Number of Houses Registered to be Renovated') . '_num']   ?></li>
+			<li><?php echo $at[get_att_name('Number of Houses Registered to be Renovated')] ?></li>
+		</ul>
+		<ul>
+			<li><?php echo $at[get_att_name('Number of Houses Actually Being Renovated') . '_num']  ?></li>
+			<li><?php echo $at[get_att_name('Number of Houses Actually Being Renovated')] ?></li>
+		</ul>
+		<ul>
+			<li><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></li>
+			<li>
+        <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <rect id="path-1" x="-4" y="0" width="944" height="1080"></rect>
+                <filter x="-0.6%" y="-0.8%" width="101.9%" height="101.7%" filterUnits="objectBoundingBox" id="filter-2">
+                    <feOffset dx="3" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                    <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                    <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.419214221 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                </filter>
+            </defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="ME-Copy-2">
+                    <g id="Rectangle-2">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </svg>
+				<?php echo $at[get_att_name('Properties already restored')]  ?>
+			</li>
 		</ul>
 	</div>
 </div>
