@@ -917,9 +917,10 @@ button {
   ul {
     li {
       display: inline-block;
+      text-align: center;
     }
     border-bottom: 1px solid #979797;
-    padding-bottom: 25px;
+    padding: 20px 0 25px 0;
   }
 }
 
