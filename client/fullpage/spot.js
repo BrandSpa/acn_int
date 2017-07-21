@@ -54,13 +54,23 @@ function mapPoints($fp) {
 
   function openNinevehGeneralContent(e) {
     if(e) e.preventDefault();
-    $fp.setAllowScrolling(true);
-    $("body").removeClass("scroll-stoped");
+    $fp.setAllowScrolling(false);
+    $("body").addClass("scroll-stoped");
     $(".section__close-nineveh-general").addClass("section__close-nineveh-general--open");
     $('.nineveh-general-content').addClass('nineveh-general-content--open')
   }
 
+  function closeNinevehGeneralContent(e) {
+    if(e) e.preventDefault();
+    $fp.setAllowScrolling(true);
+    $("body").removeClass("scroll-stoped");
+    $(".section__close-nineveh-general").removeClass("section__close-nineveh-general--open");
+    $('.nineveh-general-content').removeClass('nineveh-general-content--open')
+
+  }
+
   $('.nineveh-general-point').on('click', openNinevehGeneralContent);
+  $(".section__close-nineveh-general").on('click', closeNinevehGeneralContent);
 
 }
 
