@@ -331,7 +331,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
                 </g>
             </g>
         </svg>
-        <h4 style="color: #EE364D"><?php echo $at[get_att_name('Number of families prior to 2014') . '_num']  ?></h4>
+        <h4 style="color: #EE364D;display: inline-block; padding-left: 20px"><?php echo $at[get_att_name('Number of families prior to 2014') . '_num']  ?></h4>
       </li>
       <li><?php echo $at[get_att_name('Number of families prior to 2014')]  ?></li>
     </ul>
