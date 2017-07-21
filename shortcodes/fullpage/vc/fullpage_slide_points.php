@@ -191,7 +191,7 @@ function acn_fullpage_slide_points_vc() {
         "type" => "textfield",
         "heading" => $title,
         "param_name" => get_att_name($title)
-      ],
+      ];
     }
 
     vc_map(
