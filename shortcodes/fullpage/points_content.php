@@ -69,14 +69,14 @@
 											    </g>
 											</svg>
 									</h3>
-									<h3 style="color: red;font-weight: 500;"><?php echo $cont['damaged_houses_title_1'] ?></h3>
+									<h3 style="font-weight: 500;"><?php echo $cont['damaged_houses_title_1'] ?></h3>
 								</div>
 	<!--
 								<div style="margin-bottom: 40px">
 									<h1 style="font-weight: 700;"><?php echo isset($cont['percentage']) ? $cont['percentage'] : '' ?></h1>
 								</div> -->
 
-								<h4 style="color: red;"><?php echo isset($cont['number_of_houses_registered_to_be_renovated_num']) ? $cont['number_of_houses_registered_to_be_renovated_num'] : ''  ?></h4>
+								<h4><?php echo isset($cont['number_of_houses_registered_to_be_renovated_num']) ? $cont['number_of_houses_registered_to_be_renovated_num'] : ''  ?></h4>
 								<p><?php echo $cont['number_of_houses_registered_to_be_renovated_text'] ?></p>
 					    </div>
 
