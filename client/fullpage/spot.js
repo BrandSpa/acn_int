@@ -57,7 +57,7 @@ function mapPoints($fp) {
     $fp.setAllowScrolling(true);
     $("body").removeClass("scroll-stoped");
     $(".section__close-spot-content").addClass("section__close-spot-content--open");
-    $('.nineveh-general-content').addClass('.nineveh-general-content--open')
+    $('.nineveh-general-content').addClass('nineveh-general-content--open')
   }
 
   $('.nineveh-general-point').on('click', openNinevehGeneralContent);
