@@ -1618,6 +1618,9 @@ html.fp-enabled,
   display: table;
   content: " "; }
 
+.nineveh-general-point {
+  cursor: pointer; }
+
 .hidden {
   display: none; }
 
