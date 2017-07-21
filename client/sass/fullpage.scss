@@ -911,11 +911,15 @@ button {
       display: inline-block;
       margin-right: 40px;
     }
+    border-bottom: 1px solid #979797;
   }
+
   ul {
     li {
       display: inline-block;
     }
+    border-bottom: 1px solid #979797;
+    padding-bottom: 25px;
   }
 }
 

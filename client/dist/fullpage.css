@@ -1367,12 +1367,17 @@ button {
       .spot-content__container, .nineveh-general-content__container {
         width: 88%; } }
 
-.nineveh-general-content__first-list li {
-  display: inline-block;
-  margin-right: 40px; }
+.nineveh-general-content__first-list {
+  border-bottom: 1px solid #979797; }
+  .nineveh-general-content__first-list li {
+    display: inline-block;
+    margin-right: 40px; }
 
-.nineveh-general-content ul li {
-  display: inline-block; }
+.nineveh-general-content ul {
+  border-bottom: 1px solid #979797;
+  padding-bottom: 25px; }
+  .nineveh-general-content ul li {
+    display: inline-block; }
 
 .fullpage-donate {
   border: 2px solid #fff;
