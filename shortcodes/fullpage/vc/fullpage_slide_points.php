@@ -1,8 +1,4 @@
 <?php
-function get_att_name($name) {
-  $name = strtolower($name);
-  return str_replace(" ", "_", $name);
-}
 
 function acn_fullpage_slide_points_vc() {
 
