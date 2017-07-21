@@ -117,3 +117,5 @@ function add_svg_mime( $existing_mimes = array() ) {
 	$existing_mimes['svg'] = 'image/svg+xml';
 	return $existing_mimes;
 }
+
+	add_post_type_support( 'page', 'excerpt' );
