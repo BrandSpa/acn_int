@@ -906,8 +906,10 @@ button {
 }
 
 .nineveh-general-content {
-  padding: 0 7%;
-  
+  &__container {
+    padding: 0 7%;
+  }
+
   ul {
     float: left;
     width: 100%;
