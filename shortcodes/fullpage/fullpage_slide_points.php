@@ -197,6 +197,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 </div>
 
 <button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
+<button class="section__open section__close-nineveh-general"> <i class="ion-close-round"></i> </button>
 
 <div class="nineveh-general-content">
 	<div class="nineveh-general-content__container">

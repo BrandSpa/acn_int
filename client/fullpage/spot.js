@@ -56,7 +56,7 @@ function mapPoints($fp) {
     if(e) e.preventDefault();
     $fp.setAllowScrolling(true);
     $("body").removeClass("scroll-stoped");
-    $(".section__close-spot-content").addClass("section__close-spot-content--open");
+    $(".section__close-nineveh-general").addClass("section__close-nineveh-general--open");
     $('.nineveh-general-content').addClass('nineveh-general-content--open')
   }
 

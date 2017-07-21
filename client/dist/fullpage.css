@@ -1187,7 +1187,9 @@ button {
   -ms-flex-align: center;
   align-items: center; }
 
-.section__close-post, .section__close-spot-content {
+.section__close-post,
+.section__close-spot-content,
+.section__close-nineveh-general {
   z-index: 12;
   display: none;
   bottom: 40px;
@@ -1195,10 +1197,14 @@ button {
   left: 0;
   right: 0; }
   @media (max-width: 767px) {
-    .section__close-post, .section__close-spot-content {
+    .section__close-post,
+    .section__close-spot-content,
+    .section__close-nineveh-general {
       right: 20px;
       left: auto; } }
-  .section__close-post--open, .section__close-spot-content--open {
+  .section__close-post--open,
+  .section__close-spot-content--open,
+  .section__close-nineveh-general--open {
     display: block; }
 
 .scroll-stoped .fullpage__menu {

@@ -676,7 +676,9 @@ button {
   align-items: center;
 }
 
-.section__close-post, .section__close-spot-content {
+.section__close-post,
+.section__close-spot-content,
+.section__close-nineveh-general {
   z-index: 12;
   display: none;
   bottom: 40px;
