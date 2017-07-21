@@ -228,7 +228,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
             </g>
         </svg>
 			</li>
-			<li><h4><?php echo $at[get_att_name('Damaged Houses') . '_num']   ?></h4> <?php echo $at[get_att_name('Damaged Houses')] ?></li>
+			<li><h4 style="color: #EE364D"><?php echo $at[get_att_name('Damaged Houses') . '_num']   ?></h4> <?php echo $at[get_att_name('Damaged Houses')] ?></li>
 			<li><h4><?php echo $at[get_att_name('Totally Destroyed') . '_num']  ?></h4> <?php echo $at[get_att_name('Totally Destroyed')] ?></li>
 			<li><h4><?php echo $at[get_att_name('Burnt') . '_num']  ?></h4> <?php echo $at[get_att_name('Burnt')] ?></li>
 			<li><h4><?php echo $at[get_att_name('Partially Damaged') . '_num'] ?></h4> <?php echo $at[get_att_name('Partially Damaged')] ?></li>
@@ -331,7 +331,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
                 </g>
             </g>
         </svg>
-        <h4><?php echo $at[get_att_name('Number of families prior to 2014') . '_num']  ?></h4>
+        <h4 style="color: #EE364D"><?php echo $at[get_att_name('Number of families prior to 2014') . '_num']  ?></h4>
       </li>
       <li><?php echo $at[get_att_name('Number of families prior to 2014')]  ?></li>
     </ul>
