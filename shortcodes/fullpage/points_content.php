@@ -89,10 +89,12 @@
 					        <h4><?php echo isset($cont['houses_partially_damaged_num']) ? $cont['houses_partially_damaged_num'] : '' ?></h4>
 					        <p><?php echo $cont['houses_partially_damaged_text'] ?></p>
 					      </li>
+								<li>
+									<h4><?php echo isset($cont['number_of_houses_actually_being_renovated_num']) ? $cont['number_of_houses_actually_being_renovated_num'] : '' ?></h4>
+								 <p><?php echo $cont['number_of_houses_actually_being_renovated_text'] ?></p>
+								</li>
 					    </ul>
 
-					    <h4>27</h4>
-					    <p>Number of houses actually being renovated</p>
 					  </div>
 
 					</div>
