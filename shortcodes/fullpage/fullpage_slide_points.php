@@ -219,23 +219,23 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<h2>Nineveh Plains Reconstruction Process</h2>
 		<ul class="nineveh-general-content__first-list">
 			<li></li>
-			<li><h3><?php echo $at[get_att_name('Damaged Houses') . '_num']   ?></h3> <?php echo $at[get_att_name('Damaged Houses')] ?></li>
-			<li><h3><?php echo $at[get_att_name('Totally Destroyed') . '_num']  ?></h3> <?php echo $at[get_att_name('Totally Destroyed')] ?></li>
-			<li><h3><?php echo $at[get_att_name('Burnt') . '_num']  ?></h3> <?php echo $at[get_att_name('Burnt')] ?></li>
-			<li><h3><?php echo $at[get_att_name('Partially Damaged') . '_num'] ?></h3> <?php echo $at[get_att_name('Partially Damaged')] ?></li>
+			<li><h4><?php echo $at[get_att_name('Damaged Houses') . '_num']   ?></h4> <?php echo $at[get_att_name('Damaged Houses')] ?></li>
+			<li><h4><?php echo $at[get_att_name('Totally Destroyed') . '_num']  ?></h4> <?php echo $at[get_att_name('Totally Destroyed')] ?></li>
+			<li><h4><?php echo $at[get_att_name('Burnt') . '_num']  ?></h4> <?php echo $at[get_att_name('Burnt')] ?></li>
+			<li><h4><?php echo $at[get_att_name('Partially Damaged') . '_num'] ?></h4> <?php echo $at[get_att_name('Partially Damaged')] ?></li>
 		</ul>
 		<ul>
-			<li><h3><?php echo $at[get_att_name('Number of Houses Registered to be Renovated') . '_num']   ?></h3></li>
+			<li><h4><?php echo $at[get_att_name('Number of Houses Registered to be Renovated') . '_num']   ?></h4></li>
 			<li><?php echo $at[get_att_name('Number of Houses Registered to be Renovated')] ?></li>
 		</ul>
 		<ul>
-			<li><h3><?php echo $at[get_att_name('Number of Houses Actually Being Renovated') . '_num']  ?></h3></li>
+			<li><h4><?php echo $at[get_att_name('Number of Houses Actually Being Renovated') . '_num']  ?></h4></li>
 			<li><?php echo $at[get_att_name('Number of Houses Actually Being Renovated')] ?></li>
 		</ul>
 		<ul>
-			<li><h3><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></h3></li>
+			<li><h4><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></h4></li>
 			<li>
-        <h3>2%</h3>
+        <h4>2%</h4>
         <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
             <defs>
@@ -311,7 +311,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     <ul>
       <li><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></li>
       <li>
-        <h3>4%</h3>
+        <h4>4%</h4>
         <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
             <defs>
