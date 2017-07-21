@@ -912,6 +912,8 @@ button {
 
   &__list {
     float: left;
+    display: flex;
+    align-items: center;
     width: 100%;
     border-bottom: 1px solid #979797;
     padding: 20px 0 25px 0;
