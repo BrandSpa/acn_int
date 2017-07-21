@@ -1381,6 +1381,8 @@ button {
   width: 100%;
   border-bottom: 1px solid #979797;
   padding: 20px 0 25px 0; }
+  .nineveh-general-content__list:last-child {
+    border-bottom: none; }
   .nineveh-general-content__list li {
     display: inline-block;
     text-align: center;
