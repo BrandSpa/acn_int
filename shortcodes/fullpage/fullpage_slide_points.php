@@ -152,7 +152,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 </defs>
 
-<g class="nineveh-general-point" transform="translate(1060, 482)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" filter="url(#pin-drop-shadow)">
+<g class="nineveh-general-point map-points__spot" transform="translate(1060, 482)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" filter="url(#pin-drop-shadow)">
 		<g id="ME-Copy-2" transform="translate(-1060.000000, -471.000000)">
 				<g id="Page-1" transform="translate(1060.000000, 478.000000)">
 						<mask id="mask-2" fill="white">
@@ -199,21 +199,6 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 <button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
 <button class="section__open section__close-nineveh-general"> <i class="ion-close-round"></i> </button>
-<?php
- /*
-'Damaged Houses',
-'Totally Destroyed',
-'Burnt',
-'Partially Damaged',
-'Number of Houses Registered to be Renovated',
-'Number of Houses Actually Being Renovated',
-'Properties already restored',
-'Number of families prior to 2014',
-'Number of Christians Returned',
-'Families returned to Nineveh Plains',
-
- */
-?>
 
 <div class="nineveh-general-content">
 	<div class="nineveh-general-content__container">
