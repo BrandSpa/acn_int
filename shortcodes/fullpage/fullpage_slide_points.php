@@ -239,15 +239,13 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
             <defs>
                 <mask id="Mask">
-                  <rect id="path-1" x="0" y="0" width="11.4281437" height="28.8781568"></rect>
+                  <rect fill="white" id="path-1" x="0" y="0" width="11.4281437" height="28.8781568"></rect>
                 </mask>
             </defs>
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="Artboard">
                     <g id="stripe" transform="translate(1.000000, 1.000000)">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
+
                         <g id="stripe-mask"></g>
                         <g id="lines" mask="url(#Mask)" stroke-linecap="square" stroke="#F1364E">
                             <g transform="translate(59.720234, 27.351819) rotate(-45.000000) translate(-59.720234, -27.351819) translate(-47.279766, -55.648181)" id="Line">
