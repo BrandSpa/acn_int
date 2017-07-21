@@ -1370,12 +1370,12 @@ button {
 .nineveh-general-content__container {
   padding: 0 7%; }
 
-.nineveh-general-content ul {
+.nineveh-general-content__list {
   float: left;
   width: 100%;
   border-bottom: 1px solid #979797;
   padding: 20px 0 25px 0; }
-  .nineveh-general-content ul li {
+  .nineveh-general-content__list li {
     display: inline-block;
     text-align: center;
     float: left;

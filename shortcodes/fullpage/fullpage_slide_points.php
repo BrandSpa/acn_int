@@ -219,7 +219,6 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<h2>Nineveh Plains Reconstruction Process</h2>
 		<ul class="nineveh-general-content__first-list">
 			<li>
-
         <svg width="31px" height="29px" viewBox="0 0 31 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -234,15 +233,18 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<li><h4><?php echo $at[get_att_name('Burnt') . '_num']  ?></h4> <?php echo $at[get_att_name('Burnt')] ?></li>
 			<li><h4><?php echo $at[get_att_name('Partially Damaged') . '_num'] ?></h4> <?php echo $at[get_att_name('Partially Damaged')] ?></li>
 		</ul>
-		<ul>
+
+    <ul class="nineveh-general-content__list">
 			<li><h4><?php echo $at[get_att_name('Number of Houses Registered to be Renovated') . '_num']   ?></h4></li>
 			<li><?php echo $at[get_att_name('Number of Houses Registered to be Renovated')] ?></li>
 		</ul>
-		<ul>
+
+		<ul class="nineveh-general-content__list">
 			<li><h4><?php echo $at[get_att_name('Number of Houses Actually Being Renovated') . '_num']  ?></h4></li>
 			<li><?php echo $at[get_att_name('Number of Houses Actually Being Renovated')] ?></li>
 		</ul>
-		<ul>
+
+    <ul class="nineveh-general-content__list">
 			<li><h4><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></h4></li>
 			<li>
         <h4>2%</h4>
@@ -319,7 +321,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			</li>
 		</ul>
 
-    <ul>
+    <ul class="nineveh-general-content__list">
       <li>
         <svg width="43px" height="30px" viewBox="0 0 43 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
@@ -334,13 +336,13 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
       <li><?php echo $at[get_att_name('Number of families prior to 2014')]  ?></li>
     </ul>
 
-    <ul>
+    <ul class="nineveh-general-content__list">
       <li><h4><?php echo $at[get_att_name('Number of Christians Returned') . '_num']  ?></h4></li>
       <li><?php echo $at[get_att_name('Number of Christians Returned')]  ?></li>
     </ul>
 
 
-    <ul>
+    <ul class="nineveh-general-content__list">
       <li><h4><?php echo $at[get_att_name('Families returned to Nineveh Plains') . '_num']  ?></h4></li>
       <li>
         <h4>4%</h4>
