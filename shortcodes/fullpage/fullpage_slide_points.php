@@ -213,10 +213,11 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
  */
 ?>
+
 <div class="nineveh-general-content">
 	<div class="nineveh-general-content__container">
 		<h2>Nineveh Plains Reconstruction Process</h2>
-		<ul>
+		<ul class="nineveh-general-content__first-list">
 			<li></li>
 			<li><?php echo $at[get_att_name('Damaged Houses') . '_num']   ?> <?php echo $at[get_att_name('Damaged Houses')] ?></li>
 			<li><?php echo $at[get_att_name('Totally Destroyed') . '_num']  ?> <?php echo $at[get_att_name('Totally Destroyed')] ?></li>
@@ -379,6 +380,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
                 </g>
             </g>
         </svg>
+
         <?php echo $at[get_att_name('Properties already restored')]  ?>
       </li>
     </ul>
