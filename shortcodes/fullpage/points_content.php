@@ -12,7 +12,7 @@
 
 					  <div class="col-4-l" style="padding-bottom: 40px">
 					    <div style="margin-bottom: 40px">
-					      <h3>
+					      <h3 style="color: red;font-weight: 500;">
 									<?php echo isset($cont['families_already_returned_num']) ? $cont['families_already_returned_num'] : '' ?>
 									<svg width="38px" height="27px" viewBox="0 0 38 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
@@ -31,7 +31,7 @@
 					    </div>
 
 							<div>
-								<h3>
+								<h3 style="color: red;font-weight: 500;">
 									<?php echo isset($cont['christians_already_returned_num']) ? $cont['christians_already_returned_num'] : ''?>
 									<svg width="38px" height="27px" viewBox="0 0 38 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
@@ -52,7 +52,7 @@
 					  </div>
 
 					  <div class="col-4-l" style="padding-bottom: 40px">
-					    <div style="margin-bottom: 140px">
+					    <div style="margin-bottom: 40px">
 								<div style="margin-bottom: 40px">
 									<h3 style="color: red;font-weight: 500;">
 										<?php echo isset($cont['damaged_houses_num']) ?  $cont['damaged_houses_num'] : ''?>
