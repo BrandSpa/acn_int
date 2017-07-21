@@ -234,7 +234,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<ul>
 			<li><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></li>
 			<li>
-
+        2%
         <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
             <defs>
@@ -242,10 +242,10 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
                   <rect fill="white" id="path-1" x="0" y="0" width="11.4281437" height="28.8781568"></rect>
                 </mask>
             </defs>
+
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                 <g id="Artboard">
                     <g id="stripe" transform="translate(1.000000, 1.000000)">
-
                         <g id="stripe-mask"></g>
                         <g id="lines" mask="url(#Mask)" stroke-linecap="square" stroke="#F1364E">
                             <g transform="translate(59.720234, 27.351819) rotate(-45.000000) translate(-59.720234, -27.351819) translate(-47.279766, -55.648181)" id="Line">
@@ -307,6 +307,82 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 				<?php echo $at[get_att_name('Properties already restored')]  ?>
 			</li>
 		</ul>
+    <ul>
+      <li><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></li>
+      <li>
+        4%
+        <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+            <defs>
+                <mask id="Mask">
+                  <rect fill="white" id="path-1" x="0" y="0" width="15" height="28.8781568"></rect>
+                </mask>
+            </defs>
+
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="Artboard">
+                    <g id="stripe" transform="translate(1.000000, 1.000000)">
+                        <g id="stripe-mask"></g>
+                        <g id="lines" mask="url(#Mask)" stroke-linecap="square" stroke="#F1364E">
+                            <g transform="translate(59.720234, 27.351819) rotate(-45.000000) translate(-59.720234, -27.351819) translate(-47.279766, -55.648181)" id="Line">
+                                <path d="M0.575679809,81.170853 L212.407076,81.170853"></path>
+                                <path d="M0.575679809,77.7167742 L212.407076,77.7167742"></path>
+                                <path d="M0.575679809,74.2626953 L212.407076,74.2626953"></path>
+                                <path d="M0.575679809,70.8086165 L212.407076,70.8086165"></path>
+                                <path d="M0.575679809,67.3545376 L212.407076,67.3545376"></path>
+                                <path d="M0.575679809,63.9004588 L212.407076,63.9004588"></path>
+                                <path d="M0.575679809,60.4463799 L212.407076,60.4463799"></path>
+                                <path d="M0.575679809,56.9923011 L212.407076,56.9923011"></path>
+                                <path d="M0.575679809,53.5382222 L212.407076,53.5382222"></path>
+                                <path d="M0.575679809,50.0841434 L212.407076,50.0841434"></path>
+                                <path d="M0.575679809,46.6300645 L212.407076,46.6300645"></path>
+                                <path d="M0.575679809,43.1759856 L212.407076,43.1759856"></path>
+                                <path d="M0.575679809,39.7219068 L212.407076,39.7219068"></path>
+                                <path d="M0.575679809,36.2678279 L212.407076,36.2678279"></path>
+                                <path d="M0.575679809,32.8137491 L212.407076,32.8137491"></path>
+                                <path d="M0.575679809,29.3596702 L212.407076,29.3596702"></path>
+                                <path d="M0.575679809,25.9055914 L212.407076,25.9055914"></path>
+                                <path d="M0.575679809,22.4515125 L212.407076,22.4515125"></path>
+                                <path d="M0.575679809,18.9974337 L212.407076,18.9974337"></path>
+                                <path d="M0.575679809,15.5433548 L212.407076,15.5433548"></path>
+                                <path d="M0.575679809,12.089276 L212.407076,12.089276"></path>
+                                <path d="M0.575679809,8.63519713 L212.407076,8.63519713"></path>
+                                <path d="M0.575679809,5.18111828 L212.407076,5.18111828"></path>
+                                <path d="M0.575679809,1.72703943 L212.407076,1.72703943"></path>
+                                <path d="M0.575679809,164.068745 L212.407076,164.068745"></path>
+                                <path d="M0.575679809,160.614667 L212.407076,160.614667"></path>
+                                <path d="M0.575679809,157.160588 L212.407076,157.160588"></path>
+                                <path d="M0.575679809,153.706509 L212.407076,153.706509"></path>
+                                <path d="M0.575679809,150.25243 L212.407076,150.25243"></path>
+                                <path d="M0.575679809,146.798351 L212.407076,146.798351"></path>
+                                <path d="M0.575679809,143.344272 L212.407076,143.344272"></path>
+                                <path d="M0.575679809,139.890193 L212.407076,139.890193"></path>
+                                <path d="M0.575679809,136.436115 L212.407076,136.436115"></path>
+                                <path d="M0.575679809,132.982036 L212.407076,132.982036"></path>
+                                <path d="M0.575679809,129.527957 L212.407076,129.527957"></path>
+                                <path d="M0.575679809,126.073878 L212.407076,126.073878"></path>
+                                <path d="M0.575679809,122.619799 L212.407076,122.619799"></path>
+                                <path d="M0.575679809,119.16572 L212.407076,119.16572"></path>
+                                <path d="M0.575679809,115.711642 L212.407076,115.711642"></path>
+                                <path d="M0.575679809,112.257563 L212.407076,112.257563"></path>
+                                <path d="M0.575679809,108.803484 L212.407076,108.803484"></path>
+                                <path d="M0.575679809,105.349405 L212.407076,105.349405"></path>
+                                <path d="M0.575679809,101.895326 L212.407076,101.895326"></path>
+                                <path d="M0.575679809,98.4412473 L212.407076,98.4412473"></path>
+                                <path d="M0.575679809,94.9871684 L212.407076,94.9871684"></path>
+                                <path d="M0.575679809,91.5330896 L212.407076,91.5330896"></path>
+                                <path d="M0.575679809,88.0790107 L212.407076,88.0790107"></path>
+                                <path d="M0.575679809,84.6249319 L212.407076,84.6249319"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <rect id="Rectangle" stroke="#585858" x="0.5" y="0.5" width="299" height="28.9400005"></rect>
+                </g>
+            </g>
+        </svg>
+        <?php echo $at[get_att_name('Properties already restored')]  ?>
+      </li>
+    </ul>
 	</div>
 </div>
 
