@@ -1,5 +1,10 @@
 <?php
-  function acn_fullpage_slide_points_vc() {
+function get_att_name($name) {
+  $name = strtolower($name);
+  return str_replace(" ", "_", $name);
+}
+
+function acn_fullpage_slide_points_vc() {
 
     $spots_content_subparams = [
       [
@@ -167,6 +172,27 @@
 				"param_name" => "content"
 			]
 		];
+
+    $titles = [
+      'Damaged Houses',
+      'Totally Destroyed',
+      'Burnt',
+      'Partially Damaged',
+      'Number of Houses Actually Being Renovated',
+      'Number of families prior to 2014',
+      'Number of Houses Registered to be Renovated',
+      'Number of Christians Returned',
+      'Families returned to Nineveh Plains',
+      'Properties already restored'
+    ];
+
+    foreach ($titles as $title) {
+      $params[] = [
+        "type" => "textfield",
+        "heading" => $title,
+        "param_name" => get_att_name($title)
+      ],
+    }
 
     vc_map(
       array(

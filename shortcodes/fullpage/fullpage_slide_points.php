@@ -1,7 +1,12 @@
 <?php
+function get_att_name($name) {
+  $name = strtolower($name);
+  return str_replace(" ", "_", $name);
+}
 
 function acn_fullpage_slide_points_sc( $atts, $content ) {
-	$at = shortcode_atts([
+
+	$params = [
 		"title" => "",
 		"subtitle" => "",
 		"bg_color" => "#fff",
@@ -11,7 +16,27 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		"index_num" => "",
 		"uniq_name" => "slide-" . uniqid() . rand(0, 100),
 		"contents" => ""
-	], $atts);
+	];
+
+	$titles = [
+    'Damaged Houses',
+    'Totally Destroyed',
+    'Burnt',
+    'Partially Damaged',
+    'Number of Houses Actually Being Renovated',
+    'Number of families prior to 2014',
+    'Number of Houses Registered to be Renovated',
+    'Number of Christians Returned',
+    'Families returned to Nineveh Plains',
+    'Properties already restored'
+  ];
+
+  foreach ($titles as $title) {
+    $params[get_att_name($title)] = $title;
+  }
+
+
+	$at = shortcode_atts($params, $atts);
 
 	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
 	$contents = empty(vc_param_group_parse_atts($at['contents'])) ? [] : vc_param_group_parse_atts($at['contents']);
@@ -171,6 +196,17 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 </div>
 
 <button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
+
+<div class="nineveh-general-content">
+	<div class="nineveh-general-content__container">
+		<h2>Nineveh Plains Reconstruction Process</h2>
+		<ul>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+
 	<?php foreach($contents as $cont): ?>
 		<?php require('points_content.php') ?>
 	<?php endforeach; ?>

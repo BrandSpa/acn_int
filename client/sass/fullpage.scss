@@ -870,7 +870,7 @@ button {
   }
 }
 
-.spot-content {
+.spot-content, .nineveh-general-content {
   z-index: 4;
   position: absolute;
   height: 100%;
@@ -925,6 +925,11 @@ button {
 		outline: none;
 	}
 }
+
+.nineveh-general-point {
+  cursor: pointer;
+}
+
 
 /*!
  * fullPage 2.9.4
@@ -1209,9 +1214,6 @@ html.fp-enabled,
   content: " ";
 }
 
-.nineveh-general-point {
-  cursor: pointer;
-}
 
 @import 'donate';
 @import 'contact_form';
