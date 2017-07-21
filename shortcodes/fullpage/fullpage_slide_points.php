@@ -234,20 +234,26 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<ul>
 			<li><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></li>
 			<li>
+
         <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
             <defs>
-                <rect id="path-1" x="-4" y="0" width="944" height="1080"></rect>
-                <filter x="-0.6%" y="-0.8%" width="101.9%" height="101.7%" filterUnits="objectBoundingBox" id="filter-2">
-                    <feOffset dx="3" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-                    <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-                    <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.419214221 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+                <rect id="path-1" x="0" y="0" width="300" height="29.9400005"></rect>
+                <filter x="-2.3%" y="-16.7%" width="104.7%" height="146.8%" filterUnits="objectBoundingBox" id="filter-2">
+                    <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                    <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+                    <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+                    <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+                    <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+                    <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
                 </filter>
             </defs>
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <g id="ME-Copy-2">
-                    <g id="Rectangle-2">
+                <g id="Artboard">
+                    <g id="Rectangle-2-Copy-2">
                         <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#585858" stroke-width="1" x="0.5" y="0.5" width="299" height="28.9400005"></rect>
                     </g>
                 </g>
             </g>
