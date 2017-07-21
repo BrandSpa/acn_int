@@ -17,7 +17,7 @@
   <meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:description" content="<?php echo get_the_excerpt(); ?>" />
 
-  <title>ACN - Aid to the Church in Need <?php echo wp_title(); ?></title>
+  <title>ACN / Aid to the Church in Need - <?php echo wp_title(); ?></title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
@@ -25,10 +25,12 @@
 		<?php wp_head(); ?>
 	<!-- /wordpress files-->
 
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/client/dist/fullpage.css?v=<?php echo filemtime(get_template_directory() . '/client/dist/fullpage.css') ?>">
-
+	<link
+		rel="stylesheet"
+		href="<?php echo get_template_directory_uri() ?>/client/dist/fullpage.css?v=<?php echo filemtime(get_template_directory() . '/client/dist/fullpage.css') ?>">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 	<script>
       function onLoad(cb) {
         if (window.addEventListener)

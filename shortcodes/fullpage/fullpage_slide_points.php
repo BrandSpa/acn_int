@@ -113,6 +113,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 						<feMergeNode in="SourceGraphic"></feMergeNode>
 					</feMerge>
 				</filter>
+				  <polygon id="path-1" points="5.42101086e-20 0.0001 5.42101086e-20 197.878 134.575 197.878 134.575 0.0001"></polygon>
+
 
 			<?php foreach($points as $name => $point): ?>
 				<pattern id="<?php echo $name ?>-img" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
@@ -122,6 +124,28 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<?php endforeach; ?>
 
 </defs>
+
+<g id="Page-1" transform="translate(1060, 482)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="ME-Copy-2" transform="translate(-1060.000000, -471.000000)">
+				<g id="Page-1" transform="translate(1060.000000, 478.000000)">
+						<mask id="mask-2" fill="white">
+								<use xlink:href="#path-1"></use>
+						</mask>
+						<g id="Clip-2"></g>
+						<path d="M67.2876,0.0001 C30.1256,0.0001 -0.0004,30.1261 -0.0004,67.2881 C-0.0004,78.0161 2.5106,88.1581 6.9766,97.1571 L6.8926,97.1571 L57.4326,191.4041 C57.6606,191.9301 57.9336,192.4311 58.2396,192.9091 C60.1476,195.8941 63.4826,197.8781 67.2876,197.8781 C70.8466,197.8781 73.9926,196.1391 75.9466,193.4731 C76.5356,192.6691 77.0136,191.7821 77.3626,190.8301 L125.0956,101.7441 C131.1156,91.6661 134.5756,79.8811 134.5756,67.2881 C134.5756,30.1261 104.4496,0.0001 67.2876,0.0001" id="Fill-1" fill="#F1364E" mask="url(#mask-2)"></path>
+				</g>
+				<circle id="Oval-2-Copy-9" fill="#FFFFFF" cx="1175.15593" cy="489.155927" r="18.1559266"></circle>
+				<g id="Group-9" transform="translate(1165.000000, 480.000000)" stroke="#343434" stroke-width="5" stroke-linecap="square">
+						<path d="M1.32515625,9.5 L19.6748438,9.5" id="Line-3"></path>
+						<path d="M10,0.32515625 L10,18.6748437" id="Line-3"></path>
+				</g>
+				<text id="NINEVEH-GENERAL-DATA" font-family="OpenSans-Light, Open Sans" font-size="22" font-weight="300" line-spacing="24" fill="#FFFFFF">
+						<tspan x="1080.77246" y="534">NINEVEH</tspan>
+						<tspan x="1079" y="558">GENERAL</tspan>
+						<tspan x="1099.07715" y="582">DATA</tspan>
+				</text>
+		</g>
+</g>
 
 <g class="map-points__spots">
 	<?php foreach($points as $name => $point): ?>
@@ -146,7 +170,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 </div>
 
-	<button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
+<button class="section__open section__close-spot-content"> <i class="ion-close-round"></i> </button>
 	<?php foreach($contents as $cont): ?>
 		<?php require('points_content.php') ?>
 	<?php endforeach; ?>
