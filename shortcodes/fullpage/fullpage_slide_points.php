@@ -217,9 +217,9 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<h2>Nineveh Plains Reconstruction Process</h2>
 		<ul>
 			<li></li>
-			<li><?php echo $at[get_att_name('Damaged Houses') . '_num'] ?> <?php echo $at[get_att_name('Damaged Houses')] ?></li>
-			<li><?php echo $at[get_att_name('Totally Destroyeds') . '_num'] ?> <?php echo $at[get_att_name('Totally Destroyeds')] ?></li>
-			<li><?php echo $at[get_att_name('Burnt') . '_num'] ?> <?php echo $at[get_att_name('Burnt')] ?></li>
+			<li><?php echo $at[get_att_name('Damaged Houses') . '_num']   ?> <?php echo $at[get_att_name('Damaged Houses')] ?></li>
+			<li><?php echo $at[get_att_name('Totally Destroyeds') . '_num']  ?> <?php echo $at[get_att_name('Totally Destroyeds')] ?></li>
+			<li><?php echo $at[get_att_name('Burnt') . '_num']  ?> <?php echo $at[get_att_name('Burnt')] ?></li>
 			<li><?php echo $at[get_att_name('Partially Damaged') . '_num'] ?> <?php echo $at[get_att_name('Partially Damaged')] ?></li>
 		</ul>
 	</div>
