@@ -925,12 +925,12 @@ button {
   }
 
   &__first-list {
-    float: none;
+    padding: 20px 0 25px 0;
 
     li {
-      float: none;
       display: inline-block;
       margin-right: 40px;
+      text-align: center;
 
       svg {
         max-width: 100%;
