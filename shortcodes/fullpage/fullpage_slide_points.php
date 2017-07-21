@@ -308,6 +308,18 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 				<?php echo $at[get_att_name('Properties already restored')]  ?>
 			</li>
 		</ul>
+
+    <ul>
+      <li><h4><?php echo $at[get_att_name('Number of families prior to 2014') . '_num']  ?></h4></li>
+      <li><?php echo $at[get_att_name('Number of families prior to 2014')]  ?></li>
+    </ul>
+
+    <ul>
+      <li><h4><?php echo $at[get_att_name('Number of Christians Returned') . '_num']  ?></h4></li>
+      <li><?php echo $at[get_att_name('Number of Christians Returned')]  ?></li>
+    </ul>
+
+
     <ul>
       <li><h4><?php echo $at[get_att_name('Families returned to Nineveh Plains') . '_num']  ?></h4></li>
       <li>
