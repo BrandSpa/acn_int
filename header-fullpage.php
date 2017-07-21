@@ -5,13 +5,23 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=0">
   <meta name="theme-color" content="#f1364e">
   <meta property="title" content="<?php echo get_the_title(); ?>" />
-  	<title>ACN - Aid to the Church in Need <?php echo wp_title(); ?></title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-		<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<meta property="title" content="<?php echo get_the_title(); ?>" />
 
-    <!--wordpress files-->
-	  <?php wp_head(); ?>
-		<!-- /wordpress files-->
+  <meta property="og:title" content="<?php echo get_the_title(); ?>" />
+  <meta property="og:url" content="<?php echo the_permalink() ?>" />
+  <meta property="og:image" content="<?php echo get_the_post_thumbnail_url() ?>" />
+
+  <meta name="twitter:title" content="<?php echo get_the_title(); ?>">
+  <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url() ?>">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>ACN - Aid to the Church in Need <?php echo wp_title(); ?></title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  <!--wordpress files-->
+		<?php wp_head(); ?>
+	<!-- /wordpress files-->
 
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/client/dist/fullpage.css?v=<?php echo filemtime(get_template_directory() . '/client/dist/fullpage.css') ?>">
 
