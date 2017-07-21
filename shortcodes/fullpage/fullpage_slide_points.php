@@ -218,7 +218,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	<div class="nineveh-general-content__container">
 		<h2 style="line-height: 60px; margin-bottom: 40px;">Nineveh Plains Reconstruction Process</h2>
 		<ul class="nineveh-general-content__first-list">
-			<li>
+      <li>
         <svg width="31px" height="29px" viewBox="0 0 31 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -227,6 +227,8 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
                 </g>
             </g>
         </svg>
+      </li>
+			<li>
         <h4 style="color: #EE364D"><?php echo $at[get_att_name('Damaged Houses') . '_num']   ?></h4>
         <p><?php echo $at[get_att_name('Damaged Houses')] ?></p>
       </li>
