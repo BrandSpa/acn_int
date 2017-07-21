@@ -125,7 +125,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 </defs>
 
-<g id="Page-1" transform="translate(1060, 482)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" filter="url(#pin-drop-shadow)">
+<g class="nineveh-general-point" transform="translate(1060, 482)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" filter="url(#pin-drop-shadow)">
 		<g id="ME-Copy-2" transform="translate(-1060.000000, -471.000000)">
 				<g id="Page-1" transform="translate(1060.000000, 478.000000)">
 						<mask id="mask-2" fill="white">
