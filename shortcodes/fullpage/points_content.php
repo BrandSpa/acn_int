@@ -74,7 +74,7 @@
 
 					    </div>
 
-					    <ul style="margin-bottom: 40px">
+					    <ul class="spot-content__houses-list">
 					      <li style="margin-bottom: 20px">
 					        <h4><?php echo isset($cont['houses_totally_destroyed_num']) ?  $cont['houses_totally_destroyed_num'] : '' ?></h4>
 					        <p><?php echo $cont['houses_totally_destroyed_text'] ?></p>
