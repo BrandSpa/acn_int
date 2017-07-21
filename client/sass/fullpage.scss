@@ -937,11 +937,14 @@ button {
     padding: 20px 0 25px 0;
     float: left;
     width: 100%;
+    display: flex;
 
     li {
       float: left;
       text-align: center;
       width: 20%;
+      display: flex;
+      align-items: center;
     }
 
     border-bottom: 1px solid #979797;
