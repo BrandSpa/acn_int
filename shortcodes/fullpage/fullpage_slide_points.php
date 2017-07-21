@@ -33,7 +33,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
   foreach ($titles as $title) {
     $params[get_att_name($title)] = $title;
-    $params[get_att_name($title) . '_num'] = $title;
+    $params[get_att_name($title) . '_num'] = '';
   }
 
 

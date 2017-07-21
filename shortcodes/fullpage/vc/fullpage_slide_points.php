@@ -192,7 +192,7 @@ function acn_fullpage_slide_points_vc() {
       $params[] = [
         "type" => "textfield",
         "heading" => $title . ' num',
-        "param_name" => get_att_name($title. '_num'),
+        "param_name" => get_att_name($title) . '_num',
         "value" =>  ""
       ];
     }
