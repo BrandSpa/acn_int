@@ -1376,7 +1376,8 @@ button {
       .spot-content__container, .nineveh-general-content__container {
         width: 88%; } }
   .spot-content__houses-list li, .nineveh-general-content__houses-list li {
-    border-top: 1px solid #979797; }
+    border-top: 1px solid #979797;
+    padding: 10px 0; }
 
 .nineveh-general-content > h2 {
   line-height: 60px;

@@ -75,15 +75,15 @@
 					    </div>
 
 					    <ul class="spot-content__houses-list">
-					      <li style="margin-bottom: 20px">
+					      <li>
 					        <h4><?php echo isset($cont['houses_totally_destroyed_num']) ?  $cont['houses_totally_destroyed_num'] : '' ?></h4>
 					        <p><?php echo $cont['houses_totally_destroyed_text'] ?></p>
 					      </li>
-					      <li style="margin-bottom: 20px">
+					      <li>
 					        <h4><?php echo isset($cont['houses_burnt_num']) ? $cont['houses_burnt_num'] : '' ?></h4>
 					        <p><?php echo $cont['houses_burnt_text'] ?></p>
 					      </li>
-					      <li style="margin-bottom: 20px">
+					      <li>
 					        <h4><?php echo isset($cont['houses_partially_damaged_num']) ? $cont['houses_partially_damaged_num'] : '' ?></h4>
 					        <p><?php echo $cont['houses_partially_damaged_text'] ?></p>
 					      </li>
