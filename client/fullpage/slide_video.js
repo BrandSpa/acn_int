@@ -4,9 +4,8 @@ function slideVideo($fp) {
 
   const emmiter = window.mitt;
 
-  function closeVideo() {
+  function closeVideo($videoSection) {
     ScrollStop($fp, false);
-    var $videoSection = $(this).parent();
     var $iframe = $videoSection.find("iframe");
     $iframe.attr("src", "");
     $videoSection.removeClass("section__video--open");
@@ -19,10 +18,8 @@ function slideVideo($fp) {
     var $iframe = $videoSection.find("iframe");
     var src = $iframe.data("src");
     $iframe.attr("src", src);
-    console.log('open video', this);
-    closeVideo.bind(this)
-    emmiter.off("close:esc", () => closeVideo());
-    emmiter.on("close:esc", () => closeVideo());
+    emmiter.off("close:esc", () => closeVideo($videoSection));
+    emmiter.on("close:esc", () => closeVideo($videoSection));
   }
 
   function handleToggleVideo(e) {
