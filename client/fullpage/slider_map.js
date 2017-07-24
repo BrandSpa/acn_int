@@ -33,7 +33,6 @@ function mapPoints($fp) {
   }
 
   function openNinevehGeneralContent(e) {
-    console.log("openNinevehGeneralContent");
     ScrollStop($fp, true);
     $(".section__close-nineveh-general").addClass("section__close-nineveh-general--open");
     $(".nineveh-general-content").addClass("nineveh-general-content--open")
