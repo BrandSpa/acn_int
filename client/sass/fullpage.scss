@@ -896,7 +896,8 @@ button {
   top: 0;
   left: -100%;
   transition: left .7s;
-
+  will-change: left;
+  
   &--open {
     left: 0;
   }
