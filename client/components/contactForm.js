@@ -213,6 +213,7 @@ class contactForm extends React.Component {
         >
           {texts.button}{this.state.loading ? "..." : ""}
         </button>
+        
         <div class="checkbox">
           <label>
             <input type="checkbox" /> Accept
