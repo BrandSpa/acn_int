@@ -6,7 +6,7 @@ function slidePost($fp) {
 
   function closePost($postSection) {
     ScrollStop($fp, false);
-    $postSection.removeClass("section__post--open");
+    $(".section__post--open").removeClass("section__post--open");
     $(".section__close-post").removeClass("section__close-post--open");
   }
 
@@ -14,11 +14,6 @@ function slidePost($fp) {
     ScrollStop($fp, true);
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
-
-    emmiter.off("close:esc", () => closePost.call(this, $postSection));
-    emmiter.off("close:all", () => closePost.call(this, $postSection));
-    emmiter.on("close:esc", () => closePost.call(this, $postSection));
-    emmiter.on("close:all", () => closePost.call(this, $postSection));
   }
 
   function handleTogglePost(e) {
@@ -31,11 +26,11 @@ function slidePost($fp) {
     }
   }
 
-  $(function() {
-    $(document).on("click", ".section__open-post", handleTogglePost);
-    $(document).on("click", ".section__close-post", handleTogglePost);
-  })
-
+  //Events
+  $(document).on("click", ".section__open-post", handleTogglePost);
+  $(document).on("click", ".section__close-post", handleTogglePost);
+  emmiter.on("close:esc", closePost);
+  emmiter.on("close:all", closePost);
 }
 
 export default slidePost;
