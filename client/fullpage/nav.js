@@ -12,9 +12,11 @@ function nav($fp) {
   }
 
   function closeNav(e) {
-    ScrollStop($fp, false);
-    $(".fullpage-nav").removeClass("fullpage-nav--open");
-    $(".fullpage__menu").removeClass("fullpage__menu--dark");
+    if($(".fullpage-nav--open").length > 0) {
+      ScrollStop($fp, false);
+      $(".fullpage-nav").removeClass("fullpage-nav--open");
+      $(".fullpage__menu").removeClass("fullpage__menu--dark");
+    }
   }
 
   //Events
