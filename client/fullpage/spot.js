@@ -1,3 +1,5 @@
+export { ScrollStop } from "./funs";
+
 function mapPoints($fp) {
 
   function setMapSize() {
@@ -21,10 +23,8 @@ function mapPoints($fp) {
   function openSpotContent(e) {
     if(e) e.preventDefault();
     var content = $(this).data("content");
-
     if( $(`.spot-content.${content}`).length > 0 ) {
-      $fp.setAllowScrolling(false);
-      $("body").addClass("scroll-stoped");
+      ScrollStop($fp, true);
       $(`.spot-content.${content}`).addClass("spot-content--open");
       $(".section__close-spot-content").addClass("section__close-spot-content--open");
 
@@ -42,8 +42,7 @@ function mapPoints($fp) {
 
   function closeSpotContent(e) {
     if(e) e.preventDefault();
-    $fp.setAllowScrolling(true);
-    $("body").removeClass("scroll-stoped");
+    ScrollStop($fp, false);
     var content = $(this).data("content");
     $(".spot-content").removeClass("spot-content--open");
     $(".section__close-spot-content").removeClass("section__close-spot-content--open");
@@ -54,16 +53,14 @@ function mapPoints($fp) {
 
   function openNinevehGeneralContent(e) {
     if(e) e.preventDefault();
-    $fp.setAllowScrolling(false);
-    $("body").addClass("scroll-stoped");
+    ScrollStop($fp, true);
     $(".section__close-nineveh-general").addClass("section__close-nineveh-general--open");
     $(".nineveh-general-content").addClass("nineveh-general-content--open")
   }
 
   function closeNinevehGeneralContent(e) {
     if(e) e.preventDefault();
-    $fp.setAllowScrolling(true);
-    $("body").removeClass("scroll-stoped");
+      ScrollStop($fp, false);
     $(".section__close-nineveh-general").removeClass("section__close-nineveh-general--open");
     $(".nineveh-general-content").removeClass("nineveh-general-content--open")
   }

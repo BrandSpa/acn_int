@@ -1,18 +1,17 @@
+export { ScrollStop } from "./funs";
 
 function slidePost($fp) {
 
   const emmiter = window.mitt;
 
   function closePost($postSection) {
-    $fp.setAllowScrolling(true);
-    $("body").removeClass("scroll-stoped");
+    ScrollStop($fp, false);
     $postSection.removeClass("section__post--open");
     $(".section__close-post").removeClass("section__close-post--open");
   }
 
   function openPost($postSection) {
-    $fp.setAllowScrolling(false);
-    $("body").addClass("scroll-stoped");
+    ScrollStop($fp, true);
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
 

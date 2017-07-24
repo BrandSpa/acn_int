@@ -1,8 +1,9 @@
+export { ScrollStop } from "./funs";
+
 function slideVideo($fp) {
 
   function closeVideo() {
-    $fp.setAllowScrolling(true);
-    $("body").removeClass("scroll-stoped");
+    ScrollStop($fp, false);
     var $videoSection = $(this).parent();
     var $iframe = $videoSection.find("iframe");
     $iframe.attr("src", "");
@@ -10,12 +11,14 @@ function slideVideo($fp) {
   }
 
   function openVideo($videoSection) {
-    $fp.setAllowScrolling(false);
-    $("body").addClass("scroll-stoped");
+    ScrollStop($fp, true);
     $videoSection.addClass("section__video--open");
     var $iframe = $videoSection.find("iframe");
     var src = $iframe.data("src");
     $iframe.attr("src", src);
+
+    emmiter.off("close:esc", () => closeVideo());
+    emmiter.on("close:esc", () => closeVideo());
   }
 
   function handleToggleVideo(e) {
