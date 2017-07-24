@@ -28,9 +28,9 @@ function slideVideo($fp) {
     var $videoSection = $(this).closest(".fp-tableCell").find(".section__video");
 
     if ($videoSection.hasClass("section__video--open")) {
-      closeVideo.call(this);
+      closeVideo($videoSection);
     } else {
-      openVideo.call(this, $videoSection);
+      openVideo($videoSection);
     }
 
   }
