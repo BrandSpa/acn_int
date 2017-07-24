@@ -733,7 +733,7 @@ li {
     visibility: visible; }
     .section__post--open .section__post__content {
       left: 0;
-      overflow-y: auto;
+      overflow-y: scroll;
       overflow-x: hidden; }
   .section__post__content {
     position: relative;
