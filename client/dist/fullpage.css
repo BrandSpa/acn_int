@@ -725,7 +725,7 @@ li {
   visibility: hidden; }
   @media (max-width: 767px) {
     .section__post {
-      width: 80%; } }
+      width: 88%; } }
   .section__post img {
     max-width: 100%;
     height: auto; }
@@ -899,6 +899,9 @@ button {
     .fullpage-nav__info ul {
       float: right;
       padding: 7px 0; }
+      @media (max-width: 767px) {
+        .fullpage-nav__info ul {
+          padding: 10px; } }
       .fullpage-nav__info ul li {
         float: left;
         border-left: 1px solid #fff;
@@ -908,6 +911,9 @@ button {
         .fullpage-nav__info ul li a {
           color: #fff;
           font-size: 20px; }
+          @media (max-width: 767px) {
+            .fullpage-nav__info ul li a {
+              font-size: 12px; } }
   .fullpage-nav > ul {
     padding: 0;
     position: absolute;
@@ -936,9 +942,9 @@ button {
         @media (max-width: 767px) {
           .fullpage-nav > ul li a .num {
             width: 30px;
-            height: 20px;
-            padding: 5px 0;
-            border-radius: 20px; } }
+            height: 30px;
+            padding: 7px 0;
+            border-radius: 30px; } }
 
 @-webkit-keyframes animate-arrow {
   0% {

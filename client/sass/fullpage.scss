@@ -221,7 +221,7 @@ li {
     visibility: hidden;
 
     @media #{$s} {
-        width: 80%;
+        width: 88%;
     }
 
     img {
@@ -427,6 +427,9 @@ button {
         ul {
             float: right;
             padding: 7px 0;
+            @media #{$s} {
+              padding: 10px;
+            }
 
             li {
                 float: left;
@@ -440,6 +443,9 @@ button {
                 a {
                   color: #fff;
                   font-size: 20px;
+                  @media #{$s} {
+                    font-size: 12px;
+                  }
                 }
             }
         }
@@ -477,9 +483,9 @@ button {
 
                      @media #{$s} {
                         width: 30px;
-                        height: 20px;
-                        padding: 5px 0;
-                        border-radius: 20px;
+                        height: 30px;
+                        padding: 7px 0;
+                        border-radius: 30px;
                     }
                 }
             }
