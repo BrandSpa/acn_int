@@ -777,6 +777,13 @@ button {
       border-radius: 40px;
       text-align: center;
       margin: 10px 0;
+
+      @media #{$s} {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        padding-top: 7px;
+      }
     }
 
   }
@@ -895,9 +902,9 @@ button {
   width: 100%;
   top: 0;
   left: -100%;
-  transition: left .7s;
   will-change: left;
-  
+  transition: left .7s;
+
   &--open {
     left: 0;
   }

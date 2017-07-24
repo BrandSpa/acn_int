@@ -1264,6 +1264,12 @@ button {
       border-radius: 40px;
       text-align: center;
       margin: 10px 0; }
+      @media (max-width: 767px) {
+        .fullpage__menu__share-icon {
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+          padding-top: 7px; } }
   .fullpage__menu--dark {
     display: block !important; }
     .fullpage__menu--dark > li a {
@@ -1362,9 +1368,9 @@ button {
   width: 100%;
   top: 0;
   left: -100%;
+  will-change: left;
   -webkit-transition: left .7s;
-  transition: left .7s;
-  will-change: left; }
+  transition: left .7s; }
   .spot-content--open, .nineveh-general-content--open {
     left: 0; }
   .spot-content__container, .nineveh-general-content__container {
