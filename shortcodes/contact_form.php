@@ -9,12 +9,15 @@ function bs_contact_form_sc($atts, $content = null) {
 		'name-validation' => 'Name required',
 		'lastname-validation' => 'lastname required',
 		'email-validation' => 'Email required',
+		'terms-validation' => 'You must accept',
 		'button-text' => gett('Pray'),
+		'terms-text' => 'I Accept terms',
 		'redirect' => '',
 		'btn-bg' => '#F4334A',
 		'convertloop_tags' => '',
 		'convertloop_event' => 'Subscription',
-		'vertical' => false
+		'vertical' => false,
+		'terms' => false
 	];
 
   $at = shortcode_atts( $attributes , $atts );
@@ -32,7 +35,8 @@ function bs_contact_form_sc($atts, $content = null) {
 		"country": "<?php echo getCountry() ?>",
 		"texts": {
 			"button": "<?php echo $at['button-text'] ?>",
-			"select_country": "<?php echo gett('Select country') ?>"
+			"select_country": "<?php echo gett('Select country') ?>",
+			"terms": "<?php echo $at['terms-text'] ?>",
 		},
 		"placeholders": {
 			"name": "<?php echo $at['name-placeholder'] ?>",
@@ -43,11 +47,13 @@ function bs_contact_form_sc($atts, $content = null) {
 		"validationMessages": {
 			"name": "<?php echo $at['name-validation'] ?>",
 			"lastname": "<?php echo $at['lastname-validation'] ?>",
-			"email": "<?php echo $at['email-validation'] ?>"
+			"email": "<?php echo $at['email-validation'] ?>",
+			"terms": "<?php echo $at['terms-validation'] ?>"
 		},
 		"redirect": "<?php echo $at['redirect'] ? $at['redirect'] : get_option('subscribe_redirect') ?>",
 		"btnBg": "<?php echo $at['btn-bg'] ?>",
-		"vertical": "<?php echo $at['vertical'] ?>"
+		"vertical": "<?php echo $at['vertical'] ?>",
+		"terms": "<?php echo $at['terms'] ?>"
 	}'
 >
 </div>
@@ -86,8 +92,7 @@ add_action( 'vc_before_init', 'bs_contact_form_vc' );
         "param_name" => "email-placeholder",
         "value" => 'Email'
 			],
-
-				[
+			[
         "type" => "textfield",
         "heading" => "name validation",
         "param_name" => "name-validation",
@@ -129,6 +134,12 @@ add_action( 'vc_before_init', 'bs_contact_form_vc' );
 			"param_name" => "vertical",
 			"heading" => "Vertical",
 			"value" => ""
+		],
+		[
+			"type" => "checkbox",
+			"param_name" => "terms",
+			"heading" => "Show checkbox",
+			"value" => false
 		]
 	];
 
