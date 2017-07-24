@@ -216,7 +216,7 @@ class contactForm extends React.Component {
 
         <div className="checkbox">
           <label>
-            <input type="checkbox" /> Accept
+            <input type="checkbox" checked /> Accept
           </label>
         </div>
 

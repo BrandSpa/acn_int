@@ -1332,6 +1332,9 @@ button, .btn {
   background: white;
   /*Jul*/ }
 
+.contact-form .checkbox label {
+  color: #fff; }
+
 .projects__icons {
   text-align: center;
   padding: 0;

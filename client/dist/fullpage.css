@@ -2023,3 +2023,6 @@ a:hover {
   margin-left: -1px;
   background: white;
   /*Jul*/ }
+
+.contact-form .checkbox label {
+  color: #fff; }
