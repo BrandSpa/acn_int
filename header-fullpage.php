@@ -46,6 +46,6 @@
 </head>
 <body>
 
- <a href="/" class="fullpage-logo">
+ <a href="<?php echo esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']) ?>" class="fullpage-logo">
   <img src='<?php echo bs_logo_url(); ?>'  alt="ACN logo" class="img-responsive" width="170"  />
 </a>

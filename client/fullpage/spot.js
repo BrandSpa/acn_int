@@ -28,6 +28,9 @@ function mapPoints($fp) {
       $(`.spot-content.${content}`).addClass("spot-content--open");
       $(".section__close-spot-content").addClass("section__close-spot-content--open");
 
+      emmiter.off("close:esc", () => closeSpotContent());
+      emmiter.on("close:esc", () => closeSpotContent());
+
       $(document).on("click", `.spot-content.${content}`, function(e) {
         e.preventDefault();
         if(  $(e.target).attr("class") == `spot-content ${content} spot-content--open`) {

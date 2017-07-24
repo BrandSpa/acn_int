@@ -52,7 +52,7 @@ function bs_accounts_options() {
 
     <p>
     	<label><b>Logo url</b></label>
-      <br>		
+      <br>
 			<input
         style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
         type="text"
@@ -62,10 +62,10 @@ function bs_accounts_options() {
 				value="<?php echo esc_attr( get_option('logo') ); ?>"
 			/>
     </p>
-    
+
     <p>
     	<label><b>Donate link</b></label>
-       <br>	
+       <br>
 			<input
         style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
         type="text"
@@ -74,16 +74,16 @@ function bs_accounts_options() {
 				value="<?php echo esc_attr( get_option('donate_link') ); ?>"
 			/>
     </p>
-    
+
 
     <p>
       <label for=""><b>InfusionSoft key</b></label>
       <br>
-      <input 
+      <input
         style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
         type="text"
         name="infusionsoft_key"
-        placeholder="Api Key" 
+        placeholder="Api Key"
         value="<?php echo get_option('infusionsoft_key') ?>"
       >
     </p>
@@ -91,11 +91,11 @@ function bs_accounts_options() {
      <p>
       <label for=""><b>InfusionSoft subdomain</b></label>
       <br>
-      <input 
+      <input
         style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
         type="text"
         name="infusionsoft_subdomain"
-        placeholder="Subdomain" 
+        placeholder="Subdomain"
         value="<?php echo get_option('infusionsoft_subdomain') ?>"
       >
     </p>
@@ -103,11 +103,11 @@ function bs_accounts_options() {
     <p>
       <label for=""><b>InfusionSoft tags</b></label>
       <br>
-      <input 
+      <input
         style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
         type="text"
         name="infusionsoft_tags"
-        placeholder="tag1,tag2,tag3" 
+        placeholder="tag1,tag2,tag3"
         value="<?php echo get_option('infusionsoft_tags') ?>"
       >
     </p>
@@ -115,11 +115,11 @@ function bs_accounts_options() {
     <p>
        <label for=""> <b>Mailchimp key</b> </label>
         <br>
-        <input 
+        <input
           style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
           type="text"
           name="mailchimp_api"
-          placeholder="Api Key" 
+          placeholder="Api Key"
           value="<?php echo get_option('mailchimp_api') ?>"
           >
     </p>
@@ -127,7 +127,7 @@ function bs_accounts_options() {
      <p>
        <label for=""> <b>Mailchimp List id</b> </label>
         <br>
-        <input 
+        <input
           style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
           type="text"
           name="mailchimp_list_id"
@@ -139,11 +139,11 @@ function bs_accounts_options() {
     <p>
        <label for=""> <b>Stripe Private key</b> </label>
        <br>
-      <input 
+      <input
         style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
         type="text"
         name="stripe_key_private"
-        placeholder="Private Api Key" 
+        placeholder="Private Api Key"
         value="<?php echo get_option('stripe_key_private') ?>"
         >
     </p>
@@ -151,11 +151,11 @@ function bs_accounts_options() {
     <p>
       <label for=""> <b>Stripe Public Key</b>  </label>
        <br>
-      <input 
+      <input
         style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
         type="text"
         name="stripe_key_public"
-        placeholder="Public Api Key" 
+        placeholder="Public Api Key"
         value="<?php echo get_option('stripe_key_public') ?>"
         >
     </p>
@@ -163,7 +163,7 @@ function bs_accounts_options() {
     <p>
      <label for=""> <b>Donate once thanks / redirect</b>  </label>
        <br>
-      <input 
+      <input
         style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
         type="text"
         name="donate_once_redirect"
@@ -175,7 +175,7 @@ function bs_accounts_options() {
     <p>
      <label for=""> <b>Donate monthly thanks / redirect</b>  </label>
        <br>
-      <input 
+      <input
         style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
         type="text"
         name="donate_monthly_redirect"
@@ -195,7 +195,7 @@ function bs_accounts_options() {
         value="<?php echo get_option('subscribe_redirect') ?>"
         >
       </p>
-      
+
       <p>
         <label for=""> <b>Google Analytics ID</b>  </label>
          <br>
@@ -236,9 +236,9 @@ function bs_accounts_options() {
         <textarea
           style="background: rgba(255,255,255,.4); width: 60%;"
           rows="4"
-          type="text" 
-          placeholder="Banner vertical" 
-          name="banner_vertical_en" 
+          type="text"
+          placeholder="Banner vertical"
+          name="banner_vertical_en"
         ><?php echo get_option('banner_vertical_en') ?></textarea>
       </p>
       <h4>Mobile</h4>
@@ -246,9 +246,9 @@ function bs_accounts_options() {
         <textarea
           style="background: rgba(255,255,255,.4); width: 60%;"
           rows="4"
-          type="text" 
-          placeholder="Banner horizontal" 
-          name="banner_horizontal_en"  
+          type="text"
+          placeholder="Banner horizontal"
+          name="banner_horizontal_en"
         ><?php echo get_option('banner_horizontal_en') ?></textarea>
       </p>
 
@@ -261,9 +261,9 @@ function bs_accounts_options() {
         <textarea
           style="background: rgba(255,255,255,.4); width: 60%;"
           rows="4"
-          type="text" 
-          placeholder="Banner vertical" 
-          name="banner_vertical_es" 
+          type="text"
+          placeholder="Banner vertical"
+          name="banner_vertical_es"
         ><?php echo get_option('banner_vertical_es') ?></textarea>
       </p>
       <h4>Mobile</h4>
@@ -271,8 +271,8 @@ function bs_accounts_options() {
         <textarea
           style="background: rgba(255,255,255,.4); width: 60%;"
           rows="4"
-          type="text" 
-          placeholder="Banner horizontal" 
+          type="text"
+          placeholder="Banner horizontal"
           name="banner_horizontal_es"
         ><?php echo get_option('banner_horizontal_es') ?></textarea>
       </p>
@@ -280,7 +280,7 @@ function bs_accounts_options() {
     <p>
       <?php submit_button(); ?>
     </p>
-    	
+
   </form>
 </div>
 
