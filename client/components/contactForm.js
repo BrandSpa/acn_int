@@ -56,13 +56,13 @@ class contactForm extends React.Component {
   }
 
   checkEmpty = field => {
-    return isEmpty(this.state.contact[field]);
+    return this.state.contact[field] ? isEmpty(this.state.contact[field]) : false;
   }
 
   validate = () => {
     let errors = {};
     let validations = Object.keys(this.state.errors).map(field => {
-      let val = typeof fieldthis == "string" ? fieldthis.checkEmpty(field) : false;
+      let val =  this.checkEmpty(field);
       errors = { ...errors, [field]: val };
       return val;
     });
@@ -235,7 +235,7 @@ class contactForm extends React.Component {
 
           </div>
         : ""}
-        
+
         <div className="input-container">
           <div className={errors.terms ? "input-error" : "hidden"}>
             {validationMessages.terms}
