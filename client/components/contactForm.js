@@ -56,7 +56,9 @@ class contactForm extends React.Component {
   }
 
   checkEmpty = field => {
-    return this.state.contact[field] ? isEmpty(this.state.contact[field]) : false;
+    return  Object.keys(this.state.contact).indexOf(field) !== -1
+      ? isEmpty(this.state.contact[field])
+      : false;
   }
 
   validate = () => {
