@@ -40,14 +40,14 @@ function mapPoints($fp) {
   }
 
   function openNinevehGeneralContent(e) {
-    if(e) e.preventDefault();
+    console.log('openNinevehGeneralConten');
     ScrollStop($fp, true);
     $(".section__close-nineveh-general").addClass("section__close-nineveh-general--open");
     $(".nineveh-general-content").addClass("nineveh-general-content--open")
   }
 
   function closeNinevehGeneralContent(e) {
-    if(e) e.preventDefault();
+    console.log('closeNinevehGeneralConten');
     ScrollStop($fp, false);
     $(".section__close-nineveh-general").removeClass("section__close-nineveh-general--open");
     $(".nineveh-general-content").removeClass("nineveh-general-content--open")
