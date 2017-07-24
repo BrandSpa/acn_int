@@ -1,5 +1,5 @@
 
-export function ScrollStop($fp, stop = false) {
+export const ScrollStop = ($fp, stop = false) => {
   if(stop) {
     $fp.setAllowScrolling(false);
     $("body").addClass("scroll-stoped");
