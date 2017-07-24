@@ -23,3 +23,5 @@ function modal($fp) {
   emmiter.on("close:esc", closeModal);
 
 }
+
+export default modal;
