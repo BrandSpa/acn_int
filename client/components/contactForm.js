@@ -67,6 +67,13 @@ class contactForm extends React.Component {
       return val;
     });
 
+    if(this.props.terms == "true") {
+      if( this.state.terms == false ) {
+        errors = { ...errors, terms: true };
+        validations = validations.concat(true);
+      }
+    }
+
     this.setState({ errors });
 
     return Promise.all(validations);
