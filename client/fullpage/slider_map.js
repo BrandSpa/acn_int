@@ -70,7 +70,7 @@ function mapPoints($fp) {
   $(".nineveh-general-point").on("click", openNinevehGeneralContent);
   $(".section__close-nineveh-general").on("click", closeNinevehGeneralContent);
 
-  emmiter.on("close:esc", () => closeNinevehGeneralContent);
+  emmiter.on("close:esc", closeNinevehGeneralContent);
 
 
 }
