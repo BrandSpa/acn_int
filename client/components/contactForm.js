@@ -226,15 +226,18 @@ class contactForm extends React.Component {
         >
           {texts.button}{this.state.loading ? "..." : ""}
         </button>
+        <div className="input-container">
+          <div className={errors.terms ? "input-error" : "hidden"}>
+            {validationMessages.terms}
+          </div>
+        </div>
 
         {this.props.terms == "true" ?
           <div className="checkbox">
             <label>
               <input type="checkbox" onChange={this.handleCheckbox} checked={this.state.terms} /> {this.props.texts.terms}
             </label>
-            <div className={errors.terms ? "input-error" : "hidden"}>
-              {validationMessages.terms}
-            </div>
+
           </div>
         : ""}
 
