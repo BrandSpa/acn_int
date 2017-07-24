@@ -36,7 +36,7 @@ function bs_contact_form_sc($atts, $content = null) {
 		"texts": {
 			"button": "<?php echo $at['button-text'] ?>",
 			"select_country": "<?php echo gett('Select country') ?>",
-			"terms": "<?php echo $at['terms-text'] ?>",
+			"terms": "<?php echo $at['terms-text'] ?>"
 		},
 		"placeholders": {
 			"name": "<?php echo $at['name-placeholder'] ?>",
