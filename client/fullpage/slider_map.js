@@ -47,10 +47,11 @@ function mapPoints($fp) {
   }
 
   function closeNinevehGeneralContent(e) {
-    console.log('closeNinevehGeneralConten');
-    ScrollStop($fp, false);
-    $(".section__close-nineveh-general").removeClass("section__close-nineveh-general--open");
-    $(".nineveh-general-content").removeClass("nineveh-general-content--open")
+    if($(".section__close-nineveh-general--open").length > 0) {
+      ScrollStop($fp, false);
+      $(".section__close-nineveh-general").removeClass("section__close-nineveh-general--open");
+      $(".nineveh-general-content").removeClass("nineveh-general-content--open")
+    }
   }
 
   setMapSize();

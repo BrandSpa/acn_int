@@ -5,9 +5,11 @@ function slidePost($fp) {
   const emmiter = window.mitt;
 
   function closePost($postSection) {
-    ScrollStop($fp, false);
-    $(".section__post--open").removeClass("section__post--open");
-    $(".section__close-post").removeClass("section__close-post--open");
+    if($(".section__post--open").length > 0) {
+      ScrollStop($fp, false);
+      $(".section__post--open").removeClass("section__post--open");
+      $(".section__close-post").removeClass("section__close-post--open");
+    }
   }
 
   function openPost($postSection) {

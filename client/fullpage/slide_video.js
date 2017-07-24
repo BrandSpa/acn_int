@@ -5,10 +5,12 @@ function slideVideo($fp) {
   const emmiter = window.mitt;
 
   function closeVideo($videoSection) {
-    ScrollStop($fp, false);
-    var $iframe = $videoSection.find("iframe");
-    $iframe.attr("src", "");
-    $videoSection.removeClass("section__video--open");
+    if($videoSection.length > 0) {
+      ScrollStop($fp, false);
+      var $iframe = $videoSection.find("iframe");
+      $iframe.attr("src", "");
+      $videoSection.removeClass("section__video--open");
+    }
   }
 
   function openVideo($videoSection) {
