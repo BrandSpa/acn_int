@@ -167,6 +167,31 @@ li {
     list-style: none;
 }
 
+.checkbox {
+	position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+	label {
+		min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+	}
+
+	input[type=checkbox] {
+		position: absolute;
+		margin: 4px 0 0 -20px;
+		line-height: normal;
+		box-sizing: border-box;
+    padding: 0;
+	}
+
+}
+
+
 .lazyload,
 .lazyloaded,
 .lazyloading {
