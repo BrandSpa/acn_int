@@ -2,6 +2,8 @@ import { ScrollStop } from "./funs";
 
 function slideVideo($fp) {
 
+  const emmiter = window.mitt;
+
   function closeVideo() {
     ScrollStop($fp, false);
     var $videoSection = $(this).parent();
