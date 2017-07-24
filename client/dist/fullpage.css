@@ -691,11 +691,12 @@ li {
     cursor: pointer; }
   .checkbox input[type=checkbox] {
     position: absolute;
-    margin: 4px 0 0 -20px;
+    margin: -15px 0 0 -20px;
     line-height: normal;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0; }
+    padding: 0;
+    width: 15px; }
 
 .lazyload,
 .lazyloaded,
