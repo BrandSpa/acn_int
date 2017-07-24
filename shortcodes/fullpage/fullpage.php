@@ -87,8 +87,22 @@ function acn_fullpage_sc( $atts, $content ) {
 					<i class="ion-android-share-alt"></i>
 				</a>
 				<ul>
-					<li><a class="fullpage__menu__share-icon" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current_url ?>" ><i class="ion-social-facebook"></i></a></li>
-					<li><a class="fullpage__menu__share-icon" target="_blank" href="https://twitter.com/intent/tweet?text=<?php echo $current_url ?>"><i class="ion-social-twitter"></i></a></li>
+					<li>
+						<a
+							class="fullpage__menu__share-icon"
+							target="_blank"
+							href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $current_url ?>" >
+							<i class="ion-social-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a
+							class="fullpage__menu__share-icon"
+							target="_blank"
+							href="https://twitter.com/intent/tweet?text=<?php echo $current_url ?>">
+							<i class="ion-social-twitter"></i>
+						</a>
+					</li>
 				</ul>
 			</li>
 		</ul>
@@ -107,6 +121,7 @@ function acn_fullpage_sc( $atts, $content ) {
 				<li><a href="<?php echo $at['link_privacy'] ?>"><?php echo $at['text_privacy'] ?></a></li>
 				<li><a href="<?php echo $at['link_terms'] ?>"><?php echo $at['text_terms'] ?></a></li>
 				<li><a href="<?php echo $at['link_lang'] ?>"><?php echo $at['text_lang'] ?></a></li>
+				<li><a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo $at['text_about'] ?></a></li>
 			</ul>
 		</div>
 	</div>

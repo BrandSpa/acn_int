@@ -125,6 +125,12 @@ function acn_fullpage_vc() {
         'value' => ''
       ],
       [
+        'type' => 'textfield',
+        'param_name' => 'text_about',
+        'heading' => 'About text',
+        'value' => ''
+      ],
+      [
         'type' => 'param_group',
         'param_name' => 'links',
         'heading' => 'Menu links',
