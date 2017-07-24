@@ -1506,6 +1506,32 @@ button {
 .nineveh-general-point {
   cursor: pointer; }
 
+.section__modal {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none; }
+  .section__modal--open {
+    display: block; }
+  .section__modal__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    max-width: 1200px;
+    height: 500px;
+    overflow-y: scroll;
+    background: #fff;
+    -webkit-box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
+    z-index: 201; }
+
 /*!
  * fullPage 2.9.4
  * https://github.com/alvarotrigo/fullPage.js
