@@ -195,6 +195,10 @@ li {
 
     img {
       filter: grayscale(100%) invert(100%);
+      max-width: 180px;
+      @media #{$s} {
+        max-width: 120px;
+      }
     }
 
   @media #{$s} {
