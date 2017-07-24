@@ -114,7 +114,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 		<?php echo do_shortcode($content) ?>
 
 		<div class="map-points__container">
-			<svg class="map-points" width="1409" height="695" preserveAspectRatio="xMidYMid slice" viewBox="150 0 1600 1000">
+			<svg class="map-points" width="1409" height="695" preserveAspectRatio="xMidYMid slice" viewBox="150 -50 1600 1000">
 				<image class="hotspot__bg-image" width="1920" height="1080"
 				xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/wp-content/uploads/2017/07/fondoSin.jpg">
 			</image>
