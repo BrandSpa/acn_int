@@ -26,6 +26,8 @@ function nav($fp) {
   $(".indicator").on("click", openNav);
   $(".fullpage-nav__close").on("click", closeNav);
 
+  $(".fullpage-nav a").on("click", closeNav);
+
 }
 
 export default nav;
