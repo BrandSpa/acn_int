@@ -325,7 +325,7 @@ li {
     margin: 0 auto;
 
     @media #{$s} {
-      bottom: 90px;
+      bottom: 80px;
       width: 50px;
       height: 50px;
       border-radius: 50px;
@@ -340,6 +340,9 @@ li {
       margin: 0 auto;
       width: 100%;
       text-align: center;
+      @media #{$s} {
+        bottom: 50px;
+      }
 
       h5 {
         padding: 20px 0;
