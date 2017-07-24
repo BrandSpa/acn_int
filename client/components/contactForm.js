@@ -226,11 +226,6 @@ class contactForm extends React.Component {
         >
           {texts.button}{this.state.loading ? "..." : ""}
         </button>
-        <div className="input-container">
-          <div className={errors.terms ? "input-error" : "hidden"}>
-            {validationMessages.terms}
-          </div>
-        </div>
 
         {this.props.terms == "true" ?
           <div className="checkbox">
@@ -240,6 +235,12 @@ class contactForm extends React.Component {
 
           </div>
         : ""}
+        
+        <div className="input-container">
+          <div className={errors.terms ? "input-error" : "hidden"}>
+            {validationMessages.terms}
+          </div>
+        </div>
 
         <span
           style={
