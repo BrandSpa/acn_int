@@ -1,4 +1,4 @@
-export { ScrollStop } from "./funs";
+import { ScrollStop } from "./funs";
 
 function mapPoints($fp) {
 
