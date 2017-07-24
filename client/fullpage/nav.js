@@ -17,7 +17,6 @@ function nav($fp) {
   }
 
   function closeNav(e) {
-    if(e) e.preventDefault();
     ScrollStop($fp, false);
     $(".fullpage-nav").removeClass("fullpage-nav--open");
     $(".fullpage__menu").removeClass("fullpage__menu--dark");
