@@ -18,7 +18,8 @@ class contactForm extends React.Component {
       event: "Subscription",
       tags: ""
     },
-    vertical: false
+    vertical: false,
+    terms: ""
   };
 
   state = {
@@ -214,11 +215,13 @@ class contactForm extends React.Component {
           {texts.button}{this.state.loading ? "..." : ""}
         </button>
 
-        <div className="checkbox">
-          <label>
-            <input type="checkbox" checked /> Accept
-          </label>
-        </div>
+        {this.props.terms == "true" ?
+          <div className="checkbox">
+            <label>
+              <input type="checkbox" checked /> {this.props.texts.terms}
+            </label>
+          </div>
+        : ""}
 
         <span
           style={
