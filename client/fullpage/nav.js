@@ -1,6 +1,8 @@
 
 function nav($fp) {
 
+  const emmiter = window.mitt;
+
   function openNav() {
     $fp.setAllowScrolling(false);
     $("body").addClass("scroll-stoped");
