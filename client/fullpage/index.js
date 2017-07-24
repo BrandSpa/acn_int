@@ -7,6 +7,7 @@ import slideVideo from "./slide_video";
 import slideMap from "./slider_map";
 import nav from "./nav";
 import menu from "./menu";
+import modal from "./modal";
 
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
@@ -61,11 +62,12 @@ $(function DOMLoaded() {
     afterLoad: handleAfterLoad,
     onLeave: handleLeave
   });
-
-  slidePost($.fn.fullpage);
-  slideVideo($.fn.fullpage);
-  slideMap($.fn.fullpage);
-  nav($.fn.fullpage);
+  const $fp = $.fn.fullpage;
+  slidePost($fp);
+  slideVideo($fp);
+  slideMap($fp);
+  nav($fp);
+  modal($fp);
   menu();
 
   function goDown() {
@@ -73,22 +75,5 @@ $(function DOMLoaded() {
   }
 
   $(document).on("click", ".section__down", goDown);
-
-  function openModal(e) {
-    if(e) e.preventDefault();
-    let modalName = $(this).attr("href").replace("#", "");
-    let $modal = $(`.section__modal[data-modal="${modalName}"]`);
-    $modal.addClass("section__modal--open");
-  }
-
-  function closeModal() {
-    if($(".section__modal--open").length > 0) {
-      let $modal = $(".section__modal--open");
-      $modal.removeClass("section__modal--open");
-    }
-  }
-
-  $(".open-modal").on("click", openModal);
-  emmiter.on("close:esc", closeModal);
 
 });
