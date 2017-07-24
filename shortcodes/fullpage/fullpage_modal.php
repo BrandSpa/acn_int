@@ -11,7 +11,8 @@ function acn_fullpage_modal_sc( $atts, $content ) {
   <div class="section__modal" data-modal="<?php echo $at['uniq_name'] ?>">
     <div class="section__modal__content">
       <?php echo do_shortcode($content) ?>
-      </div>
+      <button class="section__modal__close-modal"><i class="ion-close-round"></i></button>
+    </div>
   </div>
 
 	<?php

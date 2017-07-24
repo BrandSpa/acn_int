@@ -1530,7 +1530,20 @@ button {
     background: #fff;
     -webkit-box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
-    z-index: 201; }
+    z-index: 201;
+    padding: 20px 40px; }
+  .section__modal__close-modal {
+    display: block;
+    top: -20px;
+    right: -20px;
+    position: absolute;
+    z-index: 202;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: red;
+    font-size: 25px;
+    color: #fff; }
 
 /*!
  * fullPage 2.9.4
