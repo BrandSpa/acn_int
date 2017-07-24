@@ -1,7 +1,7 @@
 
 export const ScrollStop = ($fp, stop = false) => {
-  console.log("ScrollStop", $fp, stop);
-  
+  console.log("ScrollStop", stop);
+
   if(stop) {
     $fp.setAllowScrolling(false);
     $("body").addClass("scroll-stoped");
@@ -9,4 +9,5 @@ export const ScrollStop = ($fp, stop = false) => {
     $fp.setAllowScrolling(true);
     $("body").removeClass("scroll-stoped");
   }
+
 }
