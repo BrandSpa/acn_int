@@ -2,6 +2,8 @@ import { ScrollStop } from "./funs";
 
 function mapPoints($fp) {
 
+  const emmiter = window.mitt;
+
   function setMapSize() {
     $(".map-points").attr("width", $(window).width());
     $(".map-points").attr("height", $(window).height());
@@ -57,13 +59,14 @@ function mapPoints($fp) {
   function openNinevehGeneralContent(e) {
     if(e) e.preventDefault();
     ScrollStop($fp, true);
+    console.log(ScrollStop);
     $(".section__close-nineveh-general").addClass("section__close-nineveh-general--open");
     $(".nineveh-general-content").addClass("nineveh-general-content--open")
   }
 
   function closeNinevehGeneralContent(e) {
     if(e) e.preventDefault();
-      ScrollStop($fp, false);
+    ScrollStop($fp, false);
     $(".section__close-nineveh-general").removeClass("section__close-nineveh-general--open");
     $(".nineveh-general-content").removeClass("nineveh-general-content--open")
   }
