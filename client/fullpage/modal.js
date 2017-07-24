@@ -20,6 +20,7 @@ function modal($fp) {
   }
 
   $(".open-modal").on("click", openModal);
+  $(".section__modal__close-modal").on("click", closeModal);
   emmiter.on("close:esc", closeModal);
 
 }
