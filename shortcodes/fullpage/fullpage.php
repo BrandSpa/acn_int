@@ -147,11 +147,6 @@ function acn_fullpage_sc( $atts, $content ) {
 		window.fp_options  = {};
 		fp_options['titles'] = <?php echo json_encode($titles) ?>
 
-		$(".open-modal").on("click", function() {
-			let modalName = $(this).attr('href').replace('#', '');
-			let modal = $(`.section__modal[data-modal="${modalNam}"]`);
-			console.log(modal);
-		});
 
 		if(window.location.hash !== '') {
 			$('.intro').addClass('intro--close');

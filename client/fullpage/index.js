@@ -73,4 +73,11 @@ $(function DOMLoaded() {
   }
 
   $(document).on("click", ".section__down", goDown);
+
+  $(".open-modal").on("click", function() {
+    let modalName = $(this).attr("href").replace("#", "");
+    let modal = $(`.section__modal[data-modal="${modalName}"]`);
+    console.log(modal);
+  });
+
 });
