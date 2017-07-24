@@ -78,13 +78,13 @@ $(function DOMLoaded() {
     if(e) e.preventDefault();
     let modalName = $(this).attr("href").replace("#", "");
     let $modal = $(`.section__modal[data-modal="${modalName}"]`);
-    $modal.addClass(".section__modal--open");
+    $modal.addClass("section__modal--open");
   }
 
   function closeModal() {
     if($(".section__modal--open").length > 0) {
       let $modal = $(".section__modal--open");
-      $modal.removeClass(".section__modal--open");
+      $modal.removeClass("section__modal--open");
     }
   }
 
