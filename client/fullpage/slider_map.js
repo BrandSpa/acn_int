@@ -35,7 +35,6 @@ function mapPoints($fp) {
   function closeSpotContent(e) {
     if(e) e.preventDefault();
     ScrollStop($fp, false);
-    var content = $(this).data("content");
     $(".spot-content").removeClass("spot-content--open");
     $(".section__close-spot-content").removeClass("section__close-spot-content--open");
   }

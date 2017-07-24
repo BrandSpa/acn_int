@@ -9,11 +9,6 @@ function nav($fp) {
     ScrollStop($fp, true);
     $(".fullpage-nav").addClass("fullpage-nav--open");
     $(".fullpage__menu").addClass("fullpage__menu--dark");
-
-    emmiter.off("close:all", () => closeNav());
-    emmiter.off("close:esc", () => closeNav());
-    emmiter.on("close:all", () => closeNav());
-    emmiter.on("close:esc", () => closeNav());
   }
 
   function closeNav(e) {
@@ -22,10 +17,12 @@ function nav($fp) {
     $(".fullpage__menu").removeClass("fullpage__menu--dark");
   }
 
+  //Events
   $(".indicator").on("click", openNav);
   $(".fullpage-nav__close").on("click", closeNav);
-
   $(".fullpage-nav a").on("click", closeNav);
+  emmiter.on("close:all", closeNav);
+  emmiter.on("close:esc", closeNav);
 
 }
 

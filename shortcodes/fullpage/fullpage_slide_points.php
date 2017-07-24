@@ -93,7 +93,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			'y' => '786.49',
 			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
-		'Qaraqosh/Bakhdida' => [
+		'Bakhdida' => [
 			'x' => '1072.1',
 			'y' => '774.85',
 			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'

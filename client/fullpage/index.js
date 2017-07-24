@@ -5,7 +5,6 @@ import "lazysizes";
 import slidePost from  "./slide_post";
 import slideVideo from "./slide_video";
 import slideMap from "./slider_map";
-import counter from "./counter";
 import nav from "./nav";
 import menu from "./menu";
 
