@@ -5,7 +5,7 @@ import "lazysizes";
 import slidePost from  "./slide_post";
 import slideVideo from "./slide_video";
 import counter from "./counter";
-import slideMap from './spot';
+import slideMap from "./spot";
 
 //lazyload configuration
 window.lazySizesConfig = window.lazySizesConfig || {};
@@ -38,20 +38,18 @@ $(function domLoaded() {
     let slideIndex = $section.data("index");
     let redirectUrl = $section.data("redirect");
     let $indicator = $(".indicator");
-    let title = fp_options['titles'].filter(title => title.story == story);
+    let title = fp_options["titles"].filter(title => title.story == story);
+
     $indicator.find(".indicator__story").text(story);
     $indicator.find(".indicator__index").text(slideIndex);
+
     if(title[0] && title[0].title) {
       $indicator.find(".indicator__title").text(title[0].title);
     }
 
-
     if(redirectUrl && redirectUrl.length > 0) window.location = redirectUrl;
 
-    if( $section.find(".bs-counter").length > 0 ) {
-      emmiter.emit("runCounter");
-    }
-
+    if( $section.find(".bs-counter").length > 0 ) emmiter.emit("runCounter");
   }
 
   $("#fullpage").fullpage({
@@ -80,9 +78,12 @@ $(function domLoaded() {
     $(".fullpage-nav").addClass("fullpage-nav--open");
     $(".fullpage__menu").addClass("fullpage__menu--dark");
 
-    emmiter.on("close:all", () => {
-      closeNav();
-    });
+    emmiter.off("close:all", () => closeNav());
+    emmiter.off("close:esc", () => closeNav());
+
+    emmiter.on("close:all", () => closeNav());
+    emmiter.on("close:esc", () => closeNav());
+
   }
 
   function closeNav() {
