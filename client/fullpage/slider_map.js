@@ -14,14 +14,6 @@ function mapPoints($fp) {
     }
   }
 
-  setMapSize();
-
-  $(window).on("resize", function() {
-    setMapSize();
-    $fp.reBuild();
-  });
-
-
   function openSpotContent(e) {
     if(e) e.preventDefault();
     var content = $(this).data("content");
@@ -43,8 +35,6 @@ function mapPoints($fp) {
 
   }
 
-  $(".map-points__spot").on("click", openSpotContent);
-
   function closeSpotContent(e) {
     if(e) e.preventDefault();
     ScrollStop($fp, false);
@@ -53,13 +43,9 @@ function mapPoints($fp) {
     $(".section__close-spot-content").removeClass("section__close-spot-content--open");
   }
 
-  $(".section__close-spot-content").on("click", closeSpotContent);
-
-
   function openNinevehGeneralContent(e) {
     if(e) e.preventDefault();
     ScrollStop($fp, true);
-    console.log(ScrollStop);
     $(".section__close-nineveh-general").addClass("section__close-nineveh-general--open");
     $(".nineveh-general-content").addClass("nineveh-general-content--open")
   }
@@ -71,8 +57,21 @@ function mapPoints($fp) {
     $(".nineveh-general-content").removeClass("nineveh-general-content--open")
   }
 
+  setMapSize();
+
+  //Events
+  $(window).on("resize", () => {
+    setMapSize();
+    $fp.reBuild();
+  });
+
+  $(".map-points__spot").on("click", openSpotContent);
+  $(".section__close-spot-content").on("click", closeSpotContent);
   $(".nineveh-general-point").on("click", openNinevehGeneralContent);
   $(".section__close-nineveh-general").on("click", closeNinevehGeneralContent);
+
+  emmiter.on("close:esc", () => closeNinevehGeneralContent);
+
 
 }
 
