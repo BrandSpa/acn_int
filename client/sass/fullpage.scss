@@ -322,6 +322,9 @@ li {
 
     @media #{$s} {
       bottom: 80px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
     }
 
     &-container {
@@ -526,6 +529,9 @@ button {
 
     @media #{$s} {
       bottom: 80px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
     }
 
     i:before {
