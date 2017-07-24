@@ -19,9 +19,9 @@ function slideVideo($fp) {
     var $iframe = $videoSection.find("iframe");
     var src = $iframe.data("src");
     $iframe.attr("src", src);
-    console.log('open video');
-    emmiter.off("close:esc", () => closeVideo.call(this));
-    emmiter.on("close:esc", () => closeVideo.call(this));
+    console.log('open video', this);
+    emmiter.off("close:esc", () => closeVideo.bind(this));
+    emmiter.on("close:esc", () => closeVideo.bind(this));
   }
 
   function handleToggleVideo(e) {
