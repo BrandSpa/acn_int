@@ -41,7 +41,7 @@ function acn_fullpage_sc( $atts, $content ) {
 
 	<div class="indicator">
 
-		<svg width="91px" height="87px" viewBox="0 0 91 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<svg width="81px" height="77px" viewBox="0 0 91 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 		        <g id="Menu-Caps" transform="translate(-70.000000, -840.000000)">
 		            <circle id="Oval-3-Copy" fill="#FFFFFF" cx="143" cy="858" r="18"></circle>
