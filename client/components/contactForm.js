@@ -62,7 +62,7 @@ class contactForm extends React.Component {
   validate = () => {
     let errors = {};
     let validations = Object.keys(this.state.errors).map(field => {
-      let val = this.checkEmpty(field);
+      let val = typeof fieldthis == "string" ? fieldthis.checkEmpty(field) : false;
       errors = { ...errors, [field]: val };
       return val;
     });
@@ -232,6 +232,9 @@ class contactForm extends React.Component {
             <label>
               <input type="checkbox" onChange={this.handleCheckbox} checked={this.state.terms} /> {this.props.texts.terms}
             </label>
+            <div className={errors.terms ? "input-error" : "hidden"}>
+              {validationMessages.terms}
+            </div>
           </div>
         : ""}
 
