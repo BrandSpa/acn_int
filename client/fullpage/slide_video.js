@@ -10,7 +10,7 @@ function slideVideo($fp) {
     var $iframe = $videoSection.find("iframe");
     $iframe.attr("src", "");
     $videoSection.removeClass("section__video--open");
-    console.log('close video');
+    console.log('close video', $videoSection);
   }
 
   function openVideo($videoSection) {
