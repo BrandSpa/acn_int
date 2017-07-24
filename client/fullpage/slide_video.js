@@ -10,6 +10,7 @@ function slideVideo($fp) {
     var $iframe = $videoSection.find("iframe");
     $iframe.attr("src", "");
     $videoSection.removeClass("section__video--open");
+    console.log('close video');
   }
 
   function openVideo($videoSection) {
@@ -18,12 +19,14 @@ function slideVideo($fp) {
     var $iframe = $videoSection.find("iframe");
     var src = $iframe.data("src");
     $iframe.attr("src", src);
-
+    console.log('open video');
     emmiter.off("close:esc", () => closeVideo());
     emmiter.on("close:esc", () => closeVideo());
   }
 
   function handleToggleVideo(e) {
+    if(e) e.preventDefault();
+
     var $videoSection = $(this).closest(".fp-tableCell").find(".section__video");
 
     if ($videoSection.hasClass("section__video--open")) {
@@ -34,9 +37,7 @@ function slideVideo($fp) {
 
   }
 
-  $(function() {
-    $(document).on("click", ".section__open-video", handleToggleVideo);
-  })
+  $(document).on("click", ".section__open-video", handleToggleVideo);
 }
 
 export default slideVideo;
