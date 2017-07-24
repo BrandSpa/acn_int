@@ -20,7 +20,7 @@ class contactForm extends React.Component {
     },
     vertical: false,
     terms: ""
-  };
+  }
 
   state = {
     contact: {
@@ -34,8 +34,9 @@ class contactForm extends React.Component {
     officeCountries: [],
     inOffice: false,
     loading: false,
-    showMemberExists: false
-  };
+    showMemberExists: false,
+    terms: true
+  }
 
   componentDidMount() {
     const data = qs.stringify({ action: "office_countries" });
@@ -56,7 +57,7 @@ class contactForm extends React.Component {
 
   checkEmpty = field => {
     return isEmpty(this.state.contact[field]);
-  };
+  }
 
   validate = () => {
     let errors = {};
@@ -69,7 +70,7 @@ class contactForm extends React.Component {
     this.setState({ errors });
 
     return Promise.all(validations);
-  };
+  }
 
   isValid = () => {
     return this.validate()
@@ -132,6 +133,10 @@ class contactForm extends React.Component {
     let contact = { ...this.state.contact, [field]: e.target.value };
     this.setState({ contact });
   };
+
+  handleCheckbox = () => {
+    this.setState({terms: !this.state.terms});
+  }
 
   render() {
     let { contact, errors } = this.state;
@@ -218,7 +223,7 @@ class contactForm extends React.Component {
         {this.props.terms == "true" ?
           <div className="checkbox">
             <label>
-              <input type="checkbox" checked /> {this.props.texts.terms}
+              <input type="checkbox" onChange={this.handleCheckbox} checked={this.state.terms} /> {this.props.texts.terms}
             </label>
           </div>
         : ""}
