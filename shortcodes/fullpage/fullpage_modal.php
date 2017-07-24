@@ -8,7 +8,7 @@ function acn_fullpage_modal_sc( $atts, $content ) {
 	ob_start();
 ?>
 
-  <div class="section__modal" id="<?php echo $at['uniq_name'] ?>">
+  <div class="section__modal" data-modal="<?php echo $at['uniq_name'] ?>">
     <div class="section__modal__content">
       <?php echo do_shortcode($content) ?>
       </div>

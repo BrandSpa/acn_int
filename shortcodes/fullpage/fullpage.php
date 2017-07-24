@@ -119,8 +119,8 @@ function acn_fullpage_sc( $atts, $content ) {
 		<div class="fullpage-nav__info">
 			<ul>
 				<li><a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a></li>
-				<li><a href="<?php echo $at['link_privacy'] ?>"><?php echo $at['text_privacy'] ?></a></li>
-				<li><a href="<?php echo $at['link_terms'] ?>"><?php echo $at['text_terms'] ?></a></li>
+				<li><a class="open-modal" href="<?php echo $at['link_privacy'] ?>"><?php echo $at['text_privacy'] ?></a></li>
+				<li><a class="open-modal" href="<?php echo $at['link_terms'] ?>"><?php echo $at['text_terms'] ?></a></li>
 				<li><a href="<?php echo $at['link_lang'] ?>"><?php echo $at['text_lang'] ?></a></li>
 			</ul>
 		</div>
@@ -146,6 +146,12 @@ function acn_fullpage_sc( $atts, $content ) {
 	<script>
 		window.fp_options  = {};
 		fp_options['titles'] = <?php echo json_encode($titles) ?>
+
+		$(".open-modal").on("click", function() {
+			let modalName = $(this).attr('href').replace('#', '');
+			let modal = $(`.section__modal[data-modal="${modalNam}"]`);
+			console.log(modal);
+		});
 
 		if(window.location.hash !== '') {
 			$('.intro').addClass('intro--close');
