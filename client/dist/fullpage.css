@@ -753,7 +753,7 @@ li {
     @media (max-width: 767px) {
       .section__post__content {
         padding: 10%;
-        width: 90%; } }
+        width: 100%; } }
 
 .section__video {
   position: absolute;
