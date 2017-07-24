@@ -1236,7 +1236,7 @@ button {
   z-index: 10; }
   @media (max-width: 767px) {
     .fullpage__menu {
-      top: 30px;
+      top: 20px;
       right: 20px; } }
   .fullpage__menu > li {
     display: block;
@@ -1465,6 +1465,9 @@ button {
   padding: 5px 10px;
   border-radius: 100px;
   font-weight: 600; }
+  @media (max-width: 767px) {
+    .fullpage-donate {
+      padding: 7px 10px; } }
 
 .btn {
   height: 45px;
