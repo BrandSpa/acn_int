@@ -655,7 +655,8 @@ h5 {
   letter-spacing: -0.24px; }
   @media (max-width: 767px) {
     h5 {
-      font-size: 1.2rem; } }
+      font-size: 1.2rem;
+      line-height: 1.5; } }
 
 h6 {
   font-size: 1.06667rem;
