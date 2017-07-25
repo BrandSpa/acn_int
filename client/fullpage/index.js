@@ -58,7 +58,7 @@ $(function DOMLoaded() {
     recordHistory: false,
     lazyLoading: false,
     navigation: false,
-    normalScrollElements: ".section__post__content",
+    normalScrollElements: ".section__post__content, .nineveh-general-content__container, .section__modal__content",
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
     onLeave: handleLeave
