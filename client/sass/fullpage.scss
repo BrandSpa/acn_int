@@ -266,6 +266,8 @@ li {
 
     &--open {
       visibility: visible;
+      pointer-events: auto;
+
         .section__post__content {
           left: 0;
           pointer-events: auto;
@@ -274,10 +276,7 @@ li {
 
     &__content {
       position: relative;
-      top: 0;
       left: -100%;
-      right: 0;
-      bottom: 0;
       width: 50%;
       height: 100vh;
       will-change: left;
@@ -287,8 +286,7 @@ li {
       box-shadow: 20px 20px 30px rgba(0,0,0,.3);
       overflow-y: scroll;
       -webkit-overflow-scrolling: touch;
-      transform: translateZ(0px);
-
+      pointer-events: none;
 
       @media #{$s} {
         padding: 10%;

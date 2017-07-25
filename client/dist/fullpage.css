@@ -757,16 +757,14 @@ li {
     max-width: 100%;
     height: auto; }
   .section__post--open {
-    visibility: visible; }
+    visibility: visible;
+    pointer-events: auto; }
     .section__post--open .section__post__content {
       left: 0;
       pointer-events: auto; }
   .section__post__content {
     position: relative;
-    top: 0;
     left: -100%;
-    right: 0;
-    bottom: 0;
     width: 50%;
     height: 100vh;
     will-change: left;
@@ -778,8 +776,7 @@ li {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    -webkit-transform: translateZ(0px);
-    transform: translateZ(0px); }
+    pointer-events: none; }
     @media (max-width: 767px) {
       .section__post__content {
         padding: 10%;
