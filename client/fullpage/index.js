@@ -58,12 +58,14 @@ $(function DOMLoaded() {
     recordHistory: false,
     lazyLoading: false,
     navigation: false,
-    normalScrollElements: ".section__post__content, .nineveh-general-content__container, .section__modal__content",
+    normalScrollElements: ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content",
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
     onLeave: handleLeave
   });
+
   const $fp = $.fn.fullpage;
+
   slidePost($fp);
   slideVideo($fp);
   slideMap($fp);
