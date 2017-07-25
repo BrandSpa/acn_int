@@ -24,7 +24,7 @@ body,
 html {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
-  overflow-x: hidden;
+  
   font-size: #{$font-base}px;
   line-height: 20px;
   tap-highlight-color: transparent;
@@ -268,11 +268,10 @@ li {
       visibility: visible;
         .section__post__content {
           left: 0;
+          
           overflow-y: scroll;
-          overflow-scrolling: touch;
           -webkit-overflow-scrolling: touch;
           transform: translateZ(0px);
-          overflow-x: hidden;
         }
     }
 
@@ -978,9 +977,8 @@ button {
     color: #333;
     height: 100%;
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
-    overflow-x: hidden;
+    
     overflow-y: scroll;
-    overflow-scrolling: touch;
     -webkit-overflow-scrolling: touch;
     transform: translateZ(0px);
 
