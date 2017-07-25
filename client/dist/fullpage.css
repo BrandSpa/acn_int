@@ -1085,7 +1085,7 @@ button {
     left: 90px; }
     @media (max-width: 767px) {
       .indicator__title {
-        font-size: 15px;
+        font-size: 12px;
         left: 50px; } }
 
 .intro {
