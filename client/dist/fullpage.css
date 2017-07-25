@@ -838,6 +838,7 @@ li {
   border-radius: 60px;
   display: block;
   font-size: 25px;
+  text-align: center;
   -webkit-transition: background .7s, -webkit-transform .5s;
   transition: background .7s, -webkit-transform .5s;
   transition: background .7s, transform .5s;
@@ -1020,6 +1021,7 @@ button {
   right: 0;
   z-index: 2;
   font-size: 25px;
+  text-align: center;
   -webkit-transition: all .7s;
   transition: all .7s; }
   @media (max-width: 767px) {

@@ -354,6 +354,7 @@ li {
     border-radius: 60px;
     display: block;
     font-size: 25px;
+    text-align: center;
     transition: background .7s, transform .5s;
     margin: 0 auto;
 
@@ -567,6 +568,7 @@ button {
     right: 0;
     z-index: 2;
     font-size: 25px;
+    text-align: center;
     transition: all .7s;
 
     @media #{$s} {
