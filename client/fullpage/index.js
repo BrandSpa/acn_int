@@ -58,6 +58,7 @@ $(function DOMLoaded() {
     recordHistory: false,
     lazyLoading: false,
     navigation: false,
+    normalScrollElements: ".section__post__content",
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
     onLeave: handleLeave
