@@ -813,6 +813,7 @@ li {
     height: 50px;
     border: 2px solid #fff;
     border-radius: 50px;
+    padding: 0;
     background: transparent; }
 
 .section__bg {
