@@ -759,7 +759,8 @@ li {
   .section__post--open {
     visibility: visible; }
     .section__post--open .section__post__content {
-      left: 0; }
+      left: 0;
+      pointer-events: auto; }
   .section__post__content {
     position: relative;
     top: 0;
