@@ -516,8 +516,9 @@ button {
                 padding-left: 10%;
 
                 @media #{$s} {
-                    font-size: 12px;
-                    padding-left: 5%;
+                  padding: 10px 0;
+                  font-size: 12px;
+                  padding-left: 5%;
                 }
 
                 .num {

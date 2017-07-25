@@ -970,6 +970,7 @@ button {
       padding-left: 10%; }
       @media (max-width: 767px) {
         .fullpage-nav > ul li a {
+          padding: 10px 0;
           font-size: 12px;
           padding-left: 5%; } }
       .fullpage-nav > ul li a .num {
