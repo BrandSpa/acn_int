@@ -653,6 +653,9 @@ h5 {
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.24px; }
+  @media (max-width: 767px) {
+    h5 {
+      font-size: 1.2rem; } }
 
 h6 {
   font-size: 1.06667rem;
@@ -856,7 +859,7 @@ li {
       .section__open-container {
         bottom: 50px; } }
     .section__open-container h5 {
-      padding: 20px 0; }
+      padding: 20px 10px; }
   .section__open:hover {
     background: #b30000;
     -webkit-transform: scale(1.1);
