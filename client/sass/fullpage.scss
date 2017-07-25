@@ -269,6 +269,8 @@ li {
         .section__post__content {
           left: 0;
           overflow-y: scroll;
+          overflow-scrolling: touch;
+          -webkit-overflow-scrolling: touch;
           overflow-x: hidden;
         }
     }
@@ -964,6 +966,8 @@ button {
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
     overflow-x: hidden;
     overflow-y: scroll;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
 
     h1, h2, h3, h4, h5, p {
       color: #4A4A4A;
@@ -1102,6 +1106,9 @@ button {
     max-width: 1200px;
     height: 500px;
     overflow-y: scroll;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+
     background: #fff;
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
     z-index: 201;
