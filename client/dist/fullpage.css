@@ -928,7 +928,14 @@ button {
     border-radius: 50px;
     position: absolute;
     bottom: 100px;
-    left: -25px; }
+    left: -25px;
+    padding: 0; }
+    @media (max-width: 767px) {
+      .fullpage-nav__close {
+        bottom: 80px;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px; } }
   .fullpage-nav__info {
     background: #E3333A;
     position: absolute;
