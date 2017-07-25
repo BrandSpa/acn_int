@@ -764,6 +764,8 @@ li {
       overflow-y: scroll;
       overflow-scrolling: touch;
       -webkit-overflow-scrolling: touch;
+      -webkit-transform: translateZ(0px);
+      transform: translateZ(0px);
       overflow-x: hidden; }
   .section__post__content {
     position: relative;
@@ -1426,7 +1428,9 @@ button {
     overflow-x: hidden;
     overflow-y: scroll;
     overflow-scrolling: touch;
-    -webkit-overflow-scrolling: touch; }
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px); }
     .spot-content__container h1, .spot-content__container h2, .spot-content__container h3, .spot-content__container h4, .spot-content__container h5, .spot-content__container p, .nineveh-general-content__container h1, .nineveh-general-content__container h2, .nineveh-general-content__container h3, .nineveh-general-content__container h4, .nineveh-general-content__container h5, .nineveh-general-content__container p {
       color: #4A4A4A; }
     @media (max-width: 767px) {
@@ -1540,6 +1544,8 @@ button {
     overflow-y: scroll;
     overflow-scrolling: touch;
     -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
     background: #fff;
     -webkit-box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);

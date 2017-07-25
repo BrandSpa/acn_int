@@ -271,6 +271,7 @@ li {
           overflow-y: scroll;
           overflow-scrolling: touch;
           -webkit-overflow-scrolling: touch;
+          transform: translateZ(0px);
           overflow-x: hidden;
         }
     }
@@ -970,6 +971,7 @@ button {
     overflow-y: scroll;
     overflow-scrolling: touch;
     -webkit-overflow-scrolling: touch;
+    transform: translateZ(0px);
 
     h1, h2, h3, h4, h5, p {
       color: #4A4A4A;
@@ -1110,6 +1112,7 @@ button {
     overflow-y: scroll;
     overflow-scrolling: touch;
     -webkit-overflow-scrolling: touch;
+    transform: translateZ(0px);
 
     background: #fff;
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
