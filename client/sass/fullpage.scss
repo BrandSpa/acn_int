@@ -442,7 +442,7 @@ button {
     }
 
     &--open {
-        right: 0;
+      right: 0;
     }
 
     &__close {
@@ -484,6 +484,7 @@ button {
                 a {
                   color: #fff;
                   font-size: 20px;
+
                   @media #{$s} {
                     font-size: 12px;
                   }
@@ -510,7 +511,7 @@ button {
                 padding-left: 10%;
 
                 @media #{$s} {
-                    font-size: 15px;
+                    font-size: 12px;
                     padding-left: 5%;
                 }
 
