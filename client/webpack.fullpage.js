@@ -9,6 +9,7 @@ module.exports = {
   entry: {
     vendor: [
       'jquery',
+      'mitt',
 			'fullpage.js',
 			'lazysizes'
     ],

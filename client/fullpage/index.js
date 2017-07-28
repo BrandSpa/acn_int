@@ -1,4 +1,3 @@
-import $ from "jquery";
 import "fullpage.js";
 import "lazysizes/plugins/bgset/ls.bgset";
 import "lazysizes";
@@ -8,6 +7,8 @@ import slideMap from "./slider_map";
 import nav from "./nav";
 import menu from "./menu";
 import modal from "./modal";
+import mitt from "mitt";
+window.mitt = mitt();
 
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
