@@ -20,7 +20,6 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	$overlayUrlMobile = wp_get_attachment_url( $at['overlay_img_mobile'] );
 
 	ob_start();
-
 	?>
 
 	<div
