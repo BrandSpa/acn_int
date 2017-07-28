@@ -3,6 +3,7 @@ import $ from "jquery";
 import "lazysizes";
 import "fullpage.js";
 import "lazysizes/plugins/bgset/ls.bgset";
+import "lazysizes/plugins/respimg/ls.respimg";
 
 import slidePost from  "./slide_post";
 import slideVideo from "./slide_video";
