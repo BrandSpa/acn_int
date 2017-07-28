@@ -13,7 +13,7 @@ import mitt from "mitt";
 window.mitt = mitt();
 
 window.lazySizesConfig = window.lazySizesConfig || {};
-// window.lazySizesConfig.init = false;
+window.lazySizesConfig.init = false;
 
 $(function DOMLoaded() {
 
@@ -26,7 +26,7 @@ $(function DOMLoaded() {
   });
 
   function handleAfterRender() {
-    // lazySizes.init();
+    lazySizes.init();
   }
 
   function handleLeave(index, nextIndex, direction) {

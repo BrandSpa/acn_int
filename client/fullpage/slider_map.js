@@ -10,8 +10,8 @@ function mapPoints($fp) {
     $(".map-points").attr("height", $(window).height());
 
     if($(window).width() < 767 || $(window).width() <  991) {
-      $(".map-points").attr("viewBox", "250 0 1920 1080");
-      $(".map-points__spots").attr("transform", "translate(-40, 100)");
+      $(".map-points").attr("viewBox", "0 0 1920 1080");
+      $(".map-points__spots").attr("transform", "translate(0, 100)");
     }
   }
 
