@@ -15,7 +15,7 @@ window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
 window.lazySizesConfig.loadMode = 1;
 
-$(window).load(function DOMLoaded() {
+$(function DOMLoaded() {
 
   const emmiter = window.mitt;
 
