@@ -32,7 +32,7 @@ module.exports = {
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         filename: 'vendor_me.js',
-        minChunks: Infinity
+        minChunks: 2
       })
     ]
 };
