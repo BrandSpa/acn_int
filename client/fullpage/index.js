@@ -71,12 +71,14 @@ $(document).ready(function DOMLoaded() {
 
   const $fp = $.fn.fullpage;
 
-  // slidePost($fp);
-  // slideVideo($fp);
-  // slideMap($fp);
-  // nav($fp);
-  // modal($fp);
-  // menu();
+  $(() => {
+    slidePost($fp);
+    slideVideo($fp);
+    slideMap($fp);
+    nav($fp);
+    modal($fp);
+    menu();
+  });
 
   function goDown() {
     $.fn.fullpage.moveSectionDown();
