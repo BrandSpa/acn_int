@@ -1,7 +1,9 @@
-import $ from "jquery";
+
+import jQuery from "jquery";
+import "lazysizes";
 import "fullpage.js";
 import "lazysizes/plugins/bgset/ls.bgset";
-import "lazysizes";
+
 import slidePost from  "./slide_post";
 import slideVideo from "./slide_video";
 import slideMap from "./slider_map";
@@ -10,12 +12,13 @@ import menu from "./menu";
 import modal from "./modal";
 import mitt from "mitt";
 window.mitt = mitt();
+const $ = jQuery;
 
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
 window.lazySizesConfig.loadMode = 1;
 
-$(function DOMLoaded() {
+$(document).ready(function DOMLoaded() {
 
   const emmiter = window.mitt;
 
