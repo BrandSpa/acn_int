@@ -1,5 +1,4 @@
-
-import jQuery from "jquery";
+import $ from "jquery";
 import "lazysizes";
 import "fullpage.js";
 import "lazysizes/plugins/bgset/ls.bgset";
@@ -12,7 +11,6 @@ import menu from "./menu";
 import modal from "./modal";
 import mitt from "mitt";
 window.mitt = mitt();
-const $ = jQuery;
 
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
@@ -71,14 +69,12 @@ $(document).ready(function DOMLoaded() {
 
   const $fp = $.fn.fullpage;
 
-  $(() => {
     slidePost($fp);
     slideVideo($fp);
     slideMap($fp);
     nav($fp);
     modal($fp);
     menu();
-  });
 
   function goDown() {
     $.fn.fullpage.moveSectionDown();

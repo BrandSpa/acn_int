@@ -1,3 +1,4 @@
+import $ from "jquery";
 import { ScrollStop } from "./funs";
 
 function modal($fp) {
