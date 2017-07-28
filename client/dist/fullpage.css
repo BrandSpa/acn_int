@@ -1383,7 +1383,8 @@ button {
 .map-points__container {
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  overflow: hidden; }
 
 .map-points__content {
   padding: 0 40px;
