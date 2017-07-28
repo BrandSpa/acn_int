@@ -6,18 +6,10 @@
 
 $font-base: 15;
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  -ms-touch-action: manipulation;
-  touch-action: manipulation
-}
-
-body {
-  margin: 0;
-  background: #000;
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
 }
 
 body,
