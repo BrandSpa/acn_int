@@ -548,7 +548,8 @@ html {
 
 body {
   margin: 0;
-  background: #000; }
+  background: #000;
+  overflow: hidden; }
 
 body,
 html {
