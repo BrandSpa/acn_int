@@ -143,20 +143,20 @@ function acn_fullpage_sc( $atts, $content ) {
 		<?php endforeach; ?>
 	</div>
 <?php endif; ?>
-	<script>
-		window.fp_options  = {};
-		fp_options['titles'] = <?php echo json_encode($titles) ?>
 
+<script>
+	window.fp_options  = {};
+	fp_options['titles'] = <?php echo json_encode($titles) ?>
 
-		if(window.location.hash !== '') {
-			$('.intro').addClass('intro--close');
-		}
+	if(window.location.hash !== '') {
+		$('.intro').addClass('intro--close');
+	}
 
-		setTimeout(function introDelay() {
-			$('.intro').addClass('intro--close');
-		}, <?php echo $introDelay ?>);
+	setTimeout(function introDelay() {
+		$('.intro').addClass('intro--close');
+	}, <?php echo $introDelay ?>);
 
-	</script>
+</script>
 
 	<style>
 		#fullpage{

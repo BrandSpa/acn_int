@@ -30,7 +30,6 @@ $(function DOMLoaded() {
   function handleLeave(index, nextIndex, direction) {
     var next = nextIndex - 1;
     var $section = $(".section:eq(" + next + ")");
-    $section.addClass("load-bgs");
   }
 
   function handleAfterLoad(section, index) {

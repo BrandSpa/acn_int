@@ -556,12 +556,12 @@ html {
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  width: 100%;
+  height: 100%;
   line-height: 20px;
   tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  height: 100%; }
+  -moz-osx-font-smoothing: grayscale; }
   @media (max-width: 767px) {
     body,
     html {
