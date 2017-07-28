@@ -146,16 +146,8 @@ function acn_fullpage_sc( $atts, $content ) {
 
 <script>
 	window.fp_options  = {};
-	fp_options['titles'] = <?php echo json_encode($titles) ?>
-
-	if(window.location.hash !== '') {
-		$('.intro').addClass('intro--close');
-	}
-
-	setTimeout(function introDelay() {
-		$('.intro').addClass('intro--close');
-	}, <?php echo $introDelay ?>);
-
+	fp_options['titles'] = <?php echo json_encode($titles) ?>;
+	fp_options['introDelay'] = <?php echo $introDelay ?>;
 </script>
 
 	<style>

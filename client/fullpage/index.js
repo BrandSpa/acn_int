@@ -81,4 +81,13 @@ $(function DOMLoaded() {
 
   $(document).on("click", ".section__down", goDown);
 
+  if(window.location.hash !== '') {
+    $('.intro').addClass('intro--close');
+  }
+
+  setTimeout(function introDelay() {
+    $('.intro').addClass('intro--close');
+  }, fp_options.introDelay);
+
+
 });
