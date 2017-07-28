@@ -18,11 +18,12 @@
   <meta name="theme-color" content="#f1364e">
   <meta property="title" content="<?php echo get_the_title(); ?>" />
 
-  <meta property="og:title" content="<?php echo get_the_title(); ?>" />
+  <meta property="og:title" content="Aid to the Church in Need - <?php echo get_the_title(); ?>" />
   <meta property="og:url" content="<?php echo the_permalink() ?>" />
   <meta property="og:image" content="<?php echo get_the_post_thumbnail_url() ?>" />
+  <meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
 
-  <meta name="twitter:title" content="<?php echo get_the_title(); ?>">
+  <meta name="twitter:title" content="Aid to the Church in Need - <?php echo get_the_title(); ?>">
   <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url() ?>">
   <meta name="twitter:card" content="summary_large_image">
 

@@ -9,7 +9,7 @@
 
   <meta property="og:title" content="<?php echo get_the_title(); ?>" />
   <meta property="og:url" content="<?php echo the_permalink() ?>" />
-  <meta property="og:image" content="<?php echo get_the_post_thumbnail_url() ?>" />
+  <meta property="og:image" content="<?php echo get_the_post_thumbnail_url() ?>?fbrefresh=" />
 	<meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
 
   <meta name="twitter:title" content="<?php echo get_the_title(); ?>">
