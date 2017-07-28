@@ -1,3 +1,4 @@
+import $ from "jquery";
 import "fullpage.js";
 import "lazysizes/plugins/bgset/ls.bgset";
 import "lazysizes";
