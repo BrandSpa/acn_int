@@ -1,4 +1,4 @@
-
+import $ from "jquery";
 export const ScrollStop = ($fp, stop = false) => {
   if(stop) {
     $fp.setAllowScrolling(false);
