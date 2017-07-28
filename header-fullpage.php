@@ -28,19 +28,6 @@
 	<link
 		rel="stylesheet"
 		href="<?php echo get_template_directory_uri() ?>/client/dist/fullpage.css?v=<?php echo filemtime(get_template_directory() . '/client/dist/fullpage.css') ?>">
-
-	<script>
-      function onLoad(cb) {
-        if (window.addEventListener)
-          window.addEventListener("load", cb, false);
-        else if (window.attachEvent) {
-          window.attachEvent("onload", cb);
-        } else {
-          window.onload = cb;
-        }
-      }
-  </script>
-
 </head>
 <body>
 

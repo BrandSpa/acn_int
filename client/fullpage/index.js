@@ -15,7 +15,7 @@ window.mitt = mitt();
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
 
-$(document).ready(function DOMLoaded() {
+$(function DOMLoaded() {
 
   const emmiter = window.mitt;
 
@@ -26,7 +26,7 @@ $(document).ready(function DOMLoaded() {
   });
 
   function handleAfterRender() {
-    lazySizes.init();
+    // lazySizes.init();
   }
 
   function handleLeave(index, nextIndex, direction) {
