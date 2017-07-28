@@ -873,7 +873,8 @@ button {
   .section__content {
     height: 100%;
     position: relative;
-    z-index: 3; }
+    z-index: 3;
+    overflow: hidden; }
   .section__layers {
     overflow: hidden;
     position: absolute;
