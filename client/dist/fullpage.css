@@ -1230,7 +1230,7 @@ button {
   height: 100%;
   width: 100%;
   max-width: 100%; }
-  .section--center h1, .section--center h2, .section--center h3, .section--center h4, .section--center h5, .section--center h6, .section--center p, .section--center span {
+  .section--center h1, .section--center h2, .section--center h3, .section--center h4, .section--center h5, .section--center h6, .section--center p, .section--center span, .section--center div {
     max-width: 100%; }
 
 .section--center-vertical {
