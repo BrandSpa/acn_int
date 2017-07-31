@@ -729,7 +729,7 @@ li {
     /* Firefox 10+, Firefox on Android */
     filter: gray;
     /* IE6-9 */
-    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%) invert(100%);
     /* Chrome 19+, Safari 6+, Safari 6+ iOS */
     max-width: 180px; }
     @media (max-width: 767px) {
