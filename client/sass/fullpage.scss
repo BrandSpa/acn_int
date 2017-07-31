@@ -736,6 +736,7 @@ button {
   display: flex;
   align-items: center;
 	flex-shrink: 1;
+	-ms-flex-negative: 0;
 }
 
 .section__close-post,
