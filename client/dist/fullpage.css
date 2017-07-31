@@ -1229,8 +1229,7 @@ button {
   justify-content: center;
   height: 100%;
   width: 100%;
-  flex-shrink: 1;
-  -ms-flex-negative: 0; }
+  max-width: 100%; }
 
 .section--center-vertical {
   height: 100%;
@@ -1240,8 +1239,7 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  flex-shrink: 1;
-  -ms-flex-negative: 0; }
+  max-width: 100%; }
 
 .section__close-post,
 .section__close-spot-content,
