@@ -4,6 +4,7 @@
 		"transform-object-rest-spread",
 		"transform-class-properties",
 		"styled-jsx/babel",
-		"transform-runtime"
+		"transform-runtime",
+		"transform-es3-modules-literals"
 	]
 }
