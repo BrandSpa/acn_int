@@ -728,7 +728,9 @@ button {
     align-items: center;
     justify-content: center;
     height: 100%;
-		width: 100%
+		width: 100%;
+		flex-shrink: 1;
+		-ms-flex-negative: 0;
 }
 
 .section--center-vertical {
