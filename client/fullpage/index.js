@@ -1,4 +1,5 @@
 import "babel-polyfill";
+import "airbnb-browser-shims";
 import $ from "jquery";
 import "lazysizes";
 import "fullpage.js";
