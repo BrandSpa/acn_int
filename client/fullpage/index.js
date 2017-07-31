@@ -11,6 +11,7 @@ import slideMap from "./slider_map";
 import nav from "./nav";
 import menu from "./menu";
 import modal from "./modal";
+import { ScrollStop } from "./funs";
 import mitt from "mitt";
 window.mitt = mitt();
 
@@ -69,7 +70,7 @@ $(function DOMLoaded() {
   });
 
   const $fp = $.fn.fullpage;
-
+    ScrollStop($fp, true);
     slidePost($fp);
     slideVideo($fp);
     slideMap($fp);
@@ -83,12 +84,17 @@ $(function DOMLoaded() {
 
   $(document).on("click", ".section__down", goDown);
 
-  if(window.location.hash !== '') {
-    $('.intro').addClass('intro--close');
+  function closeIntro() {
+    ScrollStop($.fn.fullpage, false);
+    $(".intro").addClass("intro--close");
+  }
+
+  if(window.location.hash !== "") {
+    closeIntro();
   }
 
   setTimeout(function introDelay() {
-    $('.intro').addClass('intro--close');
+    closeIntro();
   }, fp_options.introDelay);
 
 
