@@ -1571,7 +1571,7 @@ button {
     padding: 40px 50px; }
   .section__modal__close-modal {
     display: block;
-    top: 5px;
+    top: 20px;
     right: 5px;
     position: absolute;
     z-index: 202;
