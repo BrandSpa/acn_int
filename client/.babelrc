@@ -5,6 +5,7 @@
 		"transform-class-properties",
 		"styled-jsx/babel",
 		"transform-runtime",
-		"transform-es3-modules-literals"
+		"transform-es3-modules-literals",
+		"transform-es3-property-literals"
 	]
 }
