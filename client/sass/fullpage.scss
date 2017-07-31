@@ -216,7 +216,10 @@ li {
     top: 40px;
     left: 40px;
     z-index: 10;
-
+		outline: none;
+		&:hover, &:focus {
+			outline: none;
+		}
     img {
       filter: grayscale(100%) invert(100%);
       max-width: 180px;
