@@ -1545,7 +1545,8 @@ button {
   left: 0;
   bottom: 0;
   right: 0;
-  display: none; }
+  display: none;
+  margin: auto; }
   .section__modal--open {
     display: block; }
   .section__modal__content {
