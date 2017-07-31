@@ -722,6 +722,7 @@ li {
   .fullpage-logo:hover, .fullpage-logo:focus {
     outline: none; }
   .fullpage-logo img {
+    border: 0px;
     -webkit-filter: grayscale(100%) invert(100%);
     filter: grayscale(100%) invert(100%);
     max-width: 180px; }

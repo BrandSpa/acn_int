@@ -152,6 +152,9 @@ p {
 a {
   text-decoration: none;
   cursor: pointer;
+	img {
+		border: 0
+	}
 }
 
 ul {
@@ -221,6 +224,7 @@ li {
 			outline: none;
 		}
     img {
+			border: 0px;
       filter: grayscale(100%) invert(100%);
       max-width: 180px;
       @media #{$s} {
