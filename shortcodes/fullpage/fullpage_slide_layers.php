@@ -61,6 +61,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 	<div class="section__layers">
 		<div
 				class="layer-overlay-animation section__layers__layer lazyload"
+				data-src="<?php echo $overlayUrl ?>"
 				data-bgset="<?php echo $overlayUrlMobile ?> [(max-width: 767px)] | <?php echo $overlayUrl ?>"
 				data-sizes="auto"
 				style=" z-index: 2"
@@ -68,6 +69,7 @@ function acn_fullpage_slide_bgs_sc( $atts, $content ) {
 		</div>
 		<div
 				class="layer-bg-animation section__layers__layer lazyload"
+				data-src="<?php echo $bgUrl ?>"
 				data-bgset=" <?php echo $bgUrlMobile ?> [(max-width: 767px)] | <?php echo $bgUrl ?>"
 				data-sizes="auto"
 				style=" z-index: 1"
