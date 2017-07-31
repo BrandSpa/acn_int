@@ -1146,7 +1146,8 @@ button {
     .intro__section__container {
       padding: 0 100px; }
       .intro__section__container h3 {
-        text-align: center; }
+        text-align: center;
+        max-width: 100%; }
     .intro__section--duration-1 {
       -webkit-animation-duration: 1s;
       animation-duration: 1s; }

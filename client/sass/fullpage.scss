@@ -685,7 +685,7 @@ button {
     transition: transform .7s ease-out;
 
     &--close {
-        transform: translateY(-100vh);
+      transform: translateY(-100vh);
     }
 
     &__section {
@@ -705,8 +705,10 @@ button {
 
           h3 {
             text-align: center;
+						max-width: 100%
           }
         }
+
         &--duration {
             @for $i from 1 through 12 {
                 &-#{$i} {
