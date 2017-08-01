@@ -1,11 +1,10 @@
-import { ScrollStop } from "./funs";
 
 function modal($fp) {
   const emmiter = window.mitt;
 
   function openModal(e) {
     if(e) e.preventDefault();
-    ScrollStop($fp, true);
+    emmiter.emit("stop:scroll");
     $fp.setAllowScrolling(false);
     let modalName = $(this).attr("href").replace("#", "");
     let $modal = $(`.section__modal[data-modal="${modalName}"]`);
@@ -14,7 +13,7 @@ function modal($fp) {
 
   function closeModal() {
     if($(".section__modal--open").length > 0) {
-      ScrollStop($fp, false);
+      emmiter.emit("allow:scroll");
       let $modal = $(".section__modal--open");
       $modal.removeClass("section__modal--open");
     }

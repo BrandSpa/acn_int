@@ -9,7 +9,7 @@ import slideMap from "./slider_map";
 import nav from "./nav";
 import menu from "./menu";
 import modal from "./modal";
-import { ScrollStop } from "./funs";
+import { stopScroll, allowScroll } from "./funs";
 import mitt from "mitt";
 window.mitt = mitt();
 window.fp_options = window.fp_options || {};
@@ -57,21 +57,26 @@ $(function DOMLoaded() {
     if( $section.find(".bs-counter").length > 0 ) emmiter.emit("runCounter");
   }
 
+  const scrollElements = ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content";
+
   $("#fullpage").fullpage({
     menu: "#fullpage-menu",
     recordHistory: false,
     lazyLoading: false,
     navigation: false,
-    normalScrollElements: ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content",
+    normalScrollElements: scrollElements,
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
     onLeave: handleLeave
   });
 
-  const $fp = $.fn.fullpage;
+
 
   if($("#fullpage").length > 0) {
-    ScrollStop($fp, true);
+    const $fp = $.fn.fullpage;
+
+    stopScroll($fp);
+    allowScroll($fp);
     slidePost($fp);
     slideVideo($fp);
     slideMap($fp);
@@ -87,7 +92,7 @@ $(function DOMLoaded() {
   $(document).on("click", ".section__down", goDown);
 
   function closeIntro() {
-    ScrollStop($.fn.fullpage, false);
+    emmiter.emit("allow:scroll");
     $(".intro").addClass("intro--close");
   }
 

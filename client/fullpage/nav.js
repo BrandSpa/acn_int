@@ -1,4 +1,3 @@
-import { ScrollStop } from "./funs";
 
 function nav($fp) {
 
@@ -6,14 +5,14 @@ function nav($fp) {
 
   function openNav(e) {
     if(e) e.preventDefault();
-    ScrollStop($fp, true);
+    emmiter.emit("stop:scroll");
     $(".fullpage-nav").addClass("fullpage-nav--open");
     $(".fullpage__menu").addClass("fullpage__menu--dark");
   }
 
   function closeNav(e) {
     if($(".fullpage-nav--open").length > 0) {
-      ScrollStop($fp, false);
+      emmiter.emit("allow:scroll");
       $(".fullpage-nav").removeClass("fullpage-nav--open");
       $(".fullpage__menu").removeClass("fullpage__menu--dark");
     }

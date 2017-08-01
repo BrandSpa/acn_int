@@ -1,4 +1,3 @@
-import { ScrollStop } from "./funs";
 
 function slideVideo($fp) {
 
@@ -6,7 +5,7 @@ function slideVideo($fp) {
 
   function closeVideo($videoSection) {
     if($videoSection.length > 0) {
-      ScrollStop($fp, false);
+      emmiter.emit("allow:scroll");
       var $iframe = $videoSection.find("iframe");
       $iframe.attr("src", "");
       $videoSection.removeClass("section__video--open");
@@ -14,7 +13,7 @@ function slideVideo($fp) {
   }
 
   function openVideo($videoSection) {
-    ScrollStop($fp, true);
+    emmiter.emit("stop:scroll");
     $videoSection.addClass("section__video--open");
     var $iframe = $videoSection.find("iframe");
     var src = $iframe.data("src");

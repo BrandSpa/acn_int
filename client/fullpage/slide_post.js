@@ -6,14 +6,14 @@ function slidePost($fp) {
 
   function closePost($postSection) {
     if($(".section__post--open").length > 0) {
-      ScrollStop($fp, false);
+      emmiter.emit("allow:scroll");
       $(".section__post--open").removeClass("section__post--open");
       $(".section__close-post").removeClass("section__close-post--open");
     }
   }
 
   function openPost($postSection) {
-    ScrollStop($fp, true);
+    emmiter.emit("stop:scroll");
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
   }
