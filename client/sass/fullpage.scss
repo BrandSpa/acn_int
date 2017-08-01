@@ -984,10 +984,11 @@ button {
   left: -100%;
   will-change: left;
   transition: left .7s;
-	background: rgba(0,0,0,.5);
+
 
   &--open {
     left: 0;
+		background: rgba(0,0,0,.5);
   }
 
   &__container {

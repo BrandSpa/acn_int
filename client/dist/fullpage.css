@@ -1438,10 +1438,10 @@ button {
   left: -100%;
   will-change: left;
   -webkit-transition: left .7s;
-  transition: left .7s;
-  background: rgba(0, 0, 0, 0.5); }
+  transition: left .7s; }
   .spot-content--open, .nineveh-general-content--open {
-    left: 0; }
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); }
   .spot-content__container, .nineveh-general-content__container {
     width: 50%;
     position: relative;
