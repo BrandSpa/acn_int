@@ -21,7 +21,7 @@ function slidePost($fp) {
     var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
     emmiter.on("click:document", function(evt) {
-      console.log(evt, evt.target.is($postSection));
+      console.log(evt, $(evt.target).is($postSection));
     });
 
     if ($postSection.hasClass("section__post--open")) {
