@@ -70,8 +70,8 @@ $(function DOMLoaded() {
   });
 
   const $fp = $.fn.fullpage;
-  
-  if($fp) {
+
+  if($("#fullpage").length > 0) {
     ScrollStop($fp, true);
     slidePost($fp);
     slideVideo($fp);
