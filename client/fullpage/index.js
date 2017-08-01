@@ -61,7 +61,7 @@ $(function DOMLoaded() {
 
   const scrollElements = ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content";
 
-  const fp1 = $("#fullpage").fullpage({
+  $("#fullpage").fullpage({
     menu: "#fullpage-menu",
     lazyLoading: false,
     navigation: false,
