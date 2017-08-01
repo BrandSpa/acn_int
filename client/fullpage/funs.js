@@ -1,5 +1,5 @@
 export const ScrollStop = ($fp, stop = false) => {
-  console.log($fp.hasOwnProperty("setAllowScrolling"));
+  console.log($fp, stop);
   if($fp.hasOwnProperty("setAllowScrolling")) {
     if(stop) {
       $fp.setAllowScrolling(false, "all");
