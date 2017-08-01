@@ -74,7 +74,12 @@ $(function DOMLoaded() {
   if($("#fullpage").length > 0) {
     const $fp = $.fn.fullpage;
 
-    stopScroll($fp);
+    emmiter.on("stop:scroll", function() {
+      console.log("stop:scroll");
+      $("body").addClass("scroll-stoped");
+      $.fn.fullpage.setAllowScrolling(false);
+    });
+
     allowScroll($fp);
     slidePost($fp);
     slideVideo($fp);
