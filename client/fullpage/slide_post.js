@@ -24,9 +24,9 @@ function slidePost($fp) {
     var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
     if ($postSection.hasClass("section__post--open")) {
-      closePost.call(this, $postSection);
+      closePost.call(this, $postSection, e);
     } else {
-      openPost.call(this, $postSection);
+      openPost.call(this, $postSection, e);
     }
   }
 
