@@ -74,7 +74,6 @@ $(function DOMLoaded() {
   if($("#fullpage").length > 0) {
     const $fp = $.fn.fullpage;
 
-    console.log(fp1);
     stopScroll($fp);
     allowScroll($fp);
     slidePost($fp);
