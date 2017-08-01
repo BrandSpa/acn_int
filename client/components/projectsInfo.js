@@ -62,6 +62,7 @@ class ProjectsInfo extends Component {
 					<span style={{ fontSize: "30px" }}>{this.props.projects[section] ? this.props.projects[section].number_text : ""}</span>
 				</div>
         <style jsx>{`
+
           .project-info__section {
             padding: 40px;
       			text-align: center;
@@ -72,7 +73,7 @@ class ProjectsInfo extends Component {
       			position: relative;
           }
 
-          .projects-info__num {
+          .project-info__num {
             font-size: 4em;
       			margin-right: 60px;
           }
@@ -82,7 +83,7 @@ class ProjectsInfo extends Component {
               display: 'block'
             }
 
-            .projects-info__num {
+            .project-info__num {
               margin: 0;
               display: block
             }
