@@ -1,4 +1,3 @@
-import $ from "jquery";
 
 function menu() {
   function toggleMenuShare() {

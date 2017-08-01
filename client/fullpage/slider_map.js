@@ -1,4 +1,3 @@
-import $ from "jquery";
 import { ScrollStop } from "./funs";
 
 function mapPoints($fp) {

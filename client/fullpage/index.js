@@ -1,4 +1,3 @@
-import $ from "jquery";
 import "lazysizes";
 import "fullpage.js";
 import "lazysizes/plugins/respimg/ls.respimg";

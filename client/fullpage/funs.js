@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 export const ScrollStop = ($fp, stop = false) => {
   console.log($fp.hasOwnProperty("setAllowScrolling"));
   if($fp.hasOwnProperty("setAllowScrolling")) {
