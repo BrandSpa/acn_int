@@ -27,7 +27,8 @@ function slidePost($fp) {
       }
     }
 
-    emmiter.once("click:document", clickOutside);
+    emmiter.off("click:document", clickOutside);
+    emmiter.on("click:document", clickOutside);
 
     if ($postSection.hasClass("section__post--open")) {
 
