@@ -257,10 +257,7 @@ li {
     width: 100%;
     height: 100%;
     visibility: hidden;
-
-    @media #{$s} {
-        width: 88%;
-    }
+		background: rgba(0,0,0, .5);
 
     img {
         max-width: 100%;
@@ -293,7 +290,7 @@ li {
 
       @media #{$s} {
         padding: 10%;
-        width: 100%;
+        width: 88%;
       }
     }
 }
