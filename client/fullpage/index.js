@@ -12,8 +12,9 @@ import menu from "./menu";
 import modal from "./modal";
 import { stopScroll, allowScroll } from "./funs";
 import mitt from "mitt";
+import Emitter from "tiny-emitter";
 
-window.mitt = mitt();
+window.mitt = new Emitter();
 window.fp_options = window.fp_options || {};
 
 window.lazySizesConfig = window.lazySizesConfig || {};
