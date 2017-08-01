@@ -3,6 +3,8 @@ function mapPoints($fp) {
 
   const emmiter = window.mitt;
 
+  let $spotContent;
+
   function setMapSize() {
     $(".map-points").attr("width", $(window).width());
     $(".map-points").attr("height", $(window).height());
@@ -15,9 +17,12 @@ function mapPoints($fp) {
 
   function openSpotContent(e) {
     if(e) e.preventDefault();
-    var content = $(this).data("content");
+
+    let content = $(this).data("content");
+
     if( $(`.spot-content.${content}`).length > 0 ) {
       emmiter.emit("stop:scroll");
+      $spotContent = $(`.spot-content.${content}`);
       $(`.spot-content.${content}`).addClass("spot-content--open");
       $(".section__close-spot-content").addClass("section__close-spot-content--open");
     }
@@ -45,6 +50,12 @@ function mapPoints($fp) {
     }
   }
 
+  function clickOutside(evt) {
+    if($(evt.target).is($spotContent)) {
+      console.log('spot close outside');
+    }
+  }
+
   setMapSize();
 
   //Events
@@ -60,6 +71,7 @@ function mapPoints($fp) {
 
   emmiter.on("close:esc", closeNinevehGeneralContent);
   emmiter.on("close:esc", closeSpotContent);
+  emmiter.on("click:document", clickOutside);
 }
 
 
