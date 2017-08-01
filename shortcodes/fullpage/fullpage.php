@@ -99,7 +99,7 @@ function acn_fullpage_sc( $atts, $content ) {
 						<a
 							class="fullpage__menu__share-icon"
 							target="_blank"
-							href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_excerpt()) ?>&url=<?php echo urlencode($current_url) ?>">
+							href="https://twitter.com/intent/tweet?text=<?php echo urlencode(get_the_excerpt()) ?><?php echo $current_url ?>">
 							<i class="ion-social-twitter"></i>
 						</a>
 					</li>
