@@ -11,10 +11,13 @@ function slidePost($fp) {
     }
   }
 
-  function openPost($postSection) {
+  function openPost($postSection, e) {
     emmiter.emit("stop:scroll");
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
+    if(!$(e.target).is($postSection)) {
+        console.log('outside');
+    }
   }
 
   function handleTogglePost(e) {
