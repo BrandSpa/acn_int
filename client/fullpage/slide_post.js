@@ -2,8 +2,9 @@
 function slidePost($fp) {
 
   const emmiter = window.mitt;
+  let $postSection;
 
-  function closePost($postSection) {
+  function closePost() {
     if($(".section__post--open").length > 0) {
       emmiter.emit("allow:scroll");
       $(".section__post--open").removeClass("section__post--open");
@@ -11,24 +12,14 @@ function slidePost($fp) {
     }
   }
 
-  function openPost($postSection, e) {
+  function openPost($postSection) {
     emmiter.emit("stop:scroll");
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
   }
 
   function handleTogglePost(e) {
-    var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
-
-    function clickOutside(evt) {
-      if($(evt.target).is($postSection)) {
-        console.log('post close outside');
-        closePost($postSection);
-      }
-    }
-
-    emmiter.off("click:document", clickOutside);
-    emmiter.on("click:document", clickOutside);
+    let $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
     if ($postSection.hasClass("section__post--open")) {
 
@@ -38,11 +29,18 @@ function slidePost($fp) {
     }
   }
 
+  function clickOutside(evt) {
+    if($(evt.target).is($postSection)) {
+      console.log('post close outside');
+      closePost($postSection);
+    }
+  }
+
   //Events
   $(document).on("click", ".section__open-post", handleTogglePost);
   $(document).on("click", ".section__close-post", handleTogglePost);
   emmiter.on("close:esc", closePost);
-  emmiter.on("close:all", closePost);
+  emmiter.on("click:document", clickOutside);
 
 }
 
