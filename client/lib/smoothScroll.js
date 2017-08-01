@@ -3,7 +3,7 @@ import debounce from 'lodash/debounce';
 export default function smoothScroll() {
 
   $(".bs-donate, .bs-anchor").on('click', function(event) {
-    
+
     console.log(this.hash, event);
 
     // Make sure this.hash has a value before overriding default behavior
@@ -20,18 +20,22 @@ export default function smoothScroll() {
 
   });
 
-  window.addEventListener('scroll', debounce(function() {
-     if($('.nav').offset().top > 0) {
-       $('#return-to-top').css({display: 'block'})
-     } else {
-       $('#return-to-top').css({display: 'none'})
-     }
+  if($('.nav').length > 0) {
+    window.addEventListener('scroll', debounce(function() {
 
-  }, 200));
-  
+       if($('.nav').offset().top > 0) {
+         $('#return-to-top').css({display: 'block'})
+       } else {
+         $('#return-to-top').css({display: 'none'})
+       }
+
+    }, 200));
+  }
+
+
   $('#return-to-top').on('click', function(e) {
     e.preventDefault();
-   
+
     $('html, body').animate({ scrollTop: 0 }, 800, () => {});
   })
 
