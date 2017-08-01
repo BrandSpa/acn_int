@@ -80,7 +80,12 @@ $(function DOMLoaded() {
       $.fn.fullpage.setAllowScrolling(false);
     });
 
-    allowScroll($fp);
+    emmiter.on("allow:scroll", function() {
+      console.log("allow:scroll");
+      $("body").removeClass("scroll-stoped");
+      $.fn.fullpage.setAllowScrolling(true);
+    });
+
     slidePost($fp);
     slideVideo($fp);
     slideMap($fp);
