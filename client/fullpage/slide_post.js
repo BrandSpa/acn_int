@@ -19,7 +19,7 @@ function slidePost($fp) {
   }
 
   function handleTogglePost(e) {
-    let $postSection = $(this).closest(".fp-tableCell").find(".section__post");
+    $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
     if ($postSection.hasClass("section__post--open")) {
 
@@ -30,6 +30,7 @@ function slidePost($fp) {
   }
 
   function clickOutside(evt) {
+    console.log($postSection);
     if($(evt.target).is($postSection)) {
       console.log('post close outside');
       closePost($postSection);
