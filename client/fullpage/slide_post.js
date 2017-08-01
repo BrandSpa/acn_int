@@ -15,16 +15,19 @@ function slidePost($fp) {
     emmiter.emit("stop:scroll");
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
+    emmiter.on("click:document", function(evt) {
+      if($(evt.target).is($postSection)) {
+        console.count($postSection);
+        closePost($postSection);
+      }
+    });
   }
 
   function handleTogglePost(e) {
     var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
-    emmiter.on("click:document", function(evt) {
-      console.log(evt, $(evt.target).is($postSection));
-    });
-
     if ($postSection.hasClass("section__post--open")) {
+
       closePost.call(this, $postSection, e);
     } else {
       openPost.call(this, $postSection, e);
@@ -36,6 +39,7 @@ function slidePost($fp) {
   $(document).on("click", ".section__close-post", handleTogglePost);
   emmiter.on("close:esc", closePost);
   emmiter.on("close:all", closePost);
+
 }
 
 export default slidePost;
