@@ -22,8 +22,8 @@ function slidePost($fp) {
         closePost($postSection);
       }
     }
-    emmiter.on("click:document", clickOutside);
     emmiter.off("click:document", clickOutside);
+    emmiter.on("click:document", clickOutside);
   }
 
   function handleTogglePost(e) {
