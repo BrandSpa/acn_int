@@ -58,6 +58,7 @@ $(document).ready(function DOMLoaded() {
 
     if( $section.find(".bs-counter").length > 0 ) emmiter.emit("runCounter");
   }
+
   const isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);
   const scrollElements = isTouchDevice ? ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content" : "";
 
@@ -66,6 +67,7 @@ $(document).ready(function DOMLoaded() {
     lazyLoading: false,
     navigation: false,
     normalScrollElements: scrollElements,
+    touchSensitivity: 2,
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
     onLeave: handleLeave
