@@ -7,7 +7,7 @@ export const stopScroll = ($fp) => {
     $("body").addClass("scroll-stoped");
     $fp.setAllowScrolling(false);
     $fp.setKeyboardScrolling(false);
-  });
+  })
 }
 
 export const allowScroll = ($fp) => {
