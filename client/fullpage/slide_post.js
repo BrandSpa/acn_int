@@ -16,14 +16,13 @@ function slidePost($fp) {
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
   }
-  
+
   function handleTogglePost(e) {
     var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
-    if(!$(e.target).is($postSection)) {
-        console.log($(e.target), 'outside');
-
-    }
+    emmiter.on("click:document", function(evt) {
+      console.log(evt, evt.target.is($postSection));
+    });
 
     if ($postSection.hasClass("section__post--open")) {
       closePost.call(this, $postSection, e);

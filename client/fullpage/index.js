@@ -25,6 +25,8 @@ $(document).ready(function DOMLoaded() {
 
   $(".section__content").on("click", () => emmiter.emit("close:all"));
 
+  $(document).on("click", (e) => emmiter.emit("click:document", e));
+
   $(document).keyup(function(e) {
     if (e.keyCode === 27) emmiter.emit("close:esc");   // esc
   });
