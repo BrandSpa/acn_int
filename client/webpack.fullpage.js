@@ -12,7 +12,6 @@ module.exports = {
       "mitt",
 			"fullpage.js",
 			"lazysizes",
-      "babel-polyfill",
       "airbnb-browser-shims"
     ],
   	app_me: "./fullpage/index.js"
