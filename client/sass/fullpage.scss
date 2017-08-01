@@ -981,14 +981,16 @@ button {
   height: 100%;
   width: 100%;
   top: 0;
-  left: -100%;
-  will-change: left;
-  transition: left .7s;
-
+	left: 0;
+	visibility: hidden;
 
   &--open {
-    left: 0;
+		visibility: visible;
 		background: rgba(0,0,0,.5);
+
+		.spot-content__container, .nineveh-general-content__container {
+			left: 0;
+		}
   }
 
   &__container {
@@ -998,10 +1000,12 @@ button {
     color: #333;
     height: 100%;
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
-
     overflow-y: scroll;
      -webkit-overflow-scrolling: touch;
     transform: translateZ(0px);
+		left: -100%;
+		will-change: left;
+	  transition: left .7s;
 
     h1, h2, h3, h4, h5, p {
       color: #4A4A4A;
