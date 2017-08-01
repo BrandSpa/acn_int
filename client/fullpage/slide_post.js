@@ -22,7 +22,8 @@ function slidePost($fp) {
         closePost($postSection);
       }
     }
-    emmiter.off("click:document", clickOutside);
+
+    emmiter.off("*");
     emmiter.on("click:document", clickOutside);
   }
 
