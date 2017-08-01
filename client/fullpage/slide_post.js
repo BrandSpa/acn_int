@@ -15,19 +15,15 @@ function slidePost($fp) {
     emmiter.emit("stop:scroll");
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
-    emmiter.off("click:document", function(evt) {
+
+    function clickOutside(evt) {
       if($(evt.target).is($postSection)) {
         console.log('post close outside');
         closePost($postSection);
       }
-    });
-    
-    emmiter.on("click:document", function(evt) {
-      if($(evt.target).is($postSection)) {
-        console.log('post close outside');
-        closePost($postSection);
-      }
-    });
+    }
+    emmiter.on("click:document", clickOutside);
+    emmiter.off("click:document", clickOutside);
   }
 
   function handleTogglePost(e) {
