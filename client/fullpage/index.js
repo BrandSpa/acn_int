@@ -61,7 +61,7 @@ $(document).ready(function DOMLoaded() {
 
   const isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);
   const scrollElements = isTouchDevice ? ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content" : "";
-
+  navigator.userAgent.match(/(IEMobile)/);
   $("#fullpage").fullpage({
     menu: "#fullpage-menu",
     lazyLoading: false,
