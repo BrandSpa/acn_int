@@ -2,6 +2,7 @@ import "lazysizes";
 import "fullpage.js";
 import "lazysizes/plugins/respimg/ls.respimg";
 import "lazysizes/plugins/bgset/ls.bgset";
+
 import $ from "jquery";
 import slidePost from  "./slide_post";
 import slideVideo from "./slide_video";
@@ -11,6 +12,7 @@ import menu from "./menu";
 import modal from "./modal";
 import { stopScroll, allowScroll } from "./funs";
 import mitt from "mitt";
+
 window.mitt = mitt();
 window.fp_options = window.fp_options || {};
 
@@ -61,7 +63,6 @@ $(function DOMLoaded() {
 
   $("#fullpage").fullpage({
     menu: "#fullpage-menu",
-    recordHistory: false,
     lazyLoading: false,
     navigation: false,
     normalScrollElements: scrollElements,
@@ -71,10 +72,9 @@ $(function DOMLoaded() {
   });
 
 
-
   if($("#fullpage").length > 0) {
     const $fp = $.fn.fullpage;
-
+    console.log($.fn.fullpage);
     stopScroll($fp);
     allowScroll($fp);
     slidePost($fp);
