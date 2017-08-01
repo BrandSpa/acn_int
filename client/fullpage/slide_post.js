@@ -1,4 +1,3 @@
-import { ScrollStop } from "./funs";
 
 function slidePost($fp) {
 
