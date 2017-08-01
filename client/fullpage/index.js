@@ -19,7 +19,7 @@ window.fp_options = window.fp_options || {};
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
 
-$(function DOMLoaded() {
+$(document).ready(function DOMLoaded() {
 
   const emmiter = window.mitt;
 
@@ -58,8 +58,8 @@ $(function DOMLoaded() {
 
     if( $section.find(".bs-counter").length > 0 ) emmiter.emit("runCounter");
   }
-
-  const scrollElements = "";
+  const isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);
+  const scrollElements = isTouchDevice ? ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content" : "";
 
   $("#fullpage").fullpage({
     menu: "#fullpage-menu",
