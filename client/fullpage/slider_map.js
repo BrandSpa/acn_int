@@ -4,6 +4,7 @@ function mapPoints($fp) {
   const emmiter = window.mitt;
 
   let $spotContent;
+  let $ninevehGeneralContent;
 
   function setMapSize() {
     $(".map-points").attr("width", $(window).width());
@@ -38,8 +39,9 @@ function mapPoints($fp) {
 
   function openNinevehGeneralContent(e) {
     emmiter.emit("stop:scroll");
+    $ninevehGeneralContent = $(".nineveh-general-content");
+    $ninevehGeneralContent.addClass("nineveh-general-content--open");
     $(".section__close-nineveh-general").addClass("section__close-nineveh-general--open");
-    $(".nineveh-general-content").addClass("nineveh-general-content--open")
   }
 
   function closeNinevehGeneralContent(e) {
@@ -53,6 +55,12 @@ function mapPoints($fp) {
   function clickOutsideSpot(evt) {
     if($(evt.target).is($spotContent)) {
       closeSpotContent();
+    }
+  }
+
+  function clickOutsideGeneralContent(evt) {
+    if($(evt.target).is($ninevehGeneralContent)) {
+      closeNinevehGeneralContent();
     }
   }
 
@@ -72,7 +80,7 @@ function mapPoints($fp) {
   emmiter.on("close:esc", closeNinevehGeneralContent);
   emmiter.on("close:esc", closeSpotContent);
   emmiter.on("click:document", clickOutsideSpot);
+  emmiter.on("click:document", clickOutsideGeneralContent);
 }
-
 
 export default mapPoints;
