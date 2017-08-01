@@ -11,7 +11,7 @@ function bs_contact_form_sc($atts, $content = null) {
 		'email-validation' => 'Email required',
 		'terms-validation' => 'You must accept',
 		'button-text' => gett('Pray'),
-		'terms-text' => 'I Accept terms',
+		'terms-text' => 'I want to receive information about ACN, its projects and updated, and I accept the terms and conditions',
 		'redirect' => '',
 		'btn-bg' => '#F4334A',
 		'convertloop_tags' => '',
@@ -109,6 +109,12 @@ add_action( 'vc_before_init', 'bs_contact_form_vc' );
         "heading" => "email validation",
         "param_name" => "email-validation",
         "value" => 'Email required'
+			],
+			[
+				"type" => "textfield",
+				"heading" => "terms text",
+				"param_name" => "terms-text",
+				"value" => "I want to receive information about ACN, its projects and updated, and I accept the terms and conditions"
 			],
 			[
         "type" => "colorpicker",
