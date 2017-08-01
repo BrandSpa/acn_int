@@ -5,7 +5,6 @@ import "fullpage.js";
 import "lazysizes/plugins/respimg/ls.respimg";
 import "lazysizes/plugins/bgset/ls.bgset";
 
-
 import slidePost from  "./slide_post";
 import slideVideo from "./slide_video";
 import slideMap from "./slider_map";
@@ -71,6 +70,8 @@ $(function DOMLoaded() {
   });
 
   const $fp = $.fn.fullpage;
+  
+  if($fp) {
     ScrollStop($fp, true);
     slidePost($fp);
     slideVideo($fp);
@@ -78,6 +79,7 @@ $(function DOMLoaded() {
     nav($fp);
     modal($fp);
     menu();
+  }
 
   function goDown() {
     $.fn.fullpage.moveSectionDown();
