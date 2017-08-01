@@ -15,6 +15,10 @@ function slidePost($fp) {
     emmiter.emit("stop:scroll");
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
+  }
+
+  function handleTogglePost(e) {
+    var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
     function clickOutside(evt) {
       if($(evt.target).is($postSection)) {
@@ -23,12 +27,7 @@ function slidePost($fp) {
       }
     }
 
-    emmiter.off("*");
     emmiter.on("click:document", clickOutside);
-  }
-
-  function handleTogglePost(e) {
-    var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
     if ($postSection.hasClass("section__post--open")) {
 
