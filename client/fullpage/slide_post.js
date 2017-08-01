@@ -30,7 +30,6 @@ function slidePost($fp) {
   }
 
   function clickOutside(evt) {
-    console.log($postSection);
     if($(evt.target).is($postSection)) {
       console.log('post close outside');
       closePost($postSection);
@@ -42,7 +41,6 @@ function slidePost($fp) {
   $(document).on("click", ".section__close-post", handleTogglePost);
   emmiter.on("close:esc", closePost);
   emmiter.on("click:document", clickOutside);
-
 }
 
 export default slidePost;
