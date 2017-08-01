@@ -14,7 +14,7 @@ import modal from "./modal";
 import { ScrollStop } from "./funs";
 import mitt from "mitt";
 window.mitt = mitt();
-window.fp_options = fp_options || {};
+window.fp_options = window.fp_options || {};
 
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.init = false;
