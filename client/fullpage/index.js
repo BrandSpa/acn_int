@@ -59,7 +59,7 @@ $(function DOMLoaded() {
     if( $section.find(".bs-counter").length > 0 ) emmiter.emit("runCounter");
   }
 
-  const scrollElements = ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content";
+  const scrollElements = "";
 
   $("#fullpage").fullpage({
     menu: "#fullpage-menu",
