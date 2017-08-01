@@ -61,7 +61,7 @@ $(function DOMLoaded() {
 
   const scrollElements = ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content";
 
-  $("#fullpage").fullpage({
+  const fp1 = $("#fullpage").fullpage({
     menu: "#fullpage-menu",
     lazyLoading: false,
     navigation: false,
@@ -71,10 +71,10 @@ $(function DOMLoaded() {
     onLeave: handleLeave
   });
 
-
   if($("#fullpage").length > 0) {
     const $fp = $.fn.fullpage;
-    console.log($.fn.fullpage);
+
+    console.log(fp1);
     stopScroll($fp);
     allowScroll($fp);
     slidePost($fp);
