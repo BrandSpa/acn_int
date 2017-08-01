@@ -1,6 +1,7 @@
-const emmiter = window.mitt;
+
 
 export const stopScroll = ($fp) => {
+  const emmiter = window.mitt;
   console.log("stop", emmiter);
   emmiter.on("stop:scroll", function() {
     console.log('stop');
@@ -11,6 +12,7 @@ export const stopScroll = ($fp) => {
 }
 
 export const allowScroll = ($fp) => {
+  const emmiter = window.mitt;
   console.log("allow", emmiter);
   emmiter.on("allow:scroll", function() {
     console.log('allow');

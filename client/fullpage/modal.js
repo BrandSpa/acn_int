@@ -4,7 +4,6 @@ function modal($fp) {
 
   function openModal(e) {
     if(e) e.preventDefault();
-    console.log(emmiter);
     emmiter.emit("stop:scroll");
     $fp.setAllowScrolling(false);
     let modalName = $(this).attr("href").replace("#", "");
