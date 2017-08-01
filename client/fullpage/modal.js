@@ -6,7 +6,7 @@ function modal($fp) {
     if(e) e.preventDefault();
     // $("body").addClass("scroll-stoped");
     $fp.setAllowScrolling(false);
-    console.log('stop modal');
+    console.log($fp.setAllowScrolling(false), 'stop modal');
     let modalName = $(this).attr("href").replace("#", "");
     let $modal = $(`.section__modal[data-modal="${modalName}"]`);
     $modal.addClass("section__modal--open");
