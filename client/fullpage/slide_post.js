@@ -15,13 +15,14 @@ function slidePost($fp) {
     emmiter.emit("stop:scroll");
     $postSection.addClass("section__post--open");
     $(".section__close-post").addClass("section__close-post--open");
-
+  }
+  
   function handleTogglePost(e) {
     var $postSection = $(this).closest(".fp-tableCell").find(".section__post");
 
     if(!$(e.target).is($postSection)) {
         console.log($(e.target), 'outside');
-      }
+
     }
 
     if ($postSection.hasClass("section__post--open")) {
