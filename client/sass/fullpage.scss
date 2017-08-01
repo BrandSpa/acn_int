@@ -480,6 +480,10 @@ button {
         left: 0;
         right: 0;
         padding: 10px 0;
+				@media #{$s} {
+					position: relative;
+					top: 180px;
+				}
 
         ul {
             float: right;
@@ -516,6 +520,9 @@ button {
         top: 180px;
         left: 0;
         right: 0;
+				@media #{$s} {
+					position: relative;
+				}
 
         li {
             a {

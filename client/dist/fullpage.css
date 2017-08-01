@@ -944,6 +944,10 @@ button {
     left: 0;
     right: 0;
     padding: 10px 0; }
+    @media (max-width: 767px) {
+      .fullpage-nav__info {
+        position: relative;
+        top: 180px; } }
     .fullpage-nav__info ul {
       float: right;
       padding: 7px 0; }
@@ -968,6 +972,9 @@ button {
     top: 180px;
     left: 0;
     right: 0; }
+    @media (max-width: 767px) {
+      .fullpage-nav > ul {
+        position: relative; } }
     .fullpage-nav > ul li a {
       display: block;
       padding: 30px 0;
