@@ -50,9 +50,9 @@ function mapPoints($fp) {
     }
   }
 
-  function clickOutside(evt) {
+  function clickOutsideSpot(evt) {
     if($(evt.target).is($spotContent)) {
-      console.log('spot close outside');
+      closeSpotContent();
     }
   }
 
@@ -71,7 +71,7 @@ function mapPoints($fp) {
 
   emmiter.on("close:esc", closeNinevehGeneralContent);
   emmiter.on("close:esc", closeSpotContent);
-  emmiter.on("click:document", clickOutside);
+  emmiter.on("click:document", clickOutsideSpot);
 }
 
 
