@@ -464,6 +464,7 @@ button {
         bottom: 100px;
         left: -25px;
         padding: 0;
+
         @media #{$s} {
           bottom: 80px;
           width: 40px;
@@ -483,6 +484,7 @@ button {
         ul {
             float: right;
             padding: 7px 0;
+
             @media #{$s} {
               padding: 10px;
             }
@@ -511,7 +513,7 @@ button {
     & > ul {
         padding: 0;
         position: absolute;
-        bottom: 130px;
+        top: 180px;
         left: 0;
         right: 0;
 
