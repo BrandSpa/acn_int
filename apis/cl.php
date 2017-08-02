@@ -8,7 +8,7 @@ $dir_base =  str_replace('apis', '', __DIR__);
 
 require $dir_base . 'vendor/autoload.php';
 
-	// $data: { "email": "german.escobar@convertloop.co", "add_tags": ["Tag 1", "Tag2"] }
+	// $data: { "email": "german.escobar@convertloop.co", "pid": "3eb13b25", "add_tags": ["Tag 1", "Tag2"] }
 	function cl_create_person($appId, $apiKey, $data) {
 		try {
 			$data = json_encode($data);
@@ -17,7 +17,7 @@ require $dir_base . 'vendor/autoload.php';
 
 			$headers = array(
 				"Authorization" => "Basic " . $auth,
-				'Accept' => 'application/json', 
+				'Accept' => 'application/json',
 				'content-type' => 'application/json'
 			);
 
@@ -28,7 +28,7 @@ require $dir_base . 'vendor/autoload.php';
 		} catch(Exception $e) {
 			return ['error' => $e];
 		}
-		
+
 	}
 
 	// $data: { "name": "Signed Up", "person": { "email": "german.escobar@convertloop.co" } }
@@ -40,7 +40,7 @@ require $dir_base . 'vendor/autoload.php';
 
 			$headers = array(
 				"Authorization" => "Basic " . $auth,
-				'Accept' => 'application/json', 
+				'Accept' => 'application/json',
 				'content-type' => 'application/json'
 			);
 

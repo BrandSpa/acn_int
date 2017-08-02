@@ -35,7 +35,6 @@
 
 			_dp("configure", { appId: "746fffe4" });
 			_dp("pageView");
-			<?php echo $_COOKIE['dp_pid'] ?>
 		</script>
 
 		<!-- End ConvertLoop -->

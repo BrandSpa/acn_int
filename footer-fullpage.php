@@ -2,6 +2,7 @@
   var bs = {};
   bs.lang = '<?php echo getCountryLang(getCountry()) ?>';
   bs.donate = '<?php echo gett('Donate') ?>';
+  bs.pid = '<?php echo isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : ''  ?>';
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -44,15 +45,6 @@
  </script>
 
  <!-- End Google Analytics -->
-
- <!-- ConvertLoop -->
- <script>
- !function(t,e,n,s) { t.DPEventsFunction=s,t[s]=t[s] || function() { (t[s].q=t[s].q||[]).push(arguments) }; var c=e.createElement("script"),o=e.getElementsByTagName("script")[0]; c.async=1,c.src=n,o.parentNode.insertBefore(c,o); }(window, document, "https://www.convertloop.co/v1/loop.min.js", "_dp");
-
- _dp("configure", { appId: "746fffe4" });
- _dp("pageView");
- </script>
- <!-- End ConvertLoop -->
 
 </body>
 </html>

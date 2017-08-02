@@ -167,6 +167,7 @@ function convertloop_contact() {
   $data = $_POST['data'];
   $lang = getCountryLang($data['country']);
   $data['add_tags'][] = $lang == 'es' ? 'SPANISH' : 'ENGLISH';
+  $data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
 
   /**
   ** if is between office country get app id and api key office that come from:
@@ -192,6 +193,7 @@ add_action( 'wp_ajax_convertloop_event', 'convertloop_event' );
 
 function convertloop_event() {
   $data = $_POST['data'];
+  $data['person']['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
 
   if(in_array($data['country'], getOfficesCountries())) {
     $countryKey = str_replace(' ', '_', $data['country']);
