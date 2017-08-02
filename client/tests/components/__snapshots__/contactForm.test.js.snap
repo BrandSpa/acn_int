@@ -1105,6 +1105,14 @@ Array [
     >
         
     </button>
+    
+    <div
+        className="input-container"
+    >
+        <div
+            className="hidden"
+        />
+    </div>
     <span
         style={
             Object {
@@ -1112,7 +1120,7 @@ Array [
               }
         }
     >
-        you are already praying
+        you're already praying
     </span>
 </form>,
 ]
