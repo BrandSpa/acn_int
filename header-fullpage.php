@@ -29,6 +29,15 @@
 	<link
 		rel="stylesheet"
 		href="<?php echo get_template_directory_uri() ?>/client/dist/fullpage.css?v=<?php echo filemtime(get_template_directory() . '/client/dist/fullpage.css') ?>">
+		<!-- ConvertLoop -->
+		<script>
+			!function(t,e,n,s) { t.DPEventsFunction=s,t[s]=t[s] || function() { (t[s].q=t[s].q||[]).push(arguments) }; var c=e.createElement("script"),o=e.getElementsByTagName("script")[0]; c.async=1,c.src=n,o.parentNode.insertBefore(c,o); }(window, document, "https://www.convertloop.co/v1/loop.min.js", "_dp");
+
+			_dp("configure", { appId: "746fffe4" });
+			_dp("pageView");
+		</script>
+		<!-- End ConvertLoop -->
+
 </head>
 <body>
 
