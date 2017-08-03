@@ -142,6 +142,11 @@ function acn_fullpage_slide_points_vc() {
         "param_name" => "btn_title"
       ],
       [
+        "heading" => "Title",
+        "type" => "textfield",
+        "param_name" => "title"
+      ],
+      [
         "heading" => "Anchor",
         "type" => "textfield",
         "param_name" => "uniq_name"
