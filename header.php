@@ -81,10 +81,3 @@
 <?php endif; ?>
 
 <?php require('templates/nav.php') ?>
-
-<script>
-  var menu = <?php
-    $menuId = get_nav_menu_locations()['header'];
-    echo json_encode(wp_get_nav_menu_items($menuId));
-    ?>
-</script>
