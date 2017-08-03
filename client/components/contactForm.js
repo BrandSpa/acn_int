@@ -44,7 +44,7 @@ class contactForm extends Component {
       .then(this.setCountry);
   }
 
-  setCountry(res) {
+  setCountry = (res) => {
     const countries = res.data;
     this.setState({
       contact: {
