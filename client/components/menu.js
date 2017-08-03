@@ -1,14 +1,24 @@
 import React, { Component } from "react";
 
 class Menu extends Component {
+  state = {
+    openlangs: false
+  }
+
+  openDropdown = (e) => {
+    e.preventDefault();
+    this.setState({openlangs: !this.state.openlangs});
+  }
+
   getLangs = () => {
     const { links } = this.props;
     const langs = links.filter(link => link.post_title == "Language switcher");
     const langsTitle = langs.filter(link => link.classes.indexOf("current-lang") !== -1);
+
     return (
       <li>
-        <a href={langsTitle[0].url}>{langsTitle[0].title}</a>
-        <div className="dropdown-content">
+        <a href={langsTitle[0].url} onClick={this.openDropdown}>{langsTitle[0].title}</a>
+        <div className={this.state.openlangs ? "dropdown-content dropdown-content--show" : "dropdown-content"}>
           {langs.map(lang => {
             return <a href={lang.url}>{lang.title}</a>
           })}
