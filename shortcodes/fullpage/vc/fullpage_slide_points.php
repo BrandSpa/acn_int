@@ -144,7 +144,8 @@ function acn_fullpage_slide_points_vc() {
       [
         "heading" => "Button title position x 1",
         "type" => "textfield",
-        "param_name" => "btn_title_1_x"
+        "param_name" => "btn_title_1_x",
+        "value" => "1080.77246"
       ],
       [
         "heading" => "Button title 2",
@@ -155,6 +156,7 @@ function acn_fullpage_slide_points_vc() {
         "heading" => "Button title position x 2",
         "type" => "textfield",
         "param_name" => "btn_title_2_x"
+        "value" => "1079"
       ],
       [
         "heading" => "Button title 3",
@@ -164,7 +166,8 @@ function acn_fullpage_slide_points_vc() {
       [
         "heading" => "Button title position x 3",
         "type" => "textfield",
-        "param_name" => "btn_title_3_x"
+        "param_name" => "btn_title_3_x",
+        "value" => "1099.07715"
       ],
       [
         "heading" => "Title",
