@@ -81,3 +81,7 @@
 <?php endif; ?>
 
 <?php require('templates/nav.php') ?>
+
+<script>
+  var menu = <?php echo json_encode(wp_get_nav_menu_items('header')) ?>
+</script>

@@ -21,7 +21,7 @@ class GalleryHeader extends React.Component {
 
   changeSection = (type, e) => {
     if (e) e.preventDefault();
-    
+
     let section = this.state.section;
     if (type == "next")
       section = this.state.section < this.props.images.length - 1

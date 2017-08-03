@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import request from "axios";
 import isEmpty from "validator/lib/isEmpty";
-import qs from "qs";
-import objToFormData from "../lib/obj_to_formdata";
 import getCountries from "../lib/getCountries";
-const endpoint = "/wp-admin/admin-ajax.php";
+import {
+  fetchOfficesCountries,
+  storeConvertLoop,
+  storeEventConvertLoop
+} from "../actions/contact";
 
 class contactForm extends Component {
 
@@ -39,20 +40,20 @@ class contactForm extends Component {
   }
 
   componentDidMount() {
-    const data = qs.stringify({ action: "office_countries" });
+    return fetchOfficesCountries()
+      .then(this.setCountry);
+  }
 
-    const req = request.post(endpoint, data).then(cons => {
-      this.setState({
-        contact: {
-          ...this.state.contact,
-          country: this.props.country
-        },
-        officeCountries: cons.data,
-        inOffice: cons.data.indexOf(this.props.country) !== -1
-      });
+  setCountry(res) {
+    const countries = res.data;
+    this.setState({
+      contact: {
+        ...this.state.contact,
+        country: this.props.country
+      },
+      officeCountries: countries,
+      inOffice: countries.indexOf(this.props.country) !== -1
     });
-
-    return req;
   }
 
   checkEmpty = field => {
@@ -89,54 +90,22 @@ class contactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    let data = objToFormData(this.state.contact);
-    this.isValid().then(this.storeContact).catch(err => console.error(err));
-  }
 
-  storeConvertLoop = () => {
-    const add_tags = typeof this.props.cl.tags == "string"
-      ? this.props.cl.tags.trim().split(",")
-      : [];
-
-    const data = qs.stringify({
-      data: { ...this.state.contact, add_tags },
-      action: "convertloop_contact"
-    });
-
-    return request.post(endpoint, data);
-  }
-
-  storeEventConvertLoop = () => {
-    const { email, country } = this.state.contact;
-
-    const event = { name: this.props.cl.event, country, person: { email } };
-    const data = qs.stringify({ data: event, action: "convertloop_event" });
-    return request.post(endpoint, data);
-  }
-
-  storeInfusion = () => {
-    const data = qs.stringify({
-      data: this.state.contact,
-      action: "infusion_contact"
-    });
-    return request.post(endpoint, data);
+    this.isValid()
+    .then(this.storeContact)
+    .catch(err => console.error(err));
   }
 
   storeContact = isValid => {
+    const {props, state} = this;
+
     if (isValid) {
       this.setState({ loading: true });
-      if (this.state.inOffice) {
-        this.storeConvertLoop()
-        .then(this.storeEventConvertLoop).then(res => {
-          if (res.data.person.email) window.location = this.props.redirect;
-        });
-      } else {
-        this.storeConvertLoop()
-          .then(this.storeEventConvertLoop)
-          .then(res => {
-            if (res.data.success) window.location = this.props.redirect;
-          });
-      }
+      this.storeConvertLoop(props, state)
+      .then(this.storeEventConvertLoop.bind(null, props, state))
+      .then(res => {
+        if (res.data.person.email) window.location = this.props.redirect;
+      });
     }
   }
 

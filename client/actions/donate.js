@@ -1,14 +1,6 @@
-import request from "axios";
-import qs from "qs";
-const endpoint = "/wp-admin/admin-ajax.php";
-
-function fetchwp(action = "", data = {}, endpoint = "/wp-admin/admin-ajax.php") {
-  let reqData = qs.stringify({ action, data });
-  return request.post(endpoint, reqData);
-}
+import fetchwp from "../lib/fetch_wp";
 
 export function fetchCountries() {
-  const data = qs.stringify({ action: "countries" });
   return fetchwp("countries")
     .then(res => (Array.isArray(res.data) ? res.data : []));
 }
