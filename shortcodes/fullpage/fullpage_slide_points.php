@@ -148,7 +148,6 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 				</filter>
 				  <polygon id="path-1" points="5.42101086e-20 0.0001 5.42101086e-20 197.878 134.575 197.878 134.575 0.0001"></polygon>
 
-
 			<?php foreach($points as $name => $point): ?>
 				<pattern id="<?php echo $name ?>-img" patternUnits="userSpaceOnUse" height="50" width="50" x="21" y="21">
 					<image x="0" y="0" height="50" width="50" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="<?php echo $point['image'] ?>">
@@ -172,10 +171,10 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 						<path d="M1.32515625,9.5 L19.6748438,9.5" id="Line-3"></path>
 						<path d="M10,0.32515625 L10,18.6748437" id="Line-3"></path>
 				</g>
-				<text id="NINEVEH-GENERAL-DATA" font-family="OpenSans-Light, Open Sans" font-size="22" font-weight="300" line-spacing="24" fill="#FFFFFF">
-						<tspan x="<?php echo $at['btn_title_1_x'] ?>" y="534"><?php echo $at['btn_title_1'] ?></tspan>
-						<tspan x="<?php echo $at['btn_title_2_x'] ?>" y="558"><?php echo $at['btn_title_2'] ?></tspan>
-						<tspan x="<?php echo $at['btn_title_3_x'] ?>" y="582"><?php echo $at['btn_title_3'] ?></tspan>
+				<text font-family="OpenSans-Light, Open Sans" font-size="22" font-weight="300" line-spacing="24" fill="#FFFFFF">
+						<tspan x="" y="534"><?php echo $at['btn_title_1'] ?></tspan>
+						<tspan x="" y="558"><?php echo $at['btn_title_2'] ?></tspan>
+						<tspan x="" y="582"><?php echo $at['btn_title_3'] ?></tspan>
 				</text>
 		</g>
 </g>
