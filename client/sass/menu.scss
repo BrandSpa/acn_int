@@ -16,7 +16,7 @@
 		@media #{$s} {
 			padding: 0 20px;
 		}
-		
+
 		a {
 			font-size: (20 / 15) * 1em !important;
 			border-radius: 5px;
@@ -26,12 +26,12 @@
 			display: block;
 			color: #F1364E !important;
 
-			@media #{$s} { 
+			@media #{$s} {
 				background: #F1364E;
 				color: #3c515f !important;
 			}
 		}
-		
+
 	}
 }
 
@@ -48,7 +48,7 @@
 
 .open-menu {
 	display: none;
-	
+
 	@media #{$s} {
 		display: block;
 		position: absolute;
@@ -59,12 +59,11 @@
 
 .menu {
 	float: right;
-	display: none;
-	
+
 	&--show {
 		display: block;
 	}
-	
+
 	&--mobile {
 		display: none;
 		height: 100%;
@@ -80,7 +79,7 @@
 		z-index: 1020;
 
 		@media #{$s} {
-			display: block;	
+			display: block;
 		}
 
 		&--open {
@@ -100,9 +99,9 @@
 			}
 		}
 	}
-	
+
 	@media #{$s} {
-		display: none;	
+		display: none;
 	}
 
 	li {
@@ -121,4 +120,3 @@
 		}
 	}
 }
-
