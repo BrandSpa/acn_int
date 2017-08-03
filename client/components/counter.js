@@ -27,7 +27,7 @@ class Counter extends Component {
     let total = time / delay;
     let num = this.props.num;
     let isFloat = /^[0-9]+\.[0-9]+$/.test(num);
-    let decimalLength = isFloat ? (num.split('.')[1] || []).length : 0;
+    let decimalLength = isFloat ? (num.split(".")[1] || []).length : 0;
     let isLessThenTotal = () => 0 <= total;
 
     for (var i = 0; i <= total; i++) {

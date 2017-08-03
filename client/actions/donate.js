@@ -1,27 +1,31 @@
-/* @flow */
 import request from "axios";
 import qs from "qs";
 const endpoint = "/wp-admin/admin-ajax.php";
 
-export function fetchCountries() {
-  const data: { action: string } = qs.stringify({ action: "countries" });
+function fetchwp(action = "", data = {}, endpoint = "/wp-admin/admin-ajax.php") {
+  let reqData = qs.stringify({ action, data });
+  return request.post(endpoint, reqData);
+}
 
-  return request
-    .post(endpoint, data)
+export function fetchCountries() {
+  const data = qs.stringify({ action: "countries" });
+  return fetchwp("countries")
     .then(res => (Array.isArray(res.data) ? res.data : []));
 }
 
 export function stripeToken(state) {
-  let data = qs.stringify({
-    action: "stripe_token",
-    data: state.stripe
-  });
-
-  return request.post(endpoint, data).then(res => res.data);
+  return fetchwp("stripe_token", state.stripe).then(res => res.data);
 }
 
 export function stripeCharge(state) {
-  const { contact, currency, amount, donation_type, trial_period_days = 0, stripe: { token } } = state;
+  const {
+    contact,
+    currency,
+    amount,
+    donation_type,
+    trial_period_days = 0,
+    stripe: { token }
+  } = state;
 
   const data = {
     ...contact,
@@ -32,18 +36,11 @@ export function stripeCharge(state) {
     stripe_token: token
   };
 
-  const dataAjax = qs.stringify({ action: "stripe_charge", data });
-
-  return request.post(endpoint, dataAjax);
+  return fetchwp("stripe_charge", data);
 }
 
 export function storeConvertLoop(state) {
-  const data = qs.stringify({
-    data: state.contact,
-    action: "convertloop_contact"
-  });
-
-  return request.post(endpoint, data);
+  return fetchwp("convertloop_contact", state.contact);
 }
 
 export function storeEventConvertLoop(state) {
@@ -61,18 +58,13 @@ export function storeEventConvertLoop(state) {
     metadata
   };
 
-  const data = qs.stringify({ data: event, action: "convertloop_event" });
-  return request.post(endpoint, data);
+  return fetchwp( "convertloop_event", event);
 }
 
 export function storeInfusion(state) {
   let tags = "";
   if (state.donation_type == "monthly") tags = ["870", "924"];
   if (state.donation_type == "once") tags = ["868", "926"];
-  const data = qs.stringify({
-    data: { ...state.contact, tags },
-    action: "infusion_contact"
-  });
-
-  return request.post(endpoint, data);
+  const data = { ...state.contact, tags };
+  return fetchwp( "infusion_contact", data);
 }

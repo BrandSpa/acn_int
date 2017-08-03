@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import request from "axios";
 import isEmpty from "validator/lib/isEmpty";
 import qs from "qs";
@@ -6,7 +6,7 @@ import objToFormData from "../lib/obj_to_formdata";
 import getCountries from "../lib/getCountries";
 const endpoint = "/wp-admin/admin-ajax.php";
 
-class contactForm extends React.Component {
+class contactForm extends Component {
 
   static defaultProps = {
     validationMessages: {},
@@ -91,18 +91,20 @@ class contactForm extends React.Component {
     e.preventDefault();
     let data = objToFormData(this.state.contact);
     this.isValid().then(this.storeContact).catch(err => console.error(err));
-  };
+  }
 
   storeConvertLoop = () => {
     const add_tags = typeof this.props.cl.tags == "string"
       ? this.props.cl.tags.trim().split(",")
       : [];
+
     const data = qs.stringify({
       data: { ...this.state.contact, add_tags },
       action: "convertloop_contact"
     });
+
     return request.post(endpoint, data);
-  };
+  }
 
   storeEventConvertLoop = () => {
     const { email, country } = this.state.contact;
@@ -110,7 +112,7 @@ class contactForm extends React.Component {
     const event = { name: this.props.cl.event, country, person: { email } };
     const data = qs.stringify({ data: event, action: "convertloop_event" });
     return request.post(endpoint, data);
-  };
+  }
 
   storeInfusion = () => {
     const data = qs.stringify({
@@ -118,30 +120,30 @@ class contactForm extends React.Component {
       action: "infusion_contact"
     });
     return request.post(endpoint, data);
-  };
+  }
 
   storeContact = isValid => {
     if (isValid) {
       this.setState({ loading: true });
       if (this.state.inOffice) {
-        this.storeConvertLoop().then(this.storeEventConvertLoop).then(res => {
+        this.storeConvertLoop()
+        .then(this.storeEventConvertLoop).then(res => {
           if (res.data.person.email) window.location = this.props.redirect;
         });
       } else {
         this.storeConvertLoop()
           .then(this.storeEventConvertLoop)
-          .then(this.storeInfusion)
           .then(res => {
             if (res.data.success) window.location = this.props.redirect;
           });
       }
     }
-  };
+  }
 
   handleChange = (field, e) => {
     let contact = { ...this.state.contact, [field]: e.target.value };
     this.setState({ contact });
-  };
+  }
 
   handleCheckbox = () => {
     this.setState({terms: !this.state.terms});
