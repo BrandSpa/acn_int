@@ -1,10 +1,5 @@
 <?php
 
-function responseJson($res = []) {
-  header('Content-type: application/json');
-  echo json_encode($res);
-}
-
 function bs_get_posts($type = array('video','gallery','featured','post'), $paged = 0, $category = '', $perpage = '6') {
 	$query = new Wp_Query(array(
     'post_type' => $type,
