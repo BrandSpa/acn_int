@@ -1,5 +1,10 @@
 <?php
 
+function responseJson($res = []) {
+  header('Content-type: application/json');
+  echo json_encode($res);
+}
+
 function bs_get_posts($type = array('video','gallery','featured','post'), $paged = 0, $category = '', $perpage = '6') {
 	$query = new Wp_Query(array(
     'post_type' => $type,
@@ -20,3 +25,18 @@ function bs_get_posts($type = array('video','gallery','featured','post'), $paged
 
 	return $posts;
 }
+
+function wp_get_posts() {
+  $paged = isset($_POST['paged']) ? $_POST['paged'] : 0;
+  $post_type = isset($_POST['post_type']) ? $_POST['post_type'] : array('video','gallery','featured','post');
+  $category = isset($_POST['post_category']) ? $_POST['post_category'] : '';
+  $perpage = isset($_POST['post_perpage']) ? $_POST['post_perpage'] : '6';
+
+  $res = bs_get_posts($post_type, $paged, $category, $perpage);
+
+  responseJson($res);
+  die();
+}
+
+add_action( 'wp_ajax_nopriv_get_posts', 'wp_get_posts' );
+add_action( 'wp_ajax_get_posts', 'wp_get_posts' );

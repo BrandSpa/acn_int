@@ -37,6 +37,11 @@ require_once('translations/index.php');
 
 //APIS
 require_once('apis/index.php');
+include_once 'apis/mailchimp.php';
+include_once 'apis/stripe.php';
+include_once 'apis/infusion.php';
+include_once 'apis/posts.php';
+include_once 'apis/cl.php';
 
 //OPTIONS
 require_once('options/index.php');

@@ -58,3 +58,25 @@ function infusion_createContact($subdomain, $key, $data) {
 
   return $optin;
 }
+
+function infusion_contact() {
+  $data = $_POST['data'];
+  $lang = getCountryLang($data['country']);
+  $tagLangs = $lang == 'es' ? ['874'] : ['876'];
+
+  try {
+    $key = get_option('infusionsoft_key');
+    $subdomain = get_option('infusionsoft_subdomain');
+    $tags = get_option('infusionsoft_tags') ? explode(',', str_replace(' ', '', get_option('infusionsoft_tags') )) : [];
+    $data['tags'] = array_merge($tags, $tagLangs, $data['tags']);
+    $res = infusion_createContact($subdomain, $key, $data);
+    responseJson(["success" => $res, "data" => $data]);
+  } catch(Exception $e) {
+    responseJson(['error' => $e]);
+  }
+
+  die();
+}
+
+add_action( 'wp_ajax_nopriv_infusion_contact', 'infusion_contact' );
+add_action( 'wp_ajax_infusion_contact', 'infusion_contact' );

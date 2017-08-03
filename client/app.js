@@ -32,7 +32,6 @@ import Carousel from "./components/carousel";
 import Counter from "./components/counter";
 
 //jquery stuff :(
-import setMenu from "./lib/set_menu";
 import setMenuMobile from "./lib/set_menu_mobile";
 import donateRedirect from "./lib/donate_redirect";
 import smoothScroll from "./lib/smoothScroll";
@@ -72,7 +71,6 @@ multipleRender(Carousel, ".bs-carousel");
 multipleRender(Counter, ".bs-counter");
 
 //jquery calls
-// setMenu();
 setMenuMobile();
 donateRedirect();
 smoothScroll();

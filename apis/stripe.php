@@ -2,6 +2,11 @@
 $dir_base =  str_replace('apis', '', __DIR__);
 require $dir_base . 'vendor/autoload.php';
 
+function responseJson($res = []) {
+  header('Content-type: application/json');
+  echo json_encode($res);
+}
+
 /**
 ** Documentation
 ** url: https://stripe.com/docs/api/php
@@ -25,6 +30,17 @@ function stripe_create_token($api_key, $card) {
       return $e;
     }
 }
+
+function stripe_token() {
+  $card = $_POST['data'];
+  $apiKey =  get_option('stripe_key_private');
+  $res = stripe_create_token( $apiKey, $card);
+  responseJson($res);
+  die();
+}
+
+add_action( 'wp_ajax_nopriv_stripe_token', 'stripe_token' );
+add_action( 'wp_ajax_stripe_token', 'stripe_token' );
 
 function stripe_create_customer($api_key, $customer) {
   \Stripe\Stripe::setApiKey($api_key);
@@ -71,6 +87,17 @@ function stripe_get_plan($api_key, $name) {
      return '';
    }
 }
+
+function get_plan() {
+  $card = $_POST['data'];
+  $apiKey =  get_option('stripe_key_private');
+  $res = stripe_get_plan($apiKey, 'donation-2');
+  responseJson($res);
+  die();
+}
+
+add_action( 'wp_ajax_nopriv_stripe_get_plan', 'get_plan' );
+add_action( 'wp_ajax_stripe_get_plan', 'get_plan' );
 
 //fix currency with add prefix
 function stripe_create_plan($api_key, $plan) {
@@ -147,6 +174,26 @@ function stripe_monthly($api_key, $data) {
   $subscription['customer'] = $customer->id;
   $subscription['plan'] = $plan->id;
   $subscription['trial_period_days'] = isset($data['trial_period_days']) ? $data['trial_period_days'] : null;
-  
+
   return stripe_create_subscription($api_key, $subscription);
 }
+
+function stripe_charge() {
+  $data = $_POST['data'];
+  $apiKey =  get_option('stripe_key_private');
+  $res = array([ 'err' => 'donation_type fail']);
+
+  if($data['donation_type'] == 'monthly') {
+    $res = stripe_monthly($apiKey, $data);
+  }
+
+  if($data['donation_type'] == 'once') {
+    $res = stripe_once($apiKey, $data);
+  }
+
+  responseJson($res);
+  die();
+}
+
+add_action( 'wp_ajax_nopriv_stripe_charge', 'stripe_charge' );
+add_action( 'wp_ajax_stripe_charge', 'stripe_charge' );

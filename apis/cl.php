@@ -8,6 +8,11 @@ $dir_base =  str_replace('apis', '', __DIR__);
 
 require $dir_base . 'vendor/autoload.php';
 
+function responseJson($res = []) {
+  header('Content-type: application/json');
+  echo json_encode($res);
+}
+
 	// $data: { "email": "german.escobar@convertloop.co", "pid": "3eb13b25", "add_tags": ["Tag 1", "Tag2"] }
 	function cl_create_person($appId, $apiKey, $data) {
 		try {
@@ -31,6 +36,35 @@ require $dir_base . 'vendor/autoload.php';
 
 	}
 
+	function convertloop_contact() {
+	  $data = $_POST['data'];
+	  $lang = getCountryLang($data['country']);
+	  $data['add_tags'][] = $lang == 'es' ? 'SPANISH' : 'ENGLISH';
+	  $data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
+
+	  /**
+	  ** if is between office country get app id and api key office that come from:
+	  ** https://acninternational.org/wp-admin/admin.php?page=bs-offices
+	  **/
+	  if(in_array($data['country'], getOfficesCountries())) {
+	    $countryKey = str_replace(' ', '_', $data['country']);
+	    $appId = get_option('convertloop_app_' . $countryKey);
+	    $apiKey = get_option('convertloop_api_' . $countryKey);
+	  } else {
+	    $appId = get_option('convertloop_app_default');
+	    $apiKey = get_option('convertloop_api_default');
+	  }
+
+	    $res = cl_create_person($appId, $apiKey, $data);
+	    header('Content-type: application/json');
+	    echo $res;
+	  die();
+	}
+
+
+	add_action( 'wp_ajax_nopriv_convertloop_contact', 'convertloop_contact' );
+	add_action( 'wp_ajax_convertloop_contact', 'convertloop_contact' );
+
 	// $data: { "name": "Signed Up", "person": { "email": "german.escobar@convertloop.co" } }
 	function cl_create_event($appId, $apiKey, $data) {
 		try {
@@ -53,5 +87,25 @@ require $dir_base . 'vendor/autoload.php';
 		}
 	}
 
+	function convertloop_event() {
+	  $data = $_POST['data'];
+	  $data['person']['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
+
+	  if(in_array($data['country'], getOfficesCountries())) {
+	    $countryKey = str_replace(' ', '_', $data['country']);
+	    $appId = get_option('convertloop_app_' . $countryKey);
+	    $apiKey = get_option('convertloop_api_' . $countryKey);
+	  } else {
+	    $appId = get_option('convertloop_app_default');
+	    $apiKey = get_option('convertloop_api_default');
+	  }
+
+	  header('Content-type: application/json');
+	  echo cl_create_event($appId, $apiKey, $data);
+	  die();
+	}
+
+	add_action( 'wp_ajax_nopriv_convertloop_event', 'convertloop_event' );
+	add_action( 'wp_ajax_convertloop_event', 'convertloop_event' );
 
 ?>
