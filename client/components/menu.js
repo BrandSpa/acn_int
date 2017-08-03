@@ -12,8 +12,8 @@ class Menu extends Component {
 
   getLangs = () => {
     const { links } = this.props;
-    const langs = links.filter(link => link.post_title == "Language switcher");
-    const langsTitle = langs.filter(link => link.classes.indexOf("current-lang") !== -1);
+    const langsTitle = links.filter(link => link.classes.indexOf("current-lang") !== -1);
+    const langs = links.filter(link => link.post_title == "Language switcher" && link.ID !== langsTitle[0].ID);
 
     return (
       <li>
