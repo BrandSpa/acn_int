@@ -54,12 +54,13 @@ class headerSlider extends Component {
   }
 
   render() {
-    const {viewportWidth, sliderHeight, slideWidth } = this.getSizes;
+    const {viewportWidth, sliderHeight, slideWidth } = this.getSizes();
     const viewportStyle = {
       width: viewportWidth,
       height: sliderHeight,
       left: this.state.left
     };
+
     const sliderStyle = { height: sliderHeight };
 
     return (
