@@ -48,9 +48,9 @@ require $dir_base . 'vendor/autoload.php';
 				return 'PORTUGUESE';
 				break;
 		 	default:
-		 		return 'ENGLISH'
+		 		return 'ENGLISH';
 		 		break;
-		 }
+		 };
 	}
 
 	function convertloop_contact() {
