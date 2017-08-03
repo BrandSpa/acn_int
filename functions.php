@@ -41,7 +41,7 @@ include_once 'apis/mailchimp.php';
 include_once 'apis/stripe.php';
 include_once 'apis/infusion.php';
 include_once 'apis/posts.php';
-include_once 'apis/cl.php';
+include_once 'apis/convertloop.php';
 
 //OPTIONS
 require_once('options/index.php');
