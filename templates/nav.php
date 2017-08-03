@@ -13,7 +13,7 @@
 			</svg>
 		</a>
 		<div class="bs-menu" data-props='
-			links: <?php $menuId = get_nav_menu_locations()['header']; echo json_encode(wp_get_nav_menu_items($menuId)); ?>
+			"links": <?php $menuId = get_nav_menu_locations()['header']; echo json_encode(wp_get_nav_menu_items($menuId)); ?>
 		'></div>
 	<ul class="menu">
 	  <?php
