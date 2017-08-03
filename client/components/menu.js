@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Menu extends Component {
   render() {
     const {links} = this.props;
-    const langs = links.filter(link => link.post_name == "language-switcher");
+    const langs = links.filter(link => link.post_title == "language-switcher");
     const langsTitle = langs.filter(link => link.classes.indexOf("current-lang") !== -1);
     console.log(langs, langsTitle);
 
