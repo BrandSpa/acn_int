@@ -17,7 +17,7 @@ class Menu extends Component {
 
     return (
       <li>
-        <a href={langsTitle[0].url} onClick={this.openDropdown}>{langsTitle[0].title}</a>
+        <a href={langsTitle[0].url} onClick={this.openDropdown}>{langsTitle[0].title} <i class={this.state.openlangs ? "ion-chevron-up" : "ion-chevron-down"}></i></a>
         <div className={this.state.openlangs ? "dropdown-content dropdown-content--show" : "dropdown-content"}>
           {langs.map(lang => {
             return <a href={lang.url}>{lang.title}</a>
