@@ -8,10 +8,6 @@ $dir_base =  str_replace('apis', '', __DIR__);
 
 require $dir_base . 'vendor/autoload.php';
 
-function responseJson($res = []) {
-  header('Content-type: application/json');
-  echo json_encode($res);
-}
 
 	// $data: { "email": "german.escobar@convertloop.co", "pid": "3eb13b25", "add_tags": ["Tag 1", "Tag2"] }
 	function cl_create_person($appId, $apiKey, $data) {

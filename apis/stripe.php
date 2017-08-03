@@ -2,11 +2,6 @@
 $dir_base =  str_replace('apis', '', __DIR__);
 require $dir_base . 'vendor/autoload.php';
 
-function responseJson($res = []) {
-  header('Content-type: application/json');
-  echo json_encode($res);
-}
-
 /**
 ** Documentation
 ** url: https://stripe.com/docs/api/php
