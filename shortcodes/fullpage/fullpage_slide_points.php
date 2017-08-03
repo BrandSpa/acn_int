@@ -202,7 +202,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 
 <div class="nineveh-general-content">
 	<div class="nineveh-general-content__container">
-		<h2>Nineveh Plains Reconstruction Process</h2>
+		<h2><?php echo $at['title'] ?></h2>
 		<ul class="nineveh-general-content__first-list">
       <li>
         <svg width="31px" height="29px" viewBox="0 0 31 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
