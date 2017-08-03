@@ -10,6 +10,7 @@ import mitt from "mitt";
 window.mitt = mitt();
 
 //React components :)
+import Menu from "./components/menu";
 import ContactForm from "./components/contactForm";
 import HeaderSlider from "./components/headerSlider";
 import sectionVideo from "./components/sectionVideo";
@@ -49,6 +50,7 @@ WebFont.load({
 });
 
 //react renders
+multipleRender(Menu, ".bs-menu");
 multipleRender(HeaderSlider, ".header-slider");
 multipleRender(ContactForm, ".contact-form");
 multipleRender(Posts, ".bs-posts");
