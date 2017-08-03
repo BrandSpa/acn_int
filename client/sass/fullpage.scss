@@ -504,6 +504,10 @@ button {
                    border: none;
                 }
 
+								@media #{$s} {
+									border: none;
+								}
+
                 a {
                   color: #fff;
                   font-size: 20px;

@@ -962,6 +962,9 @@ button {
         padding: 0 10px; }
         .fullpage-nav__info ul li:first-child {
           border: none; }
+        @media (max-width: 767px) {
+          .fullpage-nav__info ul li {
+            border: none; } }
         .fullpage-nav__info ul li a {
           color: #fff;
           font-size: 20px; }
