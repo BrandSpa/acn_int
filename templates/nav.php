@@ -13,18 +13,7 @@
 			</svg>
 		</a>
 		<div class="bs-menu" data-props='{"links": <?php $menuId = get_nav_menu_locations()['header']; echo json_encode(wp_get_nav_menu_items($menuId)); ?>}'></div>
-	<ul class="menu">
-	  <?php
-			$args = array(
-        'theme_location' => 'header',
-        'container' => false,
-        'echo' => false
-		);
 
-			$menu = wp_nav_menu( $args);
-    	echo clean_menu($menu);
-    ?>
-	</ul>
 
 	<ul class="menu--mobile">
 			<li>
