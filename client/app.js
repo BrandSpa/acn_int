@@ -72,7 +72,7 @@ multipleRender(Carousel, ".bs-carousel");
 multipleRender(Counter, ".bs-counter");
 
 //jquery calls
-setMenu();
+// setMenu();
 setMenuMobile();
 donateRedirect();
 smoothScroll();
