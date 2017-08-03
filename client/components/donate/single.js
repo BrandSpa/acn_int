@@ -69,7 +69,6 @@ class Donate extends Component {
     actions
       .storeConvertLoop(this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.state))
-      .then(actions.storeInfusion.bind(null, this.state))
       .then(res => {
         const url = `${base}?customer_id=${customer}-${contact.email}&order_revenue=${amount}&order_id=${id}`;
         window.location = url;

@@ -50,7 +50,7 @@ class DonateInline extends Component {
           this.handleSubmit();
         }
       });
-    } 
+    }
   }
 
   handleChange = field => {
@@ -105,11 +105,10 @@ class DonateInline extends Component {
     const { amount, donation_type, contact } = this.state;
     const { customer, id } = stripeResponse;
     const base = this.props.redirect[donation_type];
-    
+
     actions
       .storeConvertLoop(this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.state))
-      .then(actions.storeInfusion.bind(null, this.state))
       .then(res => {
         const url = `${base}?customer_id=${customer}-${contact.email}&order_revenue=${amount}&order_id=${id}`;
         window.location = url;
@@ -135,7 +134,7 @@ class DonateInline extends Component {
       background: "transparent",
       border: "none"
     };
-    
+
     console.log('four', this.state.show_four);
 
     return (
