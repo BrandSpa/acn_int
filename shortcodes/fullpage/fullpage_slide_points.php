@@ -170,7 +170,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 						<path d="M10,0.32515625 L10,18.6748437" id="Line-3"></path>
 				</g>
 				<text id="NINEVEH-GENERAL-DATA" font-family="OpenSans-Light, Open Sans" font-size="22" font-weight="300" line-spacing="24" fill="#FFFFFF">
-						<tspan x="1080.77246" y="534">NINEVEH<?php echo $at['btn_title_1'] ?></tspan>
+						<tspan x="1080.77246" y="534"><?php echo $at['btn_title_1'] ?></tspan>
 						<tspan x="1079" y="558">GENERAL<?php echo $at['btn_title_2'] ?></tspan>
 						<tspan x="1099.07715" y="582">DATA<?php echo $at['btn_title_3'] ?></tspan>
 				</text>
