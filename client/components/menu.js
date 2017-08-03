@@ -26,7 +26,9 @@ class Menu extends Component {
         if(link.classes.indexOf("current-lang") !== -1) {
           return this.getLangs();
         } else {
-          return <li className={link.classes.join(" ")}><a href={link.url}>{link.title}</a></li>
+          if(link.classes.indexOf("lang-item") == -1) {
+            return <li className={link.classes.join(" ")}><a href={link.url}>{link.title}</a></li>
+          }
         }
 
       })}
