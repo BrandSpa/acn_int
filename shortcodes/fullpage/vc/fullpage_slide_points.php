@@ -142,14 +142,29 @@ function acn_fullpage_slide_points_vc() {
         "param_name" => "btn_title_1"
       ],
       [
+        "heading" => "Button title position x 1",
+        "type" => "textfield",
+        "param_name" => "btn_title_1_x"
+      ],
+      [
         "heading" => "Button title 2",
         "type" => "textfield",
         "param_name" => "btn_title_2"
       ],
       [
+        "heading" => "Button title position x 2",
+        "type" => "textfield",
+        "param_name" => "btn_title_2_x"
+      ],
+      [
         "heading" => "Button title 3",
         "type" => "textfield",
         "param_name" => "btn_title_3"
+      ],
+      [
+        "heading" => "Button title position x 3",
+        "type" => "textfield",
+        "param_name" => "btn_title_3_x"
       ],
       [
         "heading" => "Title",
