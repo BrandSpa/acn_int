@@ -38,7 +38,7 @@ import VideoHeader from "./components/videoHeader";
 import Carousel from "./components/carousel";
 import Counter from "./components/counter";
 
-//jquery stuff :(
+//jquery
 import setMenuMobile from "./lib/set_menu_mobile";
 import donateRedirect from "./lib/donate_redirect";
 import smoothScroll from "./lib/smoothScroll";
