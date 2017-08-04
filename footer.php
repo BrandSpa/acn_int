@@ -14,7 +14,7 @@
 
 <script>
   var bs = {};
-	bs.currentPageLang = '<?php  if(function_exists("pll_current_language")) echo pll_current_language(); ?>' 
+	bs.currentPageLang = '<?php  if(function_exists("pll_current_language")) echo pll_current_language("name"); ?>'
   bs.lang = '<?php echo getCountryLang(getCountry()) ?>';
   bs.donate = '<?php echo gett('Donate') ?>';
 	bs.pid = '<?php echo isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : ''  ?>';

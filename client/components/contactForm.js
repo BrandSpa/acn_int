@@ -86,7 +86,7 @@ class contactForm extends Component {
     return this.validate()
       .then(arr => arr.every(item => item == false))
       .catch(err => console.error(err));
-  };
+  }
 
   handleSubmit = e => {
     e.preventDefault();
