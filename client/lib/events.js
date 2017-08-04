@@ -22,6 +22,7 @@ export const runEvents = () => {
 }
 
 const runEvent = (eventName, data) => {
+  console.log(eventName, data);
   switch (eventName) {
     case "ga_event":
       return eventGoogleAnalytics(data);
