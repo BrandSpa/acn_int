@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import isEmpty from "validator/lib/isEmpty";
 import getCountries from "../lib/getCountries";
 import {
+  eventGoogleAnalytics,
+  eventConvertloop,
+  eventFacebook
+} from "../lib/events";
+
+import {
   fetchOfficesCountries,
   storeConvertLoop,
   storeEventConvertLoop
@@ -102,7 +108,15 @@ class contactForm extends Component {
     if (isValid) {
       this.setState({ loading: true });
       storeConvertLoop(props, state)
-      .then(storeEventConvertLoop.bind(null, props, state))
+      .then(() => {
+        return eventConvertloop({name: "Subscription", person: state.contact})
+      })
+      .then(() => {
+        return eventGoogleAnalytics({category: "SUBSCRIBE", action: "SUBSCRIBE_INFO", label: "SUBSCRIBE_EN"})
+      })
+      .then(() => {
+        return eventFacebook();
+      })
       .then(res => {
         if (res.data.person.email) window.location = this.props.redirect;
       });
