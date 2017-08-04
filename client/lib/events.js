@@ -13,7 +13,7 @@ export const runEvents = () => {
     if(dataStr !== null) {
 
       let data = JSON.parse(JSON.stringify(dataStr));
-        console.log('run events', data);
+        console.log('run events',typeof data);
 
       runEvent(eventName, data).then(() => {
         console.log("flush");
@@ -24,7 +24,7 @@ export const runEvents = () => {
 }
 
 const runEvent = (eventName, data) => {
-  console.log(eventName, data);
+  console.log(eventName, typeof data);
   switch (eventName) {
     case "ga_event":
       return eventGoogleAnalytics(data);
