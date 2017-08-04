@@ -21,11 +21,12 @@ class Post extends React.Component {
 
     const event = {
       name: "READPOST",
+      person: {},
       metadata: {
         url: post.post_permalink
       }
     };
-    
+
     storeEvent("cl_event", event)
     .then(() => {
       window.location = post.post_permalink;
