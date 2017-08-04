@@ -14,7 +14,7 @@ export const runEvents = () => {
 
       let data = JSON.parse(JSON.stringify(dataStr));
         console.log('run events', data);
-        
+
       runEvent(eventName, data).then(() => {
         console.log("flush");
         // flushEvent(eventName);
@@ -51,7 +51,9 @@ export const storeEvent = (name, options = {}) => {
   })
 }
 
-export const eventGoogleAnalytics = ({category, action, label, value = 0}) => {
+export const eventGoogleAnalytics = (data) => {
+  const {category, action, label, value = 0} = data;
+  console.log(data);
   return new Promise((resolve, reject) => {
     console.log(category, action, label);
     typeof ga === "function"
