@@ -12,7 +12,7 @@ export const runEvents = () => {
     let dataStr = localStorage.getItem(eventName);
     if(dataStr !== null) {
       console.log(dataStr);
-      let data = JSON.parse(dataStr);
+      let data = JSON.parse(JSON.stringify(dataStr));
       runEvent(eventName, data).then(() => {
         console.log("flush");
         flushEvent(eventName);
