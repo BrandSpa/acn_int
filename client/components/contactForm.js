@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import isEmpty from "validator/lib/isEmpty";
 import getCountries from "../lib/getCountries";
-import {
-  eventGoogleAnalytics,
-  eventConvertloop,
-  eventFacebook
-} from "../lib/events";
+import { storeEvent } from "../lib/events";
 
 import {
   fetchOfficesCountries,
