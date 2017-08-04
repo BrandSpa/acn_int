@@ -1,5 +1,5 @@
 import React from "react";
-import { eventGoogleAnalytics, eventConvertloop } from "../lib/events";
+import { storeEvent } from "../lib/events";
 
 const cleanEmpty = arrArg =>
   arrArg.filter(item => item.length > 0);
@@ -25,8 +25,8 @@ class Post extends React.Component {
         url: post.post_permalink
       }
     };
-
-    eventConvertloop(event)
+    
+    storeEvent("cl_event", event)
     .then(() => {
       window.location = post.post_permalink;
     })
