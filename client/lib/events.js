@@ -12,10 +12,10 @@ export const eventGoogleAnalytics = ({category, action, label, value = 0}) => {
   })
 }
 
-export const eventFacebook = ({eventName = "Lead"}) => {
+export const eventFacebook = ({eventName = "Lead", content = {}}) => {
   return new Promise((resolve, reject) => {
     typeof fbq === "function"
-      ? fbq("track", eventName)
+      ? fbq("track", eventName, content)
       : console.log("fb error");
 
     return resolve();

@@ -115,7 +115,7 @@ class contactForm extends Component {
         return eventGoogleAnalytics({category: "SUBSCRIBE", action: "SUBSCRIBE_INFO", label: "SUBSCRIBE_EN"})
       })
       .then(() => {
-        return eventFacebook();
+        return eventFacebook({eventName: "Lead"});
       })
       .then(res => {
         if (res.data.person.email) window.location = this.props.redirect;
