@@ -20,13 +20,13 @@ class Post extends React.Component {
     const event = {
       name: "READPOST",
       metadata: {
-        url: posts.post_permalink
+        url: post.post_permalink
       }
     };
 
     eventConvertloop(event)
     .then(() => {
-      window.location = posts.post_permalink;
+      window.location = post.post_permalink;
     })
   }
 
@@ -54,7 +54,7 @@ class Post extends React.Component {
               : "grid-item__content"
           }
         >
-          <a href={post.post_permalink}>
+          <a onClick={this.goToPost} href={post.post_permalink}>
             {
               imgUrl.length > 0
               ? <img data-src={imgUrl} className="lazyload" onLoad={this.handleImageLoaded} />
