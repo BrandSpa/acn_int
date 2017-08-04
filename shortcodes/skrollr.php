@@ -1,6 +1,6 @@
 <?php
 /**
-** 	
+**
 **/
 
 add_shortcode( 'bs_skrollr', 'bs_skrollr_sc' );
@@ -19,10 +19,10 @@ function bs_skrollr_sc($atts, $content = null) {
 
 
 <div class="skrollr_container">
-    <?php 
+    <?php
 
     $increme=0;
-    foreach($at as $titulo){ 
+    foreach($at as $titulo){
          $increme+=200; ?>
         <h1 data-<?php echo $increme-200;?>="transform:rotate(0deg);" data-<?php echo $increme;?> ="transform:rotate(360deg);"><?php echo($titulo);?></h1><br />
     <?php } ?>
@@ -71,7 +71,6 @@ add_action( 'vc_before_init', 'bs_skrollr_vc' );
         "base" => "bs_skrollr",
         "category" =>  "BS",
         "params" => $params
-      ) 
+      )
     );
   }
-

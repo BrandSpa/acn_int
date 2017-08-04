@@ -81,6 +81,12 @@ require_once('shortcodes/candle.php');
 require_once('shortcodes/video_modal_bg.php');
 require_once('shortcodes/counter.php');
 
+//VISUAL COMPOSER
+require_once('shortcodes/vc/contact_form.php');
+require_once('shortcodes/vc/header_slider.php');
+require_once('shortcodes/vc/posts.php');
+require_once('shortcodes/vc/projects_about.php');
+
 //FULLPAGE
 require_once('shortcodes/fullpage/fullpage.php');
 require_once('shortcodes/fullpage/fullpage_slide.php');

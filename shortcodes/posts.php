@@ -45,24 +45,3 @@ function bs_posts_sc($atts, $content = null) {
 }
 
 add_shortcode( 'bs_posts', 'bs_posts_sc' );
-add_action( 'vc_before_init', 'bs_posts_vc' );
-
-  function bs_posts_vc() {
-		$params = [
-      [
-        "type" => "textfield",
-        "heading" => "See More url",
-        "param_name" => "url",
-        "value" => ''
-			]
-		];
-
-  	vc_map(
-      array(
-        "name" =>  "BS posts",
-        "base" => "bs_posts",
-        "category" =>  "BS",
-        "params" => $params
-      )
-    );
-  }
