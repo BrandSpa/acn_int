@@ -1,4 +1,5 @@
-import cookies from "./cookies";
+import getCookies from "./cookies";
+const cookies = getCookies();
 
 export const eventGoogleAnalytics = ({category, action, label, value = 0}) => {
   return new Promise((resolve, reject) => {
