@@ -117,8 +117,8 @@ class contactForm extends Component {
       .then(() => {
         return eventFacebook({eventName: "Lead"});
       })
-      .then(res => {
-        if (res.data.person.email) window.location = this.props.redirect;
+      .then(() => {
+        window.location = this.props.redirect;
       });
     }
   }
