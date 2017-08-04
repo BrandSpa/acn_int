@@ -24,7 +24,6 @@ export const eventFacebook = ({eventName = "Lead", content = {}}) => {
 
 export const eventConvertloop = ({name, person = {}, metadata = {}}) => {
   person = {...person, pid: cookies.dp_pid};
-  console.log(person);
   return new Promise((resolve, reject) => {
     typeof _dp === "function"
       ? _dp("track", name, {person, metadata})

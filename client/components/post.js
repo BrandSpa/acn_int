@@ -72,7 +72,7 @@ class Post extends React.Component {
             }
             style={!imgUrl.length > 0 ? { width: "100%" } : {}}
           >
-            <h5><a href={post.post_permalink}>{title}</a></h5>
+            <h5><a href={post.post_permalink} onClick={this.goToPost}>{title}</a></h5>
             <p>{`${short.substring(0, 220)}...`}</p>
             <a
               href={post.post_permalink}
