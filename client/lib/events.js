@@ -13,11 +13,9 @@ export const runEvents = () => {
     if(dataStr !== null) {
 
       let data = JSON.parse(dataStr);
-        console.log('run events',typeof data);
-
       runEvent(eventName, data).then(() => {
         console.log("flush");
-        // flushEvent(eventName);
+        flushEvent(eventName);
       });
     }
   })
@@ -55,7 +53,6 @@ export const eventGoogleAnalytics = (data) => {
   const {category, action, label, value = 0} = data;
 
   return new Promise((resolve, reject) => {
-      console.log('eventGoogleAnalytics data', typeof data);
     typeof ga === "function"
       ? ga("send", "event", category, action, label, value, {
         hitCallback: () => { return resolve() }
