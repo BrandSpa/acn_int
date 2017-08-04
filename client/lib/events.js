@@ -12,7 +12,7 @@ export const runEvents = () => {
     let dataStr = localStorage.getItem(eventName);
     if(dataStr !== null) {
 
-      let data = JSON.parse(JSON.stringify(dataStr));
+      let data = JSON.parse(dataStr);
         console.log('run events',typeof data);
 
       runEvent(eventName, data).then(() => {
