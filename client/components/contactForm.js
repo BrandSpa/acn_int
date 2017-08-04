@@ -105,8 +105,8 @@ class contactForm extends Component {
       this.setState({ loading: true });
       storeConvertLoop(props, state)
       .then(() => {
-        storeEvent("cl_event", {name: "Subscription", person: state.contact});
         storeEvent("ga_event", {category: "SUBSCRIBE", action: "SUBSCRIBE_INFO", label: "SUBSCRIBE_EN"});
+        storeEvent("cl_event", {name: "Subscription", person: state.contact});
         return storeEvent("fb_event", {eventName: "Lead"});
       })
       .then(() => {
