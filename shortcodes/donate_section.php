@@ -1,7 +1,7 @@
 <?php
 
 function bs_donate_section_sc($atts, $content = null) {
-	
+
 	 $at = shortcode_atts([
 		 "country" => getCountry(),
 		 "other" => gett("Other"),
@@ -39,13 +39,16 @@ function bs_donate_section_sc($atts, $content = null) {
     "success_subtitle" => gett("¡GRACIAS POR TU GENEROSIDAD!"),
     "text_four_step" => gett("ACN tiene un mayor impacto cuándo cuenta con la estabilidad proporcionada por la generosidad de sus benefactores."),
     "subtext_four_step" => gett("Podrías ayudarnos con un pequeño valor diario de:"),
-    "is_blue" => false
+    "is_blue" => false,
+		"tags" => ""
 	 ], $atts);
+	 
+	 $getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
 
 	ob_start();
 ?>
 
-<div 
+<div
 	class="bs-donate-section"
 	data-props='{
     "texts": <?php echo json_encode($at) ?>,
@@ -55,7 +58,8 @@ function bs_donate_section_sc($atts, $content = null) {
       "once": "<?php echo get_option('donate_once_redirect') ?>"
     },
 		"titles": ["SUPPORT A PERSECUTED CHRISTIAN", "THANK YOU"],
-		"content": <?php echo json_encode($content) ?>
+		"content": <?php echo json_encode($content) ?>,
+		"tags": "<?php echo strtoupper($getLang) . ',' . $at['convertloop_tags'] ?>",
   }'
 >
 </div>
@@ -101,7 +105,7 @@ add_action( 'vc_before_init', 'bs_donate_section_vc' );
       "text_four_step" => "ACN tiene un mayor impacto cuándo cuenta con la estabilidad proporcionada por la generosidad de sus benefactores.",
       "subtext_four_step" => "Podrías ayudarnos con un pequeño valor diario de:"
     ];
-    
+
     foreach($atts as $key => $val) {
       array_push($params, [
          "type" => "textfield",
@@ -132,7 +136,6 @@ add_action( 'vc_before_init', 'bs_donate_section_vc' );
         "base" => "bs_donate_section",
         "category" =>  "BS",
         "params" => $params
-      ) 
+      )
     );
   }
-

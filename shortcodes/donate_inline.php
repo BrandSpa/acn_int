@@ -34,11 +34,11 @@ function bs_donate_inline_sc($atts, $content = null) {
 		"template_uri" => str_replace("http:", "", get_template_directory_uri()),
     "is_blue" => false
 	 ], $atts);
-
+	$getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
 	ob_start();
 ?>
 
-<div 
+<div
 	class="bs-donate-inline"
 	data-props='{
     "texts": <?php echo json_encode($at) ?>,
@@ -46,7 +46,8 @@ function bs_donate_inline_sc($atts, $content = null) {
     "redirect": {
       "monthly": "<?php echo get_option('donate_monthly_redirect') ?>",
       "once": "<?php echo get_option('donate_once_redirect') ?>"
-    }
+    },
+		"tags": "<?php echo strtoupper($getLang) . ',' . $at['convertloop_tags'] ?>",
   }'
 >
 </div>
@@ -86,7 +87,7 @@ add_action( 'vc_before_init', 'bs_donate_inline_vc' );
       "step_payment_text" => "Payment Details",
       "step_contact_text" => "Your Information"
     ];
-    
+
     foreach($atts as $key => $val) {
       array_push($params, [
          "type" => "textfield",
@@ -109,7 +110,6 @@ add_action( 'vc_before_init', 'bs_donate_inline_vc' );
         "base" => "bs_donate_inline",
         "category" =>  "BS",
         "params" => $params
-      ) 
+      )
     );
   }
-

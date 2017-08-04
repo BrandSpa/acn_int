@@ -32,7 +32,12 @@ export function stripeCharge(state) {
 }
 
 export function storeConvertLoop(state) {
-  return fetchwp("convertloop_contact", state.contact);
+  const add_tags = typeof props.cl.tags == "string"
+    ? props.tags.trim().split(",")
+    : [];
+
+  const data = { ...state.contact, add_tags };
+  return fetchwp("convertloop_contact", data);
 }
 
 export function storeEventConvertLoop(state) {
