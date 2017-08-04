@@ -101,8 +101,8 @@ class contactForm extends Component {
 
     if (isValid) {
       this.setState({ loading: true });
-      this.storeConvertLoop(props, state)
-      .then(this.storeEventConvertLoop.bind(null, props, state))
+      storeConvertLoop(props, state)
+      .then(storeEventConvertLoop.bind(null, props, state))
       .then(res => {
         if (res.data.person.email) window.location = this.props.redirect;
       });
