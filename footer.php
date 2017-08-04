@@ -17,12 +17,7 @@
   bs.lang = '<?php echo getCountryLang(getCountry()) ?>';
   bs.donate = '<?php echo gett('Donate') ?>';
 	bs.pid = '<?php echo isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : ''  ?>';
-
-	if (typeof(localStorage) !== "undefined") {
-    console.log("localStorage/sessionStorage");
-	} else {
-	  console.log("sorry");
-	}
+	console.log(mitt);
 </script>
 
 <script src="<?php echo get_template_directory_uri() ?>/client/dist/vendor.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/vendor.js') ?>">

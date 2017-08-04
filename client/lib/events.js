@@ -1,6 +1,13 @@
 import getCookies from "./cookies";
 const cookies = getCookies();
 
+export const storeEvent = (name, options = {}) => {
+  return new Promise((resolve, reject) => {
+    localStorage.setItem( name, JSON.stringify(options) );
+    return resolve({name, options});
+  })
+}
+
 export const eventGoogleAnalytics = ({category, action, label, value = 0}) => {
   return new Promise((resolve, reject) => {
     console.log(category, action, label);
