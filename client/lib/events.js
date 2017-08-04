@@ -34,7 +34,6 @@ const runEvent = (eventName, data) => {
       break;
     default:
       return Promise.resolve();
-      break;
   }
 }
 
