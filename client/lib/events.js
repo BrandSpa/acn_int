@@ -5,10 +5,10 @@ export const eventGoogleAnalytics = ({category, action, label, value = 0}) => {
   return new Promise((resolve, reject) => {
     console.log(category, action, label);
     typeof ga === "function"
-      ? ga("send", "event", category, action, label, value)
+      ? ga("send", "event", category, action, label, value, {
+        hitCallback: function() { return resolve(); }
+      })
       : console.log("ga error");
-
-    return resolve();
   })
 }
 
