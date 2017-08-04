@@ -10,8 +10,10 @@ import mitt from "mitt";
 window.mitt = mitt();
 
 import {runEvents} from "./lib/events";
+mitt.on("run:events", () => {
+  runEvents();
+})
 
-runEvents();
 
 //React components :)
 import Menu from "./components/menu";
