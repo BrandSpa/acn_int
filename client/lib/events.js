@@ -3,9 +3,9 @@ const cookies = getCookies();
 
 export const runEvents = () => {
   const events = [
-    "gaEvent",
-    "fbEvent",
-    "clEvent"
+    "ga_event",
+    "fb_event",
+    "cl_event"
   ];
 
   events.forEach(eventName => {
@@ -19,7 +19,6 @@ export const runEvents = () => {
       });
     }
   })
-
 }
 
 const runEvent = (eventName, data) => {
