@@ -21,7 +21,7 @@ function bs_contact_form_sc($atts, $content = null) {
 	];
 
   $at = shortcode_atts( $attributes , $atts );
-
+	$getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
   ob_start();
 ?>
 
@@ -29,7 +29,7 @@ function bs_contact_form_sc($atts, $content = null) {
 	class="contact-form"
 	data-props='{
 		"cl": {
-			"tags": "<?php echo $at['convertloop_tags'] ?>",
+			"tags": "<?php echo $getLang . ',' . $at['convertloop_tags'] ?>",
 			"event": "<?php echo $at['convertloop_event'] ?>"
 		},
 		"country": "<?php echo getCountry() ?>",
