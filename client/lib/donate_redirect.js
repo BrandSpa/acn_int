@@ -1,8 +1,7 @@
 import request from "axios";
 import qs from "qs";
-import {eventGoogleAnalytics, eventConvertloop} from "./events";
+import { eventGoogleAnalytics, eventConvertloop } from "./events";
 
-"Donate Click"
 export default () => {
   if($(".bs-donate a")) {
     $(".bs-donate a").text(bs.donate);
@@ -20,7 +19,7 @@ export default () => {
           let data = qs.stringify({action: "donate_redirect"});
           request
             .post("/wp-admin/admin-ajax.php", data)
-            // .then(res => window.location = res.data);
+            .then(res => window.location = res.data);
         })
     });
   }

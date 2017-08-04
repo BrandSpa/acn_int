@@ -4,22 +4,10 @@ import request from "axios";
 import Minigrid from "minigrid";
 import debounce from "lodash/debounce";
 import Post from "./post";
-const endpoint = "/wp-admin/admin-ajax.php";
+
 
 class Posts extends React.Component {
-  state = { posts: [], paged: 1, seeMore: true };
-
-  componentWillMount() {
-    // let data = qs.stringify({ action: "get_posts" });
-    //
-    // request
-    //   .post(endpoint, data)
-    //   .then(({data}) => {
-    //     let posts = data ? data : [];
-    //     this.setState({ posts });
-    //   })
-    //   .catch(err => console.error(err));
-  }
+  state = { posts: [], paged: 1, seeMore: true }
 
   componentDidUpdate() {
     this.initGrid();
@@ -40,8 +28,9 @@ class Posts extends React.Component {
   };
 
   goToPosts = () => {
+
     window.location = this.props.see_more_link;
-  };
+  }
 
   render() {
     const { posts } = this.props;

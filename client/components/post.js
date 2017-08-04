@@ -1,4 +1,5 @@
 import React from "react";
+import { eventGoogleAnalytics, eventConvertloop } from "../lib/events";
 
 const cleanEmpty = arrArg =>
   arrArg.filter(item => item.length > 0);
@@ -12,11 +13,26 @@ class Post extends React.Component {
 
   handleImageLoaded = () => {
     this.props.onImageLoaded();
-  };
+  }
+
+  goToPost = (e) => {
+    e.preventDefault();
+    const event = {
+      name: "READPOST",
+      metadata: {
+        url: posts.post_permalink
+      }
+    };
+
+    eventConvertloop(event)
+    .then(() => {
+      window.location = posts.post_permalink;
+    })
+  }
 
   render() {
     const { post, type, read_more } = this.props;
-    const { post_image = '', post_title = '' } = post;
+    const { post_image = "", post_title = "" } = post;
     const imgUrl = Array.isArray(post_image) && post_image.length > 1
       ? cleanEmpty(post_image)
       : post_image;
@@ -58,6 +74,7 @@ class Post extends React.Component {
             <p>{`${short.substring(0, 220)}...`}</p>
             <a
               href={post.post_permalink}
+              onClick={this.goToPost}
               className="grid-item__content__texts__readmore"
             >
               {read_more}...
