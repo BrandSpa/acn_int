@@ -119,7 +119,7 @@ function acn_fullpage_sc( $atts, $content ) {
 
 		<div class="fullpage-nav__info">
 			<ul>
-				<li class="fullpage__info-about"><a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a></li>
+				<li class="fullpage-nav__info-about"><a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a></li>
 				<li><a class="open-modal" href="<?php echo $at['link_privacy'] ?>"><?php echo $at['text_privacy'] ?></a></li>
 				<li><a class="open-modal" href="<?php echo $at['link_terms'] ?>"><?php echo $at['text_terms'] ?></a></li>
 				<li><a href="<?php echo $at['link_lang'] ?>"><?php echo $at['text_lang'] ?></a></li>
