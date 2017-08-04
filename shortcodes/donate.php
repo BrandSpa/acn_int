@@ -49,7 +49,7 @@ function bs_donate_react_sc($atts, $content = null) {
       "monthly": "<?php echo get_option('donate_monthly_redirect') ?>",
       "once": "<?php echo get_option('donate_once_redirect') ?>"
     },
-		"tags": "<?php echo strtoupper($getLang) . ',' . $at['convertloop_tags'] ?>",
+		"tags": "<?php echo strtoupper($getLang) . ',' . $at['convertloop_tags'] ?>"
   }'
 >
 </div>

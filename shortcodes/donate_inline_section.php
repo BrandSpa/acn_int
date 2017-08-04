@@ -37,7 +37,7 @@ function bs_donate_inline_section_sc($atts, $content = null) {
     "subtext_four_step" => gett("Podrías ayudarnos con un pequeño valor diario de:"),
     "is_blue" => false
 	 ], $atts);
-	 
+
 	$getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
 
 	ob_start();
@@ -54,7 +54,7 @@ function bs_donate_inline_section_sc($atts, $content = null) {
     },
 		"titles": ["SUPPORT A PERSECUTED CHRISTIAN", "THANK YOU"],
 		"content": <?php echo json_encode($content) ?>,
-		"tags": "<?php echo strtoupper($getLang) . ',' . $at['convertloop_tags'] ?>",
+		"tags": "<?php echo strtoupper($getLang) . ',' . $at['convertloop_tags'] ?>"
   }'
 >
 </div>
