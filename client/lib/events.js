@@ -53,12 +53,12 @@ export const storeEvent = (name, options = {}) => {
 
 export const eventGoogleAnalytics = (data) => {
   const {category, action, label, value = 0} = data;
-  console.log('eventGoogleAnalytics data', data);
+
   return new Promise((resolve, reject) => {
-    console.log(category, action, label);
+      console.log('eventGoogleAnalytics data', data);
     typeof ga === "function"
       ? ga("send", "event", category, action, label, value, {
-        hitCallback: function() { return resolve(); }
+        hitCallback: () => { return resolve() }
       })
       : console.log("ga error");
   })
