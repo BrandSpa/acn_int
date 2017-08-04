@@ -59,7 +59,7 @@ function bs_donate_section_sc($atts, $content = null) {
     },
 		"titles": ["SUPPORT A PERSECUTED CHRISTIAN", "THANK YOU"],
 		"content": <?php echo json_encode($content) ?>,
-		"tags": "<?php echo strtoupper($getLang) . ',' . $at['convertloop_tags'] ?>"
+		"tags": "<?php echo strtoupper($getLang) . ',' . $at['tags'] ?>"
   }'
 >
 </div>

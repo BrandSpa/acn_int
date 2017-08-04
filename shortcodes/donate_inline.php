@@ -32,7 +32,8 @@ function bs_donate_inline_sc($atts, $content = null) {
     "step_payment_text" => gett("Payment Details"),
     "step_contact_text" => gett("Your Information"),
 		"template_uri" => str_replace("http:", "", get_template_directory_uri()),
-    "is_blue" => false
+    "is_blue" => false,
+		"tags" => ""
 	 ], $atts);
 	$getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
 	ob_start();
@@ -47,7 +48,7 @@ function bs_donate_inline_sc($atts, $content = null) {
       "monthly": "<?php echo get_option('donate_monthly_redirect') ?>",
       "once": "<?php echo get_option('donate_once_redirect') ?>"
     },
-		"tags": "<?php echo strtoupper($getLang) . ',' . $at['convertloop_tags'] ?>"
+		"tags": "<?php echo strtoupper($getLang) . ',' . $at['tags'] ?>"
   }'
 >
 </div>
