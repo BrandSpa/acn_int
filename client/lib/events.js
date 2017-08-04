@@ -1,6 +1,10 @@
 import getCookies from "./cookies";
 const cookies = getCookies();
 
+export const runEvents = () => {
+  console.log("events");
+}
+
 export const storeEvent = (name, options = {}) => {
   return new Promise((resolve, reject) => {
     localStorage.setItem( name, JSON.stringify(options) );

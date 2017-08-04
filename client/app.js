@@ -9,6 +9,10 @@ import "lazysizes/plugins/bgset/ls.bgset.min.js";
 import mitt from "mitt";
 window.mitt = mitt();
 
+import {runEvents} from "./lib/events";
+
+runEvents();
+
 //React components :)
 import Menu from "./components/menu";
 import ContactForm from "./components/contactForm";
