@@ -10,7 +10,8 @@ import mitt from "mitt";
 window.mitt = mitt();
 
 import {runEvents} from "./lib/events";
-mitt.on("run:events", () => {
+
+window.mitt.on("run:events", () => {
   runEvents();
 })
 
