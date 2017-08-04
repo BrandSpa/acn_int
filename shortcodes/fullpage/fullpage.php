@@ -112,14 +112,14 @@ function acn_fullpage_sc( $atts, $content ) {
 			<?php foreach($links  as $ind => $link): ?>
 				<li><a href="<?php echo $link['link'] ?>"><span class="num"><?php echo $ind + 1 ?></span> <?php echo  $link['title'] ?></a></li>
 			<?php endforeach; ?>
-			<li><a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a></li>
+			<li class="fullpage-nav__about"><a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a></li>
 		</ul>
 
 		<button class="fullpage-nav__close"><i class="ion-close-round"></i></button>
 
 		<div class="fullpage-nav__info">
 			<ul>
-				<li><a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a></li>
+				<li class="fullpage__info-about"><a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a></li>
 				<li><a class="open-modal" href="<?php echo $at['link_privacy'] ?>"><?php echo $at['text_privacy'] ?></a></li>
 				<li><a class="open-modal" href="<?php echo $at['link_terms'] ?>"><?php echo $at['text_terms'] ?></a></li>
 				<li><a href="<?php echo $at['link_lang'] ?>"><?php echo $at['text_lang'] ?></a></li>

@@ -921,6 +921,11 @@ button {
       width: 80%; } }
   .fullpage-nav--open {
     right: 0; }
+  .fullpage-nav__about {
+    display: none; }
+    @media (max-width: 767px) {
+      .fullpage-nav__about {
+        display: block; } }
   .fullpage-nav__close {
     background: #E3333A;
     color: #fff;
@@ -950,6 +955,11 @@ button {
         position: relative;
         top: 180px;
         float: left; } }
+    .fullpage-nav__info-about {
+      display: block; }
+      @media (max-width: 767px) {
+        .fullpage-nav__info-about {
+          display: none; } }
     .fullpage-nav__info ul {
       float: right;
       padding: 7px 0; }
