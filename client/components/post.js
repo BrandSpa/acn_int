@@ -17,6 +17,8 @@ class Post extends React.Component {
 
   goToPost = (e) => {
     e.preventDefault();
+    const { post } = this.props;
+
     const event = {
       name: "READPOST",
       metadata: {
