@@ -78,6 +78,7 @@ toggleViaCrucisNav();
 scrollViaCrucisNav();
 stickyMenu();
 toggleMenu();
+
 let cookies = {};
 
 document.cookie.split(";").forEach(function(l) {
