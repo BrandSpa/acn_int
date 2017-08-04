@@ -2,7 +2,41 @@ import getCookies from "./cookies";
 const cookies = getCookies();
 
 export const runEvents = () => {
-  console.log("events");
+  const events = [
+    "gaEvent",
+    "fbEvent",
+    "clEvent"
+  ];
+
+  events.forEach(eventName => {
+    let dataStr = localStorage.getItem(eventName);
+    if(dataStr !== null) {
+      let data = JSON.parse(dataStr);
+      runEvent(eventName, data).then(() => {
+        console.log("flush");
+        flushEvent(eventName);
+      });
+    }
+  })
+
+}
+
+const runEvent = (eventName, data) => {
+  switch (eventName) {
+    case "gaEvent":
+      return eventGoogleAnalytics(data);
+      break;
+    case "fbEvent":
+      return eventFacebook(data);
+      break;
+    case "clEvent":
+      return eventConvertloop(data);
+      break;
+  }
+}
+
+export const flushEvent = (name) => {
+  localStorage.removeItem(name);
 }
 
 export const storeEvent = (name, options = {}) => {
