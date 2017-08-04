@@ -23,14 +23,17 @@ export const runEvents = () => {
 
 const runEvent = (eventName, data) => {
   switch (eventName) {
-    case "gaEvent":
+    case "ga_event":
       return eventGoogleAnalytics(data);
       break;
-    case "fbEvent":
+    case "fb_event":
       return eventFacebook(data);
       break;
-    case "clEvent":
+    case "cl_event":
       return eventConvertloop(data);
+      break;
+    default:
+      return Promise.resolve();
       break;
   }
 }
