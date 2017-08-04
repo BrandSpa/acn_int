@@ -15,7 +15,7 @@ export const runEvents = () => {
       let data = JSON.parse(JSON.stringify(dataStr));
       runEvent(eventName, data).then(() => {
         console.log("flush");
-        flushEvent(eventName);
+        // flushEvent(eventName);
       });
     }
   })
