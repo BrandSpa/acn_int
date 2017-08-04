@@ -53,7 +53,7 @@ export const storeEvent = (name, options = {}) => {
 
 export const eventGoogleAnalytics = (data) => {
   const {category, action, label, value = 0} = data;
-  console.log(data);
+  console.log('eventGoogleAnalytics data', data);
   return new Promise((resolve, reject) => {
     console.log(category, action, label);
     typeof ga === "function"
