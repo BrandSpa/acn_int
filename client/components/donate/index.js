@@ -63,7 +63,7 @@ class Donate extends Component {
     this.setState({loading: true});
 
     actions
-      .storeConvertLoop(this.props, this.state)
+      .storeConvertLoop(this.props.tags, this.state.contact)
       .then(() => {
         const l = bs.currentPageLang == "Español" ? "SP" : "EN";
         const event = {

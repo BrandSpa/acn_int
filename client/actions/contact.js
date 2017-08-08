@@ -1,8 +1,8 @@
 import fetchwp from "../lib/fetch_wp";
 
-export const storeConvertLoop = (props, state) => {
-  const add_tags = typeof props.cl.tags == "string"
-    ? props.cl.tags.trim().split(",")
+export const storeConvertLoop = (tags, contact) => {
+  const add_tags = typeof tags == "string"
+    ? tags.trim().split(",")
     : [];
 
   const data = { ...state.contact, add_tags };

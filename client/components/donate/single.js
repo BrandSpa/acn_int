@@ -60,9 +60,9 @@ class Donate extends Component {
     const { amount, donation_type, contact } = this.state;
     const { customer, id } = stripeResponse;
     const base = this.props.redirect[donation_type];
-    console.log('donate', this.props, this.state);
+
     actions
-      .storeConvertLoop(this.props, this.state)
+      .storeConvertLoop(this.props.tags, this.state.contact)
       .then(() => {
         const event = {
           category: "DONATION",

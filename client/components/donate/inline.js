@@ -4,7 +4,7 @@ import qs from "qs";
 import Amount from "./amount";
 import CreditCard from "./creditCard";
 import Contact from "./contact";
-import FourStep from './four';
+import FourStep from "./four";
 import * as actions from "../../actions/donate";
 import { storeEvent } from "../../lib/events";
 
@@ -102,7 +102,7 @@ class DonateInline extends Component {
     const base = this.props.redirect[donation_type];
 
     actions
-      .storeConvertLoop(this.props, this.state)
+      .storeConvertLoop(this.props.tags, this.state.contact)
       .then(() => {
         const event = {
           category: "DONATION",
@@ -161,7 +161,7 @@ class DonateInline extends Component {
       border: "none"
     };
 
-    console.log('four', this.state.show_four);
+    console.log("four", this.state.show_four);
 
     return (
       <div>
@@ -206,7 +206,7 @@ class DonateInline extends Component {
               onClick={this.handleSubmit}
               disabled={this.state.loading}
             >
-              {this.props.texts.donate}{this.state.loading ? '...' : ''}
+              {this.props.texts.donate}{this.state.loading ? "..." : ""}
             </button>
 
             <span style={donationTypeStyle}>
