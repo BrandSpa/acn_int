@@ -601,6 +601,8 @@ button, .btn {
   border-radius: 5px; }
   button:focus, .btn:focus {
     outline: none; }
+  button:disabled, .btn:disabled {
+    opacity: .8; }
 
 .checkbox {
   position: relative;
@@ -620,8 +622,6 @@ button, .btn {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0; }
-  .checkbox:disabled {
-    opacity: .8; }
 
 .bs-see-more {
   margin: 30px auto;

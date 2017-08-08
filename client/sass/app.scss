@@ -208,6 +208,9 @@ button, .btn {
 	&:focus {
 		outline: none;
 	}
+	&:disabled {
+		opacity: .8;
+	}
 }
 
 .checkbox {
@@ -232,9 +235,7 @@ button, .btn {
     padding: 0;
 	}
 
-	&:disabled {
-		opacity: .8;
-	}
+
 
 }
 
