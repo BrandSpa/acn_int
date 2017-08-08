@@ -11,14 +11,14 @@ function stripe_create_token($api_key, $card) {
     \Stripe\Stripe::setApiKey($api_key);
 
     try {
-      $token = \Stripe\Token::create(array(
-        "card" => array(
+      $token = \Stripe\Token::create([
+        "card" => [
         "number" => $card['number'],
         "exp_month" => $card['exp_month'],
         "exp_year" => $card['exp_year'],
         "cvc" => $card['cvc']
-        )
-      ));
+        ]
+      ]);
 
       return $token;
     } catch(Exception $e) {

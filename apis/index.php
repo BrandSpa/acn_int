@@ -62,8 +62,6 @@ function donate_redirect() {
   die();
 }
 
-
-
 add_action( 'wp_ajax_nopriv_stripe_update_plan', 'stripe_plan' );
 add_action( 'wp_ajax_stripe_update_plan', 'stripe_plan' );
 

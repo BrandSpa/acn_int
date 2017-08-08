@@ -21,7 +21,6 @@ class Donate extends Component {
     donation_type: "monthly",
     amount: 30,
     currency: "usd",
-    countries: [],
     contact: { name: "", email: "", country: "" },
     stripe: {
       card_type: "",
@@ -36,10 +35,6 @@ class Donate extends Component {
     show_four_step: false,
     show_titles: false
   };
-
-  componentWillMount() {
-    actions.fetchCountries().then(countries => this.setState({ countries }));
-  }
 
   componentDidMount() {
     if (this.donateForm) {

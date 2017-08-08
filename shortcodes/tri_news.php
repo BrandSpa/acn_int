@@ -1,6 +1,6 @@
 <?php
 /**
-** 	
+**
 **/
 
 add_shortcode( 'bs_tri_news', 'bs_tri_news_sc' );
@@ -9,7 +9,7 @@ function bs_tri_news_sc($atts, $content = null) {
 	$attributes = [
 		'id_1' => '',
 		'id_2' => '',
-        'id_3' => ''
+    'id_3' => ''
   ];
 
   $at = shortcode_atts( $attributes , $atts );
@@ -22,7 +22,7 @@ function bs_tri_news_sc($atts, $content = null) {
         margin-left:5%;
     }
     .main_niw{
-        width:53%; 
+        width:53%;
         margin-left:5%;
         /*float:left;*/
     }
@@ -49,10 +49,10 @@ function bs_tri_news_sc($atts, $content = null) {
         margin:auto;
         }
        .main_niw{
-            width:100%; 
+            width:100%;
             float:right;
             margin:auto;
-        } 
+        }
         .hide_txt{
             display:none;
         }
@@ -73,7 +73,7 @@ function bs_tri_news_sc($atts, $content = null) {
 </style>
 
 <div style="display:block; position:relative; margin:auto;">
-<?php 
+<?php
 $countri=0;
 $customcla="main_niw";
 $trilen=148;
@@ -102,14 +102,14 @@ foreach($at as $ID_n):  ?>
 			<a class="main_a" href="<?php echo get_permalink($recent->ID) ?>"><?php echo gett('Read more') ?>...</a>
 		</div>
 	</div>
- 
+
  <?php $countri++;?>
  <?php endforeach; ?>
  </div>
 
 
 <script>
-	
+
 </script>
 <?php
 
@@ -147,7 +147,6 @@ add_action( 'vc_before_init', 'bs_tri_news_vc' );
         "base" => "bs_tri_news",
         "category" =>  "BS",
         "params" => $params
-      ) 
+      )
     );
   }
-

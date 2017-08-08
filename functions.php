@@ -86,6 +86,7 @@ require_once('shortcodes/vc/contact_form.php');
 require_once('shortcodes/vc/header_slider.php');
 require_once('shortcodes/vc/posts.php');
 require_once('shortcodes/vc/projects_about.php');
+require_once('shortcodes/vc/donate.php');
 
 //FULLPAGE
 require_once('shortcodes/fullpage/fullpage.php');
