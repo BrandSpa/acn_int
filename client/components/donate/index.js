@@ -61,17 +61,48 @@ class Donate extends Component {
   };
 
   completeTransaction = (stripeResponse = {}) => {
-    const { amount, donation_type } = this.state;
+    const { amount, donation_type, contact } = this.state;
     const base = this.props.redirect[donation_type];
     const { customer, id } = stripeResponse;
 
     actions
       .storeConvertLoop(this.props, this.state)
-      .then(actions.storeEventConvertLoop.bind(null, this.state))
+      .then(() => {
+        const event = {
+          category: "DONATION",
+          action: "DONATION_MONTHLY",
+          label: "DONATION_EN",
+          value: amount
+        };
+        console.log("ga", event);
+        storeEvent("ga_event");
+      })
+      .then(() => {
+        const event = {
+          name: `Donation ${donation_type}`,
+          person: contact,
+          metadata: {
+            amount,
+            type: donation_type,
+            url: window.location.href
+          }
+        };
+        console.log("cl", event);
+        return storeEvent("cl_event", event);
+
+      })
+      .then(() => {
+        const event = {
+          eventName: "Purchase",
+          content: { value: amount, currency: "USD" }
+        };
+        console.log("fb", event);
+        return storeEvent("fb_event");
+      })
       .then(res => {
          if (donation_type == "monthly") {
           const url = `${base}?customer_id=${customer}-${id}&order_revenue=${amount}&order_id=${id}`;
-          window.location = url;
+          // window.location = url;
         } else {
           this.setState({show_four: true});
           this.props.changeSection(1);
