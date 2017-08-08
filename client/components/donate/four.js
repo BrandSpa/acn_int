@@ -25,11 +25,14 @@ class Four extends Component {
 
 	handleNo = e  => {
 		e.preventDefault();
-		this.props.changeSection(1);
-	};
+		 const { amount, donation_type, contact } = this.props;
+		const base = this.props.redirect["monthly"];
+		const url = `${base}?customer_id=${contact.email}&order_revenue=${amount}`;
+		window.location = url;
+	}
 
 	completeTransaction = ( stripeResponse = {} ) => {
-    const { amount, donation_type } = this.props;
+    const { amount, donation_type, contact } = this.props;
     const base = this.props.redirect["monthly"];
     const { customer, id } = stripeResponse;
 
@@ -37,7 +40,7 @@ class Four extends Component {
       .storeConvertLoop(this.props, this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.props))
       .then(res => {
-				const url = `${base}?customer_id=${customer}-${id}&order_revenue=${amount}&order_id=${id}`;
+				const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&order_id=${id}`;
           window.location = url;
       });
   };
