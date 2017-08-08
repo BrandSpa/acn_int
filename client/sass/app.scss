@@ -232,6 +232,10 @@ button, .btn {
     padding: 0;
 	}
 
+	&:disabled {
+		opacity: .8;
+	}
+
 }
 
 .bs-see-more {
