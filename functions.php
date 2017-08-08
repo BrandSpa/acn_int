@@ -82,11 +82,17 @@ require_once('shortcodes/video_modal_bg.php');
 require_once('shortcodes/counter.php');
 
 //VISUAL COMPOSER
+require_once('shortcodes/vc/accordion.php');
+require_once('shortcodes/vc/arrow.php');
+require_once('shortcodes/vc/banner_donation.php');
+require_once('shortcodes/vc/breadcrumb.php');
+require_once('shortcodes/vc/campaigns_slider.php');
 require_once('shortcodes/vc/contact_form.php');
+require_once('shortcodes/vc/donate.php');
 require_once('shortcodes/vc/header_slider.php');
+require_once('shortcodes/vc/post_share.php');
 require_once('shortcodes/vc/posts.php');
 require_once('shortcodes/vc/projects_about.php');
-require_once('shortcodes/vc/donate.php');
 
 //FULLPAGE
 require_once('shortcodes/fullpage/fullpage.php');
