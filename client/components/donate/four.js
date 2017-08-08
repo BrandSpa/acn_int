@@ -34,7 +34,7 @@ class Four extends Component {
     const { customer, id } = stripeResponse;
 
     actions
-      .storeConvertLoop(this.props)
+      .storeConvertLoop(this.props, this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.props))
       .then(res => {
 				const url = `${base}?customer_id=${customer}-${id}&order_revenue=${amount}&order_id=${id}`;
