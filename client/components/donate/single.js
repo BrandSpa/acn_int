@@ -5,7 +5,7 @@ import Amount from "./amount";
 import CreditCard from "./creditCard";
 import Contact from "./contact";
 import * as actions from "../../actions/donate";
-const endpoint = "/wp-admin/admin-ajax.php";
+import { storeEvent } from "../../lib/events";
 
 function isAllValid(errors = {}) {
   return Object.keys(errors).every(key => errors[key] == true);
@@ -68,7 +68,38 @@ class Donate extends Component {
 
     actions
       .storeConvertLoop(this.state)
-      .then(actions.storeEventConvertLoop.bind(null, this.state))
+      .then(() => {
+        const event = {
+          category: "DONATION",
+          action: "DONATION_MONTHLY",
+          label: "DONATION_EN",
+          value: amount
+        };
+        console.log("ga", event);
+        storeEvent("ga_event");
+      })
+      .then(() => {
+        const event = {
+          name: `Donation ${donation_type}`,
+          person: contact,
+          metadata: {
+            amount,
+            type: donation_type,
+            url: window.location.href
+          }
+        };
+        console.log("cl", event);
+        return storeEvent("cl_event", event);
+
+      })
+      .then(() => {
+        const event = {
+          eventName: "Purchase",
+          content: { value: amount, currency: "USD" }
+        };
+        console.log("fb", event);
+        return storeEvent("fb_event");
+      })
       .then(res => {
         const url = `${base}?customer_id=${customer}-${contact.email}&order_revenue=${amount}&order_id=${id}`;
         window.location = url;
