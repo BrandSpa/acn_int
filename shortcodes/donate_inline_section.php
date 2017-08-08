@@ -48,6 +48,7 @@ function bs_donate_inline_section_sc($atts, $content = null) {
 	class="bs-donate-inline-section"
 	data-props='{
     "texts": <?php echo json_encode($at) ?>,
+		"countries": <?php echo function_exists('getCountries') ? json_encode(getCountries()) : [] ?>,
     "is_blue": "<?php echo $at['is_blue'] ?>",
     "redirect": {
       "monthly": "<?php echo get_option('donate_monthly_redirect') ?>",
