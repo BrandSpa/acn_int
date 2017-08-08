@@ -5,12 +5,13 @@ class PostShare extends Component {
   render() {
     const currentUrl = window.location.href;
     const {title, subtitle} = this.props;
-    
-    return (
-      <span style="text-align: center; font-size: 20px; color: #3C515F; display:block; margin: 40px auto">{title}</span>
 
-      <div class="bs-post__share" style="background: #F7F7F7">
-      	<div class="l-wrap" style="text-align: center">
+    return (
+      <div>
+      <span className="title">{title}</span>
+
+      <div className="bs-post__share" style="background: #F7F7F7">
+      	<div className="l-wrap" style="text-align: center">
       	 <span style="display: inline-block;font-size: 20px;color: #3C515F;">{subtitle}</span>
 
       		<ul style="display: inline-block">
@@ -18,25 +19,32 @@ class PostShare extends Component {
             	<a key={1}
                 className="icon"
                 href={`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`}>
-              	<i class="ion-social-facebook"></i></a>
+              	<i className="ion-social-facebook"></i></a>
             </li>
       			<li style="display: inline-block; margin-right: 15px">
       				<a key={2} className="icon" href={`https://twitter.com/intent/tweet?text=${currentUrl}`}>
-      					<i class="ion-social-twitter"></i></a>
+      					<i className="ion-social-twitter"></i></a>
       			</li>
       			<li style="display: inline-block; margin-right: 15px">
       				<a key={3} className="icon" href={`https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}`}>
-      					<i class="ion-social-linkedin"></i></a>
+      					<i className="ion-social-linkedin"></i></a>
       			</li>
       			<li style="display: inline-block; margin-right: 15px">
       				<a className="icon"
                 href={`whatsapp://send?text=${currentUrl}`}>
-      					<i class="ion-social-whatsapp-outline"></i>
+      					<i className="ion-social-whatsapp-outline"></i>
       				</a>
       			</li>
       		</ul>
       	</div>
         <style jsx>{`
+          .title {
+            text-align: center;
+            font-size: 20px;
+            color: #3C515F;
+            display:block;
+            margin: 40px auto
+          }
           .icon {
             color: #939597;
             width: 40px;
@@ -50,7 +58,7 @@ class PostShare extends Component {
           }
         `}</style>
       </div>
-
+      </div>
     )
   }
 }

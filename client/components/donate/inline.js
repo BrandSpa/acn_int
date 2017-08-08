@@ -136,7 +136,7 @@ class DonateInline extends Component {
         return storeEvent("fb_event");
       })
       .then(res => {
-        const url = `${base}?customer_id=${customer}-${contact.email}&order_revenue=${amount}&order_id=${id}`;
+        const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&order_id=${id}`;
         window.location = url;
       });
   };

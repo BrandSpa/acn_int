@@ -54,7 +54,7 @@ class Donate extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.nextSection();
-  };
+  }
 
   completeTransaction = (stripeResponse = {}) => {
     const { amount, donation_type, contact } = this.state;
@@ -96,20 +96,20 @@ class Donate extends Component {
         return storeEvent("fb_event");
       })
       .then(res => {
-        const url = `${base}?customer_id=${customer}-${contact.email}&order_revenue=${amount}&order_id=${id}`;
+        const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&order_id=${id}`;
         window.location = url;
       });
-  };
+  }
 
   creditCardIsValid = () => {
     let errs = this.creditCard.validateAll();
     return isAllValid(errs.stripe);
-  };
+  }
 
   contactIsValid = () => {
     let errs = this.contact.validateAll();
     return isAllValid(errs.contact);
-  };
+  }
 
   nextSection = () => {
     let section = this.state.section < 2 ? this.state.section + 1 : 2;

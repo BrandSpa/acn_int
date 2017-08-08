@@ -38,6 +38,7 @@ import ProjectsAbout from "./components/projectsAbout";
 import VideoHeader from "./components/videoHeader";
 import Carousel from "./components/carousel";
 import Counter from "./components/counter";
+import PostShare from "./components/postShare";
 
 //jquery
 import setMenuMobile from "./lib/set_menu_mobile";
@@ -77,6 +78,7 @@ multipleRender(ProjectsAbout, ".bs-projects-about");
 multipleRender(VideoHeader, ".bs-video-header");
 multipleRender(Carousel, ".bs-carousel");
 multipleRender(Counter, ".bs-counter");
+multipleRender(PostShare, ".bs-post-share");
 
 //jquery calls
 setMenuMobile();
