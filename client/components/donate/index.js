@@ -105,7 +105,7 @@ class Donate extends Component {
       .then(res => {
          if (donation_type == "monthly") {
           const url = `${base}?customer_id=${customer}-${id}&order_revenue=${amount}&order_id=${id}`;
-          // window.location = url;
+          window.location = url;
         } else {
           this.setState({show_four: true});
           this.props.changeSection(1);
