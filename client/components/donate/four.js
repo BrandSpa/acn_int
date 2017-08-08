@@ -36,7 +36,6 @@ class Four extends Component {
     actions
       .storeConvertLoop(this.props)
       .then(actions.storeEventConvertLoop.bind(null, this.props))
-      .then(actions.storeInfusion.bind(null, this.props))
       .then(res => {
 				const url = `${base}?customer_id=${customer}-${id}&order_revenue=${amount}&order_id=${id}`;
           window.location = url;
@@ -51,13 +50,13 @@ class Four extends Component {
 		return (
 			<div style={this.props.show_four ? { display: "block", textAlign: "center" } : { display: "none" }}>
 				<h5 style={{fontSize: "18px", color: "#3C515F", marginBottom: "20px"}}>{texts.text_four_step}</h5>
-				<h3 style={{ color: "#3C515F", marginBottom: "20px" }}>{`${texts.subtext_four_step} $${d}`}</h3>
+				<h3 style={{ color: "#3C515F", marginBottom: "20px" }}>{`${texts.subtext_four_step} $${d} USD`}</h3>
 				<div className="col-6 col-6-l">
 					<button
 						onClick={this.handleYes}
 						style={{ background: "#50B45A", width: "100%" }}
 					>
-						{texts.yes}{this.state.loading ? "..." : ""}
+						{texts.yes} {this.state.loading ? "..." : ""}
 					</button>
 				</div>
 
