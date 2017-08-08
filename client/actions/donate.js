@@ -32,7 +32,7 @@ export function stripeCharge(state) {
 }
 
 export function storeConvertLoop(props, state) {
-  const add_tags = typeof props.cl.tags == "string"
+  const add_tags = typeof props.tags == "string"
     ? props.tags.trim().split(",")
     : [];
 
