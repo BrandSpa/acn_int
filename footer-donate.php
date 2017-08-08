@@ -13,18 +13,18 @@
 	<!-- /wordpress files-->
 
 	<!--async load app-->
-<script type="text/javascript">
-  onLoad(function() {
+	<script>
+	  var bs = {};
+		bs.currentPageLang = '<?php  if(function_exists("pll_current_language")) echo pll_current_language("name"); ?>'
+	  bs.lang = '<?php echo getCountryLang(getCountry()) ?>';
+	  bs.donate = '<?php echo gett('Donate') ?>';
+		bs.pid = '<?php echo isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : ''  ?>';
+		onLoad(function() {
+			console.log(mitt);
+			mitt.emit("run:events");
+		})
 
-  })
-</script>
-	<!--/async load app-->
-<script>
-  var bs = {};
-  bs.lang = '<?php echo getCountryLang(getCountry()) ?>';
-  bs.donate = '<?php echo gett('Donate') ?>';
-	bs.pid = '<?php echo isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : ''  ?>';
-</script>
+	</script>
 
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/vendor.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/vendor.js') ?>'></script>
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/app.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/app.js') ?>'></script>
