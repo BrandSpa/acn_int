@@ -12,6 +12,7 @@ window.mitt = mitt();
 import {runEvents} from "./lib/events";
 
 window.mitt.on("run:events", () => {
+  console.log('run events');
   runEvents();
 })
 
