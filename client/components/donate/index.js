@@ -70,10 +70,11 @@ class Donate extends Component {
     actions
       .storeConvertLoop(this.props, this.state)
       .then(() => {
+        const l = bs.currentPageLang == "Español" ? "SP" : "EN";
         const event = {
           category: "DONATION",
           action: "DONATION_MONTHLY",
-          label: "DONATION_EN",
+          label: `DONATION_${l}`,
           value: amount
         };
         console.log("ga", event);
