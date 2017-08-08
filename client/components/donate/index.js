@@ -66,7 +66,7 @@ class Donate extends Component {
     const { customer, id } = stripeResponse;
 
     actions
-      .storeConvertLoop(this.state)
+      .storeConvertLoop(this.props, this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.state))
       .then(res => {
          if (donation_type == "monthly") {
