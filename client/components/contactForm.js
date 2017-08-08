@@ -105,7 +105,8 @@ class contactForm extends Component {
       this.setState({ loading: true });
       storeConvertLoop(props, state)
       .then(() => {
-        const event = {category: "SUBSCRIBE", action: "SUBSCRIBE_INFO", label: "SUBSCRIBE_EN"};
+        const l = bs.currentPageLang == "Español" ? "SP" : "EN";
+        const event = {category: "SUBSCRIBE", action: "SUBSCRIBE_INFO", label: `SUBSCRIBE_${l}`};
         return storeEvent("ga_event", event);
       })
       .then(() => {
