@@ -67,7 +67,7 @@ class Donate extends Component {
     const base = this.props.redirect[donation_type];
 
     actions
-      .storeConvertLoop(this.state)
+      .storeConvertLoop(this.props, this.state)
       .then(() => {
         const event = {
           category: "DONATION",
