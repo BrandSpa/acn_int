@@ -18,6 +18,7 @@
   bs.donate = '<?php echo gett('Donate') ?>';
 	bs.pid = '<?php echo isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : ''  ?>';
 	onLoad(function() {
+		console.log(mitt);
 		mitt.emit("run:events");
 	})
 
