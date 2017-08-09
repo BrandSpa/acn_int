@@ -45,7 +45,7 @@ function bs_donate_react_sc($atts, $content = null) {
 			"monthly" => get_option('donate_monthly_redirect'),
 			"once" => get_option('donate_once_redirect')
 		],
-		"tags" => empty($getLang) ? strtoupper($getLang) . ',' : '' . $at['tags'],
+		"tags" => !empty($getLang) ? strtoupper($getLang) . ',' : '' . $at['tags'],
 	];
 
 	ob_start();
