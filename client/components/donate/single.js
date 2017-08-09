@@ -61,6 +61,8 @@ class Donate extends Component {
     const { customer, id } = stripeResponse;
     const base = this.props.redirect[donation_type];
 
+    this.setState({loading: true});
+
     actions
       .storeConvertLoop(this.props.tags, this.state.contact)
       .then(() => {
