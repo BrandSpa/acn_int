@@ -13,16 +13,19 @@ function bs_header_slider_sc($atts, $content = null) {
 		return $slide;
 	}, vc_param_group_parse_atts( $atts['slides'] ));
 
+	$props = [
+		"slides" => $slides,
+    "interval" => $at["interval"]
+	];
+
   ob_start();
 ?>
 
 <div
   class="header-slider"
-  data-props='{
-    "slides": <?php echo json_encode($slides) ?>,
-    "interval": "<?php echo $at["interval"] ?>"
-  }'
-></div>
+  data-props='<?php echo json_encode($props) ?>'
+>
+</div>
 
 <?php
 

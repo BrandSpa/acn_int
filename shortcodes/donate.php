@@ -35,6 +35,7 @@ function bs_donate_react_sc($atts, $content = null) {
     "tags" => "",
     "is_blue" => false
 	 ], $atts);
+
 	$getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
 
 	$props = [
