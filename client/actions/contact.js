@@ -5,7 +5,7 @@ export const storeConvertLoop = (tags, contact) => {
     ? tags.trim().split(",")
     : [];
 
-  const data = { ...state.contact, add_tags };
+  const data = { ...contact, add_tags };
   return fetchwp("convertloop_contact", data);
 }
 
