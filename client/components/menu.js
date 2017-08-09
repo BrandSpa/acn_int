@@ -29,7 +29,7 @@ class Menu extends Component {
 
   render() {
     const { links = [] } = this.props;
-    
+
     return(
       <ul className="menu">
       {links.map(link => {
