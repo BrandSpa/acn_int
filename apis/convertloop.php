@@ -32,33 +32,34 @@ require $dir_base . 'vendor/autoload.php';
 
 	}
 
-	function convertloop_contact() {
-	  $data = $_POST['data'];
-	  $lang = getCountryLang($data['country']);
-	  $data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
+		function convertloop_contact() {
+		  $data = $_POST['data'];
+		  $lang = getCountryLang($data['country']);
+		  $data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
 
-	  /**
-	  ** if is between office country get app id and api key office that come from:
-	  ** https://acninternational.org/wp-admin/admin.php?page=bs-offices
-	  **/
-	  if(in_array($data['country'], getOfficesCountries())) {
-	    $countryKey = str_replace(' ', '_', $data['country']);
-	    $appId = get_option('convertloop_app_' . $countryKey);
-	    $apiKey = get_option('convertloop_api_' . $countryKey);
-	  } else {
-	    $appId = get_option('convertloop_app_default');
-	    $apiKey = get_option('convertloop_api_default');
-	  }
+		  /**
+		  ** if is between office country get app id and api key office that come from:
+		  ** https://acninternational.org/wp-admin/admin.php?page=bs-offices
+		  **/
 
-	    $res = cl_create_person($appId, $apiKey, $data);
-	    header('Content-type: application/json');
-	    echo $res;
-	  die();
-	}
+		  if( in_array($data['country'], getOfficesCountries()) ) {
+		    $countryKey = str_replace(' ', '_', $data['country']);
+		    $appId = get_option('convertloop_app_' . $countryKey);
+		    $apiKey = get_option('convertloop_api_' . $countryKey);
+		  } else {
+		    $appId = get_option('convertloop_app_default');
+		    $apiKey = get_option('convertloop_api_default');
+		  }
+
+		    $res = cl_create_person($appId, $apiKey, $data);
+		    header('Content-type: application/json');
+		    echo $res;
+		  die();
+		}
 
 
-	add_action( 'wp_ajax_nopriv_convertloop_contact', 'convertloop_contact' );
-	add_action( 'wp_ajax_convertloop_contact', 'convertloop_contact' );
+		add_action( 'wp_ajax_nopriv_convertloop_contact', 'convertloop_contact' );
+		add_action( 'wp_ajax_convertloop_contact', 'convertloop_contact' );
 
 	// $data: { "name": "Signed Up", "person": { "email": "german.escobar@convertloop.co" } }
 	function cl_create_event($appId, $apiKey, $data) {
