@@ -16,7 +16,8 @@ export const runEvents = () => {
     if (dataStr !== null) {
       const data = JSON.parse(dataStr);
 
-      runEvent(eventName, data).then(() => {
+      runEvent(eventName, data)
+      .then(() => {
         flushEvent(eventName);
       });
     }
@@ -102,7 +103,7 @@ const runEvent = (eventName, data) => {
     case 'ga_event':
       return eventGoogleAnalytics(data);
       break;
-    case 'ga_ecommerce_event':
+    case 'ga_ecm_event':
       return eventGoogleEcommerce(data);
       break;
     case 'fb_event':
