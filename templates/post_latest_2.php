@@ -1,5 +1,5 @@
 <?php
-var_dump(isset($post));
+
 $query = new Wp_Query(array(
   'posts_per_page' => 3,
   'post__not_in' => isset($post) ? [$post->ID] : null,
