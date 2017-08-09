@@ -95,7 +95,7 @@ class contactForm extends Component {
 
     this.isValid()
     .then(this.storeContact)
-    .catch(err => console.error(err));
+    .catch(err => console.log(err));
   }
 
   storeContact = isValid => {

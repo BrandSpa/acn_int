@@ -4697,7 +4697,7 @@ var contactForm = function (_Component) {
       e.preventDefault();
 
       _this.isValid().then(_this.storeContact)["catch"](function (err) {
-        return console.error(err);
+        return console.log(err);
       });
     }, _this.storeContact = function (isValid) {
       var _this2 = _this,
