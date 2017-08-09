@@ -80,6 +80,7 @@ require_once('shortcodes/banner_donation.php');
 require_once('shortcodes/candle.php');
 require_once('shortcodes/video_modal_bg.php');
 require_once('shortcodes/counter.php');
+require_once('shortcodes/get_url_value.php');
 
 //VISUAL COMPOSER
 require_once('shortcodes/vc/accordion.php');
@@ -93,6 +94,8 @@ require_once('shortcodes/vc/header_slider.php');
 require_once('shortcodes/vc/post_share.php');
 require_once('shortcodes/vc/posts.php');
 require_once('shortcodes/vc/projects_about.php');
+require_once('shortcodes/vc/modal_gallery.php');
+require_once('shortcodes/vc/counter.php');
 
 //FULLPAGE
 require_once('shortcodes/fullpage/fullpage.php');

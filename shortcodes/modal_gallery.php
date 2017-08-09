@@ -57,33 +57,3 @@ function bs_modal_gallery_sc($atts, $content = null) {
 
   return ob_get_clean();
 }
-
-
-add_action( 'vc_before_init', 'bs_modal_gallery_vc' );
-
-  function bs_modal_gallery_vc() {
-		$params = [
-            [
-        "type" => "textfield",
-        "heading" => "Groupname",
-        "param_name" => "groupname",
-        "value" => ''
-			],
-			[
-        "type" => "attach_images",
-        "heading" => "Images",
-        "param_name" => "images",
-        "value" => ''
-			],
-
-		];
-
-  	vc_map(
-      array(
-        "name" =>  "BS Modal_gallery",
-        "base" => "bs_modal_gallery",// igual a add_shortcode( 'bs_flexslider', 'bs_example_sc' );
-        "category" =>  "BS",
-        "params" => $params
-      )
-    );
-  }
