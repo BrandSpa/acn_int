@@ -39,8 +39,8 @@ function bs_donate_react_sc($atts, $content = null) {
 
 	$props = [
 		"texts" => $at,
-		"countries": function_exists('getCountries') ? getCountries() : [],
-		"is_blue": $at['is_blue'],
+		"countries" => function_exists('getCountries') ? getCountries() : [],
+		"is_blue" => $at['is_blue'],
 		"redirect" => [
 			"monthly" => get_option('donate_monthly_redirect'),
 			"once" => get_option('donate_once_redirect')
