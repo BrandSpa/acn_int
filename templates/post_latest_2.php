@@ -1,10 +1,10 @@
 <?php
 var_dump(isset($post));
 $query = new Wp_Query(array(
-  'post_type' => array('video','gallery','featured','post'),
   'posts_per_page' => 3,
-  'post_status' => 'publish',
-  'exclude' => isset($post) ? $post->ID : null
+  'post__not_in' => isset($post) ? [$post->ID] : null,
+  'post_type' => array('video','gallery','featured','post'),
+  'post_status' => 'publish'
 ));
 
 $posts = array_map(function($post) {

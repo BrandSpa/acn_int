@@ -5,7 +5,7 @@
 		'post_type' => array('video','gallery','featured','post'),
 		'post_status' => 'publish'
 	);
-	
+
   $recent_posts = get_posts( $args );
 ?>
 
