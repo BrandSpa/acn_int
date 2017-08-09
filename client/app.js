@@ -31,6 +31,7 @@ import Counter from './components/counter';
 import PostShare from './components/postShare';
 
 // jquery
+
 import setMenuMobile from './lib/set_menu_mobile';
 import donateRedirect from './lib/donate_redirect';
 import smoothScroll from './lib/smoothScroll';
@@ -83,9 +84,3 @@ toggleViaCrucisNav();
 scrollViaCrucisNav();
 stickyMenu();
 toggleMenu();
-
-const cookies = {};
-
-document.cookie.split(';').forEach((l) => {
-  cookies[l.split('=')[0].trim()] = l.split('=')[1];
-});

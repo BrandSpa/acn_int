@@ -12,14 +12,6 @@ describe("donate actions", () => {
     moxios.uninstall();
   });
 
-  it("fetch countries", () => {
-    const response = ["Argentina", "Colombia"];
-    moxios.stubRequest(endpoint, { response });
-    return actions
-      .fetchCountries()
-      .then(countries => expect(countries).toEqual(response));
-  });
-
   it("stripe token", () => {
     const state = { stripe: { card_type: "" } };
     const response = { id: "token_12345" };
@@ -64,10 +56,11 @@ describe("donate actions", () => {
 
   it("convertloop store", () => {
     const state = { contact: {} };
+    const props = { tags: "" };
     const response = { ok: true };
     moxios.stubRequest(endpoint, { response });
     return actions
-      .storeConvertLoop(state)
+      .storeConvertLoop(props, state)
       .then(res => expect(res.data).toEqual(response));
   });
 
@@ -114,34 +107,5 @@ describe("donate actions", () => {
     });
   });
 
-  it("complete transaction", () => {
-    const state = {
-      section: 0,
-      left: 0,
-      loading: false,
-      donation_type: "monthly",
-      amount: 30,
-      currency: "usd",
-      countries: [],
-      contact: { name: "", email: "", country: "" },
-      stripe: {
-        card_type: "",
-        number: "",
-        exp_month: "",
-        exp_year: "",
-        cvc: "",
-        token: ""
-      },
-      errors: { stripe: {}, contact: {} }
-    };
 
-    const response = {};
-
-    moxios.stubRequest(endpoint, { response });
-
-    return actions.storeConvertLoop(state)
-      .then(actions.storeEventConvertLoop.bind(null, state))
-      .then(actions.storeInfusion)
-      .then(res => console.log(res.data));
-  });
 });
