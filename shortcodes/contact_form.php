@@ -50,7 +50,7 @@ function bs_contact_form_sc($atts, $content = null) {
 		"vertical" => $at['vertical'],
 		"terms" => $at['terms'],
 		"country" => getCountry(),
-		"countries" => function_exists('getCountries') ? json_encode(getCountries()) : []
+		"countries" => function_exists('getCountries') ? getCountries() : []
 	];
 
   ob_start();
