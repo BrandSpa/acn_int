@@ -1,11 +1,11 @@
 import fetchwp from "../lib/fetch_wp";
 
 export const storeConvertLoop = (tags, contact) => {
-  const add_tags = typeof tags == "string"
+  let add_tags = typeof tags == "string"
     ? tags.trim().split(",")
     : [];
 
-  add_tags = add_tags.filter(tag => tag !== undefined);
+  add_tags = add_tags.filter(tag => tag !== '');
 
   const data = { ...contact, add_tags };
   return fetchwp("convertloop_contact", data);

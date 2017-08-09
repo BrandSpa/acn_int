@@ -103,8 +103,6 @@ class contactForm extends Component {
 
       this.setState({ loading: true });
 
-      console.log('props', this.props.cl.tags, 'state', this.state.contact);
-
       storeConvertLoop(this.props.cl.tags, this.state.contact)
       .then(() => {
         const l = bs.currentPageLang == "Español" ? "SP" : "EN";
@@ -120,7 +118,7 @@ class contactForm extends Component {
         return storeEvent("fb_event", event);
       })
       .then(() => {
-        // window.location = this.props.redirect;
+        window.location = this.props.redirect;
       });
     }
   }
