@@ -1,5 +1,11 @@
 <?php
-	$args = array( 'posts_per_page' => 4, 'exclude' => isset($post) ? $post->ID : null, 'post_type' => array('video','gallery','featured','post') );
+	$args = array(
+		'posts_per_page' => 4,
+		'exclude' => isset($post) ? $post->ID : null,
+		'post_type' => array('video','gallery','featured','post'),
+		'post_status' => 'publish'
+	);
+	
   $recent_posts = get_posts( $args );
 ?>
 
@@ -16,7 +22,7 @@
 			<h4>
 				<a href="<?php echo get_permalink($recent->ID) ?>">
 				<?php if(is_mobile()) : ?>
-				
+
 					<?php echo substr($recent->post_title, 0, 70) ?>...
 				<?php else: ?>
 					<?php echo $recent->post_title ?>

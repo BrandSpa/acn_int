@@ -5,8 +5,10 @@ class headerSlide extends React.Component {
   handleLink = (e) => {
     e.preventDefault();
     if (this.props.is_video) return this.modal.show();
-    window.location.href = this.props.url;
-  };
+    setTimeout(() => {
+      window.location.href = this.props.url;
+    }, 0);
+  }
 
   render() {
     const {image, image_position, title, subtitle, url, width, height} = this.props;
@@ -14,7 +16,6 @@ class headerSlide extends React.Component {
     // let bg = `url(${image})`;
 
     let style = {
-      // backgroundImage: bg,
       backgroundPosition: image_position,
       width,
       height
