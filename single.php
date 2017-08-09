@@ -56,7 +56,7 @@
 
 	<div
 		class="bs-post-share"
-		data-props="<?php echo json_encode($props) ?>"
+		data-props='<?php echo json_encode($props) ?>'
 	>
 	</div>
 	<?php require('templates/post_donate.php') ?>
