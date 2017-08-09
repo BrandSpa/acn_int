@@ -6,6 +6,7 @@
 	z-index: 9999;
 	position: fixed;
 	top: 0;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 
 	@media #{$s} {
 		padding: 0;
@@ -60,7 +61,7 @@
 .menu {
 	float: right;
 	padding: 0;
-	
+
 	&--show {
 		display: block;
 	}
