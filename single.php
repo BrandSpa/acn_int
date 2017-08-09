@@ -48,8 +48,8 @@
 
 	<?php require('templates/post_share.php') ?>
 	<div class="bs-post-share" data-props='{
-		"title":  <?php echo gett('¿Quiéres que el mundo conozca la realidad de la Iglesia que Sufre en el Mundo?') ?>,
-	  "subtitle": <?php echo gett('Comparte este artículo') ?>
+		"title":  "<?php echo gett('¿Quiéres que el mundo conozca la realidad de la Iglesia que Sufre en el Mundo?') ?>",
+	  "subtitle": "<?php echo gett('Comparte este artículo') ?>"
 	}'></div>
 	<?php require('templates/post_donate.php') ?>
 
