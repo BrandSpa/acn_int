@@ -42,8 +42,8 @@ class headerSlider extends Component {
       ? document.querySelector(".nav").offsetHeight
       : 0;
 
-    const sliderHeight = windowHeight && navHeight && headerBannerHeight
-      ? windowHeight - navHeight - headerBannerHeight
+    const sliderHeight = windowHeight && navHeight
+      ? windowHeight - navHeight
       : "auto";
 
     return {
