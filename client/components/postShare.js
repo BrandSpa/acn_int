@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class PostShare extends Component {
 
   onRedirect = (e) => {
+    e.preventDefault();
     let href = e.target.href;
     console.log(href);
   }
@@ -18,7 +19,6 @@ class PostShare extends Component {
       <div className="bs-post__share">
       	<div className="l-wrap">
       	 <span className="bs-post__share-subtitle">{subtitle}</span>
-
       		<ul>
       			<li>
             	<a
