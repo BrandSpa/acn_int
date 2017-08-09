@@ -9,7 +9,7 @@ class PostShare extends Component {
 
   render() {
     const currentUrl = window.location.href;
-    const {title, subtitle} = this.props;
+    const { title, subtitle } = this.props;
 
     return (
       <div>

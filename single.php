@@ -45,12 +45,18 @@
 	</div>
 
 	</div>
+	<?php
 
-	<?php require('templates/post_share.php') ?>
-	<div class="bs-post-share" data-props='{
-		"title":  "<?php echo gett('¿Quiéres que el mundo conozca la realidad de la Iglesia que Sufre en el Mundo?') ?>",
-	  "subtitle": "<?php echo gett('Comparte este artículo') ?>"
-	}'></div>
+		$props = [
+			"title" => gett('¿Quiéres que el mundo conozca la realidad de la Iglesia que Sufre en el Mundo?') ,
+			"subtitle" => gett('Comparte este artículo')
+		];
+
+	 ?>
+	<div
+		class="bs-post-share"
+		data-props="<?php echo json_encode($props) ?>">
+	</div>
 	<?php require('templates/post_donate.php') ?>
 
 	<div class="l-wrap" style="margin: 40px auto">
