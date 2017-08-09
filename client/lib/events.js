@@ -100,16 +100,16 @@ export const eventConvertloopAsync = ({ name, person = {}, metadata = {} }) => {
 const runEvent = (eventName, data) => {
   switch (eventName) {
     case 'ga_event':
-      eventGoogleAnalytics(data);
+      return eventGoogleAnalytics(data);
       break;
     case 'ga_ecommerce_event':
-      eventGoogleEcommerce(data);
+      return eventGoogleEcommerce(data);
       break;
     case 'fb_event':
-      eventFacebook(data);
+      return eventFacebook(data);
       break;
     case 'cl_event':
-      eventConvertloop(data);
+      return eventConvertloop(data);
       break;
     default:
       return Promise.resolve();

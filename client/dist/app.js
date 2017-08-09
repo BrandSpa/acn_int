@@ -477,16 +477,16 @@ var eventConvertloopAsync = exports.eventConvertloopAsync = function eventConver
 var runEvent = function runEvent(eventName, data) {
   switch (eventName) {
     case 'ga_event':
-      eventGoogleAnalytics(data);
+      return eventGoogleAnalytics(data);
       break;
     case 'ga_ecommerce_event':
-      eventGoogleEcommerce(data);
+      return eventGoogleEcommerce(data);
       break;
     case 'fb_event':
-      eventFacebook(data);
+      return eventFacebook(data);
       break;
     case 'cl_event':
-      eventConvertloop(data);
+      return eventConvertloop(data);
       break;
     default:
       return _promise2['default'].resolve();
