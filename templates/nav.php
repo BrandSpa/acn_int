@@ -12,7 +12,21 @@
 					</g>
 			</svg>
 		</a>
-		<div class="bs-menu" data-props='{"links": <?php $menuId = get_nav_menu_locations()['header']; echo json_encode(wp_get_nav_menu_items($menuId)); ?>}'></div>
+
+		<?php
+		function getNavArr() {
+			$menuId = get_nav_menu_locations()['header'];
+			if($menuId) {
+				return json_encode(wp_get_nav_menu_items($menuId));
+			} else {
+				return json_encode(array());
+			}
+		}
+
+
+		?>
+
+	<div class="bs-menu" data-props='{"links": <?php echo getNavArr() ?>}'></div>
 
 
 	<ul class="menu--mobile">
