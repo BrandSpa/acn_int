@@ -859,7 +859,8 @@ button, .btn {
       right: 20px; } }
 
 .menu {
-  float: right; }
+  float: right;
+  padding: 0; }
   .menu--show {
     display: block; }
   .menu--mobile {
