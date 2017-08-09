@@ -42,12 +42,11 @@ class contactForm extends Component {
   }
 
   componentDidMount() {
-    return fetchOfficesCountries()
-      .then(this.setCountry);
+    this.setCountry();
   }
 
   setCountry = (res) => {
-    const countries = res.data;
+    const countries = this.props.countries;
     this.setState({
       contact: {
         ...this.state.contact,
