@@ -71,7 +71,7 @@ class Donate extends Component {
           value: amount
         };
         console.log("ga", event);
-        storeEvent("ga_event");
+        storeEvent("ga_event", event);
       })
       .then(() => {
         const event = {
@@ -93,7 +93,7 @@ class Donate extends Component {
           content: { value: amount, currency: "USD" }
         };
         console.log("fb", event);
-        return storeEvent("fb_event");
+        return storeEvent("fb_event", event);
       })
       .then(() => {
         const event = {

@@ -5427,7 +5427,7 @@ var Donate = function (_Component) {
           value: amount
         };
         console.log("ga", event);
-        (0, _events.storeEvent)("ga_event");
+        (0, _events.storeEvent)("ga_event", event);
       }).then(function () {
         var event = {
           name: "Donation " + donation_type,
@@ -5446,7 +5446,7 @@ var Donate = function (_Component) {
           content: { value: amount, currency: "USD" }
         };
         console.log("fb", event);
-        return (0, _events.storeEvent)("fb_event");
+        return (0, _events.storeEvent)("fb_event", event);
       }).then(function () {
         var event = {
           customerId: contact.email + "-" + id,
