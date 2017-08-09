@@ -4,6 +4,7 @@ class PostShare extends Component {
 
   onRedirect = (e) => {
     e.preventDefault();
+    console.log(e.target);
     let href = e.target.getAttribute('href');
     console.log(href);
   }
