@@ -39,7 +39,7 @@ function bs_contact_form_sc($atts, $content = null) {
 			"email" => $at['email-placeholder'],
 			"country" => $at['country-placeholder']
 		],
-		"validationMessages": [
+		"validationMessages" => [
 			"name" => $at['name-validation'],
 			"lastname" => $at['lastname-validation'],
 			"email" => $at['email-validation'],
