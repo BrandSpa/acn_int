@@ -6384,7 +6384,8 @@ var Menu = function (_Component) {
       e.preventDefault();
       _this.setState({ openlangs: !_this.state.openlangs });
     }, _this.getLangs = function () {
-      var links = _this.props.links;
+      var _this$props$links = _this.props.links,
+          links = _this$props$links === undefined ? [] : _this$props$links;
 
       var langsTitle = links.filter(function (link) {
         return link.classes.indexOf("current-lang") !== -1;
@@ -6423,7 +6424,8 @@ var Menu = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var links = this.props.links;
+      var _props$links = this.props.links,
+          links = _props$links === undefined ? [] : _props$links;
 
 
       return _react2["default"].createElement(
