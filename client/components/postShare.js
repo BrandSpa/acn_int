@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { eventGoogleAnalytics, eventConvertloop } from "../lib/events";
+import { eventGoogleAnalytics, eventConvertloopAsync } from "../lib/events";
 
 class PostShare extends Component {
 
@@ -18,7 +18,7 @@ class PostShare extends Component {
         }
       };
 
-      return eventConvertloop (event);
+      return eventConvertloopAsync(event);
     })
     .then(() => {
       setTimeout(() => {

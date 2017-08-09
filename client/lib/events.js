@@ -1,4 +1,5 @@
 import getCookies from './cookies';
+import fetchwp from './fetch_wp';
 const cookies = getCookies();
 
 export const runEvents = () => {
@@ -86,6 +87,13 @@ export const eventConvertloop = ({ name, person = {}, metadata = {} }) => {
     return resolve();
   });
 
+  return p;
+};
+
+export const eventConvertloopAsync = ({ name, person = {}, metadata = {} }) => {
+  const personWithPid = { ...person, pid: cookies.dp_pid };
+
+  const p = fetchwp("convertloop_event", { name, metadata, person: personWithPid });
   return p;
 };
 
