@@ -1,6 +1,6 @@
 import request from "axios";
 import qs from "qs";
-import { eventGoogleAnalytics, eventConvertloop } from "./events";
+import { eventGoogleAnalytics, eventConvertloopAsync } from "./events";
 
 export default () => {
   if($(".bs-donate a")) {
@@ -13,7 +13,7 @@ export default () => {
 
       eventGoogleAnalytics({category: "CLICK", action: "DONATE", label: "CLICKDONATE_EN"})
         .then(() => {
-          return eventConvertloop({name: "Donate Click"});
+          return eventConvertloopAsync({name: "Donate Click"});
         })
         .then(() => {
           let data = qs.stringify({action: "donate_redirect"});

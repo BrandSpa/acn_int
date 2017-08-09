@@ -89,11 +89,3 @@ const cookies = {};
 document.cookie.split(';').forEach((l) => {
   cookies[l.split('=')[0].trim()] = l.split('=')[1];
 });
-
-if (document.querySelector('.bs-donate')) {
-  document.querySelector('.bs-donate').addEventListener('click', () => {
-    if (typeof _dp !== 'undefined') {
-      _dp('track', 'donate_click');
-    }
-  });
-}
