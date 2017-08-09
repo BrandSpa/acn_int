@@ -104,6 +104,8 @@ class contactForm extends Component {
     if (isValid) {
       this.setState({ loading: true });
 
+      console.log('props', props, 'state', state);
+
       storeConvertLoop(props, state)
       .then(() => {
         const l = bs.currentPageLang == "Español" ? "SP" : "EN";
