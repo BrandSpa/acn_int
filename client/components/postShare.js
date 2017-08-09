@@ -15,12 +15,12 @@ class PostShare extends Component {
       <div>
       <span className="title">{title}</span>
 
-      <div className="bs-post__share" style="background: #F7F7F7">
-      	<div className="l-wrap" style="text-align: center">
-      	 <span style="display: inline-block;font-size: 20px;color: #3C515F;">{subtitle}</span>
+      <div className="bs-post__share">
+      	<div className="l-wrap">
+      	 <span className="bs-post__share-subtitle">{subtitle}</span>
 
-      		<ul style="display: inline-block">
-      			<li style="display: inline-block; margin-right: 15px">
+      		<ul>
+      			<li>
             	<a
                 onClick={this.onRedirect}
                 className="icon"
@@ -29,7 +29,7 @@ class PostShare extends Component {
               	<i className="ion-social-facebook"></i>
               </a>
             </li>
-      			<li style="display: inline-block; margin-right: 15px">
+      			<li>
       				<a
                 onClick={this.onRedirect}
                 className="icon"
@@ -38,7 +38,7 @@ class PostShare extends Component {
       					<i className="ion-social-twitter"></i>
               </a>
       			</li>
-      			<li style="display: inline-block; margin-right: 15px">
+      			<li>
       				<a
                 onClick={this.onRedirect}
                 className="icon"
@@ -47,7 +47,7 @@ class PostShare extends Component {
       					<i className="ion-social-linkedin"></i>
               </a>
       			</li>
-      			<li style="display: inline-block; margin-right: 15px">
+      			<li>
       				<a
                 onClick={this.onRedirect}
                 className="icon"
@@ -60,6 +60,29 @@ class PostShare extends Component {
       	</div>
       </div>
       <style jsx>{`
+        .bs-post__share {
+          background: #F7F7F7
+        }
+
+        .bs-post__share-subtitle {
+          display: inline-block;
+          font-size: 20px;
+          color: #3C515F
+        }
+
+        .l-wrap {
+          text-align: center
+        }
+
+        ul {
+          display: inline-block
+        }
+
+        ul li {
+          display: inline-block;
+          margin-right: 15px
+        }
+
         .title {
           text-align: center;
           font-size: 20px;
