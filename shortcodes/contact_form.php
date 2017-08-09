@@ -21,40 +21,43 @@ function bs_contact_form_sc($atts, $content = null) {
 	];
 
   $at = shortcode_atts( $attributes , $atts );
-	$getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
+	$getLang = function_exists("pll_current_language") ? pll_current_language("name") . "," : "";
+
+	$props = [
+		"cl" => [
+			"tags" => strtoupper($getLang) . $at['convertloop_tags'],
+			"event" =>  $at['convertloop_event']
+		],
+		"texts" => [
+			"button" => $at['button-text'],
+			"select_country" => gett('Select country'),
+			"terms" => $at['terms-text']
+		],
+		"placeholders" => [
+			"name" => $at['name-placeholder'],
+			"lastname" => $at['lastname-placeholder'],
+			"email" => $at['email-placeholder'],
+			"country" => $at['country-placeholder']
+		],
+		"validationMessages": [
+			"name" => $at['name-validation'],
+			"lastname" => $at['lastname-validation'],
+			"email" => $at['email-validation'],
+			"terms" => $at['terms-validation']
+		],
+		"redirect" => $at['redirect'] ? $at['redirect'] : get_option('subscribe_redirect'),
+		"btnBg" => $at['btn-bg'],
+		"vertical" => $at['vertical'],
+		"terms" => $at['terms'],
+		"country" => getCountry()
+	];
+
   ob_start();
 ?>
 
 <div
 	class="contact-form"
-	data-props='{
-		"cl": {
-			"tags": "<?php echo strtoupper($getLang) . ',' . $at['convertloop_tags'] ?>",
-			"event": "<?php echo $at['convertloop_event'] ?>"
-		},
-		"country": "<?php echo getCountry() ?>",
-		"texts": {
-			"button": "<?php echo $at['button-text'] ?>",
-			"select_country": "<?php echo gett('Select country') ?>",
-			"terms": "<?php echo $at['terms-text'] ?>"
-		},
-		"placeholders": {
-			"name": "<?php echo $at['name-placeholder'] ?>",
-			"lastname": "<?php echo $at['lastname-placeholder'] ?>",
-			"email": "<?php echo $at['email-placeholder'] ?>",
-			"country": "<?php echo $at['country-placeholder'] ?>"
-		},
-		"validationMessages": {
-			"name": "<?php echo $at['name-validation'] ?>",
-			"lastname": "<?php echo $at['lastname-validation'] ?>",
-			"email": "<?php echo $at['email-validation'] ?>",
-			"terms": "<?php echo $at['terms-validation'] ?>"
-		},
-		"redirect": "<?php echo $at['redirect'] ? $at['redirect'] : get_option('subscribe_redirect') ?>",
-		"btnBg": "<?php echo $at['btn-bg'] ?>",
-		"vertical": "<?php echo $at['vertical'] ?>",
-		"terms": "<?php echo $at['terms'] ?>"
-	}'
+	data-props='<?php echo json_encode($props) ?>'
 >
 </div>
 

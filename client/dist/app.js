@@ -4708,14 +4708,14 @@ var contactForm = function (_Component) {
 
         _this.setState({ loading: true });
 
-        console.log('props', props.cl.tags, 'state', state.contact);
+        console.log('props', _this.props.cl.tags, 'state', _this.state.contact);
 
-        (0, _contact.storeConvertLoop)(props.cl.tags, state.contact).then(function () {
+        (0, _contact.storeConvertLoop)(_this.props.cl.tags, _this.state.contact).then(function () {
           var l = bs.currentPageLang == "Español" ? "SP" : "EN";
           var event = { category: "SUBSCRIBE", action: "SUBSCRIBE_PRAY", label: "PRAY_" + l };
           return (0, _events.storeEvent)("ga_event", event);
         }).then(function () {
-          var event = { name: "Subscription", person: state.contact };
+          var event = { name: "Subscription", person: _this.state.contact };
           return (0, _events.storeEvent)("cl_event", event);
         }).then(function () {
           var event = { eventName: "Lead" };

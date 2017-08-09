@@ -104,16 +104,16 @@ class contactForm extends Component {
 
       this.setState({ loading: true });
 
-      console.log('props', props.cl.tags, 'state', state.contact);
+      console.log('props', this.props.cl.tags, 'state', this.state.contact);
 
-      storeConvertLoop(props.cl.tags, state.contact)
+      storeConvertLoop(this.props.cl.tags, this.state.contact)
       .then(() => {
         const l = bs.currentPageLang == "Español" ? "SP" : "EN";
         const event = {category: "SUBSCRIBE", action: "SUBSCRIBE_PRAY", label: `PRAY_${l}`};
         return storeEvent("ga_event", event);
       })
       .then(() => {
-        const event = {name: "Subscription", person: state.contact};
+        const event = {name: "Subscription", person: this.state.contact};
         return storeEvent("cl_event", event);
       })
       .then(() => {
