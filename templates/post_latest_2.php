@@ -1,5 +1,5 @@
 <?php
-var_dump($post);
+var_dump(isset($post));
 $query = new Wp_Query(array(
   'post_type' => array('video','gallery','featured','post'),
   'posts_per_page' => 3,
