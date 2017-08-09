@@ -120,7 +120,7 @@ class contactForm extends Component {
         return storeEvent("fb_event", event);
       })
       .then(() => {
-        window.location = this.props.redirect;
+        // window.location = this.props.redirect;
       });
     }
   }
