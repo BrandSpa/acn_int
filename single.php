@@ -48,7 +48,7 @@
 	<?php
 
 		$props = [
-			"title" => gett('¿Quiéres que el mundo conozca la realidad de la Iglesia que Sufre en el Mundo?') ,
+			"title" => gett('¿Quiéres que el mundo conozca la realidad de la Iglesia que Sufre en el Mundo?'),
 			"subtitle" => gett('Comparte este artículo')
 		];
 
