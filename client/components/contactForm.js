@@ -100,13 +100,13 @@ class contactForm extends Component {
 
   storeContact = isValid => {
     const {props, state} = this;
-
     if (isValid) {
+
       this.setState({ loading: true });
 
-      console.log('props', props, 'state', state);
+      console.log('props', props.cl.tags, 'state', state.contact);
 
-      storeConvertLoop(props, state)
+      storeConvertLoop(props.cl.tags, state.contact)
       .then(() => {
         const l = bs.currentPageLang == "Español" ? "SP" : "EN";
         const event = {category: "SUBSCRIBE", action: "SUBSCRIBE_PRAY", label: `PRAY_${l}`};

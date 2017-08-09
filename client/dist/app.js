@@ -4704,13 +4704,13 @@ var contactForm = function (_Component) {
           props = _this2.props,
           state = _this2.state;
 
-
       if (isValid) {
+
         _this.setState({ loading: true });
 
-        console.log('props', props, 'state', state);
+        console.log('props', props.cl.tags, 'state', state.contact);
 
-        (0, _contact.storeConvertLoop)(props, state).then(function () {
+        (0, _contact.storeConvertLoop)(props.cl.tags, state.contact).then(function () {
           var l = bs.currentPageLang == "Español" ? "SP" : "EN";
           var event = { category: "SUBSCRIBE", action: "SUBSCRIBE_PRAY", label: "PRAY_" + l };
           return (0, _events.storeEvent)("ga_event", event);
