@@ -1,12 +1,28 @@
 import React, { Component } from "react";
+import { eventGoogleAnalytics, eventConvertloop } from "../lib/events";
 
 class PostShare extends Component {
 
   onRedirect = (e) => {
     e.preventDefault();
-    console.log(e.currentTarget);
-    let href = e.target.getAttribute('href');
-    console.log(href);
+    const href = e.currentTarget.getAttribute('href');
+    const l = bs.currentPageLang == "Español" ? "SP" : "EN";
+
+    eventGoogleAnalytics({category: 'SHARE', action: 'SHARE', label: `SHARE_${l}`})
+    .then(() => {
+      const event = {
+        name: 'Shares',
+        person: {},
+        metadata: {
+          url: window.location.href
+        }
+      };
+
+      return eventConvertloop (event);
+    })
+    .then(() => {
+      window.location = href;
+    })
   }
 
   render() {
