@@ -66,10 +66,18 @@ class Donate extends Component {
     actions
       .storeConvertLoop(this.props.tags, this.state.contact)
       .then(() => {
+        const action = donation_type === 'monthly'
+        ? 'DONATION_MONTHLY'
+        : 'DONATION_UNIQUE';
+
+        const label = bs.currentPageLang === "Español"
+        ? "DONATION_SP"
+        : "DONATION_EN";
+
         const event = {
+          action,
+          label,
           category: "DONATION",
-          action: "DONATION_MONTHLY",
-          label: "DONATION_EN",
           value: amount
         };
         console.log("ga", event);
@@ -107,7 +115,10 @@ class Donate extends Component {
       })
       .then(res => {
         const url = `${base}?amount=${amount}`;
-        window.location = base;
+        setTimeout(() => {
+          window.location = url;
+        }, 0);
+
       });
   }
 
