@@ -104,7 +104,7 @@ class Donate extends Component {
         return storeEvent("ga_ecm_event", event);
       })
       .then(res => {
-        // const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&order_id=${id}`;
+        const url = `${base}?amount=${amount}`;
         window.location = base;
       });
   }

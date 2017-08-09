@@ -61,7 +61,7 @@ class Donate extends Component {
     this.setState({loading: true});
 
     actions
-      .storeConvertLoop(this.props.tags, this.state.contact)
+      .storeConvertLoop(this.props.tags, contact)
       .then(() => {
         const l = bs.currentPageLang == "Español" ? "SP" : "EN";
         const event = {
@@ -104,7 +104,7 @@ class Donate extends Component {
       })
       .then(res => {
          if (donation_type == "monthly") {
-          // const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}`;
+          const url = `${base}?amount=${amount}`;
           setTimeout(() => {
             window.location = base;
           }, 0);
