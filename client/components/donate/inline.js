@@ -135,9 +135,17 @@ class DonateInline extends Component {
         console.log("fb", event);
         return storeEvent("fb_event");
       })
+      .then(() => {
+        const event = {
+          customerId: `${contact.email}-${id}`,
+          revenue: amount
+        };
+        console.log("ga_ecm_event", event);
+        return storeEvent("ga_ecm_event", event);
+      })
       .then(res => {
-        const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&order_id=${id}`;
-        window.location = url;
+        // const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&order_id=${id}`;
+        window.location = base;
       });
   };
 

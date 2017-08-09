@@ -3,7 +3,7 @@
 <div id="acn_int" class="bs-post" >
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		
+
 <?php if(!empty(get_the_post_thumbnail_url($post->ID, 'full'))): ?>
 	<?php require('templates/post_header_image.php') ?>
 <?php else: ?>
@@ -29,7 +29,7 @@
 		</div>
 
 		<div class="col-2-l"></div>
-		
+
 		<div class="col-3-l banner-vertical">
 			<?php if(get_lang() == 'en'): ?>
 				<a href="<?php echo get_option('banner_url_en') ?>">
@@ -45,8 +45,12 @@
 	</div>
 
 	</div>
-	
+
 	<?php require('templates/post_share.php') ?>
+	<div class="bs-post-share" data-props='{
+		"title":  <?php echo gett('¿Quiéres que el mundo conozca la realidad de la Iglesia que Sufre en el Mundo?') ?>,
+	  "subtitle": <?php echo gett('Comparte este artículo') ?>
+	}'></div>
 	<?php require('templates/post_donate.php') ?>
 
 	<div class="l-wrap" style="margin: 40px auto">
@@ -71,7 +75,7 @@
 				jQuery(this).remove();
 			});
 		}
-		
+
 	})
 </script>
 
@@ -89,7 +93,7 @@
 	right: 0;
 	margin: 0 auto;
 	width: 100%;
-	
+
 	background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */

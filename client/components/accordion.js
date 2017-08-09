@@ -3,8 +3,8 @@ import React from "react";
 class Accordion extends React.Component {
   static defaultProps = {
     background: "#687f87",
-    titleColor: ""
-  };
+    titleColor: "",
+  }
 
   state = { show: false };
 
@@ -38,7 +38,7 @@ class Accordion extends React.Component {
           onClick={this.toggle}
         >
           {btnTitle}
-          {" "}
+          {' '}
           <i
             className={this.state.show ? "ion-chevron-up" : "ion-chevron-down"}
           />

@@ -1,15 +1,13 @@
-import React, { Component } from "react";
-import request from "axios";
-import qs from "qs";
-import Amount from "./amount";
-import CreditCard from "./creditCard";
-import Contact from "./contact";
-import FourStep from "./four";
-import * as actions from "../../actions/donate";
-import { storeEvent } from "../../lib/events";
+import React, { Component } from 'react';
+import Amount from './amount';
+import CreditCard from './creditCard';
+import Contact from './contact';
+import FourStep from './four';
+import * as actions from '../../actions/donate';
+import { storeEvent } from '../../lib/events';
 
 function isAllValid(errors = {}) {
-  return Object.keys(errors).every(key => errors[key] == true);
+  return Object.keys(errors).every(key => errors[key] === true);
 }
 
 class Donate extends Component {
@@ -87,7 +85,6 @@ class Donate extends Component {
         };
         console.log("cl", event);
         return storeEvent("cl_event", event);
-
       })
       .then(() => {
         const event = {
@@ -97,10 +94,20 @@ class Donate extends Component {
         console.log("fb", event);
         return storeEvent("fb_event", event);
       })
+      .then(() => {
+        const event = {
+          customerId: `${contact.email}-${id}`,
+          revenue: amount
+        };
+        console.log("ga_ecm_event", event);
+        return storeEvent("ga_ecm_event", event);
+      })
       .then(res => {
          if (donation_type == "monthly") {
-          const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}`;
-          window.location = url;
+          // const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}`;
+          setTimeout(() => {
+            window.location = base;
+          }, 0);
         } else {
           this.setState({show_four: true});
           this.props.changeSection(1);

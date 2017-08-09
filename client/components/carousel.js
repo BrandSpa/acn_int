@@ -4,8 +4,8 @@ class Carousel extends React.Component {
   state = {
     currentSlide: 0,
     left: "0",
-    viewportWidth: "100%"
-  };
+    viewportWidth: '100%',
+  }
 
   componentDidMount() {
     const num = $(".bs-carousel-item").length;

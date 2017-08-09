@@ -1,7 +1,11 @@
 import React from "react";
 
 class GalleryHeader extends React.Component {
-  static defaultProps = { images: [], excerpts: [], texts: {} };
+  static defaultProps = {
+    images: [],
+    excerpts: [],
+    texts: {}
+  }
 
   state = {
     section: 0,
