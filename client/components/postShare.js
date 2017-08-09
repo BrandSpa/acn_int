@@ -58,27 +58,27 @@ class PostShare extends Component {
       			</li>
       		</ul>
       	</div>
-        <style jsx>{`
-          .title {
-            text-align: center;
-            font-size: 20px;
-            color: #3C515F;
-            display:block;
-            margin: 40px auto
-          }
-          .icon {
-            color: #939597;
-            width: 40px;
-            height: 40px;
-            border-radius: 40px;
-            text-align: center;
-            display: block;
-            border: 1px solid #939597;
-            padding: 5px;
-            font-size: 20px;
-          }
-        `}</style>
       </div>
+      <style jsx>{`
+        .title {
+          text-align: center;
+          font-size: 20px;
+          color: #3C515F;
+          display:block;
+          margin: 40px auto
+        }
+        .icon {
+          color: #939597;
+          width: 40px;
+          height: 40px;
+          border-radius: 40px;
+          text-align: center;
+          display: block;
+          border: 1px solid #939597;
+          padding: 5px;
+          font-size: 20px;
+        }
+      `}</style>
       </div>
     )
   }

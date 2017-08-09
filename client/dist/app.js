@@ -6510,33 +6510,36 @@ var PostShare = function (_Component) {
 
       return _react2["default"].createElement(
         "div",
-        null,
+        {
+          "data-jsx": 1785300590
+        },
         _react2["default"].createElement(
           "span",
-          { className: "title" },
+          { className: "title", "data-jsx": 1785300590
+          },
           title
         ),
         _react2["default"].createElement(
           "div",
-          { className: "bs-post__share", style: "background: #F7F7F7", "data-jsx": 1032371694
+          { className: "bs-post__share", style: "background: #F7F7F7", "data-jsx": 1785300590
           },
           _react2["default"].createElement(
             "div",
-            { className: "l-wrap", style: "text-align: center", "data-jsx": 1032371694
+            { className: "l-wrap", style: "text-align: center", "data-jsx": 1785300590
             },
             _react2["default"].createElement(
               "span",
-              { style: "display: inline-block;font-size: 20px;color: #3C515F;", "data-jsx": 1032371694
+              { style: "display: inline-block;font-size: 20px;color: #3C515F;", "data-jsx": 1785300590
               },
               subtitle
             ),
             _react2["default"].createElement(
               "ul",
-              { style: "display: inline-block", "data-jsx": 1032371694
+              { style: "display: inline-block", "data-jsx": 1785300590
               },
               _react2["default"].createElement(
                 "li",
-                { style: "display: inline-block; margin-right: 15px", "data-jsx": 1032371694
+                { style: "display: inline-block; margin-right: 15px", "data-jsx": 1785300590
                 },
                 _react2["default"].createElement(
                   "a",
@@ -6544,15 +6547,15 @@ var PostShare = function (_Component) {
                     onClick: this.onRedirect,
                     className: "icon",
                     href: "https://www.facebook.com/sharer/sharer.php?u=" + currentUrl,
-                    "data-jsx": 1032371694
+                    "data-jsx": 1785300590
                   },
-                  _react2["default"].createElement("i", { className: "ion-social-facebook", "data-jsx": 1032371694
+                  _react2["default"].createElement("i", { className: "ion-social-facebook", "data-jsx": 1785300590
                   })
                 )
               ),
               _react2["default"].createElement(
                 "li",
-                { style: "display: inline-block; margin-right: 15px", "data-jsx": 1032371694
+                { style: "display: inline-block; margin-right: 15px", "data-jsx": 1785300590
                 },
                 _react2["default"].createElement(
                   "a",
@@ -6560,15 +6563,15 @@ var PostShare = function (_Component) {
                     onClick: this.onRedirect,
                     className: "icon",
                     href: "https://twitter.com/intent/tweet?text=" + currentUrl,
-                    "data-jsx": 1032371694
+                    "data-jsx": 1785300590
                   },
-                  _react2["default"].createElement("i", { className: "ion-social-twitter", "data-jsx": 1032371694
+                  _react2["default"].createElement("i", { className: "ion-social-twitter", "data-jsx": 1785300590
                   })
                 )
               ),
               _react2["default"].createElement(
                 "li",
-                { style: "display: inline-block; margin-right: 15px", "data-jsx": 1032371694
+                { style: "display: inline-block; margin-right: 15px", "data-jsx": 1785300590
                 },
                 _react2["default"].createElement(
                   "a",
@@ -6576,15 +6579,15 @@ var PostShare = function (_Component) {
                     onClick: this.onRedirect,
                     className: "icon",
                     href: "https://www.linkedin.com/shareArticle?mini=true&url=" + currentUrl,
-                    "data-jsx": 1032371694
+                    "data-jsx": 1785300590
                   },
-                  _react2["default"].createElement("i", { className: "ion-social-linkedin", "data-jsx": 1032371694
+                  _react2["default"].createElement("i", { className: "ion-social-linkedin", "data-jsx": 1785300590
                   })
                 )
               ),
               _react2["default"].createElement(
                 "li",
-                { style: "display: inline-block; margin-right: 15px", "data-jsx": 1032371694
+                { style: "display: inline-block; margin-right: 15px", "data-jsx": 1785300590
                 },
                 _react2["default"].createElement(
                   "a",
@@ -6592,19 +6595,19 @@ var PostShare = function (_Component) {
                     onClick: this.onRedirect,
                     className: "icon",
                     href: "whatsapp://send?text=" + currentUrl,
-                    "data-jsx": 1032371694
+                    "data-jsx": 1785300590
                   },
-                  _react2["default"].createElement("i", { className: "ion-social-whatsapp-outline", "data-jsx": 1032371694
+                  _react2["default"].createElement("i", { className: "ion-social-whatsapp-outline", "data-jsx": 1785300590
                   })
                 )
               )
             )
-          ),
-          _react2["default"].createElement(_style2["default"], {
-            styleId: 1032371694,
-            css: ".title[data-jsx=\"1032371694\"]{-webkit-text-align:center;text-align:center;font-size:20px;color:#3C515F;display:block;margin:40px auto}.icon[data-jsx=\"1032371694\"]{color:#939597;width:40px;height:40px;border-radius:40px;-webkit-text-align:center;text-align:center;display:block;border:1px solid #939597;padding:5px;font-size:20px}"
-          })
-        )
+          )
+        ),
+        _react2["default"].createElement(_style2["default"], {
+          styleId: 1785300590,
+          css: ".title[data-jsx=\"1785300590\"]{-webkit-text-align:center;text-align:center;font-size:20px;color:#3C515F;display:block;margin:40px auto}.icon[data-jsx=\"1785300590\"]{color:#939597;width:40px;height:40px;border-radius:40px;-webkit-text-align:center;text-align:center;display:block;border:1px solid #939597;padding:5px;font-size:20px}"
+        })
       );
     }
   }]);
