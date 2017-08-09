@@ -36,6 +36,18 @@ function bs_donate_react_sc($atts, $content = null) {
     "is_blue" => false
 	 ], $atts);
 	$getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
+
+	$props = [
+		"texts" => $at,
+		"countries": function_exists('getCountries') ? getCountries() : [],
+		"is_blue": $at['is_blue'],
+		"redirect" => [
+			"monthly" => get_option('donate_monthly_redirect'),
+			"once" => get_option('donate_once_redirect')
+		],
+		"tags" => empty($getLang) ? strtoupper($getLang) . ',' : '' . $at['tags'],
+	];
+
 	ob_start();
 ?>
 
@@ -43,16 +55,7 @@ function bs_donate_react_sc($atts, $content = null) {
 
 <div
 	class="bs-donate-react"
-	data-props='{
-    "texts": <?php echo json_encode($at) ?>,
-		"countries": <?php echo function_exists('getCountries') ? json_encode(getCountries()) : [] ?>,
-    "is_blue": "<?php echo $at['is_blue'] ?>",
-    "redirect": {
-      "monthly": "<?php echo get_option('donate_monthly_redirect') ?>",
-      "once": "<?php echo get_option('donate_once_redirect') ?>"
-    },
-		"tags": "<?php echo empty($getLang) ? strtoupper($getLang) . ',' : '' . $at['tags'] ?>"
-  }'
+	data-props='<?php echo json_encode($props) ?>'
 >
 </div>
 <?php else: ?>
