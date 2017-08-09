@@ -61,7 +61,7 @@
 	</div>
 	<?php require('templates/post_donate.php') ?>
 
-	<div class="l-wrap" style="margin: 40px auto">
+	<div class="l-wrap" style="margin: 40px auto; background:#f3f3f3">
 		<h3 style="font-size: 28px; font-weight: normal; display: block; margin: 40px 0;color: #3C515F"><?php echo gett('Latest news'); ?></h3>
 		<?php require('templates/post_latest_2.php') ?>
 	</div>
