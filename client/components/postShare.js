@@ -21,7 +21,9 @@ class PostShare extends Component {
       return eventConvertloop (event);
     })
     .then(() => {
-      window.location = href;
+      setTimeout(() => {
+        window.location = href;
+      }, 0);
     })
   }
 
