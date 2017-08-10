@@ -145,6 +145,10 @@
       color: #fff;
     }
 
+    .form-group__addon {
+      font-weight: bold;
+    }
+
   }
 
   .radio {
@@ -345,7 +349,6 @@ a {
   .form-group__addon {
     color: #3C515F;
     top: 25%;
-    font-weight: bold;
   }
 
   .donate_react__submit {

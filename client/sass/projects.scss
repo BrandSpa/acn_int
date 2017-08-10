@@ -35,6 +35,7 @@
   	border-right: 30px solid transparent;
   	border-top: 30px solid #fff;
 		transition: 300ms all;
+
 		@media #{$s} {
 			border-left: 10px solid transparent;
   		border-right: 10px solid transparent;
@@ -45,6 +46,7 @@
 	&__content{
 		position: relative;
 		display: flex;
+
 		@media #{$s} {
 			display: block;
 		}
@@ -62,6 +64,7 @@
 				color: #fff;
 				margin: 0 0 20px 0;
 				font-weight: bold;
+
 				@media #{$s} {
 					margin-bottom: 20px;
 				}
@@ -71,6 +74,7 @@
 				color: #fff;
 				margin-bottom: 30px;
 				font-size: (16 / $font-size-base) * 1em;
+
 				@media #{$s} {
 					margin-bottom: 20px;
 				}
@@ -84,6 +88,7 @@
 
 		&__content-right {
 			transition: all 300ms;
+
 			@media #{$s} {
 				min-height: 200px !important;
 			}

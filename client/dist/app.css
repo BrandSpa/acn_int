@@ -1546,6 +1546,8 @@ button, .btn {
     .donate_react__submit:hover {
       background: transparent;
       color: #fff; }
+    .donate_react__submit .form-group__addon {
+      font-weight: bold; }
   .donate_react .radio {
     color: #fff;
     float: left; }
@@ -1695,8 +1697,7 @@ a:hover {
 
 .donate_inline .form-group__addon {
   color: #3C515F;
-  top: 25%;
-  font-weight: bold; }
+  top: 25%; }
 
 .donate_inline .donate_react__submit:hover {
   background: #ed344e; }
