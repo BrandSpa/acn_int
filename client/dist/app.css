@@ -1347,8 +1347,11 @@ button, .btn {
 .contact-form .checkbox label {
   color: #fff; }
 
-.contact-form .btn:hover {
-  opacity: .9; }
+.contact-form .btn {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
+  .contact-form .btn:hover {
+    opacity: .9; }
 
 .projects__icons {
   text-align: center;

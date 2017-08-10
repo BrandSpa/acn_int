@@ -41,6 +41,7 @@
 	}
 
 	.btn {
+		transition: all .5s ease-in-out;
 		&:hover {
 			opacity: .9;
 		}
