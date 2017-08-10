@@ -446,7 +446,7 @@ body {
   left: 0;
   -webkit-transition: left 300ms;
   transition: left 300ms;
-  padding-top: 100px;
+  padding-top: 90px;
   line-height: 1.44; }
   @media (max-width: 767px) {
     body {
