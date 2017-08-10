@@ -836,10 +836,10 @@ button, .btn {
     .nav__donate {
       padding: 0 20px; } }
   .nav__donate a {
-    font-size: 1.33333em !important;
+    font-size: 18px !important;
     border-radius: 5px;
     border: 2px solid #F1364E;
-    padding: 15px 40px;
+    padding: 10px 35px;
     text-align: center;
     display: block;
     color: #F1364E !important;
