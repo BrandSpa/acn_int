@@ -1533,10 +1533,10 @@ button, .btn {
         background: #fff; }
   .donate_react__submit {
     background: transparent;
-    font-size: 1.78571em;
+    font-size: 20px;
     color: #fff;
-    border: 3px solid #ED344E;
-    border-radius: 8px;
+    border: 2px solid #ED344E;
+    border-radius: 5px;
     text-transform: uppercase;
     line-height: 0;
     background: #ED344E;
