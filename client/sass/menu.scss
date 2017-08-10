@@ -26,10 +26,15 @@
 			text-align: center;
 			display: block;
 			color: #F1364E !important;
-
+			transition: all .5s ease-in-out;
 			@media #{$s} {
 				background: #F1364E;
 				color: #3c515f !important;
+			}
+
+			&:hover {
+				background: #F1364E;
+				color: #fff !important;
 			}
 		}
 
