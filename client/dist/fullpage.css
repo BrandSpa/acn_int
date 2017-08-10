@@ -2037,7 +2037,7 @@ a:hover {
     -ms-flex-pack: center;
     justify-content: center;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 600;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
     text-decoration: none; }
@@ -2046,9 +2046,9 @@ a:hover {
         font-size: 1em; } }
     .change-amount li a:hover, .change-amount li a.active {
       text-decoration: none;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.2);
       color: #fff;
-      font-weight: 400; }
+      font-weight: bold; }
 
 .pro-bar {
   height: 10px;

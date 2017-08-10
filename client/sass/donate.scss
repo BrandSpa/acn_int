@@ -248,7 +248,7 @@ a {
       align-content: center;
       justify-content: center;
       font-size: (15 / 15) * 1em;
-      font-weight: 300;
+      font-weight: 600;
       transition: all 300ms ease;
       text-decoration: none;
 
@@ -258,9 +258,9 @@ a {
 
       &:hover, &.active {
         text-decoration: none;
-        background: rgba(255,255, 255, .5);
+        background: rgba(255,255, 255, .2);
         color: #fff;
-        font-weight: 400;
+        font-weight: bold;
       }
     }
   }
