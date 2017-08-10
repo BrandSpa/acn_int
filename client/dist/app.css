@@ -1695,7 +1695,8 @@ a:hover {
 
 .donate_inline .form-group__addon {
   color: #3C515F;
-  top: 25%; }
+  top: 25%;
+  font-weight: bold; }
 
 .donate_inline .donate_react__submit:hover {
   background: #ed344e; }
