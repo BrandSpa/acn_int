@@ -552,7 +552,9 @@ p {
   .dropdown-content--show {
     display: block; }
   .dropdown-content a {
-    border-bottom: 1px solid #ddd; }
+    border-bottom: 1px solid #ddd;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out; }
     .dropdown-content a:hover {
       background: #ddd; }
 
