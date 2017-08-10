@@ -851,7 +851,9 @@ button, .btn {
         color: #3c515f !important; } }
     .nav__donate a:hover {
       background: #F1364E;
-      color: #fff !important; }
+      color: #fff !important;
+      -webkit-box-shadow: 0 0 5px #F1364E;
+      box-shadow: 0 0 5px #F1364E; }
 
 .logo {
   display: block;
