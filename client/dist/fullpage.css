@@ -2131,3 +2131,6 @@ a:hover {
 
 .contact-form .checkbox label {
   color: #fff; }
+
+.contact-form .btn:hover {
+  opacity: .9; }

@@ -1347,6 +1347,9 @@ button, .btn {
 .contact-form .checkbox label {
   color: #fff; }
 
+.contact-form .btn:hover {
+  opacity: .9; }
+
 .projects__icons {
   text-align: center;
   padding: 0;
