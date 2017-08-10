@@ -1855,7 +1855,8 @@ html.fp-enabled,
   margin: 0; }
   .donate_react input {
     border-color: #fff;
-    color: #fff; }
+    color: #fff;
+    font-size: 15px; }
     .donate_react input::-webkit-input-placeholder {
       color: #fff; }
     .donate_react input:-moz-placeholder {
