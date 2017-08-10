@@ -2113,8 +2113,6 @@ a:hover {
   margin-right: -1px; }
   .contact-form .input-container input {
     width: 100%; }
-    .contact-form .input-container input:focus {
-      border-color: #f4334a; }
   @media (max-width: 767px) {
     .contact-form .input-container {
       width: 100% !important; } }
@@ -2127,8 +2125,9 @@ a:hover {
 .contact-form input, .contact-form select {
   width: 100%;
   margin-left: -1px;
-  background: white;
-  /*Jul*/ }
+  background: white; }
+  .contact-form input:focus, .contact-form select:focus {
+    border-color: #324049; }
 
 .contact-form .checkbox label {
   color: #fff; }

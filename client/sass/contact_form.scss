@@ -5,9 +5,8 @@
 
 		input {
 			width: 100%;
-			&:focus {
-				border-color: rgb(244, 51, 74);
-			}
+
+
 		}
 
 		@media #{$s} {
@@ -29,7 +28,10 @@
 	input, select {
 		width: 100%;
 		margin-left: -1px;
-		background:white;/*Jul*/
+		background:white;
+		&:focus {
+			border-color: #324049;
+		}
 	}
 
 	.checkbox {
