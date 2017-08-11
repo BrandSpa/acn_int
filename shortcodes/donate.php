@@ -38,7 +38,7 @@ function bs_donate_react_sc($atts, $content = null) {
     "is_blue" => false
 	 ], $atts);
 
-	$getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
+	$getLang = getLangTag();
 
 	$props = [
 		"texts" => $at,
@@ -48,7 +48,7 @@ function bs_donate_react_sc($atts, $content = null) {
 			"monthly" => $at['donate_monthly_redirect'],
 			"once" => $at['donate_once_redirect']
 		],
-		"tags" => !empty($getLang) ? mb_strtoupper($getLang, 'UTF-8') . ',' : '' . $at['tags'],
+		"tags" => !empty($getLang) ? $getLang . ',' : '' . $at['tags'],
 	];
 
 	ob_start();

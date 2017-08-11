@@ -46,7 +46,7 @@ function bs_donate_section_sc($atts, $content = null) {
 	 ], $atts);
 
 
-	 $getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
+	 	$getLang = getLangTag();
 
 	 $props = [
  		"texts" => $at,

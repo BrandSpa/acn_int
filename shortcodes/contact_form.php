@@ -21,11 +21,11 @@ function bs_contact_form_sc($atts, $content = null) {
 	];
 
   $at = shortcode_atts( $attributes , $atts );
-	$getLang = function_exists("pll_current_language") ? pll_current_language("name") . "," : "";
+		$getLang = getLangTag() . ', ';
 
 	$props = [
 		"cl" => [
-			"tags" => mb_strtoupper($getLang, 'UTF-8') . $at['convertloop_tags'],
+			"tags" => $getLangTag . $at['convertloop_tags'],
 			"event" =>  empty($at['convertloop_event']) ? 'Subscription' : $at['convertloop_event']
 		],
 		"texts" => [

@@ -31,6 +31,7 @@ require_once 'lib/geolify.php';
 require_once 'lib/redirect_to_lang.php';
 require_once 'lib/redirect_ajax.php';
 require_once 'lib/clean_quote.php';
+require_once 'lib/get_lang_tag.php';
 
 //TRANSLATIONS
 require_once('translations/index.php');

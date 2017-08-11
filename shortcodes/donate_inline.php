@@ -38,7 +38,7 @@ function bs_donate_inline_sc($atts, $content = null) {
 		"tags" => ""
 	 ], $atts);
 
-	$getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
+		$getLang = getLangTag();
 
 	 $props = [
 		 "texts" => $at,
