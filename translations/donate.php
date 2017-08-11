@@ -1,5 +1,7 @@
 <?php
 $donationTrans = [
+	'Not now',
+	'Yes',
 	'Other',
 	'Monthly',
 	'Once',
