@@ -31,18 +31,15 @@ $props = [
 <script type="text/javascript">
 onLoad(function() {
 	function changeColor() {
-		$('.nav img').css({filter: 'grayscale() invert()'});
-		$('.nav img').css({'-ms-filter': 'grayscale() invert()'});
-		$('.nav li > a').css('color', ' #fff');
-		$('.nav').css({background: 'rgb(34, 34, 34)'});
+		$('body').css({'padding-top': 0});
+		$('.nav').addClass('nav--black');
 	}
 
 	changeColor();
 
 	function changeColorNormal() {
-		$('.nav').css('background-color', '#fff');
-		$('.nav img').css('filter', 'none');
-		$('.nav li > a').css('color', ' #3C515F');
+		$('body').css({'padding-top': 0});
+		$('.nav').removeClass('nav--black');
 	}
 
 	  window.addEventListener('scroll', function() {

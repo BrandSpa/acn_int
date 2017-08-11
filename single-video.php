@@ -39,7 +39,7 @@
 			var h = window.innerHeight;
 			var navH = $('.nav').height() + 20;
 			var titleH = $('.video__header-title').innerHeight();
-		
+
 			if(window.innerWidth > '700') {
 				$('.video__header-title').css({position: 'relative', marginTop: '-' + titleH + 'px'});
 			}
@@ -65,7 +65,7 @@
 		</div>
 
 		<div class="col-2-l"></div>
-		
+
 		<div class="col-3-l banner-vertical">
 			<?php if(get_lang() == 'en'): ?>
 				<a href="<?php echo get_option('banner_url_en') ?>">
