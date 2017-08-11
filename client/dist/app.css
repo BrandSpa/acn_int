@@ -822,7 +822,7 @@ button, .btn {
   height: 90px;
   width: 100%;
   padding: 0 60px 0  60px;
-  background: #fff;
+  background: #fff !important;
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -833,7 +833,7 @@ button, .btn {
       padding: 0;
       text-align: center; } }
   .nav--black {
-    background: transparent;
+    background: transparent !important;
     -webkit-box-shadow: none;
     box-shadow: none; }
     .nav--black img {
