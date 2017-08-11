@@ -11,7 +11,6 @@ require $dir_base . 'vendor/autoload.php';
 	// $data: { "email": "german.escobar@convertloop.co", "pid": "3eb13b25", "add_tags": ["Tag 1", "Tag2"] }
 	function cl_create_person($appId, $apiKey, $data) {
 		try {
-			$data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
 			$data = json_encode($data);
 			$auth_string = $appId . ":" . $apiKey;
       $auth = base64_encode($auth_string);
@@ -35,7 +34,9 @@ require $dir_base . 'vendor/autoload.php';
 	function convertloop_contact() {
 		  $data = $_POST['data'];
 		  $lang = getCountryLang($data['country']);
-		  $data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
+			if(empty($data['pid'])) {
+				$data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
+			}
 
 		  /**
 		  ** if is between office country get app id and api key office that come from:

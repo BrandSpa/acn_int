@@ -110,9 +110,7 @@ class contactForm extends Component {
         return storeEvent("ga_event", event);
       })
       .then(() => {
-
-        const event = {name: this.props.cl.event ? this.props.cl.event :"Subscription", person: this.state.contact};
-        console.log(event);
+        const event = {name: this.props.cl.event, person: this.state.contact};
         return storeEvent("cl_event", event);
       })
       .then(() => {
