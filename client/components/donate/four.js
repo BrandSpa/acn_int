@@ -26,7 +26,7 @@ class Four extends Component {
 		e.preventDefault();
 		 const { amount, donation_type, contact } = this.props;
 		const base = this.props.redirect["monthly"];
-		const url = `${base}?customer_id=${contact.email}&order_revenue=${amount}`;
+		const url = `${base}?customer_id=${contact.email}&order_revenue=${amount}&amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
 		window.location = url;
 	}
 
@@ -39,7 +39,7 @@ class Four extends Component {
       .storeConvertLoop(this.props, this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.props))
       .then(res => {
-				const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&order_id=${id}`;
+				const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
           window.location = url;
       });
   };
