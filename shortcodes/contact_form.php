@@ -25,7 +25,7 @@ function bs_contact_form_sc($atts, $content = null) {
 
 	$props = [
 		"cl" => [
-			"tags" => strtoupper($getLang) . $at['convertloop_tags'],
+			"tags" => mb_strtoupper($getLang, 'UTF-8') . $at['convertloop_tags'],
 			"event" =>  empty($at['convertloop_event']) ? 'Subscription' : $at['convertloop_event']
 		],
 		"texts" => [
