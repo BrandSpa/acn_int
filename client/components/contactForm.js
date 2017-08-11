@@ -112,6 +112,7 @@ class contactForm extends Component {
       .then(() => {
 
         const event = {name: this.props.cl.event ? this.props.cl.event :"Subscription", person: this.state.contact};
+        console.log(event);
         return storeEvent("cl_event", event);
       })
       .then(() => {
