@@ -839,7 +839,7 @@ button, .btn {
     .nav--black img {
       -webkit-filter: grayscale(100%) invert(100%);
       filter: grayscale(100%) invert(100%); }
-    .nav--black li > a {
+    .nav--black .menu li a {
       color: #fff; }
   @media (max-width: 767px) {
     .nav__donate {
