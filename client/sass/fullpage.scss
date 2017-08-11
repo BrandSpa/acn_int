@@ -23,6 +23,9 @@ html {
   tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+	 overflow-x: hidden;
+	 margin: 0;
+	 padding: 0;
   @media #{$s} {
     font-size: 10px;
     line-height: 15px;
