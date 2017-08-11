@@ -31,14 +31,12 @@ $props = [
 <script type="text/javascript">
 onLoad(function() {
 	function changeColor() {
-		$('body').css({'padding-top': 0});
 		$('.nav').addClass('nav--black');
 	}
 
 	changeColor();
 
 	function changeColorNormal() {
-		$('body').css({'padding-top': 0});
 		$('.nav').removeClass('nav--black');
 	}
 
