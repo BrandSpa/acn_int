@@ -1972,7 +1972,8 @@ html.fp-enabled,
       letter-spacing: 3.11px; }
   .donate_react .card-type {
     opacity: .5;
-    margin-right: 5px; }
+    margin-right: 5px;
+    width: 32px; }
     .donate_react .card-type--active {
       opacity: 1; }
   @media (max-width: 767px) {
