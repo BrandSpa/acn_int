@@ -7,7 +7,6 @@
 		mitt.emit("run:events");
 	})
 </script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/vendor.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/vendor.js') ?>'></script>
 <script src='<?php echo get_template_directory_uri() ?>/client/dist/app.js?v=<?php echo filemtime(get_template_directory() . '/client/dist/app.js') ?>'></script>
@@ -38,10 +37,7 @@
    <?php endif; ?>
 
  	<?php if(isset($_GET['event_action']) && isset($_GET['event_category']) && isset($_GET['event_label'])): ?>
- 		//ANALYTICS EVENT
- 		//category: SUBSCRIBE
- 		//Action:  PRAYERNETWORK
- 		//label: EN
+
  		ga('send', 'event', $_GET['event_category'], $_GET['event_action'], $_GET['event_label']);
 
  	<?php endif; ?>
