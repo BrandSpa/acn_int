@@ -31,12 +31,12 @@ function bs_donate_inline_section_sc($atts, $content = null) {
     "validation_email" => gett("Incorrect email"),
     "validation_country" => gett("Incorrect country"),
 		"template_uri" => str_replace("http:", "", get_template_directory_uri()),
-    "title" => gett("SUPPORT A PERSECUTED CHRISTIAN"),
+		"title" => gett("SUPPORT A PERSECUTED CHRISTIAN"),
     "subtitle" => gett("My gift to support the ACN"),
-    "success_title" => gett("TU DONACIÓN SE HA REALIZADO CON ÉXITO"),
-    "success_subtitle" => gett("¡GRACIAS POR TU GENEROSIDAD!"),
-    "text_four_step" => gett("ACN tiene un mayor impacto cuándo cuenta con la estabilidad proporcionada por la generosidad de sus benefactores."),
-    "subtext_four_step" => gett("Podrías ayudarnos con un pequeño valor diario de:"),
+    "success_title" => gett("YOUR DONATION WAS SUCCESSFUL"),
+    "success_subtitle" => gett("THANK YOU FOR YOUR GENEROSITY!."),
+    "text_four_step" => gett("ACN has a bigger impact when due to the generosity of benefactors can count on an stable budget."),
+    "subtext_four_step" => gett("Could you help us with a small daily donation in the amount of US$"),
     "is_blue" => false,
 		"tags" => ""
 	 ], $atts);
