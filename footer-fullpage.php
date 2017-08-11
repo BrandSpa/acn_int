@@ -3,6 +3,9 @@
   bs.lang = '<?php echo getCountryLang(getCountry()) ?>';
   bs.donate = '<?php echo gett('Donate') ?>';
   bs.pid = '<?php echo isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : ''  ?>';
+  onLoad(function() {
+		mitt.emit("run:events");
+	})
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
