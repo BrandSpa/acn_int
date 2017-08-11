@@ -114,7 +114,7 @@ class Donate extends Component {
         return storeEvent("ga_ecm_event", event);
       })
       .then(res => {
-        const url = `${base}?amount=${amount}`;
+        const url = `${base}?amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
         setTimeout(() => {
           window.location = url;
         }, 0);
