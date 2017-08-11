@@ -35,9 +35,9 @@ class amount extends React.Component {
           changeAmount={this.changeAmount}
         />
         <div className="row">
-          <div className="form-group form-group--addon col-7-l">
+          <div className="form-group form-group--addon col-5-l">
             <span className="form-group__addon">
-              USD
+              US$
             </span>
             <input
               ref={amountInput => (this.amountInput = amountInput)}
@@ -47,7 +47,7 @@ class amount extends React.Component {
               value={amount}
             />
           </div>
-          <div className="form-group col-5-l">
+          <div className="form-group col-7-l">
             <a
               href="#"
               onClick={this.changeType.bind(null, "monthly")}
