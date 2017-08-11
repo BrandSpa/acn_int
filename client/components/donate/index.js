@@ -120,7 +120,7 @@ class Donate extends Component {
           this.props.changeSection(1);
         }
       });
-  };
+  }
 
   creditCardIsValid = () => {
     let errs = this.creditCard.validateAll();

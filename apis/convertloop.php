@@ -32,7 +32,7 @@ require $dir_base . 'vendor/autoload.php';
 
 	}
 
-		function convertloop_contact() {
+	function convertloop_contact() {
 		  $data = $_POST['data'];
 		  $lang = getCountryLang($data['country']);
 		  $data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
@@ -85,7 +85,7 @@ require $dir_base . 'vendor/autoload.php';
 
 	function convertloop_event() {
 	  $data = $_POST['data'];
-	  // $data['person']['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
+	  $data['person']['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
 
 	  if(in_array($data['country'], getOfficesCountries())) {
 	    $countryKey = str_replace(' ', '_', $data['country']);
