@@ -3,6 +3,8 @@
 function bs_donate_section_sc($atts, $content = null) {
 
 	 $at = shortcode_atts([
+		 "donate_monthly_redirect" => get_option('donate_monthly_redirect'),
+		 "donate_once_redirect" => get_option('donate_once_redirect'),
 		 "country" => getCountry(),
 		 "other" => gett("Other"),
 		 "monthly" => gett("Monthly"),
@@ -46,23 +48,25 @@ function bs_donate_section_sc($atts, $content = null) {
 
 	 $getLang = function_exists("pll_current_language") ? pll_current_language("name") : "";
 
+	 $props = [
+ 		"texts" => $at,
+ 		"countries" => function_exists('getCountries') ? getCountries() : [],
+ 		"is_blue" => $at['is_blue'],
+ 		"redirect" => [
+ 			"monthly" => $at['donate_monthly_redirect'],
+ 			"once" => $at['donate_once_redirect']
+ 		],
+ 		"tags" => !empty($getLang) ? strtoupper($getLang) . ',' : '' . $at['tags'],
+		"titles" => ["SUPPORT A PERSECUTED CHRISTIAN", "THANK YOU"],
+		"content" =>  $content,
+ 	];
+
 	ob_start();
 ?>
 
 <div
 	class="bs-donate-section"
-	data-props='{
-    "texts": <?php echo json_encode($at) ?>,
-		"countries": <?php echo function_exists('getCountries') ? json_encode(getCountries()) : [] ?>,
-    "is_blue": "<?php echo $at['is_blue'] ?>",
-    "redirect": {
-      "monthly": "<?php echo get_option('donate_monthly_redirect') ?>",
-      "once": "<?php echo get_option('donate_once_redirect') ?>"
-    },
-		"titles": ["SUPPORT A PERSECUTED CHRISTIAN", "THANK YOU"],
-		"content": <?php echo json_encode($content) ?>,
-		"tags": "<?php echo strtoupper($getLang) . ',' . $at['tags'] ?>"
-  }'
+	data-props='<?php echo json_encode($props) ?>'
 >
 </div>
 
@@ -71,73 +75,3 @@ return ob_get_clean();
 }
 
 add_shortcode('bs_donate_section', 'bs_donate_section_sc');
-
-add_action( 'vc_before_init', 'bs_donate_section_vc' );
-
-  function bs_donate_section_vc() {
-		$params = [];
-    $atts = [
-      "other" => "Other",
-      "monthly" => "Monthly",
-      "once" => "Once",
-      "placeholder_amount" => "Amount",
-      "placeholder_credit_card" => "Credit Card Number",
-      "placeholder_month" => "MM",
-      "placeholder_year" => "YY",
-      "placeholder_cvc" => "CVC",
-      "explain_cvc" =>  "The last 3 digits displayed on the back of your credit card.",
-      "placeholder_name" => "Name",
-      "placeholder_email" => "Email",
-      "placeholder_country" => "Country",
-      "validation_declined" => "Your transaction was not accepted, try again",
-      "validation_card" => "Incorrect card",
-      "validation_month" => "Incorrect month",
-      "validation_year" => "Incorrect year",
-      "validation_cvc" => "Incorrect cvc",
-      "validation_name" => "Incorrect name",
-      "validation_email" => "Incorrect email",
-      "validation_country" => "Incorrect country",
-      "step_amount_text" => "Select Gift Amount",
-      "step_payment_text" => "Payment Details",
-      "step_contact_text" => "Your Information",
-      "title" => "SUPPORT A PERSECUTED CHRISTIAN",
-      "subtitle" => "My gift to support the ACN",
-      "success_title" => "TU DONACIÓN SE HA REALIZADO CON ÉXITO",
-      "success_subtitle" => "¡GRACIAS POR TU GENEROSIDAD!",
-      "text_four_step" => "ACN tiene un mayor impacto cuándo cuenta con la estabilidad proporcionada por la generosidad de sus benefactores.",
-      "subtext_four_step" => "Podrías ayudarnos con un pequeño valor diario de:"
-    ];
-
-    foreach($atts as $key => $val) {
-      array_push($params, [
-         "type" => "textfield",
-         "heading" =>  str_replace('_', ' ', $key),
-         "param_name" => $key,
-         "value" => $val
-      ]);
-    }
-
-    array_push($params, [
-      "type" => "checkbox",
-      "heading" =>  "Blue?",
-      "param_name" => "is_blue",
-      "value" => false
-    ]);
-
-
-		 array_push($params, [
-      "type" => "textarea_html",
-      "heading" =>  "Left content",
-      "param_name" => "content",
-      "value" => ""
-    ]);
-
-  	vc_map(
-      array(
-        "name" =>  "BS Donate section",
-        "base" => "bs_donate_section",
-        "category" =>  "BS",
-        "params" => $params
-      )
-    );
-  }

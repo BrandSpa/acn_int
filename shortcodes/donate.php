@@ -2,6 +2,8 @@
 
 function bs_donate_react_sc($atts, $content = null) {
 	 $at = shortcode_atts([
+		 "donate_monthly_redirect" => get_option('donate_monthly_redirect'),
+		 "donate_once_redirect" => get_option('donate_once_redirect'),
 		 "country" => getCountry(),
 		 "other" => gett("Other"),
 		 "monthly" => gett("Monthly"),
@@ -43,8 +45,8 @@ function bs_donate_react_sc($atts, $content = null) {
 		"countries" => function_exists('getCountries') ? getCountries() : [],
 		"is_blue" => $at['is_blue'],
 		"redirect" => [
-			"monthly" => get_option('donate_monthly_redirect'),
-			"once" => get_option('donate_once_redirect')
+			"monthly" => $at['donate_monthly_redirect'],
+			"once" => $at['donate_once_redirect']
 		],
 		"tags" => !empty($getLang) ? strtoupper($getLang) . ',' : '' . $at['tags'],
 	];
