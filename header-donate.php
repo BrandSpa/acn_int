@@ -99,7 +99,7 @@
 
 <?php endif; ?>
 
-<div class="nav" style="background: transparent">
+<div class="nav">
 	  <a href="<?php echo bs_home_url(); ?>" class="logo">
       	<img src='<?php echo bs_logo_url(); ?>'  alt="ACN logo" class="img-responsive" width="170"  />
      </a>
