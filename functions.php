@@ -92,6 +92,8 @@ require_once('shortcodes/vc/breadcrumb.php');
 require_once('shortcodes/vc/campaigns_slider.php');
 require_once('shortcodes/vc/contact_form.php');
 require_once('shortcodes/vc/donate.php');
+require_once('shortcodes/vc/donate_inline_section.php');
+require_once('shortcodes/vc/donate_section.php');
 require_once('shortcodes/vc/header_slider.php');
 require_once('shortcodes/vc/post_share.php');
 require_once('shortcodes/vc/posts.php');
