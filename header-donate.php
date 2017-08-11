@@ -49,14 +49,14 @@
         }
       }
 
-			onLoad(function() {
-	function changeColor() {
-		$('body').css({'padding-top': 0});
-		$('.nav img').css({filter: 'grayscale() invert()'});
-		$('.nav img').css({'-ms-filter': 'grayscale() invert()'});
-		$('.nav li > a').css('color', ' #fff');
-		$('.nav').css({background: 'transparent'});
-	}
+	onLoad(function() {
+  	function changeColor() {
+  		$('body').css({'padding-top': 0});
+  		$('.nav img').css({filter: 'grayscale() invert()'});
+  		$('.nav img').css({'-ms-filter': 'grayscale() invert()'});
+  		$('.nav li > a').css('color', ' #fff');
+  		$('.nav').css({background: 'transparent', boxShadow: 'none'});
+  	}
 
 	changeColor();
 
@@ -75,7 +75,7 @@
       changeColor();
     }
 		});
-})
+  })
   </script>
 
   <!-- ConvertLoop -->
