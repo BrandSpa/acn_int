@@ -832,6 +832,15 @@ button, .btn {
     .nav {
       padding: 0;
       text-align: center; } }
+  .nav--black {
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    .nav--black img {
+      -webkit-filter: grayscale(100%) invert(100%);
+      filter: grayscale(100%) invert(100%); }
+    .nav--black li > a {
+      color: #fff; }
   @media (max-width: 767px) {
     .nav__donate {
       padding: 0 20px; } }
