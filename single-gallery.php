@@ -32,12 +32,14 @@ $props = [
 onLoad(function() {
 	function changeColor() {
 		$('.nav').addClass('nav--black');
+		$('.nav').css({background: '#222'});
 	}
 
 	changeColor();
 
 	function changeColorNormal() {
 		$('.nav').removeClass('nav--black');
+		$('.nav').css({background: '#fff'});
 	}
 
 	  window.addEventListener('scroll', function() {
