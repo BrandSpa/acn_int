@@ -1,6 +1,6 @@
 <?php
 
-function bs_get_url_val_sc( $atts ) {
+function bs_get_url_if_sc( $atts ) {
   $at = shortcode_atts([
     'field' => '',
     'if' => '',
@@ -24,4 +24,4 @@ function bs_get_url_val_sc( $atts ) {
   return ob_get_clean();
 }
 
-add_shortcode('bs_get_url_val', 'bs_get_url_val_sc');
+add_shortcode('bs_get_url_if', 'bs_get_url_if_sc');
