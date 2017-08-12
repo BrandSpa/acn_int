@@ -25,7 +25,9 @@
       "validation_country" => "Incorrect country",
       "step_amount_text" => "Select Gift Amount",
       "step_payment_text" => "Payment Details",
-      "step_contact_text" => "Your Information"
+      "step_contact_text" => "Your Information",
+      "donate_monthly_redirect" => get_option('donate_monthly_redirect'),
+ 		  "donate_once_redirect" => get_option('donate_once_redirect')
     ];
 
     foreach($atts as $key => $val) {

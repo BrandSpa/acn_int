@@ -32,7 +32,9 @@ add_action( 'vc_before_init', 'bs_donate_section_vc' );
       "success_title" => "TU DONACIÓN SE HA REALIZADO CON ÉXITO",
       "success_subtitle" => "¡GRACIAS POR TU GENEROSIDAD!",
       "text_four_step" => "ACN tiene un mayor impacto cuándo cuenta con la estabilidad proporcionada por la generosidad de sus benefactores.",
-      "subtext_four_step" => "Podrías ayudarnos con un pequeño valor diario de:"
+      "subtext_four_step" => "Podrías ayudarnos con un pequeño valor diario de:",
+      "donate_monthly_redirect" => get_option('donate_monthly_redirect'),
+ 		  "donate_once_redirect" => get_option('donate_once_redirect')
     ];
 
     foreach($atts as $key => $val) {
