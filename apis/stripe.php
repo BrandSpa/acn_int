@@ -8,7 +8,7 @@ require $dir_base . 'vendor/autoload.php';
 **/
 
 function stripe_create_token($api_key, $card) {
-    \Stripe\Stripe::setApiKey($api_key);
+  \Stripe\Stripe::setApiKey($api_key);
 
     try {
       $token = \Stripe\Token::create([
@@ -124,13 +124,25 @@ function stripe_update_plan($api_key, $plan) {
 
 }
 
+function stripe_plan() {
+  $data = $_POST['data'];
+  $api_key =  get_option('stripe_key_private');
+
+  $res = stripe_update_plan($api_key, $data);
+  responseJson($res);
+  die();
+}
+
+add_action( 'wp_ajax_nopriv_stripe_update_plan', 'stripe_plan' );
+add_action( 'wp_ajax_stripe_update_plan', 'stripe_plan' );
+
 function stripe_create_subscription($api_key, $charge) {
   \Stripe\Stripe::setApiKey($api_key);
 
   try {
     $subscription = \Stripe\Subscription::create(array(
-      "customer" => $charge["customer"], //"cus_9MzzzON1VtZiKY",
-      "plan" => $charge["plan"], //"donation-55"
+      "customer" => $charge["customer"],
+      "plan" => $charge["plan"],
       "trial_period_days" => $charge["trial_period_days"]
     ));
 
@@ -145,6 +157,8 @@ function stripe_create_subscription($api_key, $charge) {
 function get_plan_name($amount) {
   return 'donation-' . $amount .'-usd';
 }
+
+
 
 function stripe_once($api_key, $data) {
   $customer = stripe_create_customer($api_key, $data);

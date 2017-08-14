@@ -83,18 +83,6 @@ function donate_redirect_2() {
   die();
 }
 
-add_action( 'wp_ajax_nopriv_stripe_update_plan', 'stripe_plan' );
-add_action( 'wp_ajax_stripe_update_plan', 'stripe_plan' );
-
-function stripe_plan() {
-  $data = $_POST['data'];
-  $api_key =  get_option('stripe_key_private');
-
-  $res = stripe_update_plan($api_key, $data);
-  responseJson($res);
-  die();
-}
-
 add_action( 'wp_ajax_nopriv_countries', 'countries' );
 add_action( 'wp_ajax_countries', 'countries' );
 

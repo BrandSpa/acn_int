@@ -3,14 +3,18 @@ $dir_base =  str_replace('apis', '', __DIR__);
 
 /**
 ** Documentation
-** url: https://convertloop.co/docs/developers/getting-started
+** convertloop docs: https://convertloop.co/docs/developers/getting-started
+** Library to make the request: https://github.com/rmccue/Requests
 **/
 
 require $dir_base . 'vendor/autoload.php';
 
-
-	function cl_create_person($appId, $apiKey, $data) {
+	function cl_create_person($appId, $apiKey, $data, $endpoint = 'https://api.convertloop.co/v1/people') {
 		try {
+			if(empty($data['pid'])) {
+				$data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
+			}
+
 			// $data: { "email": "alejandro@convertloop.co", "pid": "3eb13b25", "add_tags": ["ENGLISH"] }
 			$data = json_encode($data);
 			$auth_string = $appId . ":" . $apiKey;
@@ -22,8 +26,6 @@ require $dir_base . 'vendor/autoload.php';
 				'content-type' => 'application/json'
 			);
 
-			$endpoint = 'https://api.convertloop.co/v1/people';
-
 			$req = Requests::post($endpoint, $headers, $data);
 			return $req->body;
 		} catch(Exception $e) {
@@ -32,40 +34,15 @@ require $dir_base . 'vendor/autoload.php';
 
 	}
 
-	function convertloop_contact() {
-		  $data = $_POST['data'];
-		  $lang = getCountryLang($data['country']);
-			if(empty($data['pid'])) {
-				$data['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
-			}
-
-		  /**
-		  ** if is between office country get app id and api key office that come from:
-		  ** https://acninternational.org/wp-admin/admin.php?page=bs-offices
-		  **/
-
-		  if( in_array($data['country'], getOfficesCountries()) ) {
-		    $countryKey = str_replace(' ', '_', $data['country']);
-		    $appId = get_option('convertloop_app_' . $countryKey);
-		    $apiKey = get_option('convertloop_api_' . $countryKey);
-		  } else {
-		    $appId = get_option('convertloop_app_default');
-		    $apiKey = get_option('convertloop_api_default');
+	// $data: { "name": "Signed Up", "person": { "email": "german.escobar@convertloop.co" } }
+	function cl_create_event($appId, $apiKey, $data, $endpoint = 'https://api.convertloop.co/v1/event_logs') {
+		try {
+			
+			// add pid via cookies if doesn't came from front
+			if(empty($data['person']['pid'])) {
+		    $data['person']['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
 		  }
 
-		    $res = cl_create_person($appId, $apiKey, $data);
-		    header('Content-type: application/json');
-		    echo $res;
-		  die();
-		}
-
-
-		add_action( 'wp_ajax_nopriv_convertloop_contact', 'convertloop_contact' );
-		add_action( 'wp_ajax_convertloop_contact', 'convertloop_contact' );
-
-	// $data: { "name": "Signed Up", "person": { "email": "german.escobar@convertloop.co" } }
-	function cl_create_event($appId, $apiKey, $data) {
-		try {
 			$data = json_encode($data);
 			$auth_string = $appId . ":" . $apiKey;
       $auth = base64_encode($auth_string);
@@ -76,8 +53,6 @@ require $dir_base . 'vendor/autoload.php';
 				'content-type' => 'application/json'
 			);
 
-			$endpoint = 'https://api.convertloop.co/v1/event_logs';
-
 			$req = Requests::post($endpoint, $headers, $data);
 			return $req->body;
 		} catch(Exception $e) {
@@ -85,27 +60,6 @@ require $dir_base . 'vendor/autoload.php';
 		}
 	}
 
-	function convertloop_event() {
-	  $data = $_POST['data'];
-		if(empty($data['person']['pid'])) {
-			$data['person']['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
-		}
 
-	  if(in_array($data['country'], getOfficesCountries())) {
-	    $countryKey = str_replace(' ', '_', $data['country']);
-	    $appId = get_option('convertloop_app_' . $countryKey);
-	    $apiKey = get_option('convertloop_api_' . $countryKey);
-	  } else {
-	    $appId = get_option('convertloop_app_default');
-	    $apiKey = get_option('convertloop_api_default');
-	  }
-
-	  header('Content-type: application/json');
-	  echo cl_create_event($appId, $apiKey, $data);
-	  die();
-	}
-
-	add_action( 'wp_ajax_nopriv_convertloop_event', 'convertloop_event' );
-	add_action( 'wp_ajax_convertloop_event', 'convertloop_event' );
 
 ?>

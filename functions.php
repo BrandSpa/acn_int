@@ -44,6 +44,10 @@ include_once 'apis/infusion.php';
 include_once 'apis/posts.php';
 include_once 'apis/convertloop.php';
 
+// APIS AJAX
+include_once 'apis/ajax/convertloop.php';
+
+
 //OPTIONS
 require_once('options/index.php');
 

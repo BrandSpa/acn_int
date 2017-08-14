@@ -7,18 +7,23 @@ $dir_base =  str_replace('apis', '', __DIR__);
 ** Library to make the request: https://github.com/rmccue/Requests
 **/
 
-if( file_exists($dir_base . '/vendor/autoload.php') ) {
-
-  require $dir_base . 'vendor/autoload.php';
+require $dir_base . 'vendor/autoload.php';
 
   function mc_subscribe($data, $listId, $apiKey) {
-    $options = array(
-      'auth' => array('user', $apiKey)
-    );
-    $datacenter =  explode("-", $apiKey)[1];
+    $options = [
+      'auth' => ['user', $apiKey]
+    ];
+
     $headers = array('Accept' => 'application/json', 'content-type' => 'application/json');
+
+    // it's always necessary set the datacenter,
+    // without it isn't going to store the list register
+
+    $datacenter =  explode("-", $apiKey)[1];
     $urlBase = 'http://'. $datacenter .'.api.mailchimp.com/3.0/';
-    $req = Requests::post($urlBase . 'lists/' . $listId . '/members', $headers, $data, $options);
+    $endpoint = $urlBase . 'lists/' . $listId . '/members';
+    $req = Requests::post($endpoint, $headers, $data, $options);
+
     return $req->body;
   }
 
@@ -33,5 +38,3 @@ if( file_exists($dir_base . '/vendor/autoload.php') ) {
 
   add_action( 'wp_ajax_nopriv_mailchimp_subscribe', 'mailchimp_subscribe' );
   add_action( 'wp_ajax_mailchimp_subscribe', 'mailchimp_subscribe' );
-
-}

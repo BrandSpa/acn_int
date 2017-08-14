@@ -4,10 +4,9 @@ use \Mockery as m;
 
 require str_replace('tests/apis', '', __DIR__) .'/apis/mailchimp.php';
 
-class MailchimpTest extends TestCase 
-{
-	public function testSubscribeContact() 
-	{
+class MailchimpTest extends TestCase {
+
+	public function testSubscribeContact() {
 		$faker = Faker\Factory::create();
 		$data = '{
       "email_address": "'.$faker->email.'",
@@ -25,5 +24,3 @@ class MailchimpTest extends TestCase
 		$this->assertEquals('email_address', $response);
 	}
 }
-
-
