@@ -8,7 +8,7 @@ function bs_get_url_val_sc( $atts ) {
   ob_start();
   ?>
 
-  <?php echo isset($_GET[$at['field']]) ? $_GET[$at['field']] : '' ?>
+  <?php echo isset($_GET[$at['field']]) ? urldecode($_GET[$at['field']]) : '' ?>
 
   <?php
   return ob_get_clean();

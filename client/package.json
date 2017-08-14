@@ -7,7 +7,7 @@
     "type": "git"
   },
   "scripts": {
-    "test:watch": "jest -- --watch",
+    "test:watch": "jest --watch",
     "test": "jest",
     "test:u": "jest --updateSnapshot",
     "build": "webpack --p",
