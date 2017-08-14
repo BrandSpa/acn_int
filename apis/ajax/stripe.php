@@ -17,7 +17,7 @@ add_action( 'wp_ajax_stripe_token', 'stripe_token' );
 function get_plan() {
   $card = $_POST['data'];
   $apiKey =  get_option('stripe_key_private');
-  $res = stripe_get_plan($apiKey, 'donation-2');
+  $res = stripe_get_plan($apiKey, $card['amount']);
   responseJson($res);
   die();
 }

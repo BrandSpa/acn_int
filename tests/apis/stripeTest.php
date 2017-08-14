@@ -2,8 +2,6 @@
 use PHPUnit\Framework\TestCase;
 use \Mockery as m;
 
-
-
 require str_replace('tests/apis', '', __DIR__) .'/apis/stripe.php';
 
 class StripeTest extends TestCase
