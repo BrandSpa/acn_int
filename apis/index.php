@@ -68,19 +68,18 @@ add_action( 'wp_ajax_donate_redirect_2', 'donate_redirect_2' );
 function donate_redirect_2() {
   $country = getCountry();
 
-
   if(in_array($country, getOfficesCountries())) {
     $url = get_option('donate_url_'. str_replace(' ', '_', $country));
+    $res = $url;
   } else {
     $url = get_option('donate_url_default');
+    $postId = url_to_postid($url);
+    $translations = function_exists('pll_get_post_translations') ? pll_get_post_translations($postId) : [];
+    $lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
+    $res = get_permalink($translations[$lang]) ? get_permalink($translations[$lang]) : get_permalink($translations['en']);
   }
 
-  $postId = url_to_postid($url);
-
-  $translations = function_exists('pll_get_post_translations') ? pll_get_post_translations($postId) : [];
-  $lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
-  $res = get_permalink($translations[$lang]) ? get_permalink($translations[$lang]) : get_permalink($translations['en']);
-  responseJson([$res, $translations, $lang]);
+  responseJson($res);
   die();
 }
 
