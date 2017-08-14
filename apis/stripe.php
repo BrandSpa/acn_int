@@ -26,17 +26,6 @@ function stripe_create_token($api_key, $card) {
     }
 }
 
-function stripe_token() {
-  $card = $_POST['data'];
-  $apiKey =  get_option('stripe_key_private');
-  $res = stripe_create_token( $apiKey, $card);
-  responseJson($res);
-  die();
-}
-
-add_action( 'wp_ajax_nopriv_stripe_token', 'stripe_token' );
-add_action( 'wp_ajax_stripe_token', 'stripe_token' );
-
 function stripe_create_customer($api_key, $customer) {
   \Stripe\Stripe::setApiKey($api_key);
 
@@ -83,18 +72,8 @@ function stripe_get_plan($api_key, $name) {
    }
 }
 
-function get_plan() {
-  $card = $_POST['data'];
-  $apiKey =  get_option('stripe_key_private');
-  $res = stripe_get_plan($apiKey, 'donation-2');
-  responseJson($res);
-  die();
-}
 
-add_action( 'wp_ajax_nopriv_stripe_get_plan', 'get_plan' );
-add_action( 'wp_ajax_stripe_get_plan', 'get_plan' );
-
-//fix currency with add prefix
+//fix currency, adding prefix 00
 function stripe_create_plan($api_key, $plan) {
   \Stripe\Stripe::setApiKey($api_key);
 
@@ -124,17 +103,6 @@ function stripe_update_plan($api_key, $plan) {
 
 }
 
-function stripe_plan() {
-  $data = $_POST['data'];
-  $api_key =  get_option('stripe_key_private');
-
-  $res = stripe_update_plan($api_key, $data);
-  responseJson($res);
-  die();
-}
-
-add_action( 'wp_ajax_nopriv_stripe_update_plan', 'stripe_plan' );
-add_action( 'wp_ajax_stripe_update_plan', 'stripe_plan' );
 
 function stripe_create_subscription($api_key, $charge) {
   \Stripe\Stripe::setApiKey($api_key);
@@ -158,8 +126,6 @@ function get_plan_name($amount) {
   return 'donation-' . $amount .'-usd';
 }
 
-
-
 function stripe_once($api_key, $data) {
   $customer = stripe_create_customer($api_key, $data);
   $data['customer'] = $customer->id;
@@ -182,27 +148,13 @@ function stripe_monthly($api_key, $data) {
   $subscription = array();
   $subscription['customer'] = $customer->id;
   $subscription['plan'] = $plan->id;
-  $subscription['trial_period_days'] = isset($data['trial_period_days']) ? $data['trial_period_days'] : null;
+
+  if(isset($data['trial_period_days']) && !empty($data['trial_period_days'])) {
+    $subscription['trial_period_days'] = $data['trial_period_days'];
+  } else {
+      $subscription['trial_period_days'] = null;
+  }
+
 
   return stripe_create_subscription($api_key, $subscription);
 }
-
-function stripe_charge() {
-  $data = $_POST['data'];
-  $apiKey =  get_option('stripe_key_private');
-  $res = array([ 'err' => 'donation_type fail']);
-
-  if($data['donation_type'] == 'monthly') {
-    $res = stripe_monthly($apiKey, $data);
-  }
-
-  if($data['donation_type'] == 'once') {
-    $res = stripe_once($apiKey, $data);
-  }
-
-  responseJson($res);
-  die();
-}
-
-add_action( 'wp_ajax_nopriv_stripe_charge', 'stripe_charge' );
-add_action( 'wp_ajax_stripe_charge', 'stripe_charge' );

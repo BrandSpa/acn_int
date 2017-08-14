@@ -10,11 +10,17 @@ $dir_base =  str_replace('apis', '', __DIR__);
 require $dir_base . 'vendor/autoload.php';
 
   function mc_subscribe($data, $listId, $apiKey) {
+
+    $data = json_encode($data);
+
     $options = [
       'auth' => ['user', $apiKey]
     ];
 
-    $headers = array('Accept' => 'application/json', 'content-type' => 'application/json');
+    $headers = [
+      'Accept' => 'application/json',
+      'content-type' => 'application/json'
+    ];
 
     // it's always necessary set the datacenter,
     // without it isn't going to store the list register
@@ -26,15 +32,3 @@ require $dir_base . 'vendor/autoload.php';
 
     return $req->body;
   }
-
-  function mailchimp_subscribe() {
-    $data = json_encode($_POST['data']);
-    $listId = get_option('mailchimp_list_id');
-    $apiKey = get_option('mailchimp_api');
-    $res = mc_subscribe($data, $listId, $apiKey);
-    echo $res;
-    die();
-  }
-
-  add_action( 'wp_ajax_nopriv_mailchimp_subscribe', 'mailchimp_subscribe' );
-  add_action( 'wp_ajax_mailchimp_subscribe', 'mailchimp_subscribe' );
