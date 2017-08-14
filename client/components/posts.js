@@ -33,7 +33,7 @@ class Posts extends React.Component {
   }
 
   render() {
-    const { posts } = this.props;
+    const { posts = [] } = this.props;
 
     const postMain = posts.map((post, i) => {
       if (i == 0) {
