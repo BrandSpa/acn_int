@@ -16,7 +16,7 @@ export default () => {
           return eventConvertloopAsync({name: "Donate Click"});
         })
         .then(() => {
-          let data = qs.stringify({action: "donate_redirect"});
+          let data = qs.stringify({action: "donate_redirect_2"});
           request
             .post("/wp-admin/admin-ajax.php", data)
             .then(res => window.location = res.data);
