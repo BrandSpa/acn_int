@@ -4,7 +4,7 @@ import request from "axios";
 import Minigrid from "minigrid";
 import debounce from "lodash/debounce";
 import Post from "./post";
-
+import fetchwp from '../lib/fetch_wp';
 
 class Posts extends React.Component {
   state = { posts: [], paged: 1, seeMore: true }
@@ -16,6 +16,11 @@ class Posts extends React.Component {
   componentDidMount() {
     window.addEventListener("resize", debounce(this.initGrid, 300));
     this.initGrid();
+  }
+
+  getPosts = () => {
+    fetchwp("get_posts")
+    .then(({data = []}) => this.setState({posts: data}))
   }
 
   initGrid = () => {
@@ -33,7 +38,7 @@ class Posts extends React.Component {
   }
 
   render() {
-    const { posts = [] } = this.props;
+    const { posts = [] } = this.state;
 
     const postMain = posts.map((post, i) => {
       if (i == 0) {
