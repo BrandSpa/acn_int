@@ -14,6 +14,7 @@ function bs_get_posts($type = array('video','gallery','featured','post'), $paged
  			$post->post_image = str_replace('http:', '', $images);
 			$content = substr($post->post_content, 0, 250) ? substr($post->post_content, 0, 250) : $post->post_content;
 			$post->post_short = preg_replace('/\[(.*?)\]/', '', wp_strip_all_tags(substr($post->post_content, 0, 200)) );
+			$post->post_content = '';
 			$post->post_permalink = get_post_permalink($post->ID);
 			return $post;
 	}, $query->get_posts());
