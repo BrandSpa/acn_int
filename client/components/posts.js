@@ -15,6 +15,7 @@ class Posts extends React.Component {
 
   componentDidMount() {
     window.addEventListener("resize", debounce(this.initGrid, 300));
+    this.getPosts();
     this.initGrid();
   }
 
@@ -33,7 +34,6 @@ class Posts extends React.Component {
   };
 
   goToPosts = () => {
-
     window.location = this.props.see_more_link;
   }
 
