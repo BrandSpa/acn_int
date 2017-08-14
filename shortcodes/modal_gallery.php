@@ -19,7 +19,7 @@ function bs_modal_gallery_sc($atts, $content = null) {
 <!-- Place somewhere in the <body> of your page -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/css/lightbox.min.css" rel="stylesheet">
 
-<div class="modal_gallery" style="margin:20px 0;">
+<div class="modal_gallery" style="margin:20px 0; position: relative">
     <?php $countmodal=0;?>
 		<?php foreach(explode(',', $at['images']) as $image): ?>
 
