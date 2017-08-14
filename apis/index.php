@@ -55,7 +55,7 @@ function donate_redirect() {
   if(in_array($country, getOfficesCountries())) {
     $res = get_option('donate_url_'. str_replace(' ', '_', $country));
   } else {
-    $res = 'https://acninternational.org/donate-for-christians-in-iraq/';
+    $res = get_option('donate_url_default');
   }
 
   responseJson($res);
