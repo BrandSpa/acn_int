@@ -80,7 +80,7 @@ function donate_redirect_2() {
   $translations = function_exists('pll_get_post_translations') ? pll_get_post_translations($postId) : [];
   $lang = function_exists('pll_current_language') ? pll_current_language() : 'en';
   $res = get_permalink($translations[$lang]);
-  responseJson([$url, $translations, $lang]);
+  responseJson([$res, $translations, $lang]);
   die();
 }
 
