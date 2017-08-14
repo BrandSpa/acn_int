@@ -9,15 +9,19 @@ import fetchwp from '../lib/fetch_wp';
 class Posts extends React.Component {
   state = { posts: [], paged: 1, seeMore: true }
 
-  componentDidUpdate() {
-    this.initGrid();
+  componentWillMount() {
+    this.getPosts();
   }
 
   componentDidMount() {
     window.addEventListener("resize", debounce(this.initGrid, 300));
-    this.getPosts();
     this.initGrid();
   }
+
+  componentDidUpdate() {
+    this.initGrid();
+  }
+
 
   getPosts = () => {
     fetchwp("get_posts")
@@ -25,10 +29,11 @@ class Posts extends React.Component {
   }
 
   initGrid = () => {
-    if (this.props.posts && this.props.posts.length > 0) {
+    const { posts } = this.state;
+
+    if (posts && posts.length > 0) {
       let container = this.grid;
       var grid = new Minigrid({ container, item: ".grid-item" });
-
       grid.mount();
     }
   };
