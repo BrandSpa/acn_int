@@ -53,12 +53,32 @@ function donate_redirect() {
   $country = getCountry();
 
   if(in_array($country, getOfficesCountries())) {
-    $res = get_option('donate_url_'. str_replace(' ', '_', $country));
+    $url = get_option('donate_url_'. str_replace(' ', '_', $country));
   } else {
-    $res = get_option('donate_url_default');
+    $url = get_option('donate_url_default');
   }
 
-  responseJson($res);
+  responseJson($url);
+  die();
+}
+
+add_action( 'wp_ajax_nopriv_donate_redirect_2', 'donate_redirect_2' );
+add_action( 'wp_ajax_donate_redirect_2', 'donate_redirect_2' );
+
+function donate_redirect_2() {
+  $country = getCountry();
+
+  if(in_array($country, getOfficesCountries())) {
+    $url = get_option('donate_url_'. str_replace(' ', '_', $country));
+  } else {
+    $url = get_option('donate_url_default');
+  }
+
+  $postId = url_to_postid($url);
+
+  $translations = function_exists('pll_get_post_translations') ? pll_get_post_translations($postId) : 0;
+
+  responseJson($translations);
   die();
 }
 
