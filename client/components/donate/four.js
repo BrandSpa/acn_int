@@ -10,6 +10,8 @@ class Four extends Component {
 	}
 
 	handleYes = () => {
+		this.setState({ loading: true });
+
 		actions.stripeToken(this.props).then(res => {
 			if (res.id) {
 				const stripe = { ...this.props.stripe, token: res.id};
@@ -60,13 +62,13 @@ class Four extends Component {
 					>
 						{texts.yes} {this.state.loading ? "..." : ""}
 					</button>
-					<h5 style={{
-						fontSize: '12px',
-				    lineHeight: '1.1',
-				    textAlign: 'center',
-				    marginTop: '10px',
-    				color: '#333'
-			}}>{texts.text_footer}</h5>
+						<h5 style={{
+							fontSize: '12px',
+					    lineHeight: '1.1',
+					    textAlign: 'center',
+					    marginTop: '10px',
+	    				color: '#333'
+				}}>{texts.text_footer}</h5>
 				</div>
 
 				<div className="col-6 col-6-l">
