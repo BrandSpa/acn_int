@@ -27,7 +27,7 @@ function bs_events_options() {
 
   ?>
 
-  <table class="table">
+  <table class="wp-list-table widefat fixed striped">
     <thead>
       <tr>
         <td>event name</td>
