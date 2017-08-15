@@ -102,7 +102,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	];
 
   foreach ($points as $name => $point) {
-    $params[$name  . '_name'] = $name;
+    $params[$name . '_name'] = $name;
   }
 
   $at = shortcode_atts($params, $atts);
