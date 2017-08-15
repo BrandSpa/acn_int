@@ -1008,7 +1008,7 @@ button {
       align-items: center;
       padding: 20px 0 20px 40px;
       border-top: 1px solid #333;
-      font-size: 27px;
+      font-size: 20px;
       color: #2B373F;
       float: left;
       width: 100%; }
@@ -1017,6 +1017,8 @@ button {
           padding: 10px 0;
           font-size: 12px;
           padding-left: 5%; } }
+      .fullpage-nav > ul li a:first-child {
+        border-top: none; }
       .fullpage-nav > ul li a span {
         float: left; }
       .fullpage-nav > ul li a .title {

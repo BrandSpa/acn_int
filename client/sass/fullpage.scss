@@ -561,7 +561,7 @@ button {
 								align-items: center;
                 padding: 20px 0 20px 40px;
                 border-top: 1px solid #333;
-                font-size: 27px;
+                font-size: 20px;
                 color: #2B373F;
 								float: left;
 								width: 100%;
@@ -571,6 +571,10 @@ button {
                   font-size: 12px;
                   padding-left: 5%;
                 }
+
+								&:first-child {
+									border-top: none;
+								}
 
 								span {
 									float: left;
