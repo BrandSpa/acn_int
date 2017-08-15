@@ -989,7 +989,9 @@ button {
     position: absolute;
     top: 180px;
     left: 0;
-    right: 0; }
+    right: 0;
+    height: 100%;
+    border-right: 1px solid #333; }
     @media (max-width: 767px) {
       .fullpage-nav > ul {
         position: relative; } }
