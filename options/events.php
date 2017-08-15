@@ -37,8 +37,8 @@ function bs_events_options() {
     <tbody>
       <?php foreach($posts as $post): ?>
         <tr>
-          <td><?php $post->post_title ?></td>
-          <td><?php $post->post_content ?></td>
+          <td><?php echo  $post->post_title ?></td>
+          <td><?php echo $post->post_content ?></td>
         </tr>
       <?php endforeach; ?>
     </tbody>
