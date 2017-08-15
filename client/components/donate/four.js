@@ -61,7 +61,7 @@ class Four extends Component {
 						onClick={this.handleYes}
 						style={{ background: "#50B45A", width: "100%" }}
 					>
-						{texts.yes} {this.state.loading ? <Preload /> : ""}
+						{this.state.loading ? <Preload /> : ""}
 					</button>
 						<h5 style={{
 							fontSize: '12px',
