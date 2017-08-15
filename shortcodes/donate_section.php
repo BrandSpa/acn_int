@@ -41,6 +41,7 @@ function bs_donate_section_sc($atts, $content = null) {
     "success_subtitle" => gett("THANK YOU FOR YOUR GENEROSITY!."),
     "text_four_step" => gett("ACN has a bigger impact when due to the generosity of benefactors can count on an stable budget."),
     "subtext_four_step" => gett("Could you help us with a small daily donation in the amount of US$"),
+    "text_footer" => gett("Your donation will be charged to your credit card. You can cancel your contribution anytime you want."),
     "is_blue" => false,
 		"tags" => ""
 	 ], $atts);
