@@ -20,8 +20,7 @@ $posts = array_map(function($post) {
 $props = [
   'see_more' => gett('See more'),
   'read_more' => gett('Read more'),
-  'see_more_link' => gett('https://acninternational.org/news/'),
-  'posts' => $posts
+  'see_more_link' => gett('https://acninternational.org/news/')
 ];
 
  ?>
