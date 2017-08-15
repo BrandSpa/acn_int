@@ -42,9 +42,6 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     $params[get_att_name($title) . '_num'] = '';
   }
 
-	$at = shortcode_atts($params, $atts);
-	$bgUrl = wp_get_attachment_url( $at['bg_img'] );
-	$contents = empty(vc_param_group_parse_atts($at['contents'])) ? [] : vc_param_group_parse_atts($at['contents']);
 
 	$points = [
 		'Telleskuf' => [
@@ -103,6 +100,15 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		]
 	];
+
+  foreach ($points as $name => $point) {
+    $params[$name  . '_num'] = $name;
+  }
+
+  $at = shortcode_atts($params, $atts);
+  $bgUrl = wp_get_attachment_url( $at['bg_img'] );
+  $contents = empty(vc_param_group_parse_atts($at['contents'])) ? [] : vc_param_group_parse_atts($at['contents']);
+
 
 	ob_start();
 ?>
