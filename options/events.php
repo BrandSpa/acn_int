@@ -4,7 +4,7 @@ add_action('admin_menu', 'bs_admin_events_options_menu');
 function bs_admin_events_options_menu() {
 		add_menu_page(
     'Brandspa theme options',
-    'Accounts Info', //menu name
+    'Events Logs', //menu name
     'manage_options', //allow it options
     'bs-events', //slug
     'bs_events_options',
@@ -27,7 +27,7 @@ function bs_events_options() {
 
   ?>
 
-  <h2>Events</h2>
+  <h2>Events log</h2>
 
   <hr/>
   <table class="wp-list-table widefat fixed striped">
