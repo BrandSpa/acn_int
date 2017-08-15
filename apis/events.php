@@ -4,7 +4,7 @@ function store_event($content, $title = 'event', $type = 'event') {
   $postarr = [
     'post_title' => $title,
     'post_name' => $title,
-    'post_content' => $content,
+    'post_content' => json_encode($content),
     'post_type' => $type
   ];
 
@@ -12,6 +12,7 @@ function store_event($content, $title = 'event', $type = 'event') {
 
   return [
     'result' => $result,
+    'title' => $content,
     'content' => $content,
     'type' => $type
   ];
