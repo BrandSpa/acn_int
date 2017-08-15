@@ -102,7 +102,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 	];
 
   foreach ($points as $name => $point) {
-    $params[$name . '_name'] = $name;
+    $params[strtolower($name) . '_name'] = $name;
   }
 
   $at = shortcode_atts($params, $atts);
@@ -195,7 +195,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 				</g>
 			</g>
 			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em"><?php echo $at[$name . '_name'] ?></tspan>
+				<tspan x="0" dy="1.4em"><?php echo $at[strtolower($name) . '_name'] ?></tspan>
 			</text>
 	</g>
 	</g>
