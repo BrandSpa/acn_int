@@ -27,11 +27,14 @@ function bs_events_options() {
 
   ?>
 
+  <h4>Events</h4>
+  
+  <hr/>
   <table class="wp-list-table widefat fixed striped">
     <thead>
       <tr>
-        <td>event name</td>
-        <td>content</td>
+        <th>Event Name</th>
+        <th>Event Content</th>
       </tr>
     </thead>
     <tbody>
