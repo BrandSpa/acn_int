@@ -16,9 +16,11 @@ function bs_admin_events_options_menu() {
 function bs_events_options() {
   $paged = isset($_GET['paged']) ? $_GET['paged'] : 0;
   $perpage = isset($_GET['perpage']) ? $_GET['perpage'] : 25;
+  $postname = isset($_GET['postname']) ? $_GET['postname'] : '';
 
   $query = new Wp_Query(array(
     'post_type' => 'event',
+		'post_name' => $postname,
     'paged' => $paged,
 		'posts_per_page' => $perpage
   ));
