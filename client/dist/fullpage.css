@@ -999,6 +999,8 @@ button {
         position: relative;
         top: 180px;
         width: 100%; } }
+    .fullpage-nav > ul li:first-child a {
+      border-top: none; }
     .fullpage-nav > ul li a {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1017,8 +1019,6 @@ button {
           padding: 10px 0;
           font-size: 12px;
           padding-left: 5%; } }
-      .fullpage-nav > ul li a:first-child {
-        border-top: none; }
       .fullpage-nav > ul li a span {
         float: left; }
       .fullpage-nav > ul li a .title {
