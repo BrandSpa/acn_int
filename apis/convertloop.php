@@ -37,7 +37,7 @@ require $dir_base . 'vendor/autoload.php';
 	// $data: { "name": "Signed Up", "person": { "email": "german.escobar@convertloop.co" } }
 	function cl_create_event($appId, $apiKey, $data, $endpoint = 'https://api.convertloop.co/v1/event_logs') {
 		try {
-			
+
 			// add pid via cookies if doesn't came from front
 			if(empty($data['person']['pid'])) {
 		    $data['person']['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';

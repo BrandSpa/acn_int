@@ -43,6 +43,7 @@ include_once 'apis/convertloop.php';
 include_once 'apis/mailchimp.php';
 include_once 'apis/infusion.php';
 include_once 'apis/posts.php';
+include_once 'apis/events.php';
 
 // APIS AJAX
 include_once 'apis/ajax/convertloop.php';
