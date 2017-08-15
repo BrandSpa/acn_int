@@ -43,6 +43,7 @@ function bs_donate_section_sc($atts, $content = null) {
     "subtext_four_step" => gett("Could you help us with a small daily donation in the amount of US$"),
     "text_footer" => gett("Your donation will be charged to your credit card. You can cancel your contribution anytime you want."),
     "is_blue" => false,
+		"preload" => get_template_directory_uri() . "/public/img/spinner.svg",
 		"tags" => ""
 	 ], $atts);
 
