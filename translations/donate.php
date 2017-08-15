@@ -29,7 +29,7 @@ $donationTrans = [
 	'YOUR DONATION WAS SUCCESSFUL',
 	'THANK YOU FOR YOUR GENEROSITY!.',
 	'ACN has a bigger impact when due to the generosity of benefactors can count on an stable budget.',
-	'Could you help us with a small daily donation in the amount of US$'
+	'Your donation will be charged to your credit card. You can cancel your contribution anytime you want.'
 ];
 
 foreach($donationTrans as $key => $trans) {
