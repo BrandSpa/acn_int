@@ -49,8 +49,8 @@ function bs_events_options() {
   <hr/>
 
   <div class="pagination">
-    <a class="prev-page" href="/wp-admin/admin.php?page=bs-events&paged=<?php echo $paged > 0 ? $paged - 1 : 0 ?>">prev</a>
-    <a class="next-page" href="/wp-admin/admin.php?page=bs-events&paged=<?php echo $paged + 1 ?>">next</a>
+    <a class="prev-page button" href="/wp-admin/admin.php?page=bs-events&paged=<?php echo $paged > 0 ? $paged - 1 : 0 ?>">prev</a>
+    <a class="next-page button" href="/wp-admin/admin.php?page=bs-events&paged=<?php echo $paged + 1 ?>">next</a>
   </div>
   <?php
   }
