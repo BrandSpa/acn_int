@@ -20,7 +20,7 @@ function bs_events_options() {
 
   $query = new Wp_Query(array(
     'post_type' => 'event',
-		'post_name' => $postname,
+		'name' => $postname,
     'paged' => $paged,
 		'posts_per_page' => $perpage
   ));
