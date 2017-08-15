@@ -1,8 +1,9 @@
 <?php
 
-function store_event($content, $type = 'event') {
+function store_event($content, $title = 'event', $type = 'event') {
   $postarr = [
-    'post_name' => $type,
+    'post_title' => $title,
+    'post_name' => $title,
     'post_content' => $content,
     'post_type' => $type
   ];
@@ -18,7 +19,7 @@ function store_event($content, $type = 'event') {
 
 function store_event_ajax() {
   $data = $_POST['data'];
-  $res = store_event( $data['content'] );
+  $res = store_event( $data['content'], $data['title'] );
   header('Content-type: application/json');
   echo json_encode($res);
   die();
