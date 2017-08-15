@@ -60,15 +60,19 @@ class Four extends Component {
 					>
 						{texts.yes} {this.state.loading ? "..." : ""}
 					</button>
+					<h5 style={{
+						fontSize: '12px',
+				    lineHeight: '1.1',
+				    textAlign: 'center',
+				    marginTop: '10px',
+    				color: '#333'
+			}}>{texts.text_footer}</h5>
 				</div>
 
 				<div className="col-6 col-6-l">
 					<button onClick={this.handleNo} style={{ background: "transparent", border: "1px solid #F1364E", width:"100%", color: "#F1364E" }}>{texts.no}</button>
 				</div>
 
-				<div className="col-12 col-12-l">
-					<h5>{texts.text_footer}</h5>
-				</div>
 
 			</div>
 		)
