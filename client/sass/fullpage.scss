@@ -555,6 +555,7 @@ button {
                 font-size: 27px;
                 color: #2B373F;
                 padding-left: 10%;
+								float: left;
 
                 @media #{$s} {
                   padding: 10px 0;

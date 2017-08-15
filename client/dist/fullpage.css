@@ -999,7 +999,8 @@ button {
       border-top: 1px solid #333;
       font-size: 27px;
       color: #2B373F;
-      padding-left: 10%; }
+      padding-left: 10%;
+      float: left; }
       @media (max-width: 767px) {
         .fullpage-nav > ul li a {
           padding: 10px 0;
