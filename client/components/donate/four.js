@@ -41,7 +41,7 @@ class Four extends Component {
       .storeConvertLoop(this.props, this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.props))
       .then(res => {
-				const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
+				const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&amount=${amount}&personname=${contact.name}&donation_type=monthly`;
           window.location = url;
       });
   };
@@ -60,7 +60,7 @@ class Four extends Component {
 						onClick={this.handleYes}
 						style={{ background: "#50B45A", width: "100%" }}
 					>
-						{this.state.loading ? <img src={texts.preload} /> : texts.yes}
+						{this.state.loading ? <img src={texts.preload} width="40px" /> : texts.yes}
 					</button>
 						<h5 style={{
 							fontSize: '12px',
