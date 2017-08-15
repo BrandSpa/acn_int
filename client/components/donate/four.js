@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as actions from "../../actions/donate";
+import Preload from '../preload';
 
 class Four extends Component {
 	constructor(props) {
@@ -60,7 +61,7 @@ class Four extends Component {
 						onClick={this.handleYes}
 						style={{ background: "#50B45A", width: "100%" }}
 					>
-						{texts.yes} {this.state.loading ? "..." : ""}
+						{texts.yes} {this.state.loading ? <Preload /> : ""}
 					</button>
 						<h5 style={{
 							fontSize: '12px',
