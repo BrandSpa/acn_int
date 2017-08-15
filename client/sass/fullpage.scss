@@ -491,6 +491,7 @@ button {
         left: 0;
         right: 0;
         padding: 10px 0;
+
 				@media #{$s} {
 					position: relative;
 					top: 180px;
@@ -548,7 +549,10 @@ button {
 				border-right: 1px solid #333;
 
 				@media #{$s} {
+					border: none;
 					position: relative;
+					top: 180px;
+					width: 100%;
 				}
 
         li {

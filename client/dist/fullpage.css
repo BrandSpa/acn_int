@@ -995,7 +995,10 @@ button {
     border-right: 1px solid #333; }
     @media (max-width: 767px) {
       .fullpage-nav > ul {
-        position: relative; } }
+        border: none;
+        position: relative;
+        top: 180px;
+        width: 100%; } }
     .fullpage-nav > ul li a {
       display: -webkit-box;
       display: -ms-flexbox;
