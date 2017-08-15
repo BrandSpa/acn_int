@@ -19,8 +19,8 @@ function bs_events_options() {
   $postname = isset($_GET['postname']) ? $_GET['postname'] : '';
 
   $query = new Wp_Query(array(
-    'post_type' => 'event',
 		'name' => $postname,
+    'post_type' => 'event',
     'paged' => $paged,
 		'posts_per_page' => $perpage
   ));
