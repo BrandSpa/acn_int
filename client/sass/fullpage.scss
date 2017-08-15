@@ -540,11 +540,13 @@ button {
     & > ul {
         padding: 0;
         position: absolute;
-        top: 180px;
+        top: 0;
         left: 0;
         right: 0;
 				height: 100%;
+				width: 70%;
 				border-right: 1px solid #333;
+
 				@media #{$s} {
 					position: relative;
 				}
@@ -572,7 +574,7 @@ button {
 
 								.title {
 									padding: 0 0 0 15px;
-									width: 50%;
+									width: 70%;
 									line-height: 1.2;
 								}
 

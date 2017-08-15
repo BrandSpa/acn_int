@@ -987,10 +987,11 @@ button {
   .fullpage-nav > ul {
     padding: 0;
     position: absolute;
-    top: 180px;
+    top: 0;
     left: 0;
     right: 0;
     height: 100%;
+    width: 70%;
     border-right: 1px solid #333; }
     @media (max-width: 767px) {
       .fullpage-nav > ul {
@@ -1017,7 +1018,7 @@ button {
         float: left; }
       .fullpage-nav > ul li a .title {
         padding: 0 0 0 15px;
-        width: 50%;
+        width: 70%;
         line-height: 1.2; }
       .fullpage-nav > ul li a .num {
         width: 53px;
