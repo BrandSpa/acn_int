@@ -34,7 +34,7 @@ function wp_get_posts() {
   $category = isset($_POST['post_category']) ? $_POST['post_category'] : '';
   $perpage = isset($_POST['post_perpage']) ? $_POST['post_perpage'] : '6';
   $status = isset($_POST['post_status']) ? $_POST['post_status'] : 'publish';
-	$cleanContent = isset($_POST['']) ?
+	$cleanContent = isset($_POST['post_clean_content']) ? $_POST['post_clean_content'] : true;
   $res = bs_get_posts($post_type, $paged, $category, $perpage, $status);
 
   responseJson($res);
