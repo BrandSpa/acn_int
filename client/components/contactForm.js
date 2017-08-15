@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import isEmpty from "validator/lib/isEmpty";
 import getCountries from "../lib/getCountries";
 import { storeEvent } from "../lib/events";
+import cookies from "../lib/cookies";
 
 import {
   fetchOfficesCountries,
@@ -110,7 +111,8 @@ class contactForm extends Component {
         return storeEvent("ga_event", event);
       })
       .then(() => {
-        const event = {name: this.props.cl.event, person: this.state.contact};
+        const pid = cookies.dp_pid;
+        const event = {name: this.props.cl.event, person: {...this.state.contact, pid}};
         return storeEvent("cl_event", event);
       })
       .then(() => {
