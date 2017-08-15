@@ -1000,7 +1000,8 @@ button {
       font-size: 27px;
       color: #2B373F;
       padding-left: 10%;
-      float: left; }
+      float: left;
+      width: 100%; }
       @media (max-width: 767px) {
         .fullpage-nav > ul li a {
           padding: 10px 0;
@@ -1008,6 +1009,8 @@ button {
           padding-left: 5%; } }
       .fullpage-nav > ul li a span {
         float: left; }
+      .fullpage-nav > ul li a .title {
+        padding-top: 10px; }
       .fullpage-nav > ul li a .num {
         width: 53px;
         height: 53px;

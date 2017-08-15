@@ -556,6 +556,7 @@ button {
                 color: #2B373F;
                 padding-left: 10%;
 								float: left;
+								width: 100%;
 
                 @media #{$s} {
                   padding: 10px 0;
@@ -565,6 +566,10 @@ button {
 
 								span {
 									float: left;
+								}
+
+								.title {
+									padding-top: 10px;
 								}
 
                 .num {
