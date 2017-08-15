@@ -562,8 +562,13 @@ button {
                   padding-left: 5%;
                 }
 
+								span {
+									float: left;
+								}
+
                 .num {
                     width: 53px;
+										height: 53px;
                     padding: 10px 0;
                     text-align: center;
                     display: inline-block;
@@ -571,7 +576,6 @@ button {
                     border-radius: 53px;
 										font-size: 30px;
 										color: #2B3740;
-
                      @media #{$s} {
                         width: 30px;
                         height: 30px;

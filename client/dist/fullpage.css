@@ -1005,8 +1005,11 @@ button {
           padding: 10px 0;
           font-size: 12px;
           padding-left: 5%; } }
+      .fullpage-nav > ul li a span {
+        float: left; }
       .fullpage-nav > ul li a .num {
         width: 53px;
+        height: 53px;
         padding: 10px 0;
         text-align: center;
         display: inline-block;
