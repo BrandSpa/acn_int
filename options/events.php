@@ -7,13 +7,13 @@ function bs_admin_events_options_menu() {
     'Accounts Info', //menu name
     'manage_options', //allow it options
     'bs-accounts', //slug
-    'bs_accounts_options',
+    'bs_events_options',
     get_template_directory_uri() . '/public/img/bs.png', //icon on menu
     113 //position on menu
   );
 }
 
-function bs_accounts_options() {
+function bs_events_options() {
   ?>
 
   <table class="table">
