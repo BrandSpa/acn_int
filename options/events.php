@@ -27,8 +27,8 @@ function bs_events_options() {
 
   ?>
 
-  <h4>Events</h4>
-  
+  <h2>Events</h2>
+
   <hr/>
   <table class="wp-list-table widefat fixed striped">
     <thead>
@@ -46,6 +46,11 @@ function bs_events_options() {
       <?php endforeach; ?>
     </tbody>
   </table>
+  <hr/>
 
+  <div class="pagination">
+    <a class="prev-page" href="/wp-admin/admin.php?page=bs-events&paged=<?php echo $paged > 0 ? $paged - 1 : 0 ?>">prev</a>
+    <a class="next-page" href="/wp-admin/admin.php?page=bs-events&paged=<?php echo $paged + 1 ?>">next</a>
+  </div>
   <?php
   }
