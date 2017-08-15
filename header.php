@@ -23,9 +23,10 @@
   <meta property="og:image" content="<?php echo get_the_post_thumbnail_url() ?>" />
   <meta property="og:description" content="<?php echo get_the_excerpt(); ?>" />
 
-  <meta name="twitter:title" content="Aid to the Church in Need - <?php echo get_the_title(); ?>">
-  <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url() ?>">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<?php echo get_the_title(); ?>">
+  <meta name="twitter:image" content="<?php echo get_the_post_thumbnail_url() ?>">
+  <meta name="twitter:description" content="<?php echo get_the_excerpt(); ?>" />
 
   <link rel="icon" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" sizes="32x32" />
   <link rel="icon" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" sizes="192x192" />
