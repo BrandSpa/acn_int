@@ -12,7 +12,7 @@ function store_event($content, $title = 'event', $type = 'event') {
 
   return [
     'result' => $result,
-    'title' => $content,
+    'title' => $title,
     'content' => $content,
     'type' => $type
   ];

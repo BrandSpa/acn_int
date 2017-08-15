@@ -27,6 +27,7 @@ function wp_get_posts() {
   $post_type = isset($_POST['post_type']) ? $_POST['post_type'] : array('video','gallery','featured','post');
   $category = isset($_POST['post_category']) ? $_POST['post_category'] : '';
   $perpage = isset($_POST['post_perpage']) ? $_POST['post_perpage'] : '6';
+  $perpage = isset($_POST['post_status']) ? $_POST['post_status'] : 'publish';
 
   $res = bs_get_posts($post_type, $paged, $category, $perpage);
 
