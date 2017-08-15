@@ -1,6 +1,5 @@
-import getCookies from './cookies';
+import cookies from './cookies';
 import fetchwp from './fetch_wp';
-const cookies = getCookies();
 
 export const runEvents = () => {
   const events = [
