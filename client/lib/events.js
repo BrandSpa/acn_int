@@ -15,11 +15,9 @@ export const runEvents = () => {
 
     if (dataStr !== null) {
       const data = JSON.parse(dataStr);
-
-      runEvent(eventName, data)
-      .then(() => {
-        flushEvent(eventName);
-      });
+      fetchwp('store_event', {title: eventName, content: data})
+      .then(() => runEvent(eventName, data) )
+      .then(() => flushEvent(eventName) );
     }
   })
 };

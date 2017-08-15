@@ -1,6 +1,12 @@
 <?php
 
-function bs_get_posts($type = array('video','gallery','featured','post'), $paged = 0, $category = '', $perpage = '6', $status) {
+function bs_get_posts(
+	$type = array('video','gallery','featured','post'),
+	$paged = 0,
+	$category = '',
+	$perpage = '6',
+	$status) {
+
 	$query = new Wp_Query(array(
     'post_type' => $type,
     'paged' => $paged,
@@ -28,7 +34,7 @@ function wp_get_posts() {
   $category = isset($_POST['post_category']) ? $_POST['post_category'] : '';
   $perpage = isset($_POST['post_perpage']) ? $_POST['post_perpage'] : '6';
   $status = isset($_POST['post_status']) ? $_POST['post_status'] : 'publish';
-
+	$cleanContent = isset($_POST['']) ?
   $res = bs_get_posts($post_type, $paged, $category, $perpage, $status);
 
   responseJson($res);
