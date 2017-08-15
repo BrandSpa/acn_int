@@ -215,6 +215,73 @@ function acn_fullpage_slide_points_vc() {
       'Properties already restored'
     ];
 
+    $points = [
+  		'Telleskuf' => [
+  			'x' => '1219.55',
+  			'y' => '155.68',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Alqosh' => [
+  			'x' => '1422.68',
+  			'y' => '125',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Baqofa' => [
+  			'x' => '1302.85',
+  			'y' => '225.32',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Batnaya' => [
+  			'x' => '1219.66',
+  			'y' => '275.41',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Telekef' => [
+  			'x' => '1139.8',
+  			'y' => '352.83',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Mosul' => [
+  			'x' => '1013',
+  			'y' => '411.91',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Bahzani' => [
+  			'x' => '1439.68',
+  			'y' => '409.84',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Bashiqua' => [
+  			'x' => '1351.85',
+  			'y' => '466.08',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Bartella' => [
+  			'x' => '1276.32',
+  			'y' => '625.78',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Karamless' => [
+  			'x' => '1236.11',
+  			'y' => '786.49',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		],
+  		'Bakhdida' => [
+  			'x' => '1072.1',
+  			'y' => '774.85',
+  			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+  		]
+  	];
+
+    foreach ($points as $name => $point) {
+      $params[] = [
+          "type" => "textfield",
+          "heading" => $name . ' name',
+          "param_name" => $name . '_name',
+          "value" => $name
+      ]
+    }
+
     foreach ($titles as $title) {
       $params[] = [
         "type" => "textfield",
@@ -222,6 +289,7 @@ function acn_fullpage_slide_points_vc() {
         "param_name" => get_att_name($title),
         "value" =>  $title
       ];
+
       $params[] = [
         "type" => "textfield",
         "heading" => $title . ' num',
