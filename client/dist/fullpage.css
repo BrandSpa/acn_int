@@ -998,7 +998,8 @@ button {
         border: none;
         position: relative;
         top: 180px;
-        width: 100%; } }
+        width: 100%;
+        height: auto; } }
     .fullpage-nav > ul li:first-child a {
       border-top: none; }
     .fullpage-nav > ul li a {
