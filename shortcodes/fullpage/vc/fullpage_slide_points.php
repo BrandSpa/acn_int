@@ -279,7 +279,7 @@ function acn_fullpage_slide_points_vc() {
           "heading" => $name . ' name',
           "param_name" => $name . '_name',
           "value" => $name
-      ]
+      ];
     }
 
     foreach ($titles as $title) {
