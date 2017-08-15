@@ -1,5 +1,6 @@
 import React from "react";
 import { storeEvent } from "../lib/events";
+import cookies from '../lib/cookies';
 
 const cleanEmpty = arrArg =>
   arrArg.filter(item => item.length > 0);
@@ -18,10 +19,10 @@ class Post extends React.Component {
   goToPost = (e) => {
     e.preventDefault();
     const { post } = this.props;
-
+    const pid = cookies.dp_pid;
     const event = {
       name: "READPOST",
-      person: {},
+      person: { pid },
       metadata: {
         url: post.post_permalink
       }
