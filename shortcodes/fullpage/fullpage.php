@@ -110,9 +110,12 @@ function acn_fullpage_sc( $atts, $content ) {
 	<div class="fullpage-nav">
 		<ul>
 			<?php foreach($links  as $ind => $link): ?>
-				<li><a href="<?php echo $link['link'] ?>"><span class="num"><?php echo $ind + 1 ?></span> <?php echo  $link['title'] ?></a></li>
+				<li><a href="<?php echo $link['link'] ?>"><span class="num"><?php echo $ind + 1 ?></span> <span><?php echo  $link['title'] ?></span></a></li>
 			<?php endforeach; ?>
-			<li class="fullpage-nav__about"><a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a></li>
+
+			<li class="fullpage-nav__about">
+				<a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a>
+			</li>
 		</ul>
 
 		<button class="fullpage-nav__close"><i class="ion-close-round"></i></button>

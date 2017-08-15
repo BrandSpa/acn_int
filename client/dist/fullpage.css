@@ -998,7 +998,6 @@ button {
       padding: 30px 0;
       border-top: 1px solid #333;
       font-size: 40px;
-      font-weight: 300;
       color: #2B373F;
       padding-left: 10%; }
       @media (max-width: 767px) {
@@ -1011,8 +1010,10 @@ button {
         padding: 15px 0;
         text-align: center;
         display: inline-block;
-        border: 1px solid #2B373F;
-        border-radius: 50px; }
+        border: 3px solid #E3333A;
+        border-radius: 50px;
+        font-size: 30px;
+        color: #2B3740; }
         @media (max-width: 767px) {
           .fullpage-nav > ul li a .num {
             width: 30px;
