@@ -1014,7 +1014,7 @@ button {
       .fullpage-nav > ul li a span {
         float: left; }
       .fullpage-nav > ul li a .title {
-        padding: 15px 0 0 15px;
+        padding: 0 0 0 15px;
         width: 50%;
         line-height: 1.2; }
       .fullpage-nav > ul li a .num {
