@@ -592,12 +592,12 @@ button {
                     border-radius: 53px;
 										font-size: 30px;
 										color: #2B3740;
+
                      @media #{$s} {
-                        width: 30px;
-                        height: 30px;
-                        padding: 7px 0;
-                        border-radius: 30px;
-                        margin-right: 5px;
+                        width: 50px;
+                        height: 50px;
+                        padding: 14px 0;
+                        border-radius: 50px;
                     }
                 }
             }
