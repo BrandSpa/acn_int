@@ -189,7 +189,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 				</g>
 			</g>
 			<text class="hotspot__pin-text" fill="#fff" dx="0" y="20" text-anchor="middle" style="display: inline-block;">
-				<tspan x="0" dy="1.4em"><?php echo $name ?></tspan>
+				<tspan x="0" dy="1.4em"><?php echo $at[$name . '_name'] ?></tspan>
 			</text>
 	</g>
 	</g>
