@@ -113,7 +113,7 @@ function acn_fullpage_sc( $atts, $content ) {
 				<li><a href="<?php echo $link['link'] ?>"><span class="num"><?php echo $ind + 1 ?></span> <span class="title"><?php echo  $link['title'] ?></span></a></li>
 			<?php endforeach; ?>
 			<li>
-				<a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><img src="<?php echo get_template_directory_uri() ?> /img/acn_fp_about.png ?>" width="56px" height="56"><span class="title"></span><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a>
+				<a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>"><img src="<?php echo get_template_directory_uri() ?>/public/img/acn_fp_about.png ?>" width="56px" height="56"><span class="title"></span><?php echo isset($at['text_about']) ? $at['text_about'] : 'About ACN'  ?></a>
 			</li>
 		</ul>
 
