@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 
 class ContactsGG extends Component {
+  state = {
+    continent: 'Asia',
+    country: null
+  }
+
   render() {
     const { contacts, continents } = this.props;
+    const { country, continent } = this.state;
     let continentsKeys = Object.keys(continents);
 
     return (
       <div>
         <ul className="col-6-l">
-          {continentsKeys.map(continent => {
+          {continentsKeys.map(continentName => {
             return (<li className="continent__name">
-              <a href="#">{continent}</a>
-              <ul className="continent__countries">
+              <a href={`?continent=${continentName}`}>{continentName}</a>
+              <ul
+                  className={continent ==continentName ? "continent__countries continent__countries--open" : "continent__countries"}>
                 {continents[continent].map(country =>
-                  <li><a href="#">{country}</a></li>
+                  <li><a href={`?country=${continent}`}>{country}</a></li>
                 )}
               </ul>
             </li>
@@ -47,7 +54,12 @@ class ContactsGG extends Component {
             color: #fff;
           }
 
+          .continent__countries--open {
+            display: block;
+          }
+
           .continent__countries {
+            display: none;
             background: #fff;
             height: 400px;
             overflow-y: scroll;
