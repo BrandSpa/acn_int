@@ -15,11 +15,11 @@ require_once 'lib/post_type.php';
 require_once 'lib/clean_theme.php';
 
 //LIBS
-require_once('lib/clean_menu.php');
-require_once('lib/space_to_lodash.php');
-require_once('lib/translation.php');
-require_once('lib/is_mobile.php');
-require_once('lib/infusionsoft.php');
+require_once 'lib/clean_menu.php';
+require_once 'lib/space_to_lodash.php';
+require_once 'lib/translation.php';
+require_once 'lib/is_mobile.php';
+require_once 'lib/infusionsoft.php';
 require_once 'lib/get_lang.php';
 require_once 'lib/show_posts.php';
 require_once 'lib/show_donate.php';
@@ -34,10 +34,10 @@ require_once 'lib/clean_quote.php';
 require_once 'lib/get_lang_tag.php';
 
 //TRANSLATIONS
-require_once('translations/index.php');
+require_once 'translations/index.php';
 
 //APIS
-require_once('apis/index.php');
+require_once 'apis/index.php';
 include_once 'apis/stripe.php';
 include_once 'apis/convertloop.php';
 include_once 'apis/mailchimp.php';
@@ -51,7 +51,7 @@ include_once 'apis/ajax/mailchimp.php';
 include_once 'apis/ajax/stripe.php';
 
 //OPTIONS
-require_once('options/index.php');
+require_once 'options/index.php';
 
 //SHORTCODES
 require_once('shortcodes/contact_form.php');
@@ -133,6 +133,7 @@ require_once('metaboxes/image_square.php');
 require_once('metaboxes/geolify.php');
 require_once('metaboxes/video.php');
 require_once('metaboxes/gallery.php');
+require_once('metaboxes/contact.php');
 
 $post_types = array( 'video', 'gallery','featured' );
 

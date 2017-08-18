@@ -1,5 +1,5 @@
 import React from "react";
-import getCountries from "../lib/getCountries";
+import getCountries from "../../lib/getCountries";
 
 class GeolifyForm extends React.Component {
   static defaultProps = {

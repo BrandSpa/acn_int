@@ -1,5 +1,5 @@
 import React from "react";
-import { openMediaUploader } from "../lib/uploader";
+import { openMediaUploader } from "../../lib/uploader";
 
 class GalleryMetabox extends React.Component {
   static defaultProps = {

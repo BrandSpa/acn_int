@@ -1,23 +1,21 @@
 'use strict';
+const Path = require('path');
 
 module.exports = {
-  watch: true,
   entry: {
-  	admin: './client/admin.js',
+  	admin: './admin.js',
   },
   output: {
-  	path: './public/js',
+  	path: Path.join(__dirname, './public/js'),
     filename: '[name].js'
   },
   module: {
   	loaders: [
-			{ 
-				test: /\.js$/, 
-				exclude: /node_modules/, 
-				loader: 'babel-loader' 
-			} 
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader'
+			}
 		]
-  },
-	devtool: 'cheap-source-map',
+  }
 };
-
