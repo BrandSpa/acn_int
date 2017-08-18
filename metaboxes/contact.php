@@ -6,7 +6,7 @@ function bs_contact_gg_metabox() {
 	if(isset($_GET['post'])) $post_id =  $_GET['post'] ? $_GET['post'] : null;
 	if(isset($_POST['post_ID']) && $post_id == null) $post_id = $_POST['post_ID'] ? $_POST['post_ID']: null;
 
-	add_meta_box('contact_gg', 'BS Contact GG', 'bs_contact_gg_cb', 'page', 'normal', 'high', null);
+	add_meta_box('contact_gg', 'BS Contact GG', 'bs_contact_gg_cb', 'contact', 'normal', 'high', null);
 }
 
 add_action('add_meta_boxes', 'bs_contact_gg_metabox');
