@@ -23,7 +23,7 @@ function bs_contact_gg_cb($post) {
 
   <div class="bs-contact-gg" data-props='<?php echo json_encode($props) ?>'></div>
 
-	<script src="<?php echo get_template_directory_uri() ?>/public/js/admin.js"></script>
+	<script src="<?php echo get_template_directory_uri() ?>/public/js/admin.js?v=<?php echo filemtime(get_template_directory() . '/public/js/admin.js') ?>"></script>
 <?php
 }
 
