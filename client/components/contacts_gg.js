@@ -32,6 +32,7 @@ class ContactsGG extends Component {
           {continentsKeys.map(continentName => {
             return (<li className={continent == continentName ? "continent__name continent__name--active" : "continent__name" }>
               <a href="#" onClick={this.setContinent.bind(null, continentName)}>{continentName}</a>
+              <i className={continent == continentName ? "ion-chevron-up": "ion-chevron-down"}></i>
               <ul
                 className={continent == continentName
                   ? "continent__countries continent__countries--open"
