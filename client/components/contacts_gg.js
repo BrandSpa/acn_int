@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ContactsGG extends Component {
   render() {
     const { contacts, continents } = this.props;
-    let continentsKeys = Object.Keys(continents);
+    let continentsKeys = Object.keys(continents);
 
     return (
       <div>
