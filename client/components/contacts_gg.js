@@ -31,8 +31,10 @@ class ContactsGG extends Component {
         <ul className="col-6-l">
           {continentsKeys.map(continentName => {
             return (<li className={continent == continentName ? "continent__name continent__name--active" : "continent__name" }>
-              <a href="#" onClick={this.setContinent.bind(null, continentName)}>{continentName}</a>
-              <i className={continent == continentName ? "ion-chevron-up": "ion-chevron-down"}></i>
+              <a href="#" onClick={this.setContinent.bind(null, continentName)}>
+                {continentName}
+                <i className={continent == continentName ? "ion-chevron-up": "ion-chevron-down"}></i>
+              </a>
               <ul
                 className={continent == continentName
                   ? "continent__countries continent__countries--open"
@@ -73,6 +75,10 @@ class ContactsGG extends Component {
             margin-bottom: 2px;
           }
 
+          .continent__name > a i {
+            text-align: right;
+          }
+
           .continent__name--active > a {
             background: #F1364E;
           }
@@ -89,7 +95,7 @@ class ContactsGG extends Component {
             display: block;
           }
 
-          .continent__countries li a{
+          .continent__countries li a {
             color: #8E8E8E;
 
           }
