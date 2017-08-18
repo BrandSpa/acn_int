@@ -41,4 +41,17 @@ function create_post_type() {
       'has_archive' => true,
 		]
   );
+
+  register_post_type( 'contact',
+    [
+      'labels' => [
+        'name' => __( 'Contact' ),
+        'singular_name' => __( 'Contact' )
+			],
+			'supports' => [ 'title', 'editor', 'excerpt', 'thumbnail', 'revisions','page_image_square'],
+			'taxonomies' => [ 'category' ],
+      'public' => true,
+      'has_archive' => true,
+		]
+  );
 }
