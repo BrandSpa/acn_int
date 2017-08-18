@@ -90,7 +90,7 @@ class ContactsGG extends Component {
             background: #fff;
             height: 400px;
             overflow-y: scroll;
-            padding: 30px;
+            padding: 20px 30px;
           }
 
           .continent__countries--open {
@@ -100,6 +100,7 @@ class ContactsGG extends Component {
           .continent__countries li a {
             color: #8E8E8E;
             margin-bottom: 10px;
+            display: block;
           }
 
         `}</style>
