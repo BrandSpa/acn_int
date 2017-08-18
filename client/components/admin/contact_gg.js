@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import countries from '../../lib/getCountries';
+import countriesList from '../../lib/getCountries';
 
 class ContactGG extends Component {
   state = {
@@ -67,7 +67,7 @@ class ContactGG extends Component {
               onChange={this.handleCountry.bind(null, i)}
             >
               <option value="">Select country</option>
-              {countries.map((countryName, i) =>
+              {countriesList.map((countryName, i) =>
                 <option key={i} value={countryName}>{countryName}</option>
               )}
             </select>

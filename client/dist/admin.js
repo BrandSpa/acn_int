@@ -10704,7 +10704,7 @@ var ContactGG = function (_Component) {
                 { value: '' },
                 'Select country'
               ),
-              countries.map(function (countryName, i) {
+              _getCountries2['default'].map(function (countryName, i) {
                 return _react2['default'].createElement(
                   'option',
                   { key: i, value: countryName },
