@@ -10611,13 +10611,25 @@ var ContactGG = function (_Component) {
     return _ret = (_temp = (_this = (0, _possibleConstructorReturn3['default'])(this, (_ref = ContactGG.__proto__ || (0, _getPrototypeOf2['default'])(ContactGG)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       fields: [''],
       countries: ['']
-    }, _this.handleAddCountry = function (e) {
+    }, _this.AddCountry = function (e) {
       e.preventDefault();
       var countries = [].concat((0, _toConsumableArray3['default'])(_this.state.countries), ['']);
       _this.setState({ countries: countries });
-    }, _this.handleAddField = function (e) {
+    }, _this.AddField = function (e) {
       e.preventDefault();
       var fields = [].concat((0, _toConsumableArray3['default'])(_this.state.fields), ['']);
+      _this.setState({ fields: fields });
+    }, _this.removeCountry = function (index, e) {
+      e.preventDefault();
+      var countries = _this.state.countries.filter(function (con, i) {
+        return i != index;
+      });
+      _this.setState({ countries: countries });
+    }, _this.removeField = function (index, e) {
+      e.preventDefault();
+      var fields = _this.state.fields.filter(function (con, i) {
+        return i != index;
+      });
       _this.setState({ fields: fields });
     }, _this.handleCountry = function (index, e) {
       var countries = _this.state.countries;
@@ -10663,7 +10675,7 @@ var ContactGG = function (_Component) {
             _react2['default'].createElement(
               'select',
               {
-                name: 'countries[]',
+                name: 'countries',
                 value: country,
                 className: 'form-control',
                 onChange: _this2.handleCountry.bind(null, i)
@@ -10688,6 +10700,11 @@ var ContactGG = function (_Component) {
                 { value: 'Colombia' },
                 'Chile'
               )
+            ),
+            _react2['default'].createElement(
+              'button',
+              { className: 'button', onClick: _this2.removeCountry },
+              'Remove'
             )
           );
         }),
@@ -10696,7 +10713,7 @@ var ContactGG = function (_Component) {
           null,
           _react2['default'].createElement(
             'button',
-            { className: 'button', onClick: this.handleAddCountry },
+            { className: 'button', onClick: this.AddCountry },
             'Add country'
           )
         ),
@@ -10705,12 +10722,17 @@ var ContactGG = function (_Component) {
             'p',
             { className: 'form-group', key: i },
             _react2['default'].createElement('input', {
-              name: 'info[]',
+              name: 'info',
               type: 'text',
               className: 'form-control',
               value: field,
               onChange: _this2.handleField.bind(null, i)
-            })
+            }),
+            _react2['default'].createElement(
+              'button',
+              { className: 'button', onClick: _this2.removeField },
+              'Remove'
+            )
           );
         }),
         _react2['default'].createElement(
@@ -10718,7 +10740,7 @@ var ContactGG = function (_Component) {
           null,
           _react2['default'].createElement(
             'button',
-            { className: 'button', onClick: this.handleAddField },
+            { className: 'button', onClick: this.AddField },
             'Add field'
           )
         )

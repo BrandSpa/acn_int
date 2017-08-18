@@ -16,16 +16,28 @@ class ContactGG extends Component {
     }
   }
 
-  handleAddCountry = (e) => {
+  AddCountry = (e) => {
     e.preventDefault();
     const countries = [...this.state.countries, ''];
-    this.setState({countries});
+    this.setState({ countries });
   }
 
-  handleAddField = (e) => {
+  AddField = (e) => {
     e.preventDefault();
     const fields = [...this.state.fields, ''];
-    this.setState({fields});
+    this.setState({ fields });
+  }
+
+  removeCountry = (index, e) => {
+    e.preventDefault();
+    let countries = this.state.countries.filter((con, i) => i != index);
+    this.setState({ countries });
+  }
+
+  removeField = (index, e) => {
+    e.preventDefault();
+    let fields = this.state.fields.filter((con, i) => i != index);
+    this.setState({ fields });
   }
 
   handleCountry = (index, e) => {
@@ -48,7 +60,7 @@ class ContactGG extends Component {
         {countries.map((country, i)=>
           <p className="form-group" key={i}>
             <select
-              name="countries[]"
+              name="countries"
               value={country}
               className="form-control"
               onChange={this.handleCountry.bind(null, i)}
@@ -58,24 +70,26 @@ class ContactGG extends Component {
               <option value="Colombia">Colombia</option>
               <option value="Colombia">Chile</option>
             </select>
+            <button className="button" onClick={this.removeCountry}>Remove</button>
           </p>
         )}
         <p>
-          <button className="button" onClick={this.handleAddCountry}>Add country</button>
+          <button className="button" onClick={this.AddCountry}>Add country</button>
         </p>
         {fields.map((field, i) =>
           <p className="form-group" key={i}>
             <input
-              name="info[]"
+              name="info"
               type="text"
               className="form-control"
               value={field}
               onChange={this.handleField.bind(null, i)}
             />
+            <button className="button" onClick={this.removeField}>Remove</button>
           </p>
         )}
         <p>
-          <button className="button" onClick={this.handleAddField}>Add field</button>
+          <button className="button" onClick={this.AddField}>Add field</button>
         </p>
 
       </div>
