@@ -22,10 +22,12 @@ class ContactsGG extends Component {
         </ul>
         <div className="col-6-l">
         {contacts.map(contact => {
-          <div>
+          return (
+            <div>
             {contact.post_title}
             {contact.fields}
           </div>
+        )
         })}
         </div>
       </div>
