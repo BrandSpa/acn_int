@@ -34,10 +34,12 @@ class ContactsGG extends Component {
           ul {
             padding: 0;
           }
+
           li {
             list-style: none;
           }
-          .continent__name a{
+
+          .continent__name > a{
             background: #3C515F;
             display: block;
             padding: 10px 0;
@@ -45,7 +47,7 @@ class ContactsGG extends Component {
             color: #fff;
           }
 
-          .continent_countries {
+          .continent__countries {
             background: #fff;
             height: 400px;
             overflow-y: scroll;
