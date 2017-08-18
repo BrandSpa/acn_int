@@ -70,7 +70,7 @@ class ContactGG extends Component {
               <option value="Colombia">Colombia</option>
               <option value="Colombia">Chile</option>
             </select>
-            <button className="button" onClick={this.removeCountry}>Remove</button>
+            <button className="button" onClick={this.removeCountry.bind(null, i)}>Remove</button>
           </p>
         )}
         <p>
@@ -85,7 +85,7 @@ class ContactGG extends Component {
               value={field}
               onChange={this.handleField.bind(null, i)}
             />
-            <button className="button" onClick={this.removeField}>Remove</button>
+            <button className="button" onClick={this.removeField.bind(null, i)}>Remove</button>
           </p>
         )}
         <p>

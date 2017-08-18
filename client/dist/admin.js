@@ -10703,7 +10703,7 @@ var ContactGG = function (_Component) {
             ),
             _react2['default'].createElement(
               'button',
-              { className: 'button', onClick: _this2.removeCountry },
+              { className: 'button', onClick: _this2.removeCountry.bind(null, i) },
               'Remove'
             )
           );
@@ -10730,7 +10730,7 @@ var ContactGG = function (_Component) {
             }),
             _react2['default'].createElement(
               'button',
-              { className: 'button', onClick: _this2.removeField },
+              { className: 'button', onClick: _this2.removeField.bind(null, i) },
               'Remove'
             )
           );
