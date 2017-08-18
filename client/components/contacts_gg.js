@@ -76,7 +76,7 @@ class ContactsGG extends Component {
           }
 
           .continent__name > a i {
-            text-align: right;
+            float: right;
           }
 
           .continent__name--active > a {
