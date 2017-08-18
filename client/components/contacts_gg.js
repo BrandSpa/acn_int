@@ -2,16 +2,23 @@ import React, { Component } from 'react';
 
 class ContactsGG extends Component {
   state = {
-    continent: 'Asia',
+    continent: 'Afrika',
     country: null,
     contact: {}
   }
 
-  getContact = (country, e) => {
+  setContact = (country, e) => {
     e.preventDefault();
     const { contacts } = this.props;
     const contact = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
-    this.setState({ contact });
+    if(contact.length > 0) {
+      this.setState({ contact: contact[0], country });
+    }
+  }
+
+  setContinent = (continentName, e) => {
+    e.preventDefault();
+    this.setState({ continent: continentName });
   }
 
   render() {
@@ -24,11 +31,11 @@ class ContactsGG extends Component {
         <ul className="col-6-l">
           {continentsKeys.map(continentName => {
             return (<li className="continent__name">
-              <a href={`?continent=${continentName}`}>{continentName}</a>
+              <a href="#" onClick={this.setContinent.bind(null, continentName)}>{continentName}</a>
               <ul
                   className={continent ==continentName ? "continent__countries continent__countries--open" : "continent__countries"}>
                 {continents[continent].map(country =>
-                  <li><a href="#" onClick={this.getContact.bind(null, country)}>{country}</a></li>
+                  <li><a href="#" onClick={this.setContact.bind(null, country)}>{country}</a></li>
                 )}
               </ul>
             </li>
