@@ -3,7 +3,15 @@ import React, { Component } from 'react';
 class ContactsGG extends Component {
   state = {
     continent: 'Asia',
-    country: null
+    country: null,
+    contact: {}
+  }
+
+  getContact = (country, e) => {
+    e.preventDefault();
+    const { contacts } = this.props;
+    const contact = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
+    this.setState({ contact });
   }
 
   render() {
@@ -20,7 +28,7 @@ class ContactsGG extends Component {
               <ul
                   className={continent ==continentName ? "continent__countries continent__countries--open" : "continent__countries"}>
                 {continents[continent].map(country =>
-                  <li><a href={`?country=${continent}`}>{country}</a></li>
+                  <li><a href="#" onClick={this.getContact.bind(null, country)}>{country}</a></li>
                 )}
               </ul>
             </li>
@@ -28,14 +36,9 @@ class ContactsGG extends Component {
           })}
         </ul>
         <div className="col-6-l">
-        {contacts.map(contact => {
-          return (
-            <div>
+          <div className="contact">
             {contact.post_title}
-            {contact.fields}
           </div>
-        )
-        })}
         </div>
         <style jsx>{`
           ul {
