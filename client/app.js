@@ -29,6 +29,7 @@ import VideoHeader from './components/videoHeader';
 import Carousel from './components/carousel';
 import Counter from './components/counter';
 import PostShare from './components/postShare';
+import ContactsGG from './components/contacts_gg';
 
 // jquery
 
@@ -75,6 +76,7 @@ multipleRender(VideoHeader, '.bs-video-header');
 multipleRender(Carousel, '.bs-carousel');
 multipleRender(Counter, '.bs-counter');
 multipleRender(PostShare, '.bs-post-share');
+multipleRender(ContactsGG, '.s-contact-gg');
 
 // jquery calls
 setMenuMobile();
