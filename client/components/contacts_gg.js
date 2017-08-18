@@ -49,9 +49,10 @@ class ContactsGG extends Component {
           .continent__name > a{
             background: #3C515F;
             display: block;
-            padding: 10px 0;
+            padding: 10px 30px;
             font-weight: 500;
             color: #fff;
+            margin-bottom: 2px;
           }
 
           .continent__countries {
@@ -59,6 +60,7 @@ class ContactsGG extends Component {
             background: #fff;
             height: 400px;
             overflow-y: scroll;
+            padding: 30px;
           }
 
           .continent__countries--open {
