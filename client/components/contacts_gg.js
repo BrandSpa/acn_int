@@ -7,18 +7,20 @@ class ContactsGG extends Component {
 
     return (
       <div>
-        <ul className="col-6-lg">
+        <ul className="col-6-l">
           {continentsKeys.map(continent => {
             return (<li>
               {continent}
+              <ul>
                 {continents[continent].map(country =>
                   <li>{country}</li>
                 )}
-              </li>
+              </ul>
+            </li>
             )
           })}
         </ul>
-        <div className="col-6-lg">
+        <div className="col-6-l">
         {contacts.map(contact => {
           <div>
             {contact.post_title}
