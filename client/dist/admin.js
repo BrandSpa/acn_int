@@ -10609,8 +10609,8 @@ var ContactGG = function (_Component) {
     }
 
     return _ret = (_temp = (_this = (0, _possibleConstructorReturn3['default'])(this, (_ref = ContactGG.__proto__ || (0, _getPrototypeOf2['default'])(ContactGG)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-      fields: ['phone: 1234546', 'mail: alejandro@brandspa.com', ''],
-      countries: ['Colombia', 'Argentina', '']
+      fields: [''],
+      countries: ['']
     }, _this.handleAddCountry = function (e) {
       e.preventDefault();
       var countries = [].concat((0, _toConsumableArray3['default'])(_this.state.countries), ['']);
@@ -10646,11 +10646,15 @@ var ContactGG = function (_Component) {
         null,
         countries.map(function (country, i) {
           return _react2['default'].createElement(
-            'div',
+            'p',
             { className: 'form-group', key: i },
             _react2['default'].createElement(
               'select',
-              { value: country, className: 'form-control' },
+              {
+                name: 'countries',
+                value: country,
+                className: 'form-control'
+              },
               _react2['default'].createElement(
                 'option',
                 { value: '' },
@@ -10675,21 +10679,29 @@ var ContactGG = function (_Component) {
           );
         }),
         _react2['default'].createElement(
-          'button',
-          { className: 'button', onClick: this.handleAddCountry },
-          'Add country'
+          'p',
+          null,
+          _react2['default'].createElement(
+            'button',
+            { className: 'button', onClick: this.handleAddCountry },
+            'Add country'
+          )
         ),
         fields.map(function (field, i) {
           return _react2['default'].createElement(
-            'div',
-            { className: 'form-group' },
-            _react2['default'].createElement('input', { type: 'text', className: 'form-control' })
+            'p',
+            { className: 'form-group', key: i },
+            _react2['default'].createElement('input', { name: 'info', type: 'text', className: 'form-control' })
           );
         }),
         _react2['default'].createElement(
-          'button',
-          { className: 'button', onClick: this.handleAddField },
-          'Add field'
+          'p',
+          null,
+          _react2['default'].createElement(
+            'button',
+            { className: 'button', onClick: this.handleAddField },
+            'Add field'
+          )
         )
       );
     }

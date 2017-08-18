@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class ContactGG extends Component {
   state = {
-    fields: ['phone: 1234546', 'mail: alejandro@brandspa.com', ''],
-    countries: ['Colombia', 'Argentina', ''],
+    fields: [''],
+    countries: [''],
   }
 
   componentDidMount() {
@@ -34,23 +34,31 @@ class ContactGG extends Component {
     return (
       <div>
         {countries.map((country, i)=>
-          <div className="form-group" key={i}>
-            <select value={country} className="form-control">
+          <p className="form-group" key={i}>
+            <select
+              name="countries"
+              value={country}
+              className="form-control"
+            >
               <option value="">Select country</option>
               <option value="Argentina">Argentina</option>
               <option value="Colombia">Colombia</option>
               <option value="Colombia">Chile</option>
             </select>
-          </div>
+          </p>
         )}
-
-        <button className="button" onClick={this.handleAddCountry}>Add country</button>
+        <p>
+          <button className="button" onClick={this.handleAddCountry}>Add country</button>
+        </p>
         {fields.map((field, i) =>
-          <div className="form-group">
-            <input type="text" className="form-control"/>
-          </div>
+          <p className="form-group" key={i}>
+            <input name="info" type="text" className="form-control"/>
+          </p>
         )}
-        <button className="button" onClick={this.handleAddField}>Add field</button>
+        <p>
+          <button className="button" onClick={this.handleAddField}>Add field</button>
+        </p>
+
       </div>
     )
   }
