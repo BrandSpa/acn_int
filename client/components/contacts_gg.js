@@ -54,15 +54,15 @@ class ContactsGG extends Component {
             color: #fff;
           }
 
-          .continent__countries--open {
-            display: block;
-          }
-
           .continent__countries {
             display: none;
             background: #fff;
             height: 400px;
             overflow-y: scroll;
+          }
+
+          .continent__countries--open {
+            display: block;
           }
 
           .continent__countries li a{
