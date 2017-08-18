@@ -10704,7 +10704,13 @@ var ContactGG = function (_Component) {
           return _react2['default'].createElement(
             'p',
             { className: 'form-group', key: i },
-            _react2['default'].createElement('input', { name: 'info[]', type: 'text', className: 'form-control', onChange: _this2.handleField.bind(null, i) })
+            _react2['default'].createElement('input', {
+              name: 'info[]',
+              type: 'text',
+              className: 'form-control',
+              value: field,
+              onChange: _this2.handleField.bind(null, i)
+            })
           );
         }),
         _react2['default'].createElement(

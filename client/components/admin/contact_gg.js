@@ -65,7 +65,13 @@ class ContactGG extends Component {
         </p>
         {fields.map((field, i) =>
           <p className="form-group" key={i}>
-            <input name="info[]" type="text" className="form-control" onChange={this.handleField.bind(null, i)}/>
+            <input
+              name="info[]"
+              type="text"
+              className="form-control"
+              value={field}
+              onChange={this.handleField.bind(null, i)}
+            />
           </p>
         )}
         <p>
