@@ -90,6 +90,7 @@ require_once('shortcodes/video_modal_bg.php');
 require_once('shortcodes/counter.php');
 require_once('shortcodes/get_url_value.php');
 require_once('shortcodes/get_url_if.php');
+require_once('shortcodes/contacts_gg.php');
 
 //VISUAL COMPOSER
 require_once('shortcodes/vc/accordion.php');

@@ -76,7 +76,7 @@ multipleRender(VideoHeader, '.bs-video-header');
 multipleRender(Carousel, '.bs-carousel');
 multipleRender(Counter, '.bs-counter');
 multipleRender(PostShare, '.bs-post-share');
-multipleRender(ContactsGG, '.s-contact-gg');
+multipleRender(ContactsGG, '.bs-contacts-gg');
 
 // jquery calls
 setMenuMobile();
