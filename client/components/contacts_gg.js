@@ -13,7 +13,7 @@ class ContactsGG extends Component {
               <a href="#">{continent}</a>
               <ul className="continent__countries">
                 {continents[continent].map(country =>
-                  <li>{country}</li>
+                  <li><a href="#">{country}</a></li>
                 )}
               </ul>
             </li>
@@ -31,6 +31,12 @@ class ContactsGG extends Component {
         })}
         </div>
         <style jsx>{`
+          ul {
+            padding: 0;
+          }
+          li {
+            list-style: none;
+          }
           .continent__name a{
             background: #3C515F;
             display: block;
@@ -38,8 +44,16 @@ class ContactsGG extends Component {
             font-weight: 500;
             color: #fff;
           }
+
+          .continent_countries {
+            background: #fff;
+            height: 400px;
+            overflow-y: scroll;
+          }
+
           .continent__countries li a{
             color: #8E8E8E;
+
           }
         `}</style>
       </div>
