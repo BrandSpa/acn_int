@@ -16,7 +16,7 @@ class ContactsGG extends Component {
 
   render() {
     const { contacts, continents } = this.props;
-    const { country, continent } = this.state;
+    const { country, continent, contact } = this.state;
     let continentsKeys = Object.keys(continents);
 
     return (
