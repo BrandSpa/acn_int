@@ -6,7 +6,7 @@ module.exports = {
   	admin: './admin.js',
   },
   output: {
-  	path: Path.join(__dirname, './public/js'),
+  	path: Path.join(__dirname, './dist'),
     filename: '[name].js'
   },
   module: {

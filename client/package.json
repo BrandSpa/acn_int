@@ -13,7 +13,7 @@
     "build": "webpack --p",
     "build:dev": "webpack",
     "build:watch": "webpack --watch",
-    "build:admin": "webpack  --config=webpack.admin.js --p",
+    "build:admin": "webpack  --config=webpack.admin.js",
     "build:fp": "webpack  --config=webpack.fullpage.js --p",
     "lint": "eslint client/components"
   },
