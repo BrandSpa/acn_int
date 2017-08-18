@@ -10634,8 +10634,26 @@ var ContactGG = function (_Component) {
       }
     }
   }, {
+    key: 'handleCountry',
+    value: function handleCountry(index, e) {
+      var countries = this.state.countries;
+
+      countries[index] = e.target.value;
+      this.setState({ countries: countries });
+    }
+  }, {
+    key: 'handleField',
+    value: function handleField(index, e) {
+      var fields = this.state.fields;
+
+      fields[index] = e.target.value;
+      this.setState({ fields: fields });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       var _state = this.state,
           countries = _state.countries,
           fields = _state.fields;
@@ -10651,9 +10669,10 @@ var ContactGG = function (_Component) {
             _react2['default'].createElement(
               'select',
               {
-                name: 'countries',
+                name: 'countries[]',
                 value: country,
-                className: 'form-control'
+                className: 'form-control',
+                onChange: _this2.handleCountry.bind(null, i)
               },
               _react2['default'].createElement(
                 'option',
@@ -10691,7 +10710,7 @@ var ContactGG = function (_Component) {
           return _react2['default'].createElement(
             'p',
             { className: 'form-group', key: i },
-            _react2['default'].createElement('input', { name: 'info', type: 'text', className: 'form-control' })
+            _react2['default'].createElement('input', { name: 'info[]', type: 'text', className: 'form-control', onChange: _this2.handleField.bind(null, i) })
           );
         }),
         _react2['default'].createElement(

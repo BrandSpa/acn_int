@@ -28,6 +28,18 @@ class ContactGG extends Component {
     this.setState({fields});
   }
 
+  handleCountry(index, e) {
+    let { countries } = this.state;
+    countries[index] = e.target.value;
+    this.setState({ countries });
+  }
+
+  handleField(index, e) {
+    let { fields } = this.state;
+    fields[index] = e.target.value;
+    this.setState({ fields });
+  }
+
   render() {
     const { countries, fields } = this.state;
 
@@ -36,9 +48,10 @@ class ContactGG extends Component {
         {countries.map((country, i)=>
           <p className="form-group" key={i}>
             <select
-              name="countries"
+              name="countries[]"
               value={country}
               className="form-control"
+              onChange={this.handleCountry.bind(null, i)}
             >
               <option value="">Select country</option>
               <option value="Argentina">Argentina</option>
@@ -52,7 +65,7 @@ class ContactGG extends Component {
         </p>
         {fields.map((field, i) =>
           <p className="form-group" key={i}>
-            <input name="info" type="text" className="form-control"/>
+            <input name="info[]" type="text" className="form-control" onChange={this.handleField.bind(null, i)}/>
           </p>
         )}
         <p>
