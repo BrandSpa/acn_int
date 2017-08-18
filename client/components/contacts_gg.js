@@ -99,8 +99,9 @@ class ContactsGG extends Component {
 
           .continent__countries li a {
             color: #8E8E8E;
-
+            margin-bottom: 10px;
           }
+
         `}</style>
       </div>
     )
