@@ -10,13 +10,11 @@ function bs_contact_gg_sc($atts, $content = null) {
     'post_status' => 'publish'
   ));
 
-  $contacts = $query->get_posts();
-
   $contacts = array_map(function($contact) {
-    $contact['countries'] = get_post_meta($contact->ID, 'contact_gg_countries_key', true);
-  	$contact['fields'] = get_post_meta($contact->ID, 'contact_gg_info_key', true);
+    $contact->countries = get_post_meta($contact->ID, 'contact_gg_countries_key', true);
+  	$contact->fields = get_post_meta($contact->ID, 'contact_gg_info_key', true);
     return $contact;
-  }, $contacts);
+  }, $query->get_posts());
 
 	$props = [
     'contacts' => $contacts,
