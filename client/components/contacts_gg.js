@@ -33,7 +33,8 @@ class ContactsGG extends Component {
             return (<li className="continent__name">
               <a href="#" onClick={this.setContinent.bind(null, continentName)}>{continentName}</a>
               <ul
-                  className={continent ==continentName ? "continent__countries continent__countries--open" : "continent__countries"}>
+                className={continent ==continentName ? "continent__countries continent__countries--open" : "continent__countries"}
+              >
                 {continents[continent].map(country =>
                   <li><a href="#" onClick={this.setContact.bind(null, country)}>{country}</a></li>
                 )}
@@ -44,6 +45,7 @@ class ContactsGG extends Component {
         </ul>
         <div className="col-6-l">
           <div className="contact">
+            <img src={contact.image} alt=""/>
             {contact.post_title}
           </div>
         </div>
