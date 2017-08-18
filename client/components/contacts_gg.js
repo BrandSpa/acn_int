@@ -9,9 +9,9 @@ class ContactsGG extends Component {
       <div>
         <ul className="col-6-l">
           {continentsKeys.map(continent => {
-            return (<li>
-              {continent}
-              <ul>
+            return (<li className="continent__name">
+              <a href="#">{continent}</a>
+              <ul className="continent__countries">
                 {continents[continent].map(country =>
                   <li>{country}</li>
                 )}
@@ -30,6 +30,18 @@ class ContactsGG extends Component {
         )
         })}
         </div>
+        <style jsx>{`
+          .continent__name a{
+            background: #3C515F;
+            display: block;
+            padding: 10px 0;
+            font-weight: 500;
+            color: #fff;
+          }
+          .continent__countries li a{
+            color: #8E8E8E;
+          }
+        `}</style>
       </div>
     )
   }
