@@ -13,8 +13,9 @@ add_action('add_meta_boxes', 'bs_contact_gg_metabox');
 
 function bs_contact_gg_cb($post) {
   wp_nonce_field('bs_contact_gg_meta', 'bs_contact_gg_nonce');
-	$countries = get_post_meta($post->ID, 'contact_gg_countries_key');
-	$info = get_post_meta($post->ID, 'contact_gg_info_key');
+	$countries = get_post_meta($post->ID, 'contact_gg_countries_key', true);
+	$info = get_post_meta($post->ID, 'contact_gg_info_key', true);
+
   $props = [
     "fields" => $info,
     "countries" => $countries

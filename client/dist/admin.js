@@ -10675,7 +10675,7 @@ var ContactGG = function (_Component) {
             _react2['default'].createElement(
               'select',
               {
-                name: 'countries',
+                name: 'countries[]',
                 value: country,
                 className: 'form-control',
                 onChange: _this2.handleCountry.bind(null, i)
@@ -10722,7 +10722,7 @@ var ContactGG = function (_Component) {
             'p',
             { className: 'form-group', key: i },
             _react2['default'].createElement('input', {
-              name: 'info',
+              name: 'info[]',
               type: 'text',
               className: 'form-control',
               value: field,

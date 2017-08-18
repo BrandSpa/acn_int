@@ -60,7 +60,7 @@ class ContactGG extends Component {
         {countries.map((country, i)=>
           <p className="form-group" key={i}>
             <select
-              name="countries"
+              name="countries[]"
               value={country}
               className="form-control"
               onChange={this.handleCountry.bind(null, i)}
@@ -79,7 +79,7 @@ class ContactGG extends Component {
         {fields.map((field, i) =>
           <p className="form-group" key={i}>
             <input
-              name="info"
+              name="info[]"
               type="text"
               className="form-control"
               value={field}
