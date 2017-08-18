@@ -55,3 +55,5 @@ class ContactGG extends Compenent {
     )
   }
 }
+
+export default ContactGG;
