@@ -30,10 +30,12 @@ class ContactsGG extends Component {
       <div>
         <ul className="col-6-l">
           {continentsKeys.map(continentName => {
-            return (<li className="continent__name">
+            return (<li className={continent == continentName ? "continent__name continent__name--active" : "continent__name" }>
               <a href="#" onClick={this.setContinent.bind(null, continentName)}>{continentName}</a>
               <ul
-                className={continent ==continentName ? "continent__countries continent__countries--open" : "continent__countries"}
+                className={continent == continentName
+                  ? "continent__countries continent__countries--open"
+                  : "continent__countries"}
               >
                 {continents[continent].map(country =>
                   <li><a href="#" onClick={this.setContact.bind(null, country)}>{country}</a></li>
@@ -45,8 +47,11 @@ class ContactsGG extends Component {
         </ul>
         <div className="col-6-l">
           <div className="contact">
+            {country}
             <img src={contact.image} alt=""/>
             {contact.post_title}
+            {contact.countries}
+            {contact.post_content}
           </div>
         </div>
         <style jsx>{`
@@ -58,13 +63,17 @@ class ContactsGG extends Component {
             list-style: none;
           }
 
-          .continent__name > a{
+          .continent__name > a {
             background: #3C515F;
             display: block;
             padding: 10px 30px;
             font-weight: 500;
             color: #fff;
             margin-bottom: 2px;
+          }
+
+          .continent__name--active > a {
+            background: #F1364E;
           }
 
           .continent__countries {
