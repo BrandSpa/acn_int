@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ContactGG extends Compenent {
+class ContactGG extends Component {
   state = {
     fields: ['phone: 1234546', 'mail: alejandro@brandspa.com', ''],
     countries: ['Colombia', 'Argentina', ''],

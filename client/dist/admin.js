@@ -10594,8 +10594,8 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var ContactGG = function (_Compenent) {
-  (0, _inherits3['default'])(ContactGG, _Compenent);
+var ContactGG = function (_Component) {
+  (0, _inherits3['default'])(ContactGG, _Component);
 
   function ContactGG() {
     var _ref;
@@ -10695,7 +10695,7 @@ var ContactGG = function (_Compenent) {
     }
   }]);
   return ContactGG;
-}(Compenent);
+}(_react.Component);
 
 ContactGG.displayName = 'ContactGG';
 exports['default'] = ContactGG;
