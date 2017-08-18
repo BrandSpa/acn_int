@@ -10619,6 +10619,16 @@ var ContactGG = function (_Component) {
       e.preventDefault();
       var fields = [].concat((0, _toConsumableArray3['default'])(_this.state.fields), ['']);
       _this.setState({ fields: fields });
+    }, _this.handleCountry = function (index, e) {
+      var countries = _this.state.countries;
+
+      countries[index] = e.target.value;
+      _this.setState({ countries: countries });
+    }, _this.handleField = function (index, e) {
+      var fields = _this.state.fields;
+
+      fields[index] = e.target.value;
+      _this.setState({ fields: fields });
     }, _temp), (0, _possibleConstructorReturn3['default'])(_this, _ret);
   }
 
@@ -10632,22 +10642,6 @@ var ContactGG = function (_Component) {
       if (Array.isArray(this.props.fields)) {
         this.setState({ fields: this.props.fields });
       }
-    }
-  }, {
-    key: 'handleCountry',
-    value: function handleCountry(index, e) {
-      var countries = this.state.countries;
-
-      countries[index] = e.target.value;
-      this.setState({ countries: countries });
-    }
-  }, {
-    key: 'handleField',
-    value: function handleField(index, e) {
-      var fields = this.state.fields;
-
-      fields[index] = e.target.value;
-      this.setState({ fields: fields });
     }
   }, {
     key: 'render',

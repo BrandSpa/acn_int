@@ -28,13 +28,13 @@ class ContactGG extends Component {
     this.setState({fields});
   }
 
-  handleCountry(index, e) {
+  handleCountry = (index, e) => {
     let { countries } = this.state;
     countries[index] = e.target.value;
     this.setState({ countries });
   }
 
-  handleField(index, e) {
+  handleField = (index, e) => {
     let { fields } = this.state;
     fields[index] = e.target.value;
     this.setState({ fields });
