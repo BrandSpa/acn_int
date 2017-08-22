@@ -9,7 +9,6 @@ export const storeConvertLoop = (tags, contact) => {
   add_tags = add_tags.filter(tag => tag !== '');
   const pid = cookies.dp_pid;
   const data = { ...contact, add_tags, pid: pid };
-  console.log('storeConvertLoop', add_tags);
   const p = fetchwp("store_event", {title: 'cl_person', content: data})
     .then(() => fetchwp("convertloop_contact", data));
 
