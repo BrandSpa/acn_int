@@ -50,7 +50,7 @@ class ContactsGG extends Component {
         </ul>
         <div className="col-6-l">
           <div className="contact">
-            <h6>{country}</h6>
+            <h4>{country}</h4>
             <img src={contact.image} alt=""/>
             <h3>{contact.post_title}</h3>
             <p>{contact.fields}</p>
