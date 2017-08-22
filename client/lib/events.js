@@ -14,7 +14,7 @@ export const runEvents = () => {
 
     if (dataStr !== null) {
       const data = JSON.parse(dataStr);
-      fetchwp('store_event', {title: eventName, content: data})
+      fetchwp('store_event', {title: eventName, data})
       .then(() => runEvent(eventName, data) )
       .then(() => flushEvent(eventName) );
     }

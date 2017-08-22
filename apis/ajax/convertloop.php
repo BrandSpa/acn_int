@@ -31,7 +31,7 @@ add_action( 'wp_ajax_convertloop_contact', 'convertloop_contact' );
 function convertloop_event() {
   $data = $_POST['data'];
 
-  if(in_array($data['content']['person']['country'], getOfficesCountries())) {
+  if(in_array($data['country'], getOfficesCountries())) {
     $countryKey = str_replace(' ', '_', $data['country']);
     $appId = get_option('convertloop_app_' . $countryKey);
     $apiKey = get_option('convertloop_api_' . $countryKey);
