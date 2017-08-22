@@ -14,16 +14,18 @@ describe("Posts component", () => {
 		moxios.uninstall();
 	})
 
-	it("should show 3 posts", () => {
-		let posts = [{id: 1}, {id: 2}, {id: 3}];
-		let wrapper = mount(<Posts posts={posts} />);
-		expect(wrapper.find(".grid-item").length).toBe(3);
+	it("should get posts default array", () => {
+		let posts = [];
+		let wrapper = shallow(<Posts />);
+		wrapper.setState({ posts });
+		expect(wrapper.state('posts')).toEqual([]);
 	})
 
-	it("should get posts on componentWillMount", () => {
+	it("should get posts", () => {
 		let posts = [{id: 1}, {id: 2}, {id: 3}];
-		let wrapper = mount(<Posts posts={posts} />);
-		expect(wrapper.props().posts).toEqual(posts);
+		let wrapper = mount(<Posts />);
+		wrapper.setState({posts});
+		expect(wrapper.state('posts')).toEqual(posts);
 		expect(wrapper.find(".grid-item").length).toBe(3);
 	})
 })

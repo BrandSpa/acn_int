@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import GalleryMetabox from "../../components/galleryMetabox";
+import GalleryMetabox from "../../components/admin/galleryMetabox";
 
 describe('Gallery metabox component', () => {
 	it('should add inputs', () => {
