@@ -31,13 +31,13 @@ export function stripeCharge(state) {
   return fetchwp("stripe_charge", data);
 }
 
-export function storeConvertLoop(props, state) {
-  console.log("storeConvertLoop", props, state);
-  const add_tags = typeof props.tags == "string"
-    ? props.tags.trim().split(",")
+export function storeConvertLoop(props, contact) {
+  console.log("storeConvertLoop", props, contact);
+  const add_tags = typeof tags == "string"
+    ? tags.trim().split(",")
     : [];
 
-  const data = { ...state.contact, add_tags };
+  const data = { ...contact, add_tags };
     console.log('storeConvertLoop donate', data);
   const p = fetchwp("store_event", {title: 'cl_person', content: data})
     .then(() => fetchwp("convertloop_contact", data));

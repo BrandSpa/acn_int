@@ -980,11 +980,11 @@ function stripeCharge(state) {
   return (0, _fetch_wp2["default"])("stripe_charge", data);
 }
 
-function storeConvertLoop(props, state) {
-  console.log("storeConvertLoop", props, state);
-  var add_tags = typeof props.tags == "string" ? props.tags.trim().split(",") : [];
+function storeConvertLoop(props, contact) {
+  console.log("storeConvertLoop", props, contact);
+  var add_tags = typeof tags == "string" ? tags.trim().split(",") : [];
 
-  var data = (0, _extends3["default"])({}, state.contact, { add_tags: add_tags });
+  var data = (0, _extends3["default"])({}, contact, { add_tags: add_tags });
   console.log('storeConvertLoop donate', data);
   var p = (0, _fetch_wp2["default"])("store_event", { title: 'cl_person', content: data }).then(function () {
     return (0, _fetch_wp2["default"])("convertloop_contact", data);
