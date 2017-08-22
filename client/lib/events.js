@@ -75,15 +75,8 @@ export const eventFacebook = ({eventName = 'Lead', content = {}}) => {
 };
 
 export const eventConvertloop = ({ name, person = {}, metadata = {} }) => {
-  const personWithPid = { ...person, pid: cookies.dp_pid };
-
-  const p = new Promise((resolve) => {
-    typeof _dp === 'function'
-      ? _dp('track', name, { person: personWithPid, metadata })
-      : console.log('_dp error');
-
-    return resolve();
-  });
+  const data = { name, person: {...person, pid: cookies.dp_pid}, metadata };
+  const p = fetchwp('convertloop_event', data);
 
   return p;
 };
