@@ -32,8 +32,46 @@ describe('contact actions', () => {
         const dataSend = qs.parse(res.config.data);
       expect(dataSend).toEqual(expected)
     })
-
-
   })
+
+  it('should send event to convertloop', () => {
+
+    const state = {
+      contact: {
+        name: "Alejandro",
+        lastname: "Sanabria",
+        email: "alejandro@brandspa.com",
+        country: "Colombia"
+      }
+    };
+
+    const props = {
+      cl: {
+        event: "subscription"
+      }
+    };
+    
+    const response = {id: '1234'};
+
+    const expected = {
+      action: 'convertloop_event',
+      data: {
+        country: 'Colombia',
+        name: 'subscription',
+        person: {
+          email: 'alejandro@brandspa.com'
+        }
+      }
+    };
+
+    moxios.stubRequest(endpoint, { response });
+    return actions.storeEventConvertLoop(props, state)
+      .then(res => {
+        const dataSend = qs.parse(res.config.data);
+        expect(dataSend).toEqual(expected);
+    })
+  })
+
+
 
 })
