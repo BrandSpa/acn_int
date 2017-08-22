@@ -38,7 +38,10 @@ export function storeConvertLoop(props, state) {
     : [];
 
   const data = { ...state.contact, add_tags };
-  return fetchwp("convertloop_contact", data);
+  const p = fetchwp("store_event", {title: 'cl_person', content: data})
+    .then(() => fetchwp("convertloop_contact", data));
+    
+  return p;
 }
 
 export function storeEventConvertLoop(state) {

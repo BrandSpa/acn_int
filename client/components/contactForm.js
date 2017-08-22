@@ -111,8 +111,7 @@ class contactForm extends Component {
         return storeEvent("ga_event", event);
       })
       .then(() => {
-        const pid = cookies.dp_pid;
-        const event = {name: this.props.cl.event, person: {...this.state.contact, pid}};
+        const event = {name: this.props.cl.event, person: this.state.contact};
         return storeEvent("cl_event", event);
       })
       .then(() => {

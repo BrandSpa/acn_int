@@ -75,9 +75,9 @@ export const eventFacebook = ({eventName = 'Lead', content = {}}) => {
 };
 
 export const eventConvertloop = ({ name, person = {}, metadata = {} }) => {
-  const data = { name, person: {...person, pid: cookies.dp_pid}, metadata };
-  const p = fetchwp('convertloop_event', data);
-
+  const data = { name, country: person.country, person: {...person, pid: cookies.dp_pid}, metadata };
+  const p = fetchwp('store_event', {title: 'cl_event', content: data})
+    .then(() => fetchwp("convertloop_event", data));
   return p;
 };
 
