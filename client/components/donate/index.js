@@ -118,7 +118,7 @@ class Donate extends Component {
          if (donation_type == "monthly") {
           const url = `${base}?amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
           setTimeout(() => {
-            window.location = url;
+            // window.location = url;
           }, 0);
         } else {
           this.setState({show_four: true});
