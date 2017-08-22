@@ -980,8 +980,8 @@ function stripeCharge(state) {
   return (0, _fetch_wp2["default"])("stripe_charge", data);
 }
 
-function storeConvertLoop(props, contact) {
-  console.log("storeConvertLoop", props, contact);
+function storeConvertLoop(tags, contact) {
+
   var add_tags = typeof tags == "string" ? tags.trim().split(",") : [];
 
   var data = (0, _extends3["default"])({}, contact, { add_tags: add_tags });

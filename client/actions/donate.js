@@ -31,8 +31,8 @@ export function stripeCharge(state) {
   return fetchwp("stripe_charge", data);
 }
 
-export function storeConvertLoop(props, contact) {
-  console.log("storeConvertLoop", props, contact);
+export function storeConvertLoop(tags, contact) {
+
   const add_tags = typeof tags == "string"
     ? tags.trim().split(",")
     : [];
