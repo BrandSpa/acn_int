@@ -20,7 +20,11 @@ class Donate extends Component {
     donation_type: "monthly",
     amount: 30,
     currency: "usd",
-    contact: { name: "", email: "", country: "" },
+    contact: {
+      name: "",
+      email: "",
+      country: this.props.texts.country
+    },
     stripe: {
       card_type: "",
       number: "",
@@ -42,6 +46,7 @@ class Donate extends Component {
         this.nextSection();
       }
     });
+
   }
 
   handleChange = field => {
