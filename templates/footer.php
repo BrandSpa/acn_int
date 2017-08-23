@@ -61,10 +61,10 @@ echo do_shortcode('[bs_accordion btn_title="'.gett('ACN International in the wor
 			<div class="col-3-l">
 				<h5><?php echo gett('Contact') ?></h5>
 				<h6>ACN International</h6>
-				<h6>Aid to the Church in Need gGmbH</h6>
+				<h6><?php echo get_option('name_default') ?></h6>
 				<h6>Westerbachstraße 23</h6>
 				<h6>61476 Kronberg / Germany L</h6>
-				<h6>Ph.: +49-6174-291-0</h6>
+				<h6><?php echo get_option('contact_info_phone_default') ?></h6>
 				<ul class="bs-contact-info__social">
 					<?php if( !empty(get_option('contact_facebook_default')) ): ?>
 					<li>
