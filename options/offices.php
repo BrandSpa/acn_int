@@ -167,9 +167,6 @@ function logos_settings_page() {
 								name="convertloop_api_<?php echo $value ?>"
 								value="<?php echo esc_attr( get_option('convertloop_api_' . $value ) ); ?>"
 							/>
-
-
-
 							<?php submit_button(); ?>
 
           </section>
