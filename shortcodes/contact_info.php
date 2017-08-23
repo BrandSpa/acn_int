@@ -11,7 +11,7 @@ function bs_contact_info_sc($atts, $content = null) {
 	$country = space_to_lodash($country);
 ?>
 	<div class="bs-contact-info">
-		<h6>ACN <?php echo $country ?></h6>
+		<h6>ACN <?php echo $country !== 'default' ? $country : '' ?></h6>
 		<h6><?php echo get_option('name_' . $country) ?></h6>
 		<h6><?php echo get_option('contact_info_address_' . $country) ?></h6>
 		<h6><?php echo get_option('contact_info_email_' . $country) ?></h6>
