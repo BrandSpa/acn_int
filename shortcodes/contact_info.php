@@ -31,6 +31,20 @@ function bs_contact_info_sc($atts, $content = null) {
 				</a>
 			</li>
 			<?php endif; ?>
+			<?php if( !empty(get_option('contact_youtube_' . $country)) ): ?>
+			<li>
+				<a href="<?php echo get_option('contact_youtube_' . $country) ?>">
+					<i class="ion-social-youtube"></i>
+				</a>
+			</li>
+			<?php endif; ?>
+			<?php if( !empty(get_option('contact_instagram_' . $country)) ): ?>
+			<li>
+				<a href="<?php echo get_option('contact_instagram_' . $country) ?>">
+					<i class="ion-social-instagram"></i>
+				</a>
+			</li>
+			<?php endif; ?>
 		</ul>
 	</div>
 <?php endif; ?>

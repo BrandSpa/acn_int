@@ -80,6 +80,20 @@ echo do_shortcode('[bs_accordion btn_title="'.gett('ACN International in the wor
 						</a>
 					</li>
 					<?php endif; ?>
+					<?php if( !empty(get_option('contact_youtube_default')) ): ?>
+					<li>
+						<a href="<?php echo get_option('contact_youtube_default') ?>">
+							<i class="ion-social-youtube"></i>
+						</a>
+					</li>
+					<?php endif; ?>
+					<?php if( !empty(get_option('contact_instagram_default')) ): ?>
+					<li>
+						<a href="<?php echo get_option('contact_instagram_default') ?>">
+							<i class="ion-social-instagram"></i>
+						</a>
+					</li>
+					<?php endif; ?>
 				</ul>
 			</div>
 

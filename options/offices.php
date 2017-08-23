@@ -36,6 +36,8 @@ function bs_add_country_info_settings() {
     register_setting( 'bs_country_info_group', 'contact_info_phone_' . $value );
 		register_setting( 'bs_country_info_group', 'contact_facebook_' . $value );
     register_setting( 'bs_country_info_group', 'contact_twitter_' . $value );
+		register_setting( 'bs_country_info_group', 'contact_instagram_' . $value );
+    register_setting( 'bs_country_info_group', 'contact_youtube_' . $value );
     register_setting( 'bs_country_info_group', 'convertloop_api_' . $value );
     register_setting( 'bs_country_info_group', 'convertloop_app_' . $value );
   }
@@ -133,7 +135,6 @@ function logos_settings_page() {
 							value="<?php echo esc_attr( get_option('contact_info_email_' . $value ) ); ?>"
 						/>
 						<p></p>
-						<p></p>
 						<input
 							style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
 							type="text"
@@ -141,7 +142,6 @@ function logos_settings_page() {
 							name="contact_facebook_<?php echo $value ?>"
 							value="<?php echo esc_attr( get_option('contact_facebook_' . $value ) ); ?>"
 						/>
-						<p></p>
 						<p></p>
 						<input
 							style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
@@ -151,6 +151,21 @@ function logos_settings_page() {
 							value="<?php echo esc_attr( get_option('contact_twitter_' . $value ) ); ?>"
 						/>
 						<p></p>
+						<input
+							style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
+							type="text"
+							placeholder="Instagram url"
+							name="contact_instagram_<?php echo $value ?>"
+							value="<?php echo esc_attr( get_option('contact_instagram_' . $value ) ); ?>"
+						/>
+						<p></p>
+						<input
+							style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
+							type="text"
+							placeholder="Youtube url"
+							name="contact_twitter_<?php echo $value ?>"
+							value="<?php echo esc_attr( get_option('contact_youtube_' . $value ) ); ?>"
+						/>
 						<h4>ConvertLoop</h4>
 							<input
 								style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
