@@ -16,16 +16,20 @@ function bs_contact_info_sc($atts, $content = null) {
 		<h6><?php echo get_option('contact_info_email_' . $country) ?></h6>
 		<h6><?php echo get_option('contact_info_phone_' . $country) ?></h6>
 		<ul class="bs-contact-info__social">
+			<?php if( !empty(get_option('contact_facebook_' . $country)) ): ?>
 			<li>
 				<a href="<?php echo get_option('contact_facebook_' . $country) ?>">
 					<i class="ion-social-facebook"></i>
 				</a>
 			</li>
+			<?php endif; ?>
+			<?php if( !empty(get_option('contact_twitter_' . $country)) ): ?>
 			<li>
 				<a href="<?php echo get_option('contact_twitter_' . $country) ?>">
 					<i class="ion-social-twitter"></i>
 				</a>
 			</li>
+			<?php endif; ?>
 		</ul>
 	</div>
 <?php endif; ?>
