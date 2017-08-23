@@ -280,8 +280,10 @@
 }
 
 .bs-contact-info__social {
+	padding: 0;
 	li {
 		list-style: none;
+		display: inline-block;
 		a {
 			background: #fff;
 			width: 50px;
@@ -290,6 +292,9 @@
 			display: inline-block;
 			margin-right: 20px;
 			color: RGBA(43, 58, 68, 1);
+			font-size: 30px;
+	    text-align: center;
+	    padding-top: 5px;
 		}
 	}
 }

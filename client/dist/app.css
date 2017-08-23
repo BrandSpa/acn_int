@@ -1150,16 +1150,22 @@ button, .btn {
       float: left;
       width: 100%; }
 
-.bs-contact-info__social li {
-  list-style: none; }
-  .bs-contact-info__social li a {
-    background: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    display: inline-block;
-    margin-right: 20px;
-    color: RGBA(43, 58, 68, 1); }
+.bs-contact-info__social {
+  padding: 0; }
+  .bs-contact-info__social li {
+    list-style: none;
+    display: inline-block; }
+    .bs-contact-info__social li a {
+      background: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-right: 20px;
+      color: RGBA(43, 58, 68, 1);
+      font-size: 30px;
+      text-align: center;
+      padding-top: 5px; }
 
 @-webkit-keyframes moveAnchor {
   from {
