@@ -163,7 +163,7 @@ function logos_settings_page() {
 							style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
 							type="text"
 							placeholder="Youtube url"
-							name="contact_twitter_<?php echo $value ?>"
+							name="contact_youtube_<?php echo $value ?>"
 							value="<?php echo esc_attr( get_option('contact_youtube_' . $value ) ); ?>"
 						/>
 						<h4>ConvertLoop</h4>
