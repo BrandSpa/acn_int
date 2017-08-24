@@ -65,11 +65,11 @@ $(document).ready(function DOMLoaded() {
     menu: "#fullpage-menu",
     lazyLoading: false,
     navigation: false,
-    touchSensitivity: 15,
-    // normalScrollElements: scrollElements,
-    // afterRender: handleAfterRender,
-    // afterLoad: handleAfterLoad,
-    // onLeave: handleLeave
+    scrollingSpeed: 800,
+    normalScrollElements: scrollElements,
+    afterRender: handleAfterRender,
+    afterLoad: handleAfterLoad,
+    onLeave: handleLeave
   });
 
   if($("#fullpage").length > 0) {
@@ -87,12 +87,12 @@ $(document).ready(function DOMLoaded() {
       $.fn.fullpage.setAllowScrolling(true);
     });
 
-    // slidePost($fp);
-    // slideVideo($fp);
-    // slideMap($fp);
-    // nav($fp);
-    // modal($fp);
-    // menu();
+    slidePost($fp);
+    slideVideo($fp);
+    slideMap($fp);
+    nav($fp);
+    modal($fp);
+    menu();
   }
 
   function goDown() {
