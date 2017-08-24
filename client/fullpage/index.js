@@ -40,6 +40,7 @@ $(document).ready(function DOMLoaded() {
 
   function handleAfterLoad(section, index) {
     let next = index - 1;
+    console.log(next);
     let $section = $(".section:eq(" + next + ")");
     let story = $section.data("story");
     let slideIndex = $section.data("index");
@@ -65,10 +66,10 @@ $(document).ready(function DOMLoaded() {
     lazyLoading: false,
     navigation: false,
     touchSensitivity: 15,
-    normalScrollElements: scrollElements,
-    afterRender: handleAfterRender,
-    afterLoad: handleAfterLoad,
-    onLeave: handleLeave
+    // normalScrollElements: scrollElements,
+    // afterRender: handleAfterRender,
+    // afterLoad: handleAfterLoad,
+    // onLeave: handleLeave
   });
 
   if($("#fullpage").length > 0) {
