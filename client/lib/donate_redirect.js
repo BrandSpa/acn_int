@@ -10,6 +10,7 @@ export default () => {
   if($(".bs-donate")) {
     $(".bs-donate").on("click", e => {
       e.preventDefault();
+      const $el = $(this);
 
       eventGoogleAnalytics({category: "CLICK", action: "DONATE", label: "CLICKDONATE_EN"})
         .then(() => {
@@ -24,7 +25,7 @@ export default () => {
                 return window.location = res.data
               }
 
-              return window.location = $(this).attr('href');
+              return window.location = $el.attr('href');
             });
         })
     });
