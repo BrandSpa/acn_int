@@ -1,5 +1,6 @@
 <script>
   var bs = {};
+  bs.country = '<?php echo getCountry() ?>';
   bs.lang = '<?php echo getCountryLang(getCountry()) ?>';
   bs.donate = '<?php echo gett('Donate') ?>';
   bs.pid = '<?php echo isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : ''  ?>';
