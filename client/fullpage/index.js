@@ -67,7 +67,6 @@ $(document).ready(function DOMLoaded() {
     lazyLoading: false,
     navigation: false,
     normalScrollElements: scrollElements,
-    touchSensitivity: 2,
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
     onLeave: handleLeave
