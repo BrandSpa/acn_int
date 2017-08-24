@@ -19,7 +19,13 @@ export default () => {
           let data = qs.stringify({action: "donate_redirect_2"});
           request
             .post("/wp-admin/admin-ajax.php", data)
-            .then(res => window.location = res.data);
+            .then(res => {
+              if(res) {
+                return window.location = res.data
+              }
+              
+              return window.location = $(this).attr('href');
+            });
         })
     });
   }
