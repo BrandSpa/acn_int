@@ -24,7 +24,8 @@ export default () => {
               if(res.data !== false) {
                 return window.location = res.data
               }
-              console.log($el.attr('href'));
+
+              console.log($el);
               // return window.location = $el.attr('href');
             });
         })
