@@ -8,7 +8,7 @@ export default () => {
   }
 
   if($(".bs-donate")) {
-    $(".bs-donate").on("click", e => {
+    $(".bs-donate").on("click", function(e) {
       e.preventDefault();
       const $el = $(this);
 
@@ -25,7 +25,7 @@ export default () => {
                 return window.location = res.data
               }
 
-              console.log($el);
+              console.log($el, $el.attr('href'));
               // return window.location = $el.attr('href');
             });
         })
