@@ -20,10 +20,10 @@ export default () => {
           request
             .post("/wp-admin/admin-ajax.php", data)
             .then(res => {
-              if(res) {
+              if(res.data) {
                 return window.location = res.data
               }
-              
+
               return window.location = $(this).attr('href');
             });
         })
