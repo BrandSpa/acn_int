@@ -64,13 +64,13 @@ function mapPoints($fp) {
     }
   }
 
-  setMapSize();
-
-  //Events
-  $(window).on("resize", () => {
-    setMapSize();
-    $fp.reBuild();
-  });
+  // setMapSize();
+  //
+  // //Events
+  // $(window).on("resize", () => {
+  //   setMapSize();
+  //   $fp.reBuild();
+  // });
 
   $(".map-points__spot").on("click", openSpotContent);
   $(".section__close-spot-content").on("click", closeSpotContent);
