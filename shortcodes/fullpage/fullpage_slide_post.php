@@ -20,7 +20,7 @@ function acn_fullpage_slide_post_sc( $atts, $content ) {
 
 	<div
 			class="section section--<?php echo $at['uniq_name'] ?>"
-			data-anchor="<?php echo $at['uniq_name'] ?>"
+			data-anchor="slide-<?php echo $at['uniq_name'] ?>"
 			data-story="<?php echo $at['story_num'] ?>"
 			data-index="<?php echo $at['index_num'] ?>"
 		>
