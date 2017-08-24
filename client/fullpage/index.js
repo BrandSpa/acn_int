@@ -87,12 +87,12 @@ $(document).ready(function DOMLoaded() {
       $.fn.fullpage.setAllowScrolling(true);
     });
 
-    slidePost($fp);
-    slideVideo($fp);
-    slideMap($fp);
-    nav($fp);
-    modal($fp);
-    menu();
+    // slidePost($fp);
+    // slideVideo($fp);
+    // slideMap($fp);
+    // nav($fp);
+    // modal($fp);
+    // menu();
   }
 
   function goDown() {
