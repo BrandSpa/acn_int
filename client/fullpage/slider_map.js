@@ -14,6 +14,7 @@ function mapPoints($fp) {
       $(".map-points").attr("viewBox", "250 0 1920 1080");
       $(".map-points__spots").attr("transform", "translate(-40, 100)");
     }
+    $fp.reBuild();
   }
 
   function openSpotContent(e) {
@@ -64,13 +65,13 @@ function mapPoints($fp) {
     }
   }
 
-  // setMapSize();
+  setMapSize();
   //
-  // //Events
-  // $(window).on("resize", () => {
-  //   setMapSize();
-  //   $fp.reBuild();
-  // });
+  //Events
+  $(window).on("resize", () => {
+    $fp.reBuild();
+    setMapSize();
+  });
 
   $(".map-points__spot").on("click", openSpotContent);
   $(".section__close-spot-content").on("click", closeSpotContent);
