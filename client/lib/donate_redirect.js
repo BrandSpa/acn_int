@@ -21,11 +21,11 @@ export default () => {
           request
             .post("/wp-admin/admin-ajax.php", data)
             .then(res => {
-              if(res.data) {
+              if(res.data !== false) {
                 return window.location = res.data
               }
-
-              return window.location = $el.attr('href');
+              console.log($el.attr('href'));
+              // return window.location = $el.attr('href');
             });
         })
     });
