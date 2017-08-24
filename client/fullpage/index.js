@@ -54,18 +54,17 @@ $(document).ready(function DOMLoaded() {
       $indicator.find(".indicator__title").text(title[0].title);
     }
 
-    if(redirectUrl && redirectUrl.length > 0) window.location = redirectUrl;
-
-    if( $section.find(".bs-counter").length > 0 ) emmiter.emit("runCounter");
   }
 
   const isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);
   const scrollElements = isTouchDevice ? ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content" : "";
   navigator.userAgent.match(/(IEMobile)/);
+
   $("#fullpage").fullpage({
     menu: "#fullpage-menu",
     lazyLoading: false,
     navigation: false,
+    touchSensitivity: 15,
     normalScrollElements: scrollElements,
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
