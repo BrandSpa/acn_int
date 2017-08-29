@@ -128,7 +128,7 @@ function acn_fullpage_vc() {
         'type' => 'textfield',
         'param_name' => 'text_about',
         'heading' => 'About text',
-        'value' => ''
+        'value' => 'About ACN'
       ],
       [
         'type' => 'param_group',
