@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:description" content="<?php echo get_the_excerpt(); ?>" />
 
-  <title>ACN / Aid to the Church in Need - <?php echo wp_title(); ?></title>
+  <title><?php echo bloginfo( 'name' ) ?> - <?php echo bloginfo( 'description' ) ?> <?php echo wp_title(); ?></title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 

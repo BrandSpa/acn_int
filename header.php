@@ -32,7 +32,7 @@
   <link rel="icon" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" sizes="192x192" />
 
   <link rel="apple-touch-icon-precomposed" href="//acninternational.org/wp-content/uploads/2017/03/fav2x.png" />
-	<title><?php echo bloginfo( 'name' ) ?> - <?php echo bloginfo( 'description' ) ?> <?php echo wp_title(); ?></title>
+	<title><?php echo bloginfo( 'name' ) ?> / <?php echo bloginfo( 'description' ) ?> <?php echo wp_title(); ?></title>
 
   	<!--wordpress files-->
 	  <?php wp_head(); ?>
