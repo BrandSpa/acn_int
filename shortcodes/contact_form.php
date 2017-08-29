@@ -13,6 +13,7 @@ function bs_contact_form_sc($atts, $content = null) {
 		'button-text' => gett('Pray'),
 		'terms-text' => 'I want to receive information about ACN, its projects and updated, and I accept the terms and conditions',
 		'redirect' => '',
+		'btn-text' => 'PRAY',
 		'btn-bg' => '#F4334A',
 		'convertloop_tags' => '',
 		'convertloop_event' => 'Subscription',

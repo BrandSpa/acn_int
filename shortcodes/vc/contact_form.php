@@ -53,6 +53,12 @@ function bs_contact_form_vc() {
 				"value" => "I want to receive information about ACN, its projects and updated, and I accept the terms and conditions"
 			],
 			[
+				"type" => "textfield",
+				"heading" => "Button text",
+				"param_name" => "button-text",
+				"value" => gett('Pray')
+			],
+			[
         "type" => "colorpicker",
         "heading" => "button color",
         "param_name" => "btn-bg",
