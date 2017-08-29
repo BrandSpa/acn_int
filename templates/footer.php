@@ -62,34 +62,34 @@ echo do_shortcode('[bs_accordion btn_title="'.gett('ACN International in the wor
 				<h5><?php echo gett('Contact') ?></h5>
 				<h6>ACN International</h6>
 				<h6><?php echo get_option('name_default') ?></h6>
-				<h6>Westerbachstraße 23</h6>
-				<h6>61476 Kronberg / Germany L</h6>
+				<h6>Westerbachstraße 23 L</h6>
+				<h6>61476 Kronberg / Germany</h6>
 				<h6><?php echo get_option('contact_info_phone_default') ?></h6>
 				<ul class="bs-contact-info__social">
 					<?php if( !empty(get_option('contact_facebook_default')) ): ?>
 					<li>
-						<a href="<?php echo get_option('contact_facebook_default') ?>">
+						<a href="<?php echo get_option('contact_facebook_default') ?>" target="_blank">
 							<i class="ion-social-facebook"></i>
 						</a>
 					</li>
 					<?php endif; ?>
 					<?php if( !empty(get_option('contact_twitter_default')) ): ?>
 					<li>
-						<a href="<?php echo get_option('contact_twitter_default') ?>">
+						<a href="<?php echo get_option('contact_twitter_default') ?>" target="_blank">
 							<i class="ion-social-twitter"></i>
 						</a>
 					</li>
 					<?php endif; ?>
 					<?php if( !empty(get_option('contact_youtube_default')) ): ?>
 					<li>
-						<a href="<?php echo get_option('contact_youtube_default') ?>">
+						<a href="<?php echo get_option('contact_youtube_default') ?>" target="_blank">
 							<i class="ion-social-youtube"></i>
 						</a>
 					</li>
 					<?php endif; ?>
 					<?php if( !empty(get_option('contact_instagram_default')) ): ?>
 					<li>
-						<a href="<?php echo get_option('contact_instagram_default') ?>">
+						<a href="<?php echo get_option('contact_instagram_default') ?>" target="_blank">
 							<i class="ion-social-instagram"></i>
 						</a>
 					</li>
