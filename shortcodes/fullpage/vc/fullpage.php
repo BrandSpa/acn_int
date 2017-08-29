@@ -126,6 +126,30 @@ function acn_fullpage_vc() {
       ],
       [
         'type' => 'textfield',
+        'param_name' => 'link_lang_2',
+        'heading' => 'Translation link 2',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'text_lang_2',
+        'heading' => 'Translation text 2',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'link_lang_3',
+        'heading' => 'Translation link 3',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
+        'param_name' => 'text_lang_3',
+        'heading' => 'Translation text 3',
+        'value' => ''
+      ],
+      [
+        'type' => 'textfield',
         'param_name' => 'text_about',
         'heading' => 'About text',
         'value' => 'About ACN'

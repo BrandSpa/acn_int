@@ -10,6 +10,10 @@ function acn_fullpage_sc( $atts, $content ) {
 		"text_terms" => 'terms',
 		"link_lang" => '#',
 		"text_lang" => 'español',
+		"link_lang_2" => '',
+		"text_lang_2" => '',
+		"link_lang_3" => '',
+		"text_lang_3" => '',
 		"text_donate" => 'Donate',
 		"text_about" => "",
 		"link_donate" => '#',
@@ -128,6 +132,16 @@ function acn_fullpage_sc( $atts, $content ) {
 				<li><a class="open-modal" href="<?php echo $at['link_privacy'] ?>"><?php echo $at['text_privacy'] ?></a></li>
 				<li><a class="open-modal" href="<?php echo $at['link_terms'] ?>"><?php echo $at['text_terms'] ?></a></li>
 				<li><a href="<?php echo $at['link_lang'] ?>"><?php echo $at['text_lang'] ?></a></li>
+				<?php if(!empty($at['link_lang_2']) && !empty($at['text_lang_2'])): ?>
+					<li>
+						<a href="<?php echo $at['link_lang_2'] ?>"><?php echo $at['text_lang_2'] ?></a>
+					</li>
+				<?php endif; ?>
+				<?php if(!empty($at['link_lang_3']) && !empty($at['text_lang_3'])): ?>
+					<li>
+						<a href="<?php echo $at['link_lang_3'] ?>"><?php echo $at['text_lang_3'] ?></a>
+					</li>
+				<?php endif; ?>
 			</ul>
 		</div>
 	</div>
