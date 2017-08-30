@@ -66,7 +66,6 @@ class contactForm extends Component {
   }
 
 
-
   validate = () => {
     let errors = {};
     let validations = Object.keys(this.state.errors).map(field => {
@@ -75,8 +74,8 @@ class contactForm extends Component {
       return val;
     });
 
-    let Emailval = !isEmail(this.props.contact.email);
-    errors = { ...errors, email: val };
+    let emailVal = !isEmail(this.props.contact.email);
+    errors = { ...errors, email: mailVal };
 
     if(this.props.terms == "true") {
       if( this.state.terms == false ) {
