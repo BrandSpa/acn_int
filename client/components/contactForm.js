@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import isEmpty from "validator/lib/isEmpty";
+import isEmail from "validator/lib/isEmail";
 import getCountries from "../lib/getCountries";
 import { storeEvent } from "../lib/events";
 import cookies from "../lib/cookies";
@@ -64,6 +65,8 @@ class contactForm extends Component {
       : false;
   }
 
+
+
   validate = () => {
     let errors = {};
     let validations = Object.keys(this.state.errors).map(field => {
@@ -71,6 +74,9 @@ class contactForm extends Component {
       errors = { ...errors, [field]: val };
       return val;
     });
+
+    let Emailval = !isEmail(this.props.contact.email);
+    errors = { ...errors, email: val };
 
     if(this.props.terms == "true") {
       if( this.state.terms == false ) {
