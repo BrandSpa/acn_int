@@ -42,6 +42,10 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     $params[get_att_name($title) . '_num'] = '';
   }
 
+  $params[  get_att_name('Properties already restored') . '_percentage'] = '2%';
+  $params[  get_att_name('Families returned to Nineveh Plains') . '_percentage'] = '4%';
+
+
 
 	$points = [
 		'Telleskuf' => [
@@ -251,7 +255,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     <ul class="nineveh-general-content__list">
 			<li><h4><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></h4></li>
 			<li>
-        <h4>2%</h4>
+        <h4><?php echo $at[get_att_name('Properties already restored') . '_percentage']  ?></h4>
         <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
             <defs>
@@ -349,7 +353,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
     <ul class="nineveh-general-content__list">
       <li><h4><?php echo $at[get_att_name('Families returned to Nineveh Plains') . '_num']  ?></h4></li>
       <li>
-        <h4>4%</h4>
+        <h4><?php echo $at[get_att_name('Families returned to Nineveh Plains') . '_percentage'] . '%'  ?></h4>
         <svg width="300px" height="30px" viewBox="0 0 300 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
             <defs>
@@ -419,7 +423,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
             </g>
         </svg>
 
-        <?php echo $at[get_att_name('Properties already restored')]  ?>
+        <?php echo $at[get_att_name('Families returned to Nineveh Plains')]  ?>
       </li>
     </ul>
 	</div>

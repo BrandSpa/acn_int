@@ -297,6 +297,23 @@ function acn_fullpage_slide_points_vc() {
       ];
     }
 
+    $params[] = [
+      "type" => "textfield",
+      "heading" => 'Properties already restored',
+      "param_name" => get_att_name('Properties already restored') . '_percentage',
+      "value" => "2%"
+    ];
+
+    $params[] = [
+      "type" => "textfield",
+      "heading" => "Families returned to Nineveh Plains percentage",
+      "param_name" => get_att_name("Families returned to Nineveh Plains") . '_percentage',
+      "value" => "4%"
+    ];
+
+
+
+
     vc_map(
       array(
         "name" =>  "FullPage Slide Points",
