@@ -105,7 +105,8 @@ class contactForm extends Component {
 
   storeContact = isValid => {
     const {props, state} = this;
-    if (isValid) {
+    console.log(isValid);
+    if (isValid === true) {
 
       this.setState({ loading: true });
 
