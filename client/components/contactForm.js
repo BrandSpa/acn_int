@@ -65,15 +65,16 @@ class contactForm extends Component {
       : false;
   }
 
-
   validate = () => {
-    const {contact} = this.state;
+    const { contact } = this.state;
     let errors = {};
     let name = isEmpty(contact.name);
     let lastname = isEmpty(contact.lastname);
     let email = !isEmail(contact.email);
 
     errors = { ...errors, name, lastname, email };
+
+    let validations = Object.keys(errors).map(key => errors[key]);
 
     if(this.props.terms == "true") {
       if( this.state.terms == false ) {
