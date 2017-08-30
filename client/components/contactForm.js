@@ -75,7 +75,7 @@ class contactForm extends Component {
     });
 
     let emailVal = !isEmail(this.state.contact.email);
-    errors = { ...errors, email: mailVal };
+    errors = { ...errors, email: emailVal };
 
     if(this.props.terms == "true") {
       if( this.state.terms == false ) {
