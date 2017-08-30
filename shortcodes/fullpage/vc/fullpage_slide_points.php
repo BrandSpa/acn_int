@@ -299,7 +299,7 @@ function acn_fullpage_slide_points_vc() {
 
     $params[] = [
       "type" => "textfield",
-      "heading" => 'Properties already restored',
+      "heading" => 'Properties already restored percentage',
       "param_name" => get_att_name('Properties already restored') . '_percentage',
       "value" => "2%"
     ];
