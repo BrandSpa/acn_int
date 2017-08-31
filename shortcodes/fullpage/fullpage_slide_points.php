@@ -43,7 +43,9 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
   }
 
   $params[ get_att_name('Properties already restored') . '_percentage'] = '2%';
+  $params[ get_att_name('Properties already restored') . '_graph'] = '';
   $params[ get_att_name('Families returned to Nineveh Plains') . '_percentage'] = '4%';
+  $params[ get_att_name('Families returned to Nineveh Plains') . '_graph'] = '';
 
 	$points = [
 		'Telleskuf' => [
