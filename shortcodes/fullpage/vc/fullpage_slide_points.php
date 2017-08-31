@@ -308,7 +308,8 @@ function acn_fullpage_slide_points_vc() {
       "type" => "attach_image",
       "heading" => 'Properties already restored graph',
       "param_name" => get_att_name('Properties already restored') . '_graph',
-      "value" => ""
+      "value" => "",
+      "description" => "graph size: 300px width and 30px height"
     ];
 
     $params[] = [
@@ -322,7 +323,8 @@ function acn_fullpage_slide_points_vc() {
       "type" => "attach_image",
       "heading" => "Families returned to Nineveh Plains graph",
       "param_name" => get_att_name("Families returned to Nineveh Plains") . '_graph',
-      "value" => "4%"
+      "value" => "",
+      "description" => "graph size: 300px width and 30px height"
     ];
 
     vc_map(
