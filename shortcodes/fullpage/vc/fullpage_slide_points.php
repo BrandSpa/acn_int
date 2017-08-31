@@ -308,7 +308,7 @@ function acn_fullpage_slide_points_vc() {
       "type" => "attach_image",
       "heading" => 'Properties already restored graph',
       "param_name" => get_att_name('Properties already restored') . '_graph',
-      "value" => "2%"
+      "value" => ""
     ];
 
     $params[] = [
@@ -319,7 +319,7 @@ function acn_fullpage_slide_points_vc() {
     ];
 
     $params[] = [
-      "type" => "tattach_image",
+      "type" => "attach_image",
       "heading" => "Families returned to Nineveh Plains graph",
       "param_name" => get_att_name("Families returned to Nineveh Plains") . '_graph',
       "value" => "4%"
