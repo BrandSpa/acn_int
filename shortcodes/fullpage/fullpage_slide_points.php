@@ -254,7 +254,7 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			<li><h4><?php echo $at[get_att_name('Properties already restored') . '_num']  ?></h4></li>
 			<li>
         <h4><?php echo $at[get_att_name('Properties already restored') . '_percentage']  ?></h4>
-        <img src="<?php echo $at[get_att_name('Properties already restored') . '_graph']  ?>" style="max-width: 300px;" />
+        <img src="<?php echo wp_get_attachment_url($at[get_att_name('Properties already restored') . '_graph'])  ?>" style="max-width: 300px;" />
 				<?php echo $at[get_att_name('Properties already restored')]  ?>
 			</li>
 		</ul>
@@ -283,7 +283,9 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
       <li><h4><?php echo $at[get_att_name('Families returned to Nineveh Plains') . '_num']  ?></h4></li>
       <li>
         <h4><?php echo $at[get_att_name('Families returned to Nineveh Plains') . '_percentage'] ?></h4>
-        <img src="<?php echo $at[get_att_name('Families returned to Nineveh Plains') . '_graph']  ?>" style="max-width: 300px;" />
+
+        <img src="<?php echo wp_get_attachment_url($at[get_att_name('Families returned to Nineveh Plains') . '_graph']);  ?>" style="max-width: 300px;" />
+
         <?php echo $at[get_att_name('Families returned to Nineveh Plains')]  ?>
       </li>
     </ul>
