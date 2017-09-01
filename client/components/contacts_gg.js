@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class ContactsGG extends Component {
   state = {
-    continent: 'Afrika',
+    continent: '',
     country: null,
     contact: {}
   }
@@ -18,6 +18,10 @@ class ContactsGG extends Component {
 
   setContinent = (continentName, e) => {
     e.preventDefault();
+    if(this.state.continent == continentName) {
+      this.setState({ continent: '' });
+    }
+
     this.setState({ continent: continentName });
   }
 
@@ -62,7 +66,12 @@ class ContactsGG extends Component {
             <h4>{country}</h4>
             <img src={contact.image} />
             <h3>{contact.post_title}</h3>
-            <p>{contact.fields}</p>
+            {contact.fields.length > 0 ?
+              contact.fields.map(field => {
+                return <p>{field}</p>
+              })
+              : ''
+            }
             <ul>
               {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
                 contact.countries.map(countr => {
