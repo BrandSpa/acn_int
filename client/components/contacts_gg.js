@@ -102,6 +102,7 @@ class ContactsGG extends Component {
             font-weight: 500;
             color: #fff;
             margin-bottom: 2px;
+            transition: all .3s ease-in-out;
           }
 
           .continent__name > a i {
