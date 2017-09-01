@@ -127,6 +127,11 @@ class ContactsGG extends Component {
             margin-left: 40px;
           }
 
+          .contact h4 {
+            margin-bottom: 20px;
+            color: #3C515F;
+          }
+
           .contact img {
             max-width: 100%;
           }
