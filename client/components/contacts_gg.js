@@ -70,8 +70,7 @@ class ContactsGG extends Component {
               contact.fields.map(field => {
                 return <p>{field}</p>
               })
-              : ''
-            }
+            : ''}
             <ul>
               {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
                 contact.countries.map(countr => {
