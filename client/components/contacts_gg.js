@@ -119,7 +119,7 @@ class ContactsGG extends Component {
           }
 
           .country-selected {
-            color: red;
+            color: red !important;
             font-weight: bold;
           }
 
