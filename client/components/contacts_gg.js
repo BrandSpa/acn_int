@@ -29,7 +29,7 @@ class ContactsGG extends Component {
   }
 
   render() {
-    const { contacts, continents } = this.props;
+    const { contactTitle, contacts, continents } = this.props;
     const { country, continent, contact } = this.state;
     let countrySelected = country;
     let continentsKeys = Object.keys(continents);
@@ -67,6 +67,7 @@ class ContactsGG extends Component {
         </ul>
         <div className="col-6-l">
           <div className="contact">
+            <h2>{contactTitle}</h2>
             <h4>{country}</h4>
             <img src={contact.image} />
             <h3>{contact.post_title}</h3>
@@ -75,10 +76,10 @@ class ContactsGG extends Component {
                 return <p>{field}</p>
               })
             : ''}
-            <ul>
+            <ul className="contact__countries">
               {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
                 contact.countries.map(countr => {
-                  return <li>{countr}</li>
+                  return <li>{countr} / </li>
                 })
               : ''}
             </ul>
@@ -140,6 +141,11 @@ class ContactsGG extends Component {
             margin-left: 40px;
           }
 
+          .contact h2 {
+            margin: 0 20px 0 0;
+            color: #3C515F;
+          }
+
           .contact h4 {
             margin-bottom: 20px;
             color: #3C515F;
@@ -150,7 +156,7 @@ class ContactsGG extends Component {
           }
 
           .contact h3 {
-            margin: 20px 0;
+            margin: 0 20px 0 0;
             color: #3C515F;
           }
 
@@ -162,6 +168,10 @@ class ContactsGG extends Component {
             float: left;
             color: #3c515f;
             margin-right: 10px;
+          }
+
+          .contact__countries li {
+            font-weight: 600;
           }
 
         `}</style>
