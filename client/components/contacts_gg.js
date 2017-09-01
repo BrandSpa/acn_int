@@ -64,9 +64,11 @@ class ContactsGG extends Component {
             <h3>{contact.post_title}</h3>
             <p>{contact.fields}</p>
             <ul>
-              {contact.countries.map(countr => {
+              {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
+                contact.countries.map(countr => {
                 return <li>{countr}</li>
-              })}
+              })
+            : ''}
             </ul>
             <p>{contact.post_content}</p>
 
