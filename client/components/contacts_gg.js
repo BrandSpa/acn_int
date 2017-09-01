@@ -18,7 +18,6 @@ class ContactsGG extends Component {
 
   setContinent = (continentName, e) => {
     e.preventDefault();
-    console.log('continent', this.state.continent == continentName);
     if(this.state.continent == continentName) {
       this.setState({ continent: '' });
     } else {
@@ -68,7 +67,7 @@ class ContactsGG extends Component {
         <div className="col-6-l">
           <div className="contact">
             <h4>{country}</h4>
-            <p>{contactTitle}</p>
+            <p>{contact.hasOwnProperty('post_title') ? contactTitle : ''}</p>
             <img src={contact.image} />
             <h3>{contact.post_title}</h3>
             {contact.hasOwnProperty('fields') && contact.fields.length > 0 ?
