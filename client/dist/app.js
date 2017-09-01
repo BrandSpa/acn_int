@@ -5038,7 +5038,7 @@ var ContactsGG = function (_Component) {
       }
     }, _this.setContinent = function (continentName, e) {
       e.preventDefault();
-
+      console.log('continent', _this.state.continent == continentName);
       if (_this.state.continent == continentName) {
         _this.setState({ continent: '' });
       }
