@@ -5038,6 +5038,7 @@ var ContactsGG = function (_Component) {
       }
     }, _this.setContinent = function (continentName, e) {
       e.preventDefault();
+
       if (_this.state.continent == continentName) {
         _this.setState({ continent: '' });
       }
@@ -5090,7 +5091,7 @@ var ContactsGG = function (_Component) {
                   className: continent == continentName ? "continent__countries continent__countries--open" : "continent__countries",
                   'data-jsx': 1794052743
                 },
-                continents[continent].map(function (country) {
+                continents[continent] ? continents[continent].map(function (country) {
                   return _react2['default'].createElement(
                     'li',
                     {
@@ -5107,7 +5108,7 @@ var ContactsGG = function (_Component) {
                       country
                     )
                   );
-                })
+                }) : ''
               )
             );
           })

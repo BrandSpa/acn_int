@@ -18,6 +18,7 @@ class ContactsGG extends Component {
 
   setContinent = (continentName, e) => {
     e.preventDefault();
+
     if(this.state.continent == continentName) {
       this.setState({ continent: '' });
     }
@@ -45,7 +46,7 @@ class ContactsGG extends Component {
                   ? "continent__countries continent__countries--open"
                   : "continent__countries"}
               >
-                {continents[continent].map(country =>
+                {continents[continent] ? continents[continent].map(country =>
                   <li>
                     <a
                       href="#"
@@ -55,7 +56,8 @@ class ContactsGG extends Component {
                       {country}
                     </a>
                   </li>
-                )}
+                )
+                : ''}
               </ul>
             </li>
             )
