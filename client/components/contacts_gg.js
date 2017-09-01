@@ -24,6 +24,7 @@ class ContactsGG extends Component {
   render() {
     const { contacts, continents } = this.props;
     const { country, continent, contact } = this.state;
+    let countrySelected = country;
     let continentsKeys = Object.keys(continents);
 
     return (
@@ -41,7 +42,15 @@ class ContactsGG extends Component {
                   : "continent__countries"}
               >
                 {continents[continent].map(country =>
-                  <li><a href="#" onClick={this.setContact.bind(null, country)}>{country}</a></li>
+                  <li>
+                    <a
+                      href="#"
+                      className={country == countrySelected ? 'country-selected' : ''}
+                      onClick={this.setContact.bind(null, country)}
+                    >
+                      {country}
+                    </a>
+                  </li>
                 )}
               </ul>
             </li>
@@ -51,10 +60,14 @@ class ContactsGG extends Component {
         <div className="col-6-l">
           <div className="contact">
             <h4>{country}</h4>
-            <img src={contact.image} alt=""/>
+            <img src={contact.image} />
             <h3>{contact.post_title}</h3>
             <p>{contact.fields}</p>
-            <p>{contact.countries}</p>
+            <ul>
+              {contact.countries.map(countr => {
+                return <li>{countr}</li>
+              })}
+            </ul>
             <p>{contact.post_content}</p>
 
           </div>
@@ -101,6 +114,28 @@ class ContactsGG extends Component {
             color: #8E8E8E;
             margin-bottom: 10px;
             display: block;
+          }
+
+          .country-selected {
+            color: red;
+            font-weight: bold;
+          }
+
+          .contact {
+            margin-left: 40px;
+          }
+
+          .contact img {
+            max-width: 100%;
+          }
+
+          .contact h3 {
+            margin: 20px 0;
+            color: #3C515F;
+          }
+
+          .contact ul {
+            margin: 20px 0;
           }
 
         `}</style>
