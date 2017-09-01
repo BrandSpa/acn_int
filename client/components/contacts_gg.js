@@ -68,7 +68,7 @@ class ContactsGG extends Component {
             <h4>{country}</h4>
             <img src={contact.image} />
             <h3>{contact.post_title}</h3>
-            {contact.fields.length > 0 ?
+            {contact.hasOwnProperty('fields') && contact.fields.length > 0 ?
               contact.fields.map(field => {
                 return <p>{field}</p>
               })

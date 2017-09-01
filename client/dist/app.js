@@ -5137,7 +5137,7 @@ var ContactsGG = function (_Component) {
               },
               contact.post_title
             ),
-            contact.fields.length > 0 ? contact.fields.map(function (field) {
+            contact.hasOwnProperty('fields') && contact.fields.length > 0 ? contact.fields.map(function (field) {
               return _react2['default'].createElement(
                 'p',
                 {
