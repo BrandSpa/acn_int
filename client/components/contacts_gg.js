@@ -66,9 +66,9 @@ class ContactsGG extends Component {
             <ul>
               {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
                 contact.countries.map(countr => {
-                return <li>{countr}</li>
-              })
-            : ''}
+                  return <li>{countr}</li>
+                })
+              : ''}
             </ul>
             <p>{contact.post_content}</p>
 
@@ -138,6 +138,12 @@ class ContactsGG extends Component {
 
           .contact ul {
             margin: 20px 0;
+          }
+
+          .contact li {
+            float: left;
+            color: #3c515f;
+            margin-right: 10px;
           }
 
         `}</style>
