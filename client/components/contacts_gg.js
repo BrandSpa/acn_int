@@ -67,8 +67,8 @@ class ContactsGG extends Component {
         </ul>
         <div className="col-6-l">
           <div className="contact">
-            <h2>{contactTitle}</h2>
             <h4>{country}</h4>
+            <p>{contactTitle}</p>
             <img src={contact.image} />
             <h3>{contact.post_title}</h3>
             {contact.hasOwnProperty('fields') && contact.fields.length > 0 ?
@@ -76,10 +76,11 @@ class ContactsGG extends Component {
                 return <p>{field}</p>
               })
             : ''}
+
             <ul className="contact__countries">
               {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
                 contact.countries.map(countr => {
-                  return <li>{countr} / </li>
+                  return <li>{countr} ·</li>
                 })
               : ''}
             </ul>
