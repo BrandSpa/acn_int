@@ -5041,9 +5041,9 @@ var ContactsGG = function (_Component) {
       console.log('continent', _this.state.continent == continentName);
       if (_this.state.continent == continentName) {
         _this.setState({ continent: '' });
+      } else {
+        _this.setState({ continent: continentName });
       }
-
-      _this.setState({ continent: continentName });
     }, _temp), (0, _possibleConstructorReturn3['default'])(_this, _ret);
   }
 

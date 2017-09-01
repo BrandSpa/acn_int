@@ -21,9 +21,11 @@ class ContactsGG extends Component {
     console.log('continent', this.state.continent == continentName);
     if(this.state.continent == continentName) {
       this.setState({ continent: '' });
+    } else {
+      this.setState({ continent: continentName });
     }
 
-    this.setState({ continent: continentName });
+
   }
 
   render() {
