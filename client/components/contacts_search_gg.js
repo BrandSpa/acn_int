@@ -90,3 +90,5 @@ class ContactsSearchGG extends Component {
     )
   }
 }
+
+export default ContactsSearchGG;

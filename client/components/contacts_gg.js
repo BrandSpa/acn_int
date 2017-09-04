@@ -29,14 +29,14 @@ class ContactsGG extends Component {
   }
 
   render() {
-    const { contactTitle, contacts, continents } = this.props;
+    const { contactTitle, contacts, continents, countries } = this.props;
     const { country, continent, contact } = this.state;
     let countrySelected = country;
     let continentsKeys = Object.keys(continents);
 
     return (
       <div>
-        <Search onSelect={this.setContact} />
+        <Search countries={countries} onSelect={this.setContact} />
         <ul className="col-6-l">
           {continentsKeys.map(continentName => {
             return (<li className={continent == continentName ? "continent__name continent__name--active" : "continent__name" }>
