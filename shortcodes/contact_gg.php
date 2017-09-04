@@ -7,7 +7,8 @@ function bs_contact_gg_sc($atts, $content = null) {
 
   $query = new Wp_Query(array(
     'post_type' => array('contact'),
-    'post_status' => 'publish'
+    'post_status' => 'publish',
+		'posts_per_page' => -1
   ));
 
   $contacts = array_map(function($contact) {
