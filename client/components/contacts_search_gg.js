@@ -26,7 +26,7 @@ class ContactsSearchGG extends Component {
 
   handleSelect = (country, e) => {
     e.preventDefault();
-    this.setState({ country, openResults: false });
+    this.setState({ country, openResults: false, query: '' });
     this.props.onSelect(country);
   }
 
@@ -56,7 +56,7 @@ class ContactsSearchGG extends Component {
         <style jsx>{`
           .results {
             position: relative;
-            height: 300px;
+            max-height: 220px;
             background: #fff;
             overflow-y: scroll;
             display: none;
@@ -82,6 +82,7 @@ class ContactsSearchGG extends Component {
             text-align: left;
             padding: 10px 20px;
             background: #f7f7f7;
+            color: #9b9b9b;
             transition: all .3s ease-in-out;
           }
 
