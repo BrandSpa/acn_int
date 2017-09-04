@@ -18,6 +18,7 @@ class ContactsGG extends Component {
 
   setContinent = (continentName, e) => {
     e.preventDefault();
+    console.log(continentName);
     if(this.state.continent == continentName) {
       this.setState({ continent: '' });
     } else {
