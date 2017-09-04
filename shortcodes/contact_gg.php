@@ -21,7 +21,8 @@ function bs_contact_gg_sc($atts, $content = null) {
 	$props = [
 		'contactTitle' => 'The ACN Head of Section for this country is:',
     'contacts' => $contacts,
-    'continents' => getContinents()
+    'continents' => getContinents(),
+		'countries' => getCountries()
   ];
 
   ob_start();

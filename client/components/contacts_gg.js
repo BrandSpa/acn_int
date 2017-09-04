@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from './contacts_search_gg';
 
 class ContactsGG extends Component {
   state = {
@@ -8,7 +9,7 @@ class ContactsGG extends Component {
   }
 
   setContact = (country, e) => {
-    e.preventDefault();
+    if(e) e.preventDefault();
     const { contacts } = this.props;
     const contact = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
     console.log(contact);
@@ -35,6 +36,7 @@ class ContactsGG extends Component {
 
     return (
       <div>
+        <Search onSelect={this.setContact} />
         <ul className="col-6-l">
           {continentsKeys.map(continentName => {
             return (<li className={continent == continentName ? "continent__name continent__name--active" : "continent__name" }>
