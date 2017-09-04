@@ -14,7 +14,7 @@ class ContactsSearchGG extends Component {
 
   handleChange = (e) => {
     e.preventDefault();
-    const query = e.current.value;
+    const query = e.target.value;
     const {countries} = this.props;
 
     let results = countries.filter(country => {
