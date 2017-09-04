@@ -11,6 +11,7 @@ class ContactsGG extends Component {
     e.preventDefault();
     const { contacts } = this.props;
     const contact = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
+    console.log(contact);
     if(contact.length > 0) {
       this.setState({ contact: contact[0], country });
     }
@@ -24,8 +25,6 @@ class ContactsGG extends Component {
     } else {
       this.setState({ continent: continentName });
     }
-
-
   }
 
   render() {

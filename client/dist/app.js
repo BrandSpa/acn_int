@@ -5033,6 +5033,7 @@ var ContactsGG = function (_Component) {
       var contact = contacts.filter(function (contact) {
         return contact.countries.indexOf(country) !== -1;
       });
+      console.log(contact);
       if (contact.length > 0) {
         _this.setState({ contact: contact[0], country: country });
       }
