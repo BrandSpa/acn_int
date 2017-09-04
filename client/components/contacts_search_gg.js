@@ -44,11 +44,11 @@ class ContactsSearchGG extends Component {
             {results.length > 0
               ?
                 results.map(country =>
-                  <li><a href="" onClick={this.handleSelect}>{country}</a></li>
+                  <li><a href="" onClick={this.handleSelect.bind(null, country)}>{country}</a></li>
                 )
               :
                 countries.map(country =>
-                  <li><a href="" onClick={this.handleSelect}>{country}</a></li>
+                  <li><a href="" onClick={this.handleSelect.bind(null, country)}>{country}</a></li>
                 )
           }
           </ul>
@@ -67,10 +67,15 @@ class ContactsSearchGG extends Component {
           }
 
           .results ul {
-            padding:
+            padding: 0;
+          }
+
+          .results ul li {
+            list-style: none;
           }
 
           .results ul li a {
+            display: block;
             width: 100%;
             height: 40px;
             font-size: 14px;
