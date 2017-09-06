@@ -34,6 +34,7 @@ import ContactsGG from './components/contacts_gg';
 // jquery
 
 import setMenuMobile from './lib/set_menu_mobile';
+import setMenu from './lib/set_menu';
 import donateRedirect from './lib/donate_redirect';
 import smoothScroll from './lib/smoothScroll';
 import scrollViaCrucisNav from './lib/scrollViaCrucisNav';
@@ -79,6 +80,7 @@ multipleRender(PostShare, '.bs-post-share');
 multipleRender(ContactsGG, '.bs-contacts-gg');
 
 // jquery calls
+setMenu();
 setMenuMobile();
 donateRedirect();
 smoothScroll();
