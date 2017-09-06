@@ -27,9 +27,21 @@
 
 		?>
 
-	<div class="bs-menu" data-props='{"links": <?php echo getNavArr("header") ?>}'></div>
+	<!-- <div class="bs-menu" data-props='{"links": <?php echo getNavArr("header") ?>}'></div> -->
 
+	<ul class="menu">
+		<?php
+			$args = array(
+				'theme_location' => 'header',
+				'container' => false,
+				'echo' => false
+		);
 
+			$menu = wp_nav_menu( $args);
+			echo clean_menu($menu);
+		?>
+	</ul>
+	
 	<ul class="menu--mobile">
 			<li>
 				<a href="#close" class="close-menu" style="color: #F1364E"><i class="ion-close"></i></a>
