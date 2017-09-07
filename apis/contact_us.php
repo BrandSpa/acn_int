@@ -7,7 +7,7 @@ function contact_us($data = []) {
 
   $mailer = new Swift_Mailer($transport);
 
-   ob_get();
+  ob_start();
 ?>
   <html>
     <body>
