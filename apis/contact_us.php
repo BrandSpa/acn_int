@@ -2,7 +2,7 @@
 
 require $dir_base . 'vendor/autoload.php';
 
-function contact_us($data) {
+function contact_us($data = []) {
   $transport = new Swift_SendmailTransport('/usr/sbin/sendmail -bs');
 
   $mailer = new Swift_Mailer($transport);
@@ -11,7 +11,7 @@ function contact_us($data) {
 ?>
   <html>
     <body>
-      <p><?php echo $data['name'] . ' ' $data['lastname'] ?></p>
+      <p><?php echo $data['name'] . ' ' . $data['lastname'] ?></p>
       <p><?php echo $data['email'] ?></p>
       <p><?php echo $data['message'] ?></p>
     </body>
