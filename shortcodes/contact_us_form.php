@@ -22,7 +22,7 @@ function bs_contact_us_form_sc($atts) {
   ob_start();
 ?>
 <div
-  class="contact-form-us"
+  class="bs-contact-form-us"
   data-props='<?php echo json_encode($props) ?>'
 >
 </div>

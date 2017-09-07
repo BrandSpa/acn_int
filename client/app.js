@@ -30,6 +30,7 @@ import Carousel from './components/carousel';
 import Counter from './components/counter';
 import PostShare from './components/postShare';
 import ContactsGG from './components/contacts_gg';
+import ContactUsForm from './components/contact_us_form';
 
 // jquery
 
@@ -78,6 +79,7 @@ multipleRender(Carousel, '.bs-carousel');
 multipleRender(Counter, '.bs-counter');
 multipleRender(PostShare, '.bs-post-share');
 multipleRender(ContactsGG, '.bs-contacts-gg');
+multipleRender(ContactUsForm, '.bs-contact-form-us');
 
 // jquery calls
 setMenu();
