@@ -21,7 +21,7 @@ class ContactUsForm extends Component {
     return fields
       .map(key => {
         let val = this.state[key];
-        isValid = !isEmpty(val);
+        let isValid = !isEmpty(val);
         if(key == 'email') isValid = isEmail(val);
         this.setState({ error: { ...errors, [key]: isValid } });
         return isValid;
