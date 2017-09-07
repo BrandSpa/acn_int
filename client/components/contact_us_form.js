@@ -23,7 +23,7 @@ class ContactUsForm extends Component {
         let val = this.state[key];
         let isValid = !isEmpty(val);
         if(key == 'email') isValid = isEmail(val);
-        this.setState({ error: { ...this.state.errors, [key]: isValid } });
+        this.setState({ errors: { ...this.state.errors, [key]: isValid } });
         return isValid;
       })
       .every(item => item == true);
