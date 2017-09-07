@@ -20,7 +20,7 @@ class ContactUsForm extends Component {
     const errors = {};
 
     fields.forEach(field => {
-      let val = this.state[key];
+      let val = this.state[field];
       errors[field] = field == 'email' ? isEmail(val) : !isEmpty(val);
     });
 
@@ -29,8 +29,7 @@ class ContactUsForm extends Component {
     return fields
       .map(key => {
         let val = this.state[key];
-        let isValid = key == 'email' ? isEmail(val) : !isEmpty(val);
-        return isValid;
+        return key == 'email' ? isEmail(val) : !isEmpty(val);
       });
   }
 
