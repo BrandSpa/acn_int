@@ -7,7 +7,8 @@ class ContactUsForm extends Component {
     name: '',
     lastname: '',
     email: '',
-    message: ''
+    message: '',
+    errors: {}
   }
 
   handleChange = e => {
@@ -15,24 +16,29 @@ class ContactUsForm extends Component {
   }
 
   validate = () => {
-    return Object.keys(this.state)
+    const fields = ['name', 'lastname', 'email', 'message'];
+
+    return fields
       .map(key => {
         let val = this.state[key];
-        let isValid = false;
-        if(key == 'email') return isEmail(val);
-        return !isEmpty(val);
+        isValid = !isEmpty(val);
+        if(key == 'email') isValid = isEmail(val);
+        this.setState({ error: { ...errors, [key]: isValid } });
+        return isValid;
       })
       .every(item => item == true);
   }
 
   handleSubmit = e => {
     if(e) e.preventDefault();
-    console.log(this.validate());
+    if(this.validate()) {
+      console.log(this.state);
+    }
   }
 
   render() {
-    const { name, lastname, email, message } = this.state;
-    const { placeholders, btnText } = this.props;
+    const { name, lastname, email, message, errors } = this.state;
+    const { placeholders, messages, btnText } = this.props;
 
     return (
      <form action="#" onSubmit={this.handleSubmit}>
@@ -44,6 +50,9 @@ class ContactUsForm extends Component {
            onChange={this.handleChange}
            value={name}
          />
+         <div className={errors.name ? "input-error" : "hidden"}>
+           {messages.name}
+         </div>
        </div>
        <div className="input-container">
          <input
@@ -53,6 +62,9 @@ class ContactUsForm extends Component {
            onChange={this.handleChange}
            value={lastname}
          />
+         <div className={errors.lastname ? "input-error" : "hidden"}>
+           {messages.lastname}
+         </div>
        </div>
        <div className="input-container">
          <input
@@ -62,6 +74,9 @@ class ContactUsForm extends Component {
            onChange={this.handleChange}
            value={email}
          />
+         <div className={errors.email ? "input-error" : "hidden"}>
+           {messages.email}
+         </div>
        </div>
        <div className="input-container">
          <textarea
@@ -70,6 +85,9 @@ class ContactUsForm extends Component {
             rows="5"
             onChange={this.handleChange}
           >{message}</textarea>
+          <div className={errors.message ? "input-error" : "hidden"}>
+            {messages.message}
+          </div>
        </div>
        <button>{btnText}</button>
        <style jsx>{`
