@@ -76,6 +76,8 @@ class ContactUsForm extends Component {
          textarea {
            width: 100%;
            background: transparent;
+           padding: 6px 12px;
+           font-size: .8em
          }
        `}</style>
      </form>
