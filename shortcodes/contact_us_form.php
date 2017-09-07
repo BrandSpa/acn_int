@@ -28,6 +28,6 @@ function bs_contact_us_form_sc($atts) {
 </div>
 <?php
   ob_get_clean();
-
-
 }
+
+add_shortcode('bs_contact_us_form', 'bs_contact_us_form_sc');
