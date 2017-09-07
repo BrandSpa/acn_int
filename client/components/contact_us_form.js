@@ -18,8 +18,9 @@ class ContactUsForm extends Component {
   validate = () => {
     const fields = ['name', 'lastname', 'email', 'message'];
     const errors = {};
-  
+
     fields.forEach(field => {
+      let val = this.state[key];
       errors[field] = field == 'email' ? isEmail(val) : !isEmpty(val);
     });
 
