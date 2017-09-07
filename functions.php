@@ -45,11 +45,12 @@ include_once 'apis/mailchimp.php';
 include_once 'apis/infusion.php';
 include_once 'apis/posts.php';
 include_once 'apis/events.php';
-
+include_once 'apis/contact_us.php';
 // APIS AJAX
 include_once 'apis/ajax/convertloop.php';
 include_once 'apis/ajax/mailchimp.php';
 include_once 'apis/ajax/stripe.php';
+include_once 'apis/ajax/contact_us.php';
 
 //OPTIONS
 require_once 'options/index.php';
@@ -146,7 +147,6 @@ foreach( $post_types as $post_type) {
 
 add_theme_support( 'post-thumbnails', ['post', 'gallery', 'video'] );
 
-
 add_filter( 'upload_mimes', 'add_svg_mime' );
 
 function add_svg_mime( $existing_mimes = array() ) {
@@ -154,4 +154,4 @@ function add_svg_mime( $existing_mimes = array() ) {
 	return $existing_mimes;
 }
 
-	add_post_type_support( 'page', 'excerpt' );
+add_post_type_support( 'page', 'excerpt' );
