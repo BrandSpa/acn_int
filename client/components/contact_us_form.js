@@ -54,7 +54,7 @@ class ContactUsForm extends Component {
            onChange={this.handleChange}
            value={name}
          />
-         <div className={errors.name ? "input-error" : "hidden"}>
+         <div className={errors.name ?  "hidden" : "input-error"}>
            {messages.name}
          </div>
        </div>
@@ -66,7 +66,7 @@ class ContactUsForm extends Component {
            onChange={this.handleChange}
            value={lastname}
          />
-         <div className={errors.lastname ? "input-error" : "hidden"}>
+         <div className={errors.lastname ? "hidden" :  "input-error"}>
            {messages.lastname}
          </div>
        </div>
@@ -78,7 +78,7 @@ class ContactUsForm extends Component {
            onChange={this.handleChange}
            value={email}
          />
-         <div className={errors.email ? "input-error" : "hidden"}>
+         <div className={errors.email ? "hidden" : "input-error"}>
            {messages.email}
          </div>
        </div>
@@ -89,7 +89,7 @@ class ContactUsForm extends Component {
             rows="5"
             onChange={this.handleChange}
           >{message}</textarea>
-          <div className={errors.message ? "input-error" : "hidden"}>
+          <div className={errors.message ? "hidden" :  "input-error"}>
             {messages.message}
           </div>
        </div>
