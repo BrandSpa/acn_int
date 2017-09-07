@@ -23,7 +23,7 @@ function bs_contact_us_form_sc($atts) {
     'messages' => [
       'name' => $at['name_validation'],
       'lastname' => $at['lastname_validation'],
-      'emaie' => $at['email_validation'],
+      'email' => $at['email_validation'],
       'message' => $at['message_validation'],
     ],
     'btnText' => $at['btn_text']
