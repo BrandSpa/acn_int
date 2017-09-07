@@ -17,21 +17,25 @@ class ContactUsForm extends Component {
 
   validate = () => {
     const fields = ['name', 'lastname', 'email', 'message'];
+    const errors = {};
+  
+    fields.forEach(field => {
+      errors[field] = field == 'email' ? isEmail(val) : !isEmpty(val);
+    });
+
+    this.setState({ errors });
 
     return fields
       .map(key => {
         let val = this.state[key];
-        let isValid = !isEmpty(val);
-        if(key == 'email') isValid = isEmail(val);
-        this.setState({ errors: { ...this.state.errors, [key]: isValid } });
+        let isValid = key == 'email' ? isEmail(val) : !isEmpty(val);
         return isValid;
-      })
-      .every(item => item == true);
+      });
   }
 
   handleSubmit = e => {
     if(e) e.preventDefault();
-    if(this.validate()) {
+    if(this.validate().every(item => item == true)) {
       console.log(this.state);
     }
   }

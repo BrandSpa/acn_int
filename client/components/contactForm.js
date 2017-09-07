@@ -60,7 +60,7 @@ class contactForm extends Component {
   }
 
   checkEmpty = field => {
-    return  Object.keys(this.state.contact).indexOf(field) !== -1
+    return  this.state.contact.hasOwnProperty(field)
       ? isEmpty(this.state.contact[field])
       : false;
   }
