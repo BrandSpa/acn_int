@@ -41,6 +41,7 @@ class ContactUsForm extends Component {
            type="text"
            name="name"
            placeholder={placeholders.name}
+           onChange={this.handleChange}
            value={name}
          />
        </div>
@@ -49,6 +50,7 @@ class ContactUsForm extends Component {
            type="text"
            name="lastname"
            placeholder={placeholders.lastname}
+           onChange={this.handleChange}
            value={lastname}
          />
        </div>
@@ -57,13 +59,25 @@ class ContactUsForm extends Component {
            type="text"
            name="email"
            placeholder={placeholders.email}
+           onChange={this.handleChange}
            value={email}
          />
        </div>
        <div className="input-container">
-         <textarea placeholder={placeholders.message} name="message" rows="3">{message}</textarea>
+         <textarea
+            placeholder={placeholders.message}
+            name="message"
+            rows="5"
+            onChange={this.handleChange}
+          >{message}</textarea>
        </div>
        <button>{btnText}</button>
+       <style jsx>{`
+         textarea {
+           width: 100%;
+           background: transparent;
+         }
+       `}</style>
      </form>
    )
   }
