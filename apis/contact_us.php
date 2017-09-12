@@ -31,7 +31,7 @@ function contact_us($data = [], $smtp) {
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
-    echo 'Message has been sent';
+    return 'Message has been sent';
   } catch (Exception $e) {
     return 'Mailer Error: ' . $mail->ErrorInfo;
   }
