@@ -37,7 +37,8 @@ const setMenuMobile = function() {
 
   $mainLinks.on('click', function(e) {
     e.preventDefault();
-    $mainLinks.find('.sub-menu').removeClass('sub-menu--open');
+    $('.menu--mobile .menu-item-has-children .sub-menu').removeClass('sub-menu--open');
+
     const $submenu = $(this).parent().find('.sub-menu');
     if($submenu.hasClass( "sub-menu--open" )) {
       $(this).find('i').attr('class', 'ion-chevron-right');
