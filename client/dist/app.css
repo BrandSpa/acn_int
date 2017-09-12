@@ -950,7 +950,8 @@ button, .btn {
         border: none; }
     .menu--mobile .nav__donate {
       position: absolute;
-      bottom: 20px; }
+      bottom: 20px;
+      border: none; }
       .menu--mobile .nav__donate a {
         border: none;
         text-align: center;
