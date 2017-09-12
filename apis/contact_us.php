@@ -7,6 +7,7 @@ require $dir_base . 'vendor/autoload.php';
 function contact_us($data = [], $smtp) {
 
   $mail = new PHPMailer(true);
+
   try {
     //Server settings
     $mail->SMTPDebug = 2;                                 // Enable verbose debug output
@@ -15,8 +16,8 @@ function contact_us($data = [], $smtp) {
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = $smtp['username'];                 // SMTP username
     $mail->Password = $smtp['password'];                           // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to
+    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom('noreplay@acninternational.org');
