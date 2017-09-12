@@ -904,7 +904,7 @@ button, .btn {
     padding: 0;
     margin: 0;
     z-index: 89; }
-    @media (max-width: 767px) {
+    @media (max-width: 767px), (min-width: 768px) and (max-width: 991px) {
       .menu--mobile {
         display: block; } }
     .menu--mobile--open {
@@ -946,7 +946,7 @@ button, .btn {
       font-size: 30px; }
       .menu--mobile .close-menu i {
         float: none; }
-  @media (max-width: 767px) {
+  @media (max-width: 767px), (min-width: 768px) and (max-width: 991px) {
     .menu {
       display: none; } }
   .menu li {
