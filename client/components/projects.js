@@ -100,12 +100,16 @@ class Projects extends React.Component {
         </div>
         <style jsx>{`
           .projects__content__left {
-            min-height: 500px
+            min-height: 500px;
+            padding: 40px;
+          }
+
+          .projects__content__left h4 {
+            color: #fff;
           }
 
           .projects__content__left__text {
             color: #fff;
-            padding: 40px;
           }
 
           .projects__content__right {
