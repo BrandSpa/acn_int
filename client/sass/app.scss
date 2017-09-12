@@ -50,7 +50,7 @@ img {
 
 .menu-open {
 	position: relative;
-	left: -200px;
+	overflow: hidden;
 }
 
 h1,
@@ -148,7 +148,7 @@ p {
 	a {
 		border-bottom: 1px solid #ddd;
 		transition: all .5s ease-in-out;
-		
+
 		&:hover {
 			background: #ddd;
 		}
