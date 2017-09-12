@@ -22,15 +22,22 @@ export default () => {
         })
         .then(() => {
           let data = qs.stringify({action: "donate_redirect_2"});
+
+          if($el.attr('href') && $el.attr('href') !== '#' && $el.attr('href') !== '') {
+            return window.location = $el.attr('href');
+          }
+
           request
             .post("/wp-admin/admin-ajax.php", data)
             .then(res => {
+
               if(res.data !== false) {
                 return window.location = res.data
               }
 
               return window.location = $el.attr('href');
             });
+
         })
     });
   }
