@@ -916,10 +916,12 @@ button, .btn {
       .menu--mobile li a {
         display: block;
         text-align: left;
-        padding: 10px 0 10px 40px;
+        padding: 10px 20px 10px 40px;
         color: #fff;
         font-size: 1.5em;
         border-bottom: 1px solid #979797; }
+        .menu--mobile li a i {
+          float: right; }
     .menu--mobile .menu--mobile__langs {
       padding: 0;
       max-height: 0;
