@@ -2,7 +2,14 @@
 
 function send_contact_us() {
   $data = $_POST['data'];
-  $res = contact_us($data);
+  $smtp = [
+    'url' => get_option('smtp_url'),
+    'port' => get_option('smtp_port'),
+    'username' => get_option('smtp_username'),
+    'password' => get_option('smtp_password')
+  ];
+
+  $res = contact_us($data, $smtp);
   header('Content-type: application/json');
   echo $res;
   die();
