@@ -1421,8 +1421,8 @@ button {
     z-index: 0; } }
 
 .active .map-points__spot {
-  -webkit-animation: spotEnter 2.5s;
-  animation: spotEnter 2.5s; }
+  -webkit-animation: spotEnter 1s;
+  animation: spotEnter 1s; }
   @media (max-width: 767px), (min-width: 768px) and (max-width: 991px) {
     .active .map-points__spot {
       opacity: 0;
