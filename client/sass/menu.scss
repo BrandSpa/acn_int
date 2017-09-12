@@ -119,11 +119,16 @@
 			a {
 				display: block;
 				text-align: left;
-				padding: 10px 0 0 40px;
+				padding: 10px 0 10px 40px;
 				color: #fff;
 				font-size: 1.5em;
 				border-bottom: 1px solid #979797;
 			}
+		}
+
+		.nav__donate {
+			position: absolute;
+			bottom: 20px;
 		}
 	}
 
