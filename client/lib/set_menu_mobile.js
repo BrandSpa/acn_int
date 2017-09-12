@@ -5,9 +5,10 @@ const setMenuMobile = function() {
   $('.menu--mobile .current-lang').append('<ul class="menu--mobile__langs"></ul>');
 
   const langs = $('.menu--mobile .lang-item').not($('.current-lang'));
+  const $dropdown = $menu.find('.menu--mobile__langs');
 
   langs.each(function() {
-    $menu.find('.menu--mobile__langs').append($(this).html());
+    $dropdown.append($(this).html());
     $(this).remove();
   });
 
@@ -16,7 +17,7 @@ const setMenuMobile = function() {
 
   currentLang.on('click', e => {
     e.preventDefault();
-    const $dropdown = $menu.find('.dropdown-content');
+
 
     if ($dropdown.hasClass('menu--mobile__langs--open')) {
       $dropdown.removeClass('menu--mobile__langs--open');
