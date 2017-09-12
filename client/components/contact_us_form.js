@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import request from 'axios';
+import qs from 'qs';
 import isEmpty from "validator/lib/isEmpty";
 import isEmail from "validator/lib/isEmail";
 
@@ -36,7 +38,9 @@ class ContactUsForm extends Component {
   handleSubmit = e => {
     if(e) e.preventDefault();
     if(this.validate().every(item => item == true)) {
-      console.log(this.state);
+      const data = qs.stringify(this.state);
+      request.post('/wp-admin/admin-ajax.php', data)
+      .then(res => console.log(res.data));
     }
   }
 
