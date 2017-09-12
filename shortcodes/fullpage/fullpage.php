@@ -114,8 +114,12 @@ function acn_fullpage_sc( $atts, $content ) {
 
 	<div class="fullpage-nav">
 		<ul>
-			<?php foreach($links  as $ind => $link): ?>
-				<li><a href="<?php echo $link['link'] ?>"><span class="num"><?php echo $ind + 1 ?></span> <span class="title"><?php echo  $link['title'] ?></span></a></li>
+			<?php foreach($links as $ind => $link): ?>
+				<li>
+					<a href="<?php echo $link['link'] ?>">
+						<span class="num"><?php echo $ind + 1 ?></span> <span class="title"><?php echo  $link['title'] ?></span>
+					</a>
+				</li>
 			<?php endforeach; ?>
 			<li>
 				<a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>">
