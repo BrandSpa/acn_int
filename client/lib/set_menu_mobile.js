@@ -33,11 +33,11 @@ const setMenuMobile = function() {
       $(this).html(itemWithIcon);
   });
 
-  $('.menu--mobile .menu-item-has-children').on('click', function(e) {
+  $('.menu--mobile .menu-item-has-children > a').on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
     console.log(e.target, $(this));
-    const $submenu = $(this).find('.sub-menu');
+    const $submenu = $(this).parent().find('.sub-menu');
     console.log($submenu);
     $submenu.toggleClass( "sub-menu--open" );
   });
