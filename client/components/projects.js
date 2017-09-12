@@ -120,6 +120,12 @@ class Projects extends React.Component {
             min-height: 500px
           }
 
+          @media (max-width: 767px) {
+            .projects__content__right {
+              min-height: 200px;
+            }
+          }
+
           .bs-donate {
             background: #fff;
             border-color: #fff;
