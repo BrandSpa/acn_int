@@ -36,7 +36,7 @@ const setMenuMobile = function() {
 
   $mainLinks.on('click', function(e) {
     e.preventDefault();
-    console.log(e);
+    console.log(e.target);
     const $submenu = $(this).find('.sub-menu');
     console.log($submenu);
     $submenu.toggleClass( "sub-menu--open" );
