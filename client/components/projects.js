@@ -109,14 +109,14 @@ class Projects extends React.Component {
           }
 
           .projects__content__right {
-            background-size: cover,
-            background-position: center,
+            background-size: cover;
+            background-position: center;
             min-height: 500px
           }
 
           .bs-donate {
-            background: #fff,
-            border-color: #fff,
+            background: #fff;
+            border-color: #fff;
             text-transform: uppercase
           }
         `}</style>
