@@ -16,7 +16,11 @@ const backgroundColors = {
 
 class Projects extends React.Component {
 
-  state = { section: 1, bg: "#B91325", donateColor: "#B91325" };
+  state = {
+    section: 9,
+    bg: "#B91325",
+    donateColor: "#B91325"
+  }
 
   componentDidMount() {
     var num = 1;
@@ -71,45 +75,47 @@ class Projects extends React.Component {
     let content = contents[this.state.section - 1] || {};
     const { title, text, imgUrl } = content;
 
-    let styleRight = {
-      backgroundImage: `url(${imgUrl})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      minHeight: "500px"
-    };
-
-    let styleLeft = { background: this.state.bg, minHeight: "500px" };
-
-    let donateStyle = {
-      background: "#fff",
-      borderColor: "#fff",
-      textTransform: "uppercase",
-      color: this.state.donateColor
-    };
-
     return (
-      <div className="projects" ref={el => (this.el = el)}>
+      <div className="projects" ref={el => this.el = el}>
         <ProjectsIcons ref="projectIcons" onChange={this.changeContent} />
+
         <div className="projects__content">
           <div className="projects__arrow" />
           <div
-            className="col-4-l projects__content__content-left"
-            style={styleLeft}
+            className="col-4-l projects__content__left"
+            style={{background: this.state.bg}}
           >
             <h4>{title}</h4>
             <div
-              className="projects__content__content-left__text"
+              className="projects__content__left__text"
               dangerouslySetInnerHTML={{ __html: text }}
             />
-            <button className="bs-donate" style={donateStyle}>
+            <button className="bs-donate" style={{color: this.state.donateColor}}>
               {this.props.donate}
             </button>
           </div>
           <div
-            className="col-8-l projects__content__content-right"
-            style={styleRight}
+            className="col-8-l projects__content__right"
+            style={{backgroundImage: `url(${imgUrl})`}}
           />
         </div>
+        <style jsx>{`
+          .projects__content__left {
+            min-height: 500px
+          }
+
+          .projects__content__right {
+            background-size: cover,
+            background-position: center,
+            min-height: 500px
+          }
+
+          .bs-donate {
+            background: #fff,
+            border-color: #fff,
+            text-transform: uppercase
+          }
+        `}</style>
       </div>
     );
   }

@@ -11,7 +11,7 @@ function bs_projects_sc($atts, $content = null) {
 
   $at = shortcode_atts( $attributes , $atts );
   $slides = [];
-  
+
   foreach($arrAtts as $i) {
     $images = explode(',', $at['images']);
     $indexImg = $i - 1;
@@ -23,18 +23,20 @@ function bs_projects_sc($atts, $content = null) {
         'imgUrl' => wp_get_attachment_image_src($images[$indexImg], 'full')[0],
       ]);
     }
- 
+
   }
+
+	$props = [
+		"contents" => $slides,
+		"donate" => gett('Donate')
+	];
 
   ob_start();
 ?>
 
 <div
-  class="projects-container" 
-  data-props='{
-  "contents": <?php echo json_encode($slides) ?>,
-  "donate": "<?php echo gett('Donate') ?>"
-  }'
+  class="projects-container"
+  data-props='<?php echo json_encode($props); ?>'
 ></div>
 
 <?php
@@ -54,7 +56,7 @@ function bs_projects_sc($atts, $content = null) {
     ];
 
     foreach($arrAtts as $i) {
-      array_push($params, 
+      array_push($params,
         [
           'type' => 'textfield',
           'param_name' => 'title_' .$i,
@@ -69,14 +71,14 @@ function bs_projects_sc($atts, $content = null) {
         ]
       );
     }
-    
+
     vc_map(
       array(
         "name" =>  "BS Projects",
         "base" => "bs_projects",
         "category" =>  "BS",
         "params" => $params
-      ) 
+      )
     );
   }
 
