@@ -171,7 +171,6 @@ function acn_fullpage_sc( $atts, $content ) {
 	fp_options['introDelay'] = <?php echo $introDelay ?>;
 </script>
 
-
 	<?php
 	return ob_get_clean();
 }

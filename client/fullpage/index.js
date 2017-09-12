@@ -65,7 +65,7 @@ $(document).ready(function DOMLoaded() {
     menu: "#fullpage-menu",
     lazyLoading: false,
     navigation: false,
-    scrollingSpeed: 800,
+    scrollingSpeed: 1000,
     normalScrollElements: scrollElements,
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
