@@ -41,14 +41,14 @@
 			echo clean_menu($menu);
 		?>
 	</ul>
-	
+
 	<ul class="menu--mobile">
 			<li>
 				<a href="#close" class="close-menu" style="color: #F1364E"><i class="ion-close"></i></a>
 			</li>
 		  <?php
 				$args = array(
-	        'theme_location' => 'header',
+	        'theme_location' => 'mobile',
 	        'container' => false,
 	        'echo' => false
 			);
