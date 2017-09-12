@@ -23,7 +23,7 @@ class Projects extends React.Component {
   }
 
   componentDidMount() {
-    var num = 1;
+    var num = 9;
 
     this.props.contents.map(function(content, ind) {
       if (content.hash_url == window.location.hash.replace("#", "")) {
@@ -48,8 +48,7 @@ class Projects extends React.Component {
   }
 
   moveArrow = num => {
-    let left = this.el.querySelector(`.projects__icons li:nth-child(${num})`)
-      .offsetLeft;
+    let left = this.el.querySelector(`.projects__icons li:nth-child(${num})`).offsetLeft;
     this.el.querySelector(".projects__arrow").style.left = `${left}px`;
   };
 
@@ -102,6 +101,11 @@ class Projects extends React.Component {
         <style jsx>{`
           .projects__content__left {
             min-height: 500px
+          }
+
+          .projects__content__left__text {
+            color: #fff;
+            padding: 40px;
           }
 
           .projects__content__right {
