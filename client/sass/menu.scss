@@ -72,7 +72,7 @@
 .open-menu {
 	display: none;
 
-	@media #{$s} {
+	@media #{$s}, #{$m} {
 		display: block;
 		position: absolute;
 		top: 40%;
