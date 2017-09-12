@@ -892,7 +892,7 @@ button, .btn {
     display: none;
     height: 100%;
     position: fixed;
-    right: -80%;
+    right: -100%;
     top: 0;
     background: #fff;
     width: 80%;
@@ -901,7 +901,7 @@ button, .btn {
     background: #2B3A44;
     -webkit-box-shadow: -3px 2px 4px 0 rgba(0, 0, 0, 0.5);
     box-shadow: -3px 2px 4px 0 rgba(0, 0, 0, 0.5);
-    padding: 40px 0;
+    padding: 0;
     margin: 0;
     z-index: 1020; }
     @media (max-width: 767px) {
@@ -923,6 +923,9 @@ button, .btn {
     .menu--mobile .nav__donate {
       position: absolute;
       bottom: 20px; }
+      .menu--mobile .nav__donate a {
+        border: none;
+        text-align: center; }
   @media (max-width: 767px) {
     .menu {
       display: none; } }
