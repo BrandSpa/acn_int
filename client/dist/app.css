@@ -920,6 +920,15 @@ button, .btn {
         color: #fff;
         font-size: 1.5em;
         border-bottom: 1px solid #979797; }
+    .menu--mobile .menu--mobile__langs {
+      padding: 0;
+      max-height: 0;
+      visibility: hidden;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      .menu--mobile .menu--mobile__langs--open {
+        max-height: 1000px;
+        visibility: visible; }
     .menu--mobile .nav__donate {
       position: absolute;
       bottom: 20px; }
