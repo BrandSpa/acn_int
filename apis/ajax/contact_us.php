@@ -11,7 +11,7 @@ function send_contact_us() {
 
   $res = contact_us($data, $smtp);
   header('Content-type: application/json');
-  echo $res;
+  echo $smtp;
   die();
 }
 
