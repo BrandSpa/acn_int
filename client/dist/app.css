@@ -925,7 +925,10 @@ button, .btn {
       bottom: 20px; }
       .menu--mobile .nav__donate a {
         border: none;
-        text-align: center; }
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        font-weight: 600px; }
   @media (max-width: 767px) {
     .menu {
       display: none; } }
