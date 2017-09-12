@@ -40,10 +40,12 @@ const setMenuMobile = function() {
 
     const $submenu = $(this).parent().find('.sub-menu');
 
+
     if($submenu.hasClass( "sub-menu--open" )) {
       $(this).find('i').attr('class', 'ion-chevron-right');
       $submenu.removeClass( "sub-menu--open" );
     } else {
+      $('.menu--mobile .menu-item-has-children > a').find('i').attr('class', 'ion-chevron-right');
       $('.menu--mobile .menu-item-has-children .sub-menu').removeClass('sub-menu--open');
       $(this).find('i').attr('class', 'ion-chevron-down');
       $submenu.addClass( "sub-menu--open" );
