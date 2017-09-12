@@ -923,7 +923,6 @@ button, .btn {
         .menu--mobile li a i {
           float: right; }
     .menu--mobile .menu--mobile__langs {
-      padding: 0;
       max-height: 0;
       visibility: hidden;
       -webkit-transition: all .3s ease-in-out;
@@ -931,6 +930,8 @@ button, .btn {
       .menu--mobile .menu--mobile__langs--open {
         max-height: 1000px;
         visibility: visible; }
+      .menu--mobile .menu--mobile__langs li a {
+        border: none; }
     .menu--mobile .nav__donate {
       position: absolute;
       bottom: 20px; }

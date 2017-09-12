@@ -131,7 +131,6 @@
 		}
 
 		.menu--mobile__langs {
-			padding: 0;
 			max-height: 0;
 			visibility: hidden;
 			transition: all .3s ease-in-out;
@@ -140,8 +139,13 @@
 				max-height: 1000px;
 				visibility: visible;
 			}
-		}
 
+			li {
+				a {
+					border: none;
+				}
+			}
+		}
 
 
 		.nav__donate {
@@ -159,7 +163,7 @@
 		.close-menu {
 			color: #fff !important;
 			font-size: 30px;
-			
+
 			i {
 				float: none;
 			}
