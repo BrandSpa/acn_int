@@ -27,9 +27,15 @@ const setMenuMobile = function() {
 
   });
 
+
+  $('.menu--mobile .menu-item-has-children > a').each(function() {
+      const itemWithIcon = `${$(this).text()}  <i class="ion-chevron-right"></i>`;
+      $(this).html(itemWithIcon);
+  });
+
   $('.menu-item-has-children').on('click', function(e) {
     e.preventDefault();
-    $submenu = $(this).find('.sub-menu');
+    const $submenu = $(this).find('.sub-menu');
     $submenu.toggleClass( "sub-menu--open" );
   });
 
