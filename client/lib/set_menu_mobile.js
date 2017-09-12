@@ -29,17 +29,21 @@ const setMenuMobile = function() {
   const $mainLinks = $('.menu--mobile .menu-item-has-children > a');
 
   $mainLinks.each(function() {
-      const itemWithIcon = `${$(this).text()}  <i class="ion-chevron-right"></i>`;
-      $(this).html(itemWithIcon);
+    const itemWithIcon = `${$(this).text()}  <i class="ion-chevron-right"></i>`;
+    $(this).html(itemWithIcon);
   });
 
   $('.menu--mobile .menu-item-has-children > a').on('click', function(e) {
     e.preventDefault();
-    e.stopPropagation();
-    console.log(e.target, $(this));
     const $submenu = $(this).parent().find('.sub-menu');
-    console.log($submenu);
-    $submenu.toggleClass( "sub-menu--open" );
+    if($submenu.hasClass( "sub-menu--open" )) {
+      $(this).find('i').attr('class', 'ion-chevron-right');
+      $submenu.removeClass( "sub-menu--open" );
+    } else {
+      $(this).find('i').attr('class', 'ion-chevron-down');
+      $submenu.addClass( "sub-menu--open" );
+    }
+
   });
 
   $(".open-menu").on("click", () => {
