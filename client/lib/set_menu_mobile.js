@@ -19,8 +19,10 @@ const setMenuMobile = function() {
     e.preventDefault();
 
     if ($dropdown.hasClass('menu--mobile__langs--open')) {
+      $(this).find('i').attr('class', 'ion-chevron-right');
       $dropdown.removeClass('menu--mobile__langs--open');
     } else {
+        $(this).find('i').attr('class', 'ion-chevron-down');
       $dropdown.addClass('menu--mobile__langs--open');
     }
 
