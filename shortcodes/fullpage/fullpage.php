@@ -15,7 +15,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		"link_lang_3" => '',
 		"text_lang_3" => '',
 		"text_donate" => 'Donate',
-		"text_about" => "",
+		"text_about" => "About ACN",
 		"link_donate" => '#',
 		"text_pray" => 'Pray',
 		"link_pray" => '#',
