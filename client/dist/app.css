@@ -923,6 +923,16 @@ button, .btn {
         border-bottom: 1px solid #979797; }
         .menu--mobile li a i {
           float: right; }
+    .menu--mobile .sub-menu {
+      max-height: 0;
+      visibility: hidden;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      .menu--mobile .sub-menu--open {
+        max-height: 1000px;
+        visibility: visible; }
+      .menu--mobile .sub-menu a {
+        border: none; }
     .menu--mobile .menu--mobile__langs {
       max-height: 0;
       visibility: hidden;
