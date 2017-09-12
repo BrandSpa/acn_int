@@ -2,8 +2,10 @@
 
 require $dir_base . 'vendor/autoload.php';
 
-function contact_us($data = []) {
-  $transport = new Swift_SendmailTransport('/usr/sbin/sendmail -bs');
+function contact_us($data = [], $smtp) {
+  $transport = (new Swift_SmtpTransport($smtp['url'], $smtp['port']))
+    ->setUsername($smtp['username'])
+    ->setPassword($smtp['password']);
 
   $mailer = new Swift_Mailer($transport);
 

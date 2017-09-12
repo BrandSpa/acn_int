@@ -31,6 +31,10 @@ function bs_accounts_settings() {
   register_setting( 'bs_accounts_info_group', 'subscribe_redirect' );
   register_setting( 'bs_accounts_info_group', 'analytics_id' );
   register_setting( 'bs_accounts_info_group', 'gta_id' );
+  register_setting( 'bs_accounts_info_group', 'smtp_url' );
+  register_setting( 'bs_accounts_info_group', 'smtp_port' );
+  register_setting( 'bs_accounts_info_group', 'smtp_username' );
+  register_setting( 'bs_accounts_info_group', 'smtp_password' );
   register_setting( 'bs_accounts_info_group', 'banner_url_en' );
   register_setting( 'bs_accounts_info_group', 'banner_vertical_en' );
   register_setting( 'bs_accounts_info_group', 'banner_horizontal_en' );
@@ -73,43 +77,6 @@ function bs_accounts_options() {
 				name="donate_link"
 				value="<?php echo esc_attr( get_option('donate_link') ); ?>"
 			/>
-    </p>
-
-
-    <p>
-      <label for=""><b>InfusionSoft key</b></label>
-      <br>
-      <input
-        style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
-        type="text"
-        name="infusionsoft_key"
-        placeholder="Api Key"
-        value="<?php echo get_option('infusionsoft_key') ?>"
-      >
-    </p>
-
-     <p>
-      <label for=""><b>InfusionSoft subdomain</b></label>
-      <br>
-      <input
-        style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
-        type="text"
-        name="infusionsoft_subdomain"
-        placeholder="Subdomain"
-        value="<?php echo get_option('infusionsoft_subdomain') ?>"
-      >
-    </p>
-
-    <p>
-      <label for=""><b>InfusionSoft tags</b></label>
-      <br>
-      <input
-        style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
-        type="text"
-        name="infusionsoft_tags"
-        placeholder="tag1,tag2,tag3"
-        value="<?php echo get_option('infusionsoft_tags') ?>"
-      >
     </p>
 
     <p>
@@ -211,14 +178,65 @@ function bs_accounts_options() {
       <p>
         <label for=""> <b>Google Tag Manager ID</b>  </label>
          <br>
-      <input
-        style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
-        type="text"
-        name="gta_id"
-        placeholder="ID"
-        value="<?php echo get_option('gta_id') ?>"
+      	<input
+	        style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
+	        type="text"
+	        name="gta_id"
+	        placeholder="ID"
+	        value="<?php echo get_option('gta_id') ?>"
         >
       </p>
+
+
+			<p>
+				<label for=""> <b>SMTP URL</b>  </label>
+				 <br>
+				<input
+					style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
+					type="text"
+					name="smtp_url"
+					placeholder="SMTP URL"
+					value="<?php echo get_option('smtp_url') ?>"
+				>
+			</p>
+
+			<p>
+				<label for=""> <b>SMTP PORT</b>  </label>
+				 <br>
+				<input
+					style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
+					type="text"
+					name="smtp_port"
+					placeholder="SMTP PORT"
+					value="<?php echo get_option('smtp_port') ?>"
+				>
+			</p>
+
+			<p>
+				<label for=""> <b>SMTP USERNAME</b></label>
+				 <br>
+				<input
+					style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
+					type="text"
+					name="smtp_port"
+					placeholder="SMTP USERNAME"
+					value="<?php echo get_option('smtp_username') ?>"
+				>
+			</p>
+
+			<p>
+				<label for=""> <b>SMTP PASSWORD</b></label>
+				 <br>
+				<input
+					style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
+					type="text"
+					name="smtp_port"
+					placeholder="SMTP PASSWORD"
+					value="<?php echo get_option('smtp_password') ?>"
+				>
+			</p>
+
+
       <p>
         <label for="">
           <b>It's necessary update this database once each month</b>
