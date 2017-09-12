@@ -2,14 +2,17 @@ const setMenuMobile = function() {
   const $menu = $('.menu--mobile');
   const currentLang = $('.menu--mobile .current-lang > a');
   $('.menu--mobile .current-lang').addClass('dropdown');
-  $('.menu--mobile .current-lang').append('<div class="dropdown-content"></div>');
+  $('.menu--mobile .current-lang').append('<ul class="menu--mobile__langs"></ul>');
 
   const langs = $('.menu--mobile .lang-item').not($('.current-lang'));
 
   langs.each(function() {
-    $menu.find('.dropdown-content').append($(this).html());
+    $menu.find('.menu--mobile__langs').append($(this).html());
     $(this).remove();
   });
+
+  const newText = `${currentLang.text()} <i class="ion-chevron-down"></i>`;
+  currentLang.html(newText);
 
   $(".open-menu").on("click", () => {
     if ($(".menu--mobile").hasClass("menu--mobile--open")) {

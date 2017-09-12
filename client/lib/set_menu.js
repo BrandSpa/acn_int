@@ -1,8 +1,8 @@
 const setMenu = function() {
   const $menu = $('.menu');
   const currentLang = $('.menu .current-lang > a');
-  $('.menu .current-lang').addClass('dropdown');
-  $('.menu .current-lang').append('<div class="dropdown-content"></div>');
+  $menu.find('.current-lang').addClass('dropdown');
+  $menu.find('.current-lang').append('<div class="dropdown-content"></div>');
 
   const langs = $('.menu .lang-item').not($('.current-lang'));
 
@@ -11,7 +11,7 @@ const setMenu = function() {
     $(this).remove();
   });
 
-  $('.menu').addClass('menu--show');
+  $menu.addClass('menu--show');
 
   currentLang.on('click', e => {
     e.preventDefault();
