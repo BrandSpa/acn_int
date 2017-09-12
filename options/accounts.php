@@ -187,7 +187,6 @@ function bs_accounts_options() {
         >
       </p>
 
-
 			<p>
 				<label for=""> <b>SMTP URL</b>  </label>
 				 <br>
@@ -195,7 +194,7 @@ function bs_accounts_options() {
 					style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
 					type="text"
 					name="smtp_url"
-					placeholder="SMTP URL"
+					placeholder="smtp url"
 					value="<?php echo get_option('smtp_url') ?>"
 				>
 			</p>
@@ -207,7 +206,7 @@ function bs_accounts_options() {
 					style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
 					type="text"
 					name="smtp_port"
-					placeholder="SMTP PORT"
+					placeholder="smtp port"
 					value="<?php echo get_option('smtp_port') ?>"
 				>
 			</p>
@@ -218,8 +217,8 @@ function bs_accounts_options() {
 				<input
 					style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
 					type="text"
-					name="smtp_port"
-					placeholder="SMTP USERNAME"
+					name="smtp_username"
+					placeholder="smtp username"
 					value="<?php echo get_option('smtp_username') ?>"
 				>
 			</p>
@@ -230,8 +229,8 @@ function bs_accounts_options() {
 				<input
 					style="background: rgba(255,255,255,.4); width: 60%; height: 35px"
 					type="text"
-					name="smtp_port"
-					placeholder="SMTP PASSWORD"
+					name="smtp_password"
+					placeholder="smtp password"
 					value="<?php echo get_option('smtp_password') ?>"
 				>
 			</p>
