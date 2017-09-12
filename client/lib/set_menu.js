@@ -3,7 +3,13 @@ const setMenu = function() {
   const currentLang = $('.menu .current-lang > a');
   $('.menu .current-lang').addClass('dropdown');
   $('.menu .current-lang').append('<div class="dropdown-content"></div>');
-  let langs = $('.menu .lang-item').not($('.current-lang'));
+
+  const langs = $('.menu .lang-item').not($('.current-lang'));
+
+  langs.each(function() {
+    $menu.find('.dropdown-content').append($(this).html());
+    $(this).remove();
+  });
 
   $('.menu').addClass('menu--show');
 
@@ -13,15 +19,10 @@ const setMenu = function() {
 
     if ($dropdown.hasClass('dropdown-content--show')) {
       $dropdown.removeClass('dropdown-content--show');
-      return;
+    } else {
+      $dropdown.addClass('dropdown-content--show');
     }
 
-    $dropdown.addClass('dropdown-content--show');
-  });
-
-  langs.each(function() {
-    $menu.find('.dropdown-content').append($(this).html());
-    $(this).remove();
   });
 
   const newText = `${currentLang.text()} <i class="ion-chevron-down"></i>`;
