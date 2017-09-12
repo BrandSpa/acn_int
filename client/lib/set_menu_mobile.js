@@ -34,7 +34,7 @@ const setMenuMobile = function() {
       $(this).html(itemWithIcon);
   });
 
-  $mainLinks.on('click', function(e) {
+  $(document).on('click', '.menu--mobile .menu-item-has-children > a', function(e) {
     e.preventDefault();
 
     const $submenu = $(this).find('.sub-menu');
