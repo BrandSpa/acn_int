@@ -9,7 +9,7 @@ function send_contact_us() {
     'password' => get_option('smtp_password')
   ];
 
-  $res = contact_us($data, $smtp);
+  // $res = contact_us($data, $smtp);
   header('Content-type: application/json');
   echo $smtp;
   die();
