@@ -7,7 +7,7 @@
         "nielse63/phpimagecache": "^1.0",
         "mobiledetect/mobiledetectlib": "^2.8",
         "convertloop/convertloop-php": "^0.1.0",
-        "swiftmailer/swiftmailer": "^5.4"
+        "phpmailer/phpmailer": "^6.0"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.8",

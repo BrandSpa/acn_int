@@ -1,33 +1,37 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 require $dir_base . 'vendor/autoload.php';
 
 function contact_us($data = [], $smtp) {
 
-  $transport = (new Swift_SmtpTransport($smtp['url'], $smtp['port']))
-    ->setUsername($smtp['username'])
-    ->setPassword($smtp['password']);
+  $mail = new PHPMailer(true);
+  try {
+    //Server settings
+    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = $smtp['url'];  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = $smtp['username'];                 // SMTP username
+    $mail->Password = $smtp['password'];                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
 
-  $mailer = new Swift_Mailer($transport);
+    //Recipients
+    $mail->setFrom('noreplay@acninternational.org');
+    $mail->addAddress('alejandro@brandspa.com');
+    $mail->addReplyTo('noreplay@acninternational.org', 'ACN');
 
-  ob_start();
-?>
-  <html>
-    <body>
-      <p><?php echo $data['name'] . ' ' . $data['lastname'] ?></p>
-      <p><?php echo $data['email'] ?></p>
-      <p><?php echo $data['message'] ?></p>
-    </body>
-  </html>
-<?php
-  $html = ob_get_clean();
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-  // Create a message
-  $message = (new Swift_Message('New contact us'))
-    ->setFrom(['noreply@acninternational.org' => 'ACN Contact'])
-    ->setTo(['alejandro@brandspa.com' => 'Alejandro'])
-    ->setBody($html, 'text/html');
-
-  // Send the message
-  return $mailer->send($message);
+    $mail->send();
+    echo 'Message has been sent';
+  } catch (Exception $e) {
+    return 'Mailer Error: ' . $mail->ErrorInfo;
+  }
 }
