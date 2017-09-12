@@ -126,6 +126,17 @@
 			}
 		}
 
+		.menu--mobile__langs {
+			padding: 0;
+			max-height: 0;
+			visibility: hidden;
+			transition: all .3s ease-in-out;
+ 			&--open {
+				max-height: 1000px;
+				visibility: visible;
+			}
+		}
+
 		.nav__donate {
 			position: absolute;
 			bottom: 20px;

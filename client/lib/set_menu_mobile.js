@@ -11,8 +11,20 @@ const setMenuMobile = function() {
     $(this).remove();
   });
 
-  const newText = `${currentLang.text()} <i class="ion-chevron-down"></i>`;
+  const newText = `${currentLang.text()}  <i class="ion-chevron-right"></i>`;
   currentLang.html(newText);
+
+  currentLang.on('click', e => {
+    e.preventDefault();
+    const $dropdown = $menu.find('.dropdown-content');
+
+    if ($dropdown.hasClass('menu--mobile__langs--open')) {
+      $dropdown.removeClass('menu--mobile__langs--open');
+    } else {
+      $dropdown.addClass('menu--mobile__langs--open');
+    }
+
+  });
 
   $(".open-menu").on("click", () => {
     if ($(".menu--mobile").hasClass("menu--mobile--open")) {
