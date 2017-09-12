@@ -871,7 +871,8 @@ button, .btn {
   @media (max-width: 767px) {
     .logo {
       margin: 20px 0 0 20px;
-      float: left; } }
+      float: left;
+      max-width: 100px; } }
 
 .open-menu {
   display: none; }
