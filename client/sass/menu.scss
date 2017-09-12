@@ -157,11 +157,14 @@
 		}
 
 		.close-menu {
-			float: none;
-			color: #fff;
+			color: #fff !important;
 			font-size: 30px;
+			
+			i {
+				float: none;
+			}
 		}
-		
+
 	}
 
 	@media #{$s} {

@@ -941,9 +941,10 @@ button, .btn {
         padding: 10px 0;
         font-weight: 600; }
     .menu--mobile .close-menu {
-      float: none;
-      color: #fff;
+      color: #fff !important;
       font-size: 30px; }
+      .menu--mobile .close-menu i {
+        float: none; }
   @media (max-width: 767px) {
     .menu {
       display: none; } }
