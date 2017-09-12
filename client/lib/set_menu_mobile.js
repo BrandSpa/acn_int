@@ -18,7 +18,6 @@ const setMenuMobile = function() {
   currentLang.on('click', e => {
     e.preventDefault();
 
-
     if ($dropdown.hasClass('menu--mobile__langs--open')) {
       $dropdown.removeClass('menu--mobile__langs--open');
     } else {
@@ -34,8 +33,9 @@ const setMenuMobile = function() {
       $(this).html(itemWithIcon);
   });
 
-  $mainLinks.on('click', function(e) {
+  $('.menu--mobile .menu-item-has-children').on('click', function(e) {
     e.preventDefault();
+    e.stopPropagation();
     console.log(e.target, $(this));
     const $submenu = $(this).find('.sub-menu');
     console.log($submenu);
