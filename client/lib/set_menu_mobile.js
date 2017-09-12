@@ -38,6 +38,7 @@ const setMenuMobile = function() {
     e.preventDefault();
     console.log(e);
     const $submenu = $(this).find('.sub-menu');
+    console.log($submenu);
     $submenu.toggleClass( "sub-menu--open" );
   });
 
