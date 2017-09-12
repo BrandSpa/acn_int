@@ -38,7 +38,7 @@ class ContactUsForm extends Component {
   handleSubmit = e => {
     if(e) e.preventDefault();
     if(this.validate().every(item => item == true)) {
-      const data = qs.stringify(this.state);
+      const data = qs.stringify({action: 'send_contact_us', data: this.state});
       request.post('/wp-admin/admin-ajax.php', data)
       .then(res => console.log(res.data));
     }
