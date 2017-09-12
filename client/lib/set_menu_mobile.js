@@ -27,13 +27,14 @@ const setMenuMobile = function() {
 
   });
 
+  const $mainLinks = $('.menu--mobile .menu-item-has-children > a');
 
-  $('.menu--mobile .menu-item-has-children > a').each(function() {
+  $mainLinks.each(function() {
       const itemWithIcon = `${$(this).text()}  <i class="ion-chevron-right"></i>`;
       $(this).html(itemWithIcon);
   });
 
-  $('.menu-item-has-children > a').on('click', function(e) {
+  $mainLinks.on('click', function(e) {
     e.preventDefault();
 
     const $submenu = $(this).find('.sub-menu');
