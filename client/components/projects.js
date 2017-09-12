@@ -106,10 +106,12 @@ class Projects extends React.Component {
 
           .projects__content__left h4 {
             color: #fff;
+            margin-bottom: 20px;
           }
 
           .projects__content__left__text {
             color: #fff;
+            margin-bottom: 20px;
           }
 
           .projects__content__right {
