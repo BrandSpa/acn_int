@@ -12,13 +12,6 @@ export default () => {
       e.preventDefault();
       const $el = $(this);
 
-      const txt = $el.text();
-      
-      if(txt) {
-        $el.text(`${txt}...`);
-      }
-
-
       eventGoogleAnalytics({category: "CLICK", action: "DONATE", label: "CLICKDONATE_EN"})
         .then(() => {
           return eventConvertloopAsync({name: "Donate Click"});
