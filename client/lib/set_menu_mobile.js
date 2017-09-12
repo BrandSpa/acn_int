@@ -35,8 +35,9 @@ const setMenuMobile = function() {
     $(this).html(itemWithIcon);
   });
 
-  $('.menu--mobile .menu-item-has-children > a').on('click', function(e) {
+  $mainLinks.on('click', function(e) {
     e.preventDefault();
+    $mainLinks.find('.sub-menu').removeClass('sub-menu--open');
     const $submenu = $(this).parent().find('.sub-menu');
     if($submenu.hasClass( "sub-menu--open" )) {
       $(this).find('i').attr('class', 'ion-chevron-right');
