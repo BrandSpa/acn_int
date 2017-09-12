@@ -23,7 +23,7 @@ function contact_us($data = [], $smtp) {
 
   // Create a message
   $message = (new Swift_Message('New contact us'))
-    ->setFrom(['contact@acninternational.org' => 'ACN Contact'])
+    ->setFrom(['noreply@acninternational.org' => 'ACN Contact'])
     ->setTo(['alejandro@brandspa.com' => 'Alejandro'])
     ->setBody($html, 'text/html');
 
