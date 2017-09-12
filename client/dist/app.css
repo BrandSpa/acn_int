@@ -913,14 +913,14 @@ button, .btn {
     .menu--mobile li {
       list-style: none;
       width: 100%;
-      display: block; }
+      display: block;
+      border-bottom: 1px solid #979797; }
       .menu--mobile li a {
         display: block;
         text-align: left;
         padding: 10px 20px 10px 40px;
         color: #fff;
         font-size: 1.5em;
-        border-bottom: 1px solid #979797;
         font-weight: 600; }
         .menu--mobile li a i {
           float: right; }
@@ -932,6 +932,8 @@ button, .btn {
       .menu--mobile .sub-menu--open {
         max-height: 1000px;
         visibility: visible; }
+      .menu--mobile .sub-menu li {
+        border: none; }
       .menu--mobile .sub-menu a {
         border: none;
         font-weight: 200;

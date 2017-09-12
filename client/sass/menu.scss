@@ -116,6 +116,7 @@
 			list-style: none;
 			width: 100%;
 			display: block;
+			border-bottom: 1px solid #979797;
 
 			a {
 				display: block;
@@ -123,7 +124,7 @@
 				padding: 10px 20px 10px 40px;
 				color: #fff;
 				font-size: 1.5em;
-				border-bottom: 1px solid #979797;
+
 				font-weight: 600;
 
 				i {
@@ -140,6 +141,10 @@
  			&--open {
 				max-height: 1000px;
 				visibility: visible;
+			}
+
+			li {
+				border: none;
 			}
 
 			a {
