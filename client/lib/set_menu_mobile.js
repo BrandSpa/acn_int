@@ -27,6 +27,12 @@ const setMenuMobile = function() {
 
   });
 
+  $('.menu-item-has-children').on('click', function(e) {
+    e.preventDefault();
+    $submenu = $(this).find('.sub-menu');
+    $submenu.toggleClass( "sub-menu--open" );
+  });
+
   $(".open-menu").on("click", () => {
     if ($(".menu--mobile").hasClass("menu--mobile--open")) {
       $(document.body).removeClass("menu-open");
