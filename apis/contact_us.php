@@ -5,7 +5,30 @@ use PHPMailer\PHPMailer\Exception;
 require $dir_base . 'vendor/autoload.php';
 
 function contact_us($data = [], $smtp) {
+  $name = $data['name'] . ' ' $data['lastname'];
+  $content = [
+    'name' => $name,
+    'email' => $data['email'],
+    'message' => $data['message']
+  ];
 
+  $postarr = [
+    'post_title' => $data['email'],
+    'post_name' => $name,
+    'post_content' => json_encode($content),
+    'post_type' => 'contact'
+  ];
+
+  $result = wp_insert_post($postarr);
+
+  if($result) {
+    return sendMail($data, $smtp);
+  }
+
+  return 'Insert post error';
+}
+
+function sendMail($data = [], $smtp) {
   $mail = new PHPMailer(true);
 
   try {
