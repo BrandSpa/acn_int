@@ -17,7 +17,7 @@ function contact_us($data = [], $smtp) {
     'post_title' => $data['email'],
     'post_name' => $name,
     'post_content' => json_encode($content),
-    'post_type' => 'contact'
+    'post_type' => 'contact_us'
   ];
 
   $result = wp_insert_post($postarr);

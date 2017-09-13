@@ -22,7 +22,7 @@ function bs_contacts_options() {
 
   $query = new Wp_Query(array(
 		'name' => $postname,
-    'post_type' => 'contact',
+    'post_type' => 'contact_us',
     'paged' => $paged,
 		'posts_per_page' => $perpage
   ));
