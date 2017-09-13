@@ -53,7 +53,7 @@ class ContactUsForm extends Component {
   render() {
     const { name, lastname, email, message, errors } = this.state;
     const { placeholders, messages, btnText } = this.props;
-    if(this.state.complete) return <div><h4>{messages.thanks}</h4></div>;
+    if(this.state.complete) return <div><h4 style={{color: '#3c515f'}}>{messages.thanks}</h4></div>;
 
     return (
      <form action="#" onSubmit={this.handleSubmit}>
