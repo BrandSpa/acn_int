@@ -22,9 +22,11 @@ function contact_us($data = [], $smtp) {
 
   $result = wp_insert_post($postarr);
 
-  if($result) {
-    return sendMail($data, $smtp);
-  }
+  return $result;
+
+  // if($result) {
+  //   return sendMail($data, $smtp);
+  // }
 
   return 'Insert post error';
 }
