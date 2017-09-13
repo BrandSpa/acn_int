@@ -9,7 +9,7 @@ function bs_contact_us_form_sc($atts) {
     'name_validation' => gett('Name required'),
     'lastname_validation' => gett('Lastname required'),
     'email_validation' => gett('Email invalid'),
-    'message_validation' => 'Message required'),
+    'message_validation' => gett('Message required'),
     'message_thanks' => gett('Thank you very much for joining ACN'),
     'btn_text' => gett('Send')
   ], $atts);
