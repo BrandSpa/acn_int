@@ -42,7 +42,8 @@ class ContactUsForm extends Component {
       const data = qs.stringify({action: 'send_contact_us', data: this.state});
       request.post('/wp-admin/admin-ajax.php', data)
       .then(res => {
-        if(Number.isInteger(res)) {
+        console.log(Number.isInteger(res.data));
+        if(Number.isInteger(res.data)) {
           this.setState({ complete: true });
         }
       });
