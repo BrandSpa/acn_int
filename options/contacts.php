@@ -52,7 +52,7 @@ function bs_contacts_options() {
 					<td>
 						<?php echo $post->post_content; ?>
 					</td>
-					<td><?php var_dump(str_replace('\/', '', $post->post_content)) ?></td>
+					<td><?php var_dump(str_replace("\\", '', $post->post_content)) ?></td>
         </tr>
       <?php endforeach; ?>
     </tbody>
