@@ -44,7 +44,7 @@ function bs_contacts_options() {
     </thead>
     <tbody>
       <?php foreach($posts as $post): ?>
-        <?php $contact = json_decode(str_replace('\/', '', $post->post_content)); ?>
+        <?php $contact = json_decode(str_replace("\\", '', $post->post_content)); ?>
         <tr>
           <td><?php echo $contact->email; ?></td>
           <td><?php echo $contact->name; ?></td>
