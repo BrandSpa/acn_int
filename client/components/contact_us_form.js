@@ -110,7 +110,12 @@ class ContactUsForm extends Component {
            width: 100%;
            background: transparent;
            padding: 6px 12px;
-           font-size: .8em
+           font-size: .8em;
+           border: 1px solid #6A7C82;
+         }
+
+         textarea:focus {
+          outline: none;
          }
        `}</style>
      </form>
