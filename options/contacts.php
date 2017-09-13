@@ -49,6 +49,9 @@ function bs_contacts_options() {
           <td><?php echo $contact->email; ?></td>
           <td><?php echo $contact->name; ?></td>
           <td><?php echo $contact->message; ?></td>
+					<td>
+						<?php echo $post->post_content; ?>
+					</td>
 					<td><?php var_dump(json_decode($post->post_content)) ?></td>
         </tr>
       <?php endforeach; ?>
