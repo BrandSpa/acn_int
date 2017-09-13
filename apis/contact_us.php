@@ -5,25 +5,41 @@ use PHPMailer\PHPMailer\Exception;
 require $dir_base . 'vendor/autoload.php';
 
 function contact_us($data = [], $smtp) {
-  $name = $data['name'] . ' ' . $data['lastname'];
+  $gump = new GUMP();
 
-  $content = [
-    'name' => $name,
-    'email' => $data['email'],
-    'message' => $data['message']
-  ];
+  $rules = array(
+		'name'  => 'required',
+		'email' => 'required|valid_email',
+		'message' => 'required'
+	);
 
-  $postarr = [
-    'post_title' => $data['email'],
-    'post_name' => $name,
-    'post_content' => json_encode($content),
-    'post_type' => 'contact_us'
-  ];
+	$data = $gump->sanitize($data);
 
-  $result = wp_insert_post($postarr);
+  $gump->validation_rules($rules);
+	$isValid = $gump->run($data);
 
-  return $result;
+	if($isValid === true) {
+    $name = $data['name'] . ' ' . $data['lastname'];
 
+    $content = [
+      'name' => $name,
+      'email' => $data['email'],
+      'message' => $data['message']
+    ];
+
+    $postarr = [
+      'post_title' => $data['email'],
+      'post_name' => $name,
+      'post_content' => json_encode($content),
+      'post_type' => 'contact_us'
+    ];
+
+    $result = wp_insert_post($postarr);
+
+    return $result;
+  } else {
+    return $gump->get_errors_array();
+  }
   // if($result) {
   //   return sendMail($data, $smtp);
   // }
