@@ -10,7 +10,8 @@ class ContactUsForm extends Component {
     lastname: '',
     email: '',
     message: '',
-    errors: {}
+    errors: {},
+    complete: false
   }
 
   handleChange = e => {
@@ -40,13 +41,18 @@ class ContactUsForm extends Component {
     if(this.validate().every(item => item == true)) {
       const data = qs.stringify({action: 'send_contact_us', data: this.state});
       request.post('/wp-admin/admin-ajax.php', data)
-      .then(res => console.log(res.data));
+      .then(res => {
+        if(Number.isInteger(res)) {
+          this.setState({ complete: true });
+        }
+      });
     }
   }
 
   render() {
     const { name, lastname, email, message, errors } = this.state;
     const { placeholders, messages, btnText } = this.props;
+    if(this.state.complete) return <div>{'message'}</div>;
 
     return (
      <form action="#" onSubmit={this.handleSubmit}>
