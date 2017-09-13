@@ -18,7 +18,9 @@ function contact_us($data = [], $smtp) {
   $gump->validation_rules($rules);
 	$isValid = $gump->run($data);
 
-	if($isValid === true) {
+	if($isValid === false) {
+    return $gump->get_errors_array();
+  } else {
     $name = $data['name'] . ' ' . $data['lastname'];
 
     $content = [
@@ -37,8 +39,6 @@ function contact_us($data = [], $smtp) {
     $result = wp_insert_post($postarr);
 
     return $result;
-  } else {
-    return $gump->get_errors_array();
   }
   // if($result) {
   //   return sendMail($data, $smtp);
