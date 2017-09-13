@@ -24,7 +24,8 @@ $general = [
 	'¿Quiéres que el mundo conozca la realidad de la Iglesia que Sufre en el Mundo?',
 	'Comparte este artículo',
 	'stories',
-	'The last 3 digits displayed on the back of your credit card.'
+	'The last 3 digits displayed on the back of your credit card.',
+	'Thank you very much for joining ACN'
 ];
 
 foreach($general as $key => $trans) {

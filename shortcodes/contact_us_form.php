@@ -2,15 +2,16 @@
 
 function bs_contact_us_form_sc($atts) {
   $at = shortcode_atts([
-    'name_placeholder' => 'Name',
-    'lastname_placeholder' => 'Lastname',
-    'email_placeholder' => 'Email',
-    'message_placeholder' => 'Message',
-    'name_validation' => 'Name required',
-    'lastname_validation' => 'Lastname required',
-    'email_validation' => 'Email invalid',
-    'message_validation' => 'Message required',
-    'btn_text' => 'Send'
+    'name_placeholder' => gett('Name'),
+    'lastname_placeholder' => gett('Lastname'),
+    'email_placeholder' => gett('Email'),
+    'message_placeholder' => gett('Message'),
+    'name_validation' => gett('Name required'),
+    'lastname_validation' => gett('Lastname required'),
+    'email_validation' => gett('Email invalid'),
+    'message_validation' => 'Message required'),
+    'message_thanks' => gett('Thank you very much for joining ACN'),
+    'btn_text' => gett('Send')
   ], $atts);
 
   $props = [
@@ -25,6 +26,7 @@ function bs_contact_us_form_sc($atts) {
       'lastname' => $at['lastname_validation'],
       'email' => $at['email_validation'],
       'message' => $at['message_validation'],
+      'thanks' => $at['message_thanks']
     ],
     'btnText' => $at['btn_text']
   ];
