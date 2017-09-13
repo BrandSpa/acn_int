@@ -15,7 +15,7 @@ function bs_admin_contacts_options_menu() {
   );
 }
 
-function bs_events_options() {
+function bs_contacts_options() {
   $paged = isset($_GET['paged']) ? $_GET['paged'] : 0;
   $perpage = isset($_GET['perpage']) ? $_GET['perpage'] : 25;
   $postname = isset($_GET['postname']) ? $_GET['postname'] : '';
