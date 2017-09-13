@@ -5,7 +5,8 @@ use PHPMailer\PHPMailer\Exception;
 require $dir_base . 'vendor/autoload.php';
 
 function contact_us($data = [], $smtp) {
-  $name = $data['name'] . ' ' $data['lastname'];
+  $name = $data['name'] . ' ' . $data['lastname'];
+
   $content = [
     'name' => $name,
     'email' => $data['email'],
