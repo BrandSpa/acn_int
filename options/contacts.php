@@ -38,14 +38,17 @@ function bs_contacts_options() {
     <thead>
       <tr>
         <th>Email</th>
-        <th>Content</th>
+        <th>Name</th>
+        <th>Message</th>
       </tr>
     </thead>
     <tbody>
       <?php foreach($posts as $post): ?>
+        <?php $contact = json_decode($post->post_content); ?>
         <tr>
-          <td><?php echo  $post->post_title ?></td>
-          <td><?php echo $post->post_content ?></td>
+          <td><?php echo $contact->email; ?></td>
+          <td><?php echo $contact->name; ?></td>
+          <td><?php echo $contact->message; ?></td>
         </tr>
       <?php endforeach; ?>
     </tbody>
