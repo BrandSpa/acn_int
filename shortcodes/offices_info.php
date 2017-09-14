@@ -31,7 +31,7 @@ foreach(getOfficesCountries() as $country):
   <h6><?php echo get_option('contact_info_address_' . $country) ?></h6>
   <h6><?php echo get_option('contact_info_email_' . $country) ?></h6>
   <h6><?php echo get_option('contact_info_phone_' . $country) ?></h6>
-  <a href="<?php echo get_option('url_' . $country)  ?>"><?php echo get_option('url_' . $country)  ?></a>
+  <a target="new" href="<?php echo get_option('url_' . $country)  ?>"><?php echo get_option('url_' . $country)  ?></a>
   <ul class="bs-contact-info__social">
     <?php if( !empty(get_option('contact_facebook_' . $country)) ): ?>
     <li>
@@ -42,21 +42,21 @@ foreach(getOfficesCountries() as $country):
     <?php endif; ?>
     <?php if( !empty(get_option('contact_twitter_' . $country)) ): ?>
     <li>
-      <a href="<?php echo get_option('contact_twitter_' . $country) ?>">
+      <a href="<?php echo get_option('contact_twitter_' . $country) ?>" target="new">
         <i class="ion-social-twitter"></i>
       </a>
     </li>
     <?php endif; ?>
     <?php if( !empty(get_option('contact_youtube_' . $country)) ): ?>
     <li>
-      <a href="<?php echo get_option('contact_youtube_' . $country) ?>">
+      <a href="<?php echo get_option('contact_youtube_' . $country) ?>" target="new">
         <i class="ion-social-youtube"></i>
       </a>
     </li>
     <?php endif; ?>
     <?php if( !empty(get_option('contact_instagram_' . $country)) ): ?>
     <li>
-      <a href="<?php echo get_option('contact_instagram_' . $country) ?>">
+      <a href="<?php echo get_option('contact_instagram_' . $country) ?>" target="new">
         <i class="ion-social-instagram"></i>
       </a>
     </li>
