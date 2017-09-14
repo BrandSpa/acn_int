@@ -40,6 +40,7 @@ function bs_add_country_info_settings() {
     register_setting( 'bs_country_info_group', 'contact_youtube_' . $value );
     register_setting( 'bs_country_info_group', 'convertloop_api_' . $value );
     register_setting( 'bs_country_info_group', 'convertloop_app_' . $value );
+		register_setting( 'bs_country_info_group', 'no_show_' . $value );
   }
 
 }
