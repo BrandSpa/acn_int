@@ -18,7 +18,12 @@ foreach(getOfficesCountries() as $country):
   $country = space_to_lodash($country);
 ?>
 <div class="col-3-l">
-  <h6>ACN <?php echo $country !== 'default' ? $country : '' ?></h6>
+  <div class="accordion-contact">
+  <div class="accordion-contact__title">
+    <?php echo $country !== 'default' ? $country : '' ?>
+  </div>
+
+  <div class="accordion-contact__content">
   <h6><?php echo get_option('name_' . $country) ?></h6>
   <h6><?php echo get_option('contact_info_address_' . $country) ?></h6>
   <h6><?php echo get_option('contact_info_email_' . $country) ?></h6>
@@ -53,7 +58,21 @@ foreach(getOfficesCountries() as $country):
     </li>
     <?php endif; ?>
   </ul>
+  </div>
 </div>
+</div>
+<style>
+  .accordion-contact {
+    width: 100%;
+    background: #f8f8f8;
+  }
+
+  .accordion-contact__content {
+    max-height: 0;
+    visibility: hidden;
+  }
+
+</style>
 <?php
   endforeach;
   return ob_get_clean();
