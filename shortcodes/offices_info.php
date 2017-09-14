@@ -100,7 +100,7 @@ foreach(getOfficesCountries() as $country):
     var $ = jQuery;
     $('.accordion-contact__title').on('click', function(e) {
       e.preventDefault();
-      $(this).parent().find('.accordion-contact__content').removeClass('accordion-contact__content--open');
+      $('.accordion-contact').removeClass('accordion-contact__content--open');
       $(this).parent().find('.accordion-contact__content').addClass('accordion-contact__content--open');
     })
   });
