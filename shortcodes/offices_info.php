@@ -16,7 +16,9 @@ function bs_offices_info_sc($atts, $content = null) {
 
 foreach(getOfficesCountries() as $country):
   $country = space_to_lodash($country);
+  if($country !== 'default'):
 ?>
+
 <div class="col-3-l">
   <div class="accordion-contact">
   <div class="accordion-contact__title">
@@ -74,6 +76,7 @@ foreach(getOfficesCountries() as $country):
 
 </style>
 <?php
+  endif;
   endforeach;
   return ob_get_clean();
 }
