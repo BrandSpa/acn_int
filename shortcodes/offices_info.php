@@ -13,7 +13,9 @@ function bs_offices_info_sc($atts, $content = null) {
 	$props = [];
 
   ob_start();
-
+?>
+<div class="bs-offices-info">
+<?php
 foreach(getOfficesCountries() as $country):
   $countryName = $country;
   $country = space_to_lodash($country);
@@ -71,7 +73,13 @@ foreach(getOfficesCountries() as $country):
   endforeach;
 
 ?>
+</div>
 <style>
+	.bs-offices-info {
+		display: flex;
+	  flex-wrap: wrap;
+	}
+
   .accordion-contact {
     width: 100%;
     background: #f8f8f8;
