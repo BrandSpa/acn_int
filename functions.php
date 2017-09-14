@@ -111,6 +111,7 @@ require_once('shortcodes/vc/posts.php');
 require_once('shortcodes/vc/projects_about.php');
 require_once('shortcodes/vc/modal_gallery.php');
 require_once('shortcodes/vc/counter.php');
+require_once('shortcodes/vc/offices_info.php');
 
 //FULLPAGE
 require_once('shortcodes/fullpage/fullpage.php');
