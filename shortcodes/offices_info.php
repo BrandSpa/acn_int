@@ -81,6 +81,7 @@ foreach(getOfficesCountries() as $country):
   .accordion-contact__title {
     display: block;
     padding: 20px;
+		cursor: pointer;
   }
 
   .accordion-contact__content {
