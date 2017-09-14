@@ -195,7 +195,7 @@ function logos_settings_page() {
 
 				<script>
 					$('.no_show_checkbox').on('click', function() {
-						$(this).val(1);
+						$(this).attr('value', 1);
 					});
 				</script>
   </form>
