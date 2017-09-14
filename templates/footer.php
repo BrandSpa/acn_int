@@ -14,7 +14,8 @@ include_once str_replace('templates', '', __DIR__) . '/lib/offices_countries.php
 <?php
 $offices = '';
 foreach(getOfficesCountries() as $office) {
-	if($office !== 'default') {
+	$officeDash = space_to_lodash($country);
+	if($office !== 'default' && get_option('no_show_' . $officeDash ) !== 1) {
 		$offices .= '<li><a href="'. get_option('url_' . space_to_lodash($office)) .'">'.$office.'</a></li>';
 	}
 };
