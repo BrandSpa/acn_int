@@ -83,14 +83,14 @@ foreach(getOfficesCountries() as $country):
   }
 
   .accordion-contact__content {
-    max-height: 0;
+    height: 0;
     visibility: hidden;
     transition: max-height .3s;
   }
 
   .accordion-contact__content--open {
     padding: 20px;
-    max-height: 500px;
+    height: auto;
     visibility: visible;
   }
 
