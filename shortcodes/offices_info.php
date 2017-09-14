@@ -21,9 +21,9 @@ foreach(getOfficesCountries() as $country):
 
 <div class="col-3-l">
   <div class="accordion-contact">
-  <div class="accordion-contact__title">
-    <?php echo $country !== 'default' ? $country : '' ?>
-  </div>
+  <a class="accordion-contact__title">
+    <h4><i class="ion-chevron-down"></i> <?php echo $country !== 'default' ? $country : '' ?></h4>
+  </a>
 
   <div class="accordion-contact__content">
   <h6><?php echo get_option('name_' . $country) ?></h6>
@@ -63,21 +63,46 @@ foreach(getOfficesCountries() as $country):
   </div>
 </div>
 </div>
+
+<?php
+  endif;
+  endforeach;
+
+?>
 <style>
   .accordion-contact {
     width: 100%;
     background: #f8f8f8;
   }
 
+  .accordion-contact__title {
+    padding: 20px;
+  }
+
   .accordion-contact__content {
+    padding: 20px;
     max-height: 0;
     visibility: hidden;
+    transition: all .3s ease;
+  }
+
+  .accordion-contact__content--open {
+    max-height: 500px;
+    visibility: visible;
   }
 
 </style>
+<script>
+  onLoad(function() {
+    var $ = jQuery;
+    $('.accordion-contact__title').on('click', function(e) {
+      e.preventDefault();
+      $(this).parent().find('.accordion-contact__title').addClass('accordion-contact__title--open');
+    })
+  });
+</script>
 <?php
-  endif;
-  endforeach;
+
   return ob_get_clean();
 }
 
