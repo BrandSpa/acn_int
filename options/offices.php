@@ -182,6 +182,9 @@ function logos_settings_page() {
 								name="convertloop_api_<?php echo $value ?>"
 								value="<?php echo esc_attr( get_option('convertloop_api_' . $value ) ); ?>"
 							/>
+							<p></p>
+							<label for="">No show</label>
+							<input type="checkbox" name="no_show_<?php echo $value ?>" value="<?php echo esc_attr( get_option('no_show_' . $value ) );  ?>" />
 							<?php submit_button(); ?>
 
           </section>
