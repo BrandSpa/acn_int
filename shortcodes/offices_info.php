@@ -15,6 +15,7 @@ function bs_offices_info_sc($atts, $content = null) {
   ob_start();
 
 foreach(getOfficesCountries() as $country):
+  $countryName = $country;
   $country = space_to_lodash($country);
   if($country !== 'default'):
 ?>
@@ -22,7 +23,7 @@ foreach(getOfficesCountries() as $country):
 <div class="col-3-l">
   <div class="accordion-contact">
   <a class="accordion-contact__title">
-    <h4><i class="ion-chevron-down"></i> <?php echo $country !== 'default' ? $country : '' ?></h4>
+    <h4><i class="ion-chevron-down"></i> <?php echo $countryName ?></h4>
   </a>
 
   <div class="accordion-contact__content">
