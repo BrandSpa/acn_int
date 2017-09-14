@@ -195,7 +195,12 @@ function logos_settings_page() {
 
 				<script>
 					jQuery('.no_show_checkbox').on('click', function() {
-						jQuery(this).attr('value', 1);
+						if(jQuery(this.is(':checked')) {
+							jQuery(this).attr('value', 1);
+						} else {
+							jQuery(this).attr('value', 0);
+						}
+
 					});
 				</script>
   </form>
