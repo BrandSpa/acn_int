@@ -36,6 +36,7 @@ function bs_add_country_info_settings() {
     register_setting( 'bs_country_info_group', 'contact_info_phone_' . $value );
     register_setting( 'bs_country_info_group', 'convertloop_api_' . $value );
     register_setting( 'bs_country_info_group', 'convertloop_app_' . $value );
+    register_setting( 'bs_country_info_group', 'no_show_' . $value );
   }
 
 }
@@ -148,8 +149,9 @@ function logos_settings_page() {
 								value="<?php echo esc_attr( get_option('convertloop_api_' . $value ) ); ?>"
 							/>
 
-
-
+							<p></p>
+							<label for="">No show</label>
+							<input type="checkbox" name="no_show_<?php echo $value ?>" value="<?php echo esc_attr( get_option('no_show_' . $value ) );  ?>" />
 							<?php submit_button(); ?>
 
           </section>
