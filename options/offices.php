@@ -185,7 +185,7 @@ function logos_settings_page() {
 							/>
 							<p></p>
 							<label for="">No show</label>
-							<input type="checkbox" name="no_show_<?php echo $value ?>" value="1" checked="<?php echo get_option('no_show_' . $value ) ?>" />
+							<input type="checkbox" name="no_show_<?php echo $value ?>" value="1" <?php checked( get_option('no_show_' . $value ), 1 ); ?>  />
 							<?php submit_button(); ?>
 
           </section>
