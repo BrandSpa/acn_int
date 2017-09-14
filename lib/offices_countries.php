@@ -3,6 +3,7 @@
 function getOfficesCountries() {
   return  [
     "default",
+    "Argentina",
     "Australia",
     "Austria",
     "Belgium",
@@ -20,8 +21,10 @@ function getOfficesCountries() {
     "Philippines",
     "Poland",
     "Portugal",
+    "Peru",
     "Spain",
     "Republic of Korea",
+    "Slovak Republic",
     "Switzerland",
     "United Kingdom",
     "United States"
