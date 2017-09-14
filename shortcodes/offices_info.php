@@ -73,6 +73,7 @@ foreach(getOfficesCountries() as $country):
   .accordion-contact {
     width: 100%;
     background: #f8f8f8;
+    margin-bottom: 20px;
   }
 
   .accordion-contact__title {
@@ -97,7 +98,7 @@ foreach(getOfficesCountries() as $country):
     var $ = jQuery;
     $('.accordion-contact__title').on('click', function(e) {
       e.preventDefault();
-      $(this).parent().find('.accordion-contact__title').addClass('accordion-contact__title--open');
+      $(this).parent().find('.accordion-contact__content').addClass('accordion-contact__content--open');
     })
   });
 </script>
