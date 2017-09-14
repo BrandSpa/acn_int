@@ -30,6 +30,7 @@ foreach(getOfficesCountries() as $country):
   <h6><?php echo get_option('contact_info_address_' . $country) ?></h6>
   <h6><?php echo get_option('contact_info_email_' . $country) ?></h6>
   <h6><?php echo get_option('contact_info_phone_' . $country) ?></h6>
+  <a href="<?php echo get_option('url_' . $country)  ?>"><?php echo get_option('url_' . $country)  ?></a>
   <ul class="bs-contact-info__social">
     <?php if( !empty(get_option('contact_facebook_' . $country)) ): ?>
     <li>
@@ -99,6 +100,7 @@ foreach(getOfficesCountries() as $country):
     var $ = jQuery;
     $('.accordion-contact__title').on('click', function(e) {
       e.preventDefault();
+      $(this).parent().find('.accordion-contact__content').removeClass('accordion-contact__content--open');
       $(this).parent().find('.accordion-contact__content').addClass('accordion-contact__content--open');
     })
   });
