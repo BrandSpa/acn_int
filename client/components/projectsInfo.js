@@ -18,7 +18,7 @@ class ProjectsInfo extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			section: 1,
+			section: 9,
 			projects: []
 		}
 	}
