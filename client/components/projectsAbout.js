@@ -16,7 +16,7 @@ const colors = {
 
 class ProjectsAbout extends React.Component {
     state = {
-      section: 0
+      section: 8
     };
 
 	handleSection = (i) => {
