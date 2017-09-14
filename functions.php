@@ -93,6 +93,7 @@ require_once('shortcodes/get_url_value.php');
 require_once('shortcodes/get_url_if.php');
 require_once('shortcodes/contact_gg.php');
 require_once('shortcodes/contact_us_form.php');
+require_once('shortcodes/offices_info.php');
 
 //VISUAL COMPOSER
 require_once('shortcodes/vc/accordion.php');
