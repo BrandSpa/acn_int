@@ -70,8 +70,12 @@ const setMenuMobile = function() {
 
 
   $(document).on('click', function(e) {
+    if($.contains($menu.get(0), e.target) || $menu.get(0) == e.target) {
 
-    console.log('click menu',  $.contains($menu.get(0), e.target) || $menu.get(0) == e.target);
+    } else {
+      $(document.body).removeClass("menu-open");
+      $(".menu--mobile").removeClass("menu--mobile--open");
+    }
   });
 
 };
