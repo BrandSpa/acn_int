@@ -68,6 +68,12 @@ const setMenuMobile = function() {
     $(".menu--mobile").removeClass("menu--mobile--open");
   });
 
+
+  $menu.on('click', function(e) {
+    console.log(e.target);
+    console.log('click menu', $(this).contains(e.target));
+  });
+
 };
 
 export default setMenuMobile;
