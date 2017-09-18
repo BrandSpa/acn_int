@@ -69,10 +69,10 @@ const setMenuMobile = function() {
   });
 
 
-  $menu.on('click', function(e) {
+  $(document).on('click', function(e) {
     console.log(e.target);
-    $.contains($(this), e.target);
-    console.log('click menu',  $.contains($(this), e.target));
+    $.contains($menu, e.target);
+    console.log('click menu',  $.contains($menu, e.target));
   });
 
 };
