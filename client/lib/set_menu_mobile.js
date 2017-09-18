@@ -70,7 +70,7 @@ const setMenuMobile = function() {
 
 
   $(document).on('click', function(e) {
-    console.log($(document.body).hasClass("menu-open") && $.contains($menu.get(0), e.target) || $menu.get(0) == e.target);
+    console.log($(".open-menu") == e.target, $.contains($menu.get(0), e.target) || $menu.get(0) == e.target);
     if($.contains($menu.get(0), e.target) || $menu.get(0) == e.target) {
 
     } else {
