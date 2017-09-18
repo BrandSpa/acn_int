@@ -53,7 +53,9 @@ const setMenuMobile = function() {
 
   });
 
-  $(".open-menu").on("click", () => {
+  $(".open-menu").on("click", (e) => {
+    e.stopPropagation();
+
     if ($(".menu--mobile").hasClass("menu--mobile--open")) {
       $(document.body).removeClass("menu-open");
       $(".menu--mobile").removeClass("menu--mobile--open");
@@ -70,7 +72,7 @@ const setMenuMobile = function() {
 
 
   $(document).on('click', function(e) {
-    console.log($(document.body).hasClass("menu-open"));
+    console.log('click global');
     console.log($(".open-menu").get(0) == e.target, $.contains($menu.get(0), e.target) || $menu.get(0) == e.target);
 
     if($.contains($menu.get(0), e.target) || $menu.get(0) == e.target) {
