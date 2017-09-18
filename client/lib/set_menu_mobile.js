@@ -70,9 +70,7 @@ const setMenuMobile = function() {
 
 
   $(document).on('click', function(e) {
-    console.log(e.target);
-    $.contains($menu, e.target);
-    console.log('click menu',  $.contains($menu, e.target));
+    console.log('click menu',  $.contains($menu.get(0), e.target));
   });
 
 };
