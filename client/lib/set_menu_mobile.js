@@ -86,6 +86,11 @@ const setMenuMobile = function() {
     console.log('swipe', e);
   });
 
+
+  document.addEventListener('swipeleft', function(e){
+      console.log('swipe', e);
+  });
+
 };
 
 export default setMenuMobile;
