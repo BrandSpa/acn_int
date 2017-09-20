@@ -87,7 +87,7 @@ const setMenuMobile = function() {
 
   var stage = document.body;
   var mc = new Hammer.Manager(stage);
-  var Swipe = new Hammer.Swipe();
+  var Swipe = new Hammer.Swipe({ direction: Hammer.DIRECTION_HORIZONTAL });
   mc.add(Swipe);
 
   mc.on('swipeleft', function(e) {
