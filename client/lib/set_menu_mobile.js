@@ -1,4 +1,4 @@
-import 'tocca';
+import Hammer from 'hammerjs';
 
 const setMenuMobile = function() {
   const $menu = $('.menu--mobile');
@@ -82,14 +82,19 @@ const setMenuMobile = function() {
     }
   });
 
-  document.addEventListener('swiperight', function(e){
-    alert(e);
+  var stage = document.body;
+  var mc = new Hammer.Manager(stage);
+  var Swipe = new Hammer.Swipe();
+  mc.add(Swipe);
+
+  mc.on('swipeleft', function(e) {
+    console.log('swipeleft');
   });
 
-
-  document.addEventListener('swipeleft', function(e){
-      alert(e);
+  mc.on('swiperight', function(e) {
+    console.log('swiperight');
   });
+
 
 };
 
