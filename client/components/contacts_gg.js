@@ -68,7 +68,7 @@ class ContactsGG extends Component {
         </ul>
         <div className="col-6-l contacts">
           <h4>{country}</h4>
-          <p>{contactTitle}</p>
+          <p>{this.state.contacts.length > 0 ? contactTitle : ''}</p>
           {this.state.contacts.map(contact =>
             <div className="contact">
               <img src={contact.image} />
