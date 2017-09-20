@@ -58,13 +58,13 @@ const setMenuMobile = function() {
   function openMenuMobile() {
     $(document.body).addClass("menu-open");
     $(".menu--mobile").addClass("menu--mobile--open");
-    $('.menu--mobile__overlay').addClass('.menu--mobile__overlay--open');
+    $('.menu--mobile__overlay').addClass('menu--mobile__overlay--open');
   }
 
   function closeMenuMobile() {
     $(document.body).removeClass("menu-open");
     $(".menu--mobile").removeClass("menu--mobile--open");
-      $('.menu--mobile__overlay').removeClass('.menu--mobile__overlay--open');
+      $('.menu--mobile__overlay').removeClass('menu--mobile__overlay--open');
   }
 
   $(".open-menu").on("click", (e) => {
@@ -81,8 +81,7 @@ const setMenuMobile = function() {
     if($.contains($menu.get(0), e.target) || $menu.get(0) == e.target) {
 
     } else {
-      $(document.body).removeClass("menu-open");
-      $(".menu--mobile").removeClass("menu--mobile--open");
+      closeMenuMobile();
     }
   });
 
