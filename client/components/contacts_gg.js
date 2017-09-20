@@ -66,11 +66,11 @@ class ContactsGG extends Component {
             )
           })}
         </ul>
-        <div className="col-6-l">
+        <div className="col-6-l contacts">
           <h4>{country}</h4>
+          <p>{contactTitle}</p>
           {this.state.contacts.map(contact =>
             <div className="contact">
-              <p>{contact.hasOwnProperty('post_title') ? contactTitle : ''}</p>
               <img src={contact.image} />
               <h3>{contact.post_title}</h3>
               {contact.hasOwnProperty('fields') && contact.fields.length > 0 ?
@@ -142,7 +142,7 @@ class ContactsGG extends Component {
             font-weight: bold;
           }
 
-          .contact {
+          .contacts {
             margin-left: 40px;
           }
 
@@ -151,7 +151,7 @@ class ContactsGG extends Component {
             color: #3C515F;
           }
 
-          .contact h4 {
+          .contacts h4 {
             margin-bottom: 20px;
             color: #3C515F;
           }
