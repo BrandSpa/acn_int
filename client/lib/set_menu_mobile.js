@@ -83,12 +83,12 @@ const setMenuMobile = function() {
   });
 
   document.addEventListener('swiperight', function(e){
-    console.log('swipe', e);
+    alert(e);
   });
 
 
   document.addEventListener('swipeleft', function(e){
-      console.log('swipe', e);
+      alert(e);
   });
 
 };
