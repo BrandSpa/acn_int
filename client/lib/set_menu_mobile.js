@@ -55,9 +55,7 @@ const setMenuMobile = function() {
 
   });
 
-  $(".open-menu").on("click", (e) => {
-    e.stopPropagation();
-
+  function toggleMenuMobile() {
     if ($(".menu--mobile").hasClass("menu--mobile--open")) {
       $(document.body).removeClass("menu-open");
       $(".menu--mobile").removeClass("menu--mobile--open");
@@ -65,6 +63,11 @@ const setMenuMobile = function() {
       $(document.body).addClass("menu-open");
       $(".menu--mobile").addClass("menu--mobile--open");
     }
+  }
+
+  $(".open-menu").on("click", (e) => {
+    e.stopPropagation();
+    toggleMenuMobile();
   });
 
   $(".close-menu").on("click", (e) => {
@@ -88,11 +91,12 @@ const setMenuMobile = function() {
   mc.add(Swipe);
 
   mc.on('swipeleft', function(e) {
-    console.log('swipeleft');
+    toggleMenuMobile();
   });
 
   mc.on('swiperight', function(e) {
-    console.log('swiperight');
+    $(document.body).removeClass("menu-open");
+    $(".menu--mobile").removeClass("menu--mobile--open");
   });
 
 
