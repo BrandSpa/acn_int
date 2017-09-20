@@ -113,7 +113,9 @@ foreach(getOfficesCountries() as $country):
       e.preventDefault();
 
 			var $content = $(this).parent().find('.accordion-contact__content');
-			console.log($content.hasClass('accordion-contact__content--open'));
+
+			console.log($content, $content.hasClass('accordion-contact__content--open'));
+
 			if($content.hasClass('accordion-contact__content--open')) {
 				$content.removeClass('accordion-contact__content--open');
 			} else {
