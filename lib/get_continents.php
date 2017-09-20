@@ -2,7 +2,7 @@
 
 function getContinents() {
   $continents = array(
-    "Afrika" => array(
+    "Africa" => array(
       "Algeria",
       "Angola",
       "Benin",
@@ -91,7 +91,7 @@ function getContinents() {
       "Turkmenistan",
       "Vietnam"
     ),
-    "Easter Europe" => array(
+    "Eastern Europe " => array(
       "Albania",
       "Belarus",
       "Bosnia and Herzegovina",
@@ -158,11 +158,10 @@ function getContinents() {
       "Yemen"
     ),
 
-    "North America" => array(
+    "Caribbean" => array(
       "Antigua and Barbuda",
       "Bahamas",
       "Barbados",
-      "Canada",
       "Dominica",
       "Dominican Republic",
       "Grenada",
@@ -171,18 +170,15 @@ function getContinents() {
       "Saint Kitts and Nevis",
       "Saint Lucia",
       "Saint Vincent and the Grenadines",
-      "Trinidad and Tobago",
-      "United States"
+      "Trinidad and Tobago"
     ),
 
-    "Ocenia" => array(
-      "Australia",
+    "Oceania" => array(
       "Fiji",
       "Kiribati",
       "Marshall Islands",
       "Micronesia",
       "Nauru",
-      "New Zealand",
       "Palau",
       "Guinea Conakry",
       "Samoa",
@@ -199,34 +195,34 @@ function getContinents() {
       "Tajikistan",
       "Turkmenistan",
       "Uzbekistan"
-    ),
-
-    "Western Europe" => array(
-      "Andorra",
-      "Austria",
-      "Belgium",
-      "Cyprus",
-      "Denmark",
-      "Finland",
-      "France",
-      "Germany",
-      "Greece",
-      "Iceland",
-      "Ireland",
-      "Italy",
-      "Liechtenstein",
-      "Luxembourg",
-      "Malta",
-      "Monaco",
-      "Netherlands",
-      "Norway",
-      "Portugal",
-      "San Marino",
-      "Spain",
-      "Sweden",
-      "Switzerland",
-      "United Kingdom"
     )
+
+    // "Western Europe" => array(
+    //   "Andorra",
+    //   "Austria",
+    //   "Belgium",
+    //   "Cyprus",
+    //   "Denmark",
+    //   "Finland",
+    //   "France",
+    //   "Germany",
+    //   "Greece",
+    //   "Iceland",
+    //   "Ireland",
+    //   "Italy",
+    //   "Liechtenstein",
+    //   "Luxembourg",
+    //   "Malta",
+    //   "Monaco",
+    //   "Netherlands",
+    //   "Norway",
+    //   "Portugal",
+    //   "San Marino",
+    //   "Spain",
+    //   "Sweden",
+    //   "Switzerland",
+    //   "United Kingdom"
+    // )
 );
 
   return $continents;

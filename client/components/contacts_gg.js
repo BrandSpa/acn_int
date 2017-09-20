@@ -67,9 +67,9 @@ class ContactsGG extends Component {
           })}
         </ul>
         <div className="col-6-l">
+          <h4>{country}</h4>
           {this.state.contacts.map(contact =>
             <div className="contact">
-              <h4>{country}</h4>
               <p>{contact.hasOwnProperty('post_title') ? contactTitle : ''}</p>
               <img src={contact.image} />
               <h3>{contact.post_title}</h3>
