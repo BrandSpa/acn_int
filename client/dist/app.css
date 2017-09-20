@@ -949,8 +949,8 @@ button, .btn {
       .menu--mobile .menu--mobile__langs a {
         border: none; }
     .menu--mobile .nav__donate {
-      position: absolute;
-      bottom: 20px;
+      position: relative;
+      top: 40px;
       border: none; }
       .menu--mobile .nav__donate a {
         border: none;
