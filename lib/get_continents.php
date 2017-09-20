@@ -58,7 +58,6 @@ function getContinents() {
 
     "Asia" => array(
       "Afghanistan",
-      "Armenia",
       "Azerbaijan",
       "Bangladesh",
       "Bhutan",
@@ -93,6 +92,7 @@ function getContinents() {
     ),
     "Eastern Europe " => array(
       "Albania",
+      "Armenia",
       "Belarus",
       "Bosnia and Herzegovina",
       "Bulgaria",
