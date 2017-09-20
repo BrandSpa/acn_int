@@ -82,7 +82,7 @@ const setMenuMobile = function() {
     }
   });
 
-  document.addEventListener('swiperight',function(e){
+  document.addEventListener('swiperight', function(e){
     console.log('swipe', e);
   });
 
