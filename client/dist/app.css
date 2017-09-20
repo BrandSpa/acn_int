@@ -951,7 +951,8 @@ button, .btn {
     .menu--mobile .nav__donate {
       position: relative;
       top: 40px;
-      border: none; }
+      border: none;
+      margin-bottom: 40px; }
       .menu--mobile .nav__donate a {
         border: none;
         text-align: center;
