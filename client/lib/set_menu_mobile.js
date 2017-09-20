@@ -1,3 +1,5 @@
+import 'tocca';
+
 const setMenuMobile = function() {
   const $menu = $('.menu--mobile');
   const currentLang = $('.menu--mobile .current-lang > a');
@@ -72,15 +74,16 @@ const setMenuMobile = function() {
 
 
   $(document).on('click', function(e) {
-    console.log('click global');
-    console.log($(".open-menu").get(0) == e.target, $.contains($menu.get(0), e.target) || $menu.get(0) == e.target);
-
     if($.contains($menu.get(0), e.target) || $menu.get(0) == e.target) {
 
     } else {
       $(document.body).removeClass("menu-open");
       $(".menu--mobile").removeClass("menu--mobile--open");
     }
+  });
+
+  document.addEventListener('swiperight',function(e){
+    console.log('swipe', e);
   });
 
 };
