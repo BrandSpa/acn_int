@@ -95,7 +95,7 @@ foreach(getOfficesCountries() as $country):
   .accordion-contact__content {
     height: 0;
     visibility: hidden;
-    transition: height .1s;
+    transition: all .3s;
   }
 
   .accordion-contact__content--open {
@@ -110,9 +110,15 @@ foreach(getOfficesCountries() as $country):
     var $ = jQuery;
     $('.accordion-contact__title').on('click', function(e) {
       e.preventDefault();
-      $('.accordion-contact').find('.accordion-contact__content').removeClass('accordion-contact__content--open');
-      $(this).parent().find('.accordion-contact__content').addClass('accordion-contact__content--open');
-    })
+			var $content = $(this).parent().find('.accordion-contact__content');
+			if($content.hasClass('accordion-contact__content--open')) {
+				$content.removeClass('accordion-contact__content--open');
+			} else {
+				$('.accordion-contact').find('.accordion-contact__content').removeClass('accordion-contact__content--open');
+	      $content.addClass('accordion-contact__content--open');
+	    })
+			}
+
   });
 </script>
 <?php
