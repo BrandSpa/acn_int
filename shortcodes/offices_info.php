@@ -108,9 +108,12 @@ foreach(getOfficesCountries() as $country):
 <script>
   onLoad(function() {
     var $ = jQuery;
+
     $('.accordion-contact__title').on('click', function(e) {
       e.preventDefault();
+
 			var $content = $(this).parent().find('.accordion-contact__content');
+			console.log($content.hasClass('accordion-contact__content--open'));
 			if($content.hasClass('accordion-contact__content--open')) {
 				$content.removeClass('accordion-contact__content--open');
 			} else {
