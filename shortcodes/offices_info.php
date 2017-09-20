@@ -121,9 +121,9 @@ foreach(getOfficesCountries() as $country):
 			} else {
 				$('.accordion-contact').find('.accordion-contact__content').removeClass('accordion-contact__content--open');
 	      $content.addClass('accordion-contact__content--open');
-	    })
-			}
 
+			}
+		})
   });
 </script>
 <?php
