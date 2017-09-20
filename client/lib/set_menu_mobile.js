@@ -55,26 +55,27 @@ const setMenuMobile = function() {
 
   });
 
-  function toggleMenuMobile() {
-    if ($(".menu--mobile").hasClass("menu--mobile--open")) {
-      $(document.body).removeClass("menu-open");
-      $(".menu--mobile").removeClass("menu--mobile--open");
-    } else {
-      $(document.body).addClass("menu-open");
-      $(".menu--mobile").addClass("menu--mobile--open");
-    }
+  function openMenuMobile() {
+    $(document.body).addClass("menu-open");
+    $(".menu--mobile").addClass("menu--mobile--open");
+    $('.menu--mobile__overlay').addClass('.menu--mobile__overlay--open');
+  }
+
+  function closeMenuMobile() {
+    $(document.body).removeClass("menu-open");
+    $(".menu--mobile").removeClass("menu--mobile--open");
+      $('.menu--mobile__overlay').removeClass('.menu--mobile__overlay--open');
   }
 
   $(".open-menu").on("click", (e) => {
     e.stopPropagation();
-    toggleMenuMobile();
+    openMenuMobile();
   });
 
   $(".close-menu").on("click", (e) => {
-    $(document.body).removeClass("menu-open");
-    $(".menu--mobile").removeClass("menu--mobile--open");
+    e.stopPropagation();
+    closeMenuMobile();
   });
-
 
   $(document).on('click', function(e) {
     if($.contains($menu.get(0), e.target) || $menu.get(0) == e.target) {
@@ -91,12 +92,11 @@ const setMenuMobile = function() {
   mc.add(Swipe);
 
   mc.on('swipeleft', function(e) {
-    toggleMenuMobile();
+    openMenuMobile();
   });
 
   mc.on('swiperight', function(e) {
-    $(document.body).removeClass("menu-open");
-    $(".menu--mobile").removeClass("menu--mobile--open");
+    closeMenuMobile();
   });
 
 

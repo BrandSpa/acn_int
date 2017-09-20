@@ -27,6 +27,8 @@
 		?>
 	</ul>
 
+	<div class="menu--mobile__overlay"></div>
+
 	<ul class="menu--mobile">
 			<li>
 				<a href="#close" class="close-menu" style="color: #F1364E"><i class="ion-close"></i></a>
