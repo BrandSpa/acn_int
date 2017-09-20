@@ -143,7 +143,11 @@ class ContactsGG extends Component {
           }
 
           .contacts {
-            margin-left: 40px;
+            padding-left: 40px;
+          }
+
+          .contact {
+            padding-bottom: 40px;
           }
 
           .contact h2 {
