@@ -5,16 +5,16 @@ class ContactsGG extends Component {
   state = {
     continent: '',
     country: null,
-    contact: {}
+    contacts: []
   }
 
   setContact = (country, e) => {
     if(e) e.preventDefault();
     const { contacts } = this.props;
-    const contact = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
-    console.log(contact);
-    if(contact.length > 0) {
-      this.setState({ contact: contact[0], country });
+    const selectedContacts = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
+    console.log(contacts);
+    if(contacts.length > 0) {
+      this.setState({ contacts: selectedContacts, country });
     }
   }
 
@@ -30,7 +30,7 @@ class ContactsGG extends Component {
 
   render() {
     const { contactTitle, contacts, continents, countries } = this.props;
-    const { country, continent, contact } = this.state;
+    const { country, continent } = this.state;
     let countrySelected = country;
     let continentsKeys = Object.keys(continents);
 
@@ -67,27 +67,30 @@ class ContactsGG extends Component {
           })}
         </ul>
         <div className="col-6-l">
-          <div className="contact">
-            <h4>{country}</h4>
-            <p>{contact.hasOwnProperty('post_title') ? contactTitle : ''}</p>
-            <img src={contact.image} />
-            <h3>{contact.post_title}</h3>
-            {contact.hasOwnProperty('fields') && contact.fields.length > 0 ?
-              contact.fields.map(field => {
-                return <p>{field}</p>
-              })
-            : ''}
-
-            <ul className="contact__countries">
-              {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
-                contact.countries.map(countr => {
-                  return <li>{countr} ·</li>
+          {this.state.contacts.map(contact =>
+            <div className="contact">
+              <h4>{country}</h4>
+              <p>{contact.hasOwnProperty('post_title') ? contactTitle : ''}</p>
+              <img src={contact.image} />
+              <h3>{contact.post_title}</h3>
+              {contact.hasOwnProperty('fields') && contact.fields.length > 0 ?
+                contact.fields.map(field => {
+                  return <p>{field}</p>
                 })
               : ''}
-            </ul>
-            <p>{contact.post_content}</p>
 
-          </div>
+              <ul className="contact__countries">
+                {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
+                  contact.countries.map(countr => {
+                    return <li>{countr} ·</li>
+                  })
+                : ''}
+              </ul>
+              <p>{contact.post_content}</p>
+
+            </div>
+          )}
+
         </div>
         <style jsx>{`
           ul {
