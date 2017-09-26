@@ -1,34 +1,40 @@
-import React from "react";
-import AmountBtns from "./amountBtns";
-import { onlyNum } from "../../lib/clean_inputs";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import AmountBtns from './amountBtns';
+import { onlyNum } from '../../lib/clean_inputs';
 
-class amount extends React.Component {
-  static defaultProps = { texts: {}, amount: 30 };
+
+class Amount extends Component {
+  static defaultProps = {
+    texts: {},
+    amount: 30,
+    show_titles: false,
+  };
 
   changeAmount = (amount, e) => {
     if (e) e.preventDefault();
-    let el = this.amountInput;
-    if (amount == 5) el.focus();
+    const el = this.amountInput;
+    if (amount === 5) el.focus();
     this.props.onChange({ amount });
   };
 
-  handleAmount = e => {
-    let val = e.currentTarget.value;
-    let amount = onlyNum(val);
+  handleAmount = (e) => {
+    const val = e.currentTarget.value;
+    const amount = onlyNum(val);
     this.props.onChange({ amount });
   };
 
-  changeType = (donation_type, e) => {
+  changeType = (donationType, e) => {
     if (e) e.preventDefault();
-    this.props.onChange({ donation_type });
+    this.props.onChange({ donationType });
   };
 
   render() {
-    const { texts, donation_type, amount } = this.props;
+    const { texts, donation_type, amount, width, show_titles } = this.props;
 
     return (
-      <div style={{ width: this.props.width, float: "left", padding: "1px" }}>
-        { this.props.show_titles ? <h5 style={{ color: "#3C515F", paddingBottom: '20px' }}>{texts.step_amount_text}</h5> : '' }
+      <div style={{ width, float: 'left', padding: '1px' }}>
+        { show_titles ? <h5 style={{ color: '#3C515F', paddingBottom: '20px' }}>{texts.step_amount_text}</h5> : '' }
         <AmountBtns
           amount={amount}
           texts={texts}
@@ -50,22 +56,22 @@ class amount extends React.Component {
           <div className="form-group col-7-l">
             <a
               href="#"
-              onClick={this.changeType.bind(null, "monthly")}
+              onClick={this.changeType.bind(null, 'monthly')}
               className={
-                donation_type == "monthly"
-                  ? "donate_react__type donate_react__type--active"
-                  : "donate_react__type "
+                donation_type == 'monthly'
+                  ? 'donate_react__type donate_react__type--active'
+                  : 'donate_react__type '
               }
             >
               {texts.monthly}
             </a>
             <a
               href="#"
-              onClick={this.changeType.bind(null, "once")}
+              onClick={this.changeType.bind(null, 'once')}
               className={
-                donation_type == "once"
-                  ? "donate_react__type donate_react__type--active"
-                  : "donate_react__type "
+                donation_type == 'once'
+                  ? 'donate_react__type donate_react__type--active'
+                  : 'donate_react__type '
               }
             >
               {texts.once}
@@ -77,4 +83,13 @@ class amount extends React.Component {
   }
 }
 
-export default amount;
+Amount.propTypes = {
+  onChange: PropTypes.func,
+  texts: PropTypes.object,
+  donation_type: PropTypes.string,
+  amount: PropTypes.number,
+  width: PropTypes.string,
+  show_titles: PropTypes.bool,
+};
+
+export default Amount;

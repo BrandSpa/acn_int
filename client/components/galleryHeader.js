@@ -39,6 +39,7 @@ class GalleryHeader extends React.Component {
   }
 
   getImage = e => {
+    
     let imageStyle;
     if (e.target.height > e.target.width) {
       imageStyle = { ...this.state.imageStyle, maxWidth: "45%" };

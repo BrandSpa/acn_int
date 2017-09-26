@@ -57,3 +57,9 @@ composer install
 
 ## notes 
 All javascript it's written on ecmacript 6 or es2015 then compiled with babel and webpack to ecmascript 5
+
+## todos
+- [ ] add redux to donate component.
+- [ ] help code to be more readable with async/await.
+- [ ] fix tests and improve it.
+- [ ] clean code style with eslint.

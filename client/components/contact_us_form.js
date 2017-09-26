@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import request from 'axios';
 import qs from 'qs';
-import isEmpty from "validator/lib/isEmpty";
-import isEmail from "validator/lib/isEmail";
+import isEmpty from 'validator/lib/isEmpty';
+import isEmail from 'validator/lib/isEmail';
 
 class ContactUsForm extends Component {
   state = {
@@ -11,10 +11,10 @@ class ContactUsForm extends Component {
     email: '',
     message: '',
     errors: {},
-    complete: false
+    complete: false,
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   }
 
@@ -22,29 +22,29 @@ class ContactUsForm extends Component {
     const fields = ['name', 'lastname', 'email', 'message'];
     const errors = {};
 
-    fields.forEach(field => {
-      let val = this.state[field];
-      errors[field] = field == 'email' ? !isEmail(val) : isEmpty(val);
+    fields.forEach((field) => {
+      const val = this.state[field];
+      errors[field] = field === 'email' ? !isEmail(val) : isEmpty(val);
     });
 
     this.setState({ errors });
 
     return fields
-      .map(key => {
-        let val = this.state[key];
-        return key == 'email' ? isEmail(val) : !isEmpty(val);
+      .map((key) => {
+        const val = this.state[key];
+        return key === 'email' ? isEmail(val) : !isEmpty(val);
       });
   }
 
-  handleSubmit = e => {
-    if(e) e.preventDefault();
-    if(this.validate().every(item => item == true)) {
-      const data = qs.stringify({action: 'send_contact_us', data: this.state});
+  handleSubmit = (e) => {
+    if (e) e.preventDefault();
+
+    if (this.validate().every(item => item == true)) {
+      const data = qs.stringify({ action: 'send_contact_us', data: this.state });
       request.post('/wp-admin/admin-ajax.php', data)
-      .then(res => {
-        console.log(Number.isInteger(res.data));
-        if(Number.isInteger(res.data)) {
-          this.setState({ complete: true });
+      .then((res) => {
+        if (Number.isInteger(res.data)) {
+          this.setState({ compl });
         }
       });
     }
@@ -53,59 +53,66 @@ class ContactUsForm extends Component {
   render() {
     const { name, lastname, email, message, errors } = this.state;
     const { placeholders, messages, btnText } = this.props;
-    if(this.state.complete) return <div><h4 style={{color: '#3c515f'}}>{messages.thanks}</h4></div>;
+
+    if (this.state.complete) {
+      return (
+        <div>
+          <h4 style={{ color: '#3c515f' }}>{messages.thanks}</h4>
+        </div>
+      );
+    }
 
     return (
-     <form action="#" onSubmit={this.handleSubmit}>
-       <div className="input-container">
-         <input
-           type="text"
-           name="name"
-           placeholder={placeholders.name}
-           onChange={this.handleChange}
-           value={name}
-         />
-         <div className={errors.name ? "input-error" : "hidden"}>
-           {messages.name}
-         </div>
-       </div>
-       <div className="input-container">
-         <input
-           type="text"
-           name="lastname"
-           placeholder={placeholders.lastname}
-           onChange={this.handleChange}
-           value={lastname}
-         />
-         <div className={errors.lastname ? "input-error" : "hidden"}>
-           {messages.lastname}
-         </div>
-       </div>
-       <div className="input-container">
-         <input
-           type="text"
-           name="email"
-           placeholder={placeholders.email}
-           onChange={this.handleChange}
-           value={email}
-         />
-         <div className={errors.email ? "input-error" : "hidden"}>
-           {messages.email}
-         </div>
-       </div>
-       <div className="input-container">
-         <textarea
+      <form action="#" onSubmit={this.handleSubmit}>
+        <div className="input-container">
+          <input
+            type="text"
+            name="name"
+            placeholder={placeholders.name}
+            onChange={this.handleChange}
+            value={name}
+          />
+          <div className={errors.name ? 'input-error' : 'hidden'}>
+            {messages.name}
+          </div>
+        </div>
+        <div className="input-container">
+          <input
+            type="text"
+            name="lastname"
+            placeholder={placeholders.lastname}
+            onChange={this.handleChange}
+            value={lastname}
+          />
+          <div className={errors.lastname ? 'input-error' : 'hidden'}>
+            {messages.lastname}
+          </div>
+        </div>
+        <div className="input-container">
+          <input
+            type="text"
+            name="email"
+            placeholder={placeholders.email}
+            onChange={this.handleChange}
+            value={email}
+          />
+          <div className={errors.email ? 'input-error' : 'hidden'}>
+            {messages.email}
+          </div>
+        </div>
+        <div className="input-container">
+          <textarea
             placeholder={placeholders.message}
             name="message"
             rows="5"
             onChange={this.handleChange}
           >{message}</textarea>
-          <div className={errors.message ? "input-error" : "hidden"}>
+          <div className={errors.message ? 'input-error' : 'hidden'}>
             {messages.message}
           </div>
-       </div>
-       <button>{btnText}</button>
-       <style jsx>{`
+        </div>
+        <button>{btnText}</button>
+        <style jsx>{`
          textarea {
            width: 100%;
            background: transparent;
@@ -118,8 +125,8 @@ class ContactUsForm extends Component {
           outline: none;
          }
        `}</style>
-     </form>
-   )
+      </form>
+    );
   }
 }
 

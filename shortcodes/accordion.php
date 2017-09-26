@@ -1,14 +1,13 @@
 <?php
 
 function bs_accordion_sc($atts, $content = null) {
-	$attributes = [
+  
+  $at = shortcode_atts([
 		'content' => '',
     'btn_title' => '',
     'background' => '#687f87',
     'btn_title_color' => '#fff'
-  ];
-
-  $at = shortcode_atts( $attributes , $atts );
+  ], $atts );
 
 	$props = [
 		'content' => $content,
