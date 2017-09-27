@@ -13,27 +13,24 @@ function bs_section_video_content_sc($atts, $content = null) {
   $at = shortcode_atts( $attributes , $atts );
 	$imgUrl = wp_get_attachment_image_src($at['image'], 'full')[0];
 
+	$props = [
+		"url" => $at['video_url'],
+		"imgUrl" => $imgUrl,
+		"imageStyle" => [
+			"width" => $at['image_width'],
+			"height" => $at['image_height'],
+			"margin" => $at['image_margin']
+		],
+		"fullHeight" => json_encode($at['full_height']),
+		"content" => json_encode(do_shortcode($content))
+	];
+
   ob_start();
 ?>
 
-<div 
-	class="section-video-content" 
-	data-props='{
-		"url": "<?php echo $at['video_url'] ?>", 
-		"imgUrl": "<?php echo $imgUrl ?>",
-		"imageStyle": {
-			"width": "<?php echo $at['image_width'] ?>",
-			"height": "<?php echo $at['image_height'] ?>",
-			"margin": "<?php echo $at['image_margin'] ?>"
-		},
-		"fullHeight": <?php echo json_encode($at['full_height']) ?>,
-		"content": <?php echo json_encode(do_shortcode($content)) ?>
-	}'
->
-</div>
+<div class="section-video-content" data-props='<?php echo json_encode($props) ?>' ></div>
 
 <?php
-
   return ob_get_clean();
 }
 
