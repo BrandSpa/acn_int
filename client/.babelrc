@@ -1,10 +1,9 @@
 {
-	"presets": ["es2015", "react", "flow"],
+	"presets": ["es2015", "react"],
 	"plugins": [
 		"transform-object-rest-spread",
 		"transform-class-properties",
 		"styled-jsx/babel",
-		"transform-runtime",
 		"transform-es3-modules-literals",
 		"transform-es3-property-literals",
 		"transform-es3-member-expression-literals",

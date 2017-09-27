@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+import 'core-js';
 import WebFont from 'webfontloader';
 import multipleRender from 'react-multiple-render';
 import 'lazysizes';
