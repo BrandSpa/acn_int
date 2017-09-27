@@ -56,7 +56,7 @@ class ContactsGG extends Component {
                       className={countr === countrySelected ? 'country-selected' : ''}
                       onClick={() => this.setContact(countr)}
                     >
-                      {country}
+                      {countr}
                     </a>
                   </li>),
                 )
@@ -82,7 +82,6 @@ class ContactsGG extends Component {
                 : ''}
               </ul>
               <div dangerouslySetInnerHTML={{ __html: contact.post_content }} />
-
             </div>),
           )}
 
