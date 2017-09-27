@@ -11,7 +11,7 @@ module.exports = {
         "react/jsx-filename-extension": 0,
         "react/forbid-prop-types": 0
     },
-    "envs": [
-        "browser"
-    ]
+    "env": {
+        "browser": 1
+    }
 };

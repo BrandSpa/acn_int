@@ -1,15 +1,10 @@
-import React, { Component } from "react";
-import isEmpty from "validator/lib/isEmpty";
-import isEmail from "validator/lib/isEmail";
-import getCountries from "../lib/getCountries";
-import { storeEvent } from "../lib/events";
-import cookies from "../lib/cookies";
-
-import {
-  fetchOfficesCountries,
-  storeConvertLoop,
-  storeEventConvertLoop
-} from "../actions/contact";
+import React, { Component } from 'react';
+import isEmpty from 'validator/lib/isEmpty';
+import isEmail from 'validator/lib/isEmail';
+import PropTypes from 'prop-types';
+import getCountries from '../lib/getCountries';
+import { storeEvent } from '../lib/events';
+import { storeConvertLoop } from '../actions/contact';
 
 class contactForm extends Component {
 
@@ -17,22 +12,22 @@ class contactForm extends Component {
     validationMessages: {},
     placeholders: {},
     texts: {},
-    redirect: "",
-    btnBg: "",
+    redirect: '',
+    btnBg: '',
     cl: {
-      event: "Subscription",
-      tags: ""
+      event: 'Subscription',
+      tags: '',
     },
     vertical: false,
-    terms: ""
+    terms: '',
   }
 
   state = {
     contact: {
-      name: "",
-      lastname: "",
-      email: "",
-      country: ""
+      name: '',
+      lastname: '',
+      email: '',
+      country: '',
     },
     errors: { name: false, lastname: false, email: false },
     countries: getCountries,
@@ -40,44 +35,45 @@ class contactForm extends Component {
     inOffice: false,
     loading: false,
     showMemberExists: false,
-    terms: true
+    terms: true,
   }
 
   componentDidMount() {
     this.setCountry();
   }
 
-  setCountry = (res) => {
+  setCountry = () => {
     const countries = this.props.countries;
     this.setState({
       contact: {
         ...this.state.contact,
-        country: this.props.country
+        country: this.props.country,
       },
       officeCountries: countries,
-      inOffice: countries.indexOf(this.props.country) !== -1
+      inOffice: countries.indexOf(this.props.country) !== -1,
     });
   }
 
-  checkEmpty = field => {
-    return  this.state.contact.hasOwnProperty(field)
+  checkEmpty = (field) => {
+    const hasField = this.state.contact.hasOwnProperty(field)
       ? isEmpty(this.state.contact[field])
       : false;
+    return hasField;
   }
 
   validate = () => {
     const { contact } = this.state;
     let errors = {};
-    let name = isEmpty(contact.name);
-    let lastname = isEmpty(contact.lastname);
-    let email = !isEmail(contact.email);
+    const name = isEmpty(contact.name);
+    const lastname = isEmpty(contact.lastname);
+    const email = !isEmail(contact.email);
 
     errors = { ...errors, name, lastname, email };
 
     let validations = Object.keys(errors).map(key => errors[key]);
 
-    if(this.props.terms == "true") {
-      if( this.state.terms == false ) {
+    if (this.props.terms === 'true') {
+      if (this.state.terms === false) {
         errors = { ...errors, terms: true };
         validations = validations.concat(true);
       }
@@ -89,12 +85,13 @@ class contactForm extends Component {
   }
 
   isValid = () => {
-    return this.validate()
-      .then(arr => arr.every(item => item == false))
-      .catch(err => console.error(err));
+    const valid = this.validate()
+      .then(arr => arr.every(item => item === false))
+      .catch(err => console.log(err));
+    return valid;
   }
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
 
     this.isValid()
@@ -102,25 +99,23 @@ class contactForm extends Component {
     .catch(err => console.log(err));
   }
 
-  storeContact = isValid => {
-    const {props, state} = this;
+  storeContact = (isValid) => {
     if (isValid === true) {
-
       this.setState({ loading: true });
 
       storeConvertLoop(this.props.cl.tags, this.state.contact)
       .then(() => {
-        const l = bs.currentPageLang == "Español" ? "SP" : "EN";
-        const event = {category: "SUBSCRIBE", action: "SUBSCRIBE_PRAY", label: `PRAY_${l}`};
-        return storeEvent("ga_event", event);
+        const l = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
+        const gaEvent = { category: 'SUBSCRIBE', action: 'SUBSCRIBE_PRAY', label: `PRAY_${l}` };
+        return storeEvent('ga_event', gaEvent);
       })
       .then(() => {
-        const event = {name: this.props.cl.event, person: this.state.contact};
-        return storeEvent("cl_event", event);
+        const clEvent = { name: this.props.cl.event, person: this.state.contact };
+        return storeEvent('cl_event', clEvent);
       })
       .then(() => {
-        const event = {eventName: "Lead"};
-        return storeEvent("fb_event", event);
+        const fbEvent = { eventName: 'Lead' };
+        return storeEvent('fb_event', fbEvent);
       })
       .then(() => {
         setTimeout(() => {
@@ -131,32 +126,32 @@ class contactForm extends Component {
   }
 
   handleChange = (field, e) => {
-    let contact = { ...this.state.contact, [field]: e.target.value };
+    const contact = { ...this.state.contact, [field]: e.target.value };
     this.setState({ contact });
   }
 
   handleCheckbox = () => {
-    this.setState({terms: !this.state.terms});
+    this.setState({ terms: !this.state.terms });
   }
 
   render() {
-    let { contact, errors } = this.state;
-    let { placeholders, validationMessages, texts } = this.props;
+    const { contact, errors } = this.state;
+    const { placeholders, validationMessages, texts } = this.props;
 
-    let inputContainerStyle = {
-      width: this.props.vertical == "true" ? "100%" : "20%",
-      "@media (maxWidth: 767px)": {
-        width: "100%"
-      }
+    const inputContainerStyle = {
+      width: this.props.vertical === 'true' ? '100%' : '20%',
+      '@media (maxWidth: 767px)': {
+        width: '100%',
+      },
     };
 
-    let inputStyle = {
-      borderRadius: this.props.vertical == "true" ? "0" : "",
+    const inputStyle = {
+      borderRadius: this.props.vertical === 'true' ? '0' : '',
     };
 
     return (
       <form
-        style={{ textAlign: "center" }}
+        style={{ textAlign: 'center' }}
         className="form-inline contact-form"
         onSubmit={this.handleSubmit}
       >
@@ -164,11 +159,11 @@ class contactForm extends Component {
           <input
             type="text"
             placeholder={placeholders.name}
-            onChange={this.handleChange.bind(null, "name")}
+            onChange={() => this.handleChange('name')}
             value={contact.name}
             style={inputStyle}
           />
-          <div className={errors.name ? "input-error" : "hidden"}>
+          <div className={errors.name ? 'input-error' : 'hidden'}>
             {errors.name} {validationMessages.name}
           </div>
         </div>
@@ -176,11 +171,11 @@ class contactForm extends Component {
           <input
             type="text"
             placeholder={placeholders.lastname}
-            onChange={this.handleChange.bind(null, "lastname")}
+            onChange={() => this.handleChange('lastname')}
             value={contact.lastname}
             style={inputStyle}
           />
-          <div className={errors.lastname ? "input-error" : "hidden"}>
+          <div className={errors.lastname ? 'input-error' : 'hidden'}>
             {validationMessages.lastname}
           </div>
         </div>
@@ -188,74 +183,84 @@ class contactForm extends Component {
           <input
             type="text"
             placeholder={placeholders.email}
-            onChange={this.handleChange.bind(null, "email")}
+            onChange={() => this.handleChange('email')}
             value={contact.email}
             style={inputStyle}
           />
-          <div className={errors.email ? "input-error" : "hidden"}>
+          <div className={errors.email ? 'input-error' : 'hidden'}>
             {validationMessages.email}
           </div>
         </div>
         <div style={inputContainerStyle} className="input-container">
           <select
-            onChange={this.handleChange.bind(null, "country")}
+            onChange={() => this.handleChange('country')}
             value={contact.country}
           >
             <option value="">{texts.select_country}</option>
-            {this.state.countries.map((country, i) => (
-              <option key={i} value={country}>{country}</option>
+            {this.state.countries.map(country => (
+              <option key={country} value={country}>{country}</option>
             ))}
           </select>
         </div>
 
         <button
           style={{
-            marginLeft: "-2px",
+            marginLeft: '-2px',
             background: this.props.btnBg,
-            color: "#fff"
+            color: '#fff',
           }}
           className="btn"
           onClick={this.handleSubmit}
           disabled={this.state.loading}
         >
-          {texts.button}{this.state.loading ? "..." : ""}
+          {texts.button} {this.state.loading ? '...' : ''}
         </button>
 
-        {this.props.terms == "true" ?
+        {this.props.terms === 'true' &&
           <div className="checkbox">
-            <label>
-              <input type="checkbox" onChange={this.handleCheckbox} checked={this.state.terms} /> {this.props.texts.terms}
+            <label htmlFor="terms">
+              <input id="terms" type="checkbox" onChange={this.handleCheckbox} checked={this.state.terms} /> {this.props.texts.terms}
             </label>
-
           </div>
-        : ""}
+        }
 
         <div className="input-container">
-          <div className={errors.terms ? "input-error" : "hidden"}>
+          <div className={errors.terms ? 'input-error' : 'hidden'}>
             {validationMessages.terms}
           </div>
         </div>
 
         <span
-          style={
-            this.state.showMemberExists
-              ? {
-                  color: "#fff",
-                  display: "inline-block",
-                  width: "90%",
-                  padding: "10px",
-                  margin: "5px auto",
-                  background: "#f4334a",
-                  color: "#fff"
-                }
-              : { display: "none" }
-          }
+          className="message"
+          style={this.state.showMemberExists ? { display: 'inline-block' } : { display: 'none' }}
         >
           {"you're already praying"}
         </span>
+        <style jsx>{`
+          .message {
+            color: #fff,
+            width: 90%,
+            padding: 10px,
+            margin: 5px auto,
+            background: #f4334a,
+          }
+          `}</style>
       </form>
     );
   }
 }
+
+contactForm.propTypes = {
+  countries: PropTypes.array.isRequired,
+  country: PropTypes.string.isRequired,
+  placeholders: PropTypes.object,
+  validationMessages: PropTypes.object,
+  cl: PropTypes.object,
+  texts: PropTypes.object,
+  terms: PropTypes.bool,
+  btnBg: PropTypes.string,
+  redirect: PropTypes.string,
+  vertical: PropTypes.bool,
+};
 
 export default contactForm;
