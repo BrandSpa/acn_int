@@ -16,6 +16,7 @@ function bs_contact_gg_sc($atts, $content = null) {
   	$contact->fields = get_post_meta($contact->ID, 'contact_gg_info_key', true);
     $contact->image = get_the_post_thumbnail_url($contact->ID, 'full');
     $contact->content = do_shortcode($contact->post_content);
+    $contact->post_content = '';
     return $contact;
   }, $query->get_posts());
 
