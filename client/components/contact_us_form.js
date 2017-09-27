@@ -3,6 +3,7 @@ import request from 'axios';
 import qs from 'qs';
 import isEmpty from 'validator/lib/isEmpty';
 import isEmail from 'validator/lib/isEmail';
+import PropTypes from 'prop-types';
 
 class ContactUsForm extends Component {
   state = {
@@ -39,12 +40,12 @@ class ContactUsForm extends Component {
   handleSubmit = (e) => {
     if (e) e.preventDefault();
 
-    if (this.validate().every(item => item == true)) {
+    if (this.validate().every(item => item === true)) {
       const data = qs.stringify({ action: 'send_contact_us', data: this.state });
       request.post('/wp-admin/admin-ajax.php', data)
       .then((res) => {
         if (Number.isInteger(res.data)) {
-          this.setState({ compl });
+          this.setState({ complete: true });
         }
       });
     }
@@ -129,5 +130,11 @@ class ContactUsForm extends Component {
     );
   }
 }
+
+ContactUsForm.propTypes = {
+  placeholders: PropTypes.object.isRequired,
+  messages: PropTypes.object.isRequired,
+  btnText: PropTypes.string.isRequired,
+};
 
 export default ContactUsForm;
