@@ -1,9 +1,11 @@
-import React from "react";
-import SectionVideo from "./sectionVideo";
+import React from 'react';
+import PropTypes from 'prop-types';
+import SectionVideo from './sectionVideo';
+
 
 class CampaignsSlider extends React.Component {
   static defaultProps = { slides: [], interval: 0 };
-  state = { currentSlide: 0, left: "0" };
+  state = { currentSlide: 0, left: '0' };
 
   componentDidMount() {
     this.interval = setInterval(() => {
@@ -13,53 +15,50 @@ class CampaignsSlider extends React.Component {
 
   nextSlide = (clear = true) => {
     if (clear) clearInterval(this.interval);
-    let total = this.props.slides.length - 1;
-    let left = this.state.currentSlide < total
+    const total = this.props.slides.length - 1;
+    const left = this.state.currentSlide < total
       ? this.state.currentSlide + 1
       : 0;
-    this.setState({ left: "-" + left * 100 + "%", currentSlide: left });
+    this.setState({ left: `-${left * 100}%`, currentSlide: left });
   };
 
   prevSlide = () => {
     clearInterval(this.interval);
-    let total = this.props.slides.length - 1;
-    let left = this.state.currentSlide > 0 ? this.state.currentSlide - 1 : 0;
-    this.setState({ left: "-" + left * 100 + "%", currentSlide: left });
+    const left = this.state.currentSlide > 0 ? this.state.currentSlide - 1 : 0;
+    this.setState({ left: `-${left * 100}%`, currentSlide: left });
   };
 
   render() {
     const { slides } = this.props;
-    let viewportWidth = `${100 * slides.length}%`;
-    let slideWidth = `${100 / slides.length}%`;
-    let viewportStyle = { width: viewportWidth, left: this.state.left };
+    const viewportWidth = `${100 * slides.length}%`;
+    const slideWidth = `${100 / slides.length}%`;
+    const viewportStyle = { width: viewportWidth, left: this.state.left };
 
     return (
       <div className="campaigns-slider">
         <div className="campaigns-slider__viewport" style={viewportStyle}>
-          {slides.map((slide, i) => {
-            return (
+          {slides.map((slide, i) => (
+            <div
+              key={i}
+              className="campaigns-slider__slide"
+              style={{ width: slideWidth }}
+            >
+              <SectionVideo
+                imgUrl={slide.image}
+                url={slide.url}
+                imageStyle={{ width: '100%' }}
+              />
               <div
-                key={i}
-                className="campaigns-slider__slide"
-                style={{ width: slideWidth }}
+                className="campaigns-slider__slide__content"
+                style={{ background: slide.bg }}
               >
-                <SectionVideo
-                  imgUrl={slide.image}
-                  url={slide.url}
-                  imageStyle={{ width: "100%" }}
-                />
-                <div
-                  className="campaigns-slider__slide__content"
-                  style={{ background: slide.bg }}
-                >
-                  <h4>
-                    <a href={slide.url ? slide.url : "#"}>{slide.title}</a>
-                  </h4>
-                  <p>{slide.content}</p>
-                </div>
+                <h4>
+                  <a href={slide.url ? slide.url : '#'}>{slide.title}</a>
+                </h4>
+                <p>{slide.content}</p>
               </div>
-            );
-          })}
+            </div>
+            ))}
         </div>
 
         <div className="campaigns-slider__btns">
@@ -80,5 +79,10 @@ class CampaignsSlider extends React.Component {
     );
   }
 }
+
+CampaignsSlider.propTypes = {
+  slides: PropTypes.array.isRequired,
+  interval: PropTypes.number,
+};
 
 export default CampaignsSlider;
