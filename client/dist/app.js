@@ -4559,7 +4559,7 @@ var Accordion = function (_Component) {
 
       return _react2['default'].createElement(
         'div',
-        { className: 'accordion', 'data-jsx': 800370740
+        { className: 'accordion', 'data-jsx': 800682132
         },
         _react2['default'].createElement(
           'button',
@@ -4567,13 +4567,13 @@ var Accordion = function (_Component) {
             className: 'accordion__btn',
             style: btnStyle,
             onClick: this.toggle,
-            'data-jsx': 800370740
+            'data-jsx': 800682132
           },
           btnTitle,
           ' ',
           _react2['default'].createElement('i', {
             className: this.state.show ? 'ion-chevron-up' : 'ion-chevron-down',
-            'data-jsx': 800370740
+            'data-jsx': 800682132
           })
         ),
         _react2['default'].createElement(
@@ -4581,14 +4581,14 @@ var Accordion = function (_Component) {
           {
             className: 'accordion__content',
             style: this.state.show ? { display: 'block' } : { display: 'none' },
-            'data-jsx': 800370740
+            'data-jsx': 800682132
           },
-          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: cleanContent }, 'data-jsx': 800370740
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: cleanContent }, 'data-jsx': 800682132
           })
         ),
         _react2['default'].createElement(_style2['default'], {
-          styleId: 800370740,
-          css: '.accordion__btn[data-jsx="800370740"]{width:100%, height:60px, border:none, border-radius:0, font-size:18px, font-weight:normal,}'
+          styleId: 800682132,
+          css: '.accordion__btn[data-jsx="800682132"]{width:100%;height:60px;border:none;border-radius:0;font-size:18px;font-weight:normal}'
         })
       );
     }
@@ -4883,38 +4883,38 @@ var Carousel = function (_React$Component) {
 
       return _react2['default'].createElement(
         'div',
-        { style: { width: '100%', overflow: 'hidden' }, 'data-jsx': 3461085666
+        { style: { width: '100%', overflow: 'hidden' }, 'data-jsx': 528420226
         },
         _react2['default'].createElement(
           'div',
-          { style: viewportStyle, 'data-jsx': 3461085666
+          { style: viewportStyle, 'data-jsx': 528420226
           },
-          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: this.props.content }, 'data-jsx': 3461085666
+          _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: this.props.content }, 'data-jsx': 528420226
           })
         ),
         _react2['default'].createElement(
           'div',
           {
-            'data-jsx': 3461085666
+            'data-jsx': 528420226
           },
           _react2['default'].createElement(
             'button',
-            { onClick: this.prevSlide, style: btnLeft, 'data-jsx': 3461085666
+            { onClick: this.prevSlide, style: btnLeft, 'data-jsx': 528420226
             },
-            _react2['default'].createElement('i', { className: 'ion-chevron-left', 'data-jsx': 3461085666
+            _react2['default'].createElement('i', { className: 'ion-chevron-left', 'data-jsx': 528420226
             })
           ),
           _react2['default'].createElement(
             'button',
-            { onClick: this.nextSlide, style: btnRight, 'data-jsx': 3461085666
+            { onClick: this.nextSlide, style: btnRight, 'data-jsx': 528420226
             },
-            _react2['default'].createElement('i', { className: 'ion-chevron-right', 'data-jsx': 3461085666
+            _react2['default'].createElement('i', { className: 'ion-chevron-right', 'data-jsx': 528420226
             })
           )
         ),
         _react2['default'].createElement(_style2['default'], {
-          styleId: 3461085666,
-          css: '.viewport[data-jsx="3461085666"]{position:relative, transition:left 300ms,}button[data-jsx="3461085666"]{display:block, background:rgba(0,0,0, .5), font-size:20px, color:#fff, text-align:center, width:40px, height:40px, border-radius:40px, position:absolute, top:45%, display:flex, align-items:center, justify-content:center, padding:0,}'
+          styleId: 528420226,
+          css: '.viewport[data-jsx="528420226"]{position:relative;-webkit-transition:left 300ms;transition:left 300ms}button[data-jsx="528420226"]{display:block;background:rgba(0,0,0, .5);font-size:20px;color:#fff;-webkit-text-align:center;text-align:center;width:40px;height:40px;border-radius:40px;position:absolute;top:45%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0}'
         })
       );
     }
@@ -5151,11 +5151,11 @@ var contactForm = function (_Component) {
           style: { textAlign: 'center' },
           className: 'form-inline contact-form',
           onSubmit: this.handleSubmit,
-          'data-jsx': 2272587868
+          'data-jsx': 4209863211
         },
         _react2['default'].createElement(
           'div',
-          { style: inputContainerStyle, className: 'input-container', 'data-jsx': 2272587868
+          { style: inputContainerStyle, className: 'input-container', 'data-jsx': 4209863211
           },
           _react2['default'].createElement('input', {
             type: 'text',
@@ -5165,11 +5165,11 @@ var contactForm = function (_Component) {
             },
             value: contact.name,
             style: inputStyle,
-            'data-jsx': 2272587868
+            'data-jsx': 4209863211
           }),
           _react2['default'].createElement(
             'div',
-            { className: errors.name ? 'input-error' : 'hidden', 'data-jsx': 2272587868
+            { className: errors.name ? 'input-error' : 'hidden', 'data-jsx': 4209863211
             },
             errors.name,
             ' ',
@@ -5178,7 +5178,7 @@ var contactForm = function (_Component) {
         ),
         _react2['default'].createElement(
           'div',
-          { style: inputContainerStyle, className: 'input-container', 'data-jsx': 2272587868
+          { style: inputContainerStyle, className: 'input-container', 'data-jsx': 4209863211
           },
           _react2['default'].createElement('input', {
             type: 'text',
@@ -5188,18 +5188,18 @@ var contactForm = function (_Component) {
             },
             value: contact.lastname,
             style: inputStyle,
-            'data-jsx': 2272587868
+            'data-jsx': 4209863211
           }),
           _react2['default'].createElement(
             'div',
-            { className: errors.lastname ? 'input-error' : 'hidden', 'data-jsx': 2272587868
+            { className: errors.lastname ? 'input-error' : 'hidden', 'data-jsx': 4209863211
             },
             validationMessages.lastname
           )
         ),
         _react2['default'].createElement(
           'div',
-          { style: inputContainerStyle, className: 'input-container', 'data-jsx': 2272587868
+          { style: inputContainerStyle, className: 'input-container', 'data-jsx': 4209863211
           },
           _react2['default'].createElement('input', {
             type: 'text',
@@ -5209,18 +5209,18 @@ var contactForm = function (_Component) {
             },
             value: contact.email,
             style: inputStyle,
-            'data-jsx': 2272587868
+            'data-jsx': 4209863211
           }),
           _react2['default'].createElement(
             'div',
-            { className: errors.email ? 'input-error' : 'hidden', 'data-jsx': 2272587868
+            { className: errors.email ? 'input-error' : 'hidden', 'data-jsx': 4209863211
             },
             validationMessages.email
           )
         ),
         _react2['default'].createElement(
           'div',
-          { style: inputContainerStyle, className: 'input-container', 'data-jsx': 2272587868
+          { style: inputContainerStyle, className: 'input-container', 'data-jsx': 4209863211
           },
           _react2['default'].createElement(
             'select',
@@ -5229,18 +5229,18 @@ var contactForm = function (_Component) {
                 return _this2.handleChange(e, 'country');
               },
               value: contact.country,
-              'data-jsx': 2272587868
+              'data-jsx': 4209863211
             },
             _react2['default'].createElement(
               'option',
-              { value: '', 'data-jsx': 2272587868
+              { value: '', 'data-jsx': 4209863211
               },
               texts.select_country
             ),
             this.state.countries.map(function (country) {
               return _react2['default'].createElement(
                 'option',
-                { key: country, value: country, 'data-jsx': 2272587868
+                { key: country, value: country, 'data-jsx': 4209863211
                 },
                 country
               );
@@ -5258,7 +5258,7 @@ var contactForm = function (_Component) {
             className: 'btn',
             onClick: this.handleSubmit,
             disabled: this.state.loading,
-            'data-jsx': 2272587868
+            'data-jsx': 4209863211
           },
           texts.button,
           ' ',
@@ -5266,13 +5266,13 @@ var contactForm = function (_Component) {
         ),
         this.props.terms === 'true' && _react2['default'].createElement(
           'div',
-          { className: 'checkbox', 'data-jsx': 2272587868
+          { className: 'checkbox', 'data-jsx': 4209863211
           },
           _react2['default'].createElement(
             'label',
-            { htmlFor: 'terms', 'data-jsx': 2272587868
+            { htmlFor: 'terms', 'data-jsx': 4209863211
             },
-            _react2['default'].createElement('input', { id: 'terms', type: 'checkbox', onChange: this.handleCheckbox, checked: this.state.terms, 'data-jsx': 2272587868
+            _react2['default'].createElement('input', { id: 'terms', type: 'checkbox', onChange: this.handleCheckbox, checked: this.state.terms, 'data-jsx': 4209863211
             }),
             ' ',
             this.props.texts.terms
@@ -5280,11 +5280,11 @@ var contactForm = function (_Component) {
         ),
         _react2['default'].createElement(
           'div',
-          { className: 'input-container', 'data-jsx': 2272587868
+          { className: 'input-container', 'data-jsx': 4209863211
           },
           _react2['default'].createElement(
             'div',
-            { className: errors.terms ? 'input-error' : 'hidden', 'data-jsx': 2272587868
+            { className: errors.terms ? 'input-error' : 'hidden', 'data-jsx': 4209863211
             },
             validationMessages.terms
           )
@@ -5294,13 +5294,13 @@ var contactForm = function (_Component) {
           {
             className: 'message',
             style: this.state.showMemberExists ? { display: 'inline-block' } : { display: 'none' },
-            'data-jsx': 2272587868
+            'data-jsx': 4209863211
           },
           "you're already praying"
         ),
         _react2['default'].createElement(_style2['default'], {
-          styleId: 2272587868,
-          css: '.message[data-jsx="2272587868"]{color:#fff, width:90%, padding:10px, margin:5px auto, background:#f4334a,}'
+          styleId: 4209863211,
+          css: '.message[data-jsx="4209863211"]{color:#fff;width:90%;padding:10px;margin:5px auto;background:#f4334a}'
         })
       );
     }
