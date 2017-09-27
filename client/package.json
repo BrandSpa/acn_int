@@ -26,6 +26,7 @@
     "babel-polyfill": "^6.23.0",
     "card-validator": "^4.0.0",
     "coverer": "^1.0.3",
+    "dompurify": "^1.0.2",
     "fullpage.js": "^2.9.4",
     "hex-rgba": "^1.0.1",
     "iscroll": "^5.2.0",

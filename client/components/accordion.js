@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import DOMPurify from 'dompurify';
 
 class Accordion extends Component {
   static defaultProps = {
@@ -21,7 +22,7 @@ class Accordion extends Component {
 
   render() {
     const { content, btnTitle, background, titleColor } = this.props;
-
+    const cleanContent = DOMPurify.sanitize(content);
     const btnStyle = {
       color: titleColor,
       background,
@@ -44,16 +45,16 @@ class Accordion extends Component {
           className="accordion__content"
           style={this.state.show ? { display: 'block' } : { display: 'none' }}
         >
-          <div dangerouslySetInnerHTML={{ __html: content }} />
+          <div dangerouslySetInnerHTML={{ __html: cleanContent }} />
         </div>
         <style jsx>{`
         .accordion__btn {
-          width: 100%,
-          height: 60px,
-          border: none,
-          border-radius: 0,
-          font-size: 18px,
-          font-weight: normal,
+          width: 100%;
+          height: 60px;
+          border: none;
+          border-radius: 0;
+          font-size: 18px;
+          font-weight: normal;
         }
         `}</style>
       </div>

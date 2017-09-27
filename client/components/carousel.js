@@ -58,25 +58,25 @@ class Carousel extends React.Component {
         </div>
         <style jsx>{`
             .viewport {
-              position: relative,
-              transition: left 300ms,
+              position: relative;
+              transition: left 300ms;
             }
 
             button {
-              display: block,
-              background: rgba(0,0,0, .5),
-              font-size: 20px,
-              color: #fff,
-              text-align: center,
-              width: 40px,
-              height: 40px,
-              border-radius: 40px,
-              position: absolute,
-              top: 45%,
-              display: flex,
-              align-items: center,
-              justify-content: center,
-              padding: 0,
+              display: block;
+              background: rgba(0,0,0, .5);
+              font-size: 20px;
+              color: #fff;
+              text-align: center;
+              width: 40px;
+              height: 40px;
+              border-radius: 40px;
+              position: absolute;
+              top: 45%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0;
             }
         `}</style>
       </div>

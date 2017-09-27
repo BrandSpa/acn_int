@@ -159,7 +159,7 @@ class contactForm extends Component {
           <input
             type="text"
             placeholder={placeholders.name}
-            onChange={(e) => this.handleChange(e, 'name')}
+            onChange={e => this.handleChange(e, 'name')}
             value={contact.name}
             style={inputStyle}
           />
@@ -171,7 +171,7 @@ class contactForm extends Component {
           <input
             type="text"
             placeholder={placeholders.lastname}
-            onChange={(e) => this.handleChange(e, 'lastname')}
+            onChange={e => this.handleChange(e, 'lastname')}
             value={contact.lastname}
             style={inputStyle}
           />
@@ -183,7 +183,7 @@ class contactForm extends Component {
           <input
             type="text"
             placeholder={placeholders.email}
-            onChange={(e) => this.handleChange(e, 'email')}
+            onChange={e => this.handleChange(e, 'email')}
             value={contact.email}
             style={inputStyle}
           />
@@ -193,7 +193,7 @@ class contactForm extends Component {
         </div>
         <div style={inputContainerStyle} className="input-container">
           <select
-            onChange={(e) => this.handleChange(e, 'country')}
+            onChange={e => this.handleChange(e, 'country')}
             value={contact.country}
           >
             <option value="">{texts.select_country}</option>
@@ -238,11 +238,11 @@ class contactForm extends Component {
         </span>
         <style jsx>{`
           .message {
-            color: #fff,
-            width: 90%,
-            padding: 10px,
-            margin: 5px auto,
-            background: #f4334a,
+            color: #fff;
+            width: 90%;
+            padding: 10px;
+            margin: 5px auto;
+            background: #f4334a;
           }
           `}</style>
       </form>
