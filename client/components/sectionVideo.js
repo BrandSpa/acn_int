@@ -1,21 +1,22 @@
-import React from "react";
-import VideoModal from "./videoModal";
+import React from 'react';
+import PropTypes from 'prop-types';
+import VideoModal from './videoModal';
 
 class SectionVideo extends React.Component {
   static defaultProps = {
-    imgUrl: "",
-    url: "https://www.youtube.com/embed/_lQvw2vSDbs",
-    imageStyle: {}
+    imgUrl: '',
+    url: 'https://www.youtube.com/embed/_lQvw2vSDbs',
+    imageStyle: {},
   };
 
-  showVideo = e => {
+  showVideo = (e) => {
     e.preventDefault();
     this.modal.show();
   };
 
   render() {
-    let linkStyle = { float: "left", lineHeight: "0" };
-    let imageStyle = { width: "100px", margin: "0 auto" };
+    const linkStyle = { float: 'left', lineHeight: '0' };
+    let imageStyle = { width: '100px', margin: '0 auto' };
     imageStyle = { ...imageStyle, ...this.props.imageStyle };
 
     return (
@@ -33,5 +34,11 @@ class SectionVideo extends React.Component {
     );
   }
 }
+
+SectionVideo.propTypes = {
+  imageStyle: PropTypes.object,
+  url: PropTypes.string,
+  imgUrl: PropTypes.string,
+};
 
 export default SectionVideo;

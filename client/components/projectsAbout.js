@@ -1,69 +1,69 @@
-import React from "react";
-import Projects from "./projects";
-import PostsAbout from "./postsAbout";
+import React from 'react';
+import Projects from './projects';
+import PostsAbout from './postsAbout';
 
 const colors = {
-  1: "#b91325",
-  2: "#00355f",
-  3: "#6e5785",
-  4: "#95a0ad",
-  5: "#156734",
-  6: "#689038",
-  7: "#7a2d04",
-  8: "#b27009",
-  9: "#E4A70F"
+  1: '#b91325',
+  2: '#00355f',
+  3: '#6e5785',
+  4: '#95a0ad',
+  5: '#156734',
+  6: '#689038',
+  7: '#7a2d04',
+  8: '#b27009',
+  9: '#E4A70F',
 };
 
 class ProjectsAbout extends React.Component {
-    state = {
-      section: 8
-    };
+  state = {
+    section: 8,
+  };
 
-	handleSection = (i) => {
-		let section = (i - 1);
-		this.setState({section});
-	};
+  handleSection = (i) => {
+    const section = (i - 1);
+    this.setState({ section });
+  };
 
   render() {
-		const { section } = this.state;
+    const { section } = this.state;
 
-		return (
+    return (
       <div>
-				<Projects
-					contents={this.props.projects.map(project => {
-						project["text"] = project.content;
-						return project;
-					})}
-					donate={this.props.donate}
-					changeSection={this.handleSection}
-				/>
+        <Projects
+          contents={this.props.projects.map((project) => {
+            project.text = project.content;
+            return project;
+          })}
+          donate={this.props.donate}
+          changeSection={this.handleSection}
+        />
 
-				<div className="projects-about-num">
+        <div className="projects-about-num">
 
-					<div
-						className="projects-about-num__num"
-						style={{color: colors[this.state.section + 1]}}
-					>
-						<h2>{this.props.projects[section] ? this.props.projects[section].number : ""}</h2>
-					</div>
+          <div
+            className="projects-about-num__num"
+            style={{ color: colors[this.state.section + 1] }}
+          >
+            <h2>{this.props.projects[section] ? this.props.projects[section].number : ''}</h2>
+          </div>
 
-					<div className="projects-about-num__text" >
-						{this.props.projects[section] ? this.props.projects[section].number_text : ""}
-				  </div>
+          <div className="projects-about-num__text" >
+            {this.props.projects[section] ? this.props.projects[section].number_text : ''}
+          </div>
 
-				<div className="projects-about__posts-container">
-					<div className="l-wrap">
-						<h4 class="projects-about__posts-title">{this.props.texts.stories}</h4>
-						<PostsAbout
-							category={this.props.projects[section] ? this.props.projects[section].post_category : ""}
-						/>
-					</div>
-				</div>
-				</div>
+          <div className="projects-about__posts-container">
+            <div className="l-wrap">
+              <h4 className="projects-about__posts-title">{this.props.texts.stories}</h4>
+              <PostsAbout
+                category={this.props.projects[section] ? this.props.projects[section].post_category : ''}
+              />
+            </div>
+          </div>
+        </div>
         <style jsx>{`
           .projects-about-num__num {
             width: 50%;
-      			text-align: right;
+      		  text-align: right;
       			padding-top: 40px;
       			float: left;
       			height: 150px;
@@ -116,8 +116,8 @@ class ProjectsAbout extends React.Component {
           }
         `}</style>
       </div>
-		)
-	}
+    );
+  }
 }
 
 export default ProjectsAbout;

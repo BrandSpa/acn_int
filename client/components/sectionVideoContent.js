@@ -1,15 +1,15 @@
-import React from "react";
-import VideoModal from "./videoModal";
+import React from 'react';
+import VideoModal from './videoModal';
 
 class SectionVideoContent extends React.Component {
   static defaultProps = {
-    imgUrl: "",
-    url: "https://www.youtube.com/embed/_lQvw2vSDbs",
-    content: "",
-    fullHeight: false
+    imgUrl: '',
+    url: 'https://www.youtube.com/embed/_lQvw2vSDbs',
+    content: '',
+    fullHeight: false,
   };
 
-  showVideo = e => {
+  showVideo = (e) => {
     e.preventDefault();
     this.modal.show();
   };
@@ -21,8 +21,9 @@ class SectionVideoContent extends React.Component {
       <div>
         <VideoModal ref={modal => (this.modal = modal)} url={this.props.url} />
         <div
-            className="video-content__bg-container"
-            style={{  background: `url(${this.props.imgUrl})`, height: this.props.fullHeight ? h : "900px"}}>
+          className="video-content__bg-container"
+          style={{ background: `url(${this.props.imgUrl})`, height: this.props.fullHeight ? h : '900px' }}
+        >
           <a
             href="#"
             className="image-video__link"
