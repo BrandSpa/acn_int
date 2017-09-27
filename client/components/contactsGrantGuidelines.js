@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Search from './contactsSearchGrantGuidelines';
-import DOMPurify from 'dompurify';
+// import DOMPurify from 'dompurify';
 
 class ContactsGG extends Component {
   state = {
@@ -77,7 +77,7 @@ class ContactsGG extends Component {
                 contact.fields.map(field => <p>{field}</p>)
               : ''}
 
-              <div className="contact__content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(contact.content) }} />
+              <div className="contact__content" dangerouslySetInnerHTML={{ __html: contact.content }} />
 
               <ul className="contact__countries">
                 {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
