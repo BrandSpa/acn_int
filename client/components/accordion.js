@@ -1,15 +1,18 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Accordion extends React.Component {
   static defaultProps = {
-    background: "#687f87",
-    titleColor: "",
+    background: '#687f87',
+    titleColor: '',
+    content: '',
+    btnTitle: '',
   }
 
   state = { show: false };
 
   componentDidMount() {
-    return { content: "", btnTitle: "Toggle" };
+    return { content: '', btnTitle: 'Toggle' };
   }
 
   toggle = () => {
@@ -20,14 +23,8 @@ class Accordion extends React.Component {
     const { content, btnTitle, background, titleColor } = this.props;
 
     const btnStyle = {
-      width: "100%",
-      height: "60px",
-      border: "none",
-      borderRadius: "0",
-      fontSize: "18px",
-      fontWeight: "normal",
       color: titleColor,
-      background
+      background,
     };
 
     return (
@@ -40,18 +37,35 @@ class Accordion extends React.Component {
           {btnTitle}
           {' '}
           <i
-            className={this.state.show ? "ion-chevron-up" : "ion-chevron-down"}
+            className={this.state.show ? 'ion-chevron-up' : 'ion-chevron-down'}
           />
         </button>
         <div
           className="accordion__content"
-          style={this.state.show ? { display: "block" } : { display: "none" }}
+          style={this.state.show ? { display: 'block' } : { display: 'none' }}
         >
           <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
+        <style jsx>{`
+        .accordion__btn {
+          width: 100%,
+          height: 60px,
+          border: none,
+          border-radius: 0,
+          font-size: 18px,
+          font-weight: normal,
+        }
+        `}</style>
       </div>
     );
   }
 }
+
+Accordion.propTypes = {
+  content: PropTypes.string,
+  btnTitle: PropTypes.string,
+  background: PropTypes.string,
+  titleColor: PropTypes.string,
+};
 
 export default Accordion;
