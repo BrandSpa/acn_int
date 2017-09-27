@@ -1,9 +1,8 @@
-import React from "react";
-import qs from "qs";
-import request from "axios";
-import Minigrid from "minigrid";
-import debounce from "lodash/debounce";
-import Post from "./post";
+import React from 'react';
+import Minigrid from 'minigrid';
+import debounce from 'lodash/debounce';
+import PropTypes from 'prop-types';
+import Post from './post';
 import fetchwp from '../lib/fetch_wp';
 
 class Posts extends React.Component {
@@ -14,7 +13,7 @@ class Posts extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("resize", debounce(this.initGrid, 300));
+    window.addEventListener('resize', debounce(this.initGrid, 300));
     this.initGrid();
   }
 
@@ -23,16 +22,16 @@ class Posts extends React.Component {
   }
 
   getPosts = () => {
-    fetchwp("get_posts")
-    .then(({data = []}) => this.setState({posts: data}))
+    fetchwp('get_posts')
+    .then(({ data = [] }) => this.setState({ posts: data }));
   }
 
   initGrid = () => {
     const { posts } = this.state;
 
     if (posts && posts.length > 0) {
-      let container = this.grid;
-      var grid = new Minigrid({ container, item: ".grid-item" });
+      const container = this.grid;
+      const grid = new Minigrid({ container, item: '.grid-item' });
       grid.mount();
     }
   };
@@ -45,10 +44,10 @@ class Posts extends React.Component {
     const { posts = [] } = this.state;
 
     const postMain = posts.map((post, i) => {
-      if (i == 0) {
+      if (i === 0) {
         return (
           <Post
-            key={i}
+            key={post.ID}
             onImageLoaded={this.initGrid}
             {...this.props}
             type="main"
@@ -62,7 +61,7 @@ class Posts extends React.Component {
       if (i !== 0) {
         return (
           <Post
-            key={i}
+            key={post.ID}
             onImageLoaded={this.initGrid}
             {...this.props}
             type="item"
@@ -81,9 +80,9 @@ class Posts extends React.Component {
           </div>
         </div>
         <button
-          style={{ display: "block" }}
+          style={{ display: 'block' }}
           onClick={this.goToPosts}
-          className={this.state.seeMore ? "bs-see-more" : "hidden"}
+          className={this.state.seeMore ? 'bs-see-more' : 'hidden'}
         >
           {this.props.see_more}
         </button>
@@ -92,4 +91,8 @@ class Posts extends React.Component {
   }
 }
 
+Posts.propTypes = {
+  see_more: PropTypes.string.isRequired,
+  see_more_link: PropTypes.string.isRequired,
+};
 export default Posts;

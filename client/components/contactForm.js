@@ -125,7 +125,7 @@ class contactForm extends Component {
     }
   }
 
-  handleChange = (field, e) => {
+  handleChange = (e, field) => {
     const contact = { ...this.state.contact, [field]: e.target.value };
     this.setState({ contact });
   }
@@ -159,7 +159,7 @@ class contactForm extends Component {
           <input
             type="text"
             placeholder={placeholders.name}
-            onChange={() => this.handleChange('name')}
+            onChange={(e) => this.handleChange(e, 'name')}
             value={contact.name}
             style={inputStyle}
           />
@@ -171,7 +171,7 @@ class contactForm extends Component {
           <input
             type="text"
             placeholder={placeholders.lastname}
-            onChange={() => this.handleChange('lastname')}
+            onChange={(e) => this.handleChange(e, 'lastname')}
             value={contact.lastname}
             style={inputStyle}
           />
@@ -183,7 +183,7 @@ class contactForm extends Component {
           <input
             type="text"
             placeholder={placeholders.email}
-            onChange={() => this.handleChange('email')}
+            onChange={(e) => this.handleChange(e, 'email')}
             value={contact.email}
             style={inputStyle}
           />
@@ -193,7 +193,7 @@ class contactForm extends Component {
         </div>
         <div style={inputContainerStyle} className="input-container">
           <select
-            onChange={() => this.handleChange('country')}
+            onChange={(e) => this.handleChange(e, 'country')}
             value={contact.country}
           >
             <option value="">{texts.select_country}</option>

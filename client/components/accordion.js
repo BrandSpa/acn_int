@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Accordion extends React.Component {
+class Accordion extends Component {
   static defaultProps = {
     background: '#687f87',
     titleColor: '',

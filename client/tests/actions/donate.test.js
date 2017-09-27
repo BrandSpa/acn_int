@@ -60,21 +60,23 @@ describe("donate actions", () => {
       email: "alejandro@brandspa.com",
       country: "Colombia"
     } };
-    const props = { tags: "ENGLISH" };
+    const tags = "ENGLISH";
     const response = { ok: true };
     const exptected = {
       action: "convertloop_contact",
       data: {
         add_tags: ["ENGLISH"],
-        country: "Colombia",
-        email: "alejandro@brandspa.com",
-        name: "ale"
+        contact: {
+          country: "Colombia",
+          email: "alejandro@brandspa.com",
+          name: "ale"
+        }
       }
     };
 
     moxios.stubRequest(endpoint, { response });
     return actions
-      .storeConvertLoop(props, state)
+      .storeConvertLoop(tags, state)
       .then(res => {
         const dataSend = qs.parse(res.config.data);
         expect(dataSend).toEqual(exptected);

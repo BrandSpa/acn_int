@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Search from './contacts_search_gg';
 
 class ContactsGG extends Component {
   state = {
     continent: '',
     country: null,
-    contacts: []
+    contacts: [],
   }
 
   setContact = (country, e) => {
-    if(e) e.preventDefault();
+    if (e) e.preventDefault();
     const { contacts } = this.props;
     const selectedContacts = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
-    console.log(contacts);
-    if(contacts.length > 0) {
+
+    if (contacts.length > 0) {
       this.setState({ contacts: selectedContacts, country });
     }
   }
 
   setContinent = (continentName, e) => {
-    e.preventDefault();
-    console.log(continentName);
-    if(this.state.continent == continentName) {
+    if (e) e.preventDefault();
+
+    if (this.state.continent === continentName) {
       this.setState({ continent: '' });
     } else {
       this.setState({ continent: continentName });
@@ -29,66 +30,60 @@ class ContactsGG extends Component {
   }
 
   render() {
-    const { contactTitle, contacts, continents, countries } = this.props;
+    const { contactTitle, continents, countries } = this.props;
     const { country, continent } = this.state;
-    let countrySelected = country;
-    let continentsKeys = Object.keys(continents);
+    const countrySelected = country;
+    const continentsKeys = Object.keys(continents);
 
     return (
       <div>
         <Search countries={countries} onSelect={this.setContact} />
         <ul className="col-6-l">
-          {continentsKeys.map(continentName => {
-            return (<li className={continent == continentName ? "continent__name continent__name--active" : "continent__name" }>
-              <a href="#" onClick={this.setContinent.bind(null, continentName)}>
-                {continentName}
-                <i className={continent == continentName ? "ion-chevron-up": "ion-chevron-down"}></i>
-              </a>
-              <ul
-                className={continent == continentName
-                  ? "continent__countries continent__countries--open"
-                  : "continent__countries"}
-              >
-                {continents[continent] ? continents[continent].map(country =>
-                  <li>
+          {continentsKeys.map(continentName => (<li className={continent === continentName ? 'continent__name continent__name--active' : 'continent__name'}>
+            <a href="#" onClick={() => this.setContinent(continentName)}>
+              {continentName}
+              <i className={continent === continentName ? 'ion-chevron-up' : 'ion-chevron-down'} />
+            </a>
+            <ul
+              className={continent === continentName
+                  ? 'continent__countries continent__countries--open'
+                  : 'continent__countries'}
+            >
+              {continents[continent] ? continents[continent].map(countr =>
+                  (<li>
                     <a
                       href="#"
-                      className={country == countrySelected ? 'country-selected' : ''}
-                      onClick={this.setContact.bind(null, country)}
+                      className={countr === countrySelected ? 'country-selected' : ''}
+                      onClick={() => this.setContact(countr)}
                     >
                       {country}
                     </a>
-                  </li>
+                  </li>),
                 )
                 : ''}
-              </ul>
-            </li>
-            )
-          })}
+            </ul>
+          </li>
+            ))}
         </ul>
         <div className="col-6-l contacts">
           <h4>{country}</h4>
           <p>{this.state.contacts.length > 0 ? contactTitle : ''}</p>
           {this.state.contacts.map(contact =>
-            <div className="contact">
+            (<div className="contact">
               <img src={contact.image} />
               <h3>{contact.post_title}</h3>
               {contact.hasOwnProperty('fields') && contact.fields.length > 0 ?
-                contact.fields.map(field => {
-                  return <p>{field}</p>
-                })
+                contact.fields.map(field => <p>{field}</p>)
               : ''}
 
               <ul className="contact__countries">
                 {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
-                  contact.countries.map(countr => {
-                    return <li>{countr} ·</li>
-                  })
+                  contact.countries.map(countr => <li>{countr} ·</li>)
                 : ''}
               </ul>
               <p>{contact.post_content}</p>
 
-            </div>
+            </div>),
           )}
 
         </div>
@@ -185,8 +180,15 @@ class ContactsGG extends Component {
 
         `}</style>
       </div>
-    )
+    );
   }
 }
+
+ContactsGG.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  contactTitle: PropTypes.string.isRequired,
+  continents: PropTypes.object.isRequired,
+  countries: PropTypes.array.isRequired,
+};
 
 export default ContactsGG;

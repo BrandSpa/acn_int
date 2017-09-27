@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import AmountBtns from './amountBtns';
 import { onlyNum } from '../../lib/clean_inputs';
 
-
 class Amount extends Component {
   static defaultProps = {
     texts: {},
     amount: 30,
     show_titles: false,
+    donation_type: 'monthly',
   };
 
   changeAmount = (amount, e) => {
@@ -24,9 +24,9 @@ class Amount extends Component {
     this.props.onChange({ amount });
   };
 
-  changeType = (donationType, e) => {
+  changeType = (e, donation_type) => {
     if (e) e.preventDefault();
-    this.props.onChange({ donationType });
+    this.props.onChange({ donation_type });
   };
 
   render() {
@@ -56,9 +56,9 @@ class Amount extends Component {
           <div className="form-group col-7-l">
             <a
               href="#"
-              onClick={this.changeType.bind(null, 'monthly')}
+              onClick={e => this.changeType(e, 'monthly')}
               className={
-                donation_type == 'monthly'
+                donation_type === 'monthly'
                   ? 'donate_react__type donate_react__type--active'
                   : 'donate_react__type '
               }
@@ -67,9 +67,9 @@ class Amount extends Component {
             </a>
             <a
               href="#"
-              onClick={this.changeType.bind(null, 'once')}
+              onClick={e => this.changeType(e, 'once')}
               className={
-                donation_type == 'once'
+                donation_type === 'once'
                   ? 'donate_react__type donate_react__type--active'
                   : 'donate_react__type '
               }
@@ -84,11 +84,11 @@ class Amount extends Component {
 }
 
 Amount.propTypes = {
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
+  width: PropTypes.string.isRequired,
   texts: PropTypes.object,
   donation_type: PropTypes.string,
   amount: PropTypes.number,
-  width: PropTypes.string,
   show_titles: PropTypes.bool,
 };
 

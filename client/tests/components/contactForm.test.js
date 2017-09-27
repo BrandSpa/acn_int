@@ -1,65 +1,65 @@
-import React from "react";
-import { shallow, mount } from "enzyme";
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 import moxios from 'moxios';
-import ContactForm from "../../components/contactForm";
+import ContactForm from '../../components/contactForm';
 
-describe("component ContactForm", () => {
+describe('component ContactForm', () => {
   beforeEach(() => {
-    moxios.install()
-  })
+    moxios.install();
+  });
 
   afterEach(() => {
-    moxios.uninstall()
-  })
+    moxios.uninstall();
+  });
 
   it('should render as expected', () => {
-		let wrapper = shallow(<ContactForm />);
-		expect(wrapper.getNodes()).toMatchSnapshot();
-	})
-
-  it("should have 3 inputs and 1 select", () => {
-    let wrapper = shallow(<ContactForm  />);
-    expect(wrapper.find("input").length).toBe(3);
-    expect(wrapper.find("select").length).toBe(1);
+    const wrapper = shallow(<ContactForm />);
+    expect(wrapper.getNodes()).toMatchSnapshot();
   });
 
-  it("should change country on componentDidMount", () => {
-    let wrapper = mount(<ContactForm country="Germany" countries={['Argentina', 'Colombia']}  />);
-    expect(wrapper.props().country).toBe("Germany");
+  it('should have 3 inputs and 1 select', () => {
+    const wrapper = shallow(<ContactForm />);
+    expect(wrapper.find('input').length).toBe(3);
+    expect(wrapper.find('select').length).toBe(1);
   });
 
-  it("should change contact state", () => {
-    let name = 'ale';
-    let lastname = 'san';
-    let email = 'alesan@gmail.com';
-    let e = {};
-    let wrapper = shallow(<ContactForm />);
+  it('should change country on componentDidMount', () => {
+    const wrapper = mount(<ContactForm country="Germany" countries={['Argentina', 'Colombia']} />);
+    expect(wrapper.props().country).toBe('Germany');
+  });
+
+  it('should change contact state', () => {
+    const name = 'ale';
+    const lastname = 'san';
+    const email = 'alesan@gmail.com';
+    const e = {};
+    const wrapper = shallow(<ContactForm />);
     wrapper
-      .find("input")
+      .find('input')
       .at(0)
-      .simulate("change", { e, target: { value: name } });
+      .simulate('change', { e, target: { value: name } });
 
     wrapper
-      .find("input")
+      .find('input')
       .at(1)
-      .simulate("change", { e, target: { value: lastname } });
+      .simulate('change', { e, target: { value: lastname } });
 
-      wrapper
-      .find("input")
+    wrapper
+      .find('input')
       .at(2)
-      .simulate("change", { e, target: { value: email } });
+      .simulate('change', { e, target: { value: email } });
 
     expect(wrapper.state().contact).toEqual({
       name,
       lastname,
       email,
-      country: ''
+      country: '',
     });
   });
 
   it('should show validations', () => {
-    let wrapper = shallow(<ContactForm  />);
-    wrapper.find('button').simulate('click', {preventDefault: () => {}});
+    const wrapper = shallow(<ContactForm />);
+    wrapper.find('button').simulate('click', { preventDefault: () => {} });
     expect(wrapper.find('.input-error').length).toBe(3);
-  })
+  });
 });
