@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Search from './contactsSearchGrantGuidelines';
+import DOMPurify from 'dompurify';
 
 class ContactsGG extends Component {
   state = {
@@ -76,12 +77,14 @@ class ContactsGG extends Component {
                 contact.fields.map(field => <p>{field}</p>)
               : ''}
 
+              <div className="contact__content" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(contact.content) }} />
+
               <ul className="contact__countries">
                 {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
                   contact.countries.map(countr => <li>{countr} ·</li>)
                 : ''}
               </ul>
-              <div dangerouslySetInnerHTML={{ __html: contact.content }} />
+
             </div>),
           )}
 
@@ -111,6 +114,10 @@ class ContactsGG extends Component {
 
           .continent__name--active > a {
             background: #F1364E;
+          }
+
+          .contact__content {
+            margin: 20px 0;
           }
 
           .continent__countries {
