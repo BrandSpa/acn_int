@@ -1,65 +1,50 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 class Carousel extends React.Component {
   state = {
     currentSlide: 0,
-    left: "0",
+    left: '0',
     viewportWidth: '100%',
   }
 
   componentDidMount() {
-    const num = $(".bs-carousel-item").length;
-    $(".bs-carousel-item").css({ width: `${100 / num}%`, float: "left" });
+    this.setViewportWidth();
+  }
+
+  setViewportWidth = () => {
+    const num = $('.bs-carousel-item').length;
+    $('.bs-carousel-item').css({ width: `${100 / num}%`, float: 'left' });
     this.setState({ viewportWidth: `${num * 100}%` });
   }
 
-  nextSlide = (clear = true) => {
+  nextSlide = () => {
     // if (clear) clearInterval(this.interval);
-    let total = $(".bs-carousel-item").length - 1;
-    let left = this.state.currentSlide < total
+    const total = $('.bs-carousel-item').length - 1;
+    const left = this.state.currentSlide < total
       ? this.state.currentSlide + 1
       : 0;
 
-    this.setState({ left: "-" + left * 100 + "%", currentSlide: left });
+    this.setState({ left: `-${left * 100}%`, currentSlide: left });
   };
 
   prevSlide = () => {
     // clearInterval(this.interval);
-    let total = $(".bs-carousel-item").length - 1;
-    let left = this.state.currentSlide > 0 ? this.state.currentSlide - 1 : 0;
-    this.setState({ left: "-" + left * 100 + "%", currentSlide: left });
+    const left = this.state.currentSlide > 0 ? this.state.currentSlide - 1 : 0;
+    this.setState({ left: `-${left * 100}%`, currentSlide: left });
   };
 
   render() {
-    let viewportStyle = {
+    const viewportStyle = {
       width: this.state.viewportWidth,
-      transition: "left 300ms",
       left: this.state.left,
-      position: "relative"
     };
 
-    let btnStyle = {
-      display: "block",
-      background: "rgba(0,0,0, .5)",
-      fontSize: "20px",
-      color: "#fff",
-      textAlign: "center",
-      width: "40px",
-      height: "40px",
-      borderRadius: "40px",
-      position: "absolute",
-      top: "45%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: 0
-    };
-
-    let btnLeft = { ...btnStyle, left: "20px" };
-    let btnRight = { ...btnStyle, right: "20px" };
+    const btnLeft = { left: '20px' };
+    const btnRight = { right: '20px' };
 
     return (
-      <div style={{ width: "100%", overflow: "hidden" }}>
+      <div style={{ width: '100%', overflow: 'hidden' }}>
         <div style={viewportStyle}>
           <div dangerouslySetInnerHTML={{ __html: this.props.content }} />
         </div>
@@ -71,9 +56,36 @@ class Carousel extends React.Component {
             <i className="ion-chevron-right" />
           </button>
         </div>
+        <style jsx>{`
+            .viewport {
+              position: relative,
+              transition: left 300ms,
+            }
+
+            button {
+              display: block,
+              background: rgba(0,0,0, .5),
+              font-size: 20px,
+              color: #fff,
+              text-align: center,
+              width: 40px,
+              height: 40px,
+              border-radius: 40px,
+              position: absolute,
+              top: 45%,
+              display: flex,
+              align-items: center,
+              justify-content: center,
+              padding: 0,
+            }
+        `}</style>
       </div>
     );
   }
 }
+
+Carousel.propTypes = {
+  content: PropTypes.string,
+};
 
 export default Carousel;
