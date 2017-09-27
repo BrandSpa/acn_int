@@ -81,7 +81,7 @@ class ContactsGG extends Component {
                   contact.countries.map(countr => <li>{countr} ·</li>)
                 : ''}
               </ul>
-              <div dangerouslySetInnerHTML={{ __html: contact.post_content }} />
+              <div dangerouslySetInnerHTML={{ __html: contact.content }} />
             </div>),
           )}
 

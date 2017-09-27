@@ -5912,7 +5912,7 @@ var ContactsGG = function (_Component) {
                   );
                 }) : ''
               ),
-              _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: contact.post_content }, 'data-jsx': 3748104641
+              _react2['default'].createElement('div', { dangerouslySetInnerHTML: { __html: contact.content }, 'data-jsx': 3748104641
               })
             );
           })
