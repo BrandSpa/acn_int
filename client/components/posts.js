@@ -21,9 +21,9 @@ class Posts extends React.Component {
     this.initGrid();
   }
 
-  getPosts = () => {
-    fetchwp('get_posts')
-    .then(({ data = [] }) => this.setState({ posts: data }));
+  getPosts = async () => {
+    const posts = await fetchwp('get_posts');
+    this.setState({ posts: posts.data });
   }
 
   initGrid = () => {
