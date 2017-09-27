@@ -99,29 +99,25 @@ class contactForm extends Component {
     .catch(err => console.log(err));
   }
 
-  storeContact = (isValid) => {
+  storeContact = async (isValid) => {
+    const { cl, redirect } = this.props;
+    const { contact } = this.state;
+
     if (isValid === true) {
       this.setState({ loading: true });
+      await storeConvertLoop(cl.tags, contact);
+      const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
 
-      storeConvertLoop(this.props.cl.tags, this.state.contact)
-      .then(() => {
-        const l = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
-        const gaEvent = { category: 'SUBSCRIBE', action: 'SUBSCRIBE_PRAY', label: `PRAY_${l}` };
-        return storeEvent('ga_event', gaEvent);
-      })
-      .then(() => {
-        const clEvent = { name: this.props.cl.event, person: this.state.contact };
-        return storeEvent('cl_event', clEvent);
-      })
-      .then(() => {
-        const fbEvent = { eventName: 'Lead' };
-        return storeEvent('fb_event', fbEvent);
-      })
-      .then(() => {
-        setTimeout(() => {
-          window.location = this.props.redirect;
-        }, 0);
-      });
+      const gaEventData = { category: 'SUBSCRIBE', action: 'SUBSCRIBE_PRAY', label: `PRAY_${language}` };
+      await storeEvent('ga_event', gaEventData);
+
+      const clEventData = { name: cl.event, person: contact };
+      await storeEvent('cl_event', clEventData);
+
+      const fbEventData = { eventName: 'Lead' };
+      await storeEvent('fb_event', fbEventData);
+
+      // setTimeout(() => window.location = redirect, 0);
     }
   }
 

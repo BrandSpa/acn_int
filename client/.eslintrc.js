@@ -12,9 +12,11 @@ module.exports = {
         "react/jsx-filename-extension": 0,
         "react/forbid-prop-types": 0,
         "camelcase": 0,
+        "no-return-assign": 0
     },
     "env": {
         "browser": 1,
-        "jest": 1
+        "jest": 1,
+        "jquery": 1
     }
 };

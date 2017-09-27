@@ -9,7 +9,7 @@ import { runEvents } from './lib/events';
 //  React components :)
 
 import Menu from './components/menu';
-import ContactForm from './components/contactForm';
+import ContactForm from './components/contactPray';
 import HeaderSlider from './components/headerSlider';
 import sectionVideo from './components/sectionVideo';
 import sectionVideoContent from './components/sectionVideoContent';
@@ -29,8 +29,8 @@ import VideoHeader from './components/videoHeader';
 import Carousel from './components/carousel';
 import Counter from './components/counter';
 import PostShare from './components/postShare';
-import ContactsGG from './components/contacts_gg';
-import ContactUsForm from './components/contact_us_form';
+import ContactsGG from './components/contactsGrantGuidelines';
+import ContactUsForm from './components/contactUsForm';
 
 // jquery
 

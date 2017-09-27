@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Search from './contacts_search_gg';
+import Search from './contactsSearchGrantGuidelines';
 
 class ContactsGG extends Component {
   state = {

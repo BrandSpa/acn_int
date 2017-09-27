@@ -9,22 +9,22 @@ export const runEvents = () => {
     'cl_event',
   ];
 
-  events.forEach(eventName => {
-    let dataStr = localStorage.getItem(eventName);
+  events.forEach((eventName) => {
+    const dataStr = localStorage.getItem(eventName);
 
     if (dataStr !== null) {
       const data = JSON.parse(dataStr);
-      fetchwp('store_event', {title: eventName, data})
-      .then(() => runEvent(eventName, data) )
-      .then(() => flushEvent(eventName) );
+      fetchwp('store_event', { title: eventName, data })
+      .then(() => runEvent(eventName, data))
+      .then(() => flushEvent(eventName));
     }
-  })
+  });
 };
 
 export const storeEvent = (name, options = {}) => {
-  const p = new Promise((resolve, reject) => {
-    localStorage.setItem( name, JSON.stringify(options) );
-    return resolve({name, options});
+  const p = new Promise((resolve) => {
+    localStorage.setItem(name, JSON.stringify(options));
+    return resolve({ name, options });
   });
 
   return p;
@@ -32,7 +32,7 @@ export const storeEvent = (name, options = {}) => {
 
 export const eventGoogleEcommerce = ({ customerId, revenue }) => {
   const p = new Promise((resolve) => {
-    if(typeof ga === 'function') {
+    if (typeof ga === 'function') {
       ga('ecommerce:addTransaction', {
         revenue,
         id: customerId,
@@ -54,7 +54,7 @@ export const eventGoogleAnalytics = (data) => {
   const p = new Promise((resolve) => {
     typeof ga === 'function'
       ? ga('send', 'event', category, action, label, value, {
-        hitCallback: () => resolve()
+        hitCallback: () => resolve(),
       })
       : console.log('ga error');
   });
@@ -62,7 +62,7 @@ export const eventGoogleAnalytics = (data) => {
   return p;
 };
 
-export const eventFacebook = ({eventName = 'Lead', content = {}}) => {
+export const eventFacebook = ({ eventName = 'Lead', content = {} }) => {
   const p = new Promise((resolve) => {
     typeof fbq === 'function'
       ? fbq('track', eventName, content)
@@ -75,9 +75,9 @@ export const eventFacebook = ({eventName = 'Lead', content = {}}) => {
 };
 
 export const eventConvertloop = ({ name, person = {}, metadata = {} }) => {
-  const data = { name, country: person.country, person: {...person, pid: cookies.dp_pid}, metadata };
-  const p = fetchwp('store_event', {title: 'cl_event', content: data})
-    .then(() => fetchwp("convertloop_event", data));
+  const data = { name, country: person.country, person: { ...person, pid: cookies.dp_pid }, metadata };
+  const p = fetchwp('store_event', { title: 'cl_event', content: data })
+    .then(() => fetchwp('convertloop_event', data));
   return p;
 };
 
@@ -85,8 +85,8 @@ export const eventConvertloopAsync = ({ name, person = {}, metadata = {} }) => {
   const personWithPid = { ...person, pid: cookies.dp_pid };
   const data = { name, metadata, person: personWithPid };
 
-  const p = fetchwp('store_event', {title: 'cl_event', content: data})
-    .then(() => fetchwp("convertloop_event", data));
+  const p = fetchwp('store_event', { title: 'cl_event', content: data })
+    .then(() => fetchwp('convertloop_event', data));
 
   return p;
 };
@@ -108,7 +108,6 @@ const runEvent = (eventName, data) => {
     default:
       return Promise.resolve();
   }
-
 };
 
 export const flushEvent = (name) => {

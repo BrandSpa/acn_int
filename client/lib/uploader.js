@@ -1,30 +1,25 @@
 export const openMediaUploader = () => {
-	let media_uploader = wp.media({
-		frame: 'post',
-		state:    'insert',
-		multiple: false
-	});
+  const media_uploader = wp.media({
+    frame: 'post',
+    state: 'insert',
+    multiple: false,
+  });
 
-	let promise = new Promise((resolve) => {
-		media_uploader.on('insert', () => {
-			let json = media_uploader.state().get('selection').first().toJSON();
-			return resolve(json);
-		});
-	});
+  const promise = new Promise((resolve) => {
+    media_uploader.on('insert', () => {
+      const json = media_uploader.state().get('selection').first().toJSON();
+      return resolve(json);
+    });
+  });
 
-	media_uploader.open();
+  media_uploader.open();
 
-	return promise;
+  return promise;
 };
 
 export const section = () => {
-
-	$('.uploader').on('click', (e) => {
-
-		openMediaUploader()
-		.then(res => {
-			$(e.currentTarget).val(res.url);
-		});
-	});
+  $('.uploader').on('click', (e) => {
+    openMediaUploader().then(res => $(e.currentTarget).val(res.url));
+  });
 };
 
