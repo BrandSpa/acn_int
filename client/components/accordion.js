@@ -56,6 +56,14 @@ class Accordion extends Component {
           font-size: 18px;
           font-weight: normal;
         }
+
+        .accordion__content {
+          background: rgba(180, 191, 194, 0.9);
+        }
+
+        .accordion__content p {
+          margin: 0;
+        }
         `}</style>
       </div>
     );

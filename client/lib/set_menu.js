@@ -1,4 +1,4 @@
-const setMenu = function() {
+const setMenu = function () {
   const $menu = $('.menu');
   const currentLang = $('.menu .current-lang > a');
   $menu.find('.current-lang').addClass('dropdown');
@@ -6,14 +6,14 @@ const setMenu = function() {
 
   const langs = $('.menu .lang-item').not($('.current-lang'));
 
-  langs.each(function() {
+  langs.each(function () {
     $menu.find('.dropdown-content').append($(this).html());
     $(this).remove();
   });
 
   $menu.addClass('menu--show');
 
-  currentLang.on('click', e => {
+  currentLang.on('click', (e) => {
     e.preventDefault();
     const $dropdown = $menu.find('.dropdown-content');
 
@@ -22,7 +22,6 @@ const setMenu = function() {
     } else {
       $dropdown.addClass('dropdown-content--show');
     }
-
   });
 
   const newText = `${currentLang.text()} <i class="ion-chevron-down"></i>`;

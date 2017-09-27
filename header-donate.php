@@ -62,13 +62,14 @@
 	}
 
 	  window.addEventListener('scroll', function() {
-    if(document.querySelector('.bs-donate-header').getBoundingClientRect().bottom < 0 ) {
-			changeColorNormal();
-    }
+      var donateHeader = document.querySelector('.bs-donate-header');
+      if(donateHeader && donateHeader.getBoundingClientRect().bottom < 0 ) {
+        changeColorNormal();
+      }
 
-    if(document.querySelector('.bs-donate-header').getBoundingClientRect().bottom > 0) {
-      changeColor();
-    }
+      if(donateHeader && donateHeader.getBoundingClientRect().bottom > 0) {
+        changeColor();
+      }
 		});
   })
   </script>
