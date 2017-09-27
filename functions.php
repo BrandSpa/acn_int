@@ -113,6 +113,7 @@ require_once('shortcodes/vc/modal_gallery.php');
 require_once('shortcodes/vc/counter.php');
 require_once('shortcodes/vc/offices_info.php');
 require_once('shortcodes/vc/contact_us_form.php');
+require_once('shortcodes/vc/section_video.php');
 
 //FULLPAGE
 require_once('shortcodes/fullpage/fullpage.php');

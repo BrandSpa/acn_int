@@ -12,20 +12,22 @@ function bs_section_video_sc($atts, $content = null) {
   $at = shortcode_atts( $attributes , $atts );
 	$imgUrl = wp_get_attachment_image_src($at['image'], 'full')[0];
 
+	$props = [
+		"url" =>  $at['video_url'], 
+		"imgUrl" =>  $imgUrl,
+		"imageStyle" => [
+			"width" =>  $at['image_width'],
+			"height" =>  $at['image_height'],
+			"margin" =>  $at['image_margin']
+		]
+	];
+
   ob_start();
 ?>
 
 <div 
 	class="section-video" 
-	data-props='{
-		"url": "<?php echo $at['video_url'] ?>", 
-		"imgUrl": "<?php echo $imgUrl ?>",
-		"imageStyle": {
-			"width": "<?php echo $at['image_width'] ?>",
-			"height": "<?php echo $at['image_height'] ?>",
-			"margin": "<?php echo $at['image_margin'] ?>"
-		}
-	}'
+	data-props='<?php echo json_encode($props) ?>'
 >
 </div>
 
@@ -35,51 +37,3 @@ function bs_section_video_sc($atts, $content = null) {
 }
 
 add_shortcode( 'bs_section_video', 'bs_section_video_sc' );
-add_action( 'vc_before_init', 'bs_section_video_vc' );
-
-  function bs_section_video_vc() {
-
-    
-		$params = [
-			[
-        "type" => "attach_image",
-        "heading" => "Image",
-        "param_name" => "image",
-        "value" => ''
-			],
-			[
-        "type" => "textfield",
-        "heading" => "Video url",
-        "param_name" => "video_url",
-        "value" => ''
-			],
-			[
-        "type" => "textfield",
-        "heading" => "Image width",
-        "param_name" => "image_width",
-        "value" => '100%'
-			],
-			[
-        "type" => "textfield",
-        "heading" => "Image height",
-        "param_name" => "image_height",
-        "value" => 'auto'
-			],
-			[
-        "type" => "textfield",
-        "heading" => "Image margin",
-        "param_name" => "image_margin",
-        "value" => '0 auto'
-			]
-		];
-
-  	vc_map(
-      array(
-        "name" =>  "BS Section video",
-        "base" => "bs_section_video",
-        "category" =>  "BS",
-        "params" => $params
-      ) 
-    );
-  }
-
