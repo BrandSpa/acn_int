@@ -117,7 +117,7 @@ class contactForm extends Component {
       const fbEventData = { eventName: 'Lead' };
       await storeEvent('fb_event', fbEventData);
 
-      // setTimeout(() => window.location = redirect, 0);
+      setTimeout(() => window.location = redirect, 0);
     }
   }
 
@@ -136,9 +136,6 @@ class contactForm extends Component {
 
     const inputContainerStyle = {
       width: this.props.vertical === 'true' ? '100%' : '20%',
-      '@media (maxWidth: 767px)': {
-        width: '100%',
-      },
     };
 
     const inputStyle = {
