@@ -11,7 +11,7 @@ class Amount extends Component {
     donation_type: 'monthly',
   };
 
-  changeAmount = (amount, e) => {
+  changeAmount = (e, amount) => {
     if (e) e.preventDefault();
     const el = this.amountInput;
     if (amount === 5) el.focus();
@@ -34,7 +34,7 @@ class Amount extends Component {
 
     return (
       <div style={{ width, float: 'left', padding: '1px' }}>
-        { show_titles ? <h5 style={{ color: '#3C515F', paddingBottom: '20px' }}>{texts.step_amount_text}</h5> : '' }
+        { show_titles && <h5>{texts.step_amount_text}</h5>}
         <AmountBtns
           amount={amount}
           texts={texts}
@@ -78,6 +78,12 @@ class Amount extends Component {
             </a>
           </div>
         </div>
+        <style jsx>{`
+          h5 {
+            color: #3C515F;
+            padding-bottom: 20px;
+          }
+        `}</style>
       </div>
     );
   }

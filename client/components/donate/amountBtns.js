@@ -1,43 +1,53 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
+const BtnAmount = ({ changeAmount, amount, amountText }) => (
+  <a
+    href="#"
+    className={amount === amountText ? 'active' : ''}
+    onClick={e => changeAmount(e, amountText)}
+  >
+    ${amountText}
+  </a>
+);
+
 const AmountBtns = (props) => {
   const { changeAmount, texts = {}, amount = 30 } = props;
 
   return (
     <ul className="change-amount" style={{ padding: 0 }}>
       <li className="col-1-4">
-        <a
-          href="#"
-          className={amount === 10 ? 'active' : ''}
-          onClick={() => changeAmount(10)}
-        >$10</a>
+        <BtnAmount
+          changeAmount={changeAmount}
+          amount={amount}
+          amountText={10}
+        />
       </li>
       <li className="col-1-4">
-        <a
-          href="#"
-          className={amount == 30 ? 'active' : ''}
-          onClick={() => changeAmount(30)}
-        >$30</a>
+        <BtnAmount
+          changeAmount={changeAmount}
+          amount={amount}
+          amountText={30}
+        />
       </li>
       <li className="col-1-4">
         <a
           href="#"
           className={amount === 50 ? 'active' : ''}
-          onClick={() => changeAmount(50)}
+          onClick={e => changeAmount(e, 50)}
         >$50</a>
       </li>
       <li className="col-1-4">
         <a
           href="#"
           className={amount === 100 ? 'active' : ''}
-          onClick={() => changeAmount(100)}
+          onClick={e => changeAmount(e, 100)}
         >$100</a>
       </li>
       <li className="col-1-4">
         <a
           href="#"
-          onClick={() => changeAmount(5)}
+          onClick={e => changeAmount(e, 5)}
         >{texts.other}</a>
       </li>
     </ul>

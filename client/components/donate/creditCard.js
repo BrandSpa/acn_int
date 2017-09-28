@@ -1,52 +1,38 @@
-import React from "react";
-import validCard from "card-validator";
-import Cards from "./cards";
-import { onlyNum, maxLength } from "../../lib/clean_inputs";
+import React from 'react';
+import validCard from 'card-validator';
+import Cards from './cards';
+import { onlyNum, maxLength } from '../../lib/clean_inputs';
 
 class CedritCard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showPopover: false
-    };
-  }
-
   static defaultProps = { texts: {}, stripe: {}, errors: {} };
-
-  validateCard = card => {
-    let number = validCard.number(card).isValid;
-    return this.updateErrors({ number });
+  state = {
+    showPopover: false,
   };
 
-  validateExpiry = (month, year) => {
-    let valid = validCard.expirationDate({ month, year });
-    let exp_month = valid.isValid;
-    let exp_year = valid.isValid;
-    return this.updateErrors({ exp_month, exp_year });
-  };
 
-  validateCvc = cvc => {
+  validateCvc = (cvc) => {
     cvc = cvc.length >= 3;
     return this.updateErrors({ cvc });
   };
 
-  getCardType = cardNum => {
-    return validCard.number(cardNum).card
+  getCardType = cardNum => validCard.number(cardNum).card
       ? validCard.number(cardNum).card.type
       : null;
+
+  validateCard = (card) => {
+    const number = validCard.number(card).isValid;
+    return this.updateErrors({ number });
   };
 
-  updateErrors = field => {
-    return { ...this.props.errors, stripe: field };
-  };
+  updateErrors = field => ({ ...this.props.errors, stripe: field });
 
-  handleCard = e => {
-    let val = e.currentTarget.value;
+  handleCard = (e) => {
+    const val = e.currentTarget.value;
     let number = onlyNum(val);
     number = maxLength(number, 16);
-    let errors = this.validateCard(number);
-    let card_type = this.getCardType(number);
-    let stripe = { ...this.props.stripe, number, card_type };
+    const errors = this.validateCard(number);
+    const card_type = this.getCardType(number);
+    const stripe = { ...this.props.stripe, number, card_type };
     this.props.onChange({ stripe, errors });
   };
 
@@ -56,44 +42,51 @@ class CedritCard extends React.Component {
     val = maxLength(val, 2);
     let exp_month = stripe.exp_month;
     let exp_year = stripe.exp_year;
-    if (type == "exp_month") exp_month = val;
-    if (type == "exp_year") exp_year = val;
-    let errors = this.validateExpiry(exp_month, exp_year);
+    if (type == 'exp_month') exp_month = val;
+    if (type == 'exp_year') exp_year = val;
+    const errors = this.validateExpiry(exp_month, exp_year);
     stripe = { ...stripe, exp_month, exp_year };
 
     this.props.onChange({ stripe, errors });
   };
 
-  handleCvc = e => {
+  validateExpiry = (month, year) => {
+    const valid = validCard.expirationDate({ month, year });
+    const exp_month = valid.isValid;
+    const exp_year = valid.isValid;
+    return this.updateErrors({ exp_month, exp_year });
+  };
+
+  handleCvc = (e) => {
     let { stripe } = this.props;
     let cvc = onlyNum(e.currentTarget.value);
     cvc = maxLength(cvc, 4);
     stripe = { ...stripe, cvc };
-    let errors = this.validateCvc(cvc);
+    const errors = this.validateCvc(cvc);
     this.props.onChange({ stripe, errors });
   };
 
-  showErr = field => {
+  showErr = (field) => {
     if (this.props.errors.stripe) {
       return this.props.errors.stripe[field] == false
-        ? "form-group__error"
-        : "hidden";
+        ? 'form-group__error'
+        : 'hidden';
     }
 
-    return "";
+    return '';
   };
 
-  inputErrStyle = field => {
+  inputErrStyle = (field) => {
     if (this.props.errors.stripe) {
       return this.props.errors.stripe[field] == false
-        ? "form-group--error"
-        : "";
+        ? 'form-group--error'
+        : '';
     }
 
-    return "";
+    return '';
   };
 
-  validateAll = e => {
+  validateAll = (e) => {
     if (e) e.preventDefault();
     const { stripe } = this.props;
     const number = this.validateCard(stripe.number);
@@ -102,7 +95,7 @@ class CedritCard extends React.Component {
 
     const errors = {
       ...this.props.errors,
-      stripe: { ...number.stripe, ...exp_month.stripe, ...cvc.stripe }
+      stripe: { ...number.stripe, ...exp_month.stripe, ...cvc.stripe },
     };
 
     this.props.onChange({ errors });
@@ -111,7 +104,7 @@ class CedritCard extends React.Component {
   };
 
   togglePopover = () => {
-    this.setState({showPopover: !this.state.showPopover});
+    this.setState({ showPopover: !this.state.showPopover });
   };
 
   render() {
@@ -120,19 +113,19 @@ class CedritCard extends React.Component {
     return (
       <div
         className="donate_react__creditcard"
-        style={{ width: this.props.width, float: "left", padding: "1px" }}
+        style={{ width: this.props.width, float: 'left', padding: '1px' }}
       >
-      { this.props.show_titles ? <h5 style={{ color: "#3C515F", paddingBottom: '20px' }}>{texts.step_payment_text}</h5> : '' }
+        { this.props.show_titles ? <h5 style={{ color: '#3C515F', paddingBottom: '20px' }}>{texts.step_payment_text}</h5> : '' }
         <Cards {...this.props} />
         <div className="form-group">
           <input
             type="text"
             placeholder={texts.placeholder_credit_card}
-            className={`form-control ${this.inputErrStyle("number")}`}
+            className={`form-control ${this.inputErrStyle('number')}`}
             onChange={this.handleCard}
             value={stripe.number}
           />
-          <span className={this.showErr("number")}>
+          <span className={this.showErr('number')}>
             {texts.validation_card}
           </span>
         </div>
@@ -142,10 +135,10 @@ class CedritCard extends React.Component {
               type="text"
               placeholder={texts.placeholder_month}
               className="form-control"
-              onChange={this.handleExpiry.bind(null, "exp_month")}
+              onChange={this.handleExpiry.bind(null, 'exp_month')}
               value={stripe.exp_month}
             />
-            <span className={this.showErr("exp_month")}>
+            <span className={this.showErr('exp_month')}>
               {texts.validation_month}
             </span>
           </div>
@@ -154,10 +147,10 @@ class CedritCard extends React.Component {
               type="text"
               placeholder={texts.placeholder_year}
               className="form-control"
-              onChange={this.handleExpiry.bind(null, "exp_year")}
+              onChange={this.handleExpiry.bind(null, 'exp_year')}
               value={stripe.exp_year}
             />
-            <span className={this.showErr("exp_year")}>
+            <span className={this.showErr('exp_year')}>
               {texts.validation_year}
             </span>
           </div>
@@ -172,23 +165,23 @@ class CedritCard extends React.Component {
             />
             <span
               style={{
-                display: "block",
-                background: "#3C515F",
-                width: "20px",
-                height: "20px",
-                borderRadius: "20px",
-                color: "#fff",
-                textAlign: "center",
-                position: "absolute",
-                top: "12px",
-                right: "25px",
-                cursor: "pointer"
+                display: 'block',
+                background: '#3C515F',
+                width: '20px',
+                height: '20px',
+                borderRadius: '20px',
+                color: '#fff',
+                textAlign: 'center',
+                position: 'absolute',
+                top: '12px',
+                right: '25px',
+                cursor: 'pointer',
               }}
               onClick={this.togglePopover}
             >
               <i className="ion-help" />
             </span>
-            <span className={this.showErr("cvc")}>
+            <span className={this.showErr('cvc')}>
               {texts.validation_cvc}
             </span>
           </div>
@@ -199,29 +192,29 @@ class CedritCard extends React.Component {
           style={
             this.state.showPopover
               ? {
-                  background: "#fff",
-                  boxShadow: "0 1px 3px 0 rgba(0,0,0,0.26)",
-                  borderRadius: "2px",
-                  textAlign: "center",
-                  display: "block",
-                  margin: "15px 0",
-                  position: "relative",
-                  zIndex: "100"
-                }
-              : { display: "none" }
+                background: '#fff',
+                boxShadow: '0 1px 3px 0 rgba(0,0,0,0.26)',
+                borderRadius: '2px',
+                textAlign: 'center',
+                display: 'block',
+                margin: '15px 0',
+                position: 'relative',
+                zIndex: '100',
+              }
+              : { display: 'none' }
           }
         >
 
           <span
             style={{
-              display: "block",
-              position: "absolute",
-              top: "2px",
-              right: "2px",
-              width: "15px",
-              height: "15px",
-              color: "red",
-              cursor: "pointer"
+              display: 'block',
+              position: 'absolute',
+              top: '2px',
+              right: '2px',
+              width: '15px',
+              height: '15px',
+              color: 'red',
+              cursor: 'pointer',
             }}
             onClick={this.togglePopover}
           >
@@ -230,10 +223,10 @@ class CedritCard extends React.Component {
 
           <span
             style={{
-              display: "block",
-              color: "#3C515F",
-              padding: "10px",
-              fontSize: "14px"
+              display: 'block',
+              color: '#3C515F',
+              padding: '10px',
+              fontSize: '14px',
             }}
           >
             {texts.explain_cvc}

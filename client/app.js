@@ -15,10 +15,12 @@ import Projects from './components/projects';
 import ProjectsInfo from './components/projectsInfo';
 import Accordion from './components/accordion';
 import Posts from './components/posts';
+
 import Donate from './components/donate/single';
 import DonateInline from './components/donate/inline';
 import DonateInlineSection from './components/donate/inline_section';
 import DonateSection from './components/donate/section';
+
 import CampaignsSlider from './components/campaignsSlider';
 import DownloadPdf from './components/downloadPdf';
 import GalleryHeader from './components/galleryHeader';
@@ -31,7 +33,6 @@ import ContactsGG from './components/contactsGrantGuidelines';
 import ContactUsForm from './components/contactUsForm';
 
 // jquery
-
 import setMenuMobile from './lib/set_menu_mobile';
 import setMenu from './lib/set_menu';
 import donateRedirect from './lib/donate_redirect';
@@ -58,14 +59,14 @@ WebFont.load({
 multipleRender(HeaderSlider, '.header-slider');
 multipleRender(ContactForm, '.contact-form', true);
 multipleRender(Posts, '.bs-posts', true);
-multipleRender(Donate, '.bs-donate-react');
+multipleRender(Donate, '.bs-donate-react', true);
 multipleRender(DonateInline, '.bs-donate-inline');
 multipleRender(DonateInlineSection, '.bs-donate-inline-section');
 multipleRender(DonateSection, '.bs-donate-section');
-multipleRender(Projects, '.projects-container');
+multipleRender(Projects, '.projects-container', true);
 multipleRender(ProjectsInfo, '.bs-projects-info');
 multipleRender(Accordion, '.bs-accordion');
-multipleRender(sectionVideo, '.section-video');
+multipleRender(sectionVideo, '.section-video', true);
 multipleRender(sectionVideoContent, '.section-video-content');
 multipleRender(CampaignsSlider, '.bs-campaings-slider');
 multipleRender(DownloadPdf, '.bs-download-pdf');

@@ -8,6 +8,7 @@
 		"transform-es3-property-literals",
 		"transform-es3-member-expression-literals",
 		"add-react-displayname",
+		"transform-runtime",
 		"transform-async-to-generator"
 	]
 }
