@@ -1,7 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 
-const BtnAmount = ({ changeAmount, amount, amountText }) => (
+const AmountBtn = ({ changeAmount, amount, amountText }) => (
   <a
     href="#"
     className={amount === amountText ? 'active' : ''}
@@ -17,32 +17,32 @@ const AmountBtns = (props) => {
   return (
     <ul className="change-amount" style={{ padding: 0 }}>
       <li className="col-1-4">
-        <BtnAmount
+        <AmountBtn
           changeAmount={changeAmount}
           amount={amount}
           amountText={10}
         />
       </li>
       <li className="col-1-4">
-        <BtnAmount
+        <AmountBtn
           changeAmount={changeAmount}
           amount={amount}
           amountText={30}
         />
       </li>
       <li className="col-1-4">
-        <a
-          href="#"
-          className={amount === 50 ? 'active' : ''}
-          onClick={e => changeAmount(e, 50)}
-        >$50</a>
+        <AmountBtn
+          changeAmount={changeAmount}
+          amount={amount}
+          amountText={50}
+        />
       </li>
       <li className="col-1-4">
-        <a
-          href="#"
-          className={amount === 100 ? 'active' : ''}
-          onClick={e => changeAmount(e, 100)}
-        >$100</a>
+        <AmountBtn
+          changeAmount={changeAmount}
+          amount={amount}
+          amountText={100}
+        />
       </li>
       <li className="col-1-4">
         <a

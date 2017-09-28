@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Cards extends Component {
   cardType = (type) => {
-    const typeCls = this.props.stripe.card_type == type
+    const typeCls = this.props.stripe.card_type === type
       ? 'card-type card-type--active'
       : 'card-type';
     return typeCls;

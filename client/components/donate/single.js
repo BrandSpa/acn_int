@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Amount from './amount';
 import CreditCard from './creditCard';
 import Contact from './contact';
@@ -6,7 +7,7 @@ import * as actions from '../../actions/donate';
 import { storeEvent } from '../../lib/events';
 
 function isAllValid(errors = {}) {
-  return Object.keys(errors).every(key => errors[key] == true);
+  return Object.keys(errors).every(key => errors[key] === true);
 }
 
 class Donate extends Component {
@@ -44,7 +45,7 @@ class Donate extends Component {
   componentDidMount() {
     if (this.donateForm) {
       this.donateForm.addEventListener('keydown', (e) => {
-        if (e.which == 9) {
+        if (e.which === 9) {
           e.preventDefault();
           this.nextSection();
         }
@@ -61,67 +62,62 @@ class Donate extends Component {
     this.nextSection();
   }
 
-  completeTransaction = (stripeResponse = {}) => {
+  completeTransaction = async (stripeResponse = {}) => {
     const { amount, donation_type, contact } = this.state;
     const { id } = stripeResponse;
     const base = this.props.redirect[donation_type];
 
     this.setState({ loading: true });
 
-    actions
-      .storeConvertLoop(this.props.tags, this.state.contact)
-      .then(() => {
-        const action = donation_type === 'monthly'
-        ? 'DONATION_MONTHLY'
-        : 'DONATION_UNIQUE';
+    await actions.storeConvertLoop(this.props.tags, this.state.contact);
+    const action = donation_type === 'monthly'
+      ? 'DONATION_MONTHLY'
+      : 'DONATION_UNIQUE';
 
-        const label = bs.currentPageLang === 'Español'
-        ? 'DONATION_SP'
-        : 'DONATION_EN';
+    const label = window.bs.currentPageLang === 'Español'
+      ? 'DONATION_SP'
+      : 'DONATION_EN';
 
-        const event = {
-          action,
-          label,
-          category: 'DONATION',
-          value: amount,
-        };
-        console.log('ga', event);
-        storeEvent('ga_event', event);
-      })
-      .then(() => {
-        const event = {
-          name: `Donation ${donation_type}`,
-          person: contact,
-          metadata: {
-            amount,
-            type: donation_type,
-            url: window.location.href,
-          },
-        };
-        console.log('cl', event);
-        return storeEvent('cl_event', event);
-      })
-      .then(() => {
-        const event = {
-          eventName: 'Purchase',
-          content: { value: amount, currency: 'USD' },
-        };
-        console.log('fb', event);
-        return storeEvent('fb_event', event);
-      })
-      .then(() => {
-        const event = {
-          customerId: `${contact.email}-${id}`,
-          revenue: amount,
-        };
-        return storeEvent('ga_ecm_event', event);
-      })
-      .then((res) => {
-        const url = `${base}?amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
-        setTimeout(() => {
-          window.location = url;
-        }, 0);
-      });
+    const gaEvent = {
+      action,
+      label,
+      category: 'DONATION',
+      value: amount,
+    };
+
+    await storeEvent('ga_event', gaEvent);
+
+    const clEvent = {
+      name: `Donation ${donation_type}`,
+      person: contact,
+      metadata: {
+        amount,
+        type: donation_type,
+        url: window.location.href,
+      },
+    };
+
+    await storeEvent('cl_event', clEvent);
+
+    const fbEvent = {
+      eventName: 'Purchase',
+      content: { value: amount, currency: 'USD' },
+    };
+
+    await storeEvent('fb_event', fbEvent);
+
+    const gaEcommerceEvent = {
+      customerId: `${contact.email}-${id}`,
+      revenue: amount,
+    };
+
+    await storeEvent('ga_ecm_event', gaEcommerceEvent);
+
+    const url = `${base}?amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
+
+    setTimeout(() => {
+      window.location = url;
+    }, 0);
   }
 
   creditCardIsValid = () => {
@@ -134,41 +130,42 @@ class Donate extends Component {
     return isAllValid(errs.contact);
   }
 
-  nextSection = () => {
+  nextSection = async () => {
     let section = this.state.section < 2 ? this.state.section + 1 : 2;
 
-    if (this.state.section == 1) {
+    if (this.state.section === 1) {
       if (!this.creditCardIsValid()) return false;
 
-      actions.stripeToken(this.state).then((res) => {
-        if (res.id) {
-          const stripe = { ...this.state.stripe, token: res.id };
-          this.setState({ ...this.state, stripe });
-          return stripe;
-        }
+      const stripeToken = await actions.stripeToken(this.state);
 
-        if (res.stripeCode) {
-          this.setState({ ...this.state, loading: false, declined: true });
-          section = 1;
-          return false;
-        }
-      });
+      if (stripeToken.id) {
+        const stripe = { ...this.state.stripe, token: stripeToken.id };
+        this.setState({ ...this.state, stripe });
+        return stripe;
+      }
+
+      if (stripeToken.stripeCode) {
+        this.setState({ ...this.state, loading: false, declined: true });
+        section = 1;
+        return false;
+      }
     }
 
     if (this.state.section === 2) {
       if (!this.contactIsValid()) return false;
-      actions
-        .stripeCharge(this.state)
-        .then(res => this.completeTransaction(res.data));
+      const stripeCharge = await actions.stripeCharge(this.state);
+      this.completeTransaction(stripeCharge.data);
     }
 
     const left = `-${section * 100}%`;
 
-    if (this.state.section == 0) {
+    if (this.state.section === 0) {
       this.setState({ section, left, loading: false });
     } else {
       this.setState({ section, left });
     }
+
+    return left;
   };
 
   prevSection = (e) => {
@@ -230,7 +227,7 @@ class Donate extends Component {
             onClick={this.handleSubmit}
             disabled={this.state.loading}
           >
-            {this.state.section == 1
+            {this.state.section === 1
                 ? this.props.texts.next
                 : this.props.texts.donate}
             {' '}
@@ -277,5 +274,11 @@ class Donate extends Component {
     );
   }
 }
+
+Donate.propTypes = {
+  texts: PropTypes.object,
+  redirect: PropTypes.object,
+  is_blue: PropTypes.string.isRequired,
+};
 
 export default Donate;
