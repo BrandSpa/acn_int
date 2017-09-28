@@ -1,5 +1,6 @@
 import React from 'react';
 import validCard from 'card-validator';
+import PropTypes from 'prop-types';
 import Cards from './cards';
 import { onlyNum, maxLength } from '../../lib/clean_inputs';
 
@@ -115,7 +116,7 @@ class CedritCard extends React.Component {
         className="donate_react__creditcard"
         style={{ width: this.props.width, float: 'left', padding: '1px' }}
       >
-        { this.props.show_titles ? <h5 style={{ color: '#3C515F', paddingBottom: '20px' }}>{texts.step_payment_text}</h5> : '' }
+        { this.props.show_titles && <h5>{texts.step_payment_text}</h5> }
         <Cards {...this.props} />
         <div className="form-group">
           <input
@@ -164,19 +165,7 @@ class CedritCard extends React.Component {
               value={stripe.cvc}
             />
             <span
-              style={{
-                display: 'block',
-                background: '#3C515F',
-                width: '20px',
-                height: '20px',
-                borderRadius: '20px',
-                color: '#fff',
-                textAlign: 'center',
-                position: 'absolute',
-                top: '12px',
-                right: '25px',
-                cursor: 'pointer',
-              }}
+              className="cvc-help"
               onClick={this.togglePopover}
             >
               <i className="ion-help" />
@@ -206,28 +195,14 @@ class CedritCard extends React.Component {
         >
 
           <span
-            style={{
-              display: 'block',
-              position: 'absolute',
-              top: '2px',
-              right: '2px',
-              width: '15px',
-              height: '15px',
-              color: 'red',
-              cursor: 'pointer',
-            }}
+            className="cvc-close"
             onClick={this.togglePopover}
           >
             <i className="ion-close" />
           </span>
 
           <span
-            style={{
-              display: 'block',
-              color: '#3C515F',
-              padding: '10px',
-              fontSize: '14px',
-            }}
+            className="cvc-explain"
           >
             {texts.explain_cvc}
           </span>
@@ -237,6 +212,44 @@ class CedritCard extends React.Component {
             alt=""
           />
         </div>
+        <style jsx>{`
+          h5 {
+            color: #3C515F; 
+            padding-bottom: 20px 
+          }
+
+          .cvc-help {
+            display: block;
+            background: #3C515F;
+            width: 20px;
+            height: 20px;
+            borderRadius: 20px;
+            color: #fff;
+            textAlign: center;
+            position: absolute;
+            top: 12px;
+            right: 25px;
+            cursor: pointer;
+          }
+
+          .cvc-explain {
+            display: block;
+            color: #3C515F;
+            padding: 10px;
+            fontSize: 14px;
+          }
+
+          .cvc-close {
+            display: block;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 15px;
+            height: 15px;
+            color: red;
+            cursor: pointer;
+          }
+          `}</style>
       </div>
     );
   }

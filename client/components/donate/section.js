@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Donate from './index';
 
 class DonateSection extends Component {
-  state = {
-    section: 0,
-  }
-
   static defaultProps = {
     content: '',
     titles: [],
+  };
+
+  state = {
+    section: 0,
   };
 
   changeSection = (section) => {

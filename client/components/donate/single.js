@@ -115,9 +115,7 @@ class Donate extends Component {
 
     const url = `${base}?amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
 
-    setTimeout(() => {
-      window.location = url;
-    }, 0);
+    setTimeout(() => window.location = url, 0);
   }
 
   creditCardIsValid = () => {
