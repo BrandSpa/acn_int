@@ -141,7 +141,6 @@ class Donate extends Component {
       if (stripeToken.id) {
         const stripe = { ...this.state.stripe, token: stripeToken.id };
         this.setState({ ...this.state, stripe });
-        return stripe;
       }
 
       if (stripeToken.stripeCode) {
