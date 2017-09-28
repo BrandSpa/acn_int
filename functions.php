@@ -56,64 +56,7 @@ include_once 'apis/ajax/contact_us.php';
 require_once 'options/index.php';
 
 //SHORTCODES
-require_once('shortcodes/contact_form.php');
-require_once('shortcodes/header_slider.php');
-require_once('shortcodes/projects.php');
-require_once('shortcodes/projects_about.php');
-require_once('shortcodes/projects_info.php');
-require_once('shortcodes/section_video.php');
-require_once('shortcodes/section_video_content.php');
-require_once('shortcodes/accordion.php');
-require_once('shortcodes/donate.php');
-require_once('shortcodes/donate_inline.php');
-require_once('shortcodes/donate_inline_section.php');
-require_once('shortcodes/donate_section.php');
-require_once('shortcodes/posts.php');
-require_once('shortcodes/contact_info.php');
-require_once('shortcodes/posts_list.php');
-require_once('shortcodes/campaigns_slider.php');
-require_once('shortcodes/download_pdf.php');
-require_once('shortcodes/share.php');
-require_once('shortcodes/breadcrumb.php');
-require_once('shortcodes/modal_gallery.php');
-require_once('shortcodes/single_modal.php');
-require_once('shortcodes/tri_news.php');
-require_once('shortcodes/post_share.php');
-require_once('shortcodes/arrow.php');
-require_once('shortcodes/carousel.php');
-require_once('shortcodes/carousel_item.php');
-require_once('shortcodes/post_item.php');
-require_once('shortcodes/post_item_square.php');
-require_once('shortcodes/latest_news.php');
-require_once('shortcodes/banner_donation.php');
-require_once('shortcodes/candle.php');
-require_once('shortcodes/video_modal_bg.php');
-require_once('shortcodes/counter.php');
-require_once('shortcodes/get_url_value.php');
-require_once('shortcodes/get_url_if.php');
-require_once('shortcodes/contact_gg.php');
-require_once('shortcodes/contact_us_form.php');
-require_once('shortcodes/offices_info.php');
-
-//VISUAL COMPOSER
-require_once('shortcodes/vc/accordion.php');
-require_once('shortcodes/vc/arrow.php');
-require_once('shortcodes/vc/banner_donation.php');
-require_once('shortcodes/vc/breadcrumb.php');
-require_once('shortcodes/vc/campaigns_slider.php');
-require_once('shortcodes/vc/contact_form.php');
-require_once('shortcodes/vc/donate.php');
-require_once('shortcodes/vc/donate_inline_section.php');
-require_once('shortcodes/vc/donate_section.php');
-require_once('shortcodes/vc/header_slider.php');
-require_once('shortcodes/vc/post_share.php');
-require_once('shortcodes/vc/posts.php');
-require_once('shortcodes/vc/projects_about.php');
-require_once('shortcodes/vc/modal_gallery.php');
-require_once('shortcodes/vc/counter.php');
-require_once('shortcodes/vc/offices_info.php');
-require_once('shortcodes/vc/contact_us_form.php');
-require_once('shortcodes/vc/section_video.php');
+require_once 'shortcodes/index.php';
 
 //FULLPAGE
 require_once('shortcodes/fullpage/fullpage.php');
@@ -137,11 +80,7 @@ require_once('shortcodes/fullpage/vc/fullpage_slide_end.php');
 require_once('shortcodes/fullpage/vc/fullpage_modal.php');
 
 //METABOXES
-require_once('metaboxes/image_square.php');
-require_once('metaboxes/geolify.php');
-require_once('metaboxes/video.php');
-require_once('metaboxes/gallery.php');
-require_once('metaboxes/contact.php');
+require_once 'metaboxes/index.php';
 
 $post_types = array( 'video', 'gallery','featured' );
 
