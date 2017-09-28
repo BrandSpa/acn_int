@@ -1,8 +1,5 @@
 const webpack = require('webpack');
-const fs = require('fs');
 const Path = require('path');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // const extractSass = new ExtractTextPlugin({
 //   filename: "[name].css",
@@ -12,7 +9,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: {
     vendor: [
-      'core-js',
+      'babel-polyfill',
       'react',
       'react-dom',
       'axios',
@@ -23,6 +20,7 @@ module.exports = {
       'card-validator',
       'lazysizes',
       'lazysizes/plugins/bgset/ls.bgset.min.js',
+      'hammerjs',
     ],
   	app: './app.js',
   },

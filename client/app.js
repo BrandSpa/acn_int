@@ -7,8 +7,6 @@ import mitt from 'mitt';
 import { runEvents } from './lib/events';
 
 //  React components :)
-
-import Menu from './components/menu';
 import ContactForm from './components/contactPray';
 import HeaderSlider from './components/headerSlider';
 import sectionVideo from './components/sectionVideo';
@@ -57,10 +55,9 @@ WebFont.load({
 });
 
 // react renders
-multipleRender(Menu, '.bs-menu');
 multipleRender(HeaderSlider, '.header-slider');
-multipleRender(ContactForm, '.contact-form');
-multipleRender(Posts, '.bs-posts');
+multipleRender(ContactForm, '.contact-form', true);
+multipleRender(Posts, '.bs-posts', true);
 multipleRender(Donate, '.bs-donate-react');
 multipleRender(DonateInline, '.bs-donate-inline');
 multipleRender(DonateInlineSection, '.bs-donate-inline-section');
