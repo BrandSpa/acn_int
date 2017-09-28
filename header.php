@@ -1,7 +1,5 @@
 <?php
  header('Access-Control-Allow-Origin: *');
-
- geolify($post);
  $homeUrl =  function_exists(' pll_home_url') ?  pll_home_url() : '/';
  $permalink = get_permalink();
 

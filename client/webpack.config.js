@@ -22,7 +22,7 @@ module.exports = {
       'lazysizes/plugins/bgset/ls.bgset.min.js',
       'hammerjs',
     ],
-    app: './app.js',
+    app: './src/app.js',
   },
   output: {
     path: Path.join(__dirname, '/dist/'),
