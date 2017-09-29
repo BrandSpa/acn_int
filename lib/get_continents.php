@@ -90,7 +90,8 @@ function getContinents() {
       "Turkmenistan",
       "Vietnam"
     ),
-    "Eastern Europe " => array(
+    
+    "Eastern Europe" => array(
       "Albania",
       "Armenia",
       "Belarus",
@@ -187,47 +188,31 @@ function getContinents() {
       "Tuvalu",
       "Vanuatu"
     ),
-
-    "Russia & Central Asia" => array(
+    "Russia & Central Asia" => [
       "Kazakhstan",
       "Kyrgyzstan",
       "Russia",
       "Tajikistan",
       "Turkmenistan",
       "Uzbekistan"
-    )
-
-    // "Western Europe" => array(
-    //   "Andorra",
-    //   "Austria",
-    //   "Belgium",
-    //   "Cyprus",
-    //   "Denmark",
-    //   "Finland",
-    //   "France",
-    //   "Germany",
-    //   "Greece",
-    //   "Iceland",
-    //   "Ireland",
-    //   "Italy",
-    //   "Liechtenstein",
-    //   "Luxembourg",
-    //   "Malta",
-    //   "Monaco",
-    //   "Netherlands",
-    //   "Norway",
-    //   "Portugal",
-    //   "San Marino",
-    //   "Spain",
-    //   "Sweden",
-    //   "Switzerland",
-    //   "United Kingdom"
-    // )
+    ]
 );
 
   return $continents;
 }
 
+function getContinentsList() {
+  return [
+    "Africa",
+    "Asia",
+    "Oceania",
+    "Eastern Europe",
+    "Latin America",
+    "Middle East",
+    "Caribbean",
+    "Oceania",
+    "Russia & Central Asia", 
+  ];
+}
 
-
- ?>
+?>

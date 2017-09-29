@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ContactsSearchGG extends Component {
   state = {
     query: '',
     results: [],
     country: '',
-    openResults: false
+    openResults: false,
   }
 
   handleSubmit = (country, e) => {
@@ -15,17 +16,16 @@ class ContactsSearchGG extends Component {
   handleChange = (e) => {
     e.preventDefault();
     const query = e.target.value;
-    const {countries} = this.props;
+    const { countries } = this.props;
 
-    let results = countries.filter(country => {
-      return country.toLowerCase().indexOf(query.toLowerCase()) != -1;
-    });
+    const results = countries.filter(country =>
+      country.toLowerCase().indexOf(query.toLowerCase()) !== -1);
 
     this.setState({ openResults: true, query, results });
   }
 
-  handleSelect = (country, e) => {
-    e.preventDefault();
+  handleSelect = (e, country) => {
+    if (e) e.preventDefault();
     this.setState({ country, openResults: false, query: '' });
     this.props.onSelect(country);
   }
@@ -39,16 +39,16 @@ class ContactsSearchGG extends Component {
         <form onSubmit={this.handleSubmit}>
           <input type="text" placeholder="Search country" onChange={this.handleChange} value={query} />
         </form>
-        <div className={openResults ? "results results--open" : "results"}>
+        <div className={openResults ? 'results results--open' : 'results'}>
           <ul>
             {results.length > 0
               ?
                 results.map(country =>
-                  <li><a href="" onClick={this.handleSelect.bind(null, country)}>{country}</a></li>
+                  <li><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
                 )
               :
                 countries.map(country =>
-                  <li><a href="" onClick={this.handleSelect.bind(null, country)}>{country}</a></li>
+                  <li><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
                 )
           }
           </ul>
@@ -93,8 +93,13 @@ class ContactsSearchGG extends Component {
 
         `}</style>
       </div>
-    )
+    );
   }
 }
+
+ContactsSearchGG.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+  countries: PropTypes.array.isRequired,
+};
 
 export default ContactsSearchGG;

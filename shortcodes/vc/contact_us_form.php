@@ -4,7 +4,6 @@ add_action( 'vc_before_init', 'bs_contact_us_form_vc' );
 
 function bs_contact_us_form_vc() {
 		$params = [
-
 			[
         "type" => "textfield",
         "heading" => "name placeholder",

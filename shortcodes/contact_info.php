@@ -8,8 +8,8 @@ function bs_contact_info_sc($atts, $content = null) {
 
 <?php
 	if(in_array($country, getOfficesCountries())):
-	$country = space_to_lodash($country);
-?>
+		$country = space_to_lodash($country);
+?>	
 	<div class="bs-contact-info">
 		<h6>ACN <?php echo $country !== 'default' ? $country : '' ?></h6>
 		<h6><?php echo get_option('name_' . $country) ?></h6>
