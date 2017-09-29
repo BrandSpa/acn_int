@@ -202,7 +202,7 @@ function getContinents() {
 }
 
 function getContinentsList() {
-  return array_keys(getContinents);
+  return array_keys(getContinents());
 }
 
 function getContinentsTranslated() {
