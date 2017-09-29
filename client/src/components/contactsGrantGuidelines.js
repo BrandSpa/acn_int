@@ -7,6 +7,7 @@ class ContactsGG extends Component {
   state = {
     continent: '',
     country: null,
+    countryName: '',
     contacts: [],
   }
 
@@ -14,11 +15,10 @@ class ContactsGG extends Component {
     if (e) e.preventDefault();
     const { contacts } = this.props;
     const country = this.props.countriesTranslated[countryName];
-    console.log(country)
     const selectedContacts = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
 
     if (contacts.length > 0) {
-      this.setState({ contacts: selectedContacts, country });
+      this.setState({ contacts: selectedContacts, country, countryName });
     }
   }
 
@@ -34,7 +34,7 @@ class ContactsGG extends Component {
 
   render() {
     const { contactTitle, continents, countries } = this.props;
-    const { country, continent } = this.state;
+    const { countryName, country, continent } = this.state;
     const countrySelected = country;
     const continentsKeys = Object.keys(continents);
 
@@ -70,7 +70,7 @@ class ContactsGG extends Component {
             ))}
         </ul>
         <div className="col-6-l contacts">
-          <h4>{country}</h4>
+          <h4>{countryName}</h4>
           <p>{this.state.contacts.length > 0 ? contactTitle : ''}</p>
           {this.state.contacts.map(contact =>
             (<div className="contact">
