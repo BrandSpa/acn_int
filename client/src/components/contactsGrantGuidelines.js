@@ -14,6 +14,7 @@ class ContactsGG extends Component {
     if (e) e.preventDefault();
     const { contacts } = this.props;
     const country = this.props.countriesTranslated[countryName];
+    console.log(country);
     const selectedContacts = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
 
     if (contacts.length > 0) {
@@ -197,6 +198,7 @@ ContactsGG.propTypes = {
   contactTitle: PropTypes.string.isRequired,
   continents: PropTypes.object.isRequired,
   countries: PropTypes.array.isRequired,
+  countriesTranslated: PropTypes.array.isRequired,
 };
 
 export default ContactsGG;
