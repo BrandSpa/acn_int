@@ -202,17 +202,21 @@ function getContinents() {
 }
 
 function getContinentsList() {
-  return [
-    "Africa",
-    "Asia",
-    "Oceania",
-    "Eastern Europe",
-    "Latin America",
-    "Middle East",
-    "Caribbean",
-    "Oceania",
-    "Russia & Central Asia", 
-  ];
+  return array_keys(getContinents);
+}
+
+function getContinentsTranslated() {
+  $continents = getContinentsList();
+  $continentsWithCountries = getContinents();
+
+  return array_map(function( $continent) {
+    $countries = [];
+    foreach( $continentsWithCountries[$continent] as $country) {
+      return array_push($countries, gett($country));
+    }
+    
+    return [gett($continent) => $countries];
+  }, $continents);
 }
 
 ?>
