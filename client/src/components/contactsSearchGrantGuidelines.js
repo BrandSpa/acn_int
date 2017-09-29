@@ -47,7 +47,7 @@ class ContactsSearchGG extends Component {
                   <li><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
                 )
               :
-              countriesTranslated.map(country =>
+              Object.values(countriesTranslated).map(country =>
                 <li><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
                 )
           }
