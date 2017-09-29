@@ -62,14 +62,16 @@ class Donate extends Component {
     this.nextSection();
   }
 
-  completeTransaction = async (stripeResponse = {}) => {
+  completeTransaction = async () => {
     const { amount, donation_type, contact } = this.state;
-    const { id } = stripeResponse;
+
     const base = this.props.redirect[donation_type];
 
     this.setState({ loading: true });
 
     try {
+      const stripeCharge = await actions.stripeCharge(this.state);
+      const { id } = stripeCharge.data;
       await actions.storeConvertLoop(this.props.tags, this.state.contact);
       const action = donation_type === 'monthly'
       ? 'DONATION_MONTHLY'
@@ -158,8 +160,7 @@ class Donate extends Component {
     if (this.state.section === 2) {
       try {
         if (!this.contactIsValid()) return false;
-        const stripeCharge = await actions.stripeCharge(this.state);
-        this.completeTransaction(stripeCharge.data);
+        this.completeTransaction();
       } catch (err) {
         console.log('donate step err', err);
       }
