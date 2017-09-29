@@ -11,7 +11,7 @@ class ContactsGG extends Component {
     contacts: [],
   }
 
-  setContact = (e, countryName) => {
+  setContact = (countryName, e) => {
     if (e) e.preventDefault();
     const { contacts, countriesTranslated } = this.props;
     const country = Object.keys(countriesTranslated).filter(countryKey => countriesTranslated[countryKey] === countryName)[0];
@@ -58,7 +58,7 @@ class ContactsGG extends Component {
                     <a
                       href="#"
                       className={countr === countrySelected ? 'country-selected' : ''}
-                      onClick={e => this.setContact(e, countr)}
+                      onClick={e => this.setContact(countr, e)}
                     >
                       {countr}
                     </a>

@@ -12826,7 +12826,7 @@ var ContactsGG = function (_Component) {
       country: null,
       countryName: '',
       contacts: []
-    }, _this.setContact = function (e, countryName) {
+    }, _this.setContact = function (countryName, e) {
       if (e) e.preventDefault();
       var _this$props = _this.props,
           contacts = _this$props.contacts,
@@ -12914,7 +12914,7 @@ var ContactsGG = function (_Component) {
                         href: '#',
                         className: countr === countrySelected ? 'country-selected' : '',
                         onClick: function onClick(e) {
-                          return _this2.setContact(e, countr);
+                          return _this2.setContact(countr, e);
                         },
                         'data-jsx': 3911743141
                       },
