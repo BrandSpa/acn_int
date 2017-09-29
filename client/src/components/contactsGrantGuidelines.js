@@ -40,7 +40,7 @@ class ContactsGG extends Component {
 
     return (
       <div>
-        <Search countries={countries} onSelect={this.setContact} />
+        <Search countries={countries} countriesTranslated={countriesTranslated} onSelect={this.setContact} />
         <ul className="col-6-l">
           {continentsKeys.map(continentName => (
             <li className={continent === continentName ? 'continent__name continent__name--active' : 'continent__name'}>

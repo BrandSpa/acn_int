@@ -16,9 +16,9 @@ class ContactsSearchGG extends Component {
   handleChange = (e) => {
     e.preventDefault();
     const query = e.target.value;
-    const { countries } = this.props;
+    const { countriesTranslated } = this.props;
 
-    const results = countries.filter(country =>
+    const results = countriesTranslated.filter(country =>
       country.toLowerCase().indexOf(query.toLowerCase()) !== -1);
 
     this.setState({ openResults: true, query, results });
@@ -31,7 +31,7 @@ class ContactsSearchGG extends Component {
   }
 
   render() {
-    const { countries } = this.props;
+    const { countries, countriesTranslated } = this.props;
     const { query, results, openResults } = this.state;
 
     return (
@@ -47,8 +47,8 @@ class ContactsSearchGG extends Component {
                   <li><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
                 )
               :
-                countries.map(country =>
-                  <li><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
+              countriesTranslated.map(country =>
+                <li><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
                 )
           }
           </ul>
