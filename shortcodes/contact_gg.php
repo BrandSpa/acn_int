@@ -28,7 +28,8 @@ function bs_contact_gg_sc($atts, $content = null) {
     'searchPlaceholder' => $at['searchPlaceholder'],
     'contacts' => $contacts,
     'continents' => getContinentsTranslated(),
-		'countries' => getCountries()
+    'countries' => getCountries(),
+    'countriesTranslated' => getCountriesTranslated()
   ];
 
   ob_start();
