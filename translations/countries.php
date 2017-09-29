@@ -6,5 +6,5 @@ foreach(getCountries() as $key => $trans) {
 }
 
 foreach(getContinentsList() as $key => $continent) {
-	register_translation('bs-' . $key, $continent, 'BS countinents');
+	register_translation('bs-' . $key, $continent, 'BS continents');
 }
