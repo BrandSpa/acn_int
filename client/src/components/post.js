@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { storeEvent } from '../lib/events';
 import cookies from '../lib/cookies';
-import PropTypes from 'prop-types';
 
 const cleanEmpty = arrArg =>
   arrArg.filter(item => item.length > 0);
@@ -10,6 +10,7 @@ class Post extends React.Component {
   static defaultProps = {
     post: {
       post_title: '',
+      type: '',
     },
   };
 
@@ -92,9 +93,10 @@ class Post extends React.Component {
 }
 
 Post.propTypes = {
+  onImageLoaded: PropTypes.func.isRequired,
   post: PropTypes.object,
-  type: PropTypes.string,
-  read_more: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  read_more: PropTypes.string.isRequired,
 };
 
 export default Post;

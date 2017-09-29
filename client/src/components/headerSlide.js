@@ -1,21 +1,17 @@
 import React from 'react';
-import VideoModal from './videoModal';
 import PropTypes from 'prop-types';
+import VideoModal from './videoModal';
 
 class headerSlide extends React.Component {
+
   handleLink = (e) => {
     e.preventDefault();
     if (this.props.is_video) return this.modal.show();
-    setTimeout(() => {
-      window.location.href = this.props.url;
-    }, 0);
+    return setTimeout(() => window.location.href = this.props.url, 0);
   }
 
   render() {
-    const { image, image_position, title, subtitle, url, width, height } = this.props;
-
-    // let bg = `url(${image})`;
-
+    const { image, image_position, width, height, anchor } = this.props;
     const style = {
       backgroundPosition: image_position,
       width,
@@ -24,11 +20,13 @@ class headerSlide extends React.Component {
 
     return (
       <div>
-        { this.props.is_video ? <VideoModal ref={modal => this.modal = modal} url={this.props.url} /> : '' }
-
+        {
+          this.props.is_video &&
+          <VideoModal ref={modal => this.modal = modal} url={this.props.url} />
+        }
         <div className="slider__slide lazyload" style={style} data-bgset={image}>
           <a href="#" className="slider__slide__link-zone" onClick={this.handleLink} />
-          <a href={this.props.anchor} className="slider__slide__anchor">
+          <a href={anchor} className="slider__slide__anchor">
             <svg width="50px" height="57px" viewBox="178 602 20 27" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <polyline id="path-1" points="16.9743561 9.37612525 16.9743561 23.0775777 2.91233907 23.0775777" />
@@ -55,11 +53,11 @@ class headerSlide extends React.Component {
 headerSlide.propTypes = {
   image: PropTypes.string.isRequired,
   image_position: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  anchor: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   width: PropTypes.string.isRequired,
   height: PropTypes.string.isRequired,
+  is_video: PropTypes.string.isRequired,
 };
 
 export default headerSlide;

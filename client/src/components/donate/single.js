@@ -69,53 +69,57 @@ class Donate extends Component {
 
     this.setState({ loading: true });
 
-    await actions.storeConvertLoop(this.props.tags, this.state.contact);
-    const action = donation_type === 'monthly'
+    try {
+      await actions.storeConvertLoop(this.props.tags, this.state.contact);
+      const action = donation_type === 'monthly'
       ? 'DONATION_MONTHLY'
       : 'DONATION_UNIQUE';
 
-    const label = window.bs.currentPageLang === 'Español'
+      const label = window.bs.currentPageLang === 'Español'
       ? 'DONATION_SP'
       : 'DONATION_EN';
 
-    const gaEvent = {
-      action,
-      label,
-      category: 'DONATION',
-      value: amount,
-    };
+      const gaEvent = {
+        action,
+        label,
+        category: 'DONATION',
+        value: amount,
+      };
 
-    await storeEvent('ga_event', gaEvent);
+      await storeEvent('ga_event', gaEvent);
 
-    const clEvent = {
-      name: `Donation ${donation_type}`,
-      person: contact,
-      metadata: {
-        amount,
-        type: donation_type,
-        url: window.location.href,
-      },
-    };
+      const clEvent = {
+        name: `Donation ${donation_type}`,
+        person: contact,
+        metadata: {
+          amount,
+          type: donation_type,
+          url: window.location.href,
+        },
+      };
 
-    await storeEvent('cl_event', clEvent);
+      await storeEvent('cl_event', clEvent);
 
-    const fbEvent = {
-      eventName: 'Purchase',
-      content: { value: amount, currency: 'USD' },
-    };
+      const fbEvent = {
+        eventName: 'Purchase',
+        content: { value: amount, currency: 'USD' },
+      };
 
-    await storeEvent('fb_event', fbEvent);
+      await storeEvent('fb_event', fbEvent);
 
-    const gaEcommerceEvent = {
-      customerId: `${contact.email}-${id}`,
-      revenue: amount,
-    };
+      const gaEcommerceEvent = {
+        customerId: `${contact.email}-${id}`,
+        revenue: amount,
+      };
 
-    await storeEvent('ga_ecm_event', gaEcommerceEvent);
+      await storeEvent('ga_ecm_event', gaEcommerceEvent);
 
-    const url = `${base}?amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
+      const url = `${base}?amount=${amount}&personname=${contact.name}&donation_type=${donation_type}`;
 
-    setTimeout(() => window.location = url, 0);
+      setTimeout(() => window.location = url, 0);
+    } catch (err) {
+      console.log('err donate', err);
+    }
   }
 
   creditCardIsValid = () => {
@@ -133,25 +137,32 @@ class Donate extends Component {
 
     if (this.state.section === 1) {
       if (!this.creditCardIsValid()) return false;
+      try {
+        const stripeToken = await actions.stripeToken(this.state);
 
-      const stripeToken = await actions.stripeToken(this.state);
+        if (stripeToken.id) {
+          const stripe = { ...this.state.stripe, token: stripeToken.id };
+          this.setState({ ...this.state, stripe });
+        }
 
-      if (stripeToken.id) {
-        const stripe = { ...this.state.stripe, token: stripeToken.id };
-        this.setState({ ...this.state, stripe });
-      }
-
-      if (stripeToken.stripeCode) {
-        this.setState({ ...this.state, loading: false, declined: true });
-        section = 1;
-        return false;
+        if (stripeToken.stripeCode) {
+          this.setState({ ...this.state, loading: false, declined: true });
+          section = 1;
+          return false;
+        }
+      } catch (err) {
+        console.log('donate step err', err);
       }
     }
 
     if (this.state.section === 2) {
-      if (!this.contactIsValid()) return false;
-      const stripeCharge = await actions.stripeCharge(this.state);
-      this.completeTransaction(stripeCharge.data);
+      try {
+        if (!this.contactIsValid()) return false;
+        const stripeCharge = await actions.stripeCharge(this.state);
+        this.completeTransaction(stripeCharge.data);
+      } catch (err) {
+        console.log('donate step err', err);
+      }
     }
 
     const left = `-${section * 100}%`;

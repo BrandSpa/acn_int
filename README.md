@@ -44,7 +44,7 @@ composer install
 ## frontend
 - [babel](https://babeljs.io/)
 - [react](https://facebook.github.io/react/)
-- [axios for ajax requests](https://github.com/mzabriskie/axios)
+- [axios](https://github.com/mzabriskie/axios)
 - [sass](http://sass-lang.com/)
 
 #### tests
@@ -59,7 +59,5 @@ composer install
 All javascript it's written on ecmacript 6 or es2015 then compiled with babel and webpack to ecmascript 5
 
 ## todos
-- [ ] add redux to donate component.
 - [ ] help code to be more readable with async/await.
 - [ ] fix tests and improve it.
-- [ ] clean code style with eslint.

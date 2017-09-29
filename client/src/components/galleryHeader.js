@@ -1,54 +1,54 @@
-import React from "react";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class GalleryHeader extends React.Component {
+class GalleryHeader extends Component {
   static defaultProps = {
     images: [],
     excerpts: [],
-    texts: {}
+    texts: {},
   }
 
   state = {
     section: 0,
     imageStyle: {
-      maxWidth: "100%",
-      display: "block",
-      maxHeight: "500px",
-      margin: "0 auto"
-    }
+      maxWidth: '100%',
+      display: 'block',
+      maxHeight: '500px',
+      margin: '0 auto',
+    },
   }
 
   componentDidMount() {
-    //side effect, but necessary
-    let nav = document.querySelector(".nav");
-    nav.style.background = "rgb(34, 34, 34)";
+    const nav = document.querySelector('.nav');
+    nav.style.background = 'rgb(34, 34, 34)';
+  }
+
+  getImage = (e) => {
+    let imageStyle;
+    if (e.target.height > e.target.width) {
+      imageStyle = { ...this.state.imageStyle, maxWidth: '45%' };
+      this.setState({ imageStyle });
+    } else {
+      imageStyle = { ...this.state.imageStyle, maxWidth: '100%' };
+      this.setState({ imageStyle });
+    }
   }
 
   changeSection = (type, e) => {
     if (e) e.preventDefault();
 
     let section = this.state.section;
-    if (type == "next")
+    if (type === 'next') {
       section = this.state.section < this.props.images.length - 1
         ? this.state.section + 1
         : 0;
+    }
 
-    if (type == "prev")
-      section = this.state.section > 0 ? this.state.section - 1 : 0;
+    if (type === 'prev') section = this.state.section > 0 ? this.state.section - 1 : 0;
 
     this.setState({ section });
   }
 
-  getImage = e => {
-    
-    let imageStyle;
-    if (e.target.height > e.target.width) {
-      imageStyle = { ...this.state.imageStyle, maxWidth: "45%" };
-      this.setState({ imageStyle });
-    } else {
-      imageStyle = { ...this.state.imageStyle, maxWidth: "100%" };
-      this.setState({ imageStyle });
-    }
-  }
 
   render() {
     const { images, excerpts } = this.props;
@@ -58,103 +58,103 @@ class GalleryHeader extends React.Component {
     const viewportHeight = `${h}px`;
 
     return (
-        <div className="root" style={{height: rootHeight}}>
-          <div style={{height: viewportHeight}}>
-            <div style={{ maxWidth: w, margin: "0 auto", padding: "0 20px" }}>
-              <h5 className="gallery-header__title">
-                {this.props.texts.gallery} <i className="ion-camera" />
-              </h5>
+      <div className="root" style={{ height: rootHeight }}>
+        <div style={{ height: viewportHeight }}>
+          <div style={{ maxWidth: w, margin: '0 auto', padding: '0 20px' }}>
+            <h5 className="gallery-header__title">
+              {this.props.texts.gallery} <i className="ion-camera" />
+            </h5>
 
-              <div className="gallery-header__item" >
-                <img
-                  onLoad={this.getImage}
-                  src={images[this.state.section]}
-                  style={this.state.imageStyle}
-                />
+            <div className="gallery-header__item" >
+              <img
+                onLoad={this.getImage}
+                src={images[this.state.section]}
+                style={this.state.imageStyle}
+              />
 
-                <div className="gallery-header__excerpt-container">
-                  <span className="gallery-header__excerpt">
-                    {excerpts[this.state.section]}
-                  </span>
-                </div>
-
-                <div className="gallery-header__share-list-container">
-                  <ul className="share-list">
-                    <li>
-                      <a
-                        key={1}
-                        className="share-btn"
-                        href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
-                      >
-                        <i className="ion-social-facebook" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        key={2}
-                        className="share-btn"
-                        href={`https://twitter.com/intent/tweet?text=${window.location.href}`}
-                      >
-                        <i className="ion-social-twitter" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        key={3}
-                        className="share-btn"
-                        href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`}
-                      >
-                        <i className="ion-social-linkedin" />
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        key={4}
-                        className="share-btn"
-                        href={`whatsapp://send?text=${window.location.href}`}
-                      >
-                        <i className="ion-social-whatsapp-outline" />
-                      </a>
-                    </li>
-                  </ul>
-                  <div style={{ float: "right", marginTop: "7px" }}>
-                    <span style={{ color: "#fff", paddingRight: "10px" }}>
-                      {this.state.section + 1}
-                      {" "}
-                      {this.props.texts.of}
-                      {" "}
-                      {images.length}
-                    </span>
-                    <button
-                      key={"btn-1"}
-                      onClick={this.changeSection.bind(null, "prev")}
-                      className="nav-btn"
-                    >
-                      <i className="ion-chevron-left" />
-                    </button>
-                    <button
-                      key={"btn-2"}
-                      onClick={this.changeSection.bind(null, "next")}
-                      className="nav-btn"
-                    >
-                      <i className="ion-chevron-right" />
-                    </button>
-                  </div>
-                </div>
-
+              <div className="gallery-header__excerpt-container">
+                <span className="gallery-header__excerpt">
+                  {excerpts[this.state.section]}
+                </span>
               </div>
-            </div>
-            <div className="arrow-down">
-              <a href={"#post-content"}>
-                <img
-                  onLoad={this.getImage}
-                  src={"/wp-content/themes/acn_int/public/images/down.png"}
-                />
-              </a>
+
+              <div className="gallery-header__share-list-container">
+                <ul className="share-list">
+                  <li>
+                    <a
+                      key={1}
+                      className="share-btn"
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
+                    >
+                      <i className="ion-social-facebook" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      key={2}
+                      className="share-btn"
+                      href={`https://twitter.com/intent/tweet?text=${window.location.href}`}
+                    >
+                      <i className="ion-social-twitter" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      key={3}
+                      className="share-btn"
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`}
+                    >
+                      <i className="ion-social-linkedin" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      key={4}
+                      className="share-btn"
+                      href={`whatsapp://send?text=${window.location.href}`}
+                    >
+                      <i className="ion-social-whatsapp-outline" />
+                    </a>
+                  </li>
+                </ul>
+                <div style={{ float: 'right', marginTop: '7px' }}>
+                  <span style={{ color: '#fff', paddingRight: '10px' }}>
+                    {this.state.section + 1}
+                    {' '}
+                    {this.props.texts.of}
+                    {' '}
+                    {images.length}
+                  </span>
+                  <button
+                    key={'btn-1'}
+                    onClick={e => this.changeSection(e, 'prev')}
+                    className="nav-btn"
+                  >
+                    <i className="ion-chevron-left" />
+                  </button>
+                  <button
+                    key={'btn-2'}
+                    onClick={e => this.changeSection(e, 'next')}
+                    className="nav-btn"
+                  >
+                    <i className="ion-chevron-right" />
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
+          <div className="arrow-down">
+            <a href={'#post-content'}>
+              <img
+                onLoad={this.getImage}
+                src={'/wp-content/themes/acn_int/public/images/down.png'}
+              />
+            </a>
+          </div>
+        </div>
 
-          <style jsx>{`
+        <style jsx>{`
 
             .root {
               background: #222;
@@ -248,9 +248,14 @@ class GalleryHeader extends React.Component {
             }
            `}</style>
 
-        </div>
+      </div>
     );
   }
 }
+
+GalleryHeader.propTypes = {
+  images: PropTypes.object,
+  texts: PropTypes.object,
+};
 
 export default GalleryHeader;

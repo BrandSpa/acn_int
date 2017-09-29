@@ -37,17 +37,15 @@ class ContactUsForm extends Component {
       });
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     if (e) e.preventDefault();
 
     if (this.validate().every(item => item === true)) {
       const data = qs.stringify({ action: 'send_contact_us', data: this.state });
-      request.post('/wp-admin/admin-ajax.php', data)
-      .then((res) => {
-        if (Number.isInteger(res.data)) {
-          this.setState({ complete: true });
-        }
-      });
+      const res = await request.post('/wp-admin/admin-ajax.php', data);
+      if (Number.isInteger(res.data)) {
+        this.setState({ complete: true });
+      }
     }
   }
 
