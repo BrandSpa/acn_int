@@ -207,7 +207,7 @@ function getCountries() {
 function getCountriesTranslated() {
   $countries = [];
   foreach(getCountries() as $country) {
-    $countries[gett($country)] = $country;
+    $countries[$country] = gett($country);
   }
 
   return $countries;
