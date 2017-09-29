@@ -208,16 +208,17 @@ function getContinentsList() {
 function getContinentsTranslated() {
   $continents = getContinentsList();
   $continentsWithCountries = getContinents();
+  $translations = [];
 
-  return array_map(function($continent) {
+  foreach($continents as $continent) {
     $countries = [];
-   
-    foreach( getContinents()[$continent] as $country) {
-      array_push($countries, gett($country));
-    }
     
-    return [gett($continent) => $countries];
-  }, $continents);
+     foreach( getContinents()[$continent] as $country) {
+       array_push($countries, gett($country));
+     }
+     $translations[gett($continent)] = $countries;
+  }
+  return $translations;
 }
 
 ?>
