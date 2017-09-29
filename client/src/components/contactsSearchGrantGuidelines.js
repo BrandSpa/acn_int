@@ -18,7 +18,7 @@ class ContactsSearchGG extends Component {
     const query = e.target.value;
     const { countriesTranslated } = this.props;
 
-    const results = countriesTranslated.filter(country =>
+    const results = Object.values(countriesTranslated).filter(country =>
       country.toLowerCase().indexOf(query.toLowerCase()) !== -1);
 
     this.setState({ openResults: true, query, results });
