@@ -209,8 +209,9 @@ function getContinentsTranslated() {
   $continents = getContinentsList();
   $continentsWithCountries = getContinents();
 
-  return array_map(function( $continent) {
+  return array_map(function($continent) {
     $countries = [];
+    var_dump(getContinents()[$continent]);
     foreach( getContinents()[$continent] as $country) {
       return array_push($countries, gett($country));
     }
