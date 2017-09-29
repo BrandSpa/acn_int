@@ -14,7 +14,7 @@ class ContactsGG extends Component {
   setContact = (e, countryName) => {
     if (e) e.preventDefault();
     const { contacts, countriesTranslated } = this.props;
-    const country = Object.values(countriesTranslated).filter(countr => countr === countryName)[0];
+    const country = Object.keys(countriesTranslated).filter(countryKey => countriesTranslated[countryKey] === countryName)[0];
     const selectedContacts = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
 
     if (contacts.length > 0) {
