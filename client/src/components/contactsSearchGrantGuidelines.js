@@ -44,11 +44,11 @@ class ContactsSearchGG extends Component {
             {results.length > 0
               ?
                 results.map(country =>
-                  <li><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
+                  <li key={country}><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
                 )
               :
               Object.values(countriesTranslated).map(country =>
-                <li><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
+                <li key={country}><a href="#" onClick={e => this.handleSelect(e, country)}>{country}</a></li>,
                 )
           }
           </ul>

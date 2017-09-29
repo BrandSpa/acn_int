@@ -13135,8 +13135,7 @@ var ContactsSearchGG = function (_Component) {
             results.length > 0 ? results.map(function (country) {
               return _react2['default'].createElement(
                 'li',
-                {
-                  'data-jsx': 1034869203
+                { key: country, 'data-jsx': 1034869203
                 },
                 _react2['default'].createElement(
                   'a',
@@ -13150,8 +13149,7 @@ var ContactsSearchGG = function (_Component) {
             }) : (0, _values2['default'])(countriesTranslated).map(function (country) {
               return _react2['default'].createElement(
                 'li',
-                {
-                  'data-jsx': 1034869203
+                { key: country, 'data-jsx': 1034869203
                 },
                 _react2['default'].createElement(
                   'a',
