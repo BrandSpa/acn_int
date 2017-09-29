@@ -201,10 +201,16 @@ function getCountries() {
   );
 
   sort($countries);
-  return $countries;
-  
+  return $countries; 
 }
 
+function getCountriesTranslated() {
+  $countries = [];
+  foreach(getCountries() as $country) {
+    array_push($countries, gett($country));
+  }
 
+  return $countries;
+}
 
  ?>
