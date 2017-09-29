@@ -33,7 +33,7 @@ class ContactsGG extends Component {
   }
 
   render() {
-    const { contactTitle, continents, countries } = this.props;
+    const { contactTitle, continents, countries, countriesTranslated } = this.props;
     const { countryName, country, continent } = this.state;
     const countrySelected = country;
     const continentsKeys = Object.keys(continents);
@@ -84,7 +84,7 @@ class ContactsGG extends Component {
 
               <ul className="contact__countries">
                 {contact.hasOwnProperty('countries') && contact.countries.length > 0 ?
-                  contact.countries.map(countr => <li>{countr} ·</li>)
+                  contact.countries.map(countr => <li>{countriesTranslated[countr]} ·</li>)
                 : ''}
               </ul>
 
