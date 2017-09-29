@@ -27,14 +27,13 @@ function bs_contact_gg_sc($atts, $content = null) {
     'contactTitle' => $at['contactTitle'],
     'searchPlaceholder' => $at['searchPlaceholder'],
     'contacts' => $contacts,
-    'continents' => getContinents(),
+    'continents' => getContinentsTranslated(),
 		'countries' => getCountries()
   ];
 
   ob_start();
 ?>
 
-<?php var_dump(getContinentsTranslated()) ?>
 <div
 	class="bs-contacts-gg"
 	data-props='<?php echo json_encode($props) ?>'
