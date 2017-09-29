@@ -13004,7 +13004,7 @@ ContactsGG.propTypes = {
   contactTitle: _propTypes2['default'].string.isRequired,
   continents: _propTypes2['default'].object.isRequired,
   countries: _propTypes2['default'].array.isRequired,
-  countriesTranslated: _propTypes2['default'].array.isRequired
+  countriesTranslated: _propTypes2['default'].object.isRequired
 };
 
 exports['default'] = ContactsGG;
@@ -13178,7 +13178,8 @@ ContactsSearchGG.displayName = 'ContactsSearchGG';
 
 ContactsSearchGG.propTypes = {
   onSelect: _propTypes2['default'].func.isRequired,
-  countries: _propTypes2['default'].array.isRequired
+  countries: _propTypes2['default'].array.isRequired,
+  countriesTranslated: _propTypes2['default'].object.isRequired
 };
 
 exports['default'] = ContactsSearchGG;

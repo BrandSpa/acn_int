@@ -100,6 +100,7 @@ class ContactsSearchGG extends Component {
 ContactsSearchGG.propTypes = {
   onSelect: PropTypes.func.isRequired,
   countries: PropTypes.array.isRequired,
+  countriesTranslated: PropTypes.object.isRequired,
 };
 
 export default ContactsSearchGG;

@@ -198,7 +198,7 @@ ContactsGG.propTypes = {
   contactTitle: PropTypes.string.isRequired,
   continents: PropTypes.object.isRequired,
   countries: PropTypes.array.isRequired,
-  countriesTranslated: PropTypes.array.isRequired,
+  countriesTranslated: PropTypes.object.isRequired,
 };
 
 export default ContactsGG;
