@@ -10,7 +10,7 @@ class ContactsGG extends Component {
     contacts: [],
   }
 
-  setContact = (country, e) => {
+  setContact = (e, country) => {
     if (e) e.preventDefault();
     const { contacts } = this.props;
     const selectedContacts = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
@@ -40,30 +40,31 @@ class ContactsGG extends Component {
       <div>
         <Search countries={countries} onSelect={this.setContact} />
         <ul className="col-6-l">
-          {continentsKeys.map(continentName => (<li className={continent === continentName ? 'continent__name continent__name--active' : 'continent__name'}>
-            <a href="#" onClick={() => this.setContinent(continentName)}>
-              {continentName}
-              <i className={continent === continentName ? 'ion-chevron-up' : 'ion-chevron-down'} />
-            </a>
-            <ul
-              className={continent === continentName
+          {continentsKeys.map(continentName => (
+            <li className={continent === continentName ? 'continent__name continent__name--active' : 'continent__name'}>
+              <a href="#" onClick={() => this.setContinent(continentName)}>
+                {continentName}
+                <i className={continent === continentName ? 'ion-chevron-up' : 'ion-chevron-down'} />
+              </a>
+              <ul
+                className={continent === continentName
                   ? 'continent__countries continent__countries--open'
                   : 'continent__countries'}
-            >
-              {continents[continent] ? continents[continent].map(countr =>
+              >
+                {continents[continent] ? continents[continent].map(countr =>
                   (<li>
                     <a
                       href="#"
                       className={countr === countrySelected ? 'country-selected' : ''}
-                      onClick={() => this.setContact(countr)}
+                      onClick={e => this.setContact(e, countr)}
                     >
                       {countr}
                     </a>
                   </li>),
                 )
                 : ''}
-            </ul>
-          </li>
+              </ul>
+            </li>
             ))}
         </ul>
         <div className="col-6-l contacts">
