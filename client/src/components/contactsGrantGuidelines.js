@@ -10,9 +10,10 @@ class ContactsGG extends Component {
     contacts: [],
   }
 
-  setContact = (e, country) => {
+  setContact = (e, countryName) => {
     if (e) e.preventDefault();
     const { contacts } = this.props;
+    const country = this.props.countriesTranslated[countryName];
     const selectedContacts = contacts.filter(contact => contact.countries.indexOf(country) !== -1);
 
     if (contacts.length > 0) {
@@ -20,7 +21,7 @@ class ContactsGG extends Component {
     }
   }
 
-  setContinent = (continentName, e) => {
+  setContinent = (e, continentName) => {
     if (e) e.preventDefault();
 
     if (this.state.continent === continentName) {
@@ -42,7 +43,7 @@ class ContactsGG extends Component {
         <ul className="col-6-l">
           {continentsKeys.map(continentName => (
             <li className={continent === continentName ? 'continent__name continent__name--active' : 'continent__name'}>
-              <a href="#" onClick={() => this.setContinent(continentName)}>
+              <a href="#" onClick={e => this.setContinent(e, continentName)}>
                 {continentName}
                 <i className={continent === continentName ? 'ion-chevron-up' : 'ion-chevron-down'} />
               </a>
