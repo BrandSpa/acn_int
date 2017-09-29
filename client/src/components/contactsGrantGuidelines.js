@@ -43,7 +43,7 @@ class ContactsGG extends Component {
         <Search countries={countries} countriesTranslated={countriesTranslated} onSelect={this.setContact} />
         <ul className="col-6-l">
           {continentsKeys.map(continentName => (
-            <li className={continent === continentName ? 'continent__name continent__name--active' : 'continent__name'}>
+            <li key={continentName} className={continent === continentName ? 'continent__name continent__name--active' : 'continent__name'}>
               <a href="#" onClick={e => this.setContinent(e, continentName)}>
                 {continentName}
                 <i className={continent === continentName ? 'ion-chevron-up' : 'ion-chevron-down'} />
@@ -53,8 +53,8 @@ class ContactsGG extends Component {
                   ? 'continent__countries continent__countries--open'
                   : 'continent__countries'}
               >
-                {continents[continent] ? continents[continent].map(countr =>
-                  (<li>
+                {continents[continent] ? continents[continent].map(countr => (
+                  <li key={countr}>
                     <a
                       href="#"
                       className={countr === countrySelected ? 'country-selected' : ''}

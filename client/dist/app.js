@@ -12884,7 +12884,7 @@ var ContactsGG = function (_Component) {
           continentsKeys.map(function (continentName) {
             return _react2['default'].createElement(
               'li',
-              { className: continent === continentName ? 'continent__name continent__name--active' : 'continent__name', 'data-jsx': 3911743141
+              { key: continentName, className: continent === continentName ? 'continent__name continent__name--active' : 'continent__name', 'data-jsx': 3911743141
               },
               _react2['default'].createElement(
                 'a',
@@ -12905,8 +12905,7 @@ var ContactsGG = function (_Component) {
                 continents[continent] ? continents[continent].map(function (countr) {
                   return _react2['default'].createElement(
                     'li',
-                    {
-                      'data-jsx': 3911743141
+                    { key: countr, 'data-jsx': 3911743141
                     },
                     _react2['default'].createElement(
                       'a',
