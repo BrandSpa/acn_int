@@ -211,10 +211,12 @@ function getContinentsTranslated() {
 
   return array_map(function($continent) {
     $countries = [];
-    var_dump(getContinents()[$continent]);
+   
     foreach( getContinents()[$continent] as $country) {
-      return array_push($countries, gett($country));
+      array_push($countries, gett($country));
     }
+
+    var_dump(gett($continent));
     
     return [gett($continent) => $countries];
   }, $continents);
