@@ -18,7 +18,6 @@ class Donate extends Component {
 
   state = {
     section: 0,
-    left: 0,
     loading: false,
     donation_type: 'monthly',
     amount: 30,
@@ -134,59 +133,52 @@ class Donate extends Component {
     return isAllValid(errs.contact);
   }
 
-  nextSection = async () => {
-    let section = this.state.section < 2 ? this.state.section + 1 : 2;
+  getToken = async () => {
+    try {
+      const stripeToken = await actions.stripeToken(this.state);
+
+      if (stripeToken.id) {
+        const stripe = { ...this.state.stripe, token: stripeToken.id };
+        this.setState({ ...this.state, stripe });
+      }
+
+      if (stripeToken.stripeCode) {
+        this.setState({ ...this.state, loading: false, declined: true });
+        return false;
+      }
+    } catch (err) {
+      console.log('donate get token err', err);
+    }
+  }
+
+  nextSection = () => {
+    const section = this.state.section < 2 ? this.state.section + 1 : 2;
 
     if (this.state.section === 1) {
       if (!this.creditCardIsValid()) return false;
-      try {
-        const stripeToken = await actions.stripeToken(this.state);
-
-        if (stripeToken.id) {
-          const stripe = { ...this.state.stripe, token: stripeToken.id };
-          this.setState({ ...this.state, stripe });
-        }
-
-        if (stripeToken.stripeCode) {
-          this.setState({ ...this.state, loading: false, declined: true });
-          section = 1;
-          return false;
-        }
-      } catch (err) {
-        console.log('donate step err', err);
-      }
+      this.getToken();
     }
 
     if (this.state.section === 2) {
-      try {
-        if (!this.contactIsValid()) return false;
-        this.completeTransaction();
-      } catch (err) {
-        console.log('donate step err', err);
-      }
+      if (!this.contactIsValid()) return false;
+      this.completeTransaction();
     }
 
-    const left = `-${section * 100}%`;
+    this.setState({ section, loading: false });
 
-    if (this.state.section === 0) {
-      this.setState({ section, left, loading: false });
-    } else {
-      this.setState({ section, left });
-    }
-
-    return left;
+    return section;
   };
 
   prevSection = (e) => {
     e.preventDefault();
     const section = this.state.section >= 0 ? this.state.section - 1 : 0;
-    const left = `-${section * 100}%`;
-    this.setState({ section, left });
+    this.setState({ section });
   };
 
   render() {
+    const { section } = this.state;
     const sectionWidth = `${100 / 3}%`;
-    const viewPortStyle = { width: '300%', left: this.state.left };
+    const viewPortStyle = { width: '300%', left: `-${section * 100}%` };
     const donationTypeStyle = {
       color: this.props.is_blue ? 'rgb(60, 81, 95)' : '#fff',
     };
