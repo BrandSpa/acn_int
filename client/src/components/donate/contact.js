@@ -119,6 +119,7 @@ Contact.propTypes = {
   texts: PropTypes.object,
   contact: PropTypes.object,
   width: PropTypes.string,
+  show_titles: PropTypes.string,
   inline: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
 };

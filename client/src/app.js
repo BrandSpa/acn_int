@@ -56,28 +56,28 @@ WebFont.load({
 });
 
 // react renders
-multipleRender(HeaderSlider, '.header-slider');
+multipleRender(HeaderSlider, '.header-slider', true);
 multipleRender(ContactForm, '.contact-form', true);
 multipleRender(Posts, '.bs-posts', true);
 multipleRender(Donate, '.bs-donate-react', true);
-multipleRender(DonateInline, '.bs-donate-inline');
-multipleRender(DonateInlineSection, '.bs-donate-inline-section');
-multipleRender(DonateSection, '.bs-donate-section');
+multipleRender(DonateInline, '.bs-donate-inline', true);
+multipleRender(DonateInlineSection, '.bs-donate-inline-section', true);
+multipleRender(DonateSection, '.bs-donate-section', true);
 multipleRender(Projects, '.projects-container', true);
-multipleRender(ProjectsInfo, '.bs-projects-info');
-multipleRender(Accordion, '.bs-accordion');
+multipleRender(ProjectsInfo, '.bs-projects-info', true);
+multipleRender(Accordion, '.bs-accordion', true);
 multipleRender(sectionVideo, '.section-video', true);
-multipleRender(sectionVideoContent, '.section-video-content');
-multipleRender(CampaignsSlider, '.bs-campaings-slider');
-multipleRender(DownloadPdf, '.bs-download-pdf');
-multipleRender(GalleryHeader, '.bs-gallery-header');
-multipleRender(ProjectsAbout, '.bs-projects-about');
-multipleRender(VideoHeader, '.bs-video-header');
-multipleRender(Carousel, '.bs-carousel');
-multipleRender(Counter, '.bs-counter');
-multipleRender(PostShare, '.bs-post-share');
-multipleRender(ContactsGG, '.bs-contacts-gg');
-multipleRender(ContactUsForm, '.bs-contact-form-us');
+multipleRender(sectionVideoContent, '.section-video-content', true);
+multipleRender(CampaignsSlider, '.bs-campaings-slider', true);
+multipleRender(DownloadPdf, '.bs-download-pdf', true);
+multipleRender(GalleryHeader, '.bs-gallery-header', true);
+multipleRender(ProjectsAbout, '.bs-projects-about', true);
+multipleRender(VideoHeader, '.bs-video-header', true);
+multipleRender(Carousel, '.bs-carousel', true);
+multipleRender(Counter, '.bs-counter', true);
+multipleRender(PostShare, '.bs-post-share', true);
+multipleRender(ContactsGG, '.bs-contacts-gg', true);
+multipleRender(ContactUsForm, '.bs-contact-form-us', true);
 
 // jquery calls
 setMenu();

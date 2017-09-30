@@ -1,12 +1,10 @@
-import React, { Component } from "react";
-import request from "axios";
-import qs from "qs";
-import Amount from "./amount";
-import CreditCard from "./creditCard";
-import Contact from "./contact";
-import FourStep from "./four";
-import * as actions from "../../actions/donate";
-import { storeEvent } from "../../lib/events";
+import React, { Component } from 'react';
+import Amount from './amount';
+import CreditCard from './creditCard';
+import Contact from './contact';
+import FourStep from './four';
+import * as actions from '../../actions/donate';
+import { storeEvent } from '../../lib/events';
 
 function isAllValid(errors = {}) {
   return Object.keys(errors).every(key => errors[key] == true);
@@ -19,27 +17,27 @@ class DonateInline extends Component {
     section: 0,
     left: 0,
     loading: false,
-    donation_type: "monthly",
+    donation_type: 'monthly',
     amount: 30,
-    currency: "usd",
-    contact: { name: "", email: "", country: "" },
+    currency: 'usd',
+    contact: { name: '', email: '', country: '' },
     stripe: {
-      card_type: "",
-      number: "",
-      exp_month: "",
-      exp_year: "",
-      cvc: "",
-      token: ""
+      card_type: '',
+      number: '',
+      exp_month: '',
+      exp_year: '',
+      cvc: '',
+      token: '',
     },
     errors: { stripe: {}, contact: {} },
     is_blue: false,
     show_four: false,
-    show_titles: false
+    show_titles: false,
   };
 
   componentDidMount() {
-  if(this.donateForm) {
-      this.donateForm.addEventListener("keydown", e => {
+    if (this.donateForm) {
+      this.donateForm.addEventListener('keydown', (e) => {
         if (e.which == 9) {
           e.preventDefault();
           this.handleSubmit();
@@ -48,38 +46,34 @@ class DonateInline extends Component {
     }
   }
 
-  handleChange = field => {
+  handleChange = (field) => {
     this.setState({ ...this.state, ...field });
   };
 
-  creditCardIsValid = () => {
-    return new Promise((resolve, reject) => {
-      let errs = this.creditCard.validateAll();
-      let isValid = isAllValid(errs.stripe);
-      return resolve(isValid);
-    });
-  };
+  creditCardIsValid = () => new Promise((resolve, reject) => {
+    const errs = this.creditCard.validateAll();
+    const isValid = isAllValid(errs.stripe);
+    return resolve(isValid);
+  });
 
-  contactIsValid = () => {
-    return new Promise((resolve, reject) => {
-      let errs = this.contact.validateAll();
-      let isValid = isAllValid(errs.contact);
-      return resolve(isValid);
-    });
-  };
+  contactIsValid = () => new Promise((resolve, reject) => {
+    const errs = this.contact.validateAll();
+    const isValid = isAllValid(errs.contact);
+    return resolve(isValid);
+  });
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     if (e) e.preventDefault();
 
     this.contactIsValid()
-      .then(res => {
+      .then((res) => {
         if (!res) return false;
       })
       .then(this.creditCardIsValid)
-      .then(res => {
+      .then((res) => {
         if (!res) return false;
-        this.setState({loading: true});
-        actions.stripeToken(this.state).then(res => {
+        this.setState({ loading: true });
+        actions.stripeToken(this.state).then((res) => {
           if (res.id) {
             const stripe = { ...this.state.stripe, token: res.id };
             this.setState({ stripe });
@@ -105,13 +99,13 @@ class DonateInline extends Component {
       .storeConvertLoop(this.props.tags, this.state.contact)
       .then(() => {
         const event = {
-          category: "DONATION",
-          action: "DONATION_MONTHLY",
-          label: "DONATION_EN",
-          value: amount
+          category: 'DONATION',
+          action: 'DONATION_MONTHLY',
+          label: 'DONATION_EN',
+          value: amount,
         };
-        console.log("ga", event);
-        storeEvent("ga_event");
+        console.log('ga', event);
+        storeEvent('ga_event');
       })
       .then(() => {
         const event = {
@@ -120,65 +114,64 @@ class DonateInline extends Component {
           metadata: {
             amount,
             type: donation_type,
-            url: window.location.href
-          }
+            url: window.location.href,
+          },
         };
-        console.log("cl", event);
-        return storeEvent("cl_event", event);
-
+        console.log('cl', event);
+        return storeEvent('cl_event', event);
       })
       .then(() => {
         const event = {
-          eventName: "Purchase",
-          content: { value: amount, currency: "USD" }
+          eventName: 'Purchase',
+          content: { value: amount, currency: 'USD' },
         };
-        console.log("fb", event);
-        return storeEvent("fb_event");
+        console.log('fb', event);
+        return storeEvent('fb_event');
       })
       .then(() => {
         const event = {
           customerId: `${contact.email}-${id}`,
-          revenue: amount
+          revenue: amount,
         };
-        console.log("ga_ecm_event", event);
-        return storeEvent("ga_ecm_event", event);
+        console.log('ga_ecm_event', event);
+        return storeEvent('ga_ecm_event', event);
       })
-      .then(res => {
+      .then((res) => {
         // const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&order_id=${id}`;
         window.location = base;
       });
   };
 
   render() {
-    let sectionWidth = "100%";
-    let viewPortStyle = {
-      width: "100%",
+    const sectionWidth = '100%';
+    const viewPortStyle = {
+      width: '100%',
       left: this.state.left,
-      display: "block"
+      display: 'block',
     };
 
-    let donationTypeStyle = {
-      display: "inline",
-      marginLeft: "15px",
-      color: this.props.is_blue ? "#3C515F" : "#fff"
+    const donationTypeStyle = {
+      display: 'inline',
+      marginLeft: '15px',
+      color: this.props.is_blue ? '#3C515F' : '#fff',
     };
 
-    let backBtnStyle = {
-      float: "right",
-      background: "transparent",
-      border: "none"
+    const backBtnStyle = {
+      float: 'right',
+      background: 'transparent',
+      border: 'none',
     };
 
-    console.log("four", this.state.show_four);
+    console.log('four', this.state.show_four);
 
     return (
       <div>
         <form
           onSubmit={this.handleSubmit}
           className={
-            this.props.is_blue ? "donate_react donate_inline" : "donate_react"
+            this.props.is_blue ? 'donate_react donate_inline' : 'donate_react'
           }
-          style={this.state.show_four ? { display: "none" } : { display: "block" }}
+          style={this.state.show_four ? { display: 'none' } : { display: 'block' }}
           ref={donate => (this.donateForm = donate)}
         >
 
@@ -188,7 +181,7 @@ class DonateInline extends Component {
               {...this.state}
               {...this.props}
               width={sectionWidth}
-              inline={true}
+              inline
               onChange={this.handleChange}
             />
 
@@ -208,13 +201,13 @@ class DonateInline extends Component {
             />
           </div>
 
-          <div style={{ marginBottom: "10px" }}>
+          <div style={{ marginBottom: '10px' }}>
             <button
               className="donate_react__submit pull-left"
               onClick={this.handleSubmit}
               disabled={this.state.loading}
             >
-              {this.props.texts.donate}{this.state.loading ? "..." : ""}
+              {this.props.texts.donate}{this.state.loading ? '...' : ''}
             </button>
 
             <span style={donationTypeStyle}>
@@ -224,7 +217,7 @@ class DonateInline extends Component {
           </div>
         </form>
 
-        <FourStep {...this.props} {...this.state}  />
+        <FourStep {...this.props} {...this.state} />
       </div>
     );
   }
