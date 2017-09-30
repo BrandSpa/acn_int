@@ -14,7 +14,8 @@ module.exports = {
         "react/forbid-prop-types": 0,
         "react/no-array-index-key": 0,
         "camelcase": 0,
-        "no-return-assign": 0
+        "no-return-assign": 0,
+        "radix": 0
     },
     "env": {
         "browser": 1,
