@@ -43,8 +43,6 @@ function contact_us($data = [], $smtp) {
     }
   }
 
-
-
   return 'Insert post error';
 }
 
@@ -60,7 +58,7 @@ function sendMail($data = [], $smtp) {
     $mail->Username = $smtp['username'];                 // SMTP username
     $mail->Password = $smtp['password'];                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 465;                                    // TCP port to connect to
+    $mail->Port = $smtp['port'];                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom('noreplay@acninternational.org');
