@@ -4,25 +4,30 @@ import PropTypes from 'prop-types';
 import Cards from './cards';
 import { onlyNum, maxLength } from '../../lib/clean_inputs';
 
-class CedritCard extends React.Component {
-  static defaultProps = { texts: {}, stripe: {}, errors: {} };
+class CredritCard extends React.Component {
+  static defaultProps = {
+    texts: {},
+    stripe: {},
+    errors: {},
+  };
+
   state = {
     showPopover: false,
   };
 
-
-  validateCvc = (cvc) => {
-    cvc = cvc.length >= 3;
-    return this.updateErrors({ cvc });
-  };
-
-  getCardType = cardNum => validCard.number(cardNum).card
-      ? validCard.number(cardNum).card.type
-      : null;
+  getCardType = (cardNum) => {
+    const isValid = validCard.number(cardNum).card ? validCard.number(cardNum).card.type : null;
+    return isValid;
+  }
 
   validateCard = (card) => {
     const number = validCard.number(card).isValid;
     return this.updateErrors({ number });
+  };
+
+  validateCvc = (cvc) => {
+    const isValid = cvc.length >= 3;
+    return this.updateErrors({ cvc: isValid });
   };
 
   updateErrors = field => ({ ...this.props.errors, stripe: field });
@@ -43,8 +48,8 @@ class CedritCard extends React.Component {
     val = maxLength(val, 2);
     let exp_month = stripe.exp_month;
     let exp_year = stripe.exp_year;
-    if (type == 'exp_month') exp_month = val;
-    if (type == 'exp_year') exp_year = val;
+    if (type === 'exp_month') exp_month = val;
+    if (type === 'exp_year') exp_year = val;
     const errors = this.validateExpiry(exp_month, exp_year);
     stripe = { ...stripe, exp_month, exp_year };
 
@@ -69,7 +74,7 @@ class CedritCard extends React.Component {
 
   showErr = (field) => {
     if (this.props.errors.stripe) {
-      return this.props.errors.stripe[field] == false
+      return this.props.errors.stripe[field] === false
         ? 'form-group__error'
         : 'hidden';
     }
@@ -79,7 +84,7 @@ class CedritCard extends React.Component {
 
   inputErrStyle = (field) => {
     if (this.props.errors.stripe) {
-      return this.props.errors.stripe[field] == false
+      return this.props.errors.stripe[field] === false
         ? 'form-group--error'
         : '';
     }
@@ -109,7 +114,7 @@ class CedritCard extends React.Component {
   };
 
   render() {
-    const { texts, stripe, errors } = this.props;
+    const { texts, stripe } = this.props;
 
     return (
       <div
@@ -136,7 +141,7 @@ class CedritCard extends React.Component {
               type="text"
               placeholder={texts.placeholder_month}
               className="form-control"
-              onChange={this.handleExpiry.bind(null, 'exp_month')}
+              onChange={e => this.handleExpiry('exp_month', e)}
               value={stripe.exp_month}
             />
             <span className={this.showErr('exp_month')}>
@@ -148,7 +153,7 @@ class CedritCard extends React.Component {
               type="text"
               placeholder={texts.placeholder_year}
               className="form-control"
-              onChange={this.handleExpiry.bind(null, 'exp_year')}
+              onChange={e => this.handleExpiry('exp_year', e)}
               value={stripe.exp_year}
             />
             <span className={this.showErr('exp_year')}>
@@ -194,12 +199,13 @@ class CedritCard extends React.Component {
           }
         >
 
-          <span
+          <a
+            href="#"
             className="cvc-close"
             onClick={this.togglePopover}
           >
             <i className="ion-close" />
-          </span>
+          </a>
 
           <span
             className="cvc-explain"
@@ -255,4 +261,13 @@ class CedritCard extends React.Component {
   }
 }
 
-export default CedritCard;
+CredritCard.propTypes = {
+  stripe: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
+  texts: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  show_titles: PropTypes.string.isRequired,
+  width: PropTypes.string.isRequired,
+};
+
+export default CredritCard;
