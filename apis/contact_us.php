@@ -40,9 +40,9 @@ function contact_us($data = [], $smtp) {
 
     return $result;
   }
-  // if($result) {
-  //   return sendMail($data, $smtp);
-  // }
+  if($result) {
+    return sendMail($data, $smtp);
+  }
 
   return 'Insert post error';
 }
