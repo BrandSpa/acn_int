@@ -4,6 +4,7 @@ import multipleRender from 'react-multiple-render';
 import 'lazysizes';
 import 'lazysizes/plugins/bgset/ls.bgset.min';
 import mitt from 'mitt';
+
 import { runEvents } from './lib/events';
 
 //  React components :)

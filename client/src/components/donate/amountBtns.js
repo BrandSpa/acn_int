@@ -55,9 +55,9 @@ const AmountBtns = (props) => {
 };
 
 AmountBtns.propTypes = {
-  changeAmount: propTypes.func.isRequired,
-  texts: propTypes.object,
-  amount: propTypes.number,
+  changeAmount: propTypes.func.isRequired.isRequired,
+  texts: propTypes.object.isRequired,
+  amount: propTypes.number.isRequired,
 };
 
 export default AmountBtns;
