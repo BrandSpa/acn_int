@@ -38,11 +38,12 @@ function contact_us($data = [], $smtp) {
 
     $result = wp_insert_post($postarr);
 
-    return $result;
+    if($result) {
+      return sendMail($data, $smtp);
+    }
   }
-  if($result) {
-    return sendMail($data, $smtp);
-  }
+
+
 
   return 'Insert post error';
 }
