@@ -33,14 +33,14 @@ class ContactsGG extends Component {
   }
 
   render() {
-    const { contactTitle, continents, countries, countriesTranslated } = this.props;
+    const { contactTitle, continents, countries, countriesTranslated, searchPlaceholder } = this.props;
     const { countryName, country, continent } = this.state;
     const countrySelected = country;
     const continentsKeys = Object.keys(continents);
 
     return (
       <div>
-        <Search countries={countries} countriesTranslated={countriesTranslated} onSelect={this.setContact} />
+        <Search searchPlaceholder={searchPlaceholder} countries={countries} countriesTranslated={countriesTranslated} onSelect={this.setContact} />
         <ul className="col-6-l">
           {continentsKeys.map(continentName => (
             <li key={continentName} className={continent === continentName ? 'continent__name continent__name--active' : 'continent__name'}>
@@ -196,6 +196,7 @@ class ContactsGG extends Component {
 ContactsGG.propTypes = {
   contacts: PropTypes.array.isRequired,
   contactTitle: PropTypes.string.isRequired,
+  searchPlaceholder: PropTypes.string.isRequired,
   continents: PropTypes.object.isRequired,
   countries: PropTypes.array.isRequired,
   countriesTranslated: PropTypes.object.isRequired,

@@ -3,13 +3,19 @@
 add_action( 'vc_before_init', 'bs_contact_gg_vc' );
 
 function bs_contact_gg_vc() {
-		$params = [
-			[
-        "type" => "textfield",
-        "heading" => "name placeholder",
-        "param_name" => "name_placeholder",
-        "value" => 'Name'
-			]
+	$params = [
+    [
+      "type" => "textfield",
+      "heading" => "Title",
+      "param_name" => "contactTitle",
+      "value" => "The ACN Head of Section for this country is:"
+    ],
+    [
+      "type" => "textfield",
+      "heading" => "Search Placeholder",
+      "param_name" => "searchPlaceholder",
+      "value" => "Search country"
+    ]
 	];
 
   	vc_map(

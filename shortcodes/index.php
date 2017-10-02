@@ -58,3 +58,4 @@ require_once('vc/counter.php');
 require_once('vc/offices_info.php');
 require_once('vc/contact_us_form.php');
 require_once('vc/section_video.php');
+require_once('vc/contact_gg.php');

@@ -31,13 +31,13 @@ class ContactsSearchGG extends Component {
   }
 
   render() {
-    const { countries, countriesTranslated } = this.props;
+    const { countriesTranslated, searchPlaceholder } = this.props;
     const { query, results, openResults } = this.state;
 
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Search country" onChange={this.handleChange} value={query} />
+          <input type="text" placeholder={searchPlaceholder} onChange={this.handleChange} value={query} />
         </form>
         <div className={openResults ? 'results results--open' : 'results'}>
           <ul>
@@ -99,8 +99,8 @@ class ContactsSearchGG extends Component {
 
 ContactsSearchGG.propTypes = {
   onSelect: PropTypes.func.isRequired,
-  countries: PropTypes.array.isRequired,
   countriesTranslated: PropTypes.object.isRequired,
+  searchPlaceholder: PropTypes.string.isRequired,
 };
 
 export default ContactsSearchGG;
