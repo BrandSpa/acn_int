@@ -8,29 +8,22 @@ export default () => {
   }
 
   if ($('.bs-donate')) {
-    $('.bs-donate').on('click', function onClickDonate(e) {
+    $('.bs-donate').on('click', async function onClickDonate(e) {
       e.preventDefault();
       const $el = $(this);
+      const data = qs.stringify({ action: 'donate_redirect_2' });
+      await eventGoogleAnalytics({ category: 'CLICK', action: 'DONATE', label: 'CLICKDONATE_EN' });
+      await eventConvertloopAsync({ name: 'Donate Click' });
 
-      eventGoogleAnalytics({ category: 'CLICK', action: 'DONATE', label: 'CLICKDONATE_EN' })
-        .then(() => eventConvertloopAsync({ name: 'Donate Click' }))
-        .then(() => {
-          const data = qs.stringify({ action: 'donate_redirect_2' });
+      if ($el.attr('href') && $el.attr('href') !== '#' && $el.attr('href') !== '') {
+        window.location = $el.attr('href');
+      }
 
-          if ($el.attr('href') && $el.attr('href') !== '#' && $el.attr('href') !== '') {
-            window.location = $el.attr('href');
-          }
+      const res = await request.post('/wp-admin/admin-ajax.php', data);
 
-          request
-            .post('/wp-admin/admin-ajax.php', data)
-            .then((res) => {
-              if (res.data !== false) {
-                window.location = res.data;
-              }
-
-              window.location = $el.attr('href');
-            });
-        });
+      // if (res.data !== false) window.location = res.data;
+      console.log(res);
+      // window.location = $el.attr('href');
     });
   }
 };
