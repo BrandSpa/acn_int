@@ -21,7 +21,7 @@ export default () => {
 
       const res = await request.post('/wp-admin/admin-ajax.php', data);
 
-      // if (res.data !== false) window.location = res.data;
+      if (res.data !== false) return window.location = res.data;
       console.log(res.data, res.data !== false);
       // window.location = $el.attr('href');
     });
