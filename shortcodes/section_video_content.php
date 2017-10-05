@@ -21,8 +21,8 @@ function bs_section_video_content_sc($atts, $content = null) {
 			"height" => $at['image_height'],
 			"margin" => $at['image_margin']
 		],
-		"fullHeight" => json_encode($at['full_height']),
-		"content" => json_encode(do_shortcode($content))
+		"fullHeight" => $at['full_height'],
+		"content" => do_shortcode($content)
 	];
 
   ob_start();
