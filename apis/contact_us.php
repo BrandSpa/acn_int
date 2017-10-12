@@ -69,7 +69,7 @@ function sendMail($content = [], $smtp) {
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'ACN INT Contact';
-    $mail->Body    = '<h3>from:<h3> <p>'. $content['name'] .'</p>  <h3>email:<h3> <p>'. $content['email'] .'</p><h3>Message:<h3> <p>'.$content['message'].'</p>';
+    $mail->Body    = '<h3>from:<h3> <p>'. $content['name'] .'<h3>email:<h3> <p>'. $content['email'] .'</p><h3>Message:<h3> <p>'.$content['message'].'</p>';
     $mail->send();
 
     return true;
