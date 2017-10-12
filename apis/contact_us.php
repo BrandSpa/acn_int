@@ -39,14 +39,15 @@ function contact_us($data = [], $smtp) {
     $result = wp_insert_post($postarr);
     $result;
     if($result) {
-      return sendMail($content, $smtp);
+      sendMail($content, $smtp);
+      return 1;
     }
   }
 
   return 'Insert post error';
 }
 
-function sendMail($data = [], $smtp) {
+function sendMail($content = [], $smtp) {
   $mail = new PHPMailer(true);
 
   try {
@@ -62,6 +63,7 @@ function sendMail($data = [], $smtp) {
 
     //Recipients
     $mail->setFrom('noreplay@acninternational.org');
+    $mail->addAddress('info@acninternational.org ');
     $mail->addAddress('alejandro@brandspa.com');
 
     //Content
@@ -69,7 +71,7 @@ function sendMail($data = [], $smtp) {
     $mail->Subject = 'ACN INT Contact';
     $mail->Body    = 'from: <p>'. $content['name'] .'</p> <p>'. $content['email'] .'</p><p>'.$content['message'].'</p>';
     if($mail->send()) {
-      return 'Message has been sent';
+      return 1;
     }
 
     return 'error';
