@@ -39,7 +39,7 @@ function contact_us($data = [], $smtp) {
     $result = wp_insert_post($postarr);
     $result;
     if($result) {
-      return sendMail($data, $smtp);
+      return sendMail($content, $smtp);
     }
   }
 
@@ -63,16 +63,17 @@ function sendMail($data = [], $smtp) {
     //Recipients
     $mail->setFrom('noreplay@acninternational.org');
     $mail->addAddress('alejandro@brandspa.com');
-    $mail->addReplyTo('noreplay@acninternational.org', 'ACN');
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->Subject = 'ACN INT Contact';
+    $mail->Body    = 'from: <p>'. $content['name'] .'</p> <p>'. $content['email'] .'</p><p>'.$content['message'].'</p>';
+    if($mail->send()) {
+      return 'Message has been sent';
+    }
 
-    $mail->send();
-    return 'Message has been sent';
+    return 'error';
+    
   } catch (Exception $e) {
     return 'Mailer Error: ' . $mail->ErrorInfo;
   }
