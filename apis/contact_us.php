@@ -37,7 +37,7 @@ function contact_us($data = [], $smtp) {
     ];
 
     $result = wp_insert_post($postarr);
-    return $result;
+    $result;
     if($result) {
       return sendMail($data, $smtp);
     }
