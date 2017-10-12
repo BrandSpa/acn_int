@@ -69,12 +69,10 @@ function sendMail($content = [], $smtp) {
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'ACN INT Contact';
-    $mail->Body    = 'from: <p>'. $content['name'] .'</p> <p>'. $content['email'] .'</p><p>'.$content['message'].'</p>';
-    if($mail->send()) {
-      return 1;
-    }
+    $mail->Body    = '<h4>from:<h4> <p>'. $content['name'] .'</p>  <h4>email<h4> <p>'. $content['email'] .'</p><h4>Message:<h4> <p>'.$content['message'].'</p>';
+    $mail->send();
 
-    return 'error';
+    return true;
     
   } catch (Exception $e) {
     return 'Mailer Error: ' . $mail->ErrorInfo;
