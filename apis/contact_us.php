@@ -52,7 +52,7 @@ function sendMail($content = [], $smtp) {
 
   try {
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = $smtp['url'];  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -69,7 +69,7 @@ function sendMail($content = [], $smtp) {
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'ACN INT Contact';
-    $mail->Body    = '<h4>from:<h4> <p>'. $content['name'] .'</p>  <h4>email<h4> <p>'. $content['email'] .'</p><h4>Message:<h4> <p>'.$content['message'].'</p>';
+    $mail->Body    = '<h3>from:<h3> <p>'. $content['name'] .'</p>  <h3>email:<h3> <p>'. $content['email'] .'</p><h3>Message:<h3> <p>'.$content['message'].'</p>';
     $mail->send();
 
     return true;
