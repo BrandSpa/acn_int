@@ -6,7 +6,7 @@ function bs_get_posts(
 	$category = '',
 	$perpage = '6',
 	$status,
-	$cleanContent = false) {
+	$cleanContent = true) {
 
 	$query = new Wp_Query(array(
     'post_type' => $type,
