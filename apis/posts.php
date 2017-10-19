@@ -27,7 +27,7 @@ function bs_get_posts(
 			if($cleanContent) {
 				$post->post_content = '';
 			}
-			var_dump($post);
+			
 			return $post;
 	}, $query->get_posts());
 	
@@ -42,7 +42,7 @@ function wp_get_posts() {
   $status = isset($_POST['post_status']) ? $_POST['post_status'] : 'publish';
 	$cleanContent = isset($_POST['post_clean_content']) ? false : true;
   $res = bs_get_posts($post_type, $paged, $category, $perpage, $status, $cleanContent);
-
+	var_dump($res);
   responseJson($res);
   die();
 }
