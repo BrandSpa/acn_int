@@ -44,7 +44,7 @@ function wp_get_posts() {
   $res = bs_get_posts($post_type, $paged, $category, $perpage, $status, $cleanContent);
 	var_dump(json_encode($res, JSON_HEX_QUOT));
   header('Content-type: application/json');
-  echo json_encode($res, JSON_HEX_QUOT);
+  echo json_encode($res);
   die();
 }
 
