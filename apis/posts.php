@@ -43,9 +43,11 @@ function wp_get_posts() {
   $status = isset($_POST['post_status']) ? $_POST['post_status'] : 'publish';
 	$cleanContent = isset($_POST['post_clean_content']) ? false : true;
   $res = bs_get_posts($post_type, $paged, $category, $perpage, $status, $cleanContent);
-	var_dump($res);
+
   header('Content-type: application/json');
-  echo json_encode($res);
+	echo json_encode($res);
+	$error = json_last_error();
+	var_dump($error);
   die();
 }
 
