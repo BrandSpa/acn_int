@@ -17,7 +17,7 @@ function bs_get_posts(
   ));
 	
 	
-	$posts = array_map(function($post) {
+	$posts = array_map(function($post) use($cleanContent) {
 			$images = !empty(get_post_meta($post->ID, 'image_square_key', true)) ? get_post_meta($post->ID, 'image_square_key', true) : '';
  			$post->post_image = str_replace('http:', '', $images);
 			$content = substr($post->post_content, 0, 250) ? substr($post->post_content, 0, 250) : $post->post_content;
@@ -26,6 +26,7 @@ function bs_get_posts(
 
 			if($cleanContent) {
 				$post->post_content = '';
+
 			}
 			
 			return $post;
