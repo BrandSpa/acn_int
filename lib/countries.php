@@ -133,6 +133,7 @@ function getCountries() {
     "Palestine",
     "Panama",
     "Paraguay",
+    "Papua New Guinea",
     "Peru",
     "Philippines",
     "Poland",
