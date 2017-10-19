@@ -43,7 +43,8 @@ function wp_get_posts() {
 	$cleanContent = isset($_POST['post_clean_content']) ? false : true;
   $res = bs_get_posts($post_type, $paged, $category, $perpage, $status, $cleanContent);
 	var_dump($res);
-  responseJson($res);
+  header('Content-type: application/json');
+  echo json_encode($res, JSON_HEX_QUOT);
   die();
 }
 
