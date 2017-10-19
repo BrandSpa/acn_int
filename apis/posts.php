@@ -15,6 +15,8 @@ function bs_get_posts(
 		'posts_per_page' => $perpage,
 		'post_status' => $status
   ));
+	
+	var_dump($query->get_posts());
 
 	$posts = array_map(function($post) {
 			$images = !empty(get_post_meta($post->ID, 'image_square_key', true)) ? get_post_meta($post->ID, 'image_square_key', true) : '';
@@ -28,7 +30,7 @@ function bs_get_posts(
 			}
 			return $post;
 	}, $query->get_posts());
-
+	
 	return $posts;
 }
 
