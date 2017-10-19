@@ -47,7 +47,7 @@ function wp_get_posts() {
   header('Content-type: application/json');
 	echo json_encode(utf8_encode($res));
 	// $error = json_last_error();
-	var_dump(array_map('utf8_encode', $res));
+	var_dump(wp_json_encode($res));
   die();
 }
 
