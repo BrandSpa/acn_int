@@ -6,7 +6,7 @@ function bs_get_posts(
 	$category = '',
 	$perpage = '6',
 	$status,
-	$cleanContent) {
+	$cleanContent = false) {
 
 	$query = new Wp_Query(array(
     'post_type' => $type,
@@ -16,8 +16,7 @@ function bs_get_posts(
 		'post_status' => $status
   ));
 	
-	var_dump($query->get_posts());
-
+	
 	$posts = array_map(function($post) {
 			$images = !empty(get_post_meta($post->ID, 'image_square_key', true)) ? get_post_meta($post->ID, 'image_square_key', true) : '';
  			$post->post_image = str_replace('http:', '', $images);
@@ -28,6 +27,7 @@ function bs_get_posts(
 			if($cleanContent) {
 				$post->post_content = '';
 			}
+			var_dump($post);
 			return $post;
 	}, $query->get_posts());
 	
