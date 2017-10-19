@@ -45,7 +45,7 @@ class Carousel extends React.Component {
 
     return (
       <div style={{ width: '100%', overflow: 'hidden' }}>
-        <div className="viewport">
+        <div className="viewport" style={viewportStyle}>
           <div dangerouslySetInnerHTML={{ __html: this.props.content }} />
         </div>
         <div>
