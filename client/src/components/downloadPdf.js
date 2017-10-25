@@ -76,7 +76,7 @@ class DownloadPdf extends React.Component {
         const fbEventData = { eventName: 'Lead' };
         await storeEvent('fb_event', fbEventData);
   
-        setTimeout(() => window.location = redirect_url, 0);
+        // setTimeout(() => window.location = redirect_url, 0);
       } catch(err) {
         console.log(err);
       }
