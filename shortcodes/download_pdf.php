@@ -34,7 +34,7 @@ function bs_download_pdf_sc($atts, $content = null) {
 
 <div
 	class="bs-download-pdf" 
-	data-props='<?php echo json_encode($props) ?>'
+	data-props='<?php echo $props ?>'
 >
 </div>
 
