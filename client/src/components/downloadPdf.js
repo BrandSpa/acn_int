@@ -91,6 +91,8 @@ class DownloadPdf extends React.Component {
     const { countries, btn, texts } = this.props;
     const { errors } = this.state;
 
+    console.log(this.props);
+
     const btnStyle = {
       borderColor: btn.background,
       background: btn.background,

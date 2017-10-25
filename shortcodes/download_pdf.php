@@ -23,7 +23,8 @@ function bs_download_pdf_sc($atts, $content = null) {
 			'validation_email' => $at['validation_email'],
 		],
 		'country' => getCountry(),
-		'redirect_url' =>  $at['redirect_url']
+		'redirect_url' =>  $at['redirect_url'],
+		'event' =>  $at['event']
   ];
   
   $props = json_encode($props);
@@ -83,7 +84,13 @@ add_action( 'vc_before_init', 'bs_download_pdf_vc' );
         "heading" => "Redirect url",
         "param_name" => "redirect_url",
         "value" => ''
-			]
+      ],
+      [
+        "type" => "textfield",
+        "heading" => "Redirect url",
+        "param_name" => "redirect_url",
+        "value" => ''
+			] 
 		];
 
   	vc_map(
