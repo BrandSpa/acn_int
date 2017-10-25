@@ -104,7 +104,7 @@ class DownloadPdf extends React.Component {
           <input
             type="text"
             placeholder={texts.email}
-            onChange={() => this.handleChange('email')}
+            onChange={(e) => this.handleChange(e, 'email')}
             value={this.state.email}
           />
 
@@ -115,7 +115,7 @@ class DownloadPdf extends React.Component {
 
         <div className="input-container">
           <select
-            onChange={() => this.handleChange('country')}
+            onChange={(e) => this.handleChange(e, 'country')}
             value={this.state.country || this.props.country}
           >
             {countries.map((country, i) => (
