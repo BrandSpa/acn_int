@@ -3,6 +3,8 @@ import request from 'axios';
 import qs from 'qs';
 import isEmail from 'validator/lib/isEmail';
 import getCountries from '../lib/getCountries';
+import { storeEvent } from '../lib/events';
+import { storeConvertLoop } from '../actions/contact';
 
 const endpoint = '/wp-admin/admin-ajax.php';
 
@@ -48,32 +50,42 @@ class DownloadPdf extends React.Component {
       .then(arr => arr.every(item => item == false))
       .catch(err => console.error(err));
 
-  handlepdf = (e) => {
+  handlepdf = async (e) => {
     e.preventDefault();
-    this.isValid().then(this.storeContact);
+    const isValid = await this.isValid();
+    this.storeContact(isValid);
   };
 
-  storeContact = (isValid) => {
+  storeContact = async (isValid) => {
+    const { redirect_url } = this.props;
     const { email, country } = this.state;
-    const mc_data = {
-      email_address: email,
-      status: 'subscribed',
-      merge_fields: { NAME: '', COUNTRY: country },
-      update_existing: true,
-    };
-
-    const data = qs.stringify({ action: 'mailchimp_subscribe', data: mc_data });
-
+    const event = 'PF2017';
+    const contact = { email, country };
+    
     if (isValid) {
-      request.post(endpoint, data).then((res) => {
-        if (res.data.id) window.location = this.props.pdf_url;
-      });
+      try {
+        await storeConvertLoop('', contact);
+        const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
+  
+        const gaEventData = { category: 'SUBSCRIBE', action: event, label: `${event}_${language}` };
+        await storeEvent('ga_event', gaEventData);
+  
+        const clEventData = { name: event, person: contact };
+        await storeEvent('cl_event', clEventData);
+  
+        const fbEventData = { eventName: 'Lead' };
+        await storeEvent('fb_event', fbEventData);
+  
+        setTimeout(() => window.location = redirect_url, 0);
+      } catch(err) {
+        console.log(err);
+      }
     }
-  };
+  }
 
-  handleChange = (field, e) => {
+  handleChange = (e, field) => {
     this.setState({ ...this.state, [field]: e.target.value });
-  };
+  }
 
   render() {
     const { countries, btn, texts } = this.props;
@@ -90,7 +102,7 @@ class DownloadPdf extends React.Component {
           <input
             type="text"
             placeholder={texts.email}
-            onChange={this.handleChange.bind(null, 'email')}
+            onChange={() => this.handleChange('email')}
             value={this.state.email}
           />
 
@@ -101,7 +113,7 @@ class DownloadPdf extends React.Component {
 
         <div className="input-container">
           <select
-            onChange={this.handleChange.bind(null, 'country')}
+            onChange={() => this.handleChange('country')}
             value={this.state.country || this.props.country}
           >
             {countries.map((country, i) => (

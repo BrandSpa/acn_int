@@ -1,19 +1,14 @@
 <?php
 
 function bs_download_pdf_sc($atts, $content = null) {
-  $pdfs = [
-    "en" => "http://acninternational.org/wp-content/uploads/2017/03/via_crucis_final_ENGLISH.pdf",
-    "es" => "http://acninternational.org/wp-content/uploads/2017/03/via_crucis_final_SPANISH.pdf",
-    "fr" => "http://acninternational.org/wp-content/uploads/2017/03/via_crucis_final_FRENCH.pdf",
-    "de" => "http://acninternational.org/wp-content/uploads/2017/03/via_crucis_final_GERMAN.pdf"
- ];
 
 	$attributes = [
     'btn_text' => 'download PDF',
 		'btn_color' => '',
 		'email' => 'Email',
 		'validation_email' => 'Email required',
-		'pdf_url' => isset($pdfs[get_lang()]) ? $pdfs[get_lang()] : ''
+    'redirect_url' => '',
+    'event' => 'PF2017'
   ];
 
   $at = shortcode_atts( $attributes , $atts );
@@ -28,8 +23,10 @@ function bs_download_pdf_sc($atts, $content = null) {
 			'validation_email' => $at['validation_email'],
 		],
 		'country' => getCountry(),
-		'pdf_url' => isset($pdfs[get_lang()]) ? $pdfs[get_lang()] : $at['pdf_url']
-	];
+		'redirect_url' =>  $at['redirect_url']
+  ];
+  
+  $props = json_encode($props);
 	
   ob_start();
 ?>
@@ -83,15 +80,15 @@ add_action( 'vc_before_init', 'bs_download_pdf_vc' );
 			],
 			[
         "type" => "textfield",
-        "heading" => "PDF url",
-        "param_name" => "pdf_url",
-        "value" => isset($pdfs[get_lang()]) ? $pdfs[get_lang()] : ''
+        "heading" => "Redirect url",
+        "param_name" => "redirect_url",
+        "value" => ''
 			]
 		];
 
   	vc_map(
       array(
-        "name" =>  "BS form download pdf",
+        "name" =>  "BS PF2017",
         "base" => "bs_download_pdf",
         "category" =>  "BS",
         "params" => $params
