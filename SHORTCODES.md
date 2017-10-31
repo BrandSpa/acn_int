@@ -111,7 +111,16 @@ add_action( 'vc_before_init', 'bs_accordion_vc' );
 
 ```
 
-Para mas documentacion:
+Despues de crear todo esto se debe compilar con webpack con el comando yarn o npm run build, luego hacer commit de todos los cambios y hacer push a la rama test.
+
+Solicitar un usuario de wordpress.
+
+Para probar el shortcode primero se debe crear una página nueva. [Crear una página](https://test.acninternational.org/wp-admin/post-new.php?post_type=page)
+
+
+dentro de la pagina abrir el editor de visual composer y buscar el componente creado.
+
+Para más documentación:
 - [documentación shortcode](https://codex.wordpress.org/Shortcode_API)
 
 - [documentación visual composer](https://wpbakery.atlassian.net/wiki/spaces/VC/pages/524332)
