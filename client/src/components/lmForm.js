@@ -7,19 +7,16 @@ import PropTypes from 'prop-types';
 
 class lmForm extends Component {
 
-  constructor(props) {
-    super(props);
-    state = {
-      name: '',
-      lastname: '',
-      email: '',
-      country: 'España',
-      otherCountry: '',
-      postalCode: '',
-      province: props.provinces[0],
-      errors: {},
-      complete: false,
-    };
+  state = {
+    name: '',
+    lastname: '',
+    email: '',
+    country: 'España',
+    otherCountry: '',
+    postalCode: '',
+    province: props.provinces[0],
+    errors: {},
+    complete: false,
   }
 
 
