@@ -8,7 +8,8 @@ function bs_download_pdf_sc($atts, $content = null) {
 		'email' => 'Email',
 		'validation_email' => 'Email required',
     'redirect_url' => '',
-    'event' => 'PF2017'
+    'event' => 'PF2017',
+    'tags' => ''
   ];
 
   $at = shortcode_atts( $attributes , $atts );
@@ -24,7 +25,8 @@ function bs_download_pdf_sc($atts, $content = null) {
 		],
 		'country' => getCountry(),
 		'redirect_url' =>  $at['redirect_url'],
-		'event' =>  $at['event']
+    'event' =>  $at['event'],
+    'tags' => $at['tags']
   ];
   
   $props = json_encode($props);
@@ -47,13 +49,7 @@ add_shortcode( 'bs_download_pdf', 'bs_download_pdf_sc' );
 add_action( 'vc_before_init', 'bs_download_pdf_vc' );
 
   function bs_download_pdf_vc() {
-    $pdfs = [
-    "en" => "http://acninternational.org/wp-content/uploads/2017/03/via_crucis_final_ENGLISH.pdf",
-    "es" => "http://acninternational.org/wp-content/uploads/2017/03/via_crucis_final_SPANISH.pdf",
-    "fr" => "http://acninternational.org/wp-content/uploads/2017/03/via_crucis_final_FRENCH.pdf",
-    "de" => "http://acninternational.org/wp-content/uploads/2017/03/via_crucis_final_GERMAN.pdf"
- ];
-
+    
 		$params = [
       [
         "type" => "textfield",
@@ -90,7 +86,19 @@ add_action( 'vc_before_init', 'bs_download_pdf_vc' );
         "heading" => "Redirect url",
         "param_name" => "redirect_url",
         "value" => ''
-			] 
+      ],
+      [
+        "type" => "textfield",
+        "heading" => "event",
+        "param_name" => "event",
+        "value" => 'PF2017'
+      ],
+      [
+        "type" => "textfield",
+        "heading" => "tags",
+        "param_name" => "tags",
+        "value" => ''
+			]  
 		];
 
   	vc_map(
