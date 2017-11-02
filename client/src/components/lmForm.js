@@ -14,7 +14,7 @@ class lmForm extends Component {
     country: 'España',
     otherCountry: '',
     postalCode: '',
-    province: props.provinces[0],
+    province: this.props.provinces[0],
     errors: {},
     complete: false,
   }
