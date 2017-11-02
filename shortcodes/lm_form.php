@@ -40,7 +40,7 @@ function bs_lm_form_sc($atts)
     ob_start();
   ?>
 
-    <div class="bs-lm-form" data-props='<?php echo json_encode($props) ?>'></div>
+    <div class="bs-lm-form" data-props='<?php echo wp_json_encode($props) ?>'></div>
   
 	<?php
   return ob_get_clean();
