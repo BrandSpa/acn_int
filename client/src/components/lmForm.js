@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import request from 'axios';
 import qs from 'qs';
 import isEmpty from 'validator/lib/isEmpty';
@@ -6,24 +6,25 @@ import isEmail from 'validator/lib/isEmail';
 import PropTypes from 'prop-types';
 
 class lmForm extends Component {
-  constructor(props){
+
+  constructor(props) {
     super(props);
     state = {
       name: '',
       lastname: '',
       email: '',
       country: 'España',
-      otherCountry:'',
+      otherCountry: '',
       postalCode: '',
       province: props.provinces[0],
       errors: {},
-      complete: false
+      complete: false,
     };
   }
 
 
   handleChange = (e) => {
-    this.setState({[e.target.name]: e.target.value});
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   validate = () => {
@@ -35,7 +36,7 @@ class lmForm extends Component {
       errors[field] = field === 'email' ? !isEmail(val) : isEmpty(val);
     });
 
-    this.setState({errors});
+    this.setState({ errors });
 
     return fields
       .map((key) => {
@@ -48,22 +49,22 @@ class lmForm extends Component {
     if (e) e.preventDefault();
 
     if (this.validate().every(item => item === true)) {
-      const data = qs.stringify({action: 'send_lm', data: this.state});
+      const data = qs.stringify({ action: 'send_lm', data: this.state });
       const res = await request.post('/wp-admin/admin-ajax.php', data);
       if (Number.isInteger(res.data)) {
-        this.setState({complete: true});
+        this.setState({ complete: true });
       }
     }
   }
 
   render() {
-    const {name, lastname, email, country, otherCountry, postalCode, province,errors} = this.state;
-    const {placeholders, messages, btnText, provinces} = this.props;
+    const { name, lastname, email, country, otherCountry, postalCode, province, errors } = this.state;
+    const { placeholders, messages, btnText, provinces } = this.props;
 
     if (this.state.complete) {
       return (
         <div>
-          <h4 style={{color: '#3c515f'}}>{messages.thanks}</h4>
+          <h4 style={{ color: '#3c515f' }}>{messages.thanks}</h4>
         </div>
       );
     }
@@ -109,20 +110,21 @@ class lmForm extends Component {
         <div className="input-container">
           <label>
             {placeholders.country}
-          <select name ="country"
-                  value={country}
-                  onChange={this.handleChange}
-                  placeholder={placeholders.country}
-          >
-            <option value="España">España</option>
-            <option value="Otro">Otro</option>
-          </select>
+            <select
+              name="country"
+              value={country}
+              onChange={this.handleChange}
+              placeholder={placeholders.country}
+            >
+              <option value="España">España</option>
+              <option value="Otro">Otro</option>
+            </select>
           </label>
           <div className={errors.country ? 'input-error' : 'hidden'}>
             {messages.country}
           </div>
         </div>
-        {country==='Otro'?
+        {country === 'Otro' ?
           <div className="input-container">
             <input
               type="text"
@@ -138,7 +140,7 @@ class lmForm extends Component {
           :
           ''
         }
-        {country==='España'?
+        {country === 'España' ?
           <div className="input-container">
             <input
               type="text"
@@ -154,18 +156,17 @@ class lmForm extends Component {
           :
           ''
         }
-        {country==='España'?
+        {country === 'España' ?
           <div className="input-container">
             <label>
               {placeholders.province}
-              <select name ="province"
-                      value={province}
-                      onChange={this.handleChange}
-                      placeholder={placeholders.province}
+              <select
+                name="province"
+                value={province}
+                onChange={this.handleChange}
+                placeholder={placeholders.province}
               >
-                {provinces.map(province,()=>{
-                  return <option value={province}>{province}</option>
-                })}
+                {provinces.map(province, () => <option value={province}>{province}</option>)}
               </select>
             </label>
             <div className={errors.province ? 'input-error' : 'hidden'}>
@@ -185,7 +186,7 @@ lmForm.propTypes = {
   placeholders: PropTypes.object.isRequired,
   messages: PropTypes.object.isRequired,
   btnText: PropTypes.string.isRequired,
-  provinces:PropTypes.array.isRequired
+  provinces: PropTypes.array.isRequired,
 };
 
 export default lmForm;
