@@ -1,6 +1,6 @@
 <?php
 
-function bs_lm_form($atts)
+function bs_lm_form_sc($atts)
 {
     $at = shortcode_atts([
         'name_placeholder' => gett('Name'),
