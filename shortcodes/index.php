@@ -38,6 +38,7 @@ require_once('get_url_if.php');
 require_once('contact_gg.php');
 require_once('contact_us_form.php');
 require_once('offices_info.php');
+require_once('lm_form.php');
 
 //VISUAL COMPOSER
 require_once('vc/accordion.php');
