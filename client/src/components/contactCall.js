@@ -101,15 +101,17 @@ class ContactCall extends Component {
 						border: solid 1px #d0d0d0;
 						height: 50px;
 						width: 100%;
-						justify-content: center;
+						justify-content: center;s
 						font-size: 16px;
 						color: #1b1b1b;
+						margin-bottom: 15px;
 					}
 
 					.input-section__placeholder {
 						display: flex;
 						flex-direction: row;
 						align-items: center;
+						font-weight: bold;
 					}
 
 					.input-section__placeholder i {
@@ -118,6 +120,7 @@ class ContactCall extends Component {
 
 					.input-section__text, .input-section__select {
 						border: none;
+						height: auto;
 					}
 				`}</style>
 			</section>
