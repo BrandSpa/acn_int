@@ -37,7 +37,7 @@ function bs_contact_call_sc($atts, $content = null) {
 			"city" => $at['city-placeholder'],
 			"phone" => $at['phone-placeholder'],
 		],
-		"validationMessages" => [
+		"validation" => [
 			"name" => $at['name-validation'],
 			"phone" => $at['phone-validation'],
 		],

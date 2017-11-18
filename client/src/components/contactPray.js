@@ -29,7 +29,11 @@ class contactForm extends Component {
       email: '',
       country: '',
     },
-    errors: { name: false, lastname: false, email: false },
+    errors: { 
+      name: false, 
+      lastname: false, 
+      email: false 
+    },
     countries: getCountries,
     officeCountries: [],
     inOffice: false,

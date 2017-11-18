@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { storeConvertLoop } from '../actions/contact';
+import { storeEvent } from '../lib/events';
 
 class ContactCall extends Component {
 	state = {
@@ -6,16 +8,41 @@ class ContactCall extends Component {
 		lastname: '',
 		country: this.props.country,
 		city: '',
-		phone: ''
+		phone: '',
+		loading: false
 	}
 
 	handleInputChange = (e, field) => {
 		this.setState({ [field]: e.target.value });
 	} 
 
+	handleStore = async () => {
+		const { convertloop } = this.props;
+		this.setState({ loading: true });
+		const contact = this.state;
+		
+		try {
+			await storeConvertLoop(convertloop.tags, contact);
+			const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
+
+			const gaEventData = { category: 'SUBSCRIBE', action: 'SUBSCRIBE', label: `SUBSCRIBE_${language}` };
+			await storeEvent('ga_event', gaEventData);
+
+			const clEventData = { name: convertloop.event, person: contact };
+			await storeEvent('cl_event', clEventData);
+
+			const fbEventData = { eventName: 'Lead' };
+			await storeEvent('fb_event', fbEventData);
+
+			setTimeout(() => window.location = redirect, 0);
+		} catch(err) {
+			console.log(err);
+		}
+	}
+
 	render() {
-		const { placeholders, texts, countries } = this.props;
-		const { name, lastname, country, city, phone } = this.state;
+		const { placeholders, texts, validation, countries } = this.props;
+		const { name, lastname, country, city, phone, loading } = this.state;
 
 		return (
 			<section>
@@ -29,6 +56,7 @@ class ContactCall extends Component {
 							className="input-section__text" 
 							onChange={(e) => this.handleInputChange(e, 'name')}
 							value={name}
+							data-value-missing={validation.name}
 							required
 						/>
 					</div>
@@ -79,10 +107,11 @@ class ContactCall extends Component {
 							className="input-section__text" 
 							onChange={(e) => this.handleInputChange(e, 'phone')}
 							value={phone}
+							data-value-missing={validation.phone}
 							required 
 						/>
 					</div>
-					<button>{texts.btn}</button>
+					<button disabled={loading}>{loading ? text.loading : texts.btn}</button>
 				</form>
 				<style jsx>{`
 							
@@ -116,6 +145,7 @@ class ContactCall extends Component {
 
 					.input-section__placeholder i {
 						padding: 0 5px 0 15px;
+						font-size: 18px;
 					}
 
 					.input-section__text, .input-section__select {
