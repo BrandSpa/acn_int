@@ -28,7 +28,7 @@ function bs_contact_call_sc($atts, $content = null) {
 			"event" =>  empty($at['convertloop_event']) ? 'Subscription' : $at['convertloop_event']
 		],
 		"texts" => [
-			"btn" => $at['btn-text'],
+			"btn" => $at['btn_text'],
 		],
 		"placeholders" => [
 			"name" => $at['name-placeholder'],
