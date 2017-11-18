@@ -57,27 +57,26 @@ class DownloadPdf extends React.Component {
   };
 
   storeContact = async (isValid) => {
-    const { redirect_url } = this.props;
+    const { redirect_url, event, tags } = this.props;
     const { email, country } = this.state;
-    const event = 'PF2017';
     const contact = { email, country };
-    
+
     if (isValid) {
       try {
-        await storeConvertLoop('', contact);
+        await storeConvertLoop(tags, contact);
         const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
-  
+
         const gaEventData = { category: 'SUBSCRIBE', action: event, label: `${event}_${language}` };
         await storeEvent('ga_event', gaEventData);
-  
+
         const clEventData = { name: event, person: contact };
         await storeEvent('cl_event', clEventData);
-  
+
         const fbEventData = { eventName: 'Lead' };
         await storeEvent('fb_event', fbEventData);
-  
+
         setTimeout(() => window.location = redirect_url, 0);
-      } catch(err) {
+      } catch (err) {
         console.log(err);
       }
     }
@@ -104,7 +103,7 @@ class DownloadPdf extends React.Component {
           <input
             type="text"
             placeholder={texts.email}
-            onChange={(e) => this.handleChange(e, 'email')}
+            onChange={e => this.handleChange(e, 'email')}
             value={this.state.email}
           />
 
@@ -115,7 +114,7 @@ class DownloadPdf extends React.Component {
 
         <div className="input-container">
           <select
-            onChange={(e) => this.handleChange(e, 'country')}
+            onChange={e => this.handleChange(e, 'country')}
             value={this.state.country || this.props.country}
           >
             {countries.map((country, i) => (
