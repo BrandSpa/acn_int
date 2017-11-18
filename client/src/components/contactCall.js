@@ -34,13 +34,13 @@ class ContactCall extends Component {
 					</div>
 					<div className="input-section">
 						<div className="input-section__placeholder">
-							<i className="ion-person"></i> {placeholders.lastame}
+							<i className="ion-person"></i> {placeholders.lastname}
 						</div>
 						<input 
 							type="text" 
 							className="input-section__text" 
 							onChange={(e) => this.handleInputChange(e, 'lastname')}
-							value={lastame} 
+							value={lastname} 
 						/>
 					</div>
 					<div className="input-section">
