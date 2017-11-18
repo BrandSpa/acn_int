@@ -12,22 +12,12 @@ class ContactCall extends Component {
 		loading: false
 	}
 
-	componentDidMount() {
-		const container = this.container;
-		const inputs = container.querySelectorAll('input');
-
-		[...inputs].forEach(input => {
-			input.addEventListener('invalid', (e) => console.log(e.target.name), false);
-			input.addEventListener('blur', () => input.checkValidity());
-		});
-	}
-
 	handleInputChange = (e, field) => {
 		this.setState({ [e.target.name]: e.target.value });
 	} 
 
 	handleStore = async () => {
-		const { convertloop } = this.props;
+		const { convertloop, redirect } = this.props;
 		this.setState({ loading: true });
 		const contact = this.state;
 	
