@@ -22,7 +22,7 @@ class ContactCall extends Component {
 				<form>
 					<div className="input-section">
 						<div className="input-section__placeholder">
-							<i className="ion-person"></i> {placeholders.name}
+							<i className="ion-person"></i> <span>{placeholders.name}</span>
 						</div>
 						<input 
 							type="text" 
@@ -34,7 +34,7 @@ class ContactCall extends Component {
 					</div>
 					<div className="input-section">
 						<div className="input-section__placeholder">
-							<i className="ion-person"></i> {placeholders.lastname}
+							<i className="ion-person"></i> <span>{placeholders.lastname}</span>
 						</div>
 						<input 
 							type="text" 
@@ -45,7 +45,7 @@ class ContactCall extends Component {
 					</div>
 					<div className="input-section">
 						<div className="input-section__placeholder">
-							<i className="ion-location"></i> {placeholders.country}
+							<i className="ion-location"></i> <span>{placeholders.country}</span>
 						</div>
 						<select 
 							value={country} 
@@ -61,7 +61,7 @@ class ContactCall extends Component {
 					</div>
 					<div className="input-section">
 						<div className="input-section__placeholder">
-							<i className="ion-location"></i> {placeholders.city}
+							<i className="ion-location"></i> <span>{placeholders.city}</span>
 						</div>
 						<input 
 							type="text" 
@@ -72,7 +72,7 @@ class ContactCall extends Component {
 					</div>
 					<div className="input-section">
 						<div className="input-section__placeholder">
-							<i className="ion-iphone"></i> {placeholders.phone}
+							<i className="ion-iphone"></i> <span>{placeholders.phone}</span>
 						</div>
 						<input 
 							type="text" 
@@ -101,7 +101,7 @@ class ContactCall extends Component {
 						border: solid 1px #d0d0d0;
 						height: 50px;
 						width: 100%;
-						justify-content: center;s
+						justify-content: center;
 						font-size: 16px;
 						color: #1b1b1b;
 						margin-bottom: 15px;
