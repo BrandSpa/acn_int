@@ -116,7 +116,7 @@ class ContactCall extends Component {
 							required 
 						/>
 					</div>
-					<button disabled={loading}>{loading ? text.loading : texts.btn}</button>
+					<button disabled={loading}>{loading ? texts.loading : texts.btn}</button>
 				</form>
 				<style jsx>{`
 							
