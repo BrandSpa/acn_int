@@ -82,7 +82,34 @@ class ContactCall extends Component {
 							required 
 						/>
 					</div>
+					<button>{texts.btn}</button>
 				</form>
+				<style jsx>{`
+							
+					form button {
+						height: 50px;
+						width: 100%;
+						background-color: #7ed321;
+						font-size: 20px;
+						font-weight: bold;
+						text-align: center;
+						color: #ffffff;
+					}
+
+					.input-section {
+						display: flex;
+						border: solid 1px #d0d0d0;
+						height: 50px;
+						width: 100%;
+						justify-content: center;
+						font-size: 16px;
+						color: #1b1b1b;
+					}
+
+					.input-section__text, .input-section__select {
+						border: none;
+					}
+				`}</style>
 			</section>
 		)
 	}
