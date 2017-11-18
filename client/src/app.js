@@ -32,6 +32,7 @@ import Counter from './components/counter';
 import PostShare from './components/postShare';
 import ContactsGG from './components/contactsGrantGuidelines';
 import ContactUsForm from './components/contactUsForm';
+import ContactCall from './components/contactCall';
 
 // jquery
 import setMenuMobile from './lib/set_menu_mobile';
@@ -79,6 +80,7 @@ multipleRender(Counter, '.bs-counter', true);
 multipleRender(PostShare, '.bs-post-share', true);
 multipleRender(ContactsGG, '.bs-contacts-gg', true);
 multipleRender(ContactUsForm, '.bs-contact-form-us', true);
+multipleRender(ContactCall, '.bs-contact-call', true);
 
 // jquery calls
 setMenu();
