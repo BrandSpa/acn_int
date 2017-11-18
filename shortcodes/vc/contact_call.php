@@ -64,7 +64,13 @@ function bs_contact_call_vc() {
       "param_name" => "convertloop_tags",
       "value" => '',
 			"description" => "fomart: tag1,tag2"
-		]
+    ],
+    [
+      "type" => "textfield",
+      "heading" => "button text",
+      "param_name" => "btn_text",
+      "value" => '',
+    ]
 	];
   vc_map(
     array(

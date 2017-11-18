@@ -1,8 +1,7 @@
-
-
 <?php
 
 function bs_contact_call_sc($atts, $content = null) {
+
 	$attributes = [
 		'name-placeholder' => 'Name',
 		'lastname-placeholder' => 'Lastname',
@@ -16,6 +15,7 @@ function bs_contact_call_sc($atts, $content = null) {
 		'redirect' => '',
 		'convertloop_tags' => '',
 		'convertloop_event' => 'Subscription',
+		'btn_text' => ''
 	];
 
   $at = shortcode_atts( $attributes , $atts );
