@@ -15,7 +15,8 @@ function bs_contact_call_sc($atts, $content = null) {
 		'redirect' => '',
 		'convertloop_tags' => '',
 		'convertloop_event' => 'Subscription',
-		'btn_text' => ''
+		'btn_text' => '',
+		'loading_text' => 'loading...'
 	];
 
   $at = shortcode_atts( $attributes , $atts );
@@ -29,6 +30,7 @@ function bs_contact_call_sc($atts, $content = null) {
 		],
 		"texts" => [
 			"btn" => $at['btn_text'],
+			"loading" => $at['loading_text']
 		],
 		"placeholders" => [
 			"name" => $at['name-placeholder'],

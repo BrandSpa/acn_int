@@ -70,6 +70,12 @@ function bs_contact_call_vc() {
       "heading" => "button text",
       "param_name" => "btn_text",
       "value" => '',
+    ],
+    [
+      "type" => "textfield",
+      "heading" => "loading text",
+      "param_name" => "loading_text",
+      "value" => 'loading...',
     ]
 	];
   vc_map(
