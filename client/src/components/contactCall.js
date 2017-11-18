@@ -15,6 +15,7 @@ class ContactCall extends Component {
 	componentDidMount() {
 		const container = this.container;
 		const inputs = container.querySelectorAll('input');
+		console.log(inputs);
 		[...inputs].forEach(input => {
 			input.addEventListener('blur', () => input.checkValidity());
 		});
