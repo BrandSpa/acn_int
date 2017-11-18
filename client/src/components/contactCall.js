@@ -12,6 +12,14 @@ class ContactCall extends Component {
 		loading: false
 	}
 
+	componentDidMount() {
+		const container = this.container;
+		const inputs = container.querySelectorAll('input');
+		[...inputs].forEach(input => {
+			input.addEventListener('blur', () => input.checkValidity());
+		});
+	}
+
 	handleInputChange = (e, field) => {
 		this.setState({ [field]: e.target.value });
 	} 
@@ -20,7 +28,7 @@ class ContactCall extends Component {
 		const { convertloop } = this.props;
 		this.setState({ loading: true });
 		const contact = this.state;
-		
+	
 		try {
 			await storeConvertLoop(convertloop.tags, contact);
 			const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
@@ -45,8 +53,8 @@ class ContactCall extends Component {
 		const { name, lastname, country, city, phone, loading } = this.state;
 
 		return (
-			<section>
-				<form>
+			<section ref={ref => this.container = ref}>
+				<form onSubmit={this.handleStore}>
 					<div className="input-section">
 						<div className="input-section__placeholder">
 							<i className="ion-person"></i> <span>{placeholders.name}</span>
@@ -151,6 +159,10 @@ class ContactCall extends Component {
 					.input-section__text, .input-section__select {
 						border: none;
 						height: auto;
+					}
+
+					input:invalid {
+
 					}
 				`}</style>
 			</section>
