@@ -106,6 +106,16 @@ class ContactCall extends Component {
 						color: #1b1b1b;
 					}
 
+					.input-section__placeholder {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+					}
+
+					.input-section__placeholder i {
+						padding: 0 5px 0 15px;
+					}
+
 					.input-section__text, .input-section__select {
 						border: none;
 					}
