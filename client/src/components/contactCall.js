@@ -15,14 +15,15 @@ class ContactCall extends Component {
 	componentDidMount() {
 		const container = this.container;
 		const inputs = container.querySelectorAll('input');
-		console.log(inputs);
+
 		[...inputs].forEach(input => {
+			input.addEventListener('invalid', (e) => console.log(e.target.name), false);
 			input.addEventListener('blur', () => input.checkValidity());
 		});
 	}
 
 	handleInputChange = (e, field) => {
-		this.setState({ [field]: e.target.value });
+		this.setState({ [e.target.name]: e.target.value });
 	} 
 
 	handleStore = async () => {
@@ -61,9 +62,10 @@ class ContactCall extends Component {
 							<i className="ion-person"></i> <span>{placeholders.name}</span>
 						</div>
 						<input 
+							name="name"
 							type="text" 
 							className="input-section__text" 
-							onChange={(e) => this.handleInputChange(e, 'name')}
+							onChange={(e) => this.handleInputChange(e)}
 							value={name}
 							data-value-missing={validation.name}
 							required
@@ -74,9 +76,10 @@ class ContactCall extends Component {
 							<i className="ion-person"></i> <span>{placeholders.lastname}</span>
 						</div>
 						<input 
+							name="lastname"
 							type="text" 
 							className="input-section__text" 
-							onChange={(e) => this.handleInputChange(e, 'lastname')}
+							onChange={(e) => this.handleInputChange(e)}
 							value={lastname} 
 						/>
 					</div>
@@ -84,9 +87,10 @@ class ContactCall extends Component {
 						<div className="input-section__placeholder">
 							<i className="ion-location"></i> <span>{placeholders.country}</span>
 						</div>
-						<select 
+						<select
+							name="country"
 							value={country} 
-							onChange={(e) => this.handleInputChange(e, 'country')}
+							onChange={(e) => this.handleInputChange(e)}
 							className="input-section__select" 
 						>
 							{
@@ -100,10 +104,11 @@ class ContactCall extends Component {
 						<div className="input-section__placeholder">
 							<i className="ion-location"></i> <span>{placeholders.city}</span>
 						</div>
-						<input 
+						<input
+							name="city" 
 							type="text" 
 							className="input-section__text" 
-							onChange={(e) => this.handleInputChange(e, 'city')}
+							onChange={(e) => this.handleInputChange(e)}
 							value={city} 
 						/>
 					</div>
@@ -112,9 +117,10 @@ class ContactCall extends Component {
 							<i className="ion-iphone"></i> <span>{placeholders.phone}</span>
 						</div>
 						<input 
+							name="phone"
 							type="text" 
 							className="input-section__text" 
-							onChange={(e) => this.handleInputChange(e, 'phone')}
+							onChange={(e) => this.handleInputChange(e)}
 							value={phone}
 							data-value-missing={validation.phone}
 							required 
