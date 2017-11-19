@@ -16,7 +16,8 @@ class ContactCall extends Component {
 		this.setState({ [e.target.name]: e.target.value });
 	} 
 
-	handleStore = async () => {
+	handleStore = async (e) => {
+		e.preventDefault();
 		const { convertloop, redirect } = this.props;
 		this.setState({ loading: true });
 		const contact = this.state;
