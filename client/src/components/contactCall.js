@@ -6,6 +6,7 @@ class ContactCall extends Component {
 	state = {
 		name: '',
 		lastname: '',
+		email: '',
 		country: this.props.country,
 		city: '',
 		phone: '',
@@ -72,6 +73,19 @@ class ContactCall extends Component {
 							className="input-section__text" 
 							onChange={(e) => this.handleInputChange(e)}
 							value={lastname} 
+						/>
+					</div>
+					<div className="input-section">
+						<div className="input-section__placeholder">
+							<i className="ion-person"></i> <span>{placeholders.email}</span>
+						</div>
+						<input
+							name="email"
+							type="email" 
+							className="input-section__text" 
+							onChange={(e) => this.handleInputChange(e)}
+							value={email}
+							required
 						/>
 					</div>
 					<div className="input-section">

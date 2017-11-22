@@ -21,7 +21,13 @@ function bs_contact_call_vc() {
       "heading" => "lastname placeholder",
       "param_name" => "lastname-placeholder",
       "value" => 'Lastname'
-		],
+    ],
+    [
+      "type" => "textfield",
+      "heading" => "email placeholder",
+      "param_name" => "email-placeholder",
+      "value" => 'Email'
+    ],
 		[
       "type" => "textfield",
       "heading" => "country placeholder",

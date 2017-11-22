@@ -35,6 +35,7 @@ function bs_contact_call_sc($atts, $content = null) {
 		"placeholders" => [
 			"name" => $at['name-placeholder'],
 			"lastname" => $at['lastname-placeholder'],
+			"email" => $at['email-placeholder'],
 			"country" => $at['country-placeholder'],
 			"city" => $at['city-placeholder'],
 			"phone" => $at['phone-placeholder'],
