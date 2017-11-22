@@ -44,7 +44,7 @@ class ContactCall extends Component {
 
 	render() {
 		const { placeholders, texts, validation, countries } = this.props;
-		const { name, lastname, country, city, phone, loading } = this.state;
+		const { name, lastname, email, country, city, phone, loading } = this.state;
 
 		return (
 			<section ref={ref => this.container = ref}>
