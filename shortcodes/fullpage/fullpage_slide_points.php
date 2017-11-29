@@ -53,11 +53,11 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			'y' => '155.68',
 			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
-		'Alqosh' => [
-			'x' => '1422.68',
-			'y' => '125',
-			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
-		],
+		// 'Alqosh' => [
+		// 	'x' => '1422.68',
+		// 	'y' => '125',
+		// 	'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+		// ],
 		'Baqofa' => [
 			'x' => '1302.85',
 			'y' => '225.32',
@@ -73,11 +73,11 @@ function acn_fullpage_slide_points_sc( $atts, $content ) {
 			'y' => '352.83',
 			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
 		],
-		'Mosul' => [
-			'x' => '1013',
-			'y' => '411.91',
-			'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
-		],
+		// 'Mosul' => [
+		// 	'x' => '1013',
+		// 	'y' => '411.91',
+		// 	'image' => '/wp-content/uploads/2017/07/img150-1.jpg'
+		// ],
 		'Bahzani' => [
 			'x' => '1439.68',
 			'y' => '409.84',
