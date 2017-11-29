@@ -69,7 +69,8 @@ $(document).ready(function DOMLoaded() {
     normalScrollElements: scrollElements,
     afterRender: handleAfterRender,
     afterLoad: handleAfterLoad,
-    onLeave: handleLeave
+    onLeave: handleLeave,
+    fadingEffect: true
   });
 
   if($("#fullpage").length > 0) {
