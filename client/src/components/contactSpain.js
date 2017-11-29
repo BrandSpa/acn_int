@@ -55,7 +55,7 @@ class ContactSpain extends Component {
 							type="text" 
 							name="lastname" 
 							placeholder={placeholder.name}
-							value={lastame}
+							value={lastname}
 							onChange={this.handleChange}
 						/>
 					</div>
