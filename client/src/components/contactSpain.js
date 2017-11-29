@@ -101,7 +101,7 @@ class ContactSpain extends Component {
 								id="terms" 
 								type="checkbox" 
 								onChange={this.handleTerms} 
-								checked={terms} /> {this.props.texts.terms}
+								checked={terms} /> {'He leído y acepto el “Aviso de Privacidad” y la “Política de Privacidad” de Ayuda a la Iglesia Necesitada.'}
             </label>
           </div>
 					<button>{'Rezar'}</button>
@@ -113,10 +113,9 @@ class ContactSpain extends Component {
 						color: #2B3740;
 						background: #fff;
 						border: 2px solid #2B3740;
-						padding: 15px 20px;
 						font-family: 'Open Sans';
 						border-radius: 5px;
-						margin-bottom: 20px;
+						margin-bottom: 20px !important;
 					}
 
 					button {
@@ -127,6 +126,8 @@ class ContactSpain extends Component {
 						font-size: 23px;
 						width: 100%;
 						margin: 0 auto;
+						padding: 5px 0 7px 0;
+    				box-sizing: content-box;
 					}
 
 					#terms {
