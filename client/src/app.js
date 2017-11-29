@@ -33,6 +33,7 @@ import PostShare from './components/postShare';
 import ContactsGG from './components/contactsGrantGuidelines';
 import ContactUsForm from './components/contactUsForm';
 import ContactCall from './components/contactCall';
+import ContactSpain from './components/contactSpain';
 
 import lmForm from './components/lmForm';
 
@@ -85,6 +86,7 @@ multipleRender(ContactsGG, '.bs-contacts-gg', true);
 multipleRender(ContactUsForm, '.bs-contact-form-us', true);
 multipleRender(ContactCall, '.bs-contact-call', true);
 multipleRender(lmForm, '.bs-lm-form', true);
+multipleRender(ContactSpain, '.bs-contact-spain', true);
 
 // jquery calls
 setMenu();
