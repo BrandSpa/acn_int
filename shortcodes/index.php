@@ -39,6 +39,7 @@ require_once('contact_gg.php');
 require_once('contact_us_form.php');
 require_once('offices_info.php');
 require_once('contact_call.php');
+require_once('contact_spain.php');
 require_once('lm_form.php');
 
 //VISUAL COMPOSER

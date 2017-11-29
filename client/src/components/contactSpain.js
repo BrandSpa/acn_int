@@ -17,6 +17,11 @@ class ContactSpain extends Component {
 
 	handleTerms = e => 
 		this.setState({ terms: !this.state.terms })
+
+	handleSubmit = e => {
+		e.proventDefault();
+		console.log(this.state);
+	}
 	
 	render() {
 		const { 
@@ -34,7 +39,7 @@ class ContactSpain extends Component {
 		} = this.props;
 
 		return (
-			<form>
+			<form onSubmit={this.handleSubmit}>
 				<div className="row">
 					<div className="col-12 col-6-m col-4-l">
 						<input 
@@ -56,7 +61,7 @@ class ContactSpain extends Component {
 					</div>
 					<div className="col-12 col-6-m col-4-l">
 						<input 
-							type="text" 
+							type="email" 
 							name="email" 
 							placeholder={placeholder.name}
 							value={email}
@@ -66,15 +71,22 @@ class ContactSpain extends Component {
 				</div>
 				<div className="row">
 					<div className="col-12 col-6-m col-4-l">
-						<select name="" id="">
-							<option value="Country">Country</option>
+						<select name="country" id="">
+						{countries.map(country => 
+								<option value={country}>{country}</option>
+							)}
 						</select>
 					</div>
 					<div className="col-12 col-6-m col-4-l">
-						<input type="text"/>
+						<input 
+							type="text" 
+							placeholder={'Código postal'}
+							onChange={this.handleChange}
+							value={postalCode}
+						/>
 					</div>
 					<div className="col-12 col-6-m col-4-l">
-						<select name="" id="">
+						<select name="province" id="">
 							{spainProvinces.map(province => 
 								<option value={province.name}>{province.name}</option>
 							)}

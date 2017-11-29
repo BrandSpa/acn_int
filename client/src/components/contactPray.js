@@ -221,7 +221,7 @@ class contactForm extends Component {
 
           <div className="checkbox">
             <label htmlFor="terms">
-              <input id="terms" type="checkbox" onChange={this.handleCheckbox} checked={terms} /> {this.props.texts.terms}
+              <input id="terms" type="checkbox" onChange={this.handleCheckbox} checked={this.state.terms} /> {this.props.texts.terms}
             </label>
           </div>
 
