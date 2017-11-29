@@ -1,6 +1,6 @@
 <?php
 
-function bs_contact_call_sc($atts, $content = null) {
+function bs_contact_spain_sc($atts, $content = null) {
 
 	$attributes = [
 		'name-placeholder' => 'Name',
