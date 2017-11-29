@@ -95,3 +95,5 @@ toggleViaCrucisNav();
 scrollViaCrucisNav();
 stickyMenu();
 toggleMenu();
+
+Raven.config('https://c1adcd5efa4f4e82b327c1780b0f7119@sentry.io/251903').install()

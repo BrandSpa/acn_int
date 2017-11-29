@@ -83,5 +83,9 @@ k=y._={s:[],t:[+new Date],c:{},l:a};
 olark.identify('2850-621-10-4118');</script>
 
 <!--/olark-->
+
+<!-- sentry. handle errors -->
+<script src="https://cdn.ravenjs.com/3.20.1/raven.min.js"
+    crossorigin="anonymous"></script>
 </body>
 </html>
