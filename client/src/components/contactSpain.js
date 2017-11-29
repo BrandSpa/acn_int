@@ -97,7 +97,8 @@ class ContactSpain extends Component {
 				</div>
 				<div className="checkbox">
             <label htmlFor="terms">
-              <input id="terms" 
+              <input 
+								id="terms" 
 								type="checkbox" 
 								onChange={this.handleTerms} 
 								checked={terms} /> {this.props.texts.terms}
@@ -110,19 +111,26 @@ class ContactSpain extends Component {
 						width: 100%;
 						font-size: 14px;
 						color: #2B3740;
+						background: #fff;
 						border: 2px solid #2B3740;
 						padding: 15px 20px;
 						font-family: 'Open Sans';
-
+						border-radius: 5px;
+						margin-bottom: 20px;
 					}
 
 					button {
 						background: #FC3938;
-						padding: 12px 0;
 						text-align: center;
 						font-family: 'Open Sans';
 						font-weight: 600;
 						font-size: 23px;
+						width: 100%;
+						margin: 0 auto;
+					}
+
+					#terms {
+						width: 15px;
 					}
 
 					@media (min-width: 992px) {
@@ -133,6 +141,7 @@ class ContactSpain extends Component {
 
 						button {
 							font-size: 35px;
+							width: 380px;
 						}
 					}
 
