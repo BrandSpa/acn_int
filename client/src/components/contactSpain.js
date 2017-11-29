@@ -34,6 +34,7 @@ class ContactSpain extends Component {
 		} = this.state;
 
 		const {
+			countries,
 			placeholder = {name: 'Nombre'},
 			texts = {'terms': 'He leído y acepto el “Aviso de Privacidad” y la “Política de Privacidad” de Ayuda a la Iglesia Necesitada.'}
 		} = this.props;
