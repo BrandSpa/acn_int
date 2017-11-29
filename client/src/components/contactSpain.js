@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import spainProvinces from '../../src/lib/spain_provinces';
+import spainProvinces from '../lib/provinces_spain';
 
 class ContactSpain extends Component {
 	state = {
