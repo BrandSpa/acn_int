@@ -30,7 +30,8 @@ class ContactSpain extends Component {
 			email, 
 			country, 
 			postalCode, 
-			province 
+			province,
+			terms
 		} = this.state;
 
 		const {
