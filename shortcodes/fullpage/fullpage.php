@@ -22,7 +22,9 @@ function acn_fullpage_sc( $atts, $content ) {
 		"links" => "",
 		"intro" => "",
 		"titles" => "",
-		"show_intro" => false
+		"show_intro" => false,
+		"call-us-title" => "Llámanos al",
+		"call-us-num" => "91 725 92 12"
 	], $atts);
 
 	$current_url = str_replace('//', 'https://', esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
@@ -68,7 +70,10 @@ function acn_fullpage_sc( $atts, $content ) {
 
 		<div class="indicator__title"><?php echo $at['story_name'] ?></div>
 	</div>
-
+	<div class="call-us">
+		<span class="call-us-title"><?php echo $at['call-us-title'] ?></span>
+		<span class="call-us-num"><?php echo $at['call-us-num'] ?></span>
+	</div>
 		<ul class="fullpage__menu">
 			<li>
 				<a class="fullpage-donate bs-donate" href="<?php echo $at['link_donate'] ?>">

@@ -1872,6 +1872,25 @@ html.fp-enabled,
   display: table;
   content: " "; }
 
+.call-us {
+  display: none;
+  position: absolute;
+  right: 200px;
+  top: 40px; }
+  @media (min-width: 1200px), (min-width: 992px) and (max-width: 1199px) {
+    .call-us {
+      display: block; } }
+  .call-us span {
+    display: block; }
+  .call-us-title {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 300; }
+  .call-us-num {
+    font-family: 'Open Sans';
+    font-size: 30px;
+    font-weight: 600; }
+
 .hidden {
   display: none; }
 

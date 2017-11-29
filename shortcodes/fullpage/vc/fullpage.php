@@ -180,6 +180,18 @@ function acn_fullpage_vc() {
         'heading' => 'Show Intro',
         'param_name' => 'show_intro',
         'value' => false
+      ],
+      [
+        'type' => 'textfield',
+        'heading' => 'Call us title',
+        'param_name' => 'call-us-title',
+        'value' => 'Llámanos al'
+      ],
+      [
+        'type' => 'textfield',
+        'heading' => 'Call us number',
+        'param_name' => 'call-us-num',
+        'value' => '91 725 92 12'
       ]
     ];
 

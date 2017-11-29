@@ -1509,6 +1509,32 @@ html.fp-enabled,
   content: " ";
 }
 
+.call-us {
+  display: none;
+  position: absolute;
+  right: 200px;
+  top: 40px;
+  @media #{$xl}, #{$l} {
+    display: block;
+  }
+  
+  span {
+    display: block;
+  }
+
+  &-title {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  &-num {
+    font-family: 'Open Sans';
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
 
 @import 'donate';
 @import 'contact_form';
