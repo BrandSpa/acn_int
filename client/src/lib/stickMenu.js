@@ -1,7 +1,7 @@
 function stickMenu() {
   const $nav = $('.nav');
   const $stickyMenu = $('.sticky-menu');
-  const navTop = $nav ? $nav.offset().top : 0;
+  const navTop = $nav.length > 0 ? $nav.offset().top : 0;
   const top = navTop;
   const br = document.querySelector('.sticky-menu__container') ?
     document.querySelector('.sticky-menu__container').getBoundingClientRect() :

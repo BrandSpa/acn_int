@@ -19,8 +19,11 @@ class ContactSpain extends Component {
 		this.setState({ terms: !this.state.terms })
 
 	handleSubmit = e => {
-		e.proventDefault();
-		console.log(this.state);
+		e.preventDefault();
+		if(this.state.terms) {
+			console.log(this.state);
+		}
+	
 	}
 	
 	render() {
@@ -132,12 +135,26 @@ class ContactSpain extends Component {
 
 					#terms {
 						width: 15px;
+						height: 15px;
+						top: 5px;
+					}
+
+					.checkbox {
+						display: flex;
+						justify-content: center;
+						color: #fff;
+						font-size: 12px;
+						font-weight: 600;
 					}
 
 					@media (min-width: 992px) {
 						input, select {
 							height: 50px;
 							font-size: 16px;
+						}
+						
+						.checkbox {
+							font-size: 20px;
 						}
 
 						button {
