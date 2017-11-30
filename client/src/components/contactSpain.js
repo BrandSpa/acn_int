@@ -28,6 +28,7 @@ class ContactSpain extends Component {
 		const contact = this.state;
 
 		if(this.state.terms) {
+			this.setState({loading: !this.state.loading});
 			try {
 				await storeConvertLoop(convertloop.tags, contact);
 				const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
@@ -57,7 +58,8 @@ class ContactSpain extends Component {
 			country, 
 			postalCode, 
 			province,
-			terms
+			terms,
+			loading
 		} = this.state;
 
 		const {
