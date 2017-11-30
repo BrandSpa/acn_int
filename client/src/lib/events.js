@@ -10,7 +10,7 @@ export const runEvents = () => {
   ];
 
   events.forEach((eventName) => {
-    const dataStr = localStorage.getItem(eventName);
+    const dataStr = localStorage && localStorage.getItem(eventName);
 
     if (dataStr !== null) {
       const data = JSON.parse(dataStr);
@@ -23,7 +23,7 @@ export const runEvents = () => {
 
 export const storeEvent = (name, options = {}) => {
   const p = new Promise((resolve) => {
-    localStorage.setItem(name, JSON.stringify(options));
+    localStorage && localStorage.setItem(name, JSON.stringify(options));
     return resolve({ name, options });
   });
 
@@ -111,5 +111,5 @@ const runEvent = (eventName, data) => {
 };
 
 export const flushEvent = (name) => {
-  localStorage.removeItem(name);
+  localStorage && localStorage.removeItem(name);
 };
