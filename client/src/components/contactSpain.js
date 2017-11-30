@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import spainProvinces from '../lib/provinces_spain';
+import SelectArrow from './selectArrow';
 
 class ContactSpain extends Component {
 	state = {
@@ -76,11 +77,14 @@ class ContactSpain extends Component {
 				</div>
 				<div className="row">
 					<div className="col-12 col-6-m col-4-l">
-						<select name="country" id="">
-						{countries.map(country => 
-								<option value={country}>{country}</option>
-							)}
-						</select>
+						<div className="select-container">
+							<select name="country" id="">
+								{countries.map(country => 
+									<option value={country}>{country}</option>
+								)}
+							</select>
+							<SelectArrow />
+						</div>
 					</div>
 					<div className="col-12 col-6-m col-4-l">
 						<input 
@@ -91,11 +95,14 @@ class ContactSpain extends Component {
 						/>
 					</div>
 					<div className="col-12 col-6-m col-4-l">
-						<select name="province" id="">
-							{spainProvinces.map(province => 
-								<option value={province.name}>{province.name}</option>
-							)}
-						</select>
+						<div className="select-container">
+							<select name="province" id="">
+								{spainProvinces.map(province => 
+									<option value={province.name}>{province.name}</option>
+								)}
+							</select>
+							<SelectArrow />
+						</div>
 					</div>
 				</div>
 				<div className="checkbox">
@@ -149,6 +156,10 @@ class ContactSpain extends Component {
 						color: #fff;
 						font-size: 12px;
 						font-weight: 600;
+					}
+
+					.select-container {
+						position: relative;
 					}
 
 					@media (min-width: 992px) {
