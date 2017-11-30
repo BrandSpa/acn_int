@@ -3,22 +3,23 @@
 function bs_contact_spain_sc($atts, $content = null) {
 
 	$attributes = [
-		'name-placeholder' => 'Name',
-		'lastname-placeholder' => 'Lastname',
+		'name-placeholder' => 'Nombre',
+		'lastname-placeholder' => 'Apellidos',
 		'email-placeholder' => 'Email',
-		'country-placeholder' => 'Country',
-		'city-placeholder' => 'City',
-		'phone-placeholder' => 'phone',
-		"province-placeholder" => 'province',
-		"postal-code-placeholder" => 'postal code',
-		'btn-placeholder' => 'Pray',
-		'name-validation' => 'Name required',
-		'email-validation' => 'email required',
+		'country-placeholder' => 'País',
+		'city-placeholder' => 'Ciudad',
+		'phone-placeholder' => 'Teléfono',
+		"province-placeholder" => 'Provincia',
+		"postal-code-placeholder" => 'Código postal',
+		"terms-placeholder" => "He leído y acepto el “Aviso de Privacidad” y la “Política de Privacidad” de Ayuda a la Iglesia Necesitada.",
+		'btn-placeholder' => 'Rezar',
+		'name-validation' => 'Nombre required',
+		'email-validation' => 'Email required',
 		'redirect' => '',
 		'convertloop_tags' => '',
-		'convertloop_event' => 'Subscription',
-		'btn_text' => '',
-		'loading_text' => 'loading...'
+		'convertloop_event' => 'Subscription_spain',
+		'btn_text' => 'Rezar',
+		'loading_text' => 'Enviando...'
 	];
 
   $at = shortcode_atts( $attributes , $atts );
@@ -41,6 +42,7 @@ function bs_contact_spain_sc($atts, $content = null) {
 			"country" => $at['country-placeholder'],
 			"province" => $at['province-placeholder'],
 			"postal-code" => $at['postal-code-placeholder'],
+			"terms" => $at['terms-placeholder'],
 		],
 		"validation" => [
 			"name" => $at['name-validation'],

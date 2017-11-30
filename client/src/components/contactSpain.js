@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { storeConvertLoop } from '../actions/contact';
+import { storeEvent } from '../lib/events';
 import spainProvinces from '../lib/provinces_spain';
 import SelectArrow from './selectArrow';
 
@@ -7,10 +9,11 @@ class ContactSpain extends Component {
 		'name': '',
 		'lastname': '',
 		'email': '',
-		'country': '',
+		'country': this.props.country,
 		'postalCode': '',
 		'province': '',
-		'terms': false
+		'terms': false,
+		'loading': false
 	}
 
 	handleChange = e => 
@@ -19,10 +22,29 @@ class ContactSpain extends Component {
 	handleTerms = e => 
 		this.setState({ terms: !this.state.terms })
 
-	handleSubmit = e => {
+	handleSubmit = async (e) => {
 		e.preventDefault();
+		const { convertloop, redirect } = this.props;
+		const contact = this.state;
+
 		if(this.state.terms) {
-			console.log(this.state);
+			try {
+				await storeConvertLoop(convertloop.tags, contact);
+				const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
+	
+				const gaEventData = { category: 'SUBSCRIBE_SPAIN', action: 'SUBSCRIBE_SPAIN', label: `SUBSCRIBE_SPAIN` };
+				await storeEvent('ga_event', gaEventData);
+	
+				const clEventData = { name: convertloop.event, person: contact };
+				await storeEvent('cl_event', clEventData);
+	
+				const fbEventData = { eventName: 'Lead' };
+				await storeEvent('fb_event', fbEventData);
+	
+				setTimeout(() => window.location = redirect, 0);
+			} catch(err) {
+				console.log(err);
+			}
 		}
 	
 	}
@@ -40,8 +62,8 @@ class ContactSpain extends Component {
 
 		const {
 			countries,
-			placeholder = {name: 'Nombre'},
-			texts = {'terms': 'He leído y acepto el “Aviso de Privacidad” y la “Política de Privacidad” de Ayuda a la Iglesia Necesitada.'}
+			placeholder,
+			texts
 		} = this.props;
 
 		return (
@@ -60,18 +82,20 @@ class ContactSpain extends Component {
 						<input 
 							type="text" 
 							name="lastname" 
-							placeholder={placeholder.name}
+							placeholder={placeholder.lastname}
 							value={lastname}
 							onChange={this.handleChange}
+							required
 						/>
 					</div>
 					<div className="col-12 col-6-m col-4-l">
 						<input 
 							type="email" 
 							name="email" 
-							placeholder={placeholder.name}
+							placeholder={placeholder.email}
 							value={email}
 							onChange={this.handleChange}
+							required
 						/>
 					</div>
 				</div>
@@ -97,6 +121,7 @@ class ContactSpain extends Component {
 					<div className="col-12 col-6-m col-4-l">
 						<div className="select-container">
 							<select name="province" id="">
+								{placeholder.province}
 								{spainProvinces.map(province => 
 									<option value={province.name}>{province.name}</option>
 								)}
@@ -111,10 +136,10 @@ class ContactSpain extends Component {
 								id="terms" 
 								type="checkbox" 
 								onChange={this.handleTerms} 
-								checked={terms} /> {'He leído y acepto el “Aviso de Privacidad” y la “Política de Privacidad” de Ayuda a la Iglesia Necesitada.'}
+								checked={terms} /> {placeholder.terms}
             </label>
           </div>
-					<button>{'Rezar'}</button>
+					<button disabled={loading}>{loading ? texts.loading : texts.btn}</button>
 				<style jsx>{`
 					input, select {
 						height: 40px;

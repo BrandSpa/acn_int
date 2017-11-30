@@ -1,5 +1,6 @@
 <script>
   var bs = {};
+  bs.currentPageLang = '<?php  if(function_exists("pll_current_language")) echo pll_current_language("name"); ?>';
   bs.country = '<?php echo getCountry() ?>';
   bs.lang = '<?php echo getCountryLang(getCountry()) ?>';
   bs.donate = '<?php echo gett('Donate') ?>';
