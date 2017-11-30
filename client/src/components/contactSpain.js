@@ -148,7 +148,7 @@ class ContactSpain extends Component {
             </label>
           </div>
 
-					<div className="input-container">
+					<div className="err-container">
 						<div className={termsError ? 'input-error' : 'hidden'}>
 							{validation.terms}
 						</div>
@@ -200,6 +200,20 @@ class ContactSpain extends Component {
 
 					.select-container {
 						position: relative;
+					}
+
+					.err-container {
+						display: flex;
+						justify-content: center;
+						margin: 20px 0;
+					}
+
+					.err {
+						font-size: .9rem;
+						background: #F4334A;
+						display: inline;
+						padding: 3px 15px 3px 15px;
+						border-radius: 3px;
 					}
 
 					@media (min-width: 992px) {
