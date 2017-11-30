@@ -130,9 +130,11 @@ class ContactSpain extends Component {
 						font-size: 23px;
 						width: 100%;
 						padding: 5px 0 7px 0;
+						margin: 0 auto;
     				box-sizing: content-box;
 						align-self: center;
     				justify-content: center;
+						
 					}
 
 					#terms {
