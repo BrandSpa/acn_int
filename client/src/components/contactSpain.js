@@ -75,8 +75,8 @@ class ContactSpain extends Component {
 
 		return (
 			<form onSubmit={this.handleSubmit}>
-
-					<div className="col-12 col-4-l">
+				<div className="inputs-wrap">
+					<div className="col-12 col-6-m col-4-l">
 						<input 
 							type="text"
 							name="name" 
@@ -86,7 +86,7 @@ class ContactSpain extends Component {
 							required
 						/>
 					</div>
-					<div className="col-12 col-4-l">
+					<div className="col-12 col-6-m col-4-l">
 						<input 
 							type="text" 
 							name="lastname" 
@@ -95,7 +95,7 @@ class ContactSpain extends Component {
 							onChange={this.handleChange}
 						/>
 					</div>
-					<div className="col-12 col-4-l">
+					<div className="col-12 col-6-m col-4-l">
 						<input 
 							type="email" 
 							name="email" 
@@ -106,7 +106,7 @@ class ContactSpain extends Component {
 						/>
 					</div>
 
-					<div className="col-12 col-4-l">
+					<div className="col-12 col-6-m col-4-l">
 						<div className="select-container">
 							<select name="country" onChange={this.handleChange} value={country}>
 							<option value="">{placeholder.country}</option>
@@ -117,7 +117,7 @@ class ContactSpain extends Component {
 							<SelectArrow />
 						</div>
 					</div>
-					<div className="col-12 col-4-l">
+					<div className="col-12 col-6-m col-4-l">
 						<input 
 							type="text" 
 							name="postalCode"
@@ -126,8 +126,8 @@ class ContactSpain extends Component {
 							value={postalCode}
 						/>
 					</div>
-					{country === 'Spain' || country === 'España' &&
-						<div className="col-12 col-4-l">
+					{country === 'Spain' || country === 'España' ?
+						<div className="col-12 col-6-m col-4-l">
 							<div className="select-container">
 								<select name="province" onChange={this.handleChange} value={province}>
 									<option value="">{placeholder.province}</option>
@@ -138,8 +138,8 @@ class ContactSpain extends Component {
 								<SelectArrow />
 							</div>
 						</div>
-					}
-
+					: null}
+				</div>
 				<div className="checkbox">
             <label htmlFor="terms">
               <input 
@@ -158,6 +158,11 @@ class ContactSpain extends Component {
 
 					<button disabled={loading}>{loading ? texts.loading : texts.btn}</button>
 				<style jsx>{`
+					.inputs-wrap::before {
+						content: " ";
+    				display: table;
+					}
+					
 					input, select {
 						height: 40px;
 						width: 100%;
