@@ -149,7 +149,7 @@ class ContactSpain extends Component {
           </div>
 
 					<div className="err-container">
-						<div className={termsError ? 'input-error' : 'hidden'}>
+						<div className={termsError ? 'err' : 'hidden'}>
 							{validation.terms}
 						</div>
         	</div>
