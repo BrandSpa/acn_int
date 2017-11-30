@@ -75,8 +75,8 @@ class ContactSpain extends Component {
 
 		return (
 			<form onSubmit={this.handleSubmit}>
-				<div className="row">
-					<div className="col-12 col-6-m col-4-l">
+
+					<div className="col-12 col-4-l">
 						<input 
 							type="text"
 							name="name" 
@@ -86,7 +86,7 @@ class ContactSpain extends Component {
 							required
 						/>
 					</div>
-					<div className="col-12 col-6-m col-4-l">
+					<div className="col-12 col-4-l">
 						<input 
 							type="text" 
 							name="lastname" 
@@ -95,7 +95,7 @@ class ContactSpain extends Component {
 							onChange={this.handleChange}
 						/>
 					</div>
-					<div className="col-12 col-6-m col-4-l">
+					<div className="col-12 col-4-l">
 						<input 
 							type="email" 
 							name="email" 
@@ -105,11 +105,10 @@ class ContactSpain extends Component {
 							required
 						/>
 					</div>
-				</div>
-				<div className="row">
-					<div className="col-12 col-6-m col-4-l">
+
+					<div className="col-12 col-4-l">
 						<div className="select-container">
-							<select name="country" id="">
+							<select name="country" onChange={this.handleChange} value={country}>
 							<option value="">{placeholder.country}</option>
 								{countries.map(country => 
 									<option value={country}>{country}</option>
@@ -118,7 +117,7 @@ class ContactSpain extends Component {
 							<SelectArrow />
 						</div>
 					</div>
-					<div className="col-12 col-6-m col-4-l">
+					<div className="col-12 col-4-l">
 						<input 
 							type="text" 
 							name="postalCode"
@@ -127,18 +126,20 @@ class ContactSpain extends Component {
 							value={postalCode}
 						/>
 					</div>
-					<div className="col-12 col-6-m col-4-l">
-						<div className="select-container">
-							<select name="province">
-								<option value="">{placeholder.province}</option>
-								{spainProvinces.map(province => 
-									<option value={province.name}>{province.name}</option>
-								)}
-							</select>
-							<SelectArrow />
+					{country === 'Spain' || country === 'España' &&
+						<div className="col-12 col-4-l">
+							<div className="select-container">
+								<select name="province" onChange={this.handleChange} value={province}>
+									<option value="">{placeholder.province}</option>
+									{spainProvinces.map(province => 
+										<option value={province.name}>{province.name}</option>
+									)}
+								</select>
+								<SelectArrow />
+							</div>
 						</div>
-					</div>
-				</div>
+					}
+
 				<div className="checkbox">
             <label htmlFor="terms">
               <input 
@@ -182,7 +183,7 @@ class ContactSpain extends Component {
     				box-sizing: content-box;
 						align-self: center;
     				justify-content: center;
-						
+						color: #fff;
 					}
 
 					#terms {
