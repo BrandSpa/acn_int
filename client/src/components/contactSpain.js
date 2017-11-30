@@ -13,7 +13,8 @@ class ContactSpain extends Component {
 		'postalCode': '',
 		'province': '',
 		'terms': false,
-		'loading': false
+		'loading': false,
+		'termsError': false 
 	}
 
 	handleChange = e => 
@@ -28,7 +29,7 @@ class ContactSpain extends Component {
 		const contact = this.state;
 
 		if(this.state.terms) {
-			this.setState({loading: !this.state.loading});
+			this.setState({loading: !this.state.loading, termsError: false});
 			try {
 				await storeConvertLoop(convertloop.tags, contact);
 				const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
@@ -46,6 +47,8 @@ class ContactSpain extends Component {
 			} catch(err) {
 				console.log(err);
 			}
+		} else {
+			this.setState({termsError: true});
 		}
 	
 	}
@@ -65,7 +68,8 @@ class ContactSpain extends Component {
 		const {
 			countries,
 			placeholder,
-			texts
+			texts,
+			validation
 		} = this.props;
 
 		return (
@@ -115,6 +119,7 @@ class ContactSpain extends Component {
 					<div className="col-12 col-6-m col-4-l">
 						<input 
 							type="text" 
+							name="postalCode"
 							placeholder={'Código postal'}
 							onChange={this.handleChange}
 							value={postalCode}
@@ -122,8 +127,8 @@ class ContactSpain extends Component {
 					</div>
 					<div className="col-12 col-6-m col-4-l">
 						<div className="select-container">
-							<select name="province" id="">
-								{placeholder.province}
+							<select name="province">
+								<option value="">{placeholder.province}</option>
 								{spainProvinces.map(province => 
 									<option value={province.name}>{province.name}</option>
 								)}
@@ -141,6 +146,13 @@ class ContactSpain extends Component {
 								checked={terms} /> {placeholder.terms}
             </label>
           </div>
+					<div className="input-container">
+          
+					<div className={errors.terms ? 'input-error' : 'hidden'}>
+            {validation.terms}
+          </div>
+        	</div>
+
 					<button disabled={loading}>{loading ? texts.loading : texts.btn}</button>
 				<style jsx>{`
 					input, select {

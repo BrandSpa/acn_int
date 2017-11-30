@@ -19,7 +19,8 @@ function bs_contact_spain_sc($atts, $content = null) {
 		'convertloop_tags' => '',
 		'convertloop_event' => 'Subscription_spain',
 		'btn_text' => 'Rezar',
-		'loading_text' => 'Enviando...'
+		'loading_text' => 'Enviando...',
+		'terms-validation' => 'Debes aceptar',
 	];
 
   $at = shortcode_atts( $attributes , $atts );
@@ -47,6 +48,7 @@ function bs_contact_spain_sc($atts, $content = null) {
 		"validation" => [
 			"name" => $at['name-validation'],
 			"email" => $at['email-validation'],
+			"terms" => $at['terms-validation']
 		],
 		"redirect" => $at['redirect'] ? $at['redirect'] : get_option('subscribe_redirect'),
 		"country" => getCountry(),
