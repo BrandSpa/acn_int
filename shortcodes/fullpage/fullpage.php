@@ -27,7 +27,7 @@ function acn_fullpage_sc( $atts, $content ) {
 		"call-us-num" => "91 725 92 12"
 	], $atts);
 
-	$current_url = str_replace('//', 'https://', esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
+	$current_url = str_replace('http://', 'https://', esc_url($_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']));
 	$links = empty(vc_param_group_parse_atts($at['links'])) ? [] : vc_param_group_parse_atts($at['links']);
 	$intro = empty(vc_param_group_parse_atts($at['intro'])) ? [] : vc_param_group_parse_atts($at['intro']);
 	$titles = empty(vc_param_group_parse_atts($at['titles'])) ? [] : vc_param_group_parse_atts($at['titles']);
@@ -117,7 +117,7 @@ function acn_fullpage_sc( $atts, $content ) {
 					<a
 							class="fullpage__menu__share-icon"
 							target="_blank"
-							href="https://api.whatsapp.com/send?text=<?php echo $current_url ?>">
+							href="https://api.whatsapp.com/send?text=<?php echo urlencode($current_url) ?>">
 							<i class="ion-social-whatsapp"></i>
 						</a>
 					
