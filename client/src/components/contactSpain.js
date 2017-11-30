@@ -62,7 +62,8 @@ class ContactSpain extends Component {
 			postalCode, 
 			province,
 			terms,
-			loading
+			loading,
+			termsError
 		} = this.state;
 
 		const {
@@ -146,11 +147,11 @@ class ContactSpain extends Component {
 								checked={terms} /> {placeholder.terms}
             </label>
           </div>
+					
 					<div className="input-container">
-          
-					<div className={errors.terms ? 'input-error' : 'hidden'}>
-            {validation.terms}
-          </div>
+						<div className={termsError ? 'input-error' : 'hidden'}>
+							{validation.terms}
+						</div>
         	</div>
 
 					<button disabled={loading}>{loading ? texts.loading : texts.btn}</button>
