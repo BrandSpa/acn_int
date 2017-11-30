@@ -162,7 +162,7 @@ class ContactSpain extends Component {
 						content: " ";
     				display: table;
 					}
-					
+
 					input, select {
 						height: 40px;
 						width: 100%;
@@ -194,10 +194,11 @@ class ContactSpain extends Component {
 					#terms {
 						width: 15px;
 						height: 15px;
-						top: 5px;
+						top: 15px;
 					}
 
 					.checkbox {
+						width: 100%;
 						display: flex;
 						justify-content: center;
 						color: #fff;
