@@ -113,6 +113,15 @@ function acn_fullpage_sc( $atts, $content ) {
 							<i class="ion-social-twitter"></i>
 						</a>
 					</li>
+					<li>
+					<a
+							class="fullpage__menu__share-icon"
+							target="_blank"
+							href="https://api.whatsapp.com/send?text=<?php echo $current_url ?>">
+							<i class="ion-social-whatsapp"></i>
+						</a>
+					
+					</li>
 				</ul>
 			</li>
 		</ul>
