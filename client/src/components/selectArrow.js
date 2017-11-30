@@ -1,3 +1,5 @@
+import React from 'react';
+
 const selectArrow = () => {
 	return (
 		<svg width="23px" height="14px" viewBox="0 0 23 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink">
