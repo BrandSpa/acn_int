@@ -122,15 +122,17 @@ class ContactSpain extends Component {
 					}
 
 					button {
+						display: flex;
 						background: #FC3938;
 						text-align: center;
 						font-family: 'Open Sans';
 						font-weight: 600;
 						font-size: 23px;
 						width: 100%;
-						margin: 0 auto;
 						padding: 5px 0 7px 0;
     				box-sizing: content-box;
+						align-self: center;
+    				justify-content: center;
 					}
 
 					#terms {
