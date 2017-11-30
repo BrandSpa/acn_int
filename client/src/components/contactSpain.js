@@ -83,6 +83,7 @@ class ContactSpain extends Component {
 							placeholder={placeholder.name}
 							value={name}
 							onChange={this.handleChange}
+							required
 						/>
 					</div>
 					<div className="col-12 col-6-m col-4-l">
@@ -92,7 +93,6 @@ class ContactSpain extends Component {
 							placeholder={placeholder.lastname}
 							value={lastname}
 							onChange={this.handleChange}
-							required
 						/>
 					</div>
 					<div className="col-12 col-6-m col-4-l">
@@ -147,7 +147,7 @@ class ContactSpain extends Component {
 								checked={terms} /> {placeholder.terms}
             </label>
           </div>
-					
+
 					<div className="input-container">
 						<div className={termsError ? 'input-error' : 'hidden'}>
 							{validation.terms}
