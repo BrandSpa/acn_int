@@ -110,6 +110,7 @@ class ContactSpain extends Component {
 					<div className="col-12 col-6-m col-4-l">
 						<div className="select-container">
 							<select name="country" id="">
+							<option value="">{placeholder.country}</option>
 								{countries.map(country => 
 									<option value={country}>{country}</option>
 								)}
@@ -214,6 +215,7 @@ class ContactSpain extends Component {
 						display: inline;
 						padding: 3px 15px 3px 15px;
 						border-radius: 3px;
+						color: #fff;
 					}
 
 					@media (min-width: 992px) {
