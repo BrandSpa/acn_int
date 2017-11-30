@@ -13,6 +13,13 @@ const selectArrow = () => {
 					svg {
 						position: absolute;
 						right: 20px;
+						top: 15px;
+					}
+
+					@media (min-width: 992px) { 
+						svg {
+							top: 20px;
+						}
 					}
 				`}</style>
 		</svg>
