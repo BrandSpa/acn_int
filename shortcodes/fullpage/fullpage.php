@@ -137,7 +137,22 @@ function acn_fullpage_sc( $atts, $content ) {
 			<?php endforeach; ?>
 			<li>
 				<a href="<?php echo get_option('url_' . space_to_lodash( getCountry() ) ) ?>">
-					<img src="<?php echo get_template_directory_uri() ?>/public/img/acn_fp_about.png" width="56px" height="56">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 					viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" width="30" height="30">
+					<style type="text/css">
+						.st0{fill:#EC1C24;}
+						.st1{fill:#FFFFFF;}
+					</style>
+					<g>
+						<path class="st0" d="M0,15C0,6.7,6.7,0,15,0c8.3,0,15,6.7,15,15c0,8.3-6.7,15-15,15C6.7,30,0,23.3,0,15"/>
+						<path class="st1" d="M27.3,13.7c-0.7-0.6-5.1-4.5-5.6-5c-0.6-0.5-1.3,0.2-0.7,0.8c0.6,0.5,5.7,5,5.7,5H15.6V2.1
+							c0-0.3-0.2-0.5-0.5-0.5c-0.3,0-0.5,0.2-0.5,0.5v12.4H8.8V9c0-0.3-0.2-0.5-0.5-0.5C8,8.5,7.8,8.7,7.8,9v5.5H2.1
+							c-0.3,0-0.5,0.2-0.5,0.5c0,0.3,0.2,0.5,0.5,0.5h5.6V21c0,0.3,0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5v-5.5h5.7v12.3
+							c0,0.3,0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5V15.5h11.1c0,0-5.7,5-5.7,5.1c-0.2,0.2-0.2,0.5,0,0.7c0.1,0.1,0.3,0.2,0.4,0.2
+							c0.1,0,0.3,0,0.3-0.1c0.2-0.2,5.2-4.6,5.7-5.1c0.6-0.5,0.9-0.9,0.9-1.4C28.2,14.5,27.9,14.2,27.3,13.7"/>
+					</g>
+					</svg>
+
 					<span class="title"><?php echo $at['text_about'] ?></span>
 				</a>
 			</li>

@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { storeConvertLoop } from '../actions/contact';
 import { storeEvent } from '../lib/events';
 
+const validate = (str) => {
+	const s = typeof str === 'string' ? str.trim() : '';
+	return s.length === 0;
+}
+
 class ContactCall extends Component {
 	state = {
 		name: '',
@@ -10,41 +15,72 @@ class ContactCall extends Component {
 		country: this.props.country,
 		city: '',
 		phone: '',
-		loading: false
+		loading: false,
+		errors: {
+			name: false,
+			lastname: false,
+			email: false,
+			country: false,
+			city: false,
+			phone: false,
+		}
 	}
 
 	handleInputChange = (e, field) => {
 		this.setState({ [e.target.name]: e.target.value });
 	} 
 
+	isValid = () => {
+		let errors = Object.keys(this.state.errors).map((field) => {
+			const v = validate(this.state[field]);
+			this.setState({ [field]:  v});
+			return v;
+		});
+
+		const invalid = errors.some(err => err);
+		return !invalid;
+	}
+
 	handleStore = async (e) => {
 		e.preventDefault();
 		const { convertloop, redirect } = this.props;
 		this.setState({ loading: true });
 		const contact = this.state;
-	
-		try {
-			await storeConvertLoop(convertloop.tags, contact);
-			const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
+		const isValid = this.isValid();
 
-			const gaEventData = { category: 'SUBSCRIBE', action: 'SUBSCRIBE', label: `SUBSCRIBE_${language}` };
-			await storeEvent('ga_event', gaEventData);
+		if(isValid) {
+			try {
+				await storeConvertLoop(convertloop.tags, contact);
+				const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
 
-			const clEventData = { name: convertloop.event, person: contact };
-			await storeEvent('cl_event', clEventData);
+				const gaEventData = { category: 'SUBSCRIBE', action: 'SUBSCRIBE', label: `SUBSCRIBE_${language}` };
+				await storeEvent('ga_event', gaEventData);
 
-			const fbEventData = { eventName: 'Lead' };
-			await storeEvent('fb_event', fbEventData);
+				const clEventData = { name: convertloop.event, person: contact };
+				await storeEvent('cl_event', clEventData);
 
-			setTimeout(() => window.location = redirect, 0);
-		} catch(err) {
-			console.log(err);
+				const fbEventData = { eventName: 'Lead' };
+				await storeEvent('fb_event', fbEventData);
+
+				setTimeout(() => window.location = redirect, 0);
+			} catch(err) {
+				console.log(err);
+			}
 		}
 	}
 
 	render() {
 		const { placeholders, texts, validation, countries } = this.props;
-		const { name, lastname, email, country, city, phone, loading } = this.state;
+		const { 
+			name, 
+			lastname,
+			email, 
+			country, 
+			city, 
+			phone, 
+			loading,
+			errors
+		} = this.state;
 
 		return (
 			<section ref={ref => this.container = ref}>
@@ -59,8 +95,6 @@ class ContactCall extends Component {
 							className="input-section__text" 
 							onChange={(e) => this.handleInputChange(e)}
 							value={name}
-							data-value-missing={validation.name}
-							required
 						/>
 					</div>
 					<div className="input-section">
@@ -85,7 +119,6 @@ class ContactCall extends Component {
 							className="input-section__text" 
 							onChange={(e) => this.handleInputChange(e)}
 							value={email}
-							required
 						/>
 					</div>
 					<div className="input-section">
@@ -127,8 +160,6 @@ class ContactCall extends Component {
 							className="input-section__text" 
 							onChange={(e) => this.handleInputChange(e)}
 							value={phone}
-							data-value-missing={validation.phone}
-							required 
 						/>
 					</div>
 					<button disabled={loading}>{loading ? texts.loading : texts.btn}</button>
