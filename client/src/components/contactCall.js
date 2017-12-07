@@ -34,6 +34,7 @@ class ContactCall extends Component {
 	isValid = () => {
 		let errors = Object.keys(this.state.errors).map((field) => {
 			const v = validate(this.state[field]);
+			console.log(v);
 			const errors = {...this.state.errors, [field]:  v};
 			this.setState({ errors });
 			return v;
@@ -68,6 +69,8 @@ class ContactCall extends Component {
 			} catch(err) {
 				console.log(err);
 			}
+		} else {
+			this.setState({ loading: false });
 		}
 	}
 
@@ -88,7 +91,7 @@ class ContactCall extends Component {
 		return (
 			<section ref={ref => this.container = ref}>
 				<form onSubmit={this.handleStore}>
-					<div className="input-section">
+					<div className={this.state.errors.name ? "input-section input-err " : "input-section"}>
 						<div className="input-section__placeholder">
 							<i className="ion-person"></i> <span>{placeholders.name}</span>
 						</div>
@@ -100,7 +103,7 @@ class ContactCall extends Component {
 							value={name}
 						/>
 					</div>
-					<div className="input-section">
+					<div className={this.state.errors.lastname ? "input-section input-err " : "input-section"}>
 						<div className="input-section__placeholder">
 							<i className="ion-person"></i> <span>{placeholders.lastname}</span>
 						</div>
@@ -112,7 +115,7 @@ class ContactCall extends Component {
 							value={lastname} 
 						/>
 					</div>
-					<div className="input-section">
+					<div className={this.state.errors.email ? "input-section input-err " : "input-section"}>
 						<div className="input-section__placeholder">
 							<i className="ion-person"></i> <span>{placeholders.email}</span>
 						</div>
@@ -124,7 +127,7 @@ class ContactCall extends Component {
 							value={email}
 						/>
 					</div>
-					<div className="input-section">
+					<div className={this.state.errors.country ? "input-section input-err " : "input-section"}>
 						<div className="input-section__placeholder">
 							<i className="ion-location"></i> <span>{placeholders.country}</span>
 						</div>
@@ -141,7 +144,7 @@ class ContactCall extends Component {
 							}
 						</select>
 					</div>
-					<div className="input-section">
+					<div className={this.state.errors.city ? "input-section input-err " : "input-section"}>
 						<div className="input-section__placeholder">
 							<i className="ion-location"></i> <span>{placeholders.city}</span>
 						</div>
@@ -153,7 +156,7 @@ class ContactCall extends Component {
 							value={city} 
 						/>
 					</div>
-					<div className="input-section">
+					<div className={this.state.errors.phone ? "input-section input-err " : "input-section"}>
 						<div className="input-section__placeholder">
 							<i className="ion-iphone"></i> <span>{placeholders.phone}</span>
 						</div>
@@ -193,6 +196,10 @@ class ContactCall extends Component {
 						font-size: 16px;
 						color: #1b1b1b;
 						margin-bottom: 15px;
+					}
+
+					.input-err {
+						border-color: 'red'
 					}
 
 					.prefix {
