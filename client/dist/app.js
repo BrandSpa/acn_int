@@ -13828,8 +13828,8 @@ var ContactCall = function (_Component) {
 
 			_this.setState({ errors: errors });
 
-			var invalid = errors.some(function (err) {
-				return err;
+			var invalid = (0, _keys2['default'])(errors).some(function (err) {
+				return errors[err];
 			});
 			return !invalid;
 		}, _this.handleStore = function () {

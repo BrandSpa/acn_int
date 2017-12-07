@@ -42,7 +42,7 @@ class ContactCall extends Component {
 
 		this.setState({ errors });
 
-		const invalid = errors.some(err => err);
+		const invalid = Object.keys(errors).some(err => errors[err]);
 		return !invalid;
 	}
 
