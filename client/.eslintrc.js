@@ -15,7 +15,9 @@ module.exports = {
         "react/no-array-index-key": 0,
         "camelcase": 0,
         "no-return-assign": 0,
-        "radix": 0
+        "radix": 0,
+        "react/prop-types": 0,
+        "no-tabs": 0
     },
     "env": {
         "browser": 1,

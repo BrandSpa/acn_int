@@ -3,181 +3,181 @@ import { storeConvertLoop } from '../actions/contact';
 import { storeEvent } from '../lib/events';
 
 const validate = (str) => {
-	const s = typeof str === 'string' ? str.trim() : '';
-	return s.length === 0;
-}
+  const s = typeof str === 'string' ? str.trim() : '';
+  return s.length === 0;
+};
 
 class ContactCall extends Component {
-	state = {
-		name: '',
-		lastname: '',
-		email: '',
-		country: this.props.country,
-		city: '',
-		phone: '',
-		prefix: this.props.prefixes[this.props.country],
-		loading: false,
-		errors: {
-			name: false,
-			lastname: false,
-			email: false,
-			country: false,
-			city: false,
-			phone: false,
-		}
-	}
+  state = {
+    name: '',
+    lastname: '',
+    email: '',
+    country: this.props.country,
+    city: '',
+    phone: '',
+    prefix: this.props.prefixes[this.props.country],
+    loading: false,
+    errors: {
+      name: false,
+      lastname: false,
+      email: false,
+      country: false,
+      city: false,
+      phone: false,
+    },
+  }
 
-	handleInputChange = (e, field) => {
-		this.setState({ [e.target.name]: e.target.value });
-	} 
+  handleInputChange = (e, field) => {
+    this.setState({ [e.target.name]: e.target.value });
+  }
 
-	isValid = () => {
+  isValid = () => {
+    const errors = Object.keys(this.state.errors).reduce((obj, field) => {
+      const v = validate(this.state[field]);
+      obj[field] = v;
+      return obj;
+    }, {});
 
-		let errors = Object.keys(this.state.errors).reduce((obj, field) => {
-			const v = validate(this.state[field]);
-			console.log(field, v);
-			obj[field] = v;
-			return obj;
-		}, {});
+    this.setState({ errors });
 
-		this.setState({ errors });
+    const invalid = Object.keys(errors).some(err => errors[err]);
+    return !invalid;
+  }
 
-		const invalid = Object.keys(errors).some(err => errors[err]);
-		return !invalid;
-	}
+  handleStore = async (e) => {
+    e.preventDefault();
+    const { convertloop, redirect } = this.props;
+    this.setState({ loading: true });
+    const contact = {
+      name: `${this.state.name} ${this.state.lastname}`,
+      phone: `${this.state.prefix} ${this.state.phone}`,
+      country: this.state.country,
+      city: this.state.city,
+    };
 
-	handleStore = async (e) => {
-		e.preventDefault();
-		const { convertloop, redirect } = this.props;
-		this.setState({ loading: true });
-		const contact = this.state;
-		const isValid = this.isValid();
-		console.log('is valid: ', isValid);
-		if(isValid) {
-			try {
-				await storeConvertLoop(convertloop.tags, contact);
-				const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
+    const isValid = this.isValid();
 
-				const gaEventData = { category: 'SUBSCRIBE', action: 'SUBSCRIBE', label: `SUBSCRIBE_${language}` };
-				await storeEvent('ga_event', gaEventData);
+    if (isValid) {
+      try {
+        await storeConvertLoop(convertloop.tags, contact);
+        const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
 
-				const clEventData = { name: convertloop.event, person: contact };
-				await storeEvent('cl_event', clEventData);
+        const gaEventData = { category: 'SUBSCRIBE', action: 'SUBSCRIBE', label: `SUBSCRIBE_${language}` };
+        await storeEvent('ga_event', gaEventData);
 
-				const fbEventData = { eventName: 'Lead' };
-				await storeEvent('fb_event', fbEventData);
+        const clEventData = { name: convertloop.event, person: contact };
+        await storeEvent('cl_event', clEventData);
 
-				setTimeout(() => window.location = redirect, 0);
-			} catch(err) {
-				console.log(err);
-			}
-		} else {
-			this.setState({ loading: false });
-		}
-	}
+        const fbEventData = { eventName: 'Lead' };
+        await storeEvent('fb_event', fbEventData);
 
-	render() {
-		const { placeholders, texts, validation, countries, prefixes } = this.props;
-		const { 
-			name, 
+        setTimeout(() => window.location = redirect, 0);
+      } catch (err) {
+        console.log(err);
+      }
+    } else {
+      this.setState({ loading: false });
+    }
+  }
+
+  render() {
+    const { placeholders, texts, countries, prefixes } = this.props;
+    const {
+			name,
 			lastname,
-			email, 
-			country, 
-			city, 
-			phone, 
+			email,
+			country,
+			city,
+			phone,
 			loading,
 			prefix,
-			errors
+			errors,
 		} = this.state;
 
-		return (
-			<section ref={ref => this.container = ref}>
-				<form onSubmit={this.handleStore}>
-					<div className={this.state.errors.name ? "input-section input-err " : "input-section"}>
-						<div className="input-section__placeholder">
-							<i className="ion-person"></i> <span>{placeholders.name}</span>
-						</div>
-						<input 
-							name="name"
-							type="text" 
-							className="input-section__text" 
-							onChange={(e) => this.handleInputChange(e)}
-							value={name}
-						/>
-					</div>
-					<div className={this.state.errors.lastname ? "input-section input-err " : "input-section"}>
-						<div className="input-section__placeholder">
-							<i className="ion-person"></i> <span>{placeholders.lastname}</span>
-						</div>
-						<input 
-							name="lastname"
-							type="text" 
-							className="input-section__text" 
-							onChange={(e) => this.handleInputChange(e)}
-							value={lastname} 
-						/>
-					</div>
-					<div className={this.state.errors.email ? "input-section input-err " : "input-section"}>
-						<div className="input-section__placeholder">
-							<i className="ion-person"></i> <span>{placeholders.email}</span>
-						</div>
-						<input
-							name="email"
-							type="email" 
-							className="input-section__text" 
-							onChange={(e) => this.handleInputChange(e)}
-							value={email}
-						/>
-					</div>
-					<div className={this.state.errors.country ? "input-section input-err " : "input-section"}>
-						<div className="input-section__placeholder">
-							<i className="ion-location"></i> <span>{placeholders.country}</span>
-						</div>
-						<select
-							name="country"
-							value={country} 
-							onChange={(e) => this.handleInputChange(e)}
-							className="input-section__select" 
-						>
-							{
-								countries.map((country, i) => (
-									<option key={i} value={country}>{country}</option>
-								))
-							}
-						</select>
-					</div>
-					<div className={this.state.errors.city ? "input-section input-err " : "input-section"}>
-						<div className="input-section__placeholder">
-							<i className="ion-location"></i> <span>{placeholders.city}</span>
-						</div>
-						<input
-							name="city" 
-							type="text" 
-							className="input-section__text" 
-							onChange={(e) => this.handleInputChange(e)}
-							value={city} 
-						/>
-					</div>
-					<div className={this.state.errors.phone ? "input-section input-err " : "input-section"}>
-						<div className="input-section__placeholder">
-							<i className="ion-iphone"></i> <span>{placeholders.phone}</span>
-						</div>
-						<select className="prefix" name="prefix" value={prefix} onChange={(e) => this.handleInputChange(e)}>
-							{prefixes && Object.keys(prefixes).map(contr => {
-								return <option value={prefixes[contr]}>{`+ ${prefixes[contr]}`}</option>
-							})}
-						</select>
-						<input 
-							name="phone"
-							type="text" 
-							className="input-section__text" 
-							onChange={(e) => this.handleInputChange(e)}
-							value={phone}
-						/>
-					</div>
-					<button disabled={loading}>{loading ? texts.loading : texts.btn}</button>
-				</form>
-				<style jsx>{`
+    return (
+      <section ref={ref => this.container = ref}>
+        <form onSubmit={this.handleStore}>
+          <div className={this.state.errors.name ? 'input-section input-err ' : 'input-section'}>
+            <div className="input-section__placeholder">
+              <i className="ion-person" /> <span>{placeholders.name}</span>
+            </div>
+            <input
+              name="name"
+              type="text"
+              className="input-section__text"
+              onChange={e => this.handleInputChange(e)}
+              value={name}
+            />
+          </div>
+          <div className={this.state.errors.lastname ? 'input-section input-err ' : 'input-section'}>
+            <div className="input-section__placeholder">
+              <i className="ion-person" /> <span>{placeholders.lastname}</span>
+            </div>
+            <input
+              name="lastname"
+              type="text"
+              className="input-section__text"
+              onChange={e => this.handleInputChange(e)}
+              value={lastname}
+            />
+          </div>
+          <div className={this.state.errors.email ? 'input-section input-err ' : 'input-section'}>
+            <div className="input-section__placeholder">
+              <i className="ion-person" /> <span>{placeholders.email}</span>
+            </div>
+            <input
+              name="email"
+              type="email"
+              className="input-section__text"
+              onChange={e => this.handleInputChange(e)}
+              value={email}
+            />
+          </div>
+          <div className={this.state.errors.country ? 'input-section input-err ' : 'input-section'}>
+            <div className="input-section__placeholder">
+              <i className="ion-location" /> <span>{placeholders.country}</span>
+            </div>
+            <select
+              name="country"
+              value={country}
+              onChange={e => this.handleInputChange(e)}
+              className="input-section__select"
+            >
+              { countries.map((countr, i) => (
+                <option key={i} value={countr}>{countr}</option>
+							))}
+            </select>
+          </div>
+          <div className={this.state.errors.city ? 'input-section input-err ' : 'input-section'}>
+            <div className="input-section__placeholder">
+              <i className="ion-location" /> <span>{placeholders.city}</span>
+            </div>
+            <input
+              name="city"
+              type="text"
+              className="input-section__text"
+              onChange={e => this.handleInputChange(e)}
+              value={city}
+            />
+          </div>
+          <div className={this.state.errors.phone ? 'input-section input-err ' : 'input-section'}>
+            <div className="input-section__placeholder">
+              <i className="ion-iphone" /> <span>{placeholders.phone}</span>
+            </div>
+            <select className="prefix" name="prefix" value={prefix} onChange={e => this.handleInputChange(e)}>
+              {prefixes && Object.keys(prefixes).map(contr => <option value={prefixes[contr]}>{`+ ${prefixes[contr]}`}</option>)}
+            </select>
+            <input
+              name="phone"
+              type="text"
+              className="input-section__text"
+              onChange={e => this.handleInputChange(e)}
+              value={phone}
+            />
+          </div>
+          <button disabled={loading}>{loading ? texts.loading : texts.btn}</button>
+        </form>
+        <style jsx>{`
 							
 					form button {
 						height: 50px;
@@ -233,9 +233,9 @@ class ContactCall extends Component {
 
 					}
 				`}</style>
-			</section>
-		)
-	}
+      </section>
+    );
+  }
 }
 
 export default ContactCall;
