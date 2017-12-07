@@ -58,7 +58,7 @@ function bs_contact_call_sc($atts, $content = null) {
 		"redirect" => $at['redirect'] ? $at['redirect'] : get_option('subscribe_redirect'),
 		"country" => getCountry(),
 		"countries" => function_exists('getCountries') ? getCountries() : [],
-		"prefixes" => $country_code
+		"prefixes" => country_code()
 	];
 
   ob_start();
