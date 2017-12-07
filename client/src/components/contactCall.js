@@ -34,7 +34,8 @@ class ContactCall extends Component {
 	isValid = () => {
 		let errors = Object.keys(this.state.errors).map((field) => {
 			const v = validate(this.state[field]);
-			this.setState({ [field]:  v});
+			const errors = {...this.state.errors, [field]:  v};
+			this.setState({ errors });
 			return v;
 		});
 
