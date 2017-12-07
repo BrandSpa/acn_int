@@ -34,11 +34,12 @@ class ContactCall extends Component {
 	isValid = () => {
 		let errors = Object.keys(this.state.errors).map((field) => {
 			const v = validate(this.state[field]);
-			console.log(v);
 			const errors = {...this.state.errors, [field]:  v};
-			this.setState({ errors });
-			return v;
+
+			return errors;
 		});
+
+		this.setState({ errors });
 
 		const invalid = errors.some(err => err);
 		return !invalid;
@@ -199,7 +200,7 @@ class ContactCall extends Component {
 					}
 
 					.input-err {
-						border-color: 'red'
+						border-color: red
 					}
 
 					.prefix {
