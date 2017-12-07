@@ -80,6 +80,7 @@ class ContactCall extends Component {
 			city, 
 			phone, 
 			loading,
+			prefix,
 			errors
 		} = this.state;
 
@@ -155,9 +156,9 @@ class ContactCall extends Component {
 						<div className="input-section__placeholder">
 							<i className="ion-iphone"></i> <span>{placeholders.phone}</span>
 						</div>
-						<select name="prefix" onChange={(e) => this.handleInputChange(e)}>
+						<select name="prefix" value={prefix} onChange={(e) => this.handleInputChange(e)}>
 							{prefixes && Object.keys(prefixes).map(contr => {
-								return <option value={prefixes[contr]}>{`${contr} ${prefixes[contr]}`}</option>
+								return <option value={prefixes[contr]}>{`${prefixes[contr]}`}</option>
 							})}
 						</select>
 						<input 
