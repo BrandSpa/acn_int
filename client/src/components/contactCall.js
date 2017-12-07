@@ -35,6 +35,7 @@ class ContactCall extends Component {
 
 		let errors = Object.keys(this.state.errors).reduce((field, obj) => {
 			const v = validate(this.state[field]);
+			console.log(field, v);
 			obj[field] = v;
 			return obj;
 		}, {});
@@ -50,8 +51,7 @@ class ContactCall extends Component {
 		const { convertloop, redirect } = this.props;
 		this.setState({ loading: true });
 		const contact = this.state;
-		const isValid = this.isValid();
-
+		console.log('is valid: ', isValid);
 		if(isValid) {
 			try {
 				await storeConvertLoop(convertloop.tags, contact);
