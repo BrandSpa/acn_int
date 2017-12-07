@@ -56,6 +56,7 @@ class ContactCall extends Component {
     };
 
     const isValid = this.isValid();
+    console.log(contact);
 
     if (isValid) {
       try {
@@ -97,7 +98,7 @@ class ContactCall extends Component {
     return (
       <section ref={ref => this.container = ref}>
         <form onSubmit={this.handleStore}>
-          <div className={this.state.errors.name ? 'input-section input-err ' : 'input-section'}>
+          <div className={errors.name ? 'input-section input-err ' : 'input-section'}>
             <div className="input-section__placeholder">
               <i className="ion-person" /> <span>{placeholders.name}</span>
             </div>
@@ -109,7 +110,7 @@ class ContactCall extends Component {
               value={name}
             />
           </div>
-          <div className={this.state.errors.lastname ? 'input-section input-err ' : 'input-section'}>
+          <div className={errors.lastname ? 'input-section input-err ' : 'input-section'}>
             <div className="input-section__placeholder">
               <i className="ion-person" /> <span>{placeholders.lastname}</span>
             </div>
@@ -121,7 +122,7 @@ class ContactCall extends Component {
               value={lastname}
             />
           </div>
-          <div className={this.state.errors.email ? 'input-section input-err ' : 'input-section'}>
+          <div className={errors.email ? 'input-section input-err ' : 'input-section'}>
             <div className="input-section__placeholder">
               <i className="ion-person" /> <span>{placeholders.email}</span>
             </div>
@@ -133,7 +134,7 @@ class ContactCall extends Component {
               value={email}
             />
           </div>
-          <div className={this.state.errors.country ? 'input-section input-err ' : 'input-section'}>
+          <div className={errors.country ? 'input-section input-err ' : 'input-section'}>
             <div className="input-section__placeholder">
               <i className="ion-location" /> <span>{placeholders.country}</span>
             </div>
@@ -148,7 +149,7 @@ class ContactCall extends Component {
 							))}
             </select>
           </div>
-          <div className={this.state.errors.city ? 'input-section input-err ' : 'input-section'}>
+          <div className={errors.city ? 'input-section input-err ' : 'input-section'}>
             <div className="input-section__placeholder">
               <i className="ion-location" /> <span>{placeholders.city}</span>
             </div>
@@ -160,7 +161,7 @@ class ContactCall extends Component {
               value={city}
             />
           </div>
-          <div className={this.state.errors.phone ? 'input-section input-err ' : 'input-section'}>
+          <div className={errors.phone ? 'input-section input-err ' : 'input-section'}>
             <div className="input-section__placeholder">
               <i className="ion-iphone" /> <span>{placeholders.phone}</span>
             </div>

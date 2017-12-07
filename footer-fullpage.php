@@ -41,11 +41,18 @@
      ga('ecommerce:send');
    <?php endif; ?>
 
- 	<?php if(isset($_GET['event_action']) && isset($_GET['event_category']) && isset($_GET['event_label'])): ?>
+   <?php if(isset($_GET['event_action']) && isset($_GET['event_category']) && isset($_GET['event_label'])): ?>
+    ga('send', 'event', <?php echo $_GET['event_category'] ?>,  <?php echo $_GET['event_action'] ?>,  <?php echo $_GET['event_label'] ?>);
+  <?php endif; ?>
 
- 		ga('send', 'event', $_GET['event_category'], $_GET['event_action'], $_GET['event_label']);
+  <?php if(isset($_GET['ga_action']) && isset($_GET['ga_category']) && isset($_GET['ga_label'])): ?>
+   ga('send', 'event', <?php echo $_GET['ga_category'] ?>, <?php echo $_GET['ga_action'] ?>, <?php echo $_GET['ga_label']?>);
+ <?php endif; ?>
 
- 	<?php endif; ?>
+ <?php if(isset($_GET['fa_action']) && isset($_GET['ga_category']) && isset($_GET['ga_label'])): ?>
+   ga('send', 'event', <?php echo $_GET['ga_category'] ?>, <?php echo $_GET['ga_action'] ?>, <?php echo $_GET['ga_label'] ?>);
+ <?php endif; ?>
+
  </script>
 
  <!-- End Google Analytics -->

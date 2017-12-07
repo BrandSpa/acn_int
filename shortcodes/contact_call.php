@@ -11,6 +11,7 @@ function bs_contact_call_sc($atts, $content = null) {
 		'phone-placeholder' => 'phone',
 		'btn-placeholder' => 'Get call',
 		'name-validation' => 'Name required',
+		'email-validation' => 'Email required',
 		'lastname-validation' => 'lastname required',
 		'country-validation' => 'Name required',
 		'city-validation' => 'Name required',
