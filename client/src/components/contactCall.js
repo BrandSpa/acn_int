@@ -15,6 +15,7 @@ class ContactCall extends Component {
 		country: this.props.country,
 		city: '',
 		phone: '',
+		prefix: '',
 		loading: false,
 		errors: {
 			name: false,
@@ -70,7 +71,7 @@ class ContactCall extends Component {
 	}
 
 	render() {
-		const { placeholders, texts, validation, countries } = this.props;
+		const { placeholders, texts, validation, countries, prefixes } = this.props;
 		const { 
 			name, 
 			lastname,
@@ -154,6 +155,11 @@ class ContactCall extends Component {
 						<div className="input-section__placeholder">
 							<i className="ion-iphone"></i> <span>{placeholders.phone}</span>
 						</div>
+						<select name="prefix" onChange={(e) => this.handleInputChange(e)}>
+							{prefixes.map(prefx => {
+								<option value={prefx}>{prefx }</option>
+							})}
+						</select>
 						<input 
 							name="phone"
 							type="text" 
