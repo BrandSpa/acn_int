@@ -156,7 +156,7 @@ class ContactCall extends Component {
 							<i className="ion-iphone"></i> <span>{placeholders.phone}</span>
 						</div>
 						<select name="prefix" onChange={(e) => this.handleInputChange(e)}>
-							{Object.keys(prefixes).map(contr => {
+							{prefixes && Object.keys(prefixes).map(contr => {
 								<option value={prefx}>{`${contr} ${prefixes[contr]}`}</option>
 							})}
 						</select>
