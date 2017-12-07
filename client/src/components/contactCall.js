@@ -198,6 +198,8 @@ class ContactCall extends Component {
 						width: 50%;
 						border: none;
 						background: #f1f1f1;
+						height: 100%;
+						margin-left: 10px;
 					}
 
 					.input-section__placeholder {
