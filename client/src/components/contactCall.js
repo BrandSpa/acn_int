@@ -156,9 +156,9 @@ class ContactCall extends Component {
 						<div className="input-section__placeholder">
 							<i className="ion-iphone"></i> <span>{placeholders.phone}</span>
 						</div>
-						<select name="prefix" value={prefix} onChange={(e) => this.handleInputChange(e)}>
+						<select className="prefix" name="prefix" value={prefix} onChange={(e) => this.handleInputChange(e)}>
 							{prefixes && Object.keys(prefixes).map(contr => {
-								return <option value={prefixes[contr]}>{`${prefixes[contr]}`}</option>
+								return <option value={prefixes[contr]}>{`+ ${prefixes[contr]}`}</option>
 							})}
 						</select>
 						<input 
@@ -192,6 +192,12 @@ class ContactCall extends Component {
 						font-size: 16px;
 						color: #1b1b1b;
 						margin-bottom: 15px;
+					}
+
+					.prefix {
+						width: 50%;
+						border: none;
+						background: #f1f1f1;
 					}
 
 					.input-section__placeholder {
