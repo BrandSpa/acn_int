@@ -15,7 +15,7 @@ class ContactCall extends Component {
 		country: this.props.country,
 		city: '',
 		phone: '',
-		prefix: '',
+		prefix: prefixes[this.props.country],
 		loading: false,
 		errors: {
 			name: false,
@@ -156,8 +156,8 @@ class ContactCall extends Component {
 							<i className="ion-iphone"></i> <span>{placeholders.phone}</span>
 						</div>
 						<select name="prefix" onChange={(e) => this.handleInputChange(e)}>
-							{prefixes.map(prefx => {
-								<option value={prefx}>{prefx }</option>
+							{Object.keys(prefixes).map(contr => {
+								<option value={prefx}>{`${contr} ${prefixes[contr]}`}</option>
 							})}
 						</select>
 						<input 
