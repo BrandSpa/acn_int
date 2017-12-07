@@ -50,7 +50,7 @@ class ContactCall extends Component {
     this.setState({ loading: true });
     const contact = {
       name: `${this.state.name} ${this.state.lastname}`,
-      emai: this.state.email,
+      email: this.state.email,
       phone: `${this.state.prefix} ${this.state.phone}`,
       country: this.state.country,
       city: this.state.city,
