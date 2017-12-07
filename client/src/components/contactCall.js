@@ -51,6 +51,7 @@ class ContactCall extends Component {
 		const { convertloop, redirect } = this.props;
 		this.setState({ loading: true });
 		const contact = this.state;
+		const isValid = this.isValid();
 		console.log('is valid: ', isValid);
 		if(isValid) {
 			try {
