@@ -199,6 +199,6 @@ function country_code() {
 	];
 	
 
-	return $country_code
+	return $country_code;
 }
 
