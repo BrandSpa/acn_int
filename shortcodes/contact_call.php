@@ -11,6 +11,7 @@ function bs_contact_call_sc($atts, $content = null) {
 		'phone-placeholder' => 'phone',
 		'btn-placeholder' => 'Get call',
 		'name-validation' => 'Name required',
+		'email-validation' => 'Email required',
 		'lastname-validation' => 'lastname required',
 		'country-validation' => 'Name required',
 		'city-validation' => 'Name required',
@@ -57,7 +58,8 @@ function bs_contact_call_sc($atts, $content = null) {
 		],
 		"redirect" => $at['redirect'] ? $at['redirect'] : get_option('subscribe_redirect'),
 		"country" => getCountry(),
-		"countries" => function_exists('getCountries') ? getCountries() : []
+		"countries" => function_exists('getCountries') ? getCountries() : [],
+		"prefixes" => country_code()
 	];
 
   ob_start();
