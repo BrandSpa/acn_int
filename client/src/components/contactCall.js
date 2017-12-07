@@ -157,7 +157,7 @@ class ContactCall extends Component {
 						</div>
 						<select name="prefix" onChange={(e) => this.handleInputChange(e)}>
 							{prefixes && Object.keys(prefixes).map(contr => {
-								<option value={prefixes[contr]}>{`${contr} ${prefixes[contr]}`}</option>
+								return <option value={prefixes[contr]}>{`${contr} ${prefixes[contr]}`}</option>
 							})}
 						</select>
 						<input 
