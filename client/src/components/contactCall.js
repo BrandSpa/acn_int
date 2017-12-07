@@ -35,7 +35,8 @@ class ContactCall extends Component {
 
 		let errors = Object.keys(this.state.errors).reduce((field, obj) => {
 			const v = validate(this.state[field]);
-			return {...obj, [field]:  v};
+			obj[field] = v;
+			return obj;
 		}, {});
 
 		this.setState({ errors });
