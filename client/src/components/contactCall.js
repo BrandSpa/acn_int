@@ -32,12 +32,11 @@ class ContactCall extends Component {
 	} 
 
 	isValid = () => {
-		let errors = Object.keys(this.state.errors).map((field) => {
-			const v = validate(this.state[field]);
-			const errors = {...this.state.errors, [field]:  v};
 
-			return errors;
-		});
+		let errors = Object.keys(this.state.errors).reduce((field, obj) => {
+			const v = validate(this.state[field]);
+			return {...obj, [field]:  v};
+		}, {});
 
 		this.setState({ errors });
 
