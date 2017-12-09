@@ -15,7 +15,7 @@ class ContactCall extends Component {
     country: this.props.country,
     city: '',
     phone: '',
-    prefix: this.props.prefixes[this.prop.country],
+    prefix: this.props.prefixes[this.props.country],
     loading: false,
     errors: {
       name: false,
