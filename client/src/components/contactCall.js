@@ -15,7 +15,7 @@ class ContactCall extends Component {
     country: this.props.country,
     city: '',
     phone: '',
-    prefix: this.props.prefixes[this.props.country],
+    prefix: this.props.prefixes[this.state.country],
     loading: false,
     errors: {
       name: false,
@@ -57,7 +57,6 @@ class ContactCall extends Component {
     };
 
     const isValid = this.isValid();
-    console.log(contact);
 
     if (isValid) {
       try {
@@ -167,7 +166,9 @@ class ContactCall extends Component {
               <i className="ion-iphone" /> <span>{placeholders.phone}</span>
             </div>
             <select className="prefix" name="prefix" value={prefix} onChange={e => this.handleInputChange(e)}>
-              {prefixes && Object.keys(prefixes).map(contr => <option value={prefixes[contr]}>{`+ ${prefixes[contr]}`}</option>)}
+              {prefixes && Object.keys(prefixes).map(contr => 
+                <option value={prefixes[contr]}>{`+ ${prefixes[contr]}`}</option>
+              )}
             </select>
             <input
               name="phone"
