@@ -13942,27 +13942,27 @@ var ContactCall = function (_Component) {
         'section',
         { ref: function ref(_ref3) {
             return _this3.container = _ref3;
-          }, 'data-jsx': 3199457661
+          }, 'data-jsx': 3201954388
         },
         _react2['default'].createElement(
           'form',
-          { onSubmit: this.handleStore, 'data-jsx': 3199457661
+          { onSubmit: this.handleStore, 'data-jsx': 3201954388
           },
           _react2['default'].createElement(
             'div',
-            { className: errors.name ? 'input-section input-err ' : 'input-section', 'data-jsx': 3199457661
+            { className: errors.name ? 'input-section input-err ' : 'input-section', 'data-jsx': 3201954388
             },
             _react2['default'].createElement(
               'div',
-              { className: 'input-section__placeholder', 'data-jsx': 3199457661
+              { className: 'input-section__placeholder', 'data-jsx': 3201954388
               },
-              _react2['default'].createElement('i', { className: 'ion-person', 'data-jsx': 3199457661
+              _react2['default'].createElement('i', { className: 'ion-person', 'data-jsx': 3201954388
               }),
               ' ',
               _react2['default'].createElement(
                 'span',
                 {
-                  'data-jsx': 3199457661
+                  'data-jsx': 3201954388
                 },
                 placeholders.name
               )
@@ -13975,24 +13975,24 @@ var ContactCall = function (_Component) {
                 return _this3.handleInputChange(e);
               },
               value: name,
-              'data-jsx': 3199457661
+              'data-jsx': 3201954388
             })
           ),
           _react2['default'].createElement(
             'div',
-            { className: errors.lastname ? 'input-section input-err ' : 'input-section', 'data-jsx': 3199457661
+            { className: errors.lastname ? 'input-section input-err ' : 'input-section', 'data-jsx': 3201954388
             },
             _react2['default'].createElement(
               'div',
-              { className: 'input-section__placeholder', 'data-jsx': 3199457661
+              { className: 'input-section__placeholder', 'data-jsx': 3201954388
               },
-              _react2['default'].createElement('i', { className: 'ion-person', 'data-jsx': 3199457661
+              _react2['default'].createElement('i', { className: 'ion-person', 'data-jsx': 3201954388
               }),
               ' ',
               _react2['default'].createElement(
                 'span',
                 {
-                  'data-jsx': 3199457661
+                  'data-jsx': 3201954388
                 },
                 placeholders.lastname
               )
@@ -14005,24 +14005,24 @@ var ContactCall = function (_Component) {
                 return _this3.handleInputChange(e);
               },
               value: lastname,
-              'data-jsx': 3199457661
+              'data-jsx': 3201954388
             })
           ),
           _react2['default'].createElement(
             'div',
-            { className: errors.email ? 'input-section input-err ' : 'input-section', 'data-jsx': 3199457661
+            { className: errors.email ? 'input-section input-err ' : 'input-section', 'data-jsx': 3201954388
             },
             _react2['default'].createElement(
               'div',
-              { className: 'input-section__placeholder', 'data-jsx': 3199457661
+              { className: 'input-section__placeholder', 'data-jsx': 3201954388
               },
-              _react2['default'].createElement('i', { className: 'ion-person', 'data-jsx': 3199457661
+              _react2['default'].createElement('i', { className: 'ion-person', 'data-jsx': 3201954388
               }),
               ' ',
               _react2['default'].createElement(
                 'span',
                 {
-                  'data-jsx': 3199457661
+                  'data-jsx': 3201954388
                 },
                 placeholders.email
               )
@@ -14035,24 +14035,24 @@ var ContactCall = function (_Component) {
                 return _this3.handleInputChange(e);
               },
               value: email,
-              'data-jsx': 3199457661
+              'data-jsx': 3201954388
             })
           ),
           _react2['default'].createElement(
             'div',
-            { className: errors.country ? 'input-section input-err ' : 'input-section', 'data-jsx': 3199457661
+            { className: errors.country ? 'input-section input-err ' : 'input-section', 'data-jsx': 3201954388
             },
             _react2['default'].createElement(
               'div',
-              { className: 'input-section__placeholder', 'data-jsx': 3199457661
+              { className: 'input-section__placeholder', 'data-jsx': 3201954388
               },
-              _react2['default'].createElement('i', { className: 'ion-location', 'data-jsx': 3199457661
+              _react2['default'].createElement('i', { className: 'ion-location', 'data-jsx': 3201954388
               }),
               ' ',
               _react2['default'].createElement(
                 'span',
                 {
-                  'data-jsx': 3199457661
+                  'data-jsx': 3201954388
                 },
                 placeholders.country
               )
@@ -14066,12 +14066,12 @@ var ContactCall = function (_Component) {
                   return _this3.handleCountryChange(e);
                 },
                 className: 'input-section__select',
-                'data-jsx': 3199457661
+                'data-jsx': 3201954388
               },
               countries.map(function (countr, i) {
                 return _react2['default'].createElement(
                   'option',
-                  { key: i, value: countr, 'data-jsx': 3199457661
+                  { key: i, value: countr, 'data-jsx': 3201954388
                   },
                   countr
                 );
@@ -14080,19 +14080,19 @@ var ContactCall = function (_Component) {
           ),
           _react2['default'].createElement(
             'div',
-            { className: errors.city ? 'input-section input-err ' : 'input-section', 'data-jsx': 3199457661
+            { className: errors.city ? 'input-section input-err ' : 'input-section', 'data-jsx': 3201954388
             },
             _react2['default'].createElement(
               'div',
-              { className: 'input-section__placeholder', 'data-jsx': 3199457661
+              { className: 'input-section__placeholder', 'data-jsx': 3201954388
               },
-              _react2['default'].createElement('i', { className: 'ion-location', 'data-jsx': 3199457661
+              _react2['default'].createElement('i', { className: 'ion-location', 'data-jsx': 3201954388
               }),
               ' ',
               _react2['default'].createElement(
                 'span',
                 {
-                  'data-jsx': 3199457661
+                  'data-jsx': 3201954388
                 },
                 placeholders.city
               )
@@ -14105,24 +14105,24 @@ var ContactCall = function (_Component) {
                 return _this3.handleInputChange(e);
               },
               value: city,
-              'data-jsx': 3199457661
+              'data-jsx': 3201954388
             })
           ),
           _react2['default'].createElement(
             'div',
-            { className: errors.phone ? 'input-section input-err ' : 'input-section', 'data-jsx': 3199457661
+            { className: errors.phone ? 'input-section input-err ' : 'input-section', 'data-jsx': 3201954388
             },
             _react2['default'].createElement(
               'div',
-              { className: 'input-section__placeholder', 'data-jsx': 3199457661
+              { className: 'input-section__placeholder', 'data-jsx': 3201954388
               },
-              _react2['default'].createElement('i', { className: 'ion-iphone', 'data-jsx': 3199457661
+              _react2['default'].createElement('i', { className: 'ion-iphone', 'data-jsx': 3201954388
               }),
               ' ',
               _react2['default'].createElement(
                 'span',
                 {
-                  'data-jsx': 3199457661
+                  'data-jsx': 3201954388
                 },
                 placeholders.phone
               )
@@ -14131,12 +14131,12 @@ var ContactCall = function (_Component) {
               'select',
               { className: 'prefix', name: 'prefix', value: prefix, onChange: function onChange(e) {
                   return _this3.handleInputChange(e);
-                }, 'data-jsx': 3199457661
+                }, 'data-jsx': 3201954388
               },
               prefixes && (0, _keys2['default'])(prefixes).map(function (contr) {
                 return _react2['default'].createElement(
                   'option',
-                  { value: prefixes[contr], 'data-jsx': 3199457661
+                  { value: prefixes[contr], 'data-jsx': 3201954388
                   },
                   '+ ' + prefixes[contr]
                 );
@@ -14150,19 +14150,19 @@ var ContactCall = function (_Component) {
                 return _this3.handleInputChange(e);
               },
               value: phone,
-              'data-jsx': 3199457661
+              'data-jsx': 3201954388
             })
           ),
           _react2['default'].createElement(
             'button',
-            { disabled: loading, 'data-jsx': 3199457661
+            { disabled: loading, 'data-jsx': 3201954388
             },
             loading ? texts.loading : texts.btn
           )
         ),
         _react2['default'].createElement(_style2['default'], {
-          styleId: 3199457661,
-          css: 'form[data-jsx="3199457661"] button[data-jsx="3199457661"]{height:50px;width:100%;background-color:#7ed321;font-size:20px;font-weight:bold;-webkit-text-align:center;text-align:center;color:#ffffff}.input-section[data-jsx="3199457661"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;border:solid 1px #d0d0d0;height:50px;width:100%;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-size:16px;color:#1b1b1b;margin-bottom:15px}.input-err[data-jsx="3199457661"]{border-color:red}.prefix[data-jsx="3199457661"]{width:50%;border:none;background:#f1f1f1;height:100%;margin-left:10px}.input-section__placeholder[data-jsx="3199457661"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-weight:bold}.input-section__placeholder[data-jsx="3199457661"] i[data-jsx="3199457661"]{padding:0 5px 0 15px;font-size:18px}.input-section__text[data-jsx="3199457661"],.input-section__select[data-jsx="3199457661"]{border:none;height:auto}'
+          styleId: 3201954388,
+          css: 'form[data-jsx="3201954388"] button[data-jsx="3201954388"]{height:50px;width:100%;background-color:#7ed321;font-size:20px;font-weight:bold;-webkit-text-align:center;text-align:center;color:#ffffff}.input-section[data-jsx="3201954388"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;border:solid 1px #d0d0d0;height:50px;width:100%;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;font-size:16px;color:#1b1b1b;margin-bottom:15px}.input-err[data-jsx="3201954388"]{border-color:red}.prefix[data-jsx="3201954388"]{width:50%;border:none;background:#f1f1f1;height:100%;margin-left:10px;overflow:initial}.input-section__placeholder[data-jsx="3201954388"]{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-weight:bold}.input-section__placeholder[data-jsx="3201954388"] i[data-jsx="3201954388"]{padding:0 5px 0 15px;font-size:18px}.input-section__text[data-jsx="3201954388"],.input-section__select[data-jsx="3201954388"]{border:none;height:auto}'
         })
       );
     }
