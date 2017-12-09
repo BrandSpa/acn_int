@@ -34,7 +34,7 @@ class ContactCall extends Component {
   handleCountryChange = (e) => {
     this.setState({
       country: e.target.value,
-      prefix: this.props.prefixes[e.target.value]
+      prefix: this.props.prefixes[e.target.value],
     });
   }
 
