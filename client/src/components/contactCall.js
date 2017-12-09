@@ -15,7 +15,7 @@ class ContactCall extends Component {
     country: this.props.country,
     city: '',
     phone: '',
-    prefix: this.props.prefixes[this.state.country],
+    prefix: this.props.prefixes[this.prop.country],
     loading: false,
     errors: {
       name: false,
@@ -29,6 +29,13 @@ class ContactCall extends Component {
 
   handleInputChange = (e, field) => {
     this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleCountryChange = (e) => {
+    this.setState({
+      country: e.target.value,
+      prefix: this.props.prefixes[e.target.value]
+    });
   }
 
   isValid = () => {
@@ -141,7 +148,7 @@ class ContactCall extends Component {
             <select
               name="country"
               value={country}
-              onChange={e => this.handleInputChange(e)}
+              onChange={e => this.handleCountryChange(e)}
               className="input-section__select"
             >
               { countries.map((countr, i) => (
