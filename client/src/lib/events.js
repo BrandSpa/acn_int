@@ -98,7 +98,7 @@ export const eventTagManager = () => {
     ? dataLayer.push({'event':'lead'})
     : console.log('dataLayer not installed ');
 
-    return resolve;
+    return resolve();
   });
 
   return p;
