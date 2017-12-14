@@ -94,8 +94,9 @@ export const eventConvertloopAsync = ({ name, person = {}, metadata = {} }) => {
 export const eventTagManager = () => {
 
   const p = new Promise((resolve) => {
-    typeof dataLayer === 'function'
-    ? dataLayer.push({'event':'lead'})
+    window.dataLayer = window.dataLayer || [];
+    typeof window.dataLayer === 'function'
+    ? window.dataLayer.push({'event':'lead'})
     : console.log('dataLayer not installed ');
 
     return resolve();
