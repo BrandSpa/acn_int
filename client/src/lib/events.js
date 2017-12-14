@@ -91,6 +91,20 @@ export const eventConvertloopAsync = ({ name, person = {}, metadata = {} }) => {
   return p;
 };
 
+export const eventTagManager = () => {
+
+  const p = new Promise((resolve) => {
+    typeof dataLayer === 'function'
+    ? dataLayer.push({'event':'lead'})
+    : console.log('dataLayer not installed ');
+
+    return resolve;
+  });
+
+  return p;
+
+}
+
 const runEvent = (eventName, data) => {
   switch (eventName) {
     case 'ga_event':
