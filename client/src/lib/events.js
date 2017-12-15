@@ -95,7 +95,7 @@ export const eventTagManager = () => {
 
   const p = new Promise((resolve) => {
     window.dataLayer = window.dataLayer || [];
-    typeof window.dataLayer === 'function'
+    'dataLayer' in window
     ? window.dataLayer.push({'event':'lead'})
     : console.log('dataLayer not installed ');
 
