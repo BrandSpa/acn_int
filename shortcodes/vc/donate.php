@@ -47,6 +47,13 @@
       "value" => false
     ]);
 
+    array_push($params, [
+      "type" => "checkbox",
+      "heading" =>  "Enable Cache",
+      "param_name" => "enable_cache",
+      "value" => false
+    ]);
+
 
   	vc_map(
       array(
