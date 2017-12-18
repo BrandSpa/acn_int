@@ -42,7 +42,6 @@ require_once 'translations/index.php';
 require_once 'apis/index.php';
 include_once 'apis/stripe.php';
 include_once 'apis/convertloop.php';
-include_once 'apis/donate.php';
 include_once 'apis/mailchimp.php';
 include_once 'apis/infusion.php';
 include_once 'apis/posts.php';
@@ -51,6 +50,7 @@ include_once 'apis/contact_us.php';
 // APIS AJAX
 include_once 'apis/ajax/convertloop.php';
 include_once 'apis/ajax/mailchimp.php';
+include_once 'apis/ajax/donate.php';
 include_once 'apis/ajax/stripe.php';
 include_once 'apis/ajax/contact_us.php';
 
