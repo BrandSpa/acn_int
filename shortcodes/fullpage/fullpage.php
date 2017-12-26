@@ -88,7 +88,7 @@ function acn_fullpage_sc( $atts, $content ) {
 				</a>
 			</li>
 			<li>
-				<a href="<?php echo $at['link_pray'] ?>">
+				<a class="pray-link" href="<?php echo $at['link_pray'] ?>">
 					<?php echo $at['text_pray'] ?>
 				</a>
 			</li>
