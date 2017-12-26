@@ -21,6 +21,7 @@
 
 	onLoad(function() {
 		mitt.emit("run:events");
+		$('body').css({'user-select': 'auto !important'})
 	})
 </script>
 <!-- sentry. handle errors -->
