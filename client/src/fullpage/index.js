@@ -98,7 +98,10 @@ $(document).ready(function DOMLoaded() {
   function goDown() {
     $.fn.fullpage.moveSectionDown();
   }
-
+  $(document).on("click", ".fullpage-donate.bs-donate", function(e){
+    e.preventDefault(); e.stopPropagation();
+    console.log('click event')
+  })
   $(document).on("click", ".section__down", goDown);
 
   function closeIntro() {
