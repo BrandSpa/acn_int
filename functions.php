@@ -50,6 +50,7 @@ include_once 'apis/contact_us.php';
 // APIS AJAX
 include_once 'apis/ajax/convertloop.php';
 include_once 'apis/ajax/mailchimp.php';
+include_once 'apis/ajax/donate.php';
 include_once 'apis/ajax/stripe.php';
 include_once 'apis/ajax/contact_us.php';
 
