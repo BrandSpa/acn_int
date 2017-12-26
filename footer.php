@@ -21,7 +21,16 @@
 
 	onLoad(function() {
 		mitt.emit("run:events");
-		$('body').css({'user-select': 'auto !important'})
+		
+	})
+	$(document).ready(function(){
+		var _cStyle = setTimeout(function(){
+			if($('body').css('user-select') == 'none'){
+				$('body').css({'user-select': 'auto'});
+				clearTimeout(_cStyle);
+			}
+		}, 1000);
+		
 	})
 </script>
 <!-- sentry. handle errors -->
