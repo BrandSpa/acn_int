@@ -12,7 +12,10 @@ function menu() {
       $ul.addClass("fullpage__menu__share--open");
     }
   }
-
+  $(".fullpage-donate.bs-donate").on("click", function(e){
+    e.preventDefault(); e.stopPropagation();
+    console.log('click event')
+  })
   $(".fullpage__menu__share > a").on("click", toggleMenuShare);
 }
 
