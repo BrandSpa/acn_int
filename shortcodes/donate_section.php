@@ -52,7 +52,8 @@ function bs_donate_section_sc($atts, $content = null) {
 
 	 $props = [
  		"texts" => $at,
- 		"countries" => function_exists('getCountries') ? getCountries() : [],
+		"countries" => function_exists('getCountries') ? getCountries() : [],
+		"prefixes" => function_exists('country_code') ? country_code() : [],
  		"is_blue" => $at['is_blue'],
  		"redirect" => [
  			"monthly" => $at['donate_monthly_redirect'],
