@@ -56,6 +56,15 @@ $(document).ready(function DOMLoaded() {
 
   }
 
+  function handleGA(data){
+    const { category, action, label, value = 0 } = data;
+    console.log(ga);
+    typeof ga === 'function'
+      ? ga('send', 'event', action, label, category, value)
+      : console.log('ga error');
+
+  }
+
   const isTouchDevice = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);
   const scrollElements = isTouchDevice ? ".section__post__content, .spot-content__container, .nineveh-general-content__container, .section__modal__content" : "";
   navigator.userAgent.match(/(IEMobile)/);
@@ -99,9 +108,10 @@ $(document).ready(function DOMLoaded() {
     $.fn.fullpage.moveSectionDown();
   }
   $(document).on("click", ".fullpage-donate.bs-donate", function(e){
-    e.preventDefault(); e.stopPropagation();
-    console.log('click event')
-  })
+    const gaEventData = { category: 'CLICK', action: 'DONATE', label: `CLICKDONATE_SP` };
+    handleGA(gaEventData);
+  });
+
   $(document).on("click", ".section__down", goDown);
 
   function closeIntro() {

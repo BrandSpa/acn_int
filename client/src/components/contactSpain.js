@@ -36,6 +36,9 @@ class ContactSpain extends Component {
 	
 				const gaEventData = { category: 'SUBSCRIBE_SPAIN', action: 'SUBSCRIBE_SPAIN', label: `SUBSCRIBE_SPAIN` };
 				await storeEvent('ga_event', gaEventData);
+
+				const gaEventDataPray = { category: 'SUBSCRIBE', action: 'SUBSCRIBE_PRAY', label: `PRAY_ES` };
+				await storeEvent('ga_event', gaEventDataPray);
 	
 				const clEventData = { name: convertloop.event, person: contact };
 				await storeEvent('cl_event', clEventData);
