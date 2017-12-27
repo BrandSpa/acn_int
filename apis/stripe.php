@@ -36,6 +36,7 @@ function stripe_create_customer($api_key, $customer) {
       "source" => $customer['stripe_token']
     ));
 
+    print_r($customer);
     return $customer;
 
   } catch(Exception $e) {
@@ -148,7 +149,7 @@ function stripe_monthly($api_key, $data) {
   $subscription = array();
   $subscription['customer'] = $customer->id;
   $subscription['plan'] = $plan->id;
-  print_r($costumer);
+  
   if(isset($data['trial_period_days']) && !empty($data['trial_period_days'])) {
     $subscription['trial_period_days'] = $data['trial_period_days'];
   } else {
