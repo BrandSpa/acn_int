@@ -129,7 +129,6 @@ function get_plan_name($amount) {
 function stripe_once($api_key, $data) {
   $customer = stripe_create_customer($api_key, $data);
   $data['customer'] = $customer->id;
-  print_r($data);
   return stripe_create_charge($api_key, $data);
 }
 
@@ -149,7 +148,7 @@ function stripe_monthly($api_key, $data) {
   $subscription = array();
   $subscription['customer'] = $customer->id;
   $subscription['plan'] = $plan->id;
-
+  print_r($subscription);
   if(isset($data['trial_period_days']) && !empty($data['trial_period_days'])) {
     $subscription['trial_period_days'] = $data['trial_period_days'];
   } else {
