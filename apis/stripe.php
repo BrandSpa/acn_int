@@ -36,11 +36,10 @@ function stripe_create_customer($api_key, $customer) {
       "source" => $customer['stripe_token']
     ));
 
-    print_r($customer);
     return $customer;
 
   } catch(Exception $e) {
-    return $e->getMessage();
+    print_r('ERROR', $e->getMessage());
   }
 
 }
