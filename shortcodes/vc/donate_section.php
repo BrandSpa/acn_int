@@ -54,7 +54,13 @@ add_action( 'vc_before_init', 'bs_donate_section_vc' );
       "value" => false
     ]);
 
-
+    array_push($params, [
+      "type" => "checkbox",
+      "heading" =>  "Call Center Mode",
+      "param_name" => "call_center",
+      "value" => false
+    ]);
+    
 		 array_push($params, [
       "type" => "textarea_html",
       "heading" =>  "Left content",
