@@ -126,6 +126,7 @@ function get_plan_name($amount) {
 
 function stripe_once($api_key, $data) {
   $customer = stripe_create_customer($api_key, $data);
+  print_r($customer);
   $data['customer'] = $customer->id;
   return stripe_create_charge($api_key, $data);
 }
