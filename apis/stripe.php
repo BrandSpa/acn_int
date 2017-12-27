@@ -148,7 +148,7 @@ function stripe_monthly($api_key, $data) {
   $subscription = array();
   $subscription['customer'] = $customer->id;
   $subscription['plan'] = $plan->id;
-  print_r($subscription);
+  print_r($costumer);
   if(isset($data['trial_period_days']) && !empty($data['trial_period_days'])) {
     $subscription['trial_period_days'] = $data['trial_period_days'];
   } else {
