@@ -28,7 +28,7 @@ function stripe_create_token($api_key, $card) {
 
 function stripe_create_customer($api_key, $customer) {
   \Stripe\Stripe::setApiKey($api_key);
-
+  print_r($api_key);
     try {
       $customer = \Stripe\Customer::create(array(
       "description" => 'charge for '. $customer['email'],
@@ -39,7 +39,7 @@ function stripe_create_customer($api_key, $customer) {
     return $customer;
 
   } catch(Exception $e) {
-    print_r('ERROR', $e->getMessage());
+    return $e->getMessage();
   }
 
 }
