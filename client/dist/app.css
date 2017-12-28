@@ -1799,6 +1799,14 @@ a:hover {
   font-weight: bold;
   font-size: 16px; }
 
+.donate_inline .btn_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
 .donate_inline .donate_react__submit {
   display: -webkit-box;
   display: -ms-flexbox;
