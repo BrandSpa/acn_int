@@ -1825,6 +1825,35 @@ a:hover {
     font-size: 10px;
     color: white; }
 
+.donate_inline .cvc-help {
+  display: block;
+  background: #3C515F;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  cursor: pointer; }
+
+.donate_inline .cvc-explain {
+  display: block;
+  color: #3C515F;
+  padding: 10px;
+  font-size: 14px; }
+
+.donate_inline .cvc-close {
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 15px;
+  height: 15px;
+  color: red;
+  cursor: pointer; }
+
 .grid-item {
   float: left;
   padding: 15px 15px; }
