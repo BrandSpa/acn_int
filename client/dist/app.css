@@ -1857,6 +1857,14 @@ a:hover {
 .donate_inline .btn-large {
   width: 100%; }
 
+.donate_inline .col-xs-4 {
+  float: left;
+  width: 33.3333%; }
+  .donate_inline .col-xs-4:first-child {
+    padding-left: 15px; }
+  .donate_inline .col-xs-4:last-child {
+    padding-right: 15px; }
+
 @media (max-width: 991px) {
   .donate_inline .hidden-md-down {
     display: none !important; } }
