@@ -1854,6 +1854,10 @@ a:hover {
   color: red;
   cursor: pointer; }
 
+@media (max-width: 991px) {
+  .donate_inline .hidden-md-down {
+    display: none !important; } }
+
 .grid-item {
   float: left;
   padding: 15px 15px; }
