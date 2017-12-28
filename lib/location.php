@@ -38,8 +38,25 @@ function get_location($ip) {
 	return '';
 }
 
+function get_location_city($ip) {
+	$dir_base = str_replace('lib', '', __DIR__);	
+	
+	try {
+		$reader = new Reader($dir_base .'GeoLite2-Country.mmdb');
+		return $reader->city($ip)->mostSpecificSubdivision->name;
+	} catch(Exception $e) {
+		return $e->getMessage();
+	}
+	
+	return '';
+}
+
 function get_user_location() {
     return get_location( get_client_ip_server() );
+}
+
+function get_user_location_city() {
+    return get_location_city( get_client_ip_server() );
 }
 
 function getCountry() {
@@ -48,6 +65,14 @@ function getCountry() {
   }
 
   return '';
+}
+
+function getCity(){
+    if(function_exists('get_user_location')) {
+    return is_object(get_user_location_city()) ? get_user_location_city() : '';
+    }
+
+    return '';
 }
 
 function getCountryLang($name) {
