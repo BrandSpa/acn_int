@@ -1630,7 +1630,8 @@ button, .btn {
       background: transparent;
       color: #fff; }
     .donate_react__submit .form-group__addon {
-      font-weight: bold; }
+      font-weight: bold;
+      left: 20px; }
   .donate_react .radio {
     color: #fff;
     float: left; }
