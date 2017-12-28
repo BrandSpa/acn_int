@@ -1861,11 +1861,13 @@ a:hover {
   float: left;
   width: 33.3333%; }
   .donate_inline .col-xs-4:first-child {
-    padding-left: 15px;
-    border-right: 0; }
+    padding-left: 15px; }
+    .donate_inline .col-xs-4:first-child input {
+      border-right: 0; }
   .donate_inline .col-xs-4:last-child {
-    padding-right: 15px;
-    border-left: 0; }
+    padding-right: 15px; }
+    .donate_inline .col-xs-4:last-child input {
+      border-left: 0; }
 
 @media (max-width: 991px) {
   .donate_inline .hidden-md-down {
