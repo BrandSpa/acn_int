@@ -43,7 +43,7 @@ function get_location_city($ip) {
 	
 	try {
 		$reader = new Reader($dir_base .'GeoLite2-Country.mmdb');
-		return $reader->city($ip)->mostSpecificSubdivision->name;
+		return $reader->city($ip);
 	} catch(Exception $e) {
 		return $e->getMessage();
 	}
