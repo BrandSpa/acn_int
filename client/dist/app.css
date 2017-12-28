@@ -1784,6 +1784,7 @@ a:hover {
       background: #ccc;
       height: 80%;
       top: 50%;
+      left: -0.5%;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%); }
     .donate_inline .change-amount li:first-child {
