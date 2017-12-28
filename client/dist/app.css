@@ -1799,8 +1799,23 @@ a:hover {
   font-weight: bold;
   font-size: 16px; }
 
-.donate_inline .donate_react__submit:hover {
-  background: #ed344e; }
+.donate_inline .donate_react__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .donate_inline .donate_react__submit:hover {
+    background: #ed344e; }
+  .donate_inline .donate_react__submit span {
+    display: inline;
+    margin-left: 10px;
+    font-size: 10px;
+    color: white; }
 
 .grid-item {
   float: left;
