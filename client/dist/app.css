@@ -1819,7 +1819,7 @@ a:hover {
   justify-content: center; }
   .donate_inline .donate_react__submit:hover {
     background: #ed344e; }
-  .donate_inline .donate_react__submit span {
+  .donate_inline .donate_react__submit div {
     display: inline;
     margin-left: 10px;
     font-size: 10px;
