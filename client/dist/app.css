@@ -1774,9 +1774,22 @@ a:hover {
   justify-content: space-around; }
   .donate_inline .change-amount li {
     border-top: 1px solid #3C515F;
-    border-bottom: 1px solid #3C515F; }
+    border-bottom: 1px solid #3C515F;
+    position: relative; }
+    .donate_inline .change-amount li:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1px;
+      background: #ccc;
+      height: 80%;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%); }
     .donate_inline .change-amount li:first-child {
       border-left: 1px solid #3C515F; }
+      .donate_inline .change-amount li:first-child:after {
+        display: none; }
     .donate_inline .change-amount li:last-child {
       border-right: 1px solid #3C515F; }
     .donate_inline .change-amount li a {
