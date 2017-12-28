@@ -1854,6 +1854,9 @@ a:hover {
   color: red;
   cursor: pointer; }
 
+.donate_inline .btn-large {
+  width: 100%; }
+
 @media (max-width: 991px) {
   .donate_inline .hidden-md-down {
     display: none !important; } }
