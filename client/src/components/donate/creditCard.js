@@ -125,7 +125,7 @@ class CredritCard extends React.Component {
         <Cards {...this.props} />
         <div className="form-group">
           <input
-            type="text"
+            type="number"
             placeholder={texts.placeholder_credit_card}
             className={`form-control ${this.inputErrStyle('number')}`}
             onChange={this.handleCard}
@@ -140,7 +140,7 @@ class CredritCard extends React.Component {
         <div className="row donate_react__creditcard__row">
           <div className="form-group col-xs-4">
             <input
-              type="text"
+              type="number"
               placeholder={texts.placeholder_month}
               className="form-control"
               onChange={e => this.handleExpiry('exp_month', e)}
@@ -154,7 +154,7 @@ class CredritCard extends React.Component {
           </div>
           <div className="form-group col-xs-4">
             <input
-              type="text"
+              type="number"
               placeholder={texts.placeholder_year}
               className="form-control"
               onChange={e => this.handleExpiry('exp_year', e)}
@@ -169,7 +169,7 @@ class CredritCard extends React.Component {
 
           <div className="form-group col-xs-4">
             <input
-              type="text"
+              type="number"
               placeholder={texts.placeholder_cvc}
               className="form-control"
               onChange={this.handleCvc}

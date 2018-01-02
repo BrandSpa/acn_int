@@ -415,7 +415,7 @@ class Contact extends Component {
               </select>
               <input
                 name="phone"
-                type="text"
+                type="number"
                 placeholder={texts.placeholder_phone}
                 className="input-section__text"
                 pattern="[0-9]*" 
@@ -424,9 +424,9 @@ class Contact extends Component {
               />
             </div>
             <div className={this.showErr('phone')}>
-                  <span>
-                    {texts.validation_phone}
-                  </span>
+                <span>
+                  {texts.validation_phone}
+                </span>
             </div>
           </div>
         </div>
