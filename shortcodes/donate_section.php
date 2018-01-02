@@ -68,6 +68,7 @@ function bs_donate_section_sc($atts, $content = null) {
  		"tags" => !empty($getLang) ? strtoupper($getLang) . ',' : '' . $at['tags'],
 		"titles" => ["SUPPORT A PERSECUTED CHRISTIAN", "THANK YOU"],
 		"content" =>  $content,
+		"loadSpinner" => get_template_directory_uri() . "/public/images/loading.gif",
  	];
 
 	ob_start();

@@ -41,7 +41,7 @@ class Amount extends Component {
           changeAmount={this.changeAmount}
         />
         <div className="row">
-          <div className="form-group form-group--addon col-5-l">
+          <div className="form-group form-group--addon col-12-l">
             <span className="form-group__addon">
               US$
             </span>
@@ -53,7 +53,7 @@ class Amount extends Component {
               value={amount}
             />
           </div>
-          <div className="form-group col-7-l">
+          <div className="form-group col-12-l donation_type">
             <a
               href="#"
               onClick={e => this.changeType(e, 'monthly')}
@@ -82,6 +82,16 @@ class Amount extends Component {
           h5 {
             color: #3C515F;
             padding-bottom: 20px;
+          }
+          .donation_type{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+          }
+          .form-group--addon{
+            float: none;
+            position: relative;
           }
         `}</style>
       </div>

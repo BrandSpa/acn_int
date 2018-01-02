@@ -16,35 +16,35 @@ const AmountBtns = (props) => {
 
   return (
     <ul className="change-amount" style={{ padding: 0 }}>
-      <li className="col-1-4">
+      <li>
         <AmountBtn
           changeAmount={changeAmount}
           amount={amount}
           amountText={10}
         />
       </li>
-      <li className="col-1-4">
+      <li>
         <AmountBtn
           changeAmount={changeAmount}
           amount={amount}
           amountText={30}
         />
       </li>
-      <li className="col-1-4">
+      <li>
         <AmountBtn
           changeAmount={changeAmount}
           amount={amount}
           amountText={50}
         />
       </li>
-      <li className="col-1-4">
+      <li>
         <AmountBtn
           changeAmount={changeAmount}
           amount={amount}
           amountText={100}
         />
       </li>
-      <li className="col-1-4">
+      <li>
         <a
           href="#"
           onClick={e => changeAmount(e, 5)}
