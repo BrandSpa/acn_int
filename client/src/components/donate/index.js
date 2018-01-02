@@ -6,6 +6,7 @@ import Contact from './contact';
 import FourStep from './four';
 import * as actions from '../../actions/donate';
 import { storeEvent } from '../../lib/events';
+import { PulseLoader } from 'halogen';
 
 var isoCountries = {
   'AF' : 'Afghanistan',
@@ -534,7 +535,7 @@ class Donate extends Component {
                 {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
               </div>
               :""}
-              {this.state.loading? `<img src=${this.props.loadSpinner} className="loading-spn" />`:'' }
+              {this.state.loading && <Loader color="#26A65B" size="16px" margin="4px"/> }
             </button>
             
             {this.state.section > 0
