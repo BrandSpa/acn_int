@@ -529,18 +529,15 @@ class Donate extends Component {
               onClick={this.handleSubmit}
               disabled={this.state.loading}
             >
-            {this.loading ? `${<img src={this.loadSpinner} />}`:
-            `${this.state.section === 1
+              {this.state.section === 1
               ? this.props.texts.next
               : this.props.texts.donate}
-              ${this.state.section == 0 ?
+              {this.state.section == 0 ?
               <div className="hidden-md-down">
                 {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
               </div>
               :""}
-            `}
-
-              
+              {this.loading? `<img src=${this.loadSpinner} />` : ''} 
             </button>
             
             {this.state.section > 0
