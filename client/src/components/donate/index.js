@@ -443,8 +443,7 @@ class Donate extends Component {
         .stripeCharge(this.state)
         .then( (res) => {
           if(!('id' in res.data)){
-            this.setState({declined: true});
-            this.setState({loading: false});
+            this.setState({declined: true, loading: false});
           }else{
             this.completeTransaction(res.data)
             this.setState({loading: false});
@@ -536,7 +535,7 @@ class Donate extends Component {
                 {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
               </div>
               :""}
-              {this.state.loading? `<img src=${this.state.loadSpinner} />` : ''} 
+              <img src={this.state.loadSpinner} className={!this.state.loading?'hidden':'' }/>
             </button>
             
             {this.state.section > 0
