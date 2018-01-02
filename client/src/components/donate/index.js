@@ -419,7 +419,7 @@ class Donate extends Component {
 
   nextSection = () => {
     const section = this.state.section < 2 ? this.state.section + 1 : 2;
-
+    this.setState({loading: true});
     if (this.state.section == 1) {
       if (!this.creditCardIsValid()) return false;
 
@@ -438,7 +438,6 @@ class Donate extends Component {
     }
 
     if (this.state.section === 2) {
-      this.setState({loading: true});
       if (!this.contactIsValid()) return false;
       actions
         .stripeCharge(this.state)
