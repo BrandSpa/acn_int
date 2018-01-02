@@ -419,7 +419,6 @@ class Donate extends Component {
 
   nextSection = () => {
     const section = this.state.section < 2 ? this.state.section + 1 : 2;
-    this.setState({loading: true});
     if (this.state.section == 1) {
       if (!this.creditCardIsValid()) return false;
 
@@ -535,7 +534,7 @@ class Donate extends Component {
                 {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
               </div>
               :""}
-              <img src={this.props.loadSpinner} className={`loading-spn ${!this.state.loading?'hidden':''}`} />
+              {this.state.loading? `<img src=${this.props.loadSpinner} className="loading-spn" />`:'' }
             </button>
             
             {this.state.section > 0
