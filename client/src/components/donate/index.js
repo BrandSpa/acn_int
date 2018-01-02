@@ -535,7 +535,7 @@ class Donate extends Component {
                 {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
               </div>
               :""}
-              <img src={this.props.loadSpinner} className={!this.state.loading?'hidden':'' }/>
+              <img src={this.props.loadSpinner} className={!this.state.loading?'hidden':''} style="width: 9%; padding-left: 5px;"/>
             </button>
             
             {this.state.section > 0
