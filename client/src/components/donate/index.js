@@ -6,7 +6,7 @@ import Contact from './contact';
 import FourStep from './four';
 import * as actions from '../../actions/donate';
 import { storeEvent } from '../../lib/events';
-import { PulseLoader } from 'halogen';
+import { PulseLoader } from 'halogenium';
 
 var isoCountries = {
   'AF' : 'Afghanistan',
