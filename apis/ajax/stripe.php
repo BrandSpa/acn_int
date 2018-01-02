@@ -46,7 +46,6 @@ add_action( 'wp_ajax_stripe_update_plan', 'stripe_plan' );
 function stripe_charge() {
   $data = $_POST['data'];
   $apiKey =  get_option('stripe_key_private');
-  print_r($data);
   $res = array([ 'err' => 'donation_type fail']);
 
   if($data['donation_type'] == 'monthly') {
