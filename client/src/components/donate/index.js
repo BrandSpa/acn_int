@@ -272,6 +272,7 @@ class Donate extends Component {
     section: 0,
     left: 0,
     loading: false,
+    isLoading: false,
     donation_type: 'monthly',
     amount: 30,
     currency: 'usd',
@@ -438,15 +439,16 @@ class Donate extends Component {
     }
 
     if (this.state.section === 2) {
+      this.setState({isLoading: true});
       if (!this.contactIsValid()) return false;
       actions
         .stripeCharge(this.state)
         .then( (res) => {
           if(!('id' in res.data)){
-            this.setState({declined: true, loading: false});
+            this.setState({declined: true, isLoading: false});
           }else{
             this.completeTransaction(res.data)
-            this.setState({loading: false});
+            this.setState({isLoading: false});
           }
         });
     }
