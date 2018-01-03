@@ -441,6 +441,7 @@ class Donate extends Component {
 
     if (this.state.section === 2) {
       this.setState({isLoading: true});
+      console.log(this.state);
       if (!this.contactIsValid()) return false;
       actions
         .stripeCharge(this.state)
