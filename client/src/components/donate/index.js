@@ -439,6 +439,7 @@ class Donate extends Component {
         }
       });
     }
+    console.log(this.state.section, section);
     if (this.state.section === 2 && section <= 3 ) {
       this.setState({isLoading: true}, function(){
         if (!this.contactIsValid()) return false;
@@ -460,6 +461,8 @@ class Donate extends Component {
       this.setState({ section, left, loading: false });
     } else if( section < 3 || this.state.show_four_step ) {
       this.setState({ section, left });
+    }else if(section === 3){
+      this.setState({ section });
     }
   };
 
