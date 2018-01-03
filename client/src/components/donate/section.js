@@ -42,7 +42,7 @@ class DonateSection extends Component {
           </h3>
         </div>
         <div
-          className={'col-12 col-4-l'}
+          className={'col-12 col-5-l'}
           style={{ background: '#fff', padding: '40px' }}
         >
           <Donate {...this.props} changeSection={this.changeSection} />
