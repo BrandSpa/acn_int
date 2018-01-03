@@ -125,45 +125,51 @@ class CredritCard extends React.Component {
         <Cards {...this.props} />
         <div className="form-group">
           <input
-            type="text"
+            type="number"
             placeholder={texts.placeholder_credit_card}
             className={`form-control ${this.inputErrStyle('number')}`}
             onChange={this.handleCard}
             value={stripe.number}
           />
-          <span className={this.showErr('number')}>
-            {texts.validation_card}
-          </span>
+          <div className={this.showErr('number')}>
+              <span>
+                {texts.validation_card}
+              </span>
+          </div>
         </div>
         <div className="row donate_react__creditcard__row">
-          <div className="form-group col-4-l col-4">
+          <div className="form-group col-xs-4">
             <input
-              type="text"
+              type="number"
               placeholder={texts.placeholder_month}
               className="form-control"
               onChange={e => this.handleExpiry('exp_month', e)}
               value={stripe.exp_month}
             />
-            <span className={this.showErr('exp_month')}>
-              {texts.validation_month}
-            </span>
+            <div className={this.showErr('exp_month')}>
+                <span>
+                  {texts.validation_month}
+                </span>
+            </div>
           </div>
-          <div className="form-group col-4-l col-4">
+          <div className="form-group col-xs-4">
             <input
-              type="text"
+              type="number"
               placeholder={texts.placeholder_year}
               className="form-control"
               onChange={e => this.handleExpiry('exp_year', e)}
               value={stripe.exp_year}
             />
-            <span className={this.showErr('exp_year')}>
-              {texts.validation_year}
-            </span>
+            <div className={this.showErr('exp_year')}>
+              <span>
+                {texts.validation_year}
+              </span>
+            </div>
           </div>
 
-          <div className="form-group col-4-l col-4">
+          <div className="form-group col-xs-4">
             <input
-              type="text"
+              type="number"
               placeholder={texts.placeholder_cvc}
               className="form-control"
               onChange={this.handleCvc}
@@ -175,9 +181,11 @@ class CredritCard extends React.Component {
             >
               <i className="ion-help" />
             </span>
-            <span className={this.showErr('cvc')}>
-              {texts.validation_cvc}
-            </span>
+            <div className={this.showErr('cvc')}>
+                <span>
+                  {texts.validation_cvc}
+                </span>
+            </div>
           </div>
 
         </div>
@@ -222,38 +230,6 @@ class CredritCard extends React.Component {
           h5 {
             color: #3C515F; 
             padding-bottom: 20px 
-          }
-
-          .cvc-help {
-            display: block;
-            background: #3C515F;
-            width: 20px;
-            height: 20px;
-            borderRadius: 20px;
-            color: #fff;
-            textAlign: center;
-            position: absolute;
-            top: 12px;
-            right: 25px;
-            cursor: pointer;
-          }
-
-          .cvc-explain {
-            display: block;
-            color: #3C515F;
-            padding: 10px;
-            fontSize: 14px;
-          }
-
-          .cvc-close {
-            display: block;
-            position: absolute;
-            top: 2px;
-            right: 2px;
-            width: 15px;
-            height: 15px;
-            color: red;
-            cursor: pointer;
           }
           `}</style>
       </div>

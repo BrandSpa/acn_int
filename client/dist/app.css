@@ -565,11 +565,6 @@ p {
   display: block;
   text-align: left; }
 
-.accordion__content {
-  background: rgba(180, 191, 194, 0.9); }
-  .accordion__content p {
-    margin: 0; }
-
 .offices-list {
   min-height: 70px;
   text-align: center;
@@ -1635,7 +1630,8 @@ button, .btn {
       background: transparent;
       color: #fff; }
     .donate_react__submit .form-group__addon {
-      font-weight: bold; }
+      font-weight: bold;
+      left: 20px; }
   .donate_react .radio {
     color: #fff;
     float: left; }
@@ -1689,9 +1685,8 @@ a:hover {
     transition: 400ms all ease-in-out; }
 
 .change-amount li {
-  float: left;
   width: 20%;
-  padding: 0 5px;
+  padding: 0;
   margin-bottom: 10px;
   list-style: none; }
   .change-amount li:first-child {
@@ -1768,16 +1763,45 @@ a:hover {
   border-color: #3C515F;
   color: #3C515F; }
 
-.donate_inline .change-amount li a {
-  border-color: #3C515F;
-  color: #3C515F;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  font-size: 18px;
-  font-weight: 600; }
-  .donate_inline .change-amount li a:hover, .donate_inline .change-amount li a.active {
-    background: #3C515F;
-    color: #fff; }
+.donate_inline .change-amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  .donate_inline .change-amount li {
+    border-top: 1px solid #3C515F;
+    border-bottom: 1px solid #3C515F;
+    position: relative; }
+    .donate_inline .change-amount li:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1px;
+      background: #ccc;
+      height: 80%;
+      top: 50%;
+      left: -0.5%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .donate_inline .change-amount li:first-child {
+      border-left: 1px solid #3C515F; }
+      .donate_inline .change-amount li:first-child:after {
+        display: none; }
+    .donate_inline .change-amount li:last-child {
+      border-right: 1px solid #3C515F; }
+    .donate_inline .change-amount li a {
+      color: #3C515F;
+      -webkit-transition: all 300ms;
+      transition: all 300ms;
+      font-size: 18px;
+      font-weight: 600; }
+      .donate_inline .change-amount li a:hover, .donate_inline .change-amount li a.active {
+        background: #3C515F;
+        color: #fff; }
 
 .donate_inline .donate_react__type {
   color: #3C515F; }
@@ -1790,8 +1814,79 @@ a:hover {
   font-weight: bold;
   font-size: 16px; }
 
-.donate_inline .donate_react__submit:hover {
-  background: #ed344e; }
+.donate_inline .btn_group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.donate_inline .donate_react__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .donate_inline .donate_react__submit:hover {
+    background: #ed344e; }
+  .donate_inline .donate_react__submit div {
+    display: inline;
+    margin-left: 10px;
+    font-size: 10px;
+    color: white; }
+
+.donate_inline .cvc-help {
+  display: block;
+  background: #3C515F;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  cursor: pointer; }
+
+.donate_inline .cvc-explain {
+  display: block;
+  color: #3C515F;
+  padding: 10px;
+  font-size: 14px; }
+
+.donate_inline .cvc-close {
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 15px;
+  height: 15px;
+  color: red;
+  cursor: pointer; }
+
+.donate_inline .btn-large {
+  width: 100%; }
+
+.donate_inline .col-xs-4 {
+  float: left;
+  width: 33.3333%; }
+  .donate_inline .col-xs-4:first-child {
+    padding-left: 15px; }
+    .donate_inline .col-xs-4:first-child input {
+      border-right: 0; }
+  .donate_inline .col-xs-4:last-child {
+    padding-right: 15px; }
+    .donate_inline .col-xs-4:last-child input {
+      border-left: 0; }
+
+@media (max-width: 991px) {
+  .donate_inline .hidden-md-down {
+    display: none !important; } }
 
 .grid-item {
   float: left;

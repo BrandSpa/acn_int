@@ -24,6 +24,7 @@ add_action( 'vc_before_init', 'bs_donate_section_vc' );
       "validation_name" => "Incorrect name",
       "validation_email" => "Incorrect email",
       "validation_country" => "Incorrect country",
+      "validation_phone" => "Incorrect phone",
       "step_amount_text" => "Select Gift Amount",
       "step_payment_text" => "Payment Details",
       "step_contact_text" => "Your Information",
@@ -54,7 +55,13 @@ add_action( 'vc_before_init', 'bs_donate_section_vc' );
       "value" => false
     ]);
 
-
+    array_push($params, [
+      "type" => "checkbox",
+      "heading" =>  "Call Center Mode",
+      "param_name" => "call_center",
+      "value" => false
+    ]);
+    
 		 array_push($params, [
       "type" => "textarea_html",
       "heading" =>  "Left content",

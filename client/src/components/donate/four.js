@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions/donate';
+import { storeEvent } from '../../lib/events';
 
 class FourStep extends Component {
   state = {
@@ -39,6 +40,21 @@ class FourStep extends Component {
       .storeConvertLoop(this.props, this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.props))
       .then(() => {
+        const action = 'DONATION_MONTHLY';
+        const label = bs.currentPageLang === 'Español'
+          ? 'DONATION_SP'
+          : 'DONATION_EN';
+
+        const event = {
+          action,
+          label,
+          category: 'DONATION',
+          value: amount,
+        };
+
+        storeEvent('ga_event', event);
+      })
+      .then(() => {
         const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&amount=${amount}&personname=${contact.name}&donation_type=monthly`;
         window.location = url;
       });
@@ -50,10 +66,10 @@ class FourStep extends Component {
     d = d.toFixed(2);
 
     return (
-      <div style={this.props.show_four ? { display: 'block', textAlign: 'center' } : { display: 'none' }}>
+      <div style={{ width: this.props.width, float: 'left', padding: '1px' }}>
         <h5 className="step-four__text">{texts.text_four_step}</h5>
-        <h3 className="step-four__subtext">{`${texts.subtext_four_step} ${d} ?`}</h3>
-        <div className="col-6 col-6-l">
+        <h4 className="step-four__subtext">{`${texts.subtext_four_step} ${d} ?`}</h4>
+        <div className="col-12 col-12-l">
           <button
             onClick={this.handleYes}
             className="step-four__handle-yes"
@@ -63,21 +79,29 @@ class FourStep extends Component {
           <h5 className="step-four__text-footer">{texts.text_footer}</h5>
         </div>
 
-        <div className="col-6 col-6-l">
+        <div className="col-12 col-12-l">
           <button className="step-four__handle-no" onClick={this.handleNo}>{texts.no}</button>
         </div>
 
         <style jsx>{`
 					.step-four__text {
 						font-size: 18px;
-						color: #3C515F;
-						marginBottom: 20px;
+            color: #3C515F;
+            margin-bottom: 20px;
+            text-align: center;
 					}
 
 					.step-four__subtext {
-						color: #3C515F; 
-						margin-bottom: 20px;
-					}
+            color: #3C515F;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1;
+            font-weight: 600;
+          }
+          
+          .col-12-l{
+            margin-bottom: 15px;
+          }
 
 					.step-four__text-footer {
 						font-size: 12px;

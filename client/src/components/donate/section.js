@@ -19,7 +19,7 @@ class DonateSection extends Component {
     const { texts } = this.props;
 
     return (
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', 'justify-content': 'center' }}>
         <div className="col-12-l" style={{ margin: '40px 0' }}>
           <h2
             style={{
@@ -41,16 +41,8 @@ class DonateSection extends Component {
             {this.state.section == 0 ? texts.subtitle : texts.success_subtitle}
           </h3>
         </div>
-
         <div
-          className="col-12 col-4-l"
-          style={this.state.section == 0 ? { display: 'block', background: 'RGBA(43, 58, 68, .9)', padding: '20px' } : { display: 'none' }}
-        >
-          <div dangerouslySetInnerHTML={{ __html: this.props.content }} />
-        </div>
-
-        <div
-          className={this.state.section == 0 ? 'col-12 col-8-l' : 'col-12 col-12-l'}
+          className={'col-12 col-4-l'}
           style={{ background: '#fff', padding: '40px' }}
         >
           <Donate {...this.props} changeSection={this.changeSection} />

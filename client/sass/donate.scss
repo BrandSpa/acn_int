@@ -147,6 +147,7 @@
 
     .form-group__addon {
       font-weight: bold;
+      left: 20px;
     }
 
   }
@@ -227,9 +228,8 @@ a {
   }
 
   li {
-    float: left;
     width: (100 / 5) * 1%;
-    padding: 0 5px;
+    padding: 0;
     margin-bottom: 10px;
     list-style: none;
 
@@ -325,9 +325,39 @@ a {
   }
 
   .change-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
     li {
+      border-top: 1px solid #3C515F;
+      border-bottom: 1px solid #3C515F;
+      position: relative;
+
+      &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1px;
+        background: #ccc;
+        height: 80%;
+        top: 50%;
+        left: -0.5%;
+        transform: translateY(-50%);
+      }
+
+      &:first-child {
+        border-left: 1px solid #3C515F;
+        &:after{
+          display: none;
+        }
+      }
+  
+      &:last-child {
+        border-right: 1px solid #3C515F;
+      }
+
       a {
-        border-color: #3C515F;
         color: #3C515F;
         transition: all 300ms;
         font-size: 18px;
@@ -355,9 +385,87 @@ a {
     font-size: 16px;
   }
 
+  .btn_group{
+    display: flex;
+    justify-content: space-between;
+  }
+
   .donate_react__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     &:hover {
       background: #ed344e;
     }
+
+    div{
+      display: inline;
+      margin-left: 10px;
+      font-size: 10px;
+      color: rgb(255, 255, 255);
+    }
   }
+
+  .cvc-help {
+    display: block;
+    background: #3C515F;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .cvc-explain {
+    display: block;
+    color: #3C515F;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .cvc-close {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 15px;
+    height: 15px;
+    color: red;
+    cursor: pointer;
+  }
+  .btn-large{
+    width: 100%;
+  }
+
+  .col-xs-4{
+    float: left;
+    width: 33.3333%;
+
+    &:first-child{
+      padding-left: 15px;
+      input{
+        border-right: 0;
+      }
+    }
+
+    &:last-child{
+      padding-right: 15px;
+      input{
+        border-left: 0;
+      }
+    }
+
+  }
+
+  @media (max-width: 991px) {
+    .hidden-md-down {
+      display: none !important;
+    }
+  }
+
 }

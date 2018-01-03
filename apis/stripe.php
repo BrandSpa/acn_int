@@ -28,18 +28,16 @@ function stripe_create_token($api_key, $card) {
 
 function stripe_create_customer($api_key, $customer) {
   \Stripe\Stripe::setApiKey($api_key);
-
     try {
       $customer = \Stripe\Customer::create(array(
       "description" => 'charge for '. $customer['email'],
       "email" => $customer['email'],
       "source" => $customer['stripe_token']
     ));
-
     return $customer;
 
   } catch(Exception $e) {
-    return $e->getMessage();
+    return $e;
   }
 
 }
@@ -129,6 +127,7 @@ function get_plan_name($amount) {
 function stripe_once($api_key, $data) {
   $customer = stripe_create_customer($api_key, $data);
   $data['customer'] = $customer->id;
+  
   return stripe_create_charge($api_key, $data);
 }
 
@@ -148,7 +147,7 @@ function stripe_monthly($api_key, $data) {
   $subscription = array();
   $subscription['customer'] = $customer->id;
   $subscription['plan'] = $plan->id;
-
+  
   if(isset($data['trial_period_days']) && !empty($data['trial_period_days'])) {
     $subscription['trial_period_days'] = $data['trial_period_days'];
   } else {
