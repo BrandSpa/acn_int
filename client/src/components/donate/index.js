@@ -276,12 +276,12 @@ class Donate extends Component {
     donation_type: 'monthly',
     amount: 30,
     currency: 'usd',
-    prefix: '',
+    prefix: this.props.prefixes[this.props.texts.country],
     isoCode: '',
     contact: {
       name: '',
       email: '',
-      country: '',
+      country: this.props.texts.country,
       phone: ''
     },
     stripe: {
@@ -489,9 +489,8 @@ class Donate extends Component {
       padding: '0 20px',
       color: this.props.is_blue ? 'rgb(60, 81, 95)' : '#fff',
     };
-    console.log('props', this.props);
+
     return (
-      
       <div>
 
         <form
