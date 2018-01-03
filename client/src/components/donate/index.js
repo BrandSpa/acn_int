@@ -440,10 +440,9 @@ class Donate extends Component {
     }
 
     if (this.state.section === 2) {
-      this.setState({isLoading: true});
-      console.log(this.state);
-      if (!this.contactIsValid()) return false;
-      actions
+      this.setState({isLoading: true}, function(){
+        if (!this.contactIsValid()) return false;
+        actions
         .stripeCharge(this.state)
         .then( (res) => {
           if(!('id' in res.data)){
@@ -452,6 +451,7 @@ class Donate extends Component {
             this.completeTransaction(res.data);
           }
         });
+      });
     }
 
     const left = `-${section * 100}%`;
