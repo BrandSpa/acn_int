@@ -440,8 +440,8 @@ class Donate extends Component {
         }
       });
     }
-    console.log(this.state.section);
-    if (this.state.section === 2) {
+
+    if (this.state.section === 2 && section < 3 ) {
       this.setState({isLoading: true}, function(){
         if (!this.contactIsValid()) return false;
         actions
