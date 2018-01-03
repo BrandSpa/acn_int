@@ -83,7 +83,7 @@ class FourStep extends Component {
             font-weight: 600;
           }
           
-          col-12-l{
+          .col-12-l{
             margin-bottom: 15px;
           }
 
