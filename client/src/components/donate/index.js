@@ -321,7 +321,6 @@ class Donate extends Component {
 
   componentDidMount = () => {
     this.changeIso(this.state.contact.country);
-    console.log(this.props)
   }
 
   completeTransaction = (stripeResponse = {}) => {
@@ -440,8 +439,7 @@ class Donate extends Component {
         }
       });
     }
-    console.log(section, this.state.section);
-    if (this.state.section === 2 && section < 3 ) {
+    if (this.state.section === 2 && section <= 3 ) {
       this.setState({isLoading: true}, function(){
         if (!this.contactIsValid()) return false;
         actions
