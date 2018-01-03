@@ -527,7 +527,7 @@ class Donate extends Component {
               width={sectionWidth}
             />
           </div>
-          {this.section < 3? 
+          {this.state.section < 3? 
             <div className="form-group btn_group">
               <button
                 className={`donate_react__submit pull-left ${ this.state.section == 0 ? "btn-large": "" }`} 
