@@ -329,9 +329,10 @@ class Donate extends Component {
     const { id } = stripeResponse;
 
     this.setState({ loading: true });
-
+    var cvContact = contact;
+    delete cvContact.stripe;
     actions
-      .storeConvertLoop(this.props.tags, contact)
+      .storeConvertLoop(this.props.tags, cvContact)
       .then(() => {
         const action = donation_type === 'monthly'
           ? 'DONATION_MONTHLY'
