@@ -24,7 +24,7 @@ class Projects extends React.Component {
   }
 
   componentDidMount() {
-
+    this.setArrowAndContent();
   }
 
   setArrowAndContent = () => {
