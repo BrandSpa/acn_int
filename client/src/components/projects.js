@@ -28,7 +28,7 @@ class Projects extends React.Component {
   }
 
   setArrowAndContent = () => {
-    let num = 9;
+    let num = 0;
 
     this.props.contents.map((content, ind) => {
       if (content.hash_url === window.location.hash.replace('#', '')) {
