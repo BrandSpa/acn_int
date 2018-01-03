@@ -41,7 +41,6 @@ class FourStep extends Component {
       .then(actions.storeEventConvertLoop.bind(null, this.props))
       .then(() => {
         const action = 'DONATION_MONTHLY';
-        
         const label = bs.currentPageLang === 'Español'
           ? 'DONATION_SP'
           : 'DONATION_EN';

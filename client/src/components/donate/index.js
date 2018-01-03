@@ -397,7 +397,6 @@ class Donate extends Component {
         } else {
           this.setState({isLoading: false, show_four_step: true});
           this.nextSection();
-          this.changeSection(1);
         }
       });
   }
@@ -441,7 +440,7 @@ class Donate extends Component {
         }
       });
     }
-
+    console.log(this.state.section);
     if (this.state.section === 2) {
       this.setState({isLoading: true}, function(){
         if (!this.contactIsValid()) return false;
