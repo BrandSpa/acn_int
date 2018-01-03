@@ -50,7 +50,7 @@ class FourStep extends Component {
     d = d.toFixed(2);
 
     return (
-      <div style={this.props.show_four ? { display: 'block', textAlign: 'center' } : { display: 'none' }}>
+      <div style={{ width: this.props.width, float: 'left', padding: '1px' }}>
         <h5 className="step-four__text">{texts.text_four_step}</h5>
         <h3 className="step-four__subtext">{`${texts.subtext_four_step} ${d} ?`}</h3>
         <div className="col-6 col-6-l">
