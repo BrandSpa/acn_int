@@ -267,7 +267,7 @@ class Donate extends Component {
     tags: '',
     is_blue: false,
   };
-
+  
   state = {
     section: 0,
     left: 0,
@@ -276,12 +276,12 @@ class Donate extends Component {
     donation_type: 'monthly',
     amount: 30,
     currency: 'usd',
-    prefix: this.props.prefixes[this.props.texts.country],
+    prefix: '',
     isoCode: '',
     contact: {
       name: '',
       email: '',
-      country: this.props.texts.country,
+      country: '',
       phone: ''
     },
     stripe: {
@@ -299,6 +299,7 @@ class Donate extends Component {
   };
 
   componentDidMount() {
+    console.log(this.props);
     this.donateForm.addEventListener('keydown', (e) => {
       if (e.which === 9) {
         e.preventDefault();
