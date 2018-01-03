@@ -447,24 +447,18 @@ class Donate extends Component {
         .then( (res) => {
           if(!('id' in res.data)){
             this.setState({declined: true, isLoading: false});
-            console.log('3section', section, 'show_four', this.state.show_four_step);
           }else{
             this.completeTransaction(res.data);
-            console.log('1section', section, 'show_four', this.state.show_four_step);
           }
         });
     }
 
     const left = `-${section * 100}%`;
-    
+
     if (this.state.section === 0) {
       this.setState({ section, left, loading: false });
-    } else { 
-      console.log('2section', section, 'show_four', this.state.show_four_step);
-      if( this.state.section < 3 || (this.state.show_four_step && !this.state.declined) ) {
-        console.log('4section', section, 'show_four', this.state.show_four_step);
-        this.setState({ section, left });
-      }
+    } else if( section < 3 || this.state.show_four_step ) {
+      this.setState({ section, left });
     }
   };
 
