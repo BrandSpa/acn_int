@@ -422,7 +422,6 @@ class Donate extends Component {
 
   nextSection = () => {
     const section = this.state.section < 3 ? this.state.section + 1 : 3;
-    console.log('section', section, 'show_four', this.state.show_four_step);
     if (this.state.section == 1) {
       if (!this.creditCardIsValid()) return false;
 
@@ -448,17 +447,19 @@ class Donate extends Component {
         .then( (res) => {
           if(!('id' in res.data)){
             this.setState({declined: true, isLoading: false});
+            console.log('3section', section, 'show_four', this.state.show_four_step);
           }else{
             this.completeTransaction(res.data);
+            console.log('1section', section, 'show_four', this.state.show_four_step);
           }
         });
     }
 
     const left = `-${section * 100}%`;
-
+    console.log('2section', section, 'show_four', this.state.show_four_step);
     if (this.state.section === 0) {
       this.setState({ section, left, loading: false });
-    } else if( this.state.section < 3 || this.state.show_four_step ) {
+    } else if( this.state.section < 3 || (this.state.show_four_step && !this.state.declined) ) {
       this.setState({ section, left });
     }
   };
