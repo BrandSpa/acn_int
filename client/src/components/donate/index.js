@@ -541,7 +541,7 @@ class Donate extends Component {
                   {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
                 </div>
                 :""}
-                {this.state.loading? <ClipLoader color="#FFFFFF" size="16px" margin="4px"/> : ""}
+                {this.state.isLoading? <ClipLoader color="#FFFFFF" size="16px" margin="4px"/> : ""}
               </button>
               
               {this.state.section > 0
