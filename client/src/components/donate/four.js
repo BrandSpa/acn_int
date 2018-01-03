@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as actions from '../../actions/donate';
+import { storeEvent } from '../../lib/events';
 
 class FourStep extends Component {
   state = {
@@ -38,6 +39,22 @@ class FourStep extends Component {
     actions
       .storeConvertLoop(this.props, this.state)
       .then(actions.storeEventConvertLoop.bind(null, this.props))
+      .then(() => {
+        const action = 'DONATION_MONTHLY';
+        
+        const label = bs.currentPageLang === 'Español'
+          ? 'DONATION_SP'
+          : 'DONATION_EN';
+
+        const event = {
+          action,
+          label,
+          category: 'DONATION',
+          value: amount,
+        };
+
+        storeEvent('ga_event', event);
+      })
       .then(() => {
         const url = `${base}?customer_id=${contact.email}-${id}&order_revenue=${amount}&amount=${amount}&personname=${contact.name}&donation_type=monthly`;
         window.location = url;

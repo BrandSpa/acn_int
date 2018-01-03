@@ -5,7 +5,7 @@ import CreditCard from './creditCard';
 import Contact from './contact';
 import FourStep from './four';
 import * as actions from '../../actions/donate';
-import { storeEvent } from '../../lib/events';
+import { storeEvent, eventTagManager } from '../../lib/events';
 import { ClipLoader } from 'halogenium';
 
 var isoCountries = {
@@ -384,6 +384,9 @@ class Donate extends Component {
         };
 
         return storeEvent('ga_ecm_event', event);
+      })
+      .then(() => {
+        return eventTagManager();
       })
       .then(() => {
         if (donation_type == 'monthly') {
