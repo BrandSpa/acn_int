@@ -457,7 +457,7 @@ class Donate extends Component {
 
     if (this.state.section === 0) {
       this.setState({ section, left, loading: false });
-    } else {
+    } else if( this.state.section < 3 || ( this.state.show_four && this.state.section === 3 ) ) {
       this.setState({ section, left });
     }
   };
