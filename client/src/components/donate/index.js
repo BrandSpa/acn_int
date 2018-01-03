@@ -448,7 +448,7 @@ class Donate extends Component {
           if(!('id' in res.data)){
             this.setState({declined: true, isLoading: false});
           }else{
-            this.completeTransaction(res.data)
+            this.completeTransaction(res.data);
             this.setState({isLoading: false});
           }
         });
@@ -527,30 +527,31 @@ class Donate extends Component {
               width={sectionWidth}
             />
           </div>
-
-          <div className="form-group btn_group">
-            <button
-              className={`donate_react__submit pull-left ${ this.state.section == 0 ? "btn-large": "" }`} 
-              onClick={this.handleSubmit}
-              disabled={this.state.loading}
-            >
-              {this.state.section === 1
-              ? this.props.texts.next
-              : this.props.texts.donate}
-              {this.state.section == 0 ?
-              <div className="hidden-md-down">
-                {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
-              </div>
-              :""}
-              {this.state.loading && <ClipLoader color="#FFFFFF" size="16px" margin="4px"/>}
-            </button>
-            
-            {this.state.section > 0
-            ? <button style={backBtnStyle} onClick={this.prevSection}>
-              {this.props.texts.back}
-            </button>
-            : ''}
-          </div>
+          {this.section < 3? 
+            <div className="form-group btn_group">
+              <button
+                className={`donate_react__submit pull-left ${ this.state.section == 0 ? "btn-large": "" }`} 
+                onClick={this.handleSubmit}
+                disabled={this.state.loading}
+              >
+                {this.state.section === 1
+                ? this.props.texts.next
+                : this.props.texts.donate}
+                {this.state.section == 0 ?
+                <div className="hidden-md-down">
+                  {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
+                </div>
+                :""}
+                {this.state.loading? <ClipLoader color="#FFFFFF" size="16px" margin="4px"/> : ""}
+              </button>
+              
+              {this.state.section > 0
+              ? <button style={backBtnStyle} onClick={this.prevSection}>
+                {this.props.texts.back}
+              </button>
+              : ''}
+            </div>
+          : ''}
           <div
             style={
               this.state.declined
