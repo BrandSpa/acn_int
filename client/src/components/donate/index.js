@@ -521,6 +521,8 @@ class Donate extends Component {
               getIso={this.getIsoByName}
             />
 
+            <FourStep {...this.props} {...this.state} />
+            
           </div>
 
           <div className="form-group btn_group">
@@ -563,7 +565,6 @@ class Donate extends Component {
             {this.props.texts.validation_declined}
           </div>
         </form>
-        <FourStep {...this.props} {...this.state} />
 
       </div>
     );
