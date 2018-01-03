@@ -52,8 +52,8 @@ class FourStep extends Component {
     return (
       <div style={{ width: this.props.width, float: 'left', padding: '1px' }}>
         <h5 className="step-four__text">{texts.text_four_step}</h5>
-        <h3 className="step-four__subtext">{`${texts.subtext_four_step} ${d} ?`}</h3>
-        <div className="col-6 col-6-l">
+        <h4 className="step-four__subtext">{`${texts.subtext_four_step} ${d} ?`}</h4>
+        <div className="col-12 col-12-l">
           <button
             onClick={this.handleYes}
             className="step-four__handle-yes"
@@ -63,21 +63,29 @@ class FourStep extends Component {
           <h5 className="step-four__text-footer">{texts.text_footer}</h5>
         </div>
 
-        <div className="col-6 col-6-l">
+        <div className="col-12 col-12-l">
           <button className="step-four__handle-no" onClick={this.handleNo}>{texts.no}</button>
         </div>
 
         <style jsx>{`
 					.step-four__text {
 						font-size: 18px;
-						color: #3C515F;
-						marginBottom: 20px;
+            color: #3C515F;
+            margin-bottom: 20px;
+            text-align: center;
 					}
 
 					.step-four__subtext {
-						color: #3C515F; 
-						margin-bottom: 20px;
-					}
+            color: #3C515F;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1;
+            font-weight: 600;
+          }
+          
+          col-12-l{
+            margin-bottom: 15px;
+          }
 
 					.step-four__text-footer {
 						font-size: 12px;

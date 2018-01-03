@@ -6,7 +6,7 @@ import Contact from './contact';
 import FourStep from './four';
 import * as actions from '../../actions/donate';
 import { storeEvent } from '../../lib/events';
-import { MoonLoader } from 'halogenium';
+import { ClipLoader } from 'halogenium';
 
 var isoCountries = {
   'AF' : 'Afghanistan',
@@ -542,7 +542,7 @@ class Donate extends Component {
                 {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
               </div>
               :""}
-              {this.state.loading && <MoonLoader color="#FFFFFF" size="16px" margin="4px"/>}
+              {this.state.loading && <ClipLoader color="#FFFFFF" size="16px" margin="4px"/>}
             </button>
             
             {this.state.section > 0
