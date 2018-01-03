@@ -470,8 +470,8 @@ class Donate extends Component {
   };
 
   render() {
-    const sectionWidth = `${100 / 3}%`;
-    const viewPortStyle = { width: '300%', left: this.state.left };
+    const sectionWidth = `${100 / 4}%`;
+    const viewPortStyle = { width: '400%', left: this.state.left };
     const donationTypeStyle = {
       display: 'inline',
       marginLeft: '15px',
@@ -492,7 +492,6 @@ class Donate extends Component {
         <form
           onSubmit={this.handleSubmit}
           className={this.props.is_blue ? 'donate_react donate_inline' : 'donate_react'}
-          style={this.state.show_four ? { display: 'none' } : { display: 'block' }}
           ref={(donate) => { this.donateForm = donate; }}
         >
           <div className="donate_react__viewport" style={viewPortStyle}>
@@ -521,8 +520,11 @@ class Donate extends Component {
               getIso={this.getIsoByName}
             />
 
-            <FourStep {...this.props} {...this.state} />
-            
+            <FourStep 
+              {...this.props} 
+              {...this.state}
+              width={sectionWidth}
+            />
           </div>
 
           <div className="form-group btn_group">
