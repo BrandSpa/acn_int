@@ -393,7 +393,8 @@ class Donate extends Component {
           }, 0);
         } else {
           this.setState({isLoading: false, show_four: true});
-          this.changeSection(3);
+          this.nextSection();
+          this.changeSection(1);
         }
       });
   }
