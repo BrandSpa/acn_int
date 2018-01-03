@@ -392,9 +392,8 @@ class Donate extends Component {
             window.location = url;
           }, 0);
         } else {
-          this.setState({ show_four: true });
-          this.nextSection();
-          this.props.changeSection(1);
+          this.setState({isLoading: false, show_four: true});
+          this.changeSection(3);
         }
       });
   }
@@ -449,7 +448,6 @@ class Donate extends Component {
             this.setState({declined: true, isLoading: false});
           }else{
             this.completeTransaction(res.data);
-            this.setState({isLoading: false});
           }
         });
     }
