@@ -6,7 +6,7 @@ import Contact from './contact';
 import FourStep from './four';
 import * as actions from '../../actions/donate';
 import { storeEvent } from '../../lib/events';
-import { PulseLoader } from 'halogenium';
+import { RingLoader } from 'halogenium';
 
 var isoCountries = {
   'AF' : 'Afghanistan',
@@ -392,7 +392,7 @@ class Donate extends Component {
             window.location = url;
           }, 0);
         } else {
-          this.setState({ show_four: true });
+          this.nextSection
           this.props.changeSection(1);
         }
       });
@@ -420,7 +420,7 @@ class Donate extends Component {
   }
 
   nextSection = () => {
-    const section = this.state.section < 2 ? this.state.section + 1 : 2;
+    const section = this.state.section < 3 ? this.state.section + 1 : 3;
     if (this.state.section == 1) {
       if (!this.creditCardIsValid()) return false;
 
@@ -541,7 +541,7 @@ class Donate extends Component {
                 {`${this.state.amount} USD ${this.props.texts[this.state.donation_type]}`}
               </div>
               :""}
-              {this.state.loading && <PulseLoader color="#FFFFFF" size="16px" margin="4px"/>}
+              {this.state.loading && <RingLoader color="#FFFFFF" size="16px" margin="4px"/>}
             </button>
             
             {this.state.section > 0
