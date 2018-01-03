@@ -456,11 +456,15 @@ class Donate extends Component {
     }
 
     const left = `-${section * 100}%`;
-    console.log('2section', section, 'show_four', this.state.show_four_step);
+    
     if (this.state.section === 0) {
       this.setState({ section, left, loading: false });
-    } else if( this.state.section < 3 || (this.state.show_four_step && !this.state.declined) ) {
-      this.setState({ section, left });
+    } else { 
+      console.log('2section', section, 'show_four', this.state.show_four_step);
+      if( this.state.section < 3 || (this.state.show_four_step && !this.state.declined) ) {
+        console.log('4section', section, 'show_four', this.state.show_four_step);
+        this.setState({ section, left });
+      }
     }
   };
 
