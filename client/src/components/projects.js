@@ -24,11 +24,13 @@ class Projects extends React.Component {
   }
 
   componentDidMount() {
-    this.setArrowAndContent();
+    if(window.location.hash) {
+      this.setArrowAndContent();
+    }
   }
 
   setArrowAndContent = () => {
-    let num = 0;
+    let num = 9;
 
     this.props.contents.map((content, ind) => {
       if (content.hash_url === window.location.hash.replace('#', '')) {
