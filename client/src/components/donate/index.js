@@ -299,7 +299,6 @@ class Donate extends Component {
   };
 
   componentDidMount() {
-    console.log(this.props);
     this.donateForm.addEventListener('keydown', (e) => {
       if (e.which === 9) {
         e.preventDefault();
@@ -490,8 +489,9 @@ class Donate extends Component {
       padding: '0 20px',
       color: this.props.is_blue ? 'rgb(60, 81, 95)' : '#fff',
     };
-
+    console.log('props', this.props);
     return (
+      
       <div>
 
         <form
