@@ -422,6 +422,7 @@ class Donate extends Component {
 
   nextSection = () => {
     const section = this.state.section < 3 ? this.state.section + 1 : 3;
+    console.log('section', section, 'show_four', this.state.show_four_step);
     if (this.state.section == 1) {
       if (!this.creditCardIsValid()) return false;
 
