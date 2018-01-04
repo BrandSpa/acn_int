@@ -416,6 +416,7 @@ class Contact extends Component {
               <input
                 name="phone"
                 type="number"
+                pattern="\d*"
                 placeholder={texts.placeholder_phone}
                 className="input-section__text"
                 pattern="[0-9]*" 

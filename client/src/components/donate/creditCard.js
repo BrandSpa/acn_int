@@ -126,6 +126,7 @@ class CredritCard extends React.Component {
         <div className="form-group">
           <input
             type="number"
+            pattern="\d*"
             placeholder={texts.placeholder_credit_card}
             className={`form-control ${this.inputErrStyle('number')}`}
             onChange={this.handleCard}
@@ -141,6 +142,7 @@ class CredritCard extends React.Component {
           <div className="form-group col-xs-4">
             <input
               type="number"
+              pattern="\d*"
               placeholder={texts.placeholder_month}
               className="form-control"
               onChange={e => this.handleExpiry('exp_month', e)}
@@ -155,6 +157,7 @@ class CredritCard extends React.Component {
           <div className="form-group col-xs-4">
             <input
               type="number"
+              pattern="\d*"
               placeholder={texts.placeholder_year}
               className="form-control"
               onChange={e => this.handleExpiry('exp_year', e)}
@@ -170,6 +173,7 @@ class CredritCard extends React.Component {
           <div className="form-group col-xs-4">
             <input
               type="number"
+              pattern="\d*"
               placeholder={texts.placeholder_cvc}
               className="form-control"
               onChange={this.handleCvc}
