@@ -1535,8 +1535,8 @@ button, .btn {
     -ms-flex-pack: distribute;
     justify-content: space-around; }
     .donate_react .change-amount li {
-      border-top: 1px solid #3C515F;
-      border-bottom: 1px solid #3C515F;
+      border-top: 1px solid #FFFFFF;
+      border-bottom: 1px solid #FFFFFF;
       position: relative; }
       .donate_react .change-amount li:after {
         content: "";
@@ -1550,20 +1550,20 @@ button, .btn {
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%); }
       .donate_react .change-amount li:first-child {
-        border-left: 1px solid #3C515F; }
+        border-left: 1px solid #FFFFFF; }
         .donate_react .change-amount li:first-child:after {
           display: none; }
       .donate_react .change-amount li:last-child {
-        border-right: 1px solid #3C515F; }
+        border-right: 1px solid #FFFF; }
       .donate_react .change-amount li a {
-        color: #3C515F;
+        color: #FFF;
         -webkit-transition: all 300ms;
         transition: all 300ms;
         font-size: 18px;
         font-weight: 600; }
         .donate_react .change-amount li a:hover, .donate_react .change-amount li a.active {
-          background: #3C515F;
-          color: #fff; }
+          background: #FFFF;
+          color: #3C515F; }
   .donate_react input {
     border-color: #fff;
     color: #fff;
