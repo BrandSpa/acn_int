@@ -1490,7 +1490,8 @@ button, .btn {
   .projects__content__content-left {
     -webkit-transition: 300ms all;
     transition: 300ms all;
-    padding: 90px; }
+    padding: 90px;
+    color: #FFF !important; }
     @media (max-width: 767px) {
       .projects__content__content-left {
         padding: 30px;
