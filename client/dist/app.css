@@ -1520,6 +1520,9 @@ button, .btn {
       .projects__content__content-right {
         min-height: 200px !important; } }
 
+.projects .projects__content__left__text p {
+  color: #fff !important; }
+
 .hidden {
   display: none; }
 
