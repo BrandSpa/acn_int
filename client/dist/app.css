@@ -1564,6 +1564,8 @@ button, .btn {
         .donate_react .change-amount li a:hover, .donate_react .change-amount li a.active {
           background: #FFFF;
           color: #3C515F; }
+  .donate_react h5 {
+    color: #FFFFFF !important; }
   .donate_react .donate_react__submit {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1835,6 +1837,9 @@ a:hover {
   @media (max-width: 767px) {
     .donate-react__container {
       padding: 20px; } }
+
+.donate_inline h5 {
+  color: #3C515F !important; }
 
 .donate_inline input {
   border-color: #3C515F;
