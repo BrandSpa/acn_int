@@ -1525,6 +1525,15 @@ button, .btn {
   position: relative;
   overflow: hidden;
   margin: 0; }
+  .donate_react .change-amount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
   .donate_react input {
     border-color: #fff;
     color: #fff;

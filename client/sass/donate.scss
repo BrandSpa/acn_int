@@ -7,6 +7,12 @@
   overflow: hidden;
   margin: 0;
 
+  .change-amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
   input {
     border-color: #fff;
     color: #fff;
