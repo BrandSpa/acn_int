@@ -2022,7 +2022,7 @@ a:hover {
         width: 100%; }
       .donate_inline .change-amount li:after {
         display: none; }
-      .donate_inline .change-amount li:nth-child(odd) {
+      .donate_inline .change-amount li:nth-child(even) {
         border-left: none; } }
 
 .grid-item {
