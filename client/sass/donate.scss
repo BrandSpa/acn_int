@@ -614,10 +614,14 @@ a {
   @media (max-width: 600px) {
     .donate_react {
 
-      &__type--active, h5{
+      &__type--active{
         font-size: 1.6em;
       }
-  
+      
+      h5{
+        font-size: 1.6em;
+      }
+      
     }
     .prefix{
       width: 25% !important;
