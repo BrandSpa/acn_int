@@ -1946,7 +1946,7 @@ html.fp-enabled,
     color: #FFFFFF !important; }
   .donate_react .prefix {
     color: #000 !important; }
-  .donate_react .iso-code {
+  .donate_react .iso-code, .donate_react .iso-code {
     border-color: #FFFFFF !important; }
   .donate_react .donate_react__submit {
     display: -webkit-box;
