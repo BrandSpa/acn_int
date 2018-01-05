@@ -21,6 +21,7 @@ import Donate from './components/donate/single';
 import DonateInline from './components/donate/inline';
 import DonateInlineSection from './components/donate/inline_section';
 import DonateSection from './components/donate/section';
+import DonateContainer from './components/donate/container';
 
 import CampaignsSlider from './components/campaignsSlider';
 import DownloadPdf from './components/downloadPdf';
@@ -71,6 +72,7 @@ multipleRender(Donate, '.bs-donate-react', true);
 multipleRender(DonateInline, '.bs-donate-inline', true);
 multipleRender(DonateInlineSection, '.bs-donate-inline-section', true);
 multipleRender(DonateSection, '.bs-donate-section', true);
+multipleRender(DonateContainer, '.bs-donate-container', true);
 multipleRender(Projects, '.projects-container', true);
 multipleRender(ProjectsInfo, '.bs-projects-info', true);
 multipleRender(Accordion, '.bs-accordion', true);
