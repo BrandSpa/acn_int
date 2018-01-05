@@ -2015,7 +2015,7 @@ a:hover {
     display: none; }
   .donate_inline .form-group__addon {
     left: 20px; }
-  .donate_inline .btn_group button .pull-left:not(.btn-large) {
+  .donate_inline .btn_group .donate_react__submit:not(.btn-large) {
     width: 50% !important; }
   .donate_inline .change-amount {
     -ms-flex-wrap: wrap;
