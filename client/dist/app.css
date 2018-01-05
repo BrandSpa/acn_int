@@ -2017,7 +2017,9 @@ a:hover {
     border: none; }
     .donate_inline .change-amount li {
       width: 50%;
-      border: 1px solid; } }
+      border: 1px solid; }
+      .donate_inline .change-amount li:last-child {
+        width: 100%; } }
 
 .grid-item {
   float: left;

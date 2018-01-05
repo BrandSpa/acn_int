@@ -628,10 +628,13 @@ a {
       li{
         width: 50%;
         border: 1px solid;
+
+        &:last-child{
+          width: 100%;
+        }
+
       }
     }
   }
-  
-
 
 }
