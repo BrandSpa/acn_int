@@ -129,7 +129,7 @@ class CredritCard extends React.Component {
             pattern="\d*"
             placeholder={texts.placeholder_credit_card}
             className={`form-control ${this.inputErrStyle('number')}`}
-            onChange={this.handleCard}
+            onBlur={this.handleCard}
             value={stripe.number}
           />
           <div className={this.showErr('number')}>
@@ -145,7 +145,7 @@ class CredritCard extends React.Component {
               pattern="\d*"
               placeholder={texts.placeholder_month}
               className="form-control"
-              onChange={e => this.handleExpiry('exp_month', e)}
+              onBlur={e => this.handleExpiry('exp_month', e)}
               value={stripe.exp_month}
             />
             <div className={this.showErr('exp_month')}>
@@ -160,7 +160,7 @@ class CredritCard extends React.Component {
               pattern="\d*"
               placeholder={texts.placeholder_year}
               className="form-control"
-              onChange={e => this.handleExpiry('exp_year', e)}
+              onBlur={e => this.handleExpiry('exp_year', e)}
               value={stripe.exp_year}
             />
             <div className={this.showErr('exp_year')}>
@@ -176,7 +176,7 @@ class CredritCard extends React.Component {
               pattern="\d*"
               placeholder={texts.placeholder_cvc}
               className="form-control"
-              onChange={this.handleCvc}
+              onBlur={this.handleCvc}
               value={stripe.cvc}
             />
             <span
