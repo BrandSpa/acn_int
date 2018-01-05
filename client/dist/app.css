@@ -2019,7 +2019,9 @@ a:hover {
       width: 50%;
       border: 1px solid; }
       .donate_inline .change-amount li:last-child {
-        width: 100%; } }
+        width: 100%; }
+      .donate_inline .change-amount li:after {
+        display: none; } }
 
 .grid-item {
   float: left;
