@@ -72,7 +72,7 @@ multipleRender(Donate, '.bs-donate-react', true);
 multipleRender(DonateInline, '.bs-donate-inline', true);
 multipleRender(DonateInlineSection, '.bs-donate-inline-section', true);
 multipleRender(DonateSection, '.bs-donate-section', true);
-multipleRender(DonateSection, '.bs-donate-container', true);
+multipleRender(DonateContainer, '.bs-donate-container', true);
 multipleRender(Projects, '.projects-container', true);
 multipleRender(ProjectsInfo, '.bs-projects-info', true);
 multipleRender(Accordion, '.bs-accordion', true);
