@@ -611,4 +611,15 @@ a {
     }
   }
 
+  @media (max-width: 600px) {
+    .prefix, .iso-code{
+      width: 20%;
+    }
+    .input-section__text{
+      width: 60%;
+    }
+  }
+  
+
+
 }

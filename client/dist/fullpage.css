@@ -2375,6 +2375,12 @@ a:hover {
   .donate_inline .hidden-md-down {
     display: none !important; } }
 
+@media (max-width: 600px) {
+  .donate_inline .prefix, .donate_inline .iso-code {
+    width: 20%; }
+  .donate_inline .input-section__text {
+    width: 60%; } }
+
 .contact-form .input-container {
   width: 20%;
   margin-right: -1px; }
