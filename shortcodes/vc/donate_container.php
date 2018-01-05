@@ -71,7 +71,7 @@ add_action( 'vc_before_init', 'bs_donate_container_vc' );
 
   	vc_map(
       array(
-        "name" =>  "BS Donate section",
+        "name" =>  "BS Donate Container",
         "base" => "bs_donate_container",
         "category" =>  "BS",
         "params" => $params
