@@ -612,16 +612,16 @@ a {
   }
 
   @media (max-width: 600px) {
+
     .donate_react {
 
       &__type--active{
         font-size: 1.6em;
       }
-      
-      h5{
-        font-size: 1.6em !important;
-      }
 
+    }
+    .donate_react > h5{
+      font-size: 1.6em !important;
     }
     .prefix{
       width: 25% !important;
