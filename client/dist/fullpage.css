@@ -2376,34 +2376,34 @@ a:hover {
     display: none !important; } }
 
 @media (max-width: 600px) {
-  .donate_inline .donate_react__type--active {
+  .donate_react__type--active {
     font-size: 1.6em; }
-  .donate_inline .donate_react__viewport h5 {
+  .donate_react__viewport h5 {
     font-size: 1.6em; }
-  .donate_inline .prefix {
+  .prefix {
     width: 25% !important; }
-  .donate_inline .iso-code {
+  .iso-code {
     width: 15% !important; }
-  .donate_inline .input-section__text {
+  .input-section__text {
     width: 60%; }
-  .donate_inline .cvc-help {
+  .cvc-help {
     display: none; }
-  .donate_inline .form-group__addon {
+  .form-group__addon {
     left: 20px; }
-  .donate_inline .btn_group .donate_react__submit:not(.btn-large) {
+  .btn_group .donate_react__submit:not(.btn-large) {
     width: 50% !important; }
-  .donate_inline .change-amount {
+  .change-amount {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     border: none; }
-    .donate_inline .change-amount li {
+    .change-amount li {
       width: 50%;
       border: 1px solid; }
-      .donate_inline .change-amount li:last-child {
+      .change-amount li:last-child {
         width: 100%; }
-      .donate_inline .change-amount li:after {
+      .change-amount li:after {
         display: none; }
-      .donate_inline .change-amount li:nth-child(even) {
+      .change-amount li:nth-child(even) {
         border-left: none; } }
 
 .contact-form .input-container {
