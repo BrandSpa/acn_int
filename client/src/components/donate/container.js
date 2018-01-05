@@ -52,4 +52,4 @@ class DonateContainer extends Component {
   }
 }
 
-export default DonateSection;
+export default DonateContainer;
