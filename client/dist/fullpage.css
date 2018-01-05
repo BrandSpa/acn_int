@@ -1901,6 +1901,70 @@ html.fp-enabled,
   position: relative;
   overflow: hidden;
   margin: 0; }
+  .donate_react .change-amount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .donate_react .change-amount li {
+      border-top: 1px solid #FFFFFF;
+      border-bottom: 1px solid #FFFFFF;
+      position: relative; }
+      .donate_react .change-amount li:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1px;
+        background: #ccc;
+        height: 80%;
+        top: 50%;
+        left: -0.5%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%); }
+      .donate_react .change-amount li:first-child {
+        border-left: 1px solid #FFFFFF; }
+        .donate_react .change-amount li:first-child:after {
+          display: none; }
+      .donate_react .change-amount li:last-child {
+        border-right: 1px solid #FFFF; }
+      .donate_react .change-amount li a {
+        color: #FFF;
+        -webkit-transition: all 300ms;
+        transition: all 300ms;
+        font-size: 18px;
+        font-weight: 600; }
+        .donate_react .change-amount li a:hover, .donate_react .change-amount li a.active {
+          background: #FFFF;
+          color: #3C515F; }
+  .donate_react h5 {
+    color: #FFFFFF !important; }
+  .donate_react select {
+    color: #FFFFFF !important; }
+  .donate_react .prefix {
+    color: #000 !important; }
+  .donate_react .iso-code, .donate_react .prefix {
+    border-color: #FFFFFF !important; }
+  .donate_react .donate_react__submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .donate_react .donate_react__submit:hover {
+      background: #ed344e; }
+    .donate_react .donate_react__submit div {
+      display: inline;
+      margin-left: 10px;
+      font-size: 10px;
+      color: white; }
   .donate_react input {
     border-color: #fff;
     color: #fff;
@@ -2028,6 +2092,41 @@ html.fp-enabled,
   @media (max-width: 767px) {
     .donate_react__creditcard__row {
       margin: 0 -15px !important; } }
+  .donate_react .cvc-help {
+    display: block;
+    background: #3C515F;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    cursor: pointer; }
+  .donate_react .col-xs-4 {
+    float: left;
+    width: 33.3333%; }
+    .donate_react .col-xs-4:first-child {
+      padding-left: 15px; }
+      .donate_react .col-xs-4:first-child input {
+        border-right: 0; }
+    .donate_react .col-xs-4:last-child {
+      padding-right: 15px; }
+      .donate_react .col-xs-4:last-child input {
+        border-left: 0; }
+  .donate_react .btn-large {
+    width: 100%; }
+  .donate_react .btn_group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  @media (max-width: 991px) {
+    .donate_react .hidden-md-down {
+      display: none !important; } }
 
 a:hover {
   text-decoration: none; }
@@ -2120,6 +2219,9 @@ a:hover {
   @media (max-width: 767px) {
     .donate-react__container {
       padding: 20px; } }
+
+.donate_inline h5 {
+  color: #3C515F !important; }
 
 .donate_inline input {
   border-color: #3C515F;
@@ -2259,6 +2361,15 @@ a:hover {
     padding-right: 15px; }
     .donate_inline .col-xs-4:last-child input {
       border-left: 0; }
+
+.donate_inline select {
+  color: #000 !important; }
+
+.donate_inline .prefix {
+  color: #000 !important; }
+
+.donate_inline .iso-code, .donate_inline .prefix {
+  border-color: #000 !important; }
 
 @media (max-width: 991px) {
   .donate_inline .hidden-md-down {
