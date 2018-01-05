@@ -75,7 +75,7 @@ function bs_donate_container_sc($atts, $content = null) {
 ?>
 
 <div
-	class="bs-donate-section"
+	class="bs-donate-container"
 	data-props='<?php echo json_encode($props) ?>'
 >
 </div>
