@@ -2376,6 +2376,9 @@ a:hover {
     display: none !important; } }
 
 @media (max-width: 600px) {
+  .bs-donate-container {
+    padding-left: 15px;
+    padding-right: 15px; }
   .donate_react__type--active {
     font-size: 1.6em; }
   .donate_react__viewport h5 {

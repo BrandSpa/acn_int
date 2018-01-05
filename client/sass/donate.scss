@@ -615,6 +615,11 @@ a {
 
 @media (max-width: 600px) {
 
+  .bs-donate-container{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .donate_react {
 
     &__type--active{
