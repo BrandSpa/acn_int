@@ -2392,7 +2392,9 @@ a:hover {
       .donate_inline .change-amount li:last-child {
         width: 100%; }
       .donate_inline .change-amount li:after {
-        display: none; } }
+        display: none; }
+      .donate_inline .change-amount li:nth-child(odd) {
+        border-left: none; } }
 
 .contact-form .input-container {
   width: 20%;

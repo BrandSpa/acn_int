@@ -637,6 +637,10 @@ a {
           display: none;
         }
 
+        &:nth-child(odd){
+          border-left: none;
+        }
+
       }
     }
   }
