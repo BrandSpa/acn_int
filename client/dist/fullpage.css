@@ -2387,7 +2387,7 @@ a:hover {
   .donate_inline .form-group__addon {
     left: 20px; }
   .donate_inline .btn_group button .pull-left:not(.btn-large) {
-    width: 50%; }
+    width: 50% !important; }
   .donate_inline .change-amount {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
