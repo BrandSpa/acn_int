@@ -1568,6 +1568,10 @@ button, .btn {
     color: #FFFFFF !important; }
   .donate_react select {
     color: #FFFFFF !important; }
+  .donate_react .prefix {
+    color: #000 !important; }
+  .donate_react .iso-code {
+    border-color: #FFFFFF !important; }
   .donate_react .donate_react__submit {
     display: -webkit-box;
     display: -ms-flexbox;
