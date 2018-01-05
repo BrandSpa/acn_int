@@ -2005,6 +2005,10 @@ a:hover {
     display: none !important; } }
 
 @media (max-width: 600px) {
+  .donate_inline .donate_react h5 {
+    font-size: 1.6em; }
+    .donate_inline .donate_react h5 .donation_type a {
+      font-size: 1.6em; }
   .donate_inline .prefix {
     width: 25% !important; }
   .donate_inline .iso-code {

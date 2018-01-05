@@ -612,6 +612,15 @@ a {
   }
 
   @media (max-width: 600px) {
+    .donate_react h5{
+      font-size: 1.6em;
+
+      .donation_type{
+        a{
+          font-size: 1.6em;
+        }
+      }
+    }
     .prefix{
       width: 25% !important;
     }
