@@ -31,8 +31,7 @@ class CredritCard extends React.Component {
   };
 
   updateErrors = field => ({ ...this.props.errors, stripe: field });
-
-  handleCard = (e) => {
+  blurCard = (e) => {
     const val = e.currentTarget.value;
     let number = onlyNum(val);
     number = maxLength(number, 16);
@@ -40,9 +39,17 @@ class CredritCard extends React.Component {
     const card_type = this.getCardType(number);
     const stripe = { ...this.props.stripe, number, card_type };
     this.props.onChange({ stripe, errors });
+  }
+  handleCard = (e) => {
+    const val = e.currentTarget.value;
+    let number = onlyNum(val);
+    number = maxLength(number, 16);
+    const errors = this.validateCard(number);
+    const card_type = this.getCardType(number);
+    const stripe = { ...this.props.stripe, number, card_type };
+    this.props.onChange({ stripe });
   };
-
-  handleExpiry = (type, e) => {
+  blurExpiry = (type, e) => {
     let { stripe } = this.props;
     let val = onlyNum(e.currentTarget.value);
     val = maxLength(val, 2);
@@ -54,6 +61,19 @@ class CredritCard extends React.Component {
     stripe = { ...stripe, exp_month, exp_year };
 
     this.props.onChange({ stripe, errors });
+  }
+  handleExpiry = (type, e) => {
+    let { stripe } = this.props;
+    let val = onlyNum(e.currentTarget.value);
+    val = maxLength(val, 2);
+    let exp_month = stripe.exp_month;
+    let exp_year = stripe.exp_year;
+    if (type === 'exp_month') exp_month = val;
+    if (type === 'exp_year') exp_year = val;
+    const errors = this.validateExpiry(exp_month, exp_year);
+    stripe = { ...stripe, exp_month, exp_year };
+
+    this.props.onChange({ stripe });
   };
 
   validateExpiry = (month, year) => {
@@ -63,10 +83,21 @@ class CredritCard extends React.Component {
     return this.updateErrors({ exp_month, exp_year });
   };
 
+  blurCVC = (e) => {
+    let { stripe } = this.props;
+    let cvc = onlyNum(e.currentTarget.value);
+    cvc = maxLength(cvc, 4);
+    stripe = { ...stripe, cvc };
+    const errors = this.validateCvc(cvc);
+    this.props.onChange({ stripe, errors });
+  }
+
   handleCvc = (e) => {
     let { stripe } = this.props;
     let cvc = onlyNum(e.currentTarget.value);
-    
+    cvc = maxLength(cvc, 4);
+    stripe = { ...stripe, cvc };
+    this.props.onChange({ stripe });
   };
 
   showErr = (field) => {
@@ -127,6 +158,7 @@ class CredritCard extends React.Component {
             placeholder={texts.placeholder_credit_card}
             className={`form-control ${this.inputErrStyle('number')}`}
             onChange={this.handleCard}
+            onBlur={this.blurCard}
             value={stripe.number}
           />
           <div className={this.showErr('number')}>
@@ -143,6 +175,7 @@ class CredritCard extends React.Component {
               placeholder={texts.placeholder_month}
               className="form-control"
               onChange={e => this.handleExpiry('exp_month', e)}
+              onBlur={e => this.blurExpiry('exp_month', e)}
               value={stripe.exp_month}
             />
             <div className={this.showErr('exp_month')}>
@@ -158,6 +191,7 @@ class CredritCard extends React.Component {
               placeholder={texts.placeholder_year}
               className="form-control"
               onChange={e => this.handleExpiry('exp_year', e)}
+              onChange={e => this.blurExpiry('exp_year', e)}
               value={stripe.exp_year}
             />
             <div className={this.showErr('exp_year')}>
@@ -174,6 +208,7 @@ class CredritCard extends React.Component {
               placeholder={texts.placeholder_cvc}
               className="form-control"
               onChange={this.handleCvc}
+              onChange={this.blurCVC}
               value={stripe.cvc}
             />
             <span
