@@ -1731,6 +1731,15 @@ button, .btn {
       padding-right: 15px; }
       .donate_react .col-xs-4:last-child input {
         border-left: 0; }
+  .donate_react .btn-large {
+    width: 100%; }
+  .donate_react .btn_group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
   @media (max-width: 991px) {
     .donate_react .hidden-md-down {
       display: none !important; } }

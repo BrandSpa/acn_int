@@ -263,7 +263,7 @@
     right: 20px;
     cursor: pointer;
   }
-  
+
   .col-xs-4{
     float: left;
     width: 33.3333%;
@@ -282,6 +282,15 @@
       }
     }
 
+  }
+
+  .btn-large{
+    width: 100%;
+  }
+
+  .btn_group{
+    display: flex;
+    justify-content: space-between;
   }
 
   @media (max-width: 991px) {
