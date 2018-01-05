@@ -21,7 +21,7 @@ import Donate from './components/donate/single';
 import DonateInline from './components/donate/inline';
 import DonateInlineSection from './components/donate/inline_section';
 import DonateSection from './components/donate/section';
-import DonateContainer from './components/donate/section';
+import DonateContainer from './components/donate/container';
 
 import CampaignsSlider from './components/campaignsSlider';
 import DownloadPdf from './components/downloadPdf';
