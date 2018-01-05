@@ -612,8 +612,11 @@ a {
   }
 
   @media (max-width: 600px) {
-    .prefix, .iso-code{
-      width: 20% !important;
+    .prefix{
+      width: 25% !important;
+    }
+    .iso-code{
+      width: 15% !important;
     }
     .input-section__text{
       width: 60%;
