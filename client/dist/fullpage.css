@@ -2405,7 +2405,7 @@ a:hover {
       .change-amount li:last-child {
         width: 100%; }
       .change-amount li:after {
-        display: none;
+        display: none !important;
         height: 0; }
       .change-amount li:nth-child(even) {
         border-left: none; } }
