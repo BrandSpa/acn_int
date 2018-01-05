@@ -628,7 +628,15 @@ a {
     .form-group__addon{
       left: 20px;
     }
-    
+
+    .btn_group button{
+      
+      .pull-left:not(.btn-large){
+        width: 50%;
+      }
+
+    }
+
     .change-amount{
       flex-wrap: wrap;
       border: none;
