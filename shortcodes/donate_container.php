@@ -84,4 +84,4 @@ function bs_donate_container_sc($atts, $content = null) {
 return ob_get_clean();
 }
 
-add_shortcode('bs_donate_section', 'bs_donate_container_sc');
+add_shortcode('bs_donate_container', 'bs_donate_container_sc');
