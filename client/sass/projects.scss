@@ -46,6 +46,10 @@
 	&__content{
 		position: relative;
 		display: flex;
+		
+		&__content-left p{
+			color: #FFF !important;
+		}
 
 		@media #{$s} {
 			display: block;
@@ -54,10 +58,6 @@
 		&__content-left {
 			transition: 300ms all;
 			padding: 90px;
-			
-			p{
-				color: #FFF !important;
-			}
 
 			@media #{$s} {
 				padding: 30px;

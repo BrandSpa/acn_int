@@ -1484,6 +1484,8 @@ button, .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .projects__content__content-left p {
+    color: #FFF !important; }
   @media (max-width: 767px) {
     .projects__content {
       display: block; } }
@@ -1491,8 +1493,6 @@ button, .btn {
     -webkit-transition: 300ms all;
     transition: 300ms all;
     padding: 90px; }
-    .projects__content__content-left p {
-      color: #FFF !important; }
     @media (max-width: 767px) {
       .projects__content__content-left {
         padding: 30px;
