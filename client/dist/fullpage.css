@@ -1940,6 +1940,23 @@ html.fp-enabled,
         .donate_react .change-amount li a:hover, .donate_react .change-amount li a.active {
           background: #FFFF;
           color: #3C515F; }
+  .donate_react .donate_react__submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .donate_react .donate_react__submit:hover {
+      background: #ed344e; }
+    .donate_react .donate_react__submit div {
+      display: inline;
+      margin-left: 10px;
+      font-size: 10px;
+      color: white; }
   .donate_react input {
     border-color: #fff;
     color: #fff;
