@@ -2008,7 +2008,7 @@ a:hover {
   .donate_inline .donate_react__type--active {
     font-size: 1.6em; }
   .donate_inline .donate_react h5 {
-    font-size: 1.6em; }
+    font-size: 1.6em !important; }
   .donate_inline .prefix {
     width: 25% !important; }
   .donate_inline .iso-code {
