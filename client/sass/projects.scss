@@ -54,7 +54,10 @@
 		&__content-left {
 			transition: 300ms all;
 			padding: 90px;
-			color: #FFF !important;
+			
+			p{
+				color: #FFF !important;
+			}
 
 			@media #{$s} {
 				padding: 30px;
