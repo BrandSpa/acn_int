@@ -2402,10 +2402,11 @@ a:hover {
     .change-amount li {
       width: 50%;
       border: 1px solid; }
-      .change-amount li a:last-child {
+      .change-amount li:last-child {
         width: 100%; }
       .change-amount li:after {
-        display: none; }
+        display: none;
+        height: 0; }
       .change-amount li:nth-child(even) {
         border-left: none; } }
 

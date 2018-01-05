@@ -666,12 +666,13 @@ a {
       width: 50%;
       border: 1px solid;
 
-      a:last-child{
+      &:last-child{
         width: 100%;
       }
 
       &:after{
         display: none;
+        height: 0;
       }
 
       &:nth-child(even){
