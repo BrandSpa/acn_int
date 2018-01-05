@@ -17,7 +17,7 @@ class DonateContainer extends Component {
 
   render() {
     const { texts } = this.props;
-
+    console.log('container')
     return (
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', 'justify-content': 'center' }}>
         <div className="col-12-l" style={{ margin: '40px 0' }}>
