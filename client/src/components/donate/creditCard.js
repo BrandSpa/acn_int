@@ -66,10 +66,7 @@ class CredritCard extends React.Component {
   handleCvc = (e) => {
     let { stripe } = this.props;
     let cvc = onlyNum(e.currentTarget.value);
-    cvc = maxLength(cvc, 4);
-    stripe = { ...stripe, cvc };
-    const errors = this.validateCvc(cvc);
-    this.props.onChange({ stripe, errors });
+    
   };
 
   showErr = (field) => {
@@ -129,7 +126,7 @@ class CredritCard extends React.Component {
             pattern="\d*"
             placeholder={texts.placeholder_credit_card}
             className={`form-control ${this.inputErrStyle('number')}`}
-            onBlur={this.handleCard}
+            onChange={this.handleCard}
             value={stripe.number}
           />
           <div className={this.showErr('number')}>
@@ -145,7 +142,7 @@ class CredritCard extends React.Component {
               pattern="\d*"
               placeholder={texts.placeholder_month}
               className="form-control"
-              onBlur={e => this.handleExpiry('exp_month', e)}
+              onChange={e => this.handleExpiry('exp_month', e)}
               value={stripe.exp_month}
             />
             <div className={this.showErr('exp_month')}>
@@ -160,7 +157,7 @@ class CredritCard extends React.Component {
               pattern="\d*"
               placeholder={texts.placeholder_year}
               className="form-control"
-              onBlur={e => this.handleExpiry('exp_year', e)}
+              onChange={e => this.handleExpiry('exp_year', e)}
               value={stripe.exp_year}
             />
             <div className={this.showErr('exp_year')}>
@@ -176,7 +173,7 @@ class CredritCard extends React.Component {
               pattern="\d*"
               placeholder={texts.placeholder_cvc}
               className="form-control"
-              onBlur={this.handleCvc}
+              onChange={this.handleCvc}
               value={stripe.cvc}
             />
             <span
