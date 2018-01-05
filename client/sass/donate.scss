@@ -613,7 +613,7 @@ a {
 
   @media (max-width: 600px) {
     .prefix, .iso-code{
-      width: 20%;
+      width: 20% !important;
     }
     .input-section__text{
       width: 60%;
@@ -621,6 +621,11 @@ a {
     .cvc-help{
       display: none;
     }
+
+    .form-group__addon{
+      left: 20px;
+    }
+    
     .change-amount{
       flex-wrap: wrap;
       border: none;
