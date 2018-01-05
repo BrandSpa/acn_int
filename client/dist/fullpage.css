@@ -2379,7 +2379,16 @@ a:hover {
   .donate_inline .prefix, .donate_inline .iso-code {
     width: 20%; }
   .donate_inline .input-section__text {
-    width: 60%; } }
+    width: 60%; }
+  .donate_inline .cvc-help {
+    display: none; }
+  .donate_inline .change-amount {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    border: none; }
+    .donate_inline .change-amount li {
+      width: 50%;
+      border: 1px solid; } }
 
 .contact-form .input-container {
   width: 20%;

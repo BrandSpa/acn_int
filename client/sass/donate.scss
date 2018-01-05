@@ -618,6 +618,18 @@ a {
     .input-section__text{
       width: 60%;
     }
+    .cvc-help{
+      display: none;
+    }
+    .change-amount{
+      flex-wrap: wrap;
+      border: none;
+
+      li{
+        width: 50%;
+        border: 1px solid;
+      }
+    }
   }
   
 
