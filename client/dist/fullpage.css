@@ -2084,6 +2084,20 @@ html.fp-enabled,
   @media (max-width: 767px) {
     .donate_react__creditcard__row {
       margin: 0 -15px !important; } }
+  .donate_react .col-xs-4 {
+    float: left;
+    width: 33.3333%; }
+    .donate_react .col-xs-4:first-child {
+      padding-left: 15px; }
+      .donate_react .col-xs-4:first-child input {
+        border-right: 0; }
+    .donate_react .col-xs-4:last-child {
+      padding-right: 15px; }
+      .donate_react .col-xs-4:last-child input {
+        border-left: 0; }
+  @media (max-width: 991px) {
+    .donate_react .hidden-md-down {
+      display: none !important; } }
 
 a:hover {
   text-decoration: none; }
