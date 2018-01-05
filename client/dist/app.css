@@ -1986,6 +1986,15 @@ a:hover {
     .donate_inline .col-xs-4:last-child input {
       border-left: 0; }
 
+.donate_inline select {
+  color: #000 !important; }
+
+.donate_inline .prefix {
+  color: #fff !important; }
+
+.donate_inline .iso-code, .donate_inline .prefix {
+  border-color: #000 !important; }
+
 @media (max-width: 991px) {
   .donate_inline .hidden-md-down {
     display: none !important; } }

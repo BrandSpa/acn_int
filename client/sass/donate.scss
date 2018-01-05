@@ -594,6 +594,17 @@ a {
 
   }
 
+  select{
+    color: #000 !important;
+  }
+
+  .prefix{
+    color: #fff !important;
+  }
+  .iso-code, .prefix{
+    border-color: #000 !important;
+  }
+
   @media (max-width: 991px) {
     .hidden-md-down {
       display: none !important;
