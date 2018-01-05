@@ -191,7 +191,7 @@ class CredritCard extends React.Component {
               placeholder={texts.placeholder_year}
               className="form-control"
               onChange={e => this.handleExpiry('exp_year', e)}
-              onChange={e => this.blurExpiry('exp_year', e)}
+              onBlur={e => this.blurExpiry('exp_year', e)}
               value={stripe.exp_year}
             />
             <div className={this.showErr('exp_year')}>
@@ -208,7 +208,7 @@ class CredritCard extends React.Component {
               placeholder={texts.placeholder_cvc}
               className="form-control"
               onChange={this.handleCvc}
-              onChange={this.blurCVC}
+              onBlur={this.blurCVC}
               value={stripe.cvc}
             />
             <span
