@@ -1566,6 +1566,8 @@ button, .btn {
           color: #3C515F; }
   .donate_react h5 {
     color: #FFFFFF !important; }
+  .donate_react select {
+    color: #FFFFFF !important; }
   .donate_react .donate_react__submit {
     display: -webkit-box;
     display: -ms-flexbox;
