@@ -482,7 +482,7 @@ class Donate extends Component {
       marginLeft: '15px',
       color: this.props.is_blue ? 'rgb(60, 81, 95)' : '#fff',
     };
-
+    console.log(this.props);
     const backBtnStyle = {
       float: 'right',
       background: 'transparent',
