@@ -34,9 +34,9 @@ function bs_donate_inline_section_sc($atts, $content = null) {
 		"title" => gett("SUPPORT A PERSECUTED CHRISTIAN"),
     "subtitle" => gett("My gift to support the ACN"),
     "success_title" => gett("YOUR DONATION WAS SUCCESSFUL"),
-    "success_subtitle" => gett("THANK YOU FOR YOUR GENEROSITY!."),
-    "text_four_step" => gett("ACN has a bigger impact when due to the generosity of benefactors can count on an stable budget."),
-    "subtext_four_step" => gett("Could you help us with a small daily donation in the amount of US$"),
+		"text_four_step" => get_option('text_four_step'),
+    "subtext_four_step" => get_option('subtext_four_step'),
+    "text_footer" => get_option('text_footer'),
     "is_blue" => false,
 		"tags" => ""
 	 ], $atts);
