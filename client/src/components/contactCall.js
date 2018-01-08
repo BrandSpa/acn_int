@@ -360,6 +360,7 @@ class ContactCall extends Component {
 
     if (isValid) {
       try {
+        
         await storeConvertLoop(convertloop.tags, contact);
         const language = window.bs.currentPageLang === 'Español' ? 'SP' : 'EN';
 
@@ -370,7 +371,7 @@ class ContactCall extends Component {
         await storeEvent('cl_event', clEventData);
 
         const fbEventData = { eventName: 'Lead' };
-        await storeEvent('fb_event', fbEventData);
+        await storeEvent('fb_event', fbEventData); 
 
         await eventTagManager();
 
