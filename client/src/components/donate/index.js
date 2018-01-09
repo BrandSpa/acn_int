@@ -558,7 +558,7 @@ class Donate extends Component {
           : ''}
           <div
             style={
-              this.state.declined
+              this.state.declined && this.state.section >= 2
                 ? {
                   display: 'block',
                   background: 'red',
