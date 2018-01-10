@@ -7,7 +7,7 @@
     
   <?php endwhile; else : ?>
     <h1>
-    <?php echo gett('404') ?>
+    <?php echo "no results found" ?>
     </h1>
   <?php endif; ?>
 </div>
