@@ -5,7 +5,7 @@
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <div class="search-result">
-        <h3 class="search-result-title">
+        <h3 class="card-header">
             <a href="<?php the_permalink() ?>"><?php the_title() ?>  </a>
             <span class="badge"><?php echo get_post_type() ?></span>
         </h3>
