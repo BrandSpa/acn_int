@@ -2700,3 +2700,8 @@ a:hover {
     color: rgba(0, 0, 0, 0.55);
     vertical-align: middle;
     text-indent: 0; }
+
+.search-empty-message {
+  font-weight: normal; }
+  .search-empty-message .bold-message {
+    font-weight: 600; }

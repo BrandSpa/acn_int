@@ -21,11 +21,11 @@
     </li>
     
   <?php endwhile; else : ?>
-    <h3>
+    <h3 class="search-empty-message">
     <?php echo "<span class='bold-message'>". get_search_query() ."</span> ". __("did not match any post") ?>
     </h3>
   <?php endif; ?>
-  </ul>ç
+  </ul>
 </div>
 
 <?php get_footer() ?>
