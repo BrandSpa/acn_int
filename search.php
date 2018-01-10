@@ -6,6 +6,11 @@
 
     <div>
         <h3><?php the_title() ?>  <span><?php echo get_post_type() ?></span></h3>
+        <?php 
+        $posttype = get_post_type();    
+        if($posttype !== 'page'): ?>
+        <p><?php the_content() ?></p>
+        <?php endif; ?>
         <p><?php the_permalink() ?></p>
     </div>
     
