@@ -22,7 +22,7 @@
     
   <?php endwhile; else : ?>
     <h3>
-    <?php echo "no results found" ?>
+    <?php echo "<span class='bold-message'>".$_GET['s']."</span>". __("did not match any post") ?>
     </h3>
   <?php endif; ?>
   </ul>
