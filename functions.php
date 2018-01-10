@@ -91,6 +91,7 @@ foreach( $post_types as $post_type) {
 }
 
 add_theme_support( 'post-thumbnails', ['post', 'gallery', 'video'] );
+add_theme_support( 'html5', ['search-form'] );
 
 add_filter( 'upload_mimes', 'add_svg_mime' );
 
