@@ -6,7 +6,7 @@
 
     <div>
         <h3><?php the_title() ?></h3>
-        <div><?php the_excerpt(); ?> </div>
+        <div><?php the_content(); ?> </div>
     </div>
     
   <?php endwhile; else : ?>
