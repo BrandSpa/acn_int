@@ -4,14 +4,17 @@
   <?php get_search_form(); ?>
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <div>
-        <h3><?php the_title() ?>  <span><?php echo get_post_type() ?></span></h3>
+    <div class="search-result">
+        <h3 class="search-result-title">
+            <a href="<?php the_permalink() ?>"><?php the_title() ?>  </a>
+            <span class="badge"><?php echo get_post_type() ?></span>
+        </h3>
+        <div class="search-result-permalink"><?php the_permalink() ?></div>
         <?php 
         $posttype = get_post_type();    
         if($posttype !== 'page'): ?>
-        <p><?php the_content() ?></p>
+        <div class="search-result-resume"><?php the_content() ?></div>
         <?php endif; ?>
-        <p><?php the_permalink() ?></p>
     </div>
     
   <?php endwhile; else : ?>
