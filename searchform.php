@@ -1,4 +1,4 @@
-<form role="search" method="get" action="<?php echo home_url('/') ?>">
+<form role="search" method="get" action="<?php echo home_url('/search') ?>">
     <input 
         type="search" 
         class='form-control' 
