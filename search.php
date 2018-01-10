@@ -16,6 +16,10 @@
         <?php 
         $posttype = get_post_type();    
         if($posttype !== 'page'): ?>
+            
+            <?php if(the_post_tumbnail()): ?>
+            <div class="post-thumbnail"><img src="<?php the_post_thumbnail(); ?>"></div>
+            <?php endif; ?>
         <div class="resume"><?php the_excerpt() ?></div>
         <?php endif; ?>
     </li>
