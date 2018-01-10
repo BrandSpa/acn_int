@@ -2,10 +2,10 @@
 
 <div id="acn_int" class="l-wrap" >
   <?php get_search_form(); ?>
-  <ul>
+  <ul class="search-results">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <li class="search-result">
+    <li class="result">
         <h3 class="card-header">
             <a href="<?php the_permalink() ?>"><?php the_title() ?>  </a>
             <span class="badge"><?php echo get_post_type() ?></span>
@@ -16,7 +16,7 @@
         <?php 
         $posttype = get_post_type();    
         if($posttype !== 'page'): ?>
-        <div class="search-result-resume"><?php the_content() ?></div>
+        <div class="resume"><?php the_content() ?></div>
         <?php endif; ?>
     </li>
     
