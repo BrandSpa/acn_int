@@ -21,9 +21,9 @@
     </li>
     
   <?php endwhile; else : ?>
-    <h1>
+    <h3>
     <?php echo "no results found" ?>
-    </h1>
+    </h3>
   <?php endif; ?>
   </ul>
 </div>
