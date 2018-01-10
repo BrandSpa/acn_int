@@ -5,23 +5,26 @@
   <ul class="search-results">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <li class="result">
-        <h3 class="card-header">
-            <a href="<?php the_permalink() ?>"><?php the_title() ?>  </a>
-            <span class="badge"><?php echo get_post_type() ?></span>
-        </h3>
-        <div class="permalink">
-            <a href="<?php the_permalink() ?>"><?php the_permalink() ?></a>
-        </div>
-        <?php 
-        $posttype = get_post_type();    
-        if($posttype !== 'page'): ?>
-            
-            <?php if(get_the_post_thumbnail_url()): ?>
-            <div class="post-thumbnail"><img src="<?php echo get_the_post_thumbnail_url(); ?>"></div>
-            <?php endif; ?>
-        <div class="resume"><?php the_excerpt() ?></div>
+    <li class="bs-posts-list__item">
+
+        <?php if(get_the_post_thumbnail_url()): ?>
+            <a href="">
+            <div class="bs-posts-list__item__img" style="background-image: url(<?php echo get_the_post_thumbnail_url()?>)"></div>
+            </a>
         <?php endif; ?>
+        <div class="bs-posts-list__item__content">
+            <h2 class="card-header">
+                <a href="<?php the_permalink() ?>"><?php the_title() ?>  </a>
+                <span class="badge"><?php echo get_post_type() ?></span>
+            </h2>
+            <?php 
+            $posttype = get_post_type();    
+            if($posttype !== 'page'): ?>
+            <div class="resume"><?php the_excerpt() ?></div>
+            <?php endif; ?>
+        </div>
+        
+
     </li>
     
   <?php endwhile; else : ?>
