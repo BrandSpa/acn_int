@@ -106,6 +106,12 @@ function search_template_redirect()
 }
 add_action( 'template_redirect', 'my_page_template_redirect' );
 
+add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
+function add_search_box( $items, $args ) {
+	$items .= '<li>' . get_search_form( false ) . '</li>';
+	return $items;
+}
+
 function add_svg_mime( $existing_mimes = array() ) {
 	$existing_mimes['svg'] = 'image/svg+xml';
 	return $existing_mimes;

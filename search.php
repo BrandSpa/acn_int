@@ -24,7 +24,6 @@
             <?php endif; ?>
         </div>
         
-
     </li>
     
   <?php endwhile; else : ?>
