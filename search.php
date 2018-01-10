@@ -16,7 +16,7 @@
         <?php 
         $posttype = get_post_type();    
         if($posttype !== 'page'): ?>
-        <div class="resume"><?php the_content() ?></div>
+        <div class="resume"><?php the_excerpt() ?></div>
         <?php endif; ?>
     </li>
     
