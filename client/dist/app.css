@@ -2660,3 +2660,38 @@ a:hover {
     .search-results .result .permalink a {
       font-size: .8rem;
       color: rgba(0, 0, 0, 0.6); }
+
+.search-assist-container {
+  -webkit-box-shadow: #D0D3D6 1px 0 0, #D0D3D6 -1px 0 0, #D0D3D6 0 1px 0, #D0D3D6 0 -1px 0;
+  box-shadow: #D0D3D6 1px 0 0, #D0D3D6 -1px 0 0, #D0D3D6 0 1px 0, #D0D3D6 0 -1px 0;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  background-clip: padding-box;
+  border-radius: 2px; }
+  .search-assist-container input {
+    padding-left: 18px;
+    padding-right: 90px;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    background: none;
+    border: none;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield; }
+  .search-assist-container .submit-button {
+    background: #F0F3F6;
+    border: none;
+    border-radius: 0 2px 2px 0;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 0;
+    bottom: 0;
+    padding: 8px 24px;
+    cursor: default; }
