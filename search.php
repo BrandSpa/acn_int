@@ -10,7 +10,9 @@
             <a href="<?php the_permalink() ?>"><?php the_title() ?>  </a>
             <span class="badge"><?php echo get_post_type() ?></span>
         </h3>
-        <div class="search-result-permalink"><?php the_permalink() ?></div>
+        <div class="permalink">
+            <a href="<?php the_permalink() ?>"><?php the_permalink() ?></a>
+        </div>
         <?php 
         $posttype = get_post_type();    
         if($posttype !== 'page'): ?>
