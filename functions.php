@@ -96,6 +96,16 @@ add_theme_support( 'html5', ['search-form'] );
 add_filter( 'upload_mimes', 'add_svg_mime' );
 add_rewrite_endpoint( 's', EP_PERMALINK | EP_PAGES );
 
+function search_template_redirect()
+{
+    if( is_page( 'search' ) )
+    {
+        wp_redirect( home_url( '/search/' ) );
+        die;
+    }
+}
+add_action( 'template_redirect', 'my_page_template_redirect' );
+
 function add_svg_mime( $existing_mimes = array() ) {
 	$existing_mimes['svg'] = 'image/svg+xml';
 	return $existing_mimes;

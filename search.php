@@ -3,7 +3,7 @@
 <div id="acn_int" class="l-wrap" >
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <?php the_content() ?>
+    <?php the_title() ?>
     
   <?php endwhile; else : ?>
     <h1>
