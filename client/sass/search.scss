@@ -75,13 +75,19 @@
         margin: 0;
         position: absolute;
         cursor: pointer;
-        position: absolute;
         right: 0;
         left: auto;
         top: 0;
         bottom: 0;
         padding: 8px 24px;
-        cursor: default;
+    }
+
+    li-icon{
+        width: 24px;
+        height: 24px;
+        color: rgba(0,0,0,0.55);
+        vertical-align: middle;
+        text-indent: 0;    
     }
 
 }
