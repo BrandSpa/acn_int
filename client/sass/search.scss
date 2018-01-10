@@ -21,7 +21,10 @@
                 color: #0073b1;
                 margin-right: 12px;
                 padding: 5px 0;
-                text-transform: capitalize;
+
+                ::first-letter{
+                    text-transform: uppercase;
+                }
             }
             
             .badge{

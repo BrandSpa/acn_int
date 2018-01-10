@@ -2643,8 +2643,9 @@ a:hover {
       .search-results .result .card-header a {
         color: #0073b1;
         margin-right: 12px;
-        padding: 5px 0;
-        text-transform: capitalize; }
+        padding: 5px 0; }
+        .search-results .result .card-header a ::first-letter {
+          text-transform: uppercase; }
       .search-results .result .card-header .badge {
         font-size: 11px;
         font-size: .8rem;
