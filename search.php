@@ -5,7 +5,7 @@
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <div>
-        <h3><?php the_title() ?></h3>
+        <h3><?php the_title() ?>  <span><?php get_post_type() ?></span></h3>
         <p><?php the_permalink() ?></p>
     </div>
     
