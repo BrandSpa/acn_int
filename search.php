@@ -6,7 +6,7 @@
 
     <div>
         <h3><?php the_title() ?></h3>
-        <div><?php the_content(); ?> </div>
+        <p><?php the_permalink() ?></p>
     </div>
     
   <?php endwhile; else : ?>
