@@ -1,7 +1,6 @@
 <?php get_header() ?>
 
 <div id="acn_int" class="l-wrap" >
-  <?php get_search_form(); ?>
   <ul class="search-results">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
