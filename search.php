@@ -17,8 +17,8 @@
         $posttype = get_post_type();    
         if($posttype !== 'page'): ?>
             
-            <?php if(the_post_tumbnail()): ?>
-            <div class="post-thumbnail"><img src="<?php the_post_thumbnail(); ?>"></div>
+            <?php if(get_the_post_thumbnail_url()): ?>
+            <div class="post-thumbnail"><img src="<?php get_the_post_thumbnail_url(); ?>"></div>
             <?php endif; ?>
         <div class="resume"><?php the_excerpt() ?></div>
         <?php endif; ?>
