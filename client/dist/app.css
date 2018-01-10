@@ -2644,7 +2644,7 @@ a:hover {
         color: #0073b1;
         margin-right: 12px;
         padding: 5px 0; }
-        .search-results .result .card-header a ::first-letter {
+        .search-results .result .card-header a :first-letter {
           text-transform: uppercase; }
       .search-results .result .card-header .badge {
         font-size: 11px;
