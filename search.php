@@ -22,10 +22,10 @@
     
   <?php endwhile; else : ?>
     <h3>
-    <?php echo "<span class='bold-message'>".$_GET['s']."</span>". __("did not match any post") ?>
+    <?php echo "<span class='bold-message'>". get_search_query() ."</span> ". __("did not match any post") ?>
     </h3>
   <?php endif; ?>
-  </ul>
+  </ul>ç
 </div>
 
 <?php get_footer() ?>
