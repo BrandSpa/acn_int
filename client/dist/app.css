@@ -2692,7 +2692,8 @@ a:hover {
     left: auto;
     top: 0;
     bottom: 0;
-    padding: 8px 24px; }
+    padding: 8px 24px;
+    height: auto; }
   .search-assist-container li-icon {
     width: 24px;
     height: 24px;
