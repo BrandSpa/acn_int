@@ -6,9 +6,9 @@
 
     <li class="bs-posts-list__item">
 
-        <?php if(get_the_post_thumbnail_url()): ?>
+        <?php if(get_the_post_thumbnail_url() || get_option('logo')): ?>
             <a href="<?php the_permalink() ?>">
-            <div class="bs-posts-list__item__img" style="background-image: url(<?php echo get_the_post_thumbnail_url()?>)"></div>
+            <div class="bs-posts-list__item__img" style="background-image: url(<?php echo get_the_post_thumbnail_url()?:get_option('logo') ?>)"></div>
             </a>
         <?php endif; ?>
         <div class="bs-posts-list__item__content">
