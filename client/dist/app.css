@@ -2708,6 +2708,7 @@ a:hover {
     font-weight: 600; }
 
 .menu-search-form {
+  max-height: 0;
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: top;
@@ -2727,5 +2728,6 @@ a:hover {
     .menu-search-form .search-assist-container .submit-button {
       display: none; }
   .menu-search-form.active {
+    max-height: 100%;
     -webkit-transform: scaleY(1);
     transform: scaleY(1); }
