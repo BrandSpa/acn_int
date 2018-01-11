@@ -45,4 +45,10 @@
 	    ?>
 	</ul>
 
+	
+
+</div>
+
+<div class="menu-search-form">
+	<?php get_search_form( false ) ?>
 </div>

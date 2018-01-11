@@ -108,7 +108,7 @@ add_action( 'template_redirect', 'my_page_template_redirect' );
 
 add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
 function add_search_box( $items, $args ) {
-	$items .= '<li>' . get_search_form( false ) . '</li>';
+	$items .= '<li>search</li>';
 	return $items;
 }
 
