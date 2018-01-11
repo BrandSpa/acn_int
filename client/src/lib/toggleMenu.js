@@ -6,6 +6,7 @@ export default function toggleMenu() {
   $('#toggle-search').on('click', function(){
     $('html').animate({scrollTop: 0}, 250, function(){
       $('.menu-search-form').slideToggle(250);
+      $('.menu-search-form input').focus();
     });
   });
 
