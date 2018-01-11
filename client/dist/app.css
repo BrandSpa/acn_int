@@ -2726,4 +2726,6 @@ a:hover {
     .menu-search-form .search-assist-container .submit-button {
       display: none; }
   .menu-search-form.active {
-    max-height: auto; }
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content; }
