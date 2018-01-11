@@ -2708,13 +2708,13 @@ a:hover {
     font-weight: 600; }
 
 .menu-search-form {
+  max-height: 0;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: .5s;
   transition-duration: .5s;
   -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-  max-height: 0;
   overflow: hidden; }
   .menu-search-form .search-assist-container {
     padding: 1% 2%;
@@ -2727,4 +2727,6 @@ a:hover {
     .menu-search-form .search-assist-container .submit-button {
       display: none; }
   .menu-search-form.active {
-    max-height: 100%; }
+    max-height: 100%;
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1); }
