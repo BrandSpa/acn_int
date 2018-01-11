@@ -2723,10 +2723,7 @@ a:hover {
     font-weight: 600; }
 
 .menu-search-form {
-  max-height: 0;
-  -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+  display: none;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: .5s;
