@@ -3,6 +3,10 @@ export default function toggleMenu() {
     if ($('.grant-menu__list').length > 0) $('.grant-menu__list').removeClass('dropdown-list--show');
   }
 
+  $('#toggle-search').on('click', function(){
+    $('.menu-search-form').toggleClass('active');
+  });
+
   $('.grant-menu__open').on('click', (e) => {
     e.preventDefault();
     const $list = $('.grant-menu__list');
