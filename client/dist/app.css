@@ -2709,6 +2709,7 @@ a:hover {
 
 .menu-search-form {
   overflow: hidden;
+  height: 0;
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: top;
@@ -2728,5 +2729,5 @@ a:hover {
     .menu-search-form .search-assist-container .submit-button {
       display: none; }
   .menu-search-form.active {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1); }
+    height: auto;
+    max-height: 100%; }
