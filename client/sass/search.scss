@@ -106,7 +106,7 @@
 
 .menu-search-form{
     overflow: hidden;
-    height: 0;
+    max-height: 0;
     transform: scaleY(0);    
     transform-origin: top;
     transition: transform 0.26s ease;
@@ -127,8 +127,7 @@
     }
 
     &.active{
-        height: auto;
-        max-height: 100%;
+        max-height: auto;
     }
 
 }
