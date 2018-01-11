@@ -4,9 +4,9 @@ export default function toggleMenu() {
   }
 
   $('#toggle-search').on('click', function(){
-    $(document).animate({scrollTop: 0}, 500, function(){
+    $('body').animate({scrollTop: 0}, 500, function(){
       $('.menu-search-form').slideToggle(500);
-    })
+    });
   });
 
   $('.grant-menu__open').on('click', (e) => {
