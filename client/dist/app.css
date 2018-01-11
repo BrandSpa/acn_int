@@ -2736,5 +2736,5 @@ a:hover {
     transition-duration: .5s;
     -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-    max-height: 0;
+    max-height: fit-content;
     overflow: hidden; }
