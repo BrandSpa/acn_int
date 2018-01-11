@@ -4,8 +4,8 @@ export default function toggleMenu() {
   }
 
   $('#toggle-search').on('click', function(){
-    $('body').animate({scrollTop: 0}, 500, function(){
-      $('.menu-search-form').slideToggle(500);
+    $('html').animate({scrollTop: 0}, 250, function(){
+      $('.menu-search-form').slideToggle(250);
     });
   });
 
