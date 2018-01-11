@@ -2708,16 +2708,14 @@ a:hover {
     font-weight: 600; }
 
 .menu-search-form {
-  overflow: hidden;
   max-height: 0;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: top;
-  transform-origin: top;
-  -webkit-transition: -webkit-transform 0.26s ease;
-  transition: -webkit-transform 0.26s ease;
-  transition: transform 0.26s ease;
-  transition: transform 0.26s ease, -webkit-transform 0.26s ease; }
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  overflow: hidden; }
   .menu-search-form .search-assist-container {
     padding: 1% 2%;
     -webkit-box-shadow: none;
