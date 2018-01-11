@@ -1,6 +1,10 @@
 .search-results{
     list-style: none;
-
+    
+    .bs-posts-list__item__img{
+        width: 20%;
+        padding-bottom: 20%;
+    }
     .result{
         padding-bottom: 24px;
         -webkit-box-shadow: #D0D3D6 0 0 0 inset, #D0D3D6 0 0 0 inset, #D0D3D6 0 -1px 0 inset, #D0D3D6 0 0 0 inset;
