@@ -4,7 +4,7 @@ export default function toggleMenu() {
   }
 
   $('#toggle-search').on('click', function(){
-    $('.menu-search-form').toggleClass('active');
+    $('.menu-search-form').slideToggle("slow");
   });
 
   $('.grant-menu__open').on('click', (e) => {
