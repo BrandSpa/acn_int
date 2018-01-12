@@ -471,7 +471,7 @@ class Contact extends Component {
     
               .input-section__text, .input-section__select {
                 border: none;
-                height: auto;
+                height: 50px;
               }
               .input-section__text{
                 border: 1px solid;
