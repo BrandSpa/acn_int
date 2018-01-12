@@ -11,7 +11,7 @@ require_once('accordion.php');
 require_once('donate.php');
 require_once('donate_inline.php');
 require_once('donate_inline_section.php');
-//require_once('donate_section.php');
+require_once('donate_section.php');
 require_once('donate_container.php');
 require_once('posts.php');
 require_once('contact_info.php');
