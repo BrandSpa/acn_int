@@ -477,6 +477,7 @@ class Contact extends Component {
                 border: 1px solid;
                 border-left: 0px;
                 border-radius: 0px;
+                heigth: 50px;
               }
               .no-border{
                 border: none;
