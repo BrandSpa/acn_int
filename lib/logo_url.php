@@ -2,7 +2,6 @@
 
 function bs_logo_url() {
 	$country = getCountry();
-	print_r('country '.$country);
 	if(!bs_in_office($country)) {
 		$country = 'default';
 	}
