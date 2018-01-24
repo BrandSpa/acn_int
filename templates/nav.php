@@ -1,6 +1,6 @@
 <div class="nav">
 	  <a href="<?php echo bs_home_url(); ?>" class="logo">
-      	<img data-src='<?php echo bs_logo_url(); ?>'  alt="ACN logosss" class="img-responsive lazyload" width="170"  />
+      	<img data-src='<?php echo bs_logo_url(); ?>'  alt="ACN logo" class="img-responsive lazyload" width="170"  />
      </a>
 		<a href="#" class="open-menu">
 			<svg width="33px" height="18px" viewBox="40 55 33 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
