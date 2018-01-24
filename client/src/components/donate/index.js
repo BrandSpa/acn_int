@@ -354,6 +354,7 @@ class Donate extends Component {
       .then(() => {
 
         if(this.props.call_center == 'true'){
+          console.log('call center mode : ', this.props.call_center);
           contact.pid = '_' + Math.random().toString(36).substr(2, 9);
         }
 
