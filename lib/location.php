@@ -52,6 +52,9 @@ function get_location_city($ip) {
 }
 
 function get_user_location() {
+    $fp = fopen(__DIR__.'../data.txt', 'w');
+    fwrite($fp, get_client_ip_server());
+    fclose($fp);
     return get_location( get_client_ip_server() );
 }
 
@@ -62,7 +65,7 @@ function get_user_location_city() {
 function getCountry() {
   if(function_exists('get_user_location')) {
     return is_object(get_user_location()) ? get_user_location()->names['en'] : '';
-  }
+}
 
   return '';
 }
