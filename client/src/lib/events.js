@@ -83,7 +83,8 @@ export const eventConvertloop = ({ name, person = {}, metadata = {} }) => {
 };
 
 export const eventConvertloopAsync = ({ name, person = {}, metadata = {} }) => {
-  const personWithPid = { ...person, pid: cookies.dp_pid };
+  var pid = person.pid ? person.pid : cookies.dp_pid;
+  const personWithPid = { ...person, pid: pid };
   const data = { name, metadata, person: personWithPid };
 
   const p = fetchwp('store_event', { title: 'cl_event', content: data })
