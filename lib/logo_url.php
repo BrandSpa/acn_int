@@ -10,5 +10,5 @@ function bs_logo_url() {
 	$country = str_replace(' ', '_', $country);
 	$url = get_option("logo_". $country);
 	$url = str_replace('http:', '',   $url);
-	return $url;
+	//return $url;
 }
