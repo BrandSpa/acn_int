@@ -354,7 +354,6 @@ class Donate extends Component {
       .then(() => {
 
         if(this.props.call_center == 'true'){
-          console.log('call center mode : ', this.props.call_center);
           contact.pid = '_' + Math.random().toString(36).substr(2, 9);
         }
 
@@ -443,7 +442,7 @@ class Donate extends Component {
         }
       });
     }
-    console.log(this.state.section, section);
+    
     if (this.state.section === 2 && section <= 3 ) {
       this.setState({isLoading: true}, function(){
         if (!this.contactIsValid()) {this.setState({isLoading: false}); return false;}
@@ -483,7 +482,7 @@ class Donate extends Component {
       marginLeft: '15px',
       color: this.props.is_blue ? 'rgb(60, 81, 95)' : '#fff',
     };
-    console.log(this.props);
+    
     const backBtnStyle = {
       float: 'right',
       background: 'transparent',

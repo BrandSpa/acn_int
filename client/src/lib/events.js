@@ -76,7 +76,6 @@ export const eventFacebook = ({ eventName = 'Lead', content = {} }) => {
 
 export const eventConvertloop = ({ name, person = {}, metadata = {} }) => {
   var pid = person.pid ? person.pid : cookies.dp_pid;
-  console.log('convertloop sync');
   const data = { name, country: person.country, person: { ...person, pid:  pid}, metadata };
   const p = fetchwp('store_event', { title: 'cl_event', content: data })
     .then(() => fetchwp('convertloop_event', data));
@@ -85,7 +84,6 @@ export const eventConvertloop = ({ name, person = {}, metadata = {} }) => {
 
 export const eventConvertloopAsync = ({ name, person = {}, metadata = {} }) => {
   var pid = person.pid ? person.pid : cookies.dp_pid;
-  console.log('convertloop async');
   const personWithPid = { ...person, pid: pid };
   const data = { name, metadata, person: personWithPid };
 
