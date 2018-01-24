@@ -329,8 +329,16 @@ class Donate extends Component {
     const { id } = stripeResponse;
 
     this.setState({ loading: true });
+    
+    var __pid = '_' + Math.random().toString(36).substr(2, 9);
+    if(this.props.call_center == 'true'){
+      contact.pid = __pid;
+    }
+
     var cvContact = contact;
     delete cvContact.stripe;
+    
+
     actions
       .storeConvertLoop(this.props.tags, cvContact)
       .then(() => {
@@ -352,10 +360,6 @@ class Donate extends Component {
         storeEvent('ga_event', event);
       })
       .then(() => {
-
-        if(this.props.call_center == 'true'){
-          contact.pid = '_' + Math.random().toString(36).substr(2, 9);
-        }
 
         const event = {
           name: `Donation ${donation_type}`,
