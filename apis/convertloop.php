@@ -40,12 +40,12 @@ require $dir_base . 'vendor/autoload.php';
 
 			// add pid via cookies if doesn't came from front
 			if(empty($data['person']['pid'])) {
-		    $data['person']['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
-		  }
+				$data['person']['pid'] = isset($_COOKIE['dp_pid']) ? $_COOKIE['dp_pid'] : '';
+			}
 
 			$data = json_encode($data);
 			$auth_string = $appId . ":" . $apiKey;
-      $auth = base64_encode($auth_string);
+      		$auth = base64_encode($auth_string);
 
 			$headers = array(
 				"Authorization" => "Basic " . $auth,

@@ -468,14 +468,15 @@ class Contact extends Component {
                 padding: 0 5px 0 15px;
                 font-size: 18px;
               }
-    
               .input-section__text, .input-section__select {
                 border: none;
-                height: auto;
+                height: 50px;
               }
               .input-section__text{
                 border: 1px solid;
                 border-left: 0px;
+                border-radius: 0px;
+                heigth: 50px;
               }
               .no-border{
                 border: none;

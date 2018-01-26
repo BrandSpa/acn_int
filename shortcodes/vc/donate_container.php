@@ -28,8 +28,6 @@ add_action( 'vc_before_init', 'bs_donate_container_vc' );
       "step_amount_text" => get_option("step_amount_text")?:"Select Gift Amount",
       "step_payment_text" => get_option("step_payment_text")?:"Payment Details",
       "step_contact_text" => get_option("step_contact_text")?:"Your Information",
-      "title" => get_option("title")?:"SUPPORT A PERSECUTED CHRISTIAN",
-      "subtitle" => get_option("subtitle")?:"My gift to support the ACN",
       "success_title" => get_option("success_title")?:"TU DONACIÓN SE HA REALIZADO CON ÉXITO",
       "success_subtitle" => get_option("success_subtitle")?:"¡GRACIAS POR TU GENEROSIDAD!",
       "text_four_step" => get_option('text_four_step'),
@@ -60,13 +58,6 @@ add_action( 'vc_before_init', 'bs_donate_container_vc' );
       "heading" =>  "Call Center Mode",
       "param_name" => "call_center",
       "value" => false
-    ]);
-    
-		 array_push($params, [
-      "type" => "textarea_html",
-      "heading" =>  "Left content",
-      "param_name" => "content",
-      "value" => ""
     ]);
 
   	vc_map(
