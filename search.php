@@ -22,7 +22,7 @@
             <?php 
             $posttype = get_post_type();    
             if($posttype !== 'page'): ?>
-            <div class="resume"><?php the_excerpt() ?></div>
+            <div class="resume"><p><?php the_excerpt() ?></p></div>
             <?php endif; ?>
         </div>
         

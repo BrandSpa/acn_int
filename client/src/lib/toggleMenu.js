@@ -2,8 +2,9 @@ export default function toggleMenu() {
   if (window.innerWidth < 701) {
     if ($('.grant-menu__list').length > 0) $('.grant-menu__list').removeClass('dropdown-list--show');
   }
-
-  $('#toggle-search').on('click', function(){
+  console.log('load');
+  $(document).on('click','#toggle-search', function(){
+    console.log('click');
     $('html').animate({scrollTop: 0}, 250, function(){
       $('.menu-search-form').slideToggle(250);
       $('.menu-search-form input').focus();

@@ -4,7 +4,13 @@
     .bs-posts-list__item__img{
         width: 20%;
         padding-bottom: 20%;
+        background-color: rgba(60, 81, 95, 0.09019607843137255);
     }
+
+    .bs-posts-list__item__content{
+        padding: 0 0 40px 40px;
+    }
+
     .badge{
         font-size: 11px;
         font-size: .8rem;

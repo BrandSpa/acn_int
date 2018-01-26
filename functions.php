@@ -86,9 +86,12 @@ require_once 'metaboxes/index.php';
 
 $post_types = array( 'video', 'gallery','featured' );
 
-foreach( $post_types as $post_type) {
-  add_meta_box('page_image_square', 'Square Image', 'bs_page_image_square_cb', $post_type, 'normal', 'high', null);
+function cd_meta_box_add(){
+	foreach( $post_types as $post_type) {
+		add_meta_box('page_image_square', 'Square Image', 'bs_page_image_square_cb', $post_type, 'normal', 'high', null);
+	}
 }
+add_action( 'add_meta_boxes', 'cd_meta_box_add' );
 
 add_theme_support( 'post-thumbnails', ['post', 'gallery', 'video'] );
 add_theme_support( 'html5', ['search-form'] );
