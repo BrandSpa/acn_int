@@ -921,8 +921,6 @@ button, .btn {
         display: block; }
     .menu--mobile--open {
       right: 0; }
-    .menu--mobile #toggle-search {
-      cursor: pointer; }
     .menu--mobile li {
       list-style: none;
       width: 100%;
@@ -937,6 +935,8 @@ button, .btn {
         font-weight: 600; }
         .menu--mobile li a i {
           float: right; }
+      .menu--mobile li#toggle-search {
+        cursor: pointer; }
     .menu--mobile .sub-menu {
       max-height: 0;
       visibility: hidden;

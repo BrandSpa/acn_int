@@ -130,9 +130,6 @@
 			right: 0;
 		}
 
-		#toggle-search{
-			cursor: pointer;
-		}
 
 		li {
 			list-style: none;
@@ -152,6 +149,10 @@
 				i {
 					float: right;
 				}
+			}
+
+			&#toggle-search{
+				cursor: pointer;
 			}
 		}
 
