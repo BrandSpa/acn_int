@@ -882,7 +882,11 @@ button, .btn {
   float: right;
   padding: 0; }
   .menu--show {
-    display: block; }
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 10px; }
   .menu--mobile {
     display: none;
     height: 100%;
