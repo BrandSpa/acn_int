@@ -498,3 +498,31 @@ button, .btn {
 @import 'via_crucis';
 @import 'video_header';
 @import 'search';
+@import 'functions';
+@import 'variablesb';
+@import 'bootstrap-grid';
+
+.slide-item{
+	
+	div[class~=col]{
+		padding: 0;
+	}
+	.slide-content{
+		padding-top: 45px;
+	
+		&-right{
+			h1{
+				color: #d0021b;
+				font-weight: 500;
+			}
+			h2{
+				margin-top: .7em;
+				color: #FFF;
+				line-height: 1em;
+				font-weight: 800;
+				font-size: 2.6em;
+			}
+		}
+		
+	}
+}
