@@ -1,5 +1,6 @@
 <div class="nav">
 	  <a href="<?php echo bs_home_url(); ?>" class="logo">
+	  	<input type="text" value="<?php echo getCountry(); ?>">
       	<img data-src='<?php echo bs_logo_url(); ?>'  alt="ACN logo" class="img-responsive lazyload" width="170"  />
      </a>
 		<a href="#" class="open-menu">
