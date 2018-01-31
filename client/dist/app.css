@@ -2631,6 +2631,9 @@ a:hover {
 
 .search-results {
   list-style: none; }
+  .search-results li {
+    -webkit-box-shadow: 0px 3px 15px #ccc;
+    box-shadow: 0px 3px 15px #ccc; }
   .search-results .bs-posts-list__item__img {
     width: 20%;
     padding-bottom: 20%;
