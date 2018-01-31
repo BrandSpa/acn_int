@@ -6,6 +6,8 @@ function bs_logo_url() {
 	if(!bs_in_office($country)) {
 		$country = 'default';
 	}
+
+	return $country;
 	
 	$country = str_replace(' ', '_', $country);
 	$url = get_option("logo_". $country);
