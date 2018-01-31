@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-<div id="acn_int" class="l-wrap" >
+<div id="acn_int" class="l-wrap search-container" >
   <ul class="search-results">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
