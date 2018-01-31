@@ -7,6 +7,7 @@
             value="<?php echo get_search_query(); ?>" 
             name="s" 
             title="search"
+            autocomplete="off"
         >
         <button class="submit-button mobile-excluded js-submit-button test-desktop-search-button" type="submit" title="Envía tu pregunta">
             <li-icon class="svg-icon " type="search-icon" size="large" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
