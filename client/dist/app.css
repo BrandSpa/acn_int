@@ -2636,7 +2636,7 @@ a:hover {
     padding-bottom: 20%;
     background-color: rgba(255, 245, 249, 0.0901961); }
   .search-results .bs-posts-list__item__content {
-    padding: 0 0 40px 40px; }
+    padding: 10px 0 40px 40px; }
   .search-results .badge {
     font-size: 11px;
     font-size: .8rem;
