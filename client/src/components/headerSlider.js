@@ -62,7 +62,7 @@ class headerSlider extends Component {
 
     return (
       <div className="slider" style={sliderStyle}>
-        <div className="row slider__viewport" style={viewportStyle}>
+        <div className="slider__viewport" style={viewportStyle}>
           {slides.map((slide, i) => {
             const slideProp = { ...slide, width: slideWidth, height: sliderHeight };
             return <Slide key={i} {...slideProp} />;

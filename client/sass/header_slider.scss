@@ -30,6 +30,7 @@
 			background: #274F5E;
 			position: relative;
 			background-size: cover;
+			float: left;
 
 			@media #{$s} {
 				height: 200px !important;

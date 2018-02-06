@@ -10,31 +10,12 @@
 <div class="bs-video-header" data-props='{
 	"imageUrl": "<?php echo the_post_thumbnail_url( 'full' )  ?>",
 	"videoUrl": "<?php echo get_post_meta($post->ID, 'video_url_key', true) ?>"
-}'></div>
-
-	<div class="l-wrap">
-		<div class="video__header-title">
-			<span class="video__header__metadata" style="font-size: 1.1em; color: #4A4A4A">
-				<?php foreach(get_the_category($post->ID) as $ind => $category): ?>
-					<span style="font-weight: 600">
-						<?php echo $category->name ?> <?php echo $ind >= 0 && $ind + 1 != count(get_the_category($post->ID)) ?  '|' : '' ?>
-					</span>
-				<?php endforeach; ?>
-				<?php echo '/ ' . get_the_date( 'm - Y', $post->ID ); ?>
-			</span>
-			<div class="breadcrumbs" style="margin: 3px 0 10px 0;  color: #b9b9b9" typeof="BreadcrumbList" vocab="https://schema.org/">
-			<?php if(function_exists('bcn_display')) { bcn_display(); }?>
-		</div>
-
-		<h3 style="padding-bottom: 10px;color: #3C515F"><?php the_title() ?></h3>
-		<a style="display: block; margin: 0 auto; width: 20px" href="#post-content">
-			<?php require(__DIR__. '/templates/down_arrow.php')?>
-		</a>
-	</div>
-
+}'>
 </div>
 
-	<script>
+	<div class="l-wrap">
+		
+<script>
 		onLoad(function() {
 			var h = window.innerHeight;
 			var navH = $('.nav').height() + 20;
@@ -45,42 +26,59 @@
 			}
 		});
 	</script>
+</div>
+
+	
 <?php endif; ?>
 
-	<div id="post-content" class="l-wrap" style="margin-top: 80px">
-		<div class="col-1-l"></div>
-		<div class="col-5-l col-12-s" style="word-wrap: break-word;">
-			<?php the_content() ?>
-			<div class="banner-horizontal">
-			<?php if(get_lang() == 'en'): ?>
-				<a href="<?php echo get_option('banner_url_en') ?>">
-					<?php echo get_option('banner_horizontal_en') ?>
-				</a>
-			<?php else: ?>
-				<a href="<?php echo get_option('banner_url_es') ?>">
-					<?php echo get_option('banner_horizontal_es') ?>
-				</a>
-			<?php endif; ?>
+<div class="container">
+<section class="single-content row">
+	<!-- Social Area -->
+	<aside class="social-sidebar col-md-1 col-xs-12 hidden-sm">
+		<div class="sticky">
+			<div
+				class="bs-post-share"
+				data-props='<?php echo json_encode($props) ?>'
+			>
 			</div>
 		</div>
+	</aside>
 
-		<div class="col-2-l"></div>
+	<!-- Article Area -->
+	<article class="col-md-8 col-xs-12 post-text article">
 
-		<div class="col-3-l banner-vertical">
-			<?php if(get_lang() == 'en'): ?>
-				<a href="<?php echo get_option('banner_url_en') ?>">
-					<?php echo get_option('banner_vertical_en') ?>
-				</a>
+		<!-- Post Header -->
+		<header>
+			<?php if(!empty(get_the_post_thumbnail_url($post->ID, 'full'))): ?>
+			<?php require('templates/post_header_image.php') ?>
 			<?php else: ?>
-				<a href="<?php echo get_option('banner_url_es') ?>">
-					<?php echo get_option('banner_vertical_es') ?>
-				</a>
+			<?php require('templates/post_header.php') ?>
 			<?php endif; ?>
+		</header>
+		<div class="sticky visible-sm">
+			<div
+				class="bs-post-share"
+				data-props='<?php echo json_encode($props) ?>'
+			>
+			</div>
 		</div>
+		<div class="content">
+			<?php the_content() ?>
+		</div>
+	
+	</article>
 
-	</div>
+	<!-- Widgets Area -->
+	<aside class="col-md-3 col-xs-12 banner-vertical">
+		<?php if ( is_active_sidebar( 'post_widget_area' ) ) : ?>
+			<?php dynamic_sidebar( 'post_widget_area' ); ?>
+		<?php endif; ?>
+	</aside>
+	
+</section>
+</div>
 
-	<?php require('templates/post_share.php') ?>
+	<?php //require('templates/post_share.php') ?>
 	<?php require('templates/post_donate.php') ?>
 
 
