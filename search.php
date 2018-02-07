@@ -12,6 +12,7 @@
                     <div 
                         class="bs-posts-list__item__img" 
                         style="background-image: url(<?php echo get_post_meta($post->ID, 'image_square_key', true)?:get_option('logo') ?>);background-size: 100% auto; background-repeat: no-repeat;">
+                        <img src="<?php echo get_post_meta($post->ID, 'image_square_key', true)?:get_option('logo') ?>" style="visibility:hidden">
                     </div>
                     </a>
                 </div>
