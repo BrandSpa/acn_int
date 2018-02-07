@@ -4745,7 +4745,8 @@ area {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    padding: 0; }
     .pagination ul li {
       background: transparent;
       border-radius: 2px;

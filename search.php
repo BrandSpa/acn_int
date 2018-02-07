@@ -3,7 +3,7 @@
     <div id="acn_int" class="l-wrap" >
    
     <?php if ( have_posts() ) : ?>
-    <ul class="search-results">
+    <ul class="search-results row">
     <?php while ( have_posts() ) : the_post(); ?>
         <li class="bs-posts-list__item row">
 
@@ -35,10 +35,8 @@
         
     <?php endwhile; ?>
     </ul>   
-    <div class="pagination">
-        <pre>
+    <div class="pagination row">
         <?php print_r(pagination_links()); ?>
-        </pre>
     </div>
     <?php else : ?>
         <h3 class="search-empty-message">
