@@ -4769,6 +4769,8 @@ area {
         color: #3c515f;
         font-size: 20px;
         font-weight: bold; }
+        .pagination ul li a.current, .pagination ul li span.current {
+          color: #e7374b; }
 
 /*!
  * Bootstrap Grid v4.0.0 (https://getbootstrap.com)
