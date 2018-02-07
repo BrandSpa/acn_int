@@ -136,3 +136,36 @@ function add_svg_mime( $existing_mimes = array() ) {
 }
 
 add_post_type_support( 'page', 'excerpt' );
+
+
+function pagination_links( $type = 'list', $endsize = 1, $midsize = 1 ) {
+    global $wp_query, $wp_rewrite;  
+    $current = get_query_var( 'paged' ) > 1 ? get_query_var('paged') : 1;
+
+    // Sanitize input argument values
+    if ( ! in_array( $type, array( 'plain', 'list', 'array' ) ) ) $type = 'plain';
+    $endsize = absint( $endsize );
+    $midsize = absint( $midsize );
+
+    // Setup argument array for paginate_links()
+    $pagination = array(
+        'base'      => @add_query_arg( 'paged', '%#%' ),
+        'format'    => '',
+        'total'     => $wp_query->max_num_pages,
+        'current'   => $current,
+        'show_all'  => false,
+        'end_size'  => $endsize,
+        'mid_size'  => $midsize,
+        'type'      => $type,
+        'prev_text' => '<i class="ion-chevron-left"></i> '. gett('prev'),
+        'next_text' => gett('next') . ' <i class="ion-chevron-right"></i>'
+    );
+
+    if ( $wp_rewrite->using_permalinks() )
+        $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ).'page/%#%/', 'paged' );
+
+    if ( ! empty( $wp_query->query_vars['s'] ) )
+        $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
+
+    return paginate_links( $pagination );
+}
