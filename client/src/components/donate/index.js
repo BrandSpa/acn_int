@@ -446,7 +446,7 @@ class Donate extends Component {
         }
       });
     }
-
+    
     if (this.state.section === 2 && section <= 3 ) {
       this.setState({isLoading: true}, function(){
         if (!this.contactIsValid()) {this.setState({isLoading: false}); return false;}
@@ -486,7 +486,7 @@ class Donate extends Component {
       marginLeft: '15px',
       color: this.props.is_blue ? 'rgb(60, 81, 95)' : '#fff',
     };
-    console.log(this.props);
+    
     const backBtnStyle = {
       float: 'right',
       background: 'transparent',

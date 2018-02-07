@@ -9,7 +9,7 @@
     transition: left 400ms ease;
 		overflow: hidden;
     height: 100vh;
-    background: #000;
+    background: #303030;
 
 		@media #{$s} {
 			height: 200px !important;
@@ -28,9 +28,9 @@
 		&__slide {
    	 	width: 100%;
 			background: #274F5E;
-			float: left;
 			position: relative;
 			background-size: cover;
+			float: left;
 
 			@media #{$s} {
 				height: 200px !important;

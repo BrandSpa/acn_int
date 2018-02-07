@@ -45,10 +45,21 @@
     }?>
 </div>-->
 
-	<div id="post-content" class="l-wrap" style="margin-top: 80px">
-		<div class="col-1-l"></div>
-		<div class="col-5-l col-12-s" style="word-wrap: break-word;">
-			<?php the_content() ?>
+	<div id="post-content" class="l-wrap row" style="margin-top: 80px">
+		 <!-- Social Area -->
+		 <aside class="social-sidebar col-md-1 col-xs-12 hidden-sm">
+            <div class="sticky">
+                <div
+                    class="bs-post-share"
+                    data-props='<?php echo json_encode($props) ?>'
+                >
+                </div>
+            </div>
+        </aside>
+		<div class="col-md-5 col-sm-12" style="word-wrap: break-word;">
+			<div class="content">
+				<?php the_content() ?>
+			</div>
 			<div class="banner-horizontal">
 			<?php if(get_lang() == 'en'): ?>
 				<a href="<?php echo get_option('banner_url_en') ?>">
@@ -62,9 +73,9 @@
 			</div>
 		</div>
 
-		<div class="col-2-l"></div>
+		<div class="col-md-2"></div>
 		
-		<div class="col-3-l banner-vertical">
+		<div class="col-md-3 banner-vertical">
 			<?php if(get_lang() == 'en'): ?>
 				<a href="<?php echo get_option('banner_url_en') ?>">
 					<?php echo get_option('banner_vertical_en') ?>
@@ -78,7 +89,10 @@
 
 	</div>
 </div>
-    <?php require('templates/post_share.php') ?>
+	<div class="visible-sm"> 
+		<?php require('templates/post_share.php') ?>
+	</div>
+   
 	<?php require('templates/post_donate.php') ?>
 
 

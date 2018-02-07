@@ -52,7 +52,7 @@ require_once('vc/campaigns_slider.php');
 require_once('vc/contact_form.php');
 require_once('vc/donate.php');
 require_once('vc/donate_inline_section.php');
-require_once('vc/donate_section.php');
+//require_once('vc/donate_section.php');
 require_once('vc/donate_container.php');
 require_once('vc/header_slider.php');
 require_once('vc/post_share.php');

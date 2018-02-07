@@ -94,8 +94,41 @@ function cd_meta_box_add(){
 }
 add_action( 'add_meta_boxes', 'cd_meta_box_add' );
 add_theme_support( 'post-thumbnails', ['post', 'gallery', 'video'] );
+add_theme_support( 'html5', ['search-form'] );
 
 add_filter( 'upload_mimes', 'add_svg_mime' );
+add_rewrite_endpoint( 's', EP_PERMALINK | EP_PAGES );
+
+function search_template_redirect()
+{
+    if( is_page( 'search' ) )
+    {
+        wp_redirect( home_url( '/search/' ) );
+        die;
+    }
+}
+add_action( 'template_redirect', 'my_page_template_redirect' );
+
+add_filter( 'wp_nav_menu_items','add_search_box', 10, 2 );
+function add_search_box( $items, $args ) {
+    if( $args->theme_location == 'header' ) // only for primary menu
+    {
+        $items_array = array();
+        while ( false !== ( $item_pos = strpos ( $items, '<li', 2 ) ) )
+        {
+            $items_array[] = substr($items, 0, $item_pos);
+            $items = substr($items, $item_pos);
+        }
+       
+        $items_array[] = '<li id="toggle-search" ><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon"><g class="large-icon" style="fill: currentColor">
+        <path d="M21,19.67l-5.44-5.44a7,7,0,1,0-1.33,1.33L19.67,21ZM10,15.13A5.13,5.13,0,1,1,15.13,10,5.13,5.13,0,0,1,10,15.13Z"></path>
+        </g></svg></li>';
+        $items_array[] = $items;
+
+        $items = implode('', $items_array);
+    }
+	return $items;
+}
 
 function add_svg_mime( $existing_mimes = array() ) {
 	$existing_mimes['svg'] = 'image/svg+xml';
