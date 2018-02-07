@@ -10,7 +10,7 @@
                 <a href="<?php the_permalink() ?>">
                 <div 
                     class="bs-posts-list__item__img" 
-                    style="background-image: url(<?php echo get_the_post_thumbnail_url()?:get_option('logo') ?>);background-size: 100% auto; background-repeat: no-repeat;">
+                    style="background-image: url(<?php echo get_post_meta($post->ID, 'image_square_key', true)?:get_option('logo') ?>);background-size: 100% auto; background-repeat: no-repeat;">
                 </div>
                 </a>
             <?php endif; ?>
