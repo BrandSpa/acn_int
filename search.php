@@ -4,17 +4,20 @@
     <ul class="search-results">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-        <li class="bs-posts-list__item">
+        <li class="bs-posts-list__item row">
 
             <?php if(get_the_post_thumbnail_url() || get_option('logo')): ?>
-                <a href="<?php the_permalink() ?>">
-                <div 
-                    class="bs-posts-list__item__img" 
-                    style="background-image: url(<?php echo get_post_meta($post->ID, 'image_square_key', true)?:get_option('logo') ?>);background-size: 100% auto; background-repeat: no-repeat;">
+                <div class="col-xs-5">
+                    <a href="<?php the_permalink() ?>">
+                    <div 
+                        class="bs-posts-list__item__img" 
+                        style="background-image: url(<?php echo get_post_meta($post->ID, 'image_square_key', true)?:get_option('logo') ?>);background-size: 100% auto; background-repeat: no-repeat;">
+                    </div>
+                    </a>
                 </div>
-                </a>
+                
             <?php endif; ?>
-            <div class="bs-posts-list__item__content">
+            <div class="bs-posts-list__item__content col-xs-7">
                 <h2 class="card-header">
                     <a href="<?php the_permalink() ?>"><?php the_title() ?>  </a>
                     <span class="badge"><?php echo get_post_type() ?></span>
