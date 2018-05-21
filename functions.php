@@ -169,3 +169,15 @@ function pagination_links( $type = 'list', $endsize = 1, $midsize = 1 ) {
 
     return paginate_links( $pagination );
 }
+
+function arphabet_widgets_init() {
+	register_sidebar( array(
+		'name'          => 'Sidebar Area',
+		'id'            => 'post_widget_area',
+		'before_widget' => '<div class="widget-area">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
