@@ -54,7 +54,10 @@
             <?php if ( is_active_sidebar( 'post_widget_area' ) ) : ?>
                 <?php dynamic_sidebar( 'post_widget_area' ); ?>
 			<?php endif; ?>
-            <div>
+           <?php 
+
+           /*
+            <div> 
             <?php if(get_lang() == 'en'): ?>
 				<a href="<?php echo get_option('banner_url_en') ?>">
 					<?php echo get_option('banner_horizontal_en') ?>
@@ -64,7 +67,8 @@
 					<?php echo get_option('banner_horizontal_es') ?>
 				</a>
 			<?php endif; ?>
-            </div>
+            </div>*/
+            ?>
         </aside>
         
     </section>

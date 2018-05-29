@@ -6,6 +6,10 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 
+.rpwe-block li{
+	padding: 5px !important;
+}
+
 .grid-item {
   float: left;
 	padding: 15px 15px;
@@ -296,6 +300,7 @@ $xl: 1200px;
 						display: block; 
 						position: absolute;
 						top: 15px;
+						display: none;
 					}
 					&.rpwe-img{
 						padding: 0;

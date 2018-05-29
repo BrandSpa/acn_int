@@ -3661,6 +3661,9 @@ html {
     -ms-flex-item-align: stretch !important;
     align-self: stretch !important; } }
 
+.rpwe-block li {
+  padding: 5px !important; }
+
 .grid-item {
   float: left;
   padding: 15px 15px; }
@@ -3874,7 +3877,8 @@ html {
             left: 5%;
             display: block;
             position: absolute;
-            top: 15px; }
+            top: 15px;
+            display: none; }
           .bs-post .widget-area ul > li a.rpwe-img {
             padding: 0;
             width: auto; }
